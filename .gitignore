@@ -1,0 +1,8 @@
+.DS_Store
+build
+bin/*
+liboscpack.*
+examples/send
+examples/receive
+examples/beatbox
+misc/iPhone/oscit/build

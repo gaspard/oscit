@@ -1,0 +1,17 @@
+oscpack
+-------
+  brief    : Oscpack is simply a set of C++ classes for packing and unpacking Open Sound Control packets.
+  author   : Ross Bencina <rossb@audiomulch.com>
+  website  : http://www.audiomulch.com/~rossb/code/oscpack/
+  copyright: see rubyk/src/lib/osc/LICENSE
+  license  : MIT license
+
+opencv
+------
+  brief    : The Open Computer Vision Library has > 500 algorithms, documentation and sample code for real time computer vision.
+  author   : Copyright (C) 2000-2008, Intel Corporation, Copyright (C) 2008, Willow Garage Inc.,
+  website  : http://sourceforge.net/projects/opencvlibrary/
+  copyright: See /opencv/COPYING
+  license  : New BSD license
+  comment  : liboscit uses just a few files from opencv so that Matrix objects are allocated in a way that is binary compatible
+             with opencv.

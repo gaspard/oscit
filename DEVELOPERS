@@ -8,3 +8,4 @@ The code written here conforms to http://google-styleguide.googlecode.com/svn/tr
 - Only accessors/finders that return true or false on success should start with "get_".
 - "*" and "&" (pointers and references) should be glued to the variable: const char *str.
 - Use "is_" or "has_" for methods without parameters returning true or false ("is_ready()", "has_error()").
+- Use the 'virtual' keyword in front of virtual method definitions in sub-classes.
