@@ -1,4 +1,4 @@
-== DESCRIPTION:
+== OpenSoundControl it !
 
 C++ library implementing the oscit protocol (OpenSoundControl Interface Transfer). The protocol
 uses ZeroConf to register devices on an network. The library provides the necessary tools to easily
@@ -6,6 +6,7 @@ create oscit compliant software (register or browse for devices, reply to querie
 service type registered for this protocol called "oscit" on dns-sd.org (Zeroconf).
 
 website: http://rubyk.org/liboscit
+
 license: MIT
 
 == Compilation
