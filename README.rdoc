@@ -7,7 +7,11 @@ service type registered for this protocol called "oscit" on dns-sd.org (Zeroconf
 
 website: http://rubyk.org/liboscit
 
+bug tracker: http://rubyk.lighthouseapp.com/projects/43868-oscit
+
 license: MIT
+
+author: Gaspard Buma (http://gaspardbuma.org)
 
 == Compilation
 
