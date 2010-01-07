@@ -119,8 +119,8 @@ typedef void (CallbackToDeleteMethod)(Observer *observer);
  */
 class CallbackToDelete : public Callback {
 public:
-  CallbackToDelete(Observer *observer, CallbackToDeleteMethod *method = NULL)
-      : Callback(observer, NULL),
+  CallbackToDelete(Observer *observer, void *data = NULL, CallbackToDeleteMethod *method = NULL)
+      : Callback(observer, data),
         method_(method) {}
 
   virtual void trigger();

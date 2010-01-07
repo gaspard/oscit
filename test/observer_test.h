@@ -49,6 +49,20 @@ public:
     assert_equal(&b, o.y_);
   }
 
+  void test_set_and_hold_should_change_value( void ) {
+    Logger logger;
+    ObserverLogger o("observer", &logger);
+    ObserverLogger a("a", &logger);
+    ObserverLogger b("b", &logger);
+    assert_equal((ObserverLogger*)NULL, o.x_);
+
+    o.set_x(&a);
+    assert_equal(&a, o.x_);
+
+    o.set_x(&b);
+    assert_equal(&b, o.x_);
+  }
+
   void test_destroy_observed_should_set_value_to_null( void ) {
     Logger logger;
     ObserverLogger o("observer", &logger, ObserverLogger::VarTest);

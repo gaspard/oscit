@@ -93,6 +93,7 @@ protected:
       CallbackWithList *cl = *it;
       if (cl->callback_->match_data(data)) {
         // found matching callback: remove
+        cl->callback_->observer_ = NULL; // avoid call to callback_destroyed
         cl->list_->delete_callback(cl->callback_);
         delete cl;
         it = produced_callbacks_.erase(it);
@@ -105,6 +106,8 @@ protected:
 private:
   friend class Callback;
 
+  /** Struct containing a callback with the list it is currently in.
+   */
   struct CallbackWithList {
     CallbackWithList(CallbackList *list, Callback *callback) : list_(list), callback_(callback) {}
     CallbackList *list_;

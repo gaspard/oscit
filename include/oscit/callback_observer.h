@@ -27,6 +27,7 @@
   ==============================================================================
 */
 
+#if 0
 #ifndef OSCIT_INCLUDE_OSCIT_CALLBACK_OBSERVER_H_
 #define OSCIT_INCLUDE_OSCIT_CALLBACK_OBSERVER_H_
 
@@ -104,3 +105,4 @@ private:
 } // oscit
 
 #endif // OSCIT_INCLUDE_OSCIT_CALLBACK_OBSERVER_H_
+#endif // 0

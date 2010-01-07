@@ -155,6 +155,11 @@ public:
     }
   };
 
+  // Used by callback_test to remove produced callbacks
+  void delete_produced_callbacks_with_data(void *data) {
+    Observer::delete_produced_callbacks_with_data(data);
+  }
+
   int mode_;
   ObserverLogger *x_;
   ObserverLogger *y_;

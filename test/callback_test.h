@@ -111,11 +111,38 @@ public:
 
     s_callback_test_logger = &logger;
     master->adopt_callback_on_destroy(
-      new CallbackToDelete(slave, &s_delete_observer_callback)
+      new CallbackToDelete(slave, NULL, &s_delete_observer_callback)
     );
 
     delete master;
     assert_equal("[master: dying][slave: lock][slave: unlock][s_delete_observer_callback][slave: dying]", logger.str());
+    logger.str("");
+  }
+
+  void test_delete_observer_callback_change_master( void ) {
+    Logger logger;
+    ObserverLogger *master1 = new ObserverLogger("master1", &logger);
+    ObserverLogger *master2 = new ObserverLogger("master2", &logger);
+    ObserverLogger *slave   = new ObserverLogger("slave",  &logger);
+
+    master1->adopt_callback_on_destroy(
+      new CallbackToDelete(slave, master1)
+    );
+
+    slave->delete_produced_callbacks_with_data(master1);
+    assert_equal("[master1: lock][master1: unlock]", logger.str());
+    logger.str("");
+
+    master2->adopt_callback_on_destroy(
+      new CallbackToDelete(slave, master2)
+    );
+
+    delete master1;
+    assert_equal("[master1: dying]", logger.str());
+    logger.str("");
+
+    delete master2;
+    assert_equal("[master2: dying][slave: lock][slave: unlock][slave: dying]", logger.str());
     logger.str("");
   }
 };
