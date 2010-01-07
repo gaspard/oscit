@@ -30,6 +30,12 @@
 #include "test_helper.h"
 #include "mock/observer_logger.h"
 
+static Logger *s_callback_test_logger;
+static void s_delete_observer_callback(Observer *observer) {
+  *s_callback_test_logger << "[s_delete_observer_callback]";
+  delete observer;
+}
+
 class CallbackTest : public TestHelper
 {
 public:
@@ -96,6 +102,21 @@ public:
 
     delete master;
     assert_equal("[master: dying]", logger.str());
+  }
+
+  void test_delete_observer_callback_master_dies_first_use_static( void ) {
+    Logger logger;
+    ObserverLogger *master = new ObserverLogger("master", &logger);
+    ObserverLogger *slave  = new ObserverLogger("slave",  &logger);
+
+    s_callback_test_logger = &logger;
+    master->adopt_callback_on_destroy(
+      new CallbackToDelete(slave, &s_delete_observer_callback)
+    );
+
+    delete master;
+    assert_equal("[master: dying][slave: lock][slave: unlock][s_delete_observer_callback][slave: dying]", logger.str());
+    logger.str("");
   }
 };
 

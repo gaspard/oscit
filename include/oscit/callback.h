@@ -110,7 +110,7 @@ public:
 };
 
 
-typedef void (*CallbackToDeleteMethod)(Observer *observer);
+typedef void (CallbackToDeleteMethod)(Observer *observer);
 
 /** This callback is used to delete the observer. It can be used
  * to make sure that some dependent object is delete with it's "master".
