@@ -51,7 +51,7 @@ public:
     b.adopt_callback_for_event_xyz(new TCallbackLogger<ObserverLogger, &ObserverLogger::my_callback>(a, (void*)data, "on_xyz_callback", &logger));
     delete a;
     b.event_xyz();
-    assert_equal("[b: lock][on_xyz_callback: destroy][b: unlock]", logger.str());
+    assert_equal("[a: dying][b: lock][on_xyz_callback: destroy][b: unlock]", logger.str());
   }
 
   void test_observable_dies_before_observer( void ) {
@@ -61,11 +61,41 @@ public:
     const char *data = "foo";
     b->adopt_callback_for_event_xyz(new TCallbackLogger<ObserverLogger, &ObserverLogger::my_callback>(a, (void*)data, "on_xyz_callback", &logger));
     delete b;
-    assert_equal("[on_xyz_callback: destroy][a: lock][a: unlock]", logger.str());
+    assert_equal("[b: dying][on_xyz_callback: destroy][a: lock][a: unlock]", logger.str());
     logger.str("");
     delete a;
-    assert_equal("", logger.str());
+    assert_equal("[a: dying]", logger.str());
   }
 
+  void test_delete_observer_callback_master_dies_first( void ) {
+    Logger logger;
+    ObserverLogger *master = new ObserverLogger("master", &logger);
+    ObserverLogger *slave  = new ObserverLogger("slave",  &logger);
+
+    master->adopt_callback_on_destroy(
+      new CallbackToDelete(slave)
+    );
+
+    delete master;
+    assert_equal("[master: dying][slave: lock][slave: unlock][slave: dying]", logger.str());
+    logger.str("");
+  }
+
+  void test_delete_observer_callback_slave_dies_first( void ) {
+    Logger logger;
+    ObserverLogger *master = new ObserverLogger("master", &logger);
+    ObserverLogger *slave  = new ObserverLogger("slave",  &logger);
+
+    master->adopt_callback_on_destroy(
+      new CallbackToDelete(slave)
+    );
+
+    delete slave;
+    assert_equal("[slave: dying][master: lock][master: unlock]", logger.str());
+    logger.str("");
+
+    delete master;
+    assert_equal("[master: dying]", logger.str());
+  }
 };
 

@@ -38,6 +38,7 @@ namespace oscit {
 
 class CallbackList;
 class Observer;
+class CallbackToDelete;
 
 /** The Callback class holds a pointer to the target of the callback
  * and a method (eventually with parameters) to call the target back.
@@ -81,9 +82,15 @@ protected:
 
   /** Any data that will be passed back to the caller.
    */
-   void *data_;
+  void *data_;
 
 private:
+  friend class CallbackToDelete;
+
+  /** This method removes the 'on_destroy' callback in the observer.
+   */
+  inline void cleanup_on_destruction();
+
   /** The CallbackList containing this Callback. We need a pointer to the
    * list in order to remove the on_destroy callback reference in the observer.
    */
@@ -100,6 +107,25 @@ public:
   virtual void trigger() {
     (((T*)observer_)->*Tmethod)(data_);
   }
+};
+
+
+typedef void (*CallbackToDeleteMethod)(Observer *observer);
+
+/** This callback is used to delete the observer. It can be used
+ * to make sure that some dependent object is delete with it's "master".
+ * If you provide a static method to delete the callback, this method
+ * will be called.
+ */
+class CallbackToDelete : public Callback {
+public:
+  CallbackToDelete(Observer *observer, CallbackToDeleteMethod *method = NULL)
+      : Callback(observer, NULL),
+        method_(method) {}
+
+  virtual void trigger();
+private:
+  CallbackToDeleteMethod *method_;
 };
 
 } // oscit

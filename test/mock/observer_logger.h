@@ -60,6 +60,10 @@ public:
         list_y_(this),
         callbacks_for_event_xyz_(this) {}
 
+  ~ObserverLogger() {
+    log("dying");
+  }
+
   virtual void observer_lock() {
     switch(mode_) {
     case ClbkTest:

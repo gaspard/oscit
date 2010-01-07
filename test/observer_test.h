@@ -62,7 +62,7 @@ public:
     // lock/unlock called twice:
     // - during the trigger of the 'on destroy' callback
     // - during the removal of the observer's "produced" callbacks
-    assert_equal("[observer: lock a NULL][observer: unlock NULL NULL][observer: lock NULL NULL][observer: unlock NULL NULL]", logger.str());
+    assert_equal("[a: dying][observer: lock a NULL][observer: unlock NULL NULL][observer: lock NULL NULL][observer: unlock NULL NULL]", logger.str());
     assert_equal((ObserverLogger*)NULL, o.x_);
   }
 
@@ -76,10 +76,10 @@ public:
     logger.str("");
 
     delete o;
-    assert_equal("[a: lock][a: unlock]", logger.str());
+    assert_equal("[observer: dying][a: lock][a: unlock]", logger.str());
     logger.str("");
     delete a; // should not call o
-    assert_equal("", logger.str());
+    assert_equal("[a: dying]", logger.str());
   }
 
   void test_push_back_should_append_value( void ) {
@@ -110,7 +110,7 @@ public:
     // lock/unlock called twice:
     // - during the trigger of a's 'on destroy' callbacks in 'observer'
     // - during the removal of the observer's "produced" callbacks
-    assert_equal("[observer: lock 1][observer: unlock 0][observer: lock 0][observer: unlock 0]", logger.str());
+    assert_equal("[a: dying][observer: lock 1][observer: unlock 0][observer: lock 0][observer: unlock 0]", logger.str());
     assert_equal((ObserverLogger*)NULL, o.x_);
   }
 
@@ -126,9 +126,9 @@ public:
 
     delete o;
     // we lock while removing 'on_destroy' callbacks in a
-    assert_equal("[a: lock][a: unlock]", logger.str());
+    assert_equal("[observer: dying][a: lock][a: unlock]", logger.str());
     logger.str("");
     delete a; // should not call o
-    assert_equal("", logger.str());
+    assert_equal("[a: dying]", logger.str());
   }
 };

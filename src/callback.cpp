@@ -40,14 +40,32 @@
 namespace oscit {
 
 Callback::~Callback() {
-  if (observer_)
-    observer_->callback_destroyed(callback_list_, this);
+  if (observer_) cleanup_on_destruction();
+}
+
+void Callback::cleanup_on_destruction() {
+  observer_->callback_destroyed(callback_list_, this);
 }
 
 void Callback::set_list(CallbackList *list) {
   assert(!callback_list_);
   callback_list_ = list;
   observer_->callback_produced(list, this);
+}
+
+void CallbackToDelete::trigger() {
+  // first we must make sure that we remove this callback from the observer's on delete
+  // cleanup list
+  cleanup_on_destruction();
+
+  if (method_) {
+    (*method_)(observer_);
+  } else {
+    delete observer_;
+  }
+
+  // so that ~Callback cleanup is not executed
+  observer_ = NULL;
 }
 
 } // oscit
