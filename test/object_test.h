@@ -167,9 +167,9 @@ public:
 
   void test_should_find_child_from_position( void ) {
     Object base("base");
-    Object * one = base.adopt(new Object("one"));
+    Object *one = base.adopt(new Object("one"));
     assert_equal(1, base.children_count());
-    Object * two = base.adopt(new Object("aaa"));
+    Object *two = base.adopt(new Object("aaa"));
     assert_equal(2, base.children_count());
 
     assert_equal(one, base.child_at_index(0));
@@ -185,6 +185,29 @@ public:
     assert_equal((RootProxy *)NULL, base.child_at_index(0));
   }
 
+  void test_should_get_child_from_position( void ) {
+    Object base("base");
+    Object *one = base.adopt(new Object("one"));
+    assert_equal(1, base.children_count());
+    Object *two = base.adopt(new Object("aaa"));
+    assert_equal(2, base.children_count());
+    Object *tmp = NULL;
+
+    assert_true(base.get_object_at_index(0, &tmp));
+    assert_equal(one, tmp);
+    assert_true(base.get_object_at_index(1, &tmp));
+    assert_equal(two, tmp);
+
+    delete one;
+    assert_equal(1, base.children_count());
+    assert_true(base.get_object_at_index(0, &tmp));
+    assert_equal(two, tmp);
+    assert_false(base.get_object_at_index(1, &tmp));
+
+    delete two;
+    assert_equal(0, base.children_count());
+    assert_false(base.get_object_at_index(0, &tmp));
+  }
 
   // set_type is not a good idea. It should be immutable (or maybe I'm wrong, so I leave the test here)
   //void test_set_type( void ) {

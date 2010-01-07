@@ -323,6 +323,15 @@ class Object : public Typed, public Observable {
     return children_vector_[index];
   }
 
+  /** Tries to find the object at a specific index. Returns
+   * false on failure.
+   */
+  bool get_object_at_index(size_t index, Object **object) {
+    if (index >= children_vector_.size()) return false;
+    *object = children_vector_[index];
+    return true;
+  }
+
   Object *parent() {
     return parent_;
   }
