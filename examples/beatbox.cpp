@@ -16,7 +16,7 @@ using namespace oscit;
 class ValueDisplay : public Object
 {
 public:
-  ValueDisplay(const char *name, Real current_value, uint sleepy)
+  ValueDisplay(const char *name, Real current_value, uint *sleepy)
       : Object(name, RangeIO(0, 512, "bpm", "Current value.")),
         value_(current_value),
         sleepy_(sleepy) {}
@@ -27,27 +27,45 @@ public:
   virtual const Value trigger(const Value &val) {
     if (val.is_real()) {
       value_.r = val.r;
+
+      // when the value goes to 0: divide sleepiness by two
+      // when it goes to 512: multiply by two
+      // this is to test changing network latencies
       if (val.r == 0) {
-        sleepy_ = sleepy_ / 2;
+        *sleepy_ = *sleepy_ / 2;
       } else if (val.r == 512) {
-        sleepy_ = sleepy_ * 2;
+        *sleepy_ = *sleepy_ * 2;
       }
     }
 
     std::cout << name_ << ": " << value_ << std::endl;
 
-    // simulate a slow network
-    if (sleepy_) {
-      std::cout << "sleep: " << sleepy_ << "\n";
-      Thread::millisleep(sleepy_);
-    }
     // oscit convention is to return current value
     return value_;
   }
 
 private:
   RealValue value_;
-  uint sleepy_;
+  uint *sleepy_;
+};
+
+class SleepyOscCommand : public OscCommand {
+public:
+  SleepyOscCommand(const char *protocol, const char *service_type, uint *sleepy)
+      : OscCommand(protocol, service_type),
+        sleepy_(sleepy) {}
+
+  virtual void receive(const Url &url, const Value &val) {
+    // simulate a slow network
+    if (*sleepy_) {
+      std::cout << "sleep: " << *sleepy_ << "\n";
+      Thread::millisleep(*sleepy_);
+    }
+    Command::receive(url, val);
+  }
+
+private:
+  uint *sleepy_;
 };
 
 bool gRun = true;
@@ -65,10 +83,10 @@ int main(int argc, char * argv[]) {
   }
 
   // open osc command on port OSC_PORT
-  root.adopt_command(new OscCommand("oscit", "_oscit._udp", OSC_PORT));
+  root.adopt_command(new SleepyOscCommand("oscit", "_oscit._udp", &sleepy));
 
   // create '/tempo' url
-  root.adopt(new ValueDisplay("tempo", 120, sleepy));
+  root.adopt(new ValueDisplay("tempo", 120, &sleepy));
 
   // create '/other/deeply/nested/slider' url
   Object *tmp = root.adopt(new Object("other"));
