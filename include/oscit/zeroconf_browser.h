@@ -58,9 +58,11 @@ class ZeroConfBrowser : public Mutex {
    */
   virtual void added_proxy(RootProxy *proxy) {}
 
-  /** This method is called just before the proxy is actually deleted.
+  /** This method is called so that you have an opportunity to delete it cleanly.
    */
-  virtual void removed_proxy(RootProxy *proxy) {}
+  virtual void delete_proxy(RootProxy *proxy) {
+    delete proxy;
+  }
 
   template<class T>
   T *adopt_proxy_factory(T *factory) {

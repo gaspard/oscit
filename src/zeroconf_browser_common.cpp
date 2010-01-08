@@ -77,8 +77,7 @@ void ZeroConfBrowser::remove_proxy(const Location &location) {
     RootProxy *proxy = command_->find_proxy(location);
     if (proxy) {
       proxy->detach();
-      removed_proxy(proxy);
-      delete proxy;
+      delete_proxy(proxy);
     }
   }
 }

@@ -47,8 +47,9 @@ public:
     stream_ << "[+ " << proxy->remote_location() << "]";
   }
 
-  virtual void removed_proxy(RootProxy *proxy) {
+  virtual void delete_proxy(RootProxy *proxy) {
     stream_ << "[- " << proxy->remote_location() << "]";
+    delete proxy;
   }
 
   const std::string str() { return stream_.str(); }
