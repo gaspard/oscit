@@ -70,8 +70,8 @@ namespace oscit {
 // finally the macro used to generate the hash
 #define H(string) (uint)(*string == 0 ? 0 : HASH_RECURSE_00(string, *string))
 
-typedef std::list<std::string>::iterator string_iterator;
-typedef std::list<std::string>::const_iterator const_string_iterator;
+typedef std::list<std::string>::iterator StringIterator;
+typedef std::list<std::string>::const_iterator ConstStringIterator;
 
 template<class K, class T>
 struct THashElement
@@ -86,17 +86,19 @@ struct THashElement
 
 // K is the key class, T is the object class
 template <class K, class T>
-class THash
-{
+class THash {
 public:
+  typedef typename std::list<K>::const_iterator ConstIterator;
+  typedef typename std::list<K>::iterator Iterator;
+
   THash(unsigned int size) : size_(size) {
     thash_table_ = new THashElement<K,T>[size];
   }
 
   // copy constructor
   THash(const THash& pOther) {
-    const_string_iterator it;
-    const_string_iterator end = pOther.end();
+    ConstIterator it;
+    ConstIterator end = pOther.end();
     T value;
 
     size_ = pOther.size_;
@@ -125,8 +127,8 @@ public:
   }
 
   THash& operator=(const THash& pOther) {
-    const_string_iterator it;
-    const_string_iterator end = pOther.end();
+    ConstIterator it;
+    ConstIterator end = pOther.end();
     T value;
 
     for(it = pOther.begin(); it != end; it++) {
@@ -163,8 +165,8 @@ public:
   void remove(const K &key) {
     if (remove_keeping_key(key)) {
       // object has been removed, remove key
-      typename std::list<K>::iterator it  = keys_.begin();
-      typename std::list<K>::iterator end = keys_.end();
+      Iterator it  = keys_.begin();
+      Iterator end = keys_.end();
       while (it != end) {
         if (*it == key)
           it = keys_.erase(it);
@@ -179,8 +181,8 @@ public:
 
   /** Remove all objects. */
   void clear() {
-    typename std::list<K>::iterator it;
-    typename std::list<K>::iterator end = keys_.end();
+    Iterator it;
+    Iterator end = keys_.end();
     for (it = keys_.begin(); it != end; ++it) {
       remove_keeping_key(*it);
     }
@@ -195,7 +197,7 @@ public:
 
   bool operator==(const THash& other) const {
     if (size() != other.size()) return false;
-    typename std::list<K>::const_iterator it, end = keys_.end();
+    ConstIterator it, end = keys_.end();
     const T *val1;
     const T *val2;
     for (it = keys_.begin(); it != end; ++it) {
@@ -217,16 +219,16 @@ public:
   const std::list<K> &keys() const { return keys_; }
 
   /** Begin iterator over the keys of the dictionary (read-only). */
-  typename std::list<K>::const_iterator begin() const { return keys_.begin(); }
+  ConstIterator begin() const { return keys_.begin(); }
 
   /** Past end iterator over the keys of the dictionary (read-only). */
-  typename std::list<K>::const_iterator end()   const { return keys_.end(); }
+  ConstIterator end()   const { return keys_.end(); }
 
   /** Begin iterator over the keys of the dictionary. */
-  typename std::list<K>::iterator begin() { return keys_.begin(); }
+  Iterator begin() { return keys_.begin(); }
 
   /** Begin iterator over the keys of the dictionary. */
-  typename std::list<K>::iterator end()   { return keys_.end(); }
+  Iterator end()   { return keys_.end(); }
 private:
   bool remove_keeping_key(const K &key);
 
@@ -324,8 +326,8 @@ bool THash<K,T>::get(const K &key, const T **retval) const {
 
 template <class K, class T>
 bool THash<K,T>::get_key(const T &pElement, K *retval) const {
-  typename std::list<K>::const_iterator it;
-  typename std::list<K>::const_iterator end = keys_.end();
+  ConstIterator it;
+  ConstIterator end = keys_.end();
 
   T element;
 
@@ -391,7 +393,7 @@ void THash<K,T>::remove_element(const T& pElement) {
 
 template <class K, class T>
 std::ostream& operator<< (std::ostream& pStream, const THash<K,T>& hash) {
-  typename std::list<K>::const_iterator it,begin,end;
+  typename THash<K,T>::ConstIterator it,begin,end;
   end   = hash.end();
   begin = hash.begin();
   T value;
@@ -414,7 +416,7 @@ std::ostream& operator<< (std::ostream& out_stream, const THash<std::string,T>& 
 // FIXME: this should be restricted to K == string...
 template <class K, class T>
 void THash<K,T>::to_stream(std::ostream &out_stream, bool lazy) const {
-  typename std::list<K>::const_iterator it,begin,end;
+  typename THash<K,T>::ConstIterator it,begin,end;
   end   = keys_.end();
   begin = keys_.begin();
   T value;

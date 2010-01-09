@@ -127,8 +127,8 @@ void Object::moved() {
     set_root(NULL);
   }
 
-  string_iterator it;
-  string_iterator end = children_.end();
+  StringIterator it;
+  StringIterator end = children_.end();
   Object *child;
 
   // 3. update children
@@ -166,8 +166,8 @@ void Object::set_parent(Object *parent) {
 }
 
 void Object::clear() {
-  string_iterator it;
-  string_iterator end = children_.end();
+  StringIterator it;
+  StringIterator end = children_.end();
 
   // destroy all children
   for(it = children_.begin(); it != end; it++) {
@@ -185,7 +185,7 @@ void Object::clear() {
 
 const Value Object::list() const {
   ListValue res;
-  const_string_iterator it, end = children_.end();
+  ConstStringIterator it, end = children_.end();
   for (it = children_.begin(); it != end; ++it) {
     Object * obj;
     if (children_.get(*it, &obj)) {
@@ -205,7 +205,7 @@ const Value Object::list() const {
 
 const Value Object::list_with_type() const {
   ListValue list;
-  const_string_iterator it, end = children_.end();
+  ConstStringIterator it, end = children_.end();
   for (it = children_.begin(); it != end; ++it) {
     ListValue name_with_type;
     Object * obj;
@@ -261,7 +261,7 @@ const Value Object::type_with_current_value() {
 
 
 void Object::tree(size_t base_length, Value *tree) const {
-  const_string_iterator it, end = children_.end();
+  ConstStringIterator it, end = children_.end();
   for (it = children_.begin(); it != end; ++it) {
     Object * obj;
     if (children_.get(*it, &obj)) {

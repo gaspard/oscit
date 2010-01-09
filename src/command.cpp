@@ -93,8 +93,8 @@ Command::~Command() {
     root_->unregister_command(this);
     root_ = NULL;
   }
-  string_iterator it;
-  string_iterator end = remote_objects_.end();
+  StringIterator it;
+  StringIterator end = remote_objects_.end();
 
   // destroy all references to remote objects
   for(it = remote_objects_.begin(); it != end; ++it) {
