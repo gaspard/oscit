@@ -46,20 +46,10 @@
 #include "oscit/location.h"
 
 namespace oscit {
-#define OSC_NEXT_NAME_BUFFER_SIZE 20
 
-#define NoIO(info)  Value(info)
-#define NilIO(info)  ListValue("N").push_back(info)
-#define RealIO(units, info) Value(0.0).push_back(units).push_back(info)
-#define StringIO(units, info) Value("").push_back(units).push_back(info)
-#define RangeIO(min, max, units, info) \
-  Value(0.0).push_back(min).push_back(max).push_back(units).push_back(info)
-#define SelectIO(values, units, info) \
-  Value("").push_back(values).push_back(units).push_back(info)
-#define HashIO(info) Value('H').push_back(info)
-#define MatrixIO(rows, cols, info) MatrixValue(rows, cols).push_back(info)
-#define MidiIO(info) MidiValue().push_back(info)
-#define AnyIO(info) Value('*').push_back(info)
+/** Used to append the "-1" or "-2" to osc methods.
+ */
+#define OSC_NEXT_NAME_BUFFER_SIZE 20
 
 #define DEFAULT_TYPE NoIO("No information on this node.")
 

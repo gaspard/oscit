@@ -41,4 +41,37 @@
 #include "oscit/matrix_value.h"
 #include "oscit/midi_value.h"
 
+#define NoIO(info)  Value(info)
+#define NoIOTypeId H("s")
+
+#define NilIO(info)  ListValue("N").push_back(info)
+#define NilIOTypeId H("Ns")
+
+#define RealIO(units, info) Value(0.0).push_back(units).push_back(info)
+#define RealIOTypeId H("fss")
+
+#define StringIO(units, info) Value("").push_back(units).push_back(info)
+#define StringIOTypeId H("sss")
+
+#define RangeIO(min, max, units, info) \
+  Value(0.0).push_back(min).push_back(max).push_back(units).push_back(info)
+#define RangeIOTypeId H("fffss")
+
+#define SelectIO(values, units, info) \
+  Value("").push_back(values).push_back(units).push_back(info)
+#define SelectIOTypeId H("ssss")
+
+#define HashIO(info) Value('H').push_back(info)
+#define HashIOTypeId H("Hs")
+
+#define MatrixIO(rows, cols, info) MatrixValue(rows, cols).push_back(info)
+#define MatrixIOTypeId H("Ms")
+
+#define MidiIO(info) MidiValue().push_back(info)
+#define MidiIOTypeId H("ms")
+
+#define AnyIO(info) Value('*').push_back(info)
+#define AnyIOTypeId H("*s")
+
+
 #endif // OSCIT_INCLUDE_OSCIT_VALUES_H_

@@ -48,6 +48,7 @@ public:
     assert_equal("/foo", res[0].str());
     res = res[1];
     assert_equal("fffss", res.type_tag());
+    assert_equal(RangeIOTypeId, res.type_id());
     assert_equal(4.25,  res[0].r); // current
     assert_equal(0.0,   res[1].r); // min
     assert_equal(127.0, res[2].r); // max
