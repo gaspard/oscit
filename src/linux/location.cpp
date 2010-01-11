@@ -27,22 +27,43 @@
   ==============================================================================
 */
 
-#include <sstream>
 #include "oscit/location.h"
 
-#include <netdb.h>     // gethostbyname
-#include <arpa/inet.h> // inet_addr
+#include <sstream>
+
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netdb.h>
 
 namespace oscit {
 
 unsigned long Location::ip_from_hostname(const char *hostname) {
-  struct hostent * hostentry;
-  hostentry = gethostbyname(hostname);
-  if (hostentry == NULL) {
-    std::cerr << "Could not resolve '" << hostname << "'.\n";
+  struct addrinfo *result, *result0;
+  unsigned long ip;
+  int error;
+
+  error = getaddrinfo(hostname, NULL, NULL, &result0);
+  if (error) {
+    std::cerr << "Could not resolve '" << hostname << "' (" << gai_strerror(error) << ")\n";
     return Location::NO_IP;
   }
-  unsigned long ip = inet_addr(hostentry->h_addr_list[0]);
+
+  for (result = result0; result; result = result->ai_next) {
+    if (result->ai_family == AF_INET) {
+      // only support AF_INET for now (no IPv6)
+
+      // sockaddr is a generic raw bunch of bytes, we must cast it first to
+      // an IPv4 struct:
+      struct sockaddr_in *ipv4 = (sockaddr_in*) result->ai_addr;
+
+      // ip is in sin_addr
+      // we must convert the 32-bit IP from network to host
+      ip = ntohl(ipv4->sin_addr.s_addr);
+      break;
+    }
+  }
+
+  freeaddrinfo(result0);
   return ip;
 }
 
