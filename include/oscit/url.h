@@ -96,6 +96,10 @@ class Url
     return path_.compare(0, 2, "/.") == 0;
   }
 
+  static bool is_meta(const std::string &url) {
+    return url.compare(0, 2, "/.") == 0;
+  }
+
   const std::string &hostname() const { return location_.name_; }
 
   const std::string &service_name() const { return location_.name_; }

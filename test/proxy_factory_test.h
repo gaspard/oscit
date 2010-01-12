@@ -232,6 +232,45 @@ class ProxyFactoryTest : public TestHelper
     assert_equal("UpdateDummyView", update->class_name());
   }
 
+  void test_local_cache_should_create_on_remote_create( void ) {
+    Root local;
+    Root remote;
+    Logger logger;
+    MyProxyFactory factory;
+    build_foobar_local_and_remote(local, remote, factory, logger);
+
+    Object *bar = proxy_->object_at("/synth");
+    assert_equal((Object*)NULL, bar);
+
+    remote.adopt(new DummyObject("synth", gNilValue, NoIO("Super synth.")));
+    millisleep(20);
+
+    bar = proxy_->object_at("/synth");
+    assert_true( bar != NULL);
+
+    assert_equal("Super synth.", bar->info().c_str());
+  }
+
+  // FIXME:
+  // void test_local_cache_should_delete_on_remote_delete( void ) {
+  //   Root local;
+  //   Root remote;
+  //   Logger logger;
+  //   MyProxyFactory factory;
+  //   build_foobar_local_and_remote(local, remote, factory, logger);
+  //
+  //   Object *bar = proxy_->object_at("/synth");
+  //   assert_equal((Object*)NULL, bar);
+  //
+  //   remote.adopt(new DummyObject("synth", gNilValue, NoIO("Super synth.")));
+  //   millisleep(20);
+  //
+  //   bar = proxy_->object_at("/synth");
+  //   assert_true( bar != NULL);
+  //
+  //   assert_equal("Super synth.", bar->info().c_str());
+  // }
+
 private:
 
   /** Builds a setup where the remote tree contains real objects:

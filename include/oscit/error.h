@@ -43,7 +43,7 @@ enum ErrorCode {
   BAD_REQUEST_ERROR = 400,
   NOT_FOUND_ERROR   = 404,
   INTERNAL_SERVER_ERROR = 500,
-  UNKNOWN_ERROR,
+  UNKNOWN_ERROR = 0,
 };
 
 /** A Error stores an error description with an error code. */

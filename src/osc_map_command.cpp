@@ -89,13 +89,21 @@ void OscMapCommand::receive(const Url &ext_url, const Value &ext_val) {
 }
 
 void OscMapCommand::notify_observers(const char *url, const Value &val) {
+
+  if (val.size() < 2 || Url::is_meta(val[0].str())) {
+#ifdef DEBUG_MAP_COMMAND
+    std::cout << "[" << Command::port() << "] - reject: " << url << "(" << val << ")\n";
+#endif
+    return; // do not try to map meta methods, these are for oscit devices, not old osc legacy stuff
+  }
+  // FIXME: (see argument in command.cpp:157) *url is always "/.reply"
 #ifdef DEBUG_MAP_COMMAND
   std::cout << "[" << Command::port() << "] - notify_observers -> " << url << "(" << val << ")\n";
 #endif
   std::string ext_url;
   Real ext_val;
   std::list<unsigned long> to_remove;
-  if (val.size() == 2  && val[0].is_string() && val[1].is_real()) {
+  if (val[0].is_string() && val[1].is_real()) {
     if (mapper_.reverse_map(val[0].c_str(), val[1].r, &ext_url, &ext_val)) {
       std::list<Location>::const_iterator it  = observers().begin();
       std::list<Location>::const_iterator end = observers().end();
@@ -118,7 +126,7 @@ void OscMapCommand::notify_observers(const char *url, const Value &val) {
       }
     } else {
       // could not reverse map
-      std::cerr << "Could not reverse map '" << url << "'\n";
+      std::cerr << "Could not reverse map '" << val << "'\n";
     }
   } else {
     std::cerr << "Output value not supported (" << val << ")\n";

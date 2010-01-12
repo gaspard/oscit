@@ -70,6 +70,18 @@ public:
     assert_equal("f", v.type_tag());
   }
 
+  void test_create_with_one_item( void ) {
+    ListValue a;
+    Value b("hello");
+    a.push_back(b);
+    assert_equal("[\"hello\"]", a.to_json());
+
+    // FIXME !
+    // what is the expected result for to_json in this case ? Should it be "hello" ?
+    // can we accept a special case for first list ?
+    // assert_equal("[s]", a.type_tag());
+  }
+
   void test_create_list_value( void ) {
     ListValue v("ffs");
     ListValue v2;

@@ -41,6 +41,8 @@
 #include "oscit/matrix_value.h"
 #include "oscit/midi_value.h"
 
+// FIXME: remove units (info is enough)
+
 #define NoIO(info)  Value(info)
 #define NoIOTypeId H("s")
 
@@ -50,6 +52,7 @@
 #define RealIO(units, info) Value(0.0).push_back(units).push_back(info)
 #define RealIOTypeId H("fss")
 
+// FIXME: units for string IO does not make sense
 #define StringIO(units, info) Value("").push_back(units).push_back(info)
 #define StringIOTypeId H("sss")
 

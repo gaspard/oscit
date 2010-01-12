@@ -152,6 +152,8 @@ void Command::receive(const Url &url, const Value &val) {
         send(url.location(), REPLY_PATH, reply);
       } else {
         // notify all
+        // FIXME: since notifications always go to '/.reply', why not transform this into
+        // root_->notify_observers(url.path(), res) ?
         root_->notify_observers(REPLY_PATH, reply, this);
       }
     }

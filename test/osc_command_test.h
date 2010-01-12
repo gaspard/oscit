@@ -29,7 +29,7 @@
 
 #include "test_helper.h"
 #include "oscit/root.h"
-#include "oscit/log_object.h"
+#include "mock/object_logger.h"
 #include "oscit/list_meta_method.h"
 #include "oscit/list_with_type_meta_method.h"
 
@@ -53,9 +53,8 @@ class OscCommandTest : public TestHelper
   }
 
   void setUp() {
-    sender_->clear_replies();
-    reply_.str("");
     remote_.Object::clear(); // empty root but keep commands
+    logger_.str("");
   }
 
   void test_send_receive( void ) {
@@ -114,18 +113,25 @@ class OscCommandTest : public TestHelper
   }
 
   void test_send_receive_hash( void ) {
-    DummyObject * foo = remote_.adopt(new DummyObject("foo", 1.0));
-
-    send("/foo", 3.0);
-    assert_equal(3.0, foo->real());
-    assert_equal("[\"/foo\", 3]\n", reply());
-  }
-
-  void test_send_receive_any( void ) {
     remote_.adopt(new DummyObject("foo", Value(Json("{one:1}")), HashIO("some data")));
 
     send("/foo", Value(Json("{five:5}")));
     assert_equal("[\"/foo\", {\"five\":5}]\n", reply());
+  }
+
+  void test_send_receive_any( void ) {
+    remote_.adopt(new ObjectLogger("foo", AnyIO("some data"), &logger_));
+
+    send("/foo", Value(Json("{five:5}")));
+    assert_equal("[foo: trigger {\"five\":5}]", logger_.str());
+  }
+
+  void test_send_receive_error( void ) {
+    remote_.adopt(new ObjectLogger("foo", AnyIO("some data"), &logger_));
+    logger_.str("");
+    send("/foo", ErrorValue(BAD_REQUEST_ERROR, "bad message for bad request"));
+    assert_equal("[foo: trigger [400, \"bad message for bad request\"]]", logger_.str());
+    assert_equal("[\"/foo\", [400, \"bad message for bad request\"]]\n", reply());
   }
 
  private:
@@ -138,6 +144,9 @@ class OscCommandTest : public TestHelper
   }
 
   void send(const char *url, const Value &val) {
+    millisleep(10);
+    reply_.str("");
+    sender_->clear_replies();
     sender_->send(remote_end_point_, url, val);
     millisleep(10);
   }
@@ -147,6 +156,7 @@ class OscCommandTest : public TestHelper
     return sender_->replies();
   }
 
+  Logger logger_;
   Location remote_end_point_;
   Logger reply_;
   Root remote_;

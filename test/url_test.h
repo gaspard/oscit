@@ -178,6 +178,13 @@ public:
     assert_false(url.is_meta());
   }
 
+  void test_static_is_meta( void ) {
+    Url meta_url("oscit://\"foobar\"/.list");
+    Url url("oscit://\"foobar\"/list");
+    assert_true(Url::is_meta(std::string("/.list")));
+    assert_false(Url::is_meta(std::string("/list")));
+  }
+
   void test_same( void ) {
     Url url1("oscit://\"foobar\"/a/b");
     Url url2("http://\"foobar\"/a/b");

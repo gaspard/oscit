@@ -289,16 +289,11 @@ class Root : public Object
   /** Notification of name/parent change from an object. This method
    *  keeps the objects dictionary in sync.
    */
-  void register_object(Object *obj) {
-    // add object to objects dictionary
-    objects_.set(obj->url(), obj);
-    trigger_and_clear_on_register_callbacks(obj->url());
-  }
+  void register_object(Object *obj);
 
-  /** Unregister an object from tree (forget about it). */
-  void unregister_object(Object *obj) {
-    objects_.remove_element(obj);
-  }
+  /** Unregister an object from tree (forget about it).
+   */
+  void unregister_object(Object *obj);
 
   /** Find a pointer to an Object from its path. Return false if the object is not found. */
   bool get_object_at(const std::string &path, Object **retval) {
@@ -353,8 +348,9 @@ class Root : public Object
       if (*it != context) {
         ScopedLock lock(*it);
         (*it)->notify_observers(path, val);
-      } else
+      } else {
         (*it)->notify_observers(path, val);
+      }
     }
   }
 
@@ -398,7 +394,7 @@ class Root : public Object
   void init(bool should_build_meta = true);
 
   std::list<Command *> commands_;    /**< Listening commands (only one allowed per protocol). */
-  
+
   /** List of callbacks to trigger on object registration.
    */
   THash<std::string, CallbackList*> callbacks_on_register_;

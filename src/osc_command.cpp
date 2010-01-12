@@ -55,7 +55,7 @@ static void to_stream(osc::OutboundPacketStream &out_stream, const Value &val, b
       out_stream << (float)val.r; // most osc applications don't understand double type tag.
       break;
     case ERROR_VALUE:
-      out_stream << val.error_code() << val.error_message().c_str();
+      out_stream << (float)val.error_code() << val.error_message().c_str();
       break;
     case STRING_VALUE:
       out_stream << val.c_str();

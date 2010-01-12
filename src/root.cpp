@@ -41,6 +41,21 @@
 
 namespace oscit {
 
+void Root::init(bool should_build_meta) {
+  url_ = "";
+  set_root(this);
+
+  if (should_build_meta) {
+    // build meta methods
+    adopt(new ErrorMetaMethod(Url(ERROR_PATH).name()));
+    adopt(new InfoMetaMethod(Url(INFO_PATH).name()));
+    adopt(new ListMetaMethod(Url(LIST_PATH).name()));
+    adopt(new ListWithTypeMetaMethod(Url(LIST_WITH_TYPE_PATH).name()));
+    adopt(new TypeMetaMethod(Url(TYPE_PATH).name()));
+    adopt(new TreeMetaMethod(Url(TREE_PATH).name()));
+  }
+}
+
 void Root::clear() {
   while (!commands_.empty()) {
     Command *command = commands_.front();
@@ -65,6 +80,15 @@ void Root::clear_on_register_callbacks() {
   }
 }
 
+void Root::adopt_callback_on_register(const std::string &url, Callback *callback) {
+  CallbackList *callbacks;
+  if (!callbacks_on_register_.get(url, &callbacks)) {
+    callbacks = new CallbackList(this);
+    callbacks_on_register_.set(url, callbacks);
+  }
+  callbacks->adopt_callback(callback);
+}
+
 void Root::trigger_and_clear_on_register_callbacks(const std::string &url) {
   CallbackList *callbacks;
 
@@ -75,27 +99,33 @@ void Root::trigger_and_clear_on_register_callbacks(const std::string &url) {
   }
 }
 
-void Root::init(bool should_build_meta) {
-  url_ = "";
-  set_root(this);
+void Root::register_object(Object *obj) {
+  // add object to objects dictionary
+  objects_.set(obj->url(), obj);
+  trigger_and_clear_on_register_callbacks(obj->url());
 
-  if (should_build_meta) {
-    // build meta methods
-    adopt(new ErrorMetaMethod(Url(ERROR_PATH).name()));
-    adopt(new InfoMetaMethod(Url(INFO_PATH).name()));
-    adopt(new ListMetaMethod(Url(LIST_PATH).name()));
-    adopt(new ListWithTypeMetaMethod(Url(LIST_WITH_TYPE_PATH).name()));
-    adopt(new TypeMetaMethod(Url(TYPE_PATH).name()));
-    adopt(new TreeMetaMethod(Url(TREE_PATH).name()));
+  if (!Url::is_meta(obj->url())) {
+    Value type(obj->url());
+    type.push_back(obj->type_with_current_value());
+    Value reply(TYPE_PATH);
+    reply.push_back(type);
+    notify_observers(REPLY_PATH, reply);
   }
 }
 
-void Root::adopt_callback_on_register(const std::string &url, Callback *callback) {
-  CallbackList *callbacks;
-  if (!callbacks_on_register_.get(url, &callbacks)) {
-    callbacks = new CallbackList(this);
-    callbacks_on_register_.set(url, callbacks);
-  }
-  callbacks->adopt_callback(callback);
+void Root::unregister_object(Object *obj) {
+  objects_.remove_element(obj);
+
+  // if (!Url::is_meta(obj->url())) {
+  //   Value type(obj->url());
+  //   type.push_back(gNilValue);
+  //   Value reply(TYPE_PATH);
+  //   reply.push_back(type);
+  //   notify_observers(REPLY_PATH, reply);
+  // }
 }
+
+
 } // oscit
+
+
