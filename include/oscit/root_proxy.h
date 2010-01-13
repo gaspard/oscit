@@ -94,7 +94,7 @@ public:
   /** Dynamically build a child from the given name. If type is empty, we build dummy
    * object proxies that will try to get a "type" from the remote end.
    */
-  virtual Object *build_child(const std::string &name, const Value &type, Value *error);
+  virtual Object *build_child(const std::string &name, const Value &type, Value *error, const Mutex *context = NULL);
 
   ProxyFactory *proxy_factory() {
     return proxy_factory_;

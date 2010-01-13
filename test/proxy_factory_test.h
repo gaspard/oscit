@@ -64,9 +64,9 @@ public:
     sync_children();
   }
 
-  virtual Object *build_child(const std::string &name, const Value &type, Value *error) {
+  virtual Object *build_child(const std::string &name, const Value &type, Value *error, const Mutex *context = NULL) {
     if (name == "update") {
-      return adopt(new UpdateDummyView(name, type));
+      return adopt(new UpdateDummyView(name, type), context);
     } else {
       return NULL;
     }

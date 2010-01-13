@@ -56,6 +56,7 @@ namespace oscit {
 class Root;
 class Alias;
 class ObjectProxy;
+class Mutex;
 
 class Object : public Typed, public Observable {
  public:
@@ -137,8 +138,8 @@ class Object : public Typed, public Observable {
     * highlights ownership in the parent.
     * TODO: make sure a parent is not adopted by it's child. */
   template<class T>
-  T *adopt(T *object) {
-    object->set_parent(this);
+  T *adopt(T *object, const Mutex *context = NULL) {
+    object->set_parent(this, context);
     return object;
   }
 
@@ -171,7 +172,7 @@ class Object : public Typed, public Observable {
    *  a sub-node or branch is not found and this is the last found object along
    *  the path.
    */
-  virtual Object *build_child(const std::string &name, const Value &type, Value *error) {
+  virtual Object *build_child(const std::string &name, const Value &type, Value *error, const Mutex *context = NULL) {
     return NULL;
   }
 
@@ -333,7 +334,7 @@ class Object : public Typed, public Observable {
 
   /** Set object's new parent.
    */
-  void set_parent(Object *parent);
+  void set_parent(Object *parent, const Mutex *context = NULL);
 
   /** Parent changed, set new context. */
   virtual void set_context(Mutex *context) { context_ = context; }
@@ -376,7 +377,7 @@ class Object : public Typed, public Observable {
 
   /** Set object's new root.
   */
-  void set_root(Root *root);
+  void set_root(Root *root, const Mutex *context = NULL);
 
   /** Child sends a notification to the parent when it's name changes so that
    *  the parent/root keep their url hash in sync.
@@ -389,7 +390,7 @@ class Object : public Typed, public Observable {
 
   /** Update cached url, notify root_ of the position change.
    */
-  void moved();
+  void moved(const Mutex *context = NULL);
 
   /** Add '-1', '-2', ... at the end of the current name. bob --> bob-1
    */
