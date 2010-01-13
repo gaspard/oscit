@@ -111,12 +111,12 @@ void Object::unregister_child(Object *object) {
   }
 }
 
-void Object::moved(const Mutex *context) {
+void Object::moved() {
   // 1. get new name from parent, register as child
   if (parent_) {
     // rebuild fullpath
     url_ = std::string(parent_->url()).append("/").append(name_);
-    set_root(parent_->root_, context);
+    set_root(parent_->root_);
     set_context(parent_->context_);
   } else if (root_ == this) {
     // root: url does not contain name
@@ -124,7 +124,7 @@ void Object::moved(const Mutex *context) {
   } else {
     // no parent
     url_ = name_;
-    set_root(NULL, context);
+    set_root(NULL);
   }
 
   StringIterator it;
@@ -151,17 +151,17 @@ void Object::register_child(Object *object) {
   children_vector_.push_back(object);
 }
 
-void Object::set_root(Root *root, const Mutex *context) {
-  if (root_) root_->unregister_object(this, context);
+void Object::set_root(Root *root) {
+  if (root_) root_->unregister_object(this);
   root_ = root;
-  if (root_) root_->register_object(this, context);
+  if (root_) root_->register_object(this);
 }
 
-void Object::set_parent(Object *parent, const Mutex *context) {
+void Object::set_parent(Object *parent) {
   if (parent_) parent_->unregister_child(this);
   parent_ = parent;
   if (parent_) parent_->register_child(this);
-  moved(context);
+  moved();
   adopted();
 }
 

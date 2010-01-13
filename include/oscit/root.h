@@ -198,8 +198,7 @@ class Root : public Object
     Object * target = find_or_build_object_at(url.path(), &error);
 
     // FIXME: possible problem here: target deleted by other thread before call..
-    // a solution is to use a purgatory for suppressed objects where they are kept for a few seconds
-    // another solution is to use a Mutex on root...
+    // a solution is to use a purgatory for suppressed objects where they are kept for a few seconds.
 
     if (!target) {
       return error;
@@ -290,11 +289,11 @@ class Root : public Object
   /** Notification of name/parent change from an object. This method
    *  keeps the objects dictionary in sync.
    */
-  void register_object(Object *obj, const Mutex *context = NULL);
+  void register_object(Object *obj);
 
   /** Unregister an object from tree (forget about it).
    */
-  void unregister_object(Object *obj, const Mutex *context = NULL);
+  void unregister_object(Object *obj);
 
   /** Find a pointer to an Object from its path. Return false if the object is not found. */
   bool get_object_at(const std::string &path, Object **retval) {
@@ -321,8 +320,8 @@ class Root : public Object
   /** Find the object at the given path. Before raising a 404 error, we try to find a 'not_found'
    *  handler that could build the resource.
    */
-  Object *find_or_build_object_at(const std::string &path, Value *error, const Mutex *context = NULL) {
-    Object *object = do_find_or_build_object_at(path, error, context);
+  Object *find_or_build_object_at(const std::string &path, Value *error) {
+    Object *object = do_find_or_build_object_at(path, error);
 
     if (object == NULL && (error->is_empty() || (error->is_error() && error->error_code() == NOT_FOUND_ERROR))) {
       error->set(NOT_FOUND_ERROR, path);
@@ -334,8 +333,8 @@ class Root : public Object
   /** Find the object at the given path. Before raising a 404 error, we try to find a 'not_found'
    *  handler that could build the resource.
    */
-  inline Object * find_or_build_object_at(const char *path, Value *error, const Mutex *context = NULL) {
-    return find_or_build_object_at(std::string(path), error, context);
+  inline Object * find_or_build_object_at(const char *path, Value *error) {
+    return find_or_build_object_at(std::string(path), error);
   }
 
   /* ======================= META METHODS HELPERS ===================== */
@@ -347,7 +346,7 @@ class Root : public Object
     std::list<Command*>::iterator end = commands_.end();
     for (it = commands_.begin(); it != end; ++it) {
       if (*it != context) {
-        ScopedLock lock(*it); // This locks twice when called without context (from Root::register_object...)
+        ScopedLock lock(*it);
         (*it)->notify_observers(path, val);
       } else {
         (*it)->notify_observers(path, val);
@@ -370,7 +369,7 @@ class Root : public Object
   THash<std::string, Object*> objects_;   /**< Hash to find any object in the tree from its path. */
 
  private:
-  Object *do_find_or_build_object_at(const std::string &path, Value *error, const Mutex *context = NULL) {
+  Object *do_find_or_build_object_at(const std::string &path, Value *error) {
     Object *object = object_at(path);
 
     if (object == NULL) {
@@ -378,13 +377,13 @@ class Root : public Object
       size_t pos = path.rfind("/");
       if (pos != std::string::npos) {
         /** call 'build_child' handler in parent. */
-        Object * parent = do_find_or_build_object_at(path.substr(0, pos), error, context);
+        Object * parent = do_find_or_build_object_at(path.substr(0, pos), error);
         if (parent != NULL) {
           // parent might have automatically created the children objects:
           object = object_at(path);
           if (object == NULL) {
             // ask parent to create child
-            return parent->build_child(path.substr(pos+1), gNilValue, error, context);
+            return parent->build_child(path.substr(pos+1), gNilValue, error);
           }
         }
       }

@@ -137,7 +137,7 @@ public:
    * Dynamically build a child from the given name. If type is empty, we build dummy
    * object proxies that will try to get a "type" from the remote end.
    */
-  virtual Object *build_child(const std::string &name, const Value &type, Value *error, const Mutex *context = NULL);
+  virtual Object *build_child(const std::string &name, const Value &type, Value *error);
 
   TimeRef &time_ref() {
     return time_ref_;

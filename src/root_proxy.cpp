@@ -109,7 +109,7 @@ void RootProxy::build_children_from_types(Object *parent, const Value &types) {
   }
 }
 
-Object *RootProxy::build_child(const std::string &name, const Value &type, Value *error, const Mutex *context) {
+Object *RootProxy::build_child(const std::string &name, const Value &type, Value *error) {
   if (!proxy_factory_) {
     std::cerr << "Cannot build child /" << name << " : no ProxyFactory !\n";
     return NULL;
@@ -117,7 +117,7 @@ Object *RootProxy::build_child(const std::string &name, const Value &type, Value
 
   Object *object = proxy_factory_->build_object_proxy(this, name, type);
 
-  if (object) adopt(object, context);
+  if (object) adopt(object);
 
   return object;
 }

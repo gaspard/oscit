@@ -56,12 +56,12 @@ public:
     return value_;
   }
 
-  virtual Object * build_child(const std::string &name, const Value &type, Value *error, const Mutex *context = NULL) {
+  virtual Object * build_child(const std::string &name, const Value &type, Value *error) {
     if (name == "special") {
-      return adopt(new Object("special"), context);
+      return adopt(new Object("special"));
     } else if (name == "AgeOf") {
-      Object * comp = adopt(new Object(name), context);
-      comp->adopt(new DummyObject("Capitain", 78.0), context);
+      Object * comp = adopt(new Object(name));
+      comp->adopt(new DummyObject("Capitain", 78.0));
       return comp;
     } else if (name == "error") {
       error->set(INTERNAL_SERVER_ERROR, "You should not try to build errors !");

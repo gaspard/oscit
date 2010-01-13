@@ -59,7 +59,7 @@ enum ValueTypeTag
   NIL_TYPE_TAG    = 'N',
   REAL_TYPE_TAG   = 'f',
   STRING_TYPE_TAG = 's',
-  ERROR_TYPE_TAG  = 'E', // not used
+  ERROR_TYPE_TAG  = 'E',
   HASH_TYPE_TAG   = 'H',
   MATRIX_TYPE_TAG = 'M',
   MIDI_MESSAGE_TYPE_TAG = 'm',

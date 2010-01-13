@@ -99,7 +99,7 @@ void Root::trigger_and_clear_on_register_callbacks(const std::string &url) {
   }
 }
 
-void Root::register_object(Object *obj, const Mutex *context) {
+void Root::register_object(Object *obj) {
   // add object to objects dictionary
   objects_.set(obj->url(), obj);
   trigger_and_clear_on_register_callbacks(obj->url());
@@ -109,11 +109,11 @@ void Root::register_object(Object *obj, const Mutex *context) {
     type.push_back(obj->type_with_current_value());
     Value reply(TYPE_PATH);
     reply.push_back(type);
-    notify_observers(REPLY_PATH, reply, context);
+    notify_observers(REPLY_PATH, reply);
   }
 }
 
-void Root::unregister_object(Object *obj, const Mutex *context) {
+void Root::unregister_object(Object *obj) {
   objects_.remove_element(obj);
 
   // if (!Url::is_meta(obj->url())) {
