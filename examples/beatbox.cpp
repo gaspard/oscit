@@ -68,31 +68,32 @@ private:
   uint *sleepy_;
 };
 
-bool gRun = true;
+static bool gRun = true;
+static uint gSleepy = 0;
 
 void terminate(int sig) {
   gRun = false;
 }
 
+
 int main(int argc, char * argv[]) {
   Root root("beatbox");
-  uint sleepy = 0;
 
   if (argc > 1) {
-    sleepy = atoi(argv[1]);
+    gSleepy = atoi(argv[1]);
   }
 
   // open osc command on port OSC_PORT
-  root.adopt_command(new SleepyOscCommand("oscit", "_oscit._udp", &sleepy));
+  root.adopt_command(new SleepyOscCommand("oscit", "_oscit._udp", &gSleepy));
 
   // create '/tempo' url
-  root.adopt(new ValueDisplay("tempo", 120, &sleepy));
+  root.adopt(new ValueDisplay("tempo", 120, &gSleepy));
 
   // create '/other/deeply/nested/slider' url
   Object *tmp = root.adopt(new Object("other"));
   tmp = tmp->adopt(new Object("deeply"));
   tmp = tmp->adopt(new Object("nested"));
-  tmp->adopt(new ValueDisplay("slider", 115, 0));
+  tmp->adopt(new ValueDisplay("slider", 115, &gSleepy));
 
   // create '/views' url
   Object *views = root.make_views_path();
@@ -100,7 +101,7 @@ int main(int argc, char * argv[]) {
   // create '/views/basic' url
   views->adopt(new HashFileMethod("basic", VIEW_PATH, "basic view for the beatbox example"));
 
-  printf("Beatbox started and listening on port %i (sleeping %ims betwween calls).\nType Ctrl+C to stop.\n", OSC_PORT, sleepy);
+  printf("Beatbox started and listening on port %i (sleeping %ims betwween calls).\nType Ctrl+C to stop.\n", OSC_PORT, gSleepy);
 
   // register signals
   signal(SIGINT,  terminate);

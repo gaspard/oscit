@@ -140,9 +140,15 @@ if(OSCIT_ENABLE_EXAMPLES)
   	add_executable(${OSCIT_EXAMPLE_NAME} ${OSCIT_EXAMPLE})
   	target_link_libraries(${OSCIT_EXAMPLE_NAME} oscit ${PLAT_LINK})
   	add_dependencies(examples ${OSCIT_EXAMPLE_NAME})
-  	# FIXME: should compile examples in /examples/ folder
   endforeach (OSCIT_EXAMPLE)
+
+	file(GLOB OSCIT_EXAMPLE_ASSETS examples/*.json)
+	foreach (OSCIT_EXAMPLE_ASSET ${OSCIT_EXAMPLE_ASSETS})
+    get_filename_component (OSCIT_EXAMPLE_ASSET_NAME ${OSCIT_EXAMPLE_ASSET} NAME)
+	  configure_file(${OSCIT_EXAMPLE_ASSET} ${OSCIT_EXAMPLE_ASSET_NAME} COPYONLY)
+	endforeach(OSCIT_EXAMPLE_ASSETS)
 endif(OSCIT_ENABLE_EXAMPLES)
+
 # ==============================================================================
 #
 #  test_runner build
