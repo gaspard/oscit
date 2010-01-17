@@ -43,11 +43,16 @@ const Value HashFileMethod::trigger(const Value &val) {
   if (!val.is_hash()) {
     if (hash_.is_empty()) {
       Value str(file_.read());
-      h.set((Json)str.str());
-      if (!h.is_hash()) {
-        std::cerr << url() << ": error, hash file content '" << file_.path() << "' is not a Hash !\n";
+      if (str.is_error()) {
+        // Could not read file content: make empty hash
+        return str;
       } else {
-        hash_ = h;
+        h.set((Json)str.str());
+        if (!h.is_hash()) {
+          std::cerr << url() << ": error, hash file content '" << file_.path() << "' is not a Hash !\n";
+        } else {
+          hash_ = h;
+        }
       }
     }
     return hash_;

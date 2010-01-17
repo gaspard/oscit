@@ -78,6 +78,7 @@ void terminate(int sig) {
 
 int main(int argc, char * argv[]) {
   Root root("beatbox");
+  Value test;
 
   if (argc > 1) {
     gSleepy = atoi(argv[1]);
@@ -99,7 +100,11 @@ int main(int argc, char * argv[]) {
   Object *views = root.make_views_path();
 
   // create '/views/basic' url
-  views->adopt(new HashFileMethod("basic", VIEW_PATH, "basic view for the beatbox example"));
+  HashFileMethod *basic_view = views->adopt(new HashFileMethod("basic", VIEW_PATH, "basic view for the beatbox example"));
+  test = basic_view->trigger(gNilValue);
+  if (test.is_error()) {
+    std::cout << "\n## ERROR " << basic_view->url() << ": " << test.error_message() << "\n\n";
+  }
 
   printf("Beatbox started and listening on port %i (sleeping %ims betwween calls).\nType Ctrl+C to stop.\n", OSC_PORT, gSleepy);
 
