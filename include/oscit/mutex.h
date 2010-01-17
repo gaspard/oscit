@@ -41,22 +41,22 @@ namespace oscit {
 class Mutex : public Typed, private NonCopyable {
 public:
   TYPED("Mutex")
-  
-  Mutex() { 
+
+  Mutex() {
     pthread_mutex_init(&mutex_, NULL);
   }
-  
+
   virtual ~Mutex() {
     pthread_mutex_destroy(&mutex_);
   }
-  
+
   /** If the mutex is locked by another thread, waits until it is unlocked, lock and continue.
     * If the mutex is not locked. Lock and continue.
     * If this thread locked it: bang! */
   inline void lock() {
     pthread_mutex_lock(&mutex_);
   }
-  
+
   /** Release the lock so others can work on the data. */
   inline void unlock() {
     pthread_mutex_unlock(&mutex_);
@@ -65,16 +65,16 @@ public:
   pthread_mutex_t mutex_;
 };
 
-class ScopedLock {
+class ScopedLock : private NonCopyable {
 public:
   ScopedLock(Mutex *mutex) : mutex_ptr_(mutex) {
     mutex_ptr_->lock();
   }
-  
+
   ScopedLock(Mutex &mutex) : mutex_ptr_(&mutex) {
     mutex_ptr_->lock();
   }
-  
+
   ~ScopedLock() {
     mutex_ptr_->unlock();
   }

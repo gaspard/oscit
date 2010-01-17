@@ -64,7 +64,7 @@ const Value Object::set(const Value &val) {
 
   for (it = val.begin(); it != end; ++it) {
     if ((obj = child(*it)) && val.get(*it, &param)) {
-      res.set(*it, root_->call(obj, param, NULL, context_));
+      res.set(*it, root_->call(obj, param, NULL));
     } else {
       res.set(*it, ErrorValue(NOT_FOUND_ERROR, *it));
     }
@@ -82,7 +82,7 @@ bool Object::set_all_ok(const Value &val) {
 
   for (it = val.begin(); it != end; ++it) {
     if ((obj = child(*it)) && val.get(*it, &param)) {
-      all_ok = !root_->call(obj, param, NULL, context_).is_error() && all_ok;
+      all_ok = !root_->call(obj, param, NULL).is_error() && all_ok;
     } else {
       all_ok = false;
     }
