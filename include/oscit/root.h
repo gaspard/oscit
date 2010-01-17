@@ -32,6 +32,7 @@
 
 #include "oscit/object.h"
 #include "oscit/command.h"
+#include "oscit/mutex.h"
 
 namespace oscit {
 
@@ -63,8 +64,7 @@ communication be requiring locks/unlocks between groups of objects. Not
 for every object.
 
 */
-class Root : public Object
-{
+class Root : public Object {
  public:
   /** Class signature. */
   TYPED("Object.Root")
@@ -136,9 +136,12 @@ class Root : public Object
 
   void clear();
 
-  /** Start listening for incomming messages from the given command. */
+  /** Start listening for incomming messages from the given command.
+   * Thread safe.
+   */
   template<class T>
   T * adopt_command(T *command, bool start = true) {
+    ScopedLock lock(mutex_);
     if (command_for_protocol(command->protocol()) != NULL) {
       // we already have a command for this protocol. Do not adopt.
       delete command;
@@ -154,13 +157,20 @@ class Root : public Object
     return command;
   }
 
+  /** Forget about a command.
+   * TODO: clarify who should use this.
+   * Thread safe.
+   */
   void unregister_command(Command *command) {
+    ScopedLock lock(mutex_);
     commands_.remove(command);
   }
 
   /** Return (create if necessary) the "/views" container.
+   * Thread safe.
    */
   Object *make_views_path() {
+    ScopedLock lock(mutex_);
     Object *views = object_at(VIEWS_PATH);
     if (views) {
       return views;
@@ -169,52 +179,58 @@ class Root : public Object
     }
   }
 
-  /** Trigger the object located at the given path, passing nil as parameter. */
-  const Value call(const char *path, const Mutex *context = NULL) {
-    return call(Url(Location::NO_IP, Location::NO_PORT, path), gNilValue, context);
+  /** Trigger the object located at the given path, passing nil as parameter.
+   * Thread safe.
+   */
+  const Value call(const char *path) {
+    return call(Url(Location::NO_IP, Location::NO_PORT, path), gNilValue);
   }
 
-  /** Trigger the object located at the given path, passing nil as parameter. */
-  const Value call(const std::string &path, const Mutex *context = NULL) {
-    return call(Url(Location::NO_IP, Location::NO_PORT, path), gNilValue, context);
+  /** Trigger the object located at the given path, passing nil as parameter.
+   * Thread safe.
+   */
+  const Value call(const std::string &path) {
+    return call(Url(Location::NO_IP, Location::NO_PORT, path), gNilValue);
   }
 
-  /** Trigger the object located at the given path with the given parameters. */
-  const Value call(const char *path, const Value &val, const Mutex *context = NULL) {
-    return call(Url(Location::NO_IP, Location::NO_PORT, path), val, context);
+  /** Trigger the object located at the given path with the given parameters.
+   * Thread safe.
+   */
+  const Value call(const char *path, const Value &val) {
+    return call(Url(Location::NO_IP, Location::NO_PORT, path), val);
   }
 
-  /** Trigger the object located at the given path with the given parameters. */
-  const Value call(const std::string &path, const Value &val, const Mutex *context = NULL) {
-    return call(Url(Location::NO_IP, Location::NO_PORT, path), val, context);
+  /** Trigger the object located at the given path with the given parameters.
+   * Thread safe.
+   */
+  const Value call(const std::string &path, const Value &val) {
+    return call(Url(Location::NO_IP, Location::NO_PORT, path), val);
   }
 
   /** Trigger the object in the local tree located at the given url. At this point, the
-   *  url's location contains the origin of the call.
-   *  TODO: remove context ?
+   * url's location contains the origin of the call.
+   * Thread safe.
    */
-  const Value call(const Url &url, const Value &val, const Mutex *context = NULL) {
+  const Value call(const Url &url, const Value &val) {
+    ScopedLock lock(mutex_);
     Value error;
     Object * target = find_or_build_object_at(url.path(), &error);
-
-    // FIXME: possible problem here: target deleted by other thread before call..
-    // a solution is to use a purgatory for suppressed objects where they are kept for a few seconds.
 
     if (!target) {
       return error;
     }
 
-    return call(target, val, &url.location(), context);
+    return call(target, val, &url.location());
   }
 
-  void send(const Location &remote, const char *path, const Value &val, const Mutex *context = NULL) {
+  /** Send a message to a given location.
+   * Thread safe.
+   */
+  void send(const Location &remote, const char *path, const Value &val) {
+    ScopedLock lock(mutex_);
     Command *cmd = command_for_protocol(remote.protocol());
     if (cmd) {
-      if (cmd != context) {
-        ScopedLock lock(cmd);
-        cmd->send(remote, path, val);
-      } else
-        cmd->send(remote, path, val);
+      cmd->send(remote, path, val);
     } else {
       std::cerr << "Cannot send '" << path << "(" << val << ")" << "' to " << remote << " no command for protocol '" << remote.protocol() << "'.\n";
     }
@@ -223,22 +239,23 @@ class Root : public Object
   /** Send value to given url (can be local or remote). You should use 'call' for local urls (faster).
    * FIXME: this needs refactoring... we should not have a 'send' finishing in a 'call' !
    * FIXME: maybe rename this to 'call_remote' ?
+   * Thread safe.
    */
-  const Value send(const Url &url, const Value &val, const Mutex *context = NULL) {
+  const Value send(const Url &url, const Value &val) {
+    ScopedLock lock(mutex_);
     Value error;
     Object * target = object_at(url, &error);
-
-    // FIXME: possible problem here: target deleted by other thread before call..
-    // a solution is to use a purgatory for suppressed objects where they are kept for a few seconds.
 
     if (!target) {
       return error;
     }
 
-    return call(target, val, &url.location(), context);
+    return call(target, val, &url.location());
   }
 
-  /** Find any object (local or remoate). */
+  /** Find any object (local or remoate).
+   * Not thread safe.
+   */
   Object *object_at(const Url &url, Value *error) {
     if (url.path() == "") {
       // bad url
@@ -260,65 +277,78 @@ class Root : public Object
     }
   }
 
-  /** All calls between objects in the same tree should pass
-   * their context in order for the locks to work.
-   * If you do not follow this rule, you will get deadlocks.
+  /** Call an object's trigger method.
+   * TODO: private method
+   * Not thread safe.
    */
-  inline const Value call(Object *target, const Value &val, const Location *origin, const Mutex *context = NULL) {
-    if (val.is_empty()) return call(target, gNilValue, origin, context);
+  inline const Value call(Object *target, const Value &val, const Location *origin) {
+    if (val.is_empty()) return call(target, gNilValue, origin);
     if (target->can_receive(val)) {
-      return target->safe_trigger(val, context);
+      return target->trigger(val); // how do we protect object ? Is the lock on Root enough ?
     } else {
-      Value type = call(Url(origin, TYPE_PATH), Value(target->url()), context);
       return ErrorValue(BAD_REQUEST_ERROR, std::string("'").append(target->url()).append("' (").append(target->type().last().str()).append(")."));
     }
   }
 
   /** Add a callback on object registration.
+   * Thread safe.
    */
   void adopt_callback_on_register(const std::string &url, Callback *callback);
 
   /** Trigger and remove all callbacks for a specific url registration.
+   * TODO: make private
    */
   void trigger_and_clear_on_register_callbacks(const std::string &url);
 
   /** Remove all on register callbacks.
+   * TODO: make private
    */
   void clear_on_register_callbacks();
 
   /** Notification of name/parent change from an object. This method
-   *  keeps the objects dictionary in sync.
+   * keeps the objects dictionary in sync.
+   * Thread safe.
    */
   void register_object(Object *obj);
 
   /** Unregister an object from tree (forget about it).
+   * Thread safe.
    */
   void unregister_object(Object *obj);
 
-  /** Find a pointer to an Object from its path. Return false if the object is not found. */
+  /** Find a pointer to an Object from its path. Return false if the object is not found.
+   * Not thread safe unless root locked during object use.
+   */
   bool get_object_at(const std::string &path, Object **retval) {
     return objects_.get(path, retval);
   }
 
-  /** Find a pointer to an Object from its path. Return false if the object is not found. */
+  /** Find a pointer to an Object from its path. Return false if the object is not found.
+   * Not thread safe unless root locked during object use.
+   */
   bool get_object_at(const char *path, Object **retval) {
     return objects_.get(std::string(path), retval);
   }
 
-  /** Return a pointer to the object located at a given path. NULL if not found. */
-  Object * object_at(const std::string &path) {
+  /** Return a pointer to the object located at a given path. NULL if not found.
+   * Not thread safe unless root locked during object use.
+   */
+  Object *object_at(const std::string &path) {
     Object *res = NULL;
     get_object_at(path, &res);
     return res;
   }
 
-  /** Return a pointer to the object located at a given path. NULL if not found. */
-  Object * object_at(const char *path) {
+  /** Return a pointer to the object located at a given path. NULL if not found.
+   * Not thread safe unless root locked during object use.
+   */
+  Object *object_at(const char *path) {
     return object_at(std::string(path));
   }
 
   /** Find the object at the given path. Before raising a 404 error, we try to find a 'not_found'
-   *  handler that could build the resource.
+   * handler that could build the resource.
+   * Not thread safe unless root locked during object use.
    */
   Object *find_or_build_object_at(const std::string &path, Value *error) {
     Object *object = do_find_or_build_object_at(path, error);
@@ -331,7 +361,8 @@ class Root : public Object
   }
 
   /** Find the object at the given path. Before raising a 404 error, we try to find a 'not_found'
-   *  handler that could build the resource.
+   * handler that could build the resource.
+   * Not thread safe unless root locked during object use.
    */
   inline Object * find_or_build_object_at(const char *path, Value *error) {
     return find_or_build_object_at(std::string(path), error);
@@ -340,20 +371,21 @@ class Root : public Object
   /* ======================= META METHODS HELPERS ===================== */
 
   /** Send a reply to all commands so they pass it further to their observers.
+   * Not thread safe.
+   * TODO: make private
    */
-  void notify_observers(const char *path, const Value &val, const Mutex *context = NULL) {
+  void notify_observers(const char *path, const Value &val) {
     std::list<Command*>::iterator it;
     std::list<Command*>::iterator end = commands_.end();
     for (it = commands_.begin(); it != end; ++it) {
-      if (*it != context) {
-        ScopedLock lock(*it);
-        (*it)->notify_observers(path, val);
-      } else {
-        (*it)->notify_observers(path, val);
-      }
+      (*it)->notify_observers(path, val);
     }
   }
 
+  /** Find a command handling a given protocol.
+   * TODO: make private ?
+   * Not thread safe.
+   */
   Command *command_for_protocol(const std::string& protocol) {
     std::list<Command*>::iterator it;
     std::list<Command*>::iterator end = commands_.end();
@@ -398,6 +430,8 @@ class Root : public Object
   /** List of callbacks to trigger on object registration.
    */
   THash<std::string, CallbackList*> callbacks_on_register_;
+
+  Mutex mutex_;
 };
 
 } // oscit

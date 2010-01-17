@@ -274,13 +274,12 @@ public:
 
   void test_delete_command_should_unregister_it_from_observers( void ) {
     Root root;
-    Mutex context;
     root.adopt(new DummyObject("foo", 4.5));
     Logger logger;
     CommandLogger *cmd = root.adopt_command(new CommandLogger("osc", &logger));
     delete cmd;
     logger.str("");
-    root.call("/foo", Value(5.2), &context);
+    root.call("/foo", Value(5.2));
   }
 
   void test_list_with_type_on_root( void ) {

@@ -81,6 +81,7 @@ void Root::clear_on_register_callbacks() {
 }
 
 void Root::adopt_callback_on_register(const std::string &url, Callback *callback) {
+  ScopedLock lock(mutex_);
   CallbackList *callbacks;
   if (!callbacks_on_register_.get(url, &callbacks)) {
     callbacks = new CallbackList(this);
@@ -100,6 +101,7 @@ void Root::trigger_and_clear_on_register_callbacks(const std::string &url) {
 }
 
 void Root::register_object(Object *obj) {
+  ScopedLock lock(mutex_);
   // add object to objects dictionary
   objects_.set(obj->url(), obj);
   trigger_and_clear_on_register_callbacks(obj->url());
@@ -114,6 +116,7 @@ void Root::register_object(Object *obj) {
 }
 
 void Root::unregister_object(Object *obj) {
+  ScopedLock lock(mutex_);
   objects_.remove_element(obj);
 
   // if (!Url::is_meta(obj->url())) {

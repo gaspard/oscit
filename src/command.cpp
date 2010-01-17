@@ -138,7 +138,7 @@ void Command::publish_service() {
 
 void Command::receive(const Url &url, const Value &val) {
   if (!handle_reply_message(url, val) && !handle_register_message(url, val)) {
-    Value res = root_->call(url, val, this);
+    Value res = root_->call(url, val);
 
     if (res.is_error()) {
       // only send reply to caller
@@ -154,7 +154,7 @@ void Command::receive(const Url &url, const Value &val) {
         // notify all
         // FIXME: since notifications always go to '/.reply', why not transform this into
         // root_->notify_observers(url.path(), res) ?
-        root_->notify_observers(REPLY_PATH, reply, this);
+        root_->notify_observers(REPLY_PATH, reply);
       }
     }
   }
