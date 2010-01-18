@@ -111,14 +111,14 @@ include_directories (AFTER ${OSCIT_SOURCE_DIR}/test)
 file (GLOB RAGEL_SOURCES src/*.rl)
 foreach (RAGEL_SRC ${RAGEL_SOURCES})
   get_filename_component (RAGEL_SRC_NAME ${RAGEL_SRC} NAME_WE)
-	add_custom_command ( PRE_BUILD
-	  OUTPUT  ${OSCIT_SOURCE_DIR}/src/${RAGEL_SRC_NAME}.cpp
-	  COMMAND ${RAGEL} ${RAGEL_SRC} -o ${OSCIT_SOURCE_DIR}/src/${RAGEL_SRC_NAME}.cpp
-	  DEPENDS ${RAGEL_SRC}
-	)
-	# make sure output is included in OSCIT_SOURCES in case 'make clean' removes cached cpp file
-	# TODO: how to make sure 'clean' does not remove these generated files ?
-	set (OSCIT_SOURCES ${OSCIT_SOURCES} ${OSCIT_SOURCE_DIR}/src/${RAGEL_SRC_NAME}.cpp)
+  add_custom_command ( PRE_BUILD
+    OUTPUT  ${OSCIT_SOURCE_DIR}/src/${RAGEL_SRC_NAME}.cpp
+    COMMAND ${RAGEL} ${RAGEL_SRC} -o ${OSCIT_SOURCE_DIR}/src/${RAGEL_SRC_NAME}.cpp
+    DEPENDS ${RAGEL_SRC}
+  )
+  # make sure output is included in OSCIT_SOURCES in case 'make clean' removes cached cpp file
+  # TODO: how to make sure 'clean' does not remove these generated files ?
+  set (OSCIT_SOURCES ${OSCIT_SOURCES} ${OSCIT_SOURCE_DIR}/src/${RAGEL_SRC_NAME}.cpp)
 endforeach (RAGEL_SRC)
 
 file (GLOB OSCPACK_SOURCES oscpack/ip/*.cpp oscpack/ip/${OSCPACK_PLAT}/*.cpp oscpack/osc/*.cpp)
@@ -129,20 +129,25 @@ add_library (oscit STATIC ${OSCIT_SOURCES} ${OSCPACK_SOURCES})
 #  examples build
 #
 # ==============================================================================
-if(OSCIT_ENABLE_EXAMPLES)
-  # TODO: how to add a custom target, but not run it ?
-  add_custom_target(examples)
-  file (GLOB OSCIT_EXAMPLES examples/*.cpp)
 
-  foreach (OSCIT_EXAMPLE ${OSCIT_EXAMPLES})
-    get_filename_component (OSCIT_EXAMPLE_NAME ${OSCIT_EXAMPLE} NAME_WE)
+# Exclude from default 'all' target
+add_custom_target(examples)
+file (GLOB OSCIT_EXAMPLES examples/*.cpp)
 
-  	add_executable(${OSCIT_EXAMPLE_NAME} ${OSCIT_EXAMPLE})
-  	target_link_libraries(${OSCIT_EXAMPLE_NAME} oscit ${PLAT_LINK})
-  	add_dependencies(examples ${OSCIT_EXAMPLE_NAME})
-  	# FIXME: should compile examples in /examples/ folder
-  endforeach (OSCIT_EXAMPLE)
-endif(OSCIT_ENABLE_EXAMPLES)
+foreach (OSCIT_EXAMPLE ${OSCIT_EXAMPLES})
+  get_filename_component (OSCIT_EXAMPLE_NAME ${OSCIT_EXAMPLE} NAME_WE)
+
+  add_executable(${OSCIT_EXAMPLE_NAME} EXCLUDE_FROM_ALL ${OSCIT_EXAMPLE})
+  target_link_libraries(${OSCIT_EXAMPLE_NAME} oscit ${PLAT_LINK})
+  add_dependencies(examples ${OSCIT_EXAMPLE_NAME})
+endforeach (OSCIT_EXAMPLE)
+
+file(GLOB OSCIT_EXAMPLE_ASSETS examples/*.json)
+foreach (OSCIT_EXAMPLE_ASSET ${OSCIT_EXAMPLE_ASSETS})
+  get_filename_component (OSCIT_EXAMPLE_ASSET_NAME ${OSCIT_EXAMPLE_ASSET} NAME)
+  configure_file(${OSCIT_EXAMPLE_ASSET} ${OSCIT_EXAMPLE_ASSET_NAME} COPYONLY)
+endforeach(OSCIT_EXAMPLE_ASSETS)
+
 # ==============================================================================
 #
 #  test_runner build
@@ -173,11 +178,11 @@ add_dependencies (test_all test_runner)
 
 # avahi testing...
 if(PLAT STREQUAL "linux")
-	add_executable(publish ${OSCIT_SOURCE_DIR}/test/mock/publish.c)
-	target_link_libraries(publish ${PLAT_LINK})
+  add_executable(publish ${OSCIT_SOURCE_DIR}/test/mock/publish.c)
+  target_link_libraries(publish ${PLAT_LINK})
 
-	add_executable(registration ${OSCIT_SOURCE_DIR}/test/mock/registration.cpp)
-	target_link_libraries(registration ${PLAT_LINK})
+  add_executable(registration ${OSCIT_SOURCE_DIR}/test/mock/registration.cpp)
+  target_link_libraries(registration ${PLAT_LINK})
 endif(PLAT STREQUAL "linux")
 
 

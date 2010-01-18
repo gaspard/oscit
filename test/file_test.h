@@ -49,6 +49,12 @@ public:
     assert_equal("{\n  \"x\":0, \"y\":0, \"width\":500, \"height\":", content.str().substr(0, 40));
   }
 
+  void test_read_not_file( void ) {
+    File file(fixture_path(FILE_TEST_PATH).append("not_here"));
+    Value content = file.read();
+    assert_true(content.is_error());
+  }
+
   void test_write( void ) {
     File file1(fixture_path(FILE_TEST_PATH));
     File file2(fixture_path(FILE_TEST_PATH));

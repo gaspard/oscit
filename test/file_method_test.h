@@ -72,5 +72,12 @@ public:
     in.close();
     assert_equal("Yoba", oss.str());
   }
+
+  void test_read_bad_file( void ) {
+    Root root(false);
+    root.adopt(new FileMethod("simple_view", fixture_path(FILE_METHOD_PATH).append("not_here"), std::string("Basic synth view.")));
+    Value res = root.call("/simple_view");
+    assert_true(res.is_error());
+  }
 };
 

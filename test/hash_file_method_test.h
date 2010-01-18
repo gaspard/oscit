@@ -111,5 +111,12 @@ public:
     in.close();
     assert_equal("\"parts\":{\"1\":{\"class\":\"Slider\", \"x\":11, \"y\":10, \"width\":30", oss.str().substr(42, 58));
   }
+
+  void test_read_bad_file( void ) {
+    Root root(false);
+    root.adopt(new HashFileMethod("simple_view", fixture_path(HASH_FILE_METHOD_PATH).append("not_here"), std::string("Basic synth view.")));
+    Value res = root.call("/simple_view");
+    assert_true(res.is_error());
+  }
 };
 
