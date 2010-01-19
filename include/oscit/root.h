@@ -32,7 +32,7 @@
 
 #include "oscit/object.h"
 #include "oscit/command.h"
-#include "oscit/mutex.h"
+#include "oscit/scoped_lock.h"
 
 namespace oscit {
 
@@ -212,7 +212,9 @@ class Root : public Object {
    * Thread safe.
    */
   const Value call(const Url &url, const Value &val) {
-    ScopedLock lock(mutex_);
+    // How to Read lock without locking in find_or_build_object_at when we WriteLock is requested
+    // during object creation.
+    // How to make sure 'target' is not deleted without a ReadLock ?
     Value error;
     Object * target = find_or_build_object_at(url.path(), &error);
 
@@ -364,7 +366,7 @@ class Root : public Object {
    * handler that could build the resource.
    * Not thread safe unless root locked during object use.
    */
-  inline Object * find_or_build_object_at(const char *path, Value *error) {
+  inline Object *find_or_build_object_at(const char *path, Value *error) {
     return find_or_build_object_at(std::string(path), error);
   }
 
@@ -408,7 +410,7 @@ class Root : public Object {
       // ask parents to build
       size_t pos = path.rfind("/");
       if (pos != std::string::npos) {
-        /** call 'build_child' handler in parent. */
+        // try to build parent.
         Object * parent = do_find_or_build_object_at(path.substr(0, pos), error);
         if (parent != NULL) {
           // parent might have automatically created the children objects:
@@ -431,7 +433,7 @@ class Root : public Object {
    */
   THash<std::string, CallbackList*> callbacks_on_register_;
 
-  Mutex mutex_;
+  RWMutex mutex_;
 };
 
 } // oscit

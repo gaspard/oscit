@@ -27,58 +27,54 @@
   ==============================================================================
 */
 
-#ifndef OSCIT_INCLUDE_OSCIT_MUTEX_H_
-#define OSCIT_INCLUDE_OSCIT_MUTEX_H_
-#include <pthread.h>
-#include <cstdio>
+#ifndef OSCIT_INCLUDE_OSCIT_SCOPED_LOCKS_H_
+#define OSCIT_INCLUDE_OSCIT_SCOPED_LOCKS_H_
 
-#include "oscit/non_copyable.h"
-#include "oscit/typed.h"
+#include "oscit/mutex.h"
+#include "oscit/rw_mutex.h"
 
 namespace oscit {
 
-/** Simple wrapper class for a POSIX fast mutex. */
-class Mutex : public Typed, private NonCopyable {
+/** Lock for exclusive access to a resource.
+ */
+template<class T>
+class ScopedLock : private NonCopyable {
 public:
-  TYPED("Mutex")
-
-  Mutex() {
-    pthread_mutex_init(&mutex_, NULL);
+  ScopedLock(T *mutex) : mutex_ptr_(mutex) {
+    mutex_ptr_->lock();
   }
 
-  virtual ~Mutex() {
-    pthread_mutex_destroy(&mutex_);
+  ScopedLock(T &mutex) : mutex_ptr_(&mutex) {
+    mutex_ptr_->lock();
   }
 
-  /** If the mutex is locked by another thread, waits until it is unlocked, lock and continue.
-    * If the mutex is not locked. Lock and continue.
-    * If this thread locked it: bang! */
-  inline void lock() {
-    pthread_mutex_lock(&mutex_);
-  }
-
-  /** Release the lock so others can work on the data. */
-  inline void unlock() {
-    pthread_mutex_unlock(&mutex_);
-  }
-
-  /** The read_lock does the same as lock in the normal Mutex.
-   * Use a RWMutex to differentiate read and write locks.
-   */
-  inline void read_lock() {
-    pthread_mutex_lock(&mutex_);
-  }
-
-  /** The read_unlock does the same as unlock in the normal Mutex.
-   * Use a RWMutex to differentiate read and write locks.
-   */
-  inline void read_unlock() {
-    pthread_mutex_unlock(&mutex_);
+  ~ScopedLock() {
+    mutex_ptr_->unlock();
   }
  private:
-  pthread_mutex_t mutex_;
+  T *mutex_ptr_;
 };
 
-} // oscit
+/** Lock for read-only access to a resource.
+ */
+class ScopedRead : public NonCopyable {
+public:
+  ScopedRead(T *mutex) : mutex_ptr_(mutex) {
+    mutex_ptr_->read_lock();
+  }
 
-#endif // OSCIT_INCLUDE_OSCIT_MUTEX_H_
+  ScopedRead(T &mutex) : mutex_ptr_(&mutex) {
+    mutex_ptr_->read_lock();
+  }
+
+  ~ScopedRead() {
+    mutex_ptr_->read_unlock();
+  }
+
+private:
+  T *mutex_ptr_;
+};
+
+}  // oscit
+
+#endif // OSCIT_INCLUDE_OSCIT_RW_MUTEX_H_

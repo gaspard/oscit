@@ -27,58 +27,38 @@
   ==============================================================================
 */
 
-#ifndef OSCIT_INCLUDE_OSCIT_MUTEX_H_
-#define OSCIT_INCLUDE_OSCIT_MUTEX_H_
-#include <pthread.h>
-#include <cstdio>
+#ifndef OSCIT_INCLUDE_OSCIT_RW_MUTEX_H_
+#define OSCIT_INCLUDE_OSCIT_RW_MUTEX_H_
 
-#include "oscit/non_copyable.h"
-#include "oscit/typed.h"
+#include "oscit/semaphore.h"
 
 namespace oscit {
 
-/** Simple wrapper class for a POSIX fast mutex. */
-class Mutex : public Typed, private NonCopyable {
+/** This class is a wrapper around Semaphore to implement a read/write mutex.
+ * It should be used when there can be many reading threads but a single writer
+ * (without readers) accessing the resource at the same time.
+ */
+class RWMutex : public Semaphore {
 public:
-  TYPED("Mutex")
+  RWMutex(uint max_reader_count = 10) : Semaphore(max_reader_count) {}
 
-  Mutex() {
-    pthread_mutex_init(&mutex_, NULL);
-  }
-
-  virtual ~Mutex() {
-    pthread_mutex_destroy(&mutex_);
-  }
-
-  /** If the mutex is locked by another thread, waits until it is unlocked, lock and continue.
-    * If the mutex is not locked. Lock and continue.
-    * If this thread locked it: bang! */
   inline void lock() {
-    pthread_mutex_lock(&mutex_);
+    acquire_all();
   }
 
-  /** Release the lock so others can work on the data. */
   inline void unlock() {
-    pthread_mutex_unlock(&mutex_);
+    release_all();
   }
 
-  /** The read_lock does the same as lock in the normal Mutex.
-   * Use a RWMutex to differentiate read and write locks.
-   */
   inline void read_lock() {
-    pthread_mutex_lock(&mutex_);
+    acquire();
   }
 
-  /** The read_unlock does the same as unlock in the normal Mutex.
-   * Use a RWMutex to differentiate read and write locks.
-   */
   inline void read_unlock() {
-    pthread_mutex_unlock(&mutex_);
+    release();
   }
- private:
-  pthread_mutex_t mutex_;
 };
 
-} // oscit
+}  // oscit
 
-#endif // OSCIT_INCLUDE_OSCIT_MUTEX_H_
+#endif // OSCIT_INCLUDE_OSCIT_RW_MUTEX_H_
