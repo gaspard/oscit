@@ -27,23 +27,36 @@
   ==============================================================================
 */
 
-#ifndef OSCIT_INCLUDE_REFERENCE_COUNTED_H_
-#define OSCIT_INCLUDE_REFERENCE_COUNTED_H_
+#ifndef OSCIT_INCLUDE_C_REFERENCE_COUNTED_H_
+#define OSCIT_INCLUDE_C_REFERENCE_COUNTED_H_
+
+#include "oscit/atomic_counter.h"
+#include "oscit/non_copyable.h"
 
 namespace oscit {
 
-/** Maintains a reference count of an element.
+/** Maintains a thread-safe reference count of an element.
  * When the reference count reaches zero, the object is deleted.
- * Note that this class *is not thread-safe*. You should use
- * CReferenceCounted for a thread-safe version.
+ * Use this class with the ScopedRetain class.
+ * The 'C' in the name stands for 'concurrent'.
  */
-class ReferenceCounted {
+class CReferenceCounted : private NonCopyable {
  public:
-  ReferenceCounted() : ref_count_(1) {}
+  CReferenceCounted() : ref_count_(1) {}
 
-  virtual ~ReferenceCounted() {}
+  virtual ~CReferenceCounted() {}
 
-  size_t ref_count() { return ref_count_; }
+  void retain() {
+    ref_count_.increment();
+  }
+
+  void release() {
+    if (ref_count_.decrement() == 0) delete this;
+  }
+
+  int32_t ref_count() {
+    return ref_count_.count();
+  }
 
   template<class T>
   static T* acquire(T *elem) {
@@ -57,17 +70,41 @@ class ReferenceCounted {
     return NULL;
   }
 
-  void retain() {
-    ++ref_count_;
+
+ private:
+  AtomicCounter ref_count_;
+};
+
+class ScopedRetain {
+public:
+  ScopedRetain(CReferenceCounted *object) : object_(object) {
+    retain();
   }
 
-  void release() {
-    if (--ref_count_ == 0) delete this;
+  ScopedRetain() : object_(NULL) {}
+
+  ~ScopedRetain() {
+    release();
   }
- protected:
-  size_t ref_count_;
+
+  void hold(CReferenceCounted *object) {
+    assert(!object_);
+    object_ = object;
+    retain();
+  }
+
+private:
+  CReferenceCounted *object_;
+
+  void release() {
+    if (object_) object_->release();
+  }
+
+  void retain() {
+    object_->retain();
+  }
 };
 
 } // oscit
 
-#endif // OSCIT_INCLUDE_REFERENCE_COUNTED_H_
+#endif // OSCIT_INCLUDE_C_REFERENCE_COUNTED_H_

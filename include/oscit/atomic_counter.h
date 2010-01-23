@@ -37,17 +37,20 @@ namespace oscit {
 #include <libkern/OSAtomic.h>
 class AtomicCounter {
 public:
-  AtomicCounter() : count_(0) {}
+  AtomicCounter(int32_t value = 0) : count_(value) {}
 
-  inline void increment() {
-    OSAtomicIncrement32(&count_);
+  /** Increment the counter by one and return the resulting
+   * value.
+   */
+  inline int32_t increment() {
+    return OSAtomicIncrement32(&count_);
   }
 
-  /** Decrement the counter by one and return true iff the
-   * new value is zero.
+  /** Decrement the counter by one and return the resulting
+   * value.
    */
-  inline bool decrement() {
-    return OSAtomicDecrement32(&count_) == 0;
+  inline int32_t decrement() {
+    return OSAtomicDecrement32(&count_);
   }
 
   int32_t count() {

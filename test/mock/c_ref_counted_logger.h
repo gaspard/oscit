@@ -27,47 +27,23 @@
   ==============================================================================
 */
 
-#ifndef OSCIT_INCLUDE_REFERENCE_COUNTED_H_
-#define OSCIT_INCLUDE_REFERENCE_COUNTED_H_
+#ifndef OSCIT_TEST_MOCK_C_REF_COUNTED_LOGGER_H_
+#define OSCIT_TEST_MOCK_C_REF_COUNTED_LOGGER_H_
 
-namespace oscit {
+#include "oscit/object.h"
+#include "oscit/c_reference_counted.h"
+#include "mock/logger.h"
 
-/** Maintains a reference count of an element.
- * When the reference count reaches zero, the object is deleted.
- * Note that this class *is not thread-safe*. You should use
- * CReferenceCounted for a thread-safe version.
- */
-class ReferenceCounted {
- public:
-  ReferenceCounted() : ref_count_(1) {}
+class CRefCountedLogger : public CReferenceCounted, protected MockLogger {
+public:
+  CRefCountedLogger(const char *name, std::ostringstream *stream) :
+                MockLogger(name, stream) {}
 
-  virtual ~ReferenceCounted() {}
-
-  size_t ref_count() { return ref_count_; }
-
-  template<class T>
-  static T* acquire(T *elem) {
-    elem->retain();
-    return elem;
+  virtual ~CRefCountedLogger() {
+    log("destroyed");
   }
 
-  template<class T>
-  static T* release(T *elem) {
-    elem->release();
-    return NULL;
-  }
-
-  void retain() {
-    ++ref_count_;
-  }
-
-  void release() {
-    if (--ref_count_ == 0) delete this;
-  }
- protected:
-  size_t ref_count_;
 };
 
-} // oscit
 
-#endif // OSCIT_INCLUDE_REFERENCE_COUNTED_H_
+#endif // OSCIT_TEST_MOCK_C_REF_COUNTED_LOGGER_H_

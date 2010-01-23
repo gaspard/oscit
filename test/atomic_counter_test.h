@@ -45,6 +45,15 @@ static void *atomic_counter_test_play( void *data ) {
 
 class AtomicCounterTest : public TestHelper {
 public:
+  void test_initial_value_should_be_zero(void) {
+    AtomicCounter counter;
+    assert_equal(0, counter.count());
+  }
+
+  void test_should_set_initial_value(void) {
+    AtomicCounter counter(4);
+    assert_equal(4, counter.count());
+  }
 
   void test_counter_should_reflect_count(void) {
     AtomicCounter counter;
@@ -62,5 +71,16 @@ public:
 
     assert_equal(0, counter.count());
   }
-  //
+
+  void test_increment_should_return_value_after_increment(void) {
+    AtomicCounter counter;
+    assert_equal(1, counter.increment());
+    assert_equal(2, counter.increment());
+  }
+
+  void test_decrement_should_return_value_after_decrement(void) {
+    AtomicCounter counter;
+    assert_equal(-1, counter.decrement());
+    assert_equal(-2, counter.decrement());
+  }
 };
