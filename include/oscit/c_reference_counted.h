@@ -27,8 +27,8 @@
   ==============================================================================
 */
 
-#ifndef OSCIT_INCLUDE_C_REFERENCE_COUNTED_H_
-#define OSCIT_INCLUDE_C_REFERENCE_COUNTED_H_
+#ifndef OSCIT_INCLUDE_OSCIT_C_REFERENCE_COUNTED_H_
+#define OSCIT_INCLUDE_OSCIT_C_REFERENCE_COUNTED_H_
 
 #include "oscit/atomic_counter.h"
 #include "oscit/non_copyable.h"
@@ -107,4 +107,4 @@ private:
 
 } // oscit
 
-#endif // OSCIT_INCLUDE_C_REFERENCE_COUNTED_H_
+#endif // OSCIT_INCLUDE_OSCIT_C_REFERENCE_COUNTED_H_
