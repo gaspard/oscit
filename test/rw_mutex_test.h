@@ -31,8 +31,9 @@
 #include "oscit/rw_mutex.h"
 #include <sstream>
 
-#define RW_MUTEX_TEST_LOOP_COUNT 2000
-#define RW_MUTEX_TEST_THREAD_COUNT 200
+#define RW_MUTEX_TEST_LOOP_COUNT 10000
+#define RW_MUTEX_TEST_THREAD_READERS_COUNT 20
+#define RW_MUTEX_TEST_THREAD_WRITERS_COUNT 2
 
 int gRWMutexTest_a, gRWMutexTest_b;
 RWMutex gRWMutexTest_mutex;
@@ -42,38 +43,44 @@ class RWMutexTest : public TestHelper
 public:
 
   void should_give_exclusive_access_on_write_lock( void ) {
-    int errors[RW_MUTEX_TEST_THREAD_COUNT];
+    int errors[RW_MUTEX_TEST_THREAD_READERS_COUNT];
     gRWMutexTest_a = 0;
     gRWMutexTest_b = 0;
-    pthread_t writer1;
-    pthread_t writer2;
 
     // READY, SET, ...
     gRWMutexTest_mutex.lock();
 
     // create n threads that will increment and decrement the counter
-    pthread_t thread[RW_MUTEX_TEST_THREAD_COUNT];
+    pthread_t thread[RW_MUTEX_TEST_THREAD_READERS_COUNT];
 
-    for (size_t i=0; i < RW_MUTEX_TEST_THREAD_COUNT; ++i) {
+    for (size_t i=0; i < RW_MUTEX_TEST_THREAD_READERS_COUNT; ++i) {
       pthread_create( &thread[i], NULL, RWMutexTest::reader_thread, (void*)(errors + i));
     }
 
     // create writer threads
-    pthread_create( &writer1, NULL, RWMutexTest::writer1_thread, NULL);
-    pthread_create( &writer2, NULL, RWMutexTest::writer2_thread, NULL);
+    pthread_t wthread[RW_MUTEX_TEST_THREAD_WRITERS_COUNT];
+    for (size_t i=0; i < RW_MUTEX_TEST_THREAD_READERS_COUNT; ++i) {
+      if (i % 2 == 0) {
+        pthread_create( &wthread[i], NULL, RWMutexTest::writer1_thread, NULL);
+      } else {
+        pthread_create( &wthread[i], NULL, RWMutexTest::writer2_thread, NULL);
+      }
+    }
+
 
     // GO !
     gRWMutexTest_mutex.unlock();
 
-    for (size_t i=0; i < RW_MUTEX_TEST_THREAD_COUNT; ++i) {
+    for (size_t i=0; i < RW_MUTEX_TEST_THREAD_READERS_COUNT; ++i) {
       pthread_join(thread[i], NULL);
     }
 
-    pthread_join(writer1, NULL);
-    pthread_join(writer2, NULL);
+    for (size_t i=0; i < RW_MUTEX_TEST_THREAD_WRITERS_COUNT; ++i) {
+      pthread_join(wthread[i], NULL);
+    }
 
     int total_errors = 0;
-    for (size_t i=0; i < RW_MUTEX_TEST_THREAD_COUNT; ++i) {
+    for (size_t i=0; i < RW_MUTEX_TEST_THREAD_READERS_COUNT; ++i) {
       total_errors += errors[i];
     }
     assert_equal(0, total_errors);
@@ -82,8 +89,6 @@ public:
   static void *writer1_thread( void *data ) {
     // this thread periodically writes new values to the shared data
     for(size_t i = 0; i < RW_MUTEX_TEST_LOOP_COUNT; ++i) {
-      printf("+");
-      fflush(stdout);
       { ScopedWrite lock(gRWMutexTest_mutex);
         ++gRWMutexTest_a;
         ++gRWMutexTest_b;
@@ -95,8 +100,6 @@ public:
   static void *writer2_thread( void *data ) {
     // this thread periodically writes new values to the shared data
     for(size_t i = 0; i < RW_MUTEX_TEST_LOOP_COUNT; ++i) {
-      printf("=");
-      fflush(stdout);
       { ScopedWrite lock(gRWMutexTest_mutex);
         --gRWMutexTest_a;
         --gRWMutexTest_b;
@@ -110,10 +113,10 @@ public:
     *errors = 0;
     // this thread compares member values gRWMutexTest_a and gRWMutexTest_b and logs errors in data
     for(size_t i = 0; i < RW_MUTEX_TEST_LOOP_COUNT; ++i) {
-      printf(".");
-      fflush(stdout);
       { ScopedRead lock(gRWMutexTest_mutex);
-        if (gRWMutexTest_a != gRWMutexTest_b) {
+        int a = gRWMutexTest_a;
+        int b = gRWMutexTest_b;
+        if (a != b) {
           ++*errors;
         }
       }

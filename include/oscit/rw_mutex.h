@@ -37,7 +37,7 @@
 
 namespace oscit {
 
-#if 0
+#if 1
 
 // POSIX pthread_rwlock
 /** This class implements a read/write mutex.
