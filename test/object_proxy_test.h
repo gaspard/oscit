@@ -38,7 +38,7 @@ class ObjectProxyTest : public TestHelper
 {
 public:
 
-  void test_should_set_root_proxy_when_adopted( void ) {
+  void should_set_root_proxy_when_adopted( void ) {
     RootProxy proxy(Location("osc", "funky synth"));
     Logger logger;
     assert_equal("", logger.str());
@@ -49,7 +49,7 @@ public:
     assert_equal(&proxy, object->root_proxy());
   }
 
-  void test_should_receive_value_changed_from_rootproxy( void ) {
+  void should_receive_value_changed_from_rootproxy( void ) {
     RootProxy proxy(Location("osc", "funky synth"));
     Logger logger;
     proxy.adopt(new ObjectProxyLogger("seven", RangeIO(0.0, 2000.0, "bpm", "the sky is blue"), &logger));

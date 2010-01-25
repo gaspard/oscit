@@ -45,7 +45,7 @@ static void *cref_counted_test_retain_release( void *data ) {
 class CReferenceCountedTest : public TestHelper {
 public:
 
-  void test_should_work_concurrently(void) {
+  void should_work_concurrently(void) {
     Logger logger;
     CRefCountedLogger *object = new CRefCountedLogger("ref", &logger);
 

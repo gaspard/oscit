@@ -40,6 +40,7 @@
 #include "assert.h"
 
 #include "oscit/mutex.h"
+#include "oscit/semaphore.h"
 
 namespace oscit {
 
@@ -67,7 +68,7 @@ class Thread : public Mutex {
     pthread_create( &thread_id_, NULL, &s_start_static_thread, (void*)this);
 
     // make sure thread is properly started (signals registered) in case we die right after
-    wait();
+    semaphore_.acquire();
   }
 
   /** Start a new thread with a static function. */
@@ -85,7 +86,7 @@ class Thread : public Mutex {
      pthread_create( &thread_id_, NULL, &s_start_static_thread, (void*)this);
 
      // make sure thread is properly started (signals registered) in case we die right after
-     wait();
+     semaphore_.acquire();
   }
 
   /** Start a new thread with the given parameter. The class should check if it
@@ -105,7 +106,7 @@ class Thread : public Mutex {
     pthread_create( &thread_id_, NULL, &s_start_thread<T,Tmethod>, (void*)this);
 
     // make sure thread is properly started (signals registered) in case we die right after
-    wait();
+    semaphore_.acquire();
   }
 
   /** Start a new thread with the given parameter. The class should check if it
@@ -125,7 +126,7 @@ class Thread : public Mutex {
     pthread_create( &thread_id_, NULL, &s_start_thread<T,Tmethod>, (void*)this);
 
     // make sure thread is properly started (signals registered) in case we die right after
-    wait();
+    semaphore_.acquire();
   }
 
   inline bool should_run() {
@@ -175,19 +176,11 @@ class Thread : public Mutex {
    */
   void thread_ready() {
     // signals installed, we can free parent thread
-    post();
+    semaphore_.release();
   }
 
-  void post() {
-    if (sem_post(semaphore_) < 0) {
-      fprintf(stderr, "Could not post (%s)\n", strerror(errno));
-    }
-  }
-
-  void wait() {
-    if (sem_wait(semaphore_) < 0) {
-      fprintf(stderr, "Could not wait (%s)\n", strerror(errno));
-    }
+  Semaphore &semaphore() {
+    return semaphore_;
   }
 
  public:
@@ -231,7 +224,7 @@ class Thread : public Mutex {
 
   /** Static function to start a new thread. */
   template<class T, void(T::*Tmethod)(Thread*)>
-  static void * s_start_thread(void *thread_ptr) {
+  static void *s_start_thread(void *thread_ptr) {
     Thread * thread = (Thread*)thread_ptr;
      // begin of new thread
     set_thread_this(thread);
@@ -283,7 +276,7 @@ class Thread : public Mutex {
   bool should_run_;
 
  private:
-  sem_t *semaphore_;
+  Semaphore semaphore_;
 
 };
 

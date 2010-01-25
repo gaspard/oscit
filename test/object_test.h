@@ -165,7 +165,7 @@ public:
     assert_equal("tint", res[1][0].str());
   }
 
-  void test_should_find_child_from_position( void ) {
+  void should_find_child_from_position( void ) {
     Object base("base");
     Object *one = base.adopt(new Object("one"));
     assert_equal(1, base.children_count());
@@ -185,7 +185,7 @@ public:
     assert_equal((RootProxy *)NULL, base.child_at_index(0));
   }
 
-  void test_should_get_child_from_position( void ) {
+  void should_get_child_from_position( void ) {
     Object base("base");
     Object *one = base.adopt(new Object("one"));
     assert_equal(1, base.children_count());

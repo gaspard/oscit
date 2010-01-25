@@ -39,7 +39,7 @@ void start_mutex_test_thread(Thread* runner) {
   runner->thread_ready();
   gMutexTest_mutex.lock();
   gMutexTest_log << "[1:lock]";
-  runner->post();
+  runner->semaphore().release();
   gMutexTest_mutex.unlock();
   gMutexTest_log << "[1:unlock][1:end]";
 }
@@ -47,7 +47,7 @@ void start_mutex_test_thread(Thread* runner) {
 static void lock_method(Thread* runner) {
   ScopedLock lock(gMutexTest_mutex);
   gMutexTest_log << "[1:lock]";
-  runner->post();
+  runner->semaphore().release();
 }
 
 static void start_mutex_test_thread_scoped_lock(Thread* runner) {
@@ -86,7 +86,7 @@ public:
     // release lock() --> other gets hold of it
     gMutexTest_log << "[0:unlock]";
     gMutexTest_mutex.unlock();
-    runner.wait();
+    runner.semaphore().acquire();
     gMutexTest_mutex.lock();
     gMutexTest_log << "[0:lock]";
     gMutexTest_mutex.unlock();
@@ -107,7 +107,7 @@ public:
       // release lock() --> other gets hold of it
       gMutexTest_log << "[0:unlock]";
     }
-    runner.wait();
+    runner.semaphore().acquire();
     {
       ScopedLock lock(gMutexTest_mutex);
       gMutexTest_log << "[0:lock]";
@@ -125,10 +125,10 @@ public:
   //    // create new thread (will try to get hold of the lock)
   //    runner.start_thread(start_mutex_test_thread_scoped_lock, NULL);
   //    // release lock() --> other gets hold of it
-  //    gMutexTest_log << "[0:unlock]"; 
+  //    gMutexTest_log << "[0:unlock]";
   //  }
-  //  runner.wait();
-  //  { 
+  //  runner.semaphore().acquire();
+  //  {
   //    ScopedLock lock(gMutexTest_mutex);
   //    gMutexTest_mutex.lock();
   //    gMutexTest_log << "[0:lock]";

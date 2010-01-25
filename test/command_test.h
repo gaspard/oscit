@@ -111,7 +111,7 @@ public:
     assert_equal(BAD_REQUEST_ERROR, res.error_code());
   }
 
-  void test_should_find_proxy_from_location( void ) {
+  void should_find_proxy_from_location( void ) {
     Logger logger;
     CommandLogger cmd(&logger);
     Location remote("oscit", "my place");
@@ -123,7 +123,7 @@ public:
     assert_equal(proxy, found);
   }
 
-  void test_should_find_proxy_from_position( void ) {
+  void should_find_proxy_from_position( void ) {
     Logger logger;
     CommandLogger cmd(&logger);
     Location remote("oscit", "my place");
@@ -137,7 +137,7 @@ public:
     assert_equal((RootProxy *)NULL, cmd.root_proxy_at_index(0));
   }
 
-  void test_should_not_find_proxy_from_location_after_proxy_deletion( void ) {
+  void should_not_find_proxy_from_location_after_proxy_deletion( void ) {
     Logger logger;
     CommandLogger cmd(&logger);
     Location remote("oscit", "my place");
@@ -149,7 +149,7 @@ public:
     assert_equal((RootProxy *)NULL, found);
   }
 
-  void test_should_handle_register_messages( void ) {
+  void should_handle_register_messages( void ) {
     Logger logger;
     CommandLogger cmd(&logger);
     assert_equal(0, cmd.observers().size());
@@ -159,7 +159,7 @@ public:
     assert_equal("unknown.host", cmd.observers().front().name());
   }
 
-  void test_should_handle_reply_messages( void ) {
+  void should_handle_reply_messages( void ) {
     Logger logger;
     CommandLogger cmd("dummy", &logger);
     assert_equal(0, cmd.observers().size());
@@ -171,7 +171,7 @@ public:
     assert_equal("[foo: value_changed 5]", logger.str());
   }
 
-  void test_should_notify_observers( void ) {
+  void should_notify_observers( void ) {
     Logger logger;
     Root root;
     root.adopt_command(new CommandLogger(&logger));

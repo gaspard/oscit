@@ -50,7 +50,7 @@ public:
     assert_equal(0, counter.count());
   }
 
-  void test_should_set_initial_value(void) {
+  void should_set_initial_value(void) {
     AtomicCounter counter(4);
     assert_equal(4, counter.count());
   }

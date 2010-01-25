@@ -254,7 +254,7 @@ public:
     assert_equal("[osc: send osc://\"funky thing\" /one/two null]", logger.str());
   }
 
-  void test_should_only_register_one_command_per_protocol( void ) {
+  void should_only_register_one_command_per_protocol( void ) {
     Root root;
     Logger logger;
     root.adopt_command(new CommandLogger("one", "osc", &logger),false);
@@ -300,7 +300,7 @@ public:
     assert_true(res.size() == 0);
   }
 
-  void test_should_destroy_all_tree_on_delete( void ) {
+  void should_destroy_all_tree_on_delete( void ) {
     Root *root = new Root;
     Logger logger;
     root->adopt(new ObjectLogger("one", &logger));
@@ -322,7 +322,7 @@ public:
     assert_equal("[\"views\"]", res.to_json());
   }
 
-  void test_should_accept_registration_notifications( void ) {
+  void should_accept_registration_notifications( void ) {
     Root root(false);
     Logger logger;
     ObserverLogger observer("observer", &logger);

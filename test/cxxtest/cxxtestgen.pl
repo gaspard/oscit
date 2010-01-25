@@ -194,7 +194,7 @@ sub lineStartsBlock($) {
 
 sub scanLineForTest($$) {
   my ($lineNo, $line) = @_;
-  if ( $line =~ m/^([^\/]|\/[^\/])*\bvoid\s+([Tt]est\w+)\s*\(\s*(void)?\s*\)/ ) {
+  if ( $line =~ m/^([^\/]|\/[^\/])*\bvoid\s+([Tt]est\w+|[Ss]hould\w+)\s*\(\s*(void)?\s*\)/ ) {
     addTest( $2, $lineNo );
   }
 }

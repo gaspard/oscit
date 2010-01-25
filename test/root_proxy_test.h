@@ -37,7 +37,7 @@
 class RootProxyTest : public TestHelper
 {
 public:
-  void test_should_send_commands_to_mirror_remote_tree( void ) {
+  void should_send_commands_to_mirror_remote_tree( void ) {
     Root root;
     Logger logger;
     ProxyFactoryLogger factory("factory", &logger);
@@ -58,7 +58,7 @@ public:
     assert_equal("[seven: value_changed 300]", logger.str());
   }
 
-  void test_should_build_object_proxies_without_type( void ) {
+  void should_build_object_proxies_without_type( void ) {
     RootProxy proxy(Location("osc", "funky synth"));
     Logger logger;
     ProxyFactoryLogger factory("factory", &logger);
