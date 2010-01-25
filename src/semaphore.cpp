@@ -23,7 +23,9 @@ Semaphore::Semaphore(int resource_count) : resource_count_(resource_count), sema
 Semaphore::~Semaphore() {
   if (semaphore_) {
 //#ifdef __macosx__
-    sem_close(semaphore_);
+    if (sem_close(semaphore_) < 0) {
+      fprintf(stderr, "Could not close semaphore (%s)\n", strerror(errno));
+    }
 //#else
 //    sem_destroy(*semaphore_);
 //#endif

@@ -158,7 +158,7 @@ endforeach(OSCIT_EXAMPLE_ASSETS)
 if(OSCIT_MEMORY_CHECKING)
   file (GLOB OSCIT_TEST_SOURCES test/*_test.h test/*_test_slow.h test/zpause_for_memory_analysis.h)
 else(OSCIT_MEMORY_CHECKING)
-  file (GLOB OSCIT_TEST_SOURCES test/*_test.h test/*_test_slow.h)
+  file (GLOB OSCIT_TEST_SOURCES test/rw_mutex_test.h test/*xx_test_slow.h)
 endif(OSCIT_MEMORY_CHECKING)
 
 file (GLOB OSCIT_TEST_MOCKS test/mock/*.h)

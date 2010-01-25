@@ -37,50 +37,64 @@
 
 namespace oscit {
 
-/** Simple wrapper class for a POSIX fast mutex. */
+/** Simple wrapper class for a fast mutex.
+ * FIXME: Can we remove 'Typed' ?
+ */
 class Mutex : public Typed, private NonCopyable {
 public:
   TYPED("Mutex")
-  
-  Mutex() { 
-    pthread_mutex_init(&mutex_, NULL);
+
+  Mutex() {
+    int status = pthread_mutex_init(&mutex_, NULL);
+    if (status != 0) {
+      fprintf(stderr, "Could not initialize mutex (%s)\n", strerror(status));
+    }
   }
-  
+
+  // FIXME: remove virtual, typed and sub-classes (Thread, ZeroConf..)
   virtual ~Mutex() {
-    pthread_mutex_destroy(&mutex_);
+    int status = pthread_mutex_destroy(&mutex_);
+    if (status != 0) {
+      fprintf(stderr, "Could not destroy mutex (%s)\n", strerror(status));
+    }
   }
-  
+
   /** If the mutex is locked by another thread, waits until it is unlocked, lock and continue.
     * If the mutex is not locked. Lock and continue.
     * If this thread locked it: bang! */
   inline void lock() {
     pthread_mutex_lock(&mutex_);
   }
-  
+
   /** Release the lock so others can work on the data. */
   inline void unlock() {
     pthread_mutex_unlock(&mutex_);
   }
+
  private:
   pthread_mutex_t mutex_;
 };
 
-class ScopedLock {
+
+/** Scoped Mutex Lock for exclusive access to a resource.
+ */
+class ScopedLock : private NonCopyable {
 public:
   ScopedLock(Mutex *mutex) : mutex_ptr_(mutex) {
     mutex_ptr_->lock();
   }
-  
+
   ScopedLock(Mutex &mutex) : mutex_ptr_(&mutex) {
     mutex_ptr_->lock();
   }
-  
+
   ~ScopedLock() {
     mutex_ptr_->unlock();
   }
  private:
   Mutex *mutex_ptr_;
 };
+
 
 } // oscit
 

@@ -48,17 +48,13 @@ public:
   /** Get resource or wait until it is available.
    */
   inline void acquire() {
-    if (sem_wait(semaphore_) < 0) {
-      fprintf(stderr, "Could not acquire semaphore (%s)\n", strerror(errno));
-    }
+    sem_wait(semaphore_);
   }
 
   /** Release resource.
    */
   inline void release() {
-    if (sem_post(semaphore_) < 0) {
-      fprintf(stderr, "Could not release semaphore (%s)\n", strerror(errno));
-    }
+    sem_post(semaphore_);
   }
 
   /** Acquire multiple resources at the same time.
