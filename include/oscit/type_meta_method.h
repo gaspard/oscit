@@ -44,12 +44,18 @@ public:
 
   virtual const Value trigger(const Value &val) {
     if (!val.is_string()) return gNilValue;
-    Value error;
-    Object * target = root_->find_or_build_object_at(val.c_str(), &error);
 
+    Value error;
+    ObjectHandle object;
     Value reply = val;
 
-    reply.push_back(target ? target->type_with_current_value() : error);
+    if (root_->find_or_build_object_at(val.c_str(), &error, &object)) {
+      reply.push_back(object->type_with_current_value());
+    } else {
+      reply.push_back(error);
+    }
+
+
     return reply;
   }
 };

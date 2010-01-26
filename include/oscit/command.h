@@ -45,6 +45,7 @@ class Object;
 class ZeroConfRegistration;
 class RootProxy;
 class CommandTest;
+class ObjectHandle;
 
 /** This class is responsible for listening to any kind of incoming command (implemented by subclasses in do_listen)
  *  and passing these commands to the root object.
@@ -103,7 +104,7 @@ class Command : public Thread {
    *
    *  FIXME: rewrite all this with new "proxy" objects and trees.. ?
    */
-  Object *remote_object(const Url &remote_url, Value *error);
+  bool remote_object(const Url &remote_url, Value *error, ObjectHandle *handle);
 
   uint16_t port() { return port_; }
 
@@ -175,7 +176,7 @@ class Command : public Thread {
   /** Build an object to communicate with a remote endpoint.
    *  FIXME: maybe we do not need this since we have RootPoxy...
    */
-  virtual Object *build_remote_object(const Url &remote_url, Value *error) = 0;
+  virtual bool build_remote_object(const Url &remote_url, Value *error, ObjectHandle *handle) = 0;
 
   /** Listen for commands (in new thread). Should call "thread_ready()" when it
    *  has finished initializing.

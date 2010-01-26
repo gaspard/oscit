@@ -108,12 +108,18 @@ void ObjectProxy::set_type(const Value &type) {
   }
 }
 
-Object *ObjectProxy::build_child(const std::string &name, const Value &type, Value *error) {
+bool ObjectProxy::build_child(const std::string &name, const Value &type, Value *error, ObjectHandle *handle) {
   if (!root_proxy_ || !root_proxy_->proxy_factory()) {
     std::cerr << "Cannot build child /" << name << " : no RootProxy or no ProxyFactory !\n";
-    return NULL;
+    return false;
   }
-  return adopt(root_proxy_->proxy_factory()->build_object_proxy(this, name, type));
+  Object *obj = adopt(root_proxy_->proxy_factory()->build_object_proxy(this, name, type));
+  if (obj) {
+    handle->hold(obj);
+    return true;
+  } else {
+    return false;
+  }
 }
 
 } // oscit

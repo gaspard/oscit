@@ -87,11 +87,12 @@ public:
     Logger logger;
     CommandLogger *cmd = root.adopt_command(new CommandLogger(&logger));
     Value error;
-    Object *obj  = root.object_at(Url("dummy://dummy.host:2009/one/two/testing"), &error); // builds reference
+    ObjectHandle handle;
+    root.get_object_at(Url("dummy://dummy.host:2009/one/two/testing"), &error, &handle); // builds reference
 
     DummyObject *object = (DummyObject*) cmd->remote_object_no_build("dummy://dummy.host:2009/one/two/testing");
     assert_equal(2009.0, object->real());
-    assert_equal((Object*)object, obj);
+    assert_equal((Object*)object, handle.object());
   }
 
   void test_root_send( void ) {

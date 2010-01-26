@@ -46,10 +46,15 @@ public:
     if (!val.is_string()) return gNilValue;
 
     Value error;
-    Object * target = root_->find_or_build_object_at(val.c_str(), &error);
-
+    ObjectHandle object;
     Value reply = val;
-    reply.push_back(target ? target->info() : error);
+
+    if (root_->find_or_build_object_at(val.c_str(), &error, &object)) {
+      reply.push_back(object->info());
+    } else {
+      reply.push_back(error);
+    }
+
     return reply;
   }
 };

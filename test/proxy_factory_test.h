@@ -64,11 +64,17 @@ public:
     sync_children();
   }
 
-  virtual Object *build_child(const std::string &name, const Value &type, Value *error) {
+  virtual bool build_child(const std::string &name, const Value &type, Value *error, ObjectHandle *handle) {
     if (name == "update") {
-      return adopt(new UpdateDummyView(name, type));
+      Object *obj = adopt(new UpdateDummyView(name, type));
+      if (obj) {
+        handle->hold(obj);
+        return true;
+      } else {
+        return false;
+      }
     } else {
-      return NULL;
+      return false;
     }
   }
 };
@@ -181,7 +187,8 @@ class ProxyFactoryTest : public TestHelper
     MyProxyFactory factory;
     build_foobar_local_and_remote(local, remote, factory, logger);
 
-    Object *bar = proxy_->object_at("/bar");
+    ObjectHandle bar;
+    assert_true(proxy_->get_object_at("/bar", &bar));
     Value res = bar->trigger(gNilValue);
     assert_equal("45", res.to_json());
 
@@ -225,10 +232,12 @@ class ProxyFactoryTest : public TestHelper
     MyProxyFactory factory;
     build_foobar_local_and_remote(local, remote, factory, logger);
 
-    Object *dummy_view = proxy_->object_at("/dummy_view");
+    ObjectHandle dummy_view;
+    assert_true(proxy_->get_object_at("/dummy_view", &dummy_view));
     assert_equal("DummyView", dummy_view->class_name());
 
-    Object *update = proxy_->object_at("/dummy_view/update");
+    ObjectHandle update;
+    assert_true(proxy_->get_object_at("/dummy_view/update", &update));
     assert_equal("UpdateDummyView", update->class_name());
   }
 
@@ -239,14 +248,14 @@ class ProxyFactoryTest : public TestHelper
     MyProxyFactory factory;
     build_foobar_local_and_remote(local, remote, factory, logger);
 
-    Object *bar = proxy_->object_at("/synth");
-    assert_equal((Object*)NULL, bar);
+    ObjectHandle bar;
+    assert_false(proxy_->get_object_at("/synth", &bar));
 
     remote.adopt(new DummyObject("synth", gNilValue, NoIO("Super synth.")));
     millisleep(20);
 
-    bar = proxy_->object_at("/synth");
-    assert_true( bar != NULL);
+    assert_true(proxy_->get_object_at("/synth", &bar));
+    assert_true( bar.object() != NULL);
 
     assert_equal("Super synth.", bar->info().c_str());
   }

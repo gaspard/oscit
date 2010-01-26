@@ -56,17 +56,22 @@ public:
     return value_;
   }
 
-  virtual Object * build_child(const std::string &name, const Value &type, Value *error) {
+  virtual bool build_child(const std::string &name, const Value &type, Value *error, ObjectHandle *handle) {
+    Object *obj = NULL;
     if (name == "special") {
-      return adopt(new Object("special"));
+      obj = adopt(new Object("special"));
     } else if (name == "AgeOf") {
-      Object * comp = adopt(new Object(name));
-      comp->adopt(new DummyObject("Capitain", 78.0));
-      return comp;
+      obj = adopt(new Object(name));
+      obj->adopt(new DummyObject("Capitain", 78.0));
     } else if (name == "error") {
       error->set(INTERNAL_SERVER_ERROR, "You should not try to build errors !");
     }
-    return NULL;
+    if (obj) {
+      handle->hold(obj);
+      return true;
+    } else {
+      return false;
+    }
   }
 
   Real real() {

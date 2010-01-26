@@ -57,19 +57,25 @@ void Root::init(bool should_build_meta) {
 }
 
 void Root::clear() {
-  while (!commands_.empty()) {
-    Command *command = commands_.front();
-    command->kill();
-    command->set_root(NULL); // avoid call to unregister_command in ~Command
+  { ScopedWrite lock(commands_);
+    while (!commands_.empty()) {
+      Command *command = commands_.front();
+      command->kill();
+      command->set_root(NULL); // avoid call to unregister_command in ~Command
 
-    delete command;
-    commands_.pop_front();
+      delete command;
+      commands_.pop_front();
+    }
   }
+
   clear_on_register_callbacks();
+
   this->Object::clear();
 }
 
 void Root::clear_on_register_callbacks() {
+  ScopedWrite lock(callbacks_on_register_);
+
   std::list<std::string>::iterator it, end = callbacks_on_register_.end();
   CallbackList *callbacks;
 
@@ -81,7 +87,8 @@ void Root::clear_on_register_callbacks() {
 }
 
 void Root::adopt_callback_on_register(const std::string &url, Callback *callback) {
-  ScopedLock lock(mutex_);
+  ScopedWrite lock(callbacks_on_register_);
+
   CallbackList *callbacks;
   if (!callbacks_on_register_.get(url, &callbacks)) {
     callbacks = new CallbackList(this);
@@ -91,6 +98,7 @@ void Root::adopt_callback_on_register(const std::string &url, Callback *callback
 }
 
 void Root::trigger_and_clear_on_register_callbacks(const std::string &url) {
+  ScopedWrite lock(callbacks_on_register_);
   CallbackList *callbacks;
 
   if (callbacks_on_register_.get(url, &callbacks)) {
@@ -101,9 +109,13 @@ void Root::trigger_and_clear_on_register_callbacks(const std::string &url) {
 }
 
 void Root::register_object(Object *obj) {
-  ScopedLock lock(mutex_);
-  // add object to objects dictionary
-  objects_.set(obj->url(), obj);
+  ObjectHandle hold(obj);
+
+  { ScopedWrite lock(objects_);
+    // add object to objects dictionary
+    objects_.set(obj->url(), obj);
+  }
+
   trigger_and_clear_on_register_callbacks(obj->url());
 
   if (!Url::is_meta(obj->url())) {
@@ -116,16 +128,8 @@ void Root::register_object(Object *obj) {
 }
 
 void Root::unregister_object(Object *obj) {
-  ScopedLock lock(mutex_);
+  ScopedWrite lock(objects_);
   objects_.remove_element(obj);
-
-  // if (!Url::is_meta(obj->url())) {
-  //   Value type(obj->url());
-  //   type.push_back(gNilValue);
-  //   Value reply(TYPE_PATH);
-  //   reply.push_back(type);
-  //   notify_observers(REPLY_PATH, reply);
-  // }
 }
 
 

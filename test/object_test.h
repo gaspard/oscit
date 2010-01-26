@@ -52,21 +52,31 @@ public:
     assert_equal("/super/bar", bar->url() );
   }
 
-  void test_child( void ) {
+  void test_get_child( void ) {
     Object base;
     Object * one = base.adopt(new Object("one")); // This is the prefered way of creating sub-objects.
     Object * sub = one->adopt(new Object("sub"));
+    ObjectHandle handle;
 
     assert_equal("",         base.url());
     assert_equal("/one",     one->url());
     assert_equal("/one/sub", sub->url());
 
-    assert_equal(one, base.child("one"));
-    assert_equal((Object*)NULL, base.child("foo"));
+    assert_true(base.get_child("one", &handle));
+    assert_equal(one, handle.object());
+
+    handle = NULL;
+    assert_false(base.get_child("foo", &handle));
+    assert_equal((Object*)NULL, handle.object());
 
     one->set_name("foo");
-    assert_equal((Object*)NULL, base.child("one"));
-    assert_equal(one, base.child("foo"));
+
+    handle = NULL;
+    assert_false(base.get_child("one", &handle));
+    assert_equal((Object*)NULL, handle.object());
+
+    assert_true(base.get_child("foo", &handle));
+    assert_equal(one, handle.object());
   }
 
   void test_first_child( void ) {
@@ -117,11 +127,13 @@ public:
     Value error;
     Object base;
     Object * carrot = base.adopt(new DummyObject("dummy", 0.0));
-    Object * foo    = carrot->build_child(std::string("something"), gNilValue, &error);
-    assert_equal((Object*)NULL, foo);
-    foo = carrot->build_child(std::string("special"), gNilValue, &error);
-    assert_true( foo != NULL );
-    assert_equal("/dummy/special", foo->url());
+    ObjectHandle handle;
+    assert_false(carrot->build_child(std::string("something"), gNilValue, &error, &handle));
+    assert_equal((Object*)NULL, handle.object());
+
+    assert_true(carrot->build_child(std::string("special"), gNilValue, &error, &handle));
+    assert_true( handle.object() != NULL );
+    assert_equal("/dummy/special", handle->url());
   }
 
   void test_call_set_method( void ) {

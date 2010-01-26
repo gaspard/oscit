@@ -56,20 +56,20 @@ public:
     Root root;
     Object * foo = root.adopt(new Object("foo"));
     Object * bar = foo->adopt(new Object("bar"));
-    Object * res;
+    ObjectHandle res;
 
     assert_equal(""        , root.url() );
     assert_equal("/foo"    , foo->url() );
     assert_equal("/foo/bar", bar->url() );
 
     assert_true(root.get_object_at("", &res));
-    assert_equal(&root, res );
+    assert_equal(&root, res.object() );
 
     assert_true(root.get_object_at("/foo", &res));
-    assert_equal(foo, res );
+    assert_equal(foo, res.object() );
 
     assert_true(root.get_object_at("/foo/bar", &res));
-    assert_equal(bar, res );
+    assert_equal(bar, res.object() );
 
 
     assert_false( root.get_object_at("/super", &res));
@@ -78,10 +78,10 @@ public:
     foo->set_name("super");
 
     assert_true(root.get_object_at("/super", &res));
-    assert_equal(foo, res );
+    assert_equal(foo, res.object() );
 
     assert_true(root.get_object_at("/super/bar", &res));
-    assert_equal(bar, res );
+    assert_equal(bar, res.object() );
 
     assert_false( root.get_object_at("/foo", &res));
     assert_false( root.get_object_at("/foo/bar", &res));
@@ -91,30 +91,30 @@ public:
     Root root;
     DummyObject * a  = new DummyObject("a", 1);
     DummyObject * a2 = new DummyObject("a", 2);
-    Object * res;
+    ObjectHandle res;
 
     assert_true( root.get_object_at("", &res) );
-    assert_equal(&root, res );
+    assert_equal(&root, res.object() );
 
     assert_false( root.get_object_at("/a", &res) );
 
     root.adopt(a);
 
     assert_true( root.get_object_at("/a", &res) );
-    assert_equal(a, res );
+    assert_equal(a, res.object() );
 
     root.adopt(a2);
     assert_true( root.get_object_at("/a", &res) );
-    assert_equal(a, res );
+    assert_equal(a, res.object() );
 
     assert_true( root.get_object_at("/a-1", &res) );
-    assert_equal(a2, res );
+    assert_equal(a2, res.object() );
 
     root.clear();
     assert_true( !root.get_object_at("/a", &res) );
     assert_true( !root.get_object_at("/a-1", &res) );
     assert_true( root.get_object_at("", &res) );
-    assert_equal(&root, res );
+    assert_equal(&root, res.object() );
   }
 
   void test_call_without_arguments_should_return_current_value( void ) {
@@ -173,20 +173,20 @@ public:
     Root root;
     root.adopt(new DummyObject("dummy", 0.0));
     Value error;
+    ObjectHandle object;
 
-    assert_equal((Object*)NULL, root.find_or_build_object_at("whatever", &error));
-    assert_equal((Object*)NULL, root.find_or_build_object_at("/whatever", &error));
-    assert_equal((Object*)NULL, root.find_or_build_object_at("/dummy/foo", &error));
+    assert_false(root.find_or_build_object_at("whatever", &error, &object));
+    assert_false(root.find_or_build_object_at("/whatever", &error, &object));
+    assert_false(root.find_or_build_object_at("/dummy/foo", &error, &object));
     assert_true(error.is_error());
     assert_equal(NOT_FOUND_ERROR, error.error_code());
-    assert_equal((Object*)NULL, root.find_or_build_object_at("/dummy/error", &error));
+    assert_false(root.find_or_build_object_at("/dummy/error", &error, &object));
     assert_true(error.is_error());
     assert_equal("You should not try to build errors !", error.error_message());
     assert_equal(INTERNAL_SERVER_ERROR, error.error_code());
 
-    Object * special = root.find_or_build_object_at("/dummy/special", &error);
-    assert_true( special != NULL );
-    assert_equal("/dummy/special", special->url());
+    assert_true(root.find_or_build_object_at("/dummy/special", &error, &object));
+    assert_equal("/dummy/special", object->url());
   }
 
   void test_call_should_build_child( void ) {
@@ -216,18 +216,18 @@ public:
     Logger logger;
     root.adopt_command(new CommandLogger(&logger));
     DummyObject  *foo = root.adopt(new DummyObject("foo", 3));
-    Object   *res;
+    ObjectHandle res;
     Value error;
-    res = root.object_at(Url("/foo"), &error);
-    assert_equal((Object*)foo, res);
+    assert_true(root.get_object_at(Url("/foo"), &error, &res));
+    assert_equal((Object*)foo, res.object());
     assert_true(error.is_empty());
   }
 
   void test_object_at_bad_protocol( void ) {
     Root root;
     Value error;
-    Object * res = root.object_at(Url("some://example.com:80/foo"), &error);
-    assert_equal((Object*)NULL, res);
+    ObjectHandle object;
+    assert_false(root.get_object_at(Url("some://example.com:80/foo"), &error, &object));
     assert_equal(BAD_REQUEST_ERROR, error.error_code());
     assert_equal("No command to handle \'some\' protocol.", error.error_message());
   }
@@ -235,8 +235,8 @@ public:
   void test_object_at_bad_url( void ) {
     Root root;
     Value error;
-    Object *obj = root.object_at(Url("some://example.com /foo"), &error);
-    assert_equal((Object*)NULL, obj);
+    ObjectHandle object;
+    assert_false(root.get_object_at(Url("some://example.com /foo"), &error, &object));
     assert_equal(BAD_REQUEST_ERROR, error.error_code());
     assert_equal("Could not parse url \'some://example.com /foo\'.", error.error_message());
   }
@@ -268,8 +268,9 @@ public:
 
   void test_named_root( void ) {
     Root root("gaia");
-    Object *obj = root.object_at("");
-    assert_equal((Object*)&root, obj);
+    ObjectHandle object;
+    assert_true(root.get_object_at("", &object));
+    assert_equal((Object*)&root, object.object());
   }
 
   void test_delete_command_should_unregister_it_from_observers( void ) {
@@ -312,11 +313,14 @@ public:
     Root root(false);
     Value res = root.list();
     assert_equal("[]", res.to_json());
-    Object *views = root.make_views_path();
+    ObjectHandle views;
+    assert_true(root.get_views_path(&views));
     res = root.list();
     assert_equal("[\"views\"]", res.to_json());
     // make again should return same object
-    assert_equal(views, root.make_views_path());
+    ObjectHandle views2;
+    assert_true(root.get_views_path(&views2));
+    assert_equal(views.object(), views2.object());
     res = root.list();
     assert_equal("[\"views\"]", res.to_json());
   }

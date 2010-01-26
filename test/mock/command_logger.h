@@ -74,13 +74,19 @@ public:
     log("send", remote_endpoint, path, val);
   }
 
-  virtual Object *build_remote_object(const Url &url, Value *error) {
+  virtual bool build_remote_object(const Url &url, Value *error, ObjectHandle *handle) {
     log("build_remote_object", url);
     if (url.location() == dummy_host_) {
-      return adopt_remote_object(url.str(), new DummyObject(url.str().c_str(), url.port()));
+      DummyObject *obj = adopt_remote_object(url.str(), new DummyObject(url.str().c_str(), url.port()));
+      if (obj) {
+        handle->hold(obj);
+        return true;
+      } else {
+        return false;
+      }
     } else {
       error->set(BAD_REQUEST_ERROR, std::string("Unknown location '").append(url.location().name()).append("'."));
-      return NULL;
+      return false;
     }
   }
 

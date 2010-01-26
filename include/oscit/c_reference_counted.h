@@ -30,6 +30,8 @@
 #ifndef OSCIT_INCLUDE_OSCIT_C_REFERENCE_COUNTED_H_
 #define OSCIT_INCLUDE_OSCIT_C_REFERENCE_COUNTED_H_
 
+#include <assert.h>
+
 #include "oscit/atomic_counter.h"
 #include "oscit/non_copyable.h"
 
@@ -75,7 +77,7 @@ class CReferenceCounted : private NonCopyable {
   AtomicCounter ref_count_;
 };
 
-class ScopedRetain {
+class ScopedRetain : private NonCopyable {
 public:
   ScopedRetain(CReferenceCounted *object) : object_(object) {
     retain();

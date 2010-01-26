@@ -331,12 +331,12 @@ void OscCommand::send_message(const Location &remote_endpoint, const char *path,
   impl_->send_message(remote_endpoint, path, val);
 }
 
-Object *OscCommand::build_remote_object(const Url &url, Value *error) {
+bool OscCommand::build_remote_object(const Url &url, Value *error, ObjectHandle *handle) {
   // find host with zeroconf... ? DNS ?
   //   url.host() : url.port()
   //   host not found
   error->set(NOT_FOUND_ERROR, url.str());
-  return NULL;
+  return false;
   //   host found ==> IpEndpointName
   // build remoteobject and let it test remote url
   // return remote_objects_->adopt(new OscRemoteObject(this, end_point, url.path()));

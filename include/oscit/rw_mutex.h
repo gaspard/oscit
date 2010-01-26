@@ -37,6 +37,25 @@
 
 namespace oscit {
 
+#if 0
+
+/** Dummy to test concurrency failures.
+ */
+class RWMutex : private NonCopyable {
+public:
+  RWMutex() {}
+
+  inline void lock() {}
+
+  inline void unlock() {}
+
+  inline void read_lock() {}
+
+  inline void read_unlock() {}
+
+};
+
+#else
 #if 1
 
 // POSIX pthread_rwlock
@@ -129,6 +148,8 @@ public:
 };
 
 #endif
+
+#endif // dummy
 
 /** Scoped RWMutex Lock for exclusive access to a resource.
  */

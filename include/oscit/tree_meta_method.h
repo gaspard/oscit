@@ -44,14 +44,19 @@ public:
 
   virtual const Value trigger(const Value &val) {
     if (!val.is_string()) return gNilValue;
-    ListValue tmp;
-    Object * target = root_->find_or_build_object_at(val.c_str(), &tmp);
 
+    Value error;
+    ObjectHandle object;
     Value reply = val;
-    if (target) {
-      target->tree(target->url().length() + 1, &tmp);
+
+    if (root_->find_or_build_object_at(val.c_str(), &error, &object)) {
+      ListValue tmp;
+      object->tree(object->url().length() + 1, &tmp);
+      reply.push_back(tmp);
+    } else {
+      reply.push_back(error);
     }
-    reply.push_back(tmp);
+
     return reply;
   }
 };

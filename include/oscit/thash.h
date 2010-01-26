@@ -27,8 +27,6 @@
   ==============================================================================
 */
 
-/** Dictionary. The dictionary stores a copy of the data. Pointers to the copy are returned.
-  * We return pointers so that we can return NULL if the value is not found. */
 #ifndef OSCIT_INCLUDE_OSCIT_THASH_H_
 #define OSCIT_INCLUDE_OSCIT_THASH_H_
 
@@ -84,7 +82,10 @@ struct THashElement
   THashElement<K,T> * next;
 };
 
-// K is the key class, T is the object class
+/** Dictionary. The dictionary stores a copy of the data. Pointers to the copy are returned.
+  * We return pointers so that we can return NULL if the value is not found.
+  * K is the key class, T is the object class
+  */
 template <class K, class T>
 class THash {
 public:
@@ -95,20 +96,9 @@ public:
     thash_table_ = new THashElement<K,T>[size];
   }
 
-  // copy constructor
-  THash(const THash& pOther) {
-    ConstIterator it;
-    ConstIterator end = pOther.end();
-    T value;
-
-    size_ = pOther.size_;
-    thash_table_ = new THashElement<K,T>[size_];
-
-    for(it = pOther.begin(); it != end; it++) {
-      if (pOther.get(*it, &value)) {
-        set(*it, value);
-      }
-    }
+  // copy constructor (even if we do not use it, we need it for object instantiation: explicit not possible)
+  THash(const THash& other) {
+    copy(other);
   }
 
   virtual ~THash() {
@@ -126,17 +116,24 @@ public:
     delete[] thash_table_;
   }
 
-  THash& operator=(const THash& pOther) {
+  THash& operator=(const THash& other) {
+    copy(other);
+    return *this;
+  }
+
+  void copy(const THash &other) {
     ConstIterator it;
-    ConstIterator end = pOther.end();
+    ConstIterator end = other.end();
     T value;
 
-    for(it = pOther.begin(); it != end; it++) {
-      if (pOther.get(*it, &value)) {
+    size_ = other.size_;
+    thash_table_ = new THashElement<K,T>[size_];
+
+    for(it = other.begin(); it != end; it++) {
+      if (other.get(*it, &value)) {
         set(*it, value);
       }
     }
-    return *this;
   }
 
   void set(const K &key, const T &pElement);
@@ -229,12 +226,12 @@ public:
 
   /** Begin iterator over the keys of the dictionary. */
   Iterator end()   { return keys_.end(); }
-private:
+protected:
   bool remove_keeping_key(const K &key);
 
   /* data */
   THashElement<K,T> * thash_table_;
-  std::list<K>        keys_;  // FIXME: this should be a list !
+  std::list<K>        keys_;
 
   unsigned int size_;
 };

@@ -34,6 +34,7 @@
 
 #include "oscit/root.h"
 #include "oscit/alias.h"
+#include "oscit/object_handle.h"
 
 pthread_key_t oscit::Thread::sThisKey = NULL;
 
@@ -60,11 +61,11 @@ const Value Object::set(const Value &val) {
   HashIterator end = val.end();
   Value param;
   Value res;
-  Object * obj;
+  ObjectHandle handle;
 
   for (it = val.begin(); it != end; ++it) {
-    if ((obj = child(*it)) && val.get(*it, &param)) {
-      res.set(*it, root_->call(obj, param, NULL));
+    if (get_child(*it, &handle) && val.get(*it, &param)) {
+      res.set(*it, root_->call(handle, param, NULL));
     } else {
       res.set(*it, ErrorValue(NOT_FOUND_ERROR, *it));
     }
@@ -78,11 +79,11 @@ bool Object::set_all_ok(const Value &val) {
   HashIterator end = val.end();
   Value param;
   bool all_ok = true;
-  Object * obj;
+  ObjectHandle handle;
 
   for (it = val.begin(); it != end; ++it) {
-    if ((obj = child(*it)) && val.get(*it, &param)) {
-      all_ok = !root_->call(obj, param, NULL).is_error() && all_ok;
+    if (get_child(*it, &handle) && val.get(*it, &param)) {
+      all_ok = !root_->call(handle, param, NULL).is_error() && all_ok;
     } else {
       all_ok = false;
     }
@@ -141,8 +142,9 @@ void Object::register_child(Object *object) {
   // 1. make sure it is not in dictionary
   unregister_child(object);
 
+  Object *child;
   // 2. get valid name
-  while (child(object->name_)) {
+  while (children_.get(object->name_, &child)) {
     object->find_next_name();
   }
 
@@ -259,6 +261,16 @@ const Value Object::type_with_current_value() {
   return type;
 }
 
+bool Object::get_child(const std::string &name, ObjectHandle *handle) {
+  Object * child;
+  // FIXME: Thread safety
+  if (children_.get(name, &child)) {
+    handle->hold(child);
+    return true;
+  } else {
+    return false;
+  }
+}
 
 void Object::tree(size_t base_length, Value *tree) const {
   ConstStringIterator it, end = children_.end();

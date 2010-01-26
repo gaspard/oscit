@@ -64,23 +64,22 @@ public:
     ProxyFactoryLogger factory("factory", &logger);
     proxy.set_proxy_factory(&factory);
 
-    Object *object = proxy.object_at("/one/two");
-    assert_true(object == NULL);
-    object = proxy.object_at("/one");
-    assert_true(object == NULL);
+    ObjectHandle object;
+    assert_false(proxy.get_object_at("/one/two", &object));
+    assert_false(proxy.get_object_at("/one", &object));
 
     Value error;
-    Object *object2 = proxy.find_or_build_object_at(std::string("/one/two"), &error);
+    ObjectHandle object2;
+    assert_true(proxy.find_or_build_object_at(std::string("/one/two"), &error, &object2));
     assert_equal("[factory: build_object_proxy one null][factory: build_object_proxy two null]", logger.str());
     logger.str("");
-    assert_false(object2 == NULL);
+    assert_false(object2.object() == NULL);
 
-    object = proxy.object_at("/one/two");
-    assert_equal(object2, object);
+    assert_true(proxy.get_object_at("/one/two", &object));
+    assert_equal(object2.object(), object.object());
     assert_equal(object->type(), gNilValue);
 
-    object = proxy.object_at("/one");
-    assert_false(object == NULL);
+    assert_true(proxy.get_object_at("/one", &object));
     assert_equal(object->type(), gNilValue);
     assert_equal("", logger.str());
   }

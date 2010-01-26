@@ -27,9 +27,6 @@
   ==============================================================================
 */
 
-/** Copyright 2009 Gaspard Bucher
- *
- */
 
 #ifndef OSCIT_INCLUDE_OSCIT_OBJECT_H_
 #define OSCIT_INCLUDE_OSCIT_OBJECT_H_
@@ -44,6 +41,7 @@
 #include "oscit/thash.h"
 #include "oscit/mutex.h"
 #include "oscit/location.h"
+#include "oscit/c_reference_counted.h"
 
 namespace oscit {
 
@@ -56,8 +54,9 @@ namespace oscit {
 class Root;
 class Alias;
 class ObjectProxy;
+class ObjectHandle;
 
-class Object : public Typed, public Observable {
+class Object : public Typed, public Observable, public CReferenceCounted {
  public:
   /** Class signature. */
   TYPED("Object")
@@ -135,14 +134,18 @@ class Object : public Typed, public Observable {
 
   /** This is the prefered way to insert new objects in the tree since it clearly
     * highlights ownership in the parent.
-    * TODO: make sure a parent is not adopted by it's child. */
+    * TODO: make sure a parent is not adopted by it's child.
+    * TODO: if we want to make this thread safe, we need a handle.
+    */
   template<class T>
   T *adopt(T *object) {
     object->set_parent(this);
     return object;
   }
 
-  /** Clear all children (delete). */
+  /** Clear all children (delete).
+   * TODO: make thread safe
+   */
   void clear();
 
   /** Lock mutex if needed before calling 'trigger'.
@@ -171,8 +174,8 @@ class Object : public Typed, public Observable {
    *  a sub-node or branch is not found and this is the last found object along
    *  the path.
    */
-  virtual Object *build_child(const std::string &name, const Value &type, Value *error) {
-    return NULL;
+  virtual bool build_child(const std::string &name, const Value &type, Value *error, ObjectHandle *handle) {
+    return false;
   }
 
   /** Lock resource (used by commands). */
@@ -279,7 +282,7 @@ class Object : public Typed, public Observable {
 
   /** Return the list of children as a hash.
    */
-  const THash<std::string, Object *> children() const {
+  const THash<std::string, Object *> &children() const {
     return children_;
   }
 
@@ -291,14 +294,7 @@ class Object : public Typed, public Observable {
 
   /** Return the direct child named 'name'.
    */
-  Object *child(const std::string &name) {
-    Object * child;
-    if (children_.get(name, &child)) {
-      return child;
-    } else {
-      return NULL;
-    }
-  }
+  bool get_child(const std::string &name, ObjectHandle *handle);
 
   /** Return the number of children objects.
    */

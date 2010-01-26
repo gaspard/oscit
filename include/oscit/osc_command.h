@@ -54,7 +54,7 @@ public:
 
 protected:
   /** Create a reference to a remote object. */
-  virtual Object *build_remote_object(const Url &url, Value *error);
+  virtual bool build_remote_object(const Url &url, Value *error, ObjectHandle *handle);
 
   /** Send a Value to a remote endpoint at a given path using osc.
    */

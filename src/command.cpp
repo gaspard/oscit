@@ -116,12 +116,13 @@ Command::~Command() {
   }
 }
 
-Object *Command::remote_object(const Url &remote_url, Value *error) {
+bool Command::remote_object(const Url &remote_url, Value *error, ObjectHandle *handle) {
   Object *object;
   if (remote_objects_.get(remote_url.str(), &object)) {
-    return object;
+    handle->hold(object);
+    return true;
   } else {
-    return build_remote_object(remote_url, error);
+    return build_remote_object(remote_url, error, handle);
   }
 }
 
