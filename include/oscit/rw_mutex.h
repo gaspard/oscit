@@ -93,17 +93,21 @@ public:
 
   /** Gain read-only access to resource.
    */
-  inline void read_lock() {
+  inline void read_lock() const {
     pthread_rwlock_rdlock(&rwlock_);
   }
 
   /** Release read-only access to resource.
    */
-  inline void read_unlock() {
+  inline void read_unlock() const {
+    // YES, this const_cast is ugly, but that's the only way to allow READ lock on const.
     pthread_rwlock_unlock(&rwlock_);
   }
 private:
-  pthread_rwlock_t rwlock_;
+  /** Pthread readers-writer lock.
+   * We need to make it mutable so that we can access it from const 'read_unlock'.
+   */
+  mutable pthread_rwlock_t rwlock_;
 };
 
 #else
@@ -175,11 +179,11 @@ private:
  */
 class ScopedRead : private NonCopyable {
 public:
-  ScopedRead(RWMutex *mutex) : mutex_ptr_(mutex) {
+  ScopedRead(const RWMutex *mutex) : mutex_ptr_(mutex) {
     mutex_ptr_->read_lock();
   }
 
-  ScopedRead(RWMutex &mutex) : mutex_ptr_(&mutex) {
+  ScopedRead(const RWMutex &mutex) : mutex_ptr_(&mutex) {
     mutex_ptr_->read_lock();
   }
 
@@ -188,7 +192,7 @@ public:
   }
 
 private:
-  RWMutex *mutex_ptr_;
+  const RWMutex *mutex_ptr_;
 };
 
 }  // oscit

@@ -73,6 +73,17 @@ public:
     if (object_) retain();
   }
 
+  /** This code is meant to run on empty ScopedRetain handles, if you
+   * need to hold an object longer, you should use a temporary to get
+   * the value and copy it.
+   */
+  void hold_fast(Object *object) {
+    assert(!object_);
+    assert(object);
+    object_ = object;
+    retain();
+  }
+
   /** Make sure you are holding an object before calling
    * this !
    */

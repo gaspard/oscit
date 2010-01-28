@@ -103,11 +103,16 @@ void Object::unregister_alias(Alias *alias) {
 
 /** Free the child from the list of children. */
 void Object::unregister_child(Object *object) {
-  children_.remove_element(object);
-  std::vector<Object*>::iterator it, end = children_vector_.end();
-  for(it = children_vector_.begin(); it != end; ++it) {
-    if (*it == object) {
-      it = children_vector_.erase(it);
+  { ScopedWrite lock(children_);
+    children_.remove_element(object);
+  }
+
+  { ScopedWrite lock(children_vector_);
+    std::vector<Object*>::iterator it, end = children_vector_.end();
+    for(it = children_vector_.begin(); it != end; ++it) {
+      if (*it == object) {
+        it = children_vector_.erase(it);
+      }
     }
   }
 }
@@ -128,13 +133,15 @@ void Object::moved() {
     set_root(NULL);
   }
 
-  StringIterator it;
-  StringIterator end = children_.end();
-  Object *child;
+  { ScopedRead lock(children_);
+    StringIterator it;
+    StringIterator end = children_.end();
+    Object *child;
 
-  // 3. update children
-  for(it = children_.begin(); it != end; it++) {
-    if (children_.get(*it, &child)) child->moved();
+    // 3. update children
+    for(it = children_.begin(); it != end; it++) {
+      if (children_.get(*it, &child)) child->moved();
+    }
   }
 }
 
@@ -144,13 +151,18 @@ void Object::register_child(Object *object) {
 
   Object *child;
   // 2. get valid name
-  while (children_.get(object->name_, &child)) {
-    object->find_next_name();
+  { ScopedWrite lock(children_);
+    while (children_.get(object->name_, &child)) {
+      object->find_next_name();
+    }
+
+    // 3. add to dictionary with new name
+    children_.set(object->name_, object);
   }
 
-  // 3. add to dictionary with new name
-  children_.set(object->name_, object);
-  children_vector_.push_back(object);
+  { ScopedWrite lock(children_vector_);
+    children_vector_.push_back(object);
+  }
 }
 
 void Object::set_root(Root *root) {
@@ -168,6 +180,7 @@ void Object::set_parent(Object *parent) {
 }
 
 void Object::clear() {
+  ScopedWrite lock(children_);
   StringIterator it;
   StringIterator end = children_.end();
 
@@ -178,7 +191,7 @@ void Object::clear() {
       // to avoid 'unregister_child' call (would alter children_)
       child->parent_ = NULL;
       if (root_) root_->unregister_object(child);
-      delete child;
+      child->release();
     }
   }
   children_.clear();
@@ -186,6 +199,7 @@ void Object::clear() {
 
 
 const Value Object::list() const {
+  ScopedRead lock(children_);
   ListValue res;
   ConstStringIterator it, end = children_.end();
   for (it = children_.begin(); it != end; ++it) {
@@ -206,6 +220,7 @@ const Value Object::list() const {
 }
 
 const Value Object::list_with_type() const {
+  ScopedRead lock(children_);
   ListValue list;
   ConstStringIterator it, end = children_.end();
   for (it = children_.begin(); it != end; ++it) {
@@ -263,7 +278,7 @@ const Value Object::type_with_current_value() {
 
 bool Object::get_child(const std::string &name, ObjectHandle *handle) {
   Object * child;
-  // FIXME: Thread safety
+  ScopedRead lock(children_);
   if (children_.get(name, &child)) {
     handle->hold(child);
     return true;
@@ -272,8 +287,19 @@ bool Object::get_child(const std::string &name, ObjectHandle *handle) {
   }
 }
 
+bool Object::get_child(size_t index, ObjectHandle *handle) {
+  ScopedRead lock(children_vector_);
+  if (index >= children_vector_.size()) return false;
+  Object *object = children_vector_[index];
+  handle->hold(object);
+  return true;
+}
+
+// FIXME: 'tree' is bad (locks too much because of recursion) and we do not need it
+// in OSCIT.
 void Object::tree(size_t base_length, Value *tree) const {
   ConstStringIterator it, end = children_.end();
+  ScopedRead lock(children_);
   for (it = children_.begin(); it != end; ++it) {
     Object * obj;
     if (children_.get(*it, &obj)) {

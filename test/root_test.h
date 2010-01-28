@@ -65,24 +65,30 @@ public:
     assert_true(root.get_object_at("", &res));
     assert_equal(&root, res.object() );
 
+    res = NULL; // clear handle: set handle not allowed in get_object_at.
     assert_true(root.get_object_at("/foo", &res));
     assert_equal(foo, res.object() );
 
+    res = NULL;
     assert_true(root.get_object_at("/foo/bar", &res));
     assert_equal(bar, res.object() );
 
 
+    res = NULL;
     assert_false( root.get_object_at("/super", &res));
     assert_false( root.get_object_at("/super/bar", &res));
 
     foo->set_name("super");
 
+    res = NULL;
     assert_true(root.get_object_at("/super", &res));
     assert_equal(foo, res.object() );
 
+    res = NULL;
     assert_true(root.get_object_at("/super/bar", &res));
     assert_equal(bar, res.object() );
 
+    res = NULL;
     assert_false( root.get_object_at("/foo", &res));
     assert_false( root.get_object_at("/foo/bar", &res));
   }
@@ -96,23 +102,28 @@ public:
     assert_true( root.get_object_at("", &res) );
     assert_equal(&root, res.object() );
 
+    res = NULL; // clear handle: set handle not allowed in get_object_at.
     assert_false( root.get_object_at("/a", &res) );
 
     root.adopt(a);
 
+    res = NULL;
     assert_true( root.get_object_at("/a", &res) );
     assert_equal(a, res.object() );
 
     root.adopt(a2);
+    res = NULL;
     assert_true( root.get_object_at("/a", &res) );
     assert_equal(a, res.object() );
 
+    res = NULL;
     assert_true( root.get_object_at("/a-1", &res) );
     assert_equal(a2, res.object() );
 
     root.clear();
-    assert_true( !root.get_object_at("/a", &res) );
-    assert_true( !root.get_object_at("/a-1", &res) );
+    res = NULL;
+    assert_false(root.get_object_at("/a", &res) );
+    assert_false(root.get_object_at("/a-1", &res) );
     assert_true( root.get_object_at("", &res) );
     assert_equal(&root, res.object() );
   }

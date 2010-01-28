@@ -79,6 +79,7 @@ public:
     assert_equal(object2.object(), object.object());
     assert_equal(object->type(), gNilValue);
 
+    object = NULL; // clear handle (handle already set not allowed in root code)
     assert_true(proxy.get_object_at("/one", &object));
     assert_equal(object->type(), gNilValue);
     assert_equal("", logger.str());

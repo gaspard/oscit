@@ -27,29 +27,28 @@
   ==============================================================================
 */
 
-#ifndef OSCIT_INCLUDE_OSCIT_C_TLIST_H_
-#define OSCIT_INCLUDE_OSCIT_C_TLIST_H_
+#ifndef OSCIT_INCLUDE_OSCIT_C_TVECTOR_H_
+#define OSCIT_INCLUDE_OSCIT_C_TVECTOR_H_
 
-#include <list>
+#include <vector>
 
 #include "oscit/rw_mutex.h"
 
 namespace oscit {
 
-
-/** The Concurrent List template is a std::list with a read-write mutex.
+/** The Concurrent Vector template is a std::vector with a read-write mutex.
  * The class does not lock/unlock the mutex, this is the responsability
- * of the class using the list.
+ * of the class using the vector.
  */
 template <class T>
-class CTList : public std::list<T>, public RWMutex {
+class CTVector : public std::vector<T>, public RWMutex {
 public:
-  CTList() {}
+  CTVector() {}
 
   // copy constructor
-  CTList(const CTList& other) : std::list<T>(other) {}
+  CTVector(const CTVector& other) : std::vector<T>(other) {}
 };
 
 } // oscit
 
-#endif // OSCIT_INCLUDE_OSCIT_C_TLIST_H_
+#endif // OSCIT_INCLUDE_OSCIT_C_TVECTOR_H_

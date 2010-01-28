@@ -42,6 +42,8 @@
 #include "oscit/mutex.h"
 #include "oscit/location.h"
 #include "oscit/c_reference_counted.h"
+#include "oscit/c_tvector.h"
+#include "oscit/c_thash.h"
 
 namespace oscit {
 
@@ -281,42 +283,34 @@ class Object : public Typed, public Observable, public CReferenceCounted {
   // }
 
   /** Return the list of children as a hash.
+   * FIXME: if this is a const how does the user of this method RW lock ?
    */
-  const THash<std::string, Object *> &children() const {
+  const CTHash<std::string, Object *> &children() const {
     return children_;
   }
 
   /** Return first child.
    */
-  Object *first_child() {
-    return child_at_index(0);
+  bool first_child(ObjectHandle *handle) {
+    return get_child(0, handle);
   }
 
-  /** Return the direct child named 'name'.
+  /** Tries to find a child named 'name'.
    */
   bool get_child(const std::string &name, ObjectHandle *handle);
+
+  /** Tries to find the child at a specific index. Returns
+   * false on failure.
+   */
+  bool get_child(size_t index, ObjectHandle *handle);
 
   /** Return the number of children objects.
    */
   size_t children_count() {
+    ScopedRead lock(children_vector_);
     return children_vector_.size();
   }
 
-  /** Return the object located at a specific index.
-   */
-  Object *child_at_index(size_t index) {
-    if (index >= children_vector_.size()) return NULL;
-    return children_vector_[index];
-  }
-
-  /** Tries to find the object at a specific index. Returns
-   * false on failure.
-   */
-  bool get_object_at_index(size_t index, Object **object) {
-    if (index >= children_vector_.size()) return false;
-    *object = children_vector_[index];
-    return true;
-  }
 
   Object *parent() {
     return parent_;
@@ -403,11 +397,11 @@ class Object : public Typed, public Observable, public CReferenceCounted {
   }
 
   void observer_lock() {
-    // FIXME: we need a recursive lock here...
+    // FIXME: the need for this = bad design !
   }
 
   void observer_unlock() {
-    // FIXME: we need a recursive lock here...
+    // FIXME: the need for this = bad design !
   }
 
  private:
@@ -421,6 +415,7 @@ class Object : public Typed, public Observable, public CReferenceCounted {
 
   /** List of aliases to destroy when
    * this node disappears.
+   * FIXME: clarify usage and RW lock need.
    */
   std::list<Alias *>          aliases_;
 
@@ -432,50 +427,54 @@ class Object : public Typed, public Observable, public CReferenceCounted {
   Root *root_;
 
   /** Pointer to parent object.
-   *  Can be NULL if the object does not have a parent.
+   * Can be NULL if the object does not have a parent.
    */
   Object *parent_;
 
   /** Hash with pointers to children objects or methods.
-   *  The children objects unregister themselves when they die or change
-   *  their parent by calling 'unregister_child'.
+   * The children objects unregister themselves when they die or change
+   * their parent by calling 'unregister_child'.
    */
-  THash<std::string, Object *> children_;
+  CTHash<std::string, Object *> children_;
 
   /** List of children as a vector for faster enumeration type of access.
    */
-  std::vector<Object*> children_vector_;
+  CTVector<Object*> children_vector_;
 
   /** Unique name in parent's context.
    */
   std::string name_;
 
   /** Absolute path to object (cached).
+   * FIXME: clarify usage and RW lock need.
    */
   std::string url_;
 
   /** Mutex to make sure only one thread is using a given context at a time.
+   * FIXME: remove.
    */
   Mutex *context_;
 
  private:
 
   /** Value that holds type information on the 'trigger' method of this
-   *  object.
-   *  If the type_ is not a list, this means the object is not callable and
-   *  the type_ member only holds a string with general information on the
-   *  object.
-   *  If the type_ is a list, the first element is the actual type of Value
-   *  the object can receive in it's 'trigger' method and the other elements
-   *  are information on the range of allowed values and such.
-   *  The last element of type_ is always an information string.
+   * object.
+   * If the type_ is not a list, this means the object is not callable and
+   * the type_ member only holds a string with general information on the
+   * object.
+   * If the type_ is a list, the first element is the actual type of Value
+   * the object can receive in it's 'trigger' method and the other elements
+   * are information on the range of allowed values and such.
+   * The last element of type_ is always an information string.
+   * FIXME: clarify usage and RW lock need.
    */
   Value type_;
 
   /** Identifier for the type of the values the element can receive.
-   *  The value is a hash of the type tag list (multiple osc type tags) such
-   *  as "f" (single Real) or "fss" (Real, String, String).
-   *  This is cached from the first element in type_.
+   * The value is a hash of the type tag list (multiple osc type tags) such
+   * as "f" (single Real) or "fss" (Real, String, String).
+   * This is cached from the first element in type_.
+   * FIXME: clarify usage and RW lock need.
    */
   TypeTagID type_id_;
 };

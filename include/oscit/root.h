@@ -183,7 +183,7 @@ class Root : public Object {
     } else {
       Object *object = adopt(new Object(Url(VIEWS_PATH).name(), NoIO("All objects under this path are views.")));
       if (object) {
-        handle->hold(object);
+        handle->hold_fast(object);
         return true;
       } else {
         return false;
@@ -336,7 +336,7 @@ class Root : public Object {
     ScopedRead lock(objects_);
     Object *res;
     if (objects_.get(std::string(path), &res)) {
-     handle->hold(res);
+     handle->hold_fast(res);
      return true;
     } else {
      return false;
@@ -350,7 +350,7 @@ class Root : public Object {
     ScopedRead lock(objects_);
     Object *res;
     if (objects_.get(std::string(path), &res)) {
-      handle->hold(res);
+      handle->hold_fast(res);
       return true;
     } else {
       return false;

@@ -83,11 +83,17 @@ public:
     Object base("base");
     Object * one = base.adopt(new Object("one"));
     Object * two = base.adopt(new Object("aaa"));
+    ObjectHandle obj;
 
-    assert_equal(one, base.first_child());
+    assert_true(base.first_child(&obj));
+    assert_equal(one, obj.object());
+
+    obj = NULL; // release handle
 
     delete one;
-    assert_equal(two, base.first_child());
+
+    assert_true(base.first_child(&obj));
+    assert_equal(two, obj.object());
   }
 
   void test_set_parent_same_name_as_sibling( void ) {
@@ -177,48 +183,32 @@ public:
     assert_equal("tint", res[1][0].str());
   }
 
-  void should_find_child_from_position( void ) {
-    Object base("base");
-    Object *one = base.adopt(new Object("one"));
-    assert_equal(1, base.children_count());
-    Object *two = base.adopt(new Object("aaa"));
-    assert_equal(2, base.children_count());
-
-    assert_equal(one, base.child_at_index(0));
-    assert_equal(two, base.child_at_index(1));
-
-    delete one;
-    assert_equal(1, base.children_count());
-    assert_equal(two, base.child_at_index(0));
-    assert_equal((RootProxy *)NULL, base.child_at_index(1));
-
-    delete two;
-    assert_equal(0, base.children_count());
-    assert_equal((RootProxy *)NULL, base.child_at_index(0));
-  }
-
   void should_get_child_from_position( void ) {
     Object base("base");
     Object *one = base.adopt(new Object("one"));
     assert_equal(1, base.children_count());
     Object *two = base.adopt(new Object("aaa"));
     assert_equal(2, base.children_count());
-    Object *tmp = NULL;
+    ObjectHandle obj;
 
-    assert_true(base.get_object_at_index(0, &tmp));
-    assert_equal(one, tmp);
-    assert_true(base.get_object_at_index(1, &tmp));
-    assert_equal(two, tmp);
+    assert_true(base.get_child(0, &obj));
+    assert_equal(one, obj.object());
 
-    delete one;
+    assert_true(base.get_child(1, &obj));
+    assert_equal(two, obj.object());
+
+    one->release(); // delete
     assert_equal(1, base.children_count());
-    assert_true(base.get_object_at_index(0, &tmp));
-    assert_equal(two, tmp);
-    assert_false(base.get_object_at_index(1, &tmp));
 
-    delete two;
+    assert_true(base.get_child(0, &obj));
+    assert_equal(two, obj.object());
+
+    assert_false(base.get_child(1, &obj));
+    obj = NULL; // release handle;
+
+    two->release(); // delete
     assert_equal(0, base.children_count());
-    assert_false(base.get_object_at_index(0, &tmp));
+    assert_false(base.get_child(0, &obj));
   }
 
   // set_type is not a good idea. It should be immutable (or maybe I'm wrong, so I leave the test here)
