@@ -95,6 +95,15 @@ class ZeroConfBrowser : public Mutex {
 	 */
   virtual void stop();
 
+  /** Return true if the browser is running (searching for devices).
+   */
+  bool is_running() {
+    return running_;
+  }
+
+  void set_running(bool is_running) {
+    running_ = is_running;
+  }
 
   void get_protocol_from_service_type();
 

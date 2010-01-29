@@ -75,17 +75,17 @@ using namespace oscit;
 }
 
 - (void)start {
-  if (!browser_->running_) {
+  if (!browser_->is_running()) {
     [service_browser_ stop];
     [service_browser_ searchForServicesOfType:[NSString stringWithCString:service_type_.c_str() encoding:NSUTF8StringEncoding] inDomain:@""];
-    browser_->running_ = true;
+    browser_->set_running(true);
   }
 }
 
 - (void)stop {
-  if (browser_->running_) {
+  if (browser_->is_running()) {
     [service_browser_ stop];
-    browser_->running_ = false;
+    browser_->set_running(false);
   }
 }
 
