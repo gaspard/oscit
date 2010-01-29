@@ -92,7 +92,7 @@ public:
 
     DummyObject *object = (DummyObject*) cmd->remote_object_no_build("dummy://dummy.host:2009/one/two/testing");
     assert_equal(2009.0, object->real());
-    assert_equal((Object*)object, handle.object());
+    assert_equal((Object*)object, handle.ptr());
   }
 
   void test_root_send( void ) {

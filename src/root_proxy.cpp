@@ -140,7 +140,7 @@ void RootProxy::handle_reply(const std::string &path, const Value &val) {
       return;
     }
 
-    build_children_from_types(handle.object(), val[1]);
+    build_children_from_types(handle.ptr(), val[1]);
   } else if (path == TYPE_PATH) {
     if (val.size() < 2 || !val[0].is_string()) {
       std::cerr << "Invalid argument in " << TYPE_PATH << " reply: " << val << "\n";

@@ -63,15 +63,15 @@ public:
     assert_equal("/foo/bar", bar->url() );
 
     assert_true(root.get_object_at("", &res));
-    assert_equal(&root, res.object() );
+    assert_equal(&root, res.ptr() );
 
     res = NULL; // clear handle: set handle not allowed in get_object_at.
     assert_true(root.get_object_at("/foo", &res));
-    assert_equal(foo, res.object() );
+    assert_equal(foo, res.ptr() );
 
     res = NULL;
     assert_true(root.get_object_at("/foo/bar", &res));
-    assert_equal(bar, res.object() );
+    assert_equal(bar, res.ptr() );
 
 
     res = NULL;
@@ -82,11 +82,11 @@ public:
 
     res = NULL;
     assert_true(root.get_object_at("/super", &res));
-    assert_equal(foo, res.object() );
+    assert_equal(foo, res.ptr() );
 
     res = NULL;
     assert_true(root.get_object_at("/super/bar", &res));
-    assert_equal(bar, res.object() );
+    assert_equal(bar, res.ptr() );
 
     res = NULL;
     assert_false( root.get_object_at("/foo", &res));
@@ -100,7 +100,7 @@ public:
     ObjectHandle res;
 
     assert_true( root.get_object_at("", &res) );
-    assert_equal(&root, res.object() );
+    assert_equal(&root, res.ptr() );
 
     res = NULL; // clear handle: set handle not allowed in get_object_at.
     assert_false( root.get_object_at("/a", &res) );
@@ -109,23 +109,23 @@ public:
 
     res = NULL;
     assert_true( root.get_object_at("/a", &res) );
-    assert_equal(a, res.object() );
+    assert_equal(a, res.ptr() );
 
     root.adopt(a2);
     res = NULL;
     assert_true( root.get_object_at("/a", &res) );
-    assert_equal(a, res.object() );
+    assert_equal(a, res.ptr() );
 
     res = NULL;
     assert_true( root.get_object_at("/a-1", &res) );
-    assert_equal(a2, res.object() );
+    assert_equal(a2, res.ptr() );
 
     root.clear();
     res = NULL;
     assert_false(root.get_object_at("/a", &res) );
     assert_false(root.get_object_at("/a-1", &res) );
     assert_true( root.get_object_at("", &res) );
-    assert_equal(&root, res.object() );
+    assert_equal(&root, res.ptr() );
   }
 
   void test_call_without_arguments_should_return_current_value( void ) {
@@ -230,7 +230,7 @@ public:
     ObjectHandle res;
     Value error;
     assert_true(root.get_object_at(Url("/foo"), &error, &res));
-    assert_equal((Object*)foo, res.object());
+    assert_equal((Object*)foo, res.ptr());
     assert_true(error.is_empty());
   }
 
@@ -281,7 +281,7 @@ public:
     Root root("gaia");
     ObjectHandle object;
     assert_true(root.get_object_at("", &object));
-    assert_equal((Object*)&root, object.object());
+    assert_equal((Object*)&root, object.ptr());
   }
 
   void test_delete_command_should_unregister_it_from_observers( void ) {
@@ -331,7 +331,7 @@ public:
     // make again should return same object
     ObjectHandle views2;
     assert_true(root.get_views_path(&views2));
-    assert_equal(views.object(), views2.object());
+    assert_equal(views.ptr(), views2.ptr());
     res = root.list();
     assert_equal("[\"views\"]", res.to_json());
   }

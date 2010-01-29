@@ -73,10 +73,10 @@ public:
     assert_true(proxy.find_or_build_object_at(std::string("/one/two"), &error, &object2));
     assert_equal("[factory: build_object_proxy one null][factory: build_object_proxy two null]", logger.str());
     logger.str("");
-    assert_false(object2.object() == NULL);
+    assert_false(object2.ptr() == NULL);
 
     assert_true(proxy.get_object_at("/one/two", &object));
-    assert_equal(object2.object(), object.object());
+    assert_equal(object2.ptr(), object.ptr());
     assert_equal(object->type(), gNilValue);
 
     object = NULL; // clear handle (handle already set not allowed in root code)

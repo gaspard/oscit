@@ -26,7 +26,7 @@ public:
    */
   virtual const Value trigger(const Value &val) {
     if (val.is_real()) {
-      value_.r = val.r;
+      value_.r = 30 * (int)(val.r / 30);
 
       // when the value goes to 0: divide sleepiness by two
       // when it goes to 512: multiply by two
@@ -97,7 +97,11 @@ int main(int argc, char * argv[]) {
   tmp->adopt(new ValueDisplay("slider", 115, &gSleepy));
 
   // create '/views' url
-  Object *views = root.make_views_path();
+  ObjectHandle views;
+  if (!root.get_views_path(&views)) {
+    std::cout << "Could not find views path !\n";
+    return -1;
+  }
 
   // create '/views/basic' url
   HashFileMethod *basic_view = views->adopt(new HashFileMethod("basic", VIEW_PATH, "basic view for the beatbox example"));

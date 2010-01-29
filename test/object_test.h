@@ -63,20 +63,20 @@ public:
     assert_equal("/one/sub", sub->url());
 
     assert_true(base.get_child("one", &handle));
-    assert_equal(one, handle.object());
+    assert_equal(one, handle.ptr());
 
     handle = NULL;
     assert_false(base.get_child("foo", &handle));
-    assert_equal((Object*)NULL, handle.object());
+    assert_equal((Object*)NULL, handle.ptr());
 
     one->set_name("foo");
 
     handle = NULL;
     assert_false(base.get_child("one", &handle));
-    assert_equal((Object*)NULL, handle.object());
+    assert_equal((Object*)NULL, handle.ptr());
 
     assert_true(base.get_child("foo", &handle));
-    assert_equal(one, handle.object());
+    assert_equal(one, handle.ptr());
   }
 
   void test_first_child( void ) {
@@ -86,14 +86,14 @@ public:
     ObjectHandle obj;
 
     assert_true(base.first_child(&obj));
-    assert_equal(one, obj.object());
+    assert_equal(one, obj.ptr());
 
     obj = NULL; // release handle
 
     delete one;
 
     assert_true(base.first_child(&obj));
-    assert_equal(two, obj.object());
+    assert_equal(two, obj.ptr());
   }
 
   void test_set_parent_same_name_as_sibling( void ) {
@@ -135,10 +135,10 @@ public:
     Object * carrot = base.adopt(new DummyObject("dummy", 0.0));
     ObjectHandle handle;
     assert_false(carrot->build_child(std::string("something"), gNilValue, &error, &handle));
-    assert_equal((Object*)NULL, handle.object());
+    assert_equal((Object*)NULL, handle.ptr());
 
     assert_true(carrot->build_child(std::string("special"), gNilValue, &error, &handle));
-    assert_true( handle.object() != NULL );
+    assert_true( handle.ptr() != NULL );
     assert_equal("/dummy/special", handle->url());
   }
 
@@ -192,16 +192,16 @@ public:
     ObjectHandle obj;
 
     assert_true(base.get_child(0, &obj));
-    assert_equal(one, obj.object());
+    assert_equal(one, obj.ptr());
 
     assert_true(base.get_child(1, &obj));
-    assert_equal(two, obj.object());
+    assert_equal(two, obj.ptr());
 
     one->release(); // delete
     assert_equal(1, base.children_count());
 
     assert_true(base.get_child(0, &obj));
-    assert_equal(two, obj.object());
+    assert_equal(two, obj.ptr());
 
     assert_false(base.get_child(1, &obj));
     obj = NULL; // release handle;

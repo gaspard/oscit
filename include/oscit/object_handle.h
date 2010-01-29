@@ -103,7 +103,7 @@ public:
     return TYPE_CAST(T, object_);
   }
 
-  Object *object() {
+  Object *ptr() {
     return object_;
   }
 

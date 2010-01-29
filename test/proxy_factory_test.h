@@ -255,7 +255,7 @@ class ProxyFactoryTest : public TestHelper
     millisleep(20);
 
     assert_true(proxy_->get_object_at("/synth", &bar));
-    assert_true( bar.object() != NULL);
+    assert_true( bar.ptr() != NULL);
 
     assert_equal("Super synth.", bar->info().c_str());
   }
