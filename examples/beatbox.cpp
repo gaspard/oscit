@@ -26,7 +26,7 @@ public:
    */
   virtual const Value trigger(const Value &val) {
     if (val.is_real()) {
-      value_.r = 30 * (int)(val.r / 30);
+      value_.r = val.r;
 
       // when the value goes to 0: divide sleepiness by two
       // when it goes to 512: multiply by two
