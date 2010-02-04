@@ -150,21 +150,6 @@ class Object : public Typed, public Observable, public CReferenceCounted {
    */
   void clear();
 
-  /** Lock mutex if needed before calling 'trigger'.
-   * This is the method that should be used by objects when they are doing a
-   * direct call.
-   */
-  const Value safe_trigger(const Value &val, const Mutex *caller_context) {
-    if (context_ && context_ != caller_context) {
-      context_->lock();
-        Value res = trigger(val);
-      context_->unlock();
-      return res;
-    } else {
-      return trigger(val);
-    }
-  }
-
   /** This is the operation executed when the object is called.
    *  In order to benefit from return value optimization and avoid too many copy
    *  you have to use Value v = xxx.trigger(val). */

@@ -146,7 +146,7 @@ file(GLOB OSCIT_EXAMPLE_ASSETS examples/*.json)
 foreach (OSCIT_EXAMPLE_ASSET ${OSCIT_EXAMPLE_ASSETS})
   get_filename_component (OSCIT_EXAMPLE_ASSET_NAME ${OSCIT_EXAMPLE_ASSET} NAME)
   configure_file(${OSCIT_EXAMPLE_ASSET} ${OSCIT_EXAMPLE_ASSET_NAME} COPYONLY)
-endforeach(OSCIT_EXAMPLE_ASSETS)
+endforeach(OSCIT_EXAMPLE_ASSET)
 
 # ==============================================================================
 #

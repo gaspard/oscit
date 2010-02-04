@@ -42,7 +42,7 @@ public:
     Call call("/Evil", Value(6.66));
 
     assert_equal(1.23, evil->real());
-    Value res = call.safe_trigger(&root);
+    Value res = call.trigger_call(&root);
     assert_equal(6.66, res.r);
     assert_equal(6.66, evil->real());
   }

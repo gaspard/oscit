@@ -40,7 +40,7 @@ struct Call {
   Call(const char        *url, const Value &param) : url_(url), param_(param) {}
   Call(const Url         &url, const Value &param) : url_(url), param_(param) {}
 
-  const Value safe_trigger(Root *root) {
+  const Value trigger_call(Root *root) {
     return root->call(url_, param_);
   }
 

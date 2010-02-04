@@ -58,7 +58,7 @@ public:
   }
 
   virtual const Value trigger(const Value &val) {
-    return original_ ? original_->safe_trigger(val, context_) : gNilValue;
+    return original_ ? original_->trigger(val) : gNilValue;
   }
 
   /** Used by original object during destruction (avoid ~Alias calling
