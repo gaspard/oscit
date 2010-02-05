@@ -133,7 +133,6 @@ public:
         if (command_->port() != 0) {
           socket_ = new UdpListeningReceiveSocket( IpEndpointName( IpEndpointName::ANY_ADDRESS, command_->port() ), this );
         } else {
-          std::cout << "Connecting to port 0\n";
           socket_ = new UdpListeningReceiveSocket( IpEndpointName(), this );
           command_->set_port(socket_->BoundPort());
         }

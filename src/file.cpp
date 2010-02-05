@@ -89,7 +89,7 @@ Value File::list(const std::string &folder, const std::string &ends_with) {
   while ((dp = readdir(dir)) != NULL) {
     std::string file_name(dp->d_name);
     size_t name_length = file_name.length();
-    if (ends_with_length <= name_length && file_name.substr(name_length - ends_with_length, ends_with_length) == ends_with) {
+    if (ends_with_length <= name_length && file_name.substr(name_length - ends_with_length) == ends_with) {
       // match
       files.push_back(Value(file_name));
     }
