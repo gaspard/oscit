@@ -33,6 +33,8 @@
 #include <sstream>
 #include <fstream>    // file io
 
+#include <sys/types.h>
+#include <dirent.h> // file list
 
 namespace oscit {
 
@@ -71,6 +73,30 @@ bool File::append(const std::string& data) {
     out << data;
   out.close();
   return true;
+}
+
+Value File::list(const std::string &folder, const std::string &ends_with) {
+  ListValue files;
+  size_t ends_with_length = ends_with.length();
+  DIR *dir;
+  struct dirent *dp;
+
+  if ( !(dir = opendir(folder.c_str())) ) {
+    // opendir failed;
+    return ErrorValue(BAD_REQUEST_ERROR, "Could not open '").append(folder).append("'");
+  }
+
+  while ((dp = readdir(dir)) != NULL) {
+    std::string file_name(dp->d_name);
+    size_t name_length = file_name.length();
+    if (ends_with_length <= name_length && file_name.substr(name_length - ends_with_length, ends_with_length) == ends_with) {
+      // match
+      files.push_back(Value(file_name));
+    }
+  }
+
+  closedir(dir);
+  return files;
 }
 
 } // oscit

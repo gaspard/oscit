@@ -35,6 +35,8 @@
 
 namespace oscit {
 
+#define FILE_SEP "/"
+
 /** This class is responsible for managaging access to the filesystem. All operations
  * are atomic and the File never holds a lock on the file representation. This means
  * that you should prepare all the content in a string instead of calling File#append
@@ -87,6 +89,55 @@ public:
     return path_;
   }
 
+  /** Return a list of file names found in the given folder and matching the
+   * given end string.
+   */
+  static Value list(const std::string &folder, const std::string &ends_with);
+
+  /** Return a list of file names found in the given folder and matching the
+   * given end string.
+   */
+  static Value list(const std::string &folder, const char *ends_with) {
+    return list(folder, std::string(ends_with));
+  }
+
+  /** Return a list of file names found in the given folder and matching the
+   * given end string.
+   */
+  static Value list(const char *folder, const std::string &ends_with) {
+    return list(std::string(folder), ends_with);
+  }
+
+  /** Return a list of file names found in the given folder and matching the
+   * given end string.
+   */
+  static Value list(const char *folder, const char *ends_with) {
+    return list(std::string(folder), std::string(ends_with));
+  }
+
+  /** Join file names to build a path.
+   */
+  static std::string join(const std::string &base, const std::string &path) {
+    return std::string(base).append(FILE_SEP).append(path);
+  }
+
+  /** Join file names to build a path.
+   */
+  static std::string join(const std::string &base, const char *path) {
+    return std::string(base).append(FILE_SEP).append(path);
+  }
+
+  /** Join file names to build a path.
+   */
+  static std::string join(const char *base, const std::string &path) {
+    return std::string(base).append(FILE_SEP).append(path);
+  }
+
+  /** Join file names to build a path.
+   */
+  static std::string join(const char *base, const char *path) {
+    return std::string(base).append(FILE_SEP).append(path);
+  }
 private:
   Value last_error_;
   std::string path_;

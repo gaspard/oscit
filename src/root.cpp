@@ -38,6 +38,8 @@
 #include "oscit/tree_meta_method.h"
 
 #include "oscit/callback_list.h"
+#include "oscit/file.h"
+#include "oscit/hash_file_method.h"
 
 namespace oscit {
 
@@ -130,6 +132,37 @@ void Root::register_object(Object *obj) {
 void Root::unregister_object(Object *obj) {
   ScopedWrite lock(objects_);
   objects_.remove_element(obj);
+}
+
+bool Root::expose_views(const std::string &path, Value *error) {
+  // create '/views' url
+  ObjectHandle views;
+  if (!get_views_path(&views)) {
+    error->set(INTERNAL_SERVER_ERROR, "Could not create views path");
+    return false;
+  }
+
+  Value view_list = File::list(path, "json");
+  HashFileMethod *view;
+  Value test;
+  ListValue errors;
+
+  bool all_ok = true;
+  for(size_t i = 0; i < view_list.size(); ++i) {
+    view = views->adopt(new HashFileMethod(view_list[i].str(), File::join(path, view_list[i].str()), "view"));
+    test = view->trigger(gNilValue);
+    if (test.is_error()) {
+      errors.push_back(test);
+      all_ok = false;
+    }
+  }
+
+  if (all_ok) {
+    return true;
+  } else {
+    error->set(UNKNOWN_ERROR, errors.to_json());
+    return false;
+  }
 }
 
 

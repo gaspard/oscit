@@ -11,7 +11,7 @@ using namespace oscit;
 
 
 #define OSC_PORT 7021
-#define VIEW_PATH "beatbox.json"
+#define VIEW_PATH "."
 
 class ValueDisplay : public Object
 {
@@ -97,17 +97,10 @@ int main(int argc, char * argv[]) {
   tmp->adopt(new ValueDisplay("slider", 115, &gSleepy));
 
   // create '/views' url
-  ObjectHandle views;
-  if (!root.get_views_path(&views)) {
-    std::cout << "Could not find views path !\n";
+  Value error;
+  if (!root.expose_views(VIEW_PATH, &error)) {
+    std::cout << error << "\n";
     return -1;
-  }
-
-  // create '/views/basic' url
-  HashFileMethod *basic_view = views->adopt(new HashFileMethod("basic", VIEW_PATH, "basic view for the beatbox example"));
-  test = basic_view->trigger(gNilValue);
-  if (test.is_error()) {
-    std::cout << "\n## ERROR " << basic_view->url() << ": " << test.error_message() << "\n\n";
   }
 
   printf("Beatbox started and listening on port %i (sleeping %ims betwween calls).\nType Ctrl+C to stop.\n", OSC_PORT, gSleepy);

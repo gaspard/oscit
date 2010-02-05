@@ -31,6 +31,8 @@
 #include "oscit/file.h"
 
 #define FILE_TEST_PATH "simple_view.json"
+#define FILE_TEST_LIST_FOLDER "file_test"
+
 class FileTest : public TestHelper
 {
 public:
@@ -78,6 +80,16 @@ public:
     std::string new_content = "dummy new content";
     file2.write(new_content);
     assert_equal(new_content, file.read().str());
+  }
+
+  void test_file_join( void ) {
+    assert_equal("some thing/other thing", File::join("some thing", "other thing"));
+  }
+
+  void should_list_elements_in_folder( void ) {
+    Value files = File::list(fixture_path(FILE_TEST_LIST_FOLDER), "json");
+    assert_equal(2, files.size());
+    assert_equal("[\"file_a.json\", \"file_b.json\"]", files.to_json());
   }
 };
 

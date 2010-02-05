@@ -191,6 +191,17 @@ class Root : public Object {
     }
   }
 
+  /** Expose all views in folder and enable creation/deletion of views.
+   */
+  bool expose_views(const std::string &path, Value *error);
+
+  /** Expose all views in folder and enable creation/deletion of views.
+   */
+  bool expose_views(const char *path, Value *error) {
+    return expose_views(std::string(path), error);
+  }
+
+
   /** Trigger the object located at the given path, passing nil as parameter.
    * Thread safe.
    */

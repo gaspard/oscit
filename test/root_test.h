@@ -351,5 +351,15 @@ public:
     assert_equal("[observer: on_registration_callback /foo/bar][observer: lock][observer: unlock]", logger.str());
   }
 
+  void should_expose_files_as_views( void ) {
+    Root root(false);
+    Value error;
+    assert_true(root.expose_views(fixture_path(FILE_TEST_LIST_FOLDER), &error));
+    ObjectHandle views;
+    assert_true(root.get_object_at(VIEWS_PATH, &views));
+    Value list = views->list_with_type();
+    assert_equal("[[\"file_a.json/\", [{\"x\":10, \"y\":10, \"width\":500, \"height\":270}, \"view\"]], [\"file_b.json/\", [{}, \"view\"]]]", list.to_json());
+  }
+
   // remote objects and 'send' testing is done in command_test.h
 };
