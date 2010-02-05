@@ -30,6 +30,7 @@
 #ifndef OSCIT_INCLUDE_OSCIT_MUTEX_H_
 #define OSCIT_INCLUDE_OSCIT_MUTEX_H_
 #include <pthread.h>
+#include <assert.h>
 #include <cstdio>
 
 #include "oscit/non_copyable.h"
@@ -56,6 +57,7 @@ public:
     int status = pthread_mutex_destroy(&mutex_);
     if (status != 0) {
       fprintf(stderr, "Could not destroy mutex (%s)\n", strerror(status));
+      assert(false);
     }
   }
 

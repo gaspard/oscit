@@ -25,6 +25,7 @@ Semaphore::~Semaphore() {
 //#ifdef __macosx__
     if (sem_close(semaphore_) < 0) {
       fprintf(stderr, "Could not close semaphore (%s)\n", strerror(errno));
+      assert(false);
     }
 //#else
 //    sem_destroy(*semaphore_);
