@@ -28,20 +28,66 @@
 */
 
 #include "test_helper.h"
-#include "oscit/time_ref.h"
+#include "oscit/timer.h"
+#include "mock/logger.h"
 
-class TimeRefTest : public TestHelper
+class TimerTest : public TestHelper
 {
 public:
-  void test_create( void ) {
-    TimeRef time_ref;
-    assert_true( time_ref.elapsed() < 2);
+  void setUp() {
+    sleep_in_loop_ = 0;
+    logger_.str("");
   }
 
-  void test_elapsed( void ) {
-    TimeRef time_ref;
-    millisleep(30);
-    assert_true( time_ref.elapsed() >= 30);
+  void should_fire_between_start_and_stop( void ) {
+    Timer<TimerTest, &TimerTest::loop> timer(this);
+
+    timer.start(10);
+    millisleep(35);
+    timer.stop();
+    assert_equal("....", logger_.str());
+    millisleep(20);
+    assert_equal("....", logger_.str());
   }
+// FIXME: how to test without printing results of timer ?
+// Run 50 times and ensure now - start = 50 * elapsed ?
+  void should_adapt_sleep_time_to_loop_duration( void ) {
+    Timer<TimerTest, &TimerTest::loop> timer(this);
+    sleep_in_loop_ = 6;
+    timer.start(10);
+    millisleep(35);
+    timer.stop();
+    assert_equal("....", logger_.str());
+  }
+
+  void should_change_interval_but_stay_in_sync( void ) {
+    Timer<TimerTest, &TimerTest::loop> timer(this);
+    timer.start(20); // ..
+    millisleep(35);
+    timer.start(4); // ....
+    millisleep(15);
+    timer.start(10); // ...
+    millisleep(35);
+    timer.stop();
+    assert_equal(".........", logger_.str());
+  }
+
+  void should_stop_on_delete( void ) {
+    Timer<TimerTest, &TimerTest::loop> *timer = new Timer<TimerTest, &TimerTest::loop>(this);
+    timer->start(10);
+    millisleep(35);
+    assert_equal("....", logger_.str());
+    delete timer;
+    millisleep(35);
+    assert_equal("....", logger_.str());
+  }
+
+  void loop() {
+    logger_ << ".";
+  }
+
+private:
+  time_t sleep_in_loop_;
+  Logger logger_;
 };
 

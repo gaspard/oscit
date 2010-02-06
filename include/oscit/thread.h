@@ -145,6 +145,13 @@ class Thread : public Mutex {
     thread_id_ = NULL;
   }
 
+  /** Send a signal to the running thread.
+   */
+  void send_signal(int sig) {
+    assert(!pthread_equal(thread_id_, pthread_self()));
+    pthread_kill(thread_id_, sig);
+  }
+
   /** Wait for thread to finish. */
   void join() {
     if (thread_id_) {
@@ -183,16 +190,16 @@ class Thread : public Mutex {
     return semaphore_;
   }
 
- public:
+  /** Get "this" (used in static callbacks).
+   */
+  static Thread *thread_this() {
+   return (Thread*) pthread_getspecific(sThisKey);
+  }
+
   static pthread_key_t sThisKey;   /**< Key to retrieve 'this' value from a running thread. */
   void *parameter_; /**< Any parameter that the started method could use. */
 
  private:
-
-  /** Get "this" (used in static callbacks). */
-  static Thread * thread_this() {
-   return (Thread*) pthread_getspecific(sThisKey);
-  }
 
   /** Set 'this' value for the current thread so we can
    * find our object back.
