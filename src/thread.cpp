@@ -48,6 +48,8 @@
 #define SCHED_HIGH_PRIORITY 42
 #endif
 
+pthread_key_t oscit::Thread::sThisKey = NULL;
+  
 namespace oscit {
 
 Thread::Thread() : owner_(NULL), thread_id_(NULL), should_run_(false), semaphore_(0) {

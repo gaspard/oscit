@@ -196,7 +196,10 @@ class Thread : public Mutex {
    return (Thread*) pthread_getspecific(sThisKey);
   }
 
-  static pthread_key_t sThisKey;   /**< Key to retrieve 'this' value from a running thread. */
+  /** Key to retrieve 'this' value from a running thread.
+   */
+  static pthread_key_t sThisKey;
+
   void *parameter_; /**< Any parameter that the started method could use. */
 
  private:

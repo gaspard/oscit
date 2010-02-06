@@ -130,6 +130,7 @@ const Value Script::load_script_from_file(bool is_new) {
   set_script_ok(!res.is_error());
   if (res.is_error()) return res;
 
+  set_next_reload();
   return Value(script_file_);
 }
 

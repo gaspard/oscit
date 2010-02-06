@@ -36,9 +36,6 @@
 #include "oscit/alias.h"
 #include "oscit/object_handle.h"
 
-pthread_key_t oscit::Thread::sThisKey = NULL;
-
-
 namespace oscit {
 
 Object::~Object() {
