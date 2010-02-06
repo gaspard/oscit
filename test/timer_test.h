@@ -82,6 +82,12 @@ public:
     assert_equal("....", logger_.str());
   }
 
+  void should_ignore_restart( void ) {
+    Timer<TimerTest, &TimerTest::loop> timer(this);
+    timer.start(10);
+    timer.start(5);
+  }
+
   void loop() {
     logger_ << ".";
   }

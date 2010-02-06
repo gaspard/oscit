@@ -80,6 +80,10 @@ public:
     start(interval);
   }
 
+  bool running() const {
+    return running_;
+  }
+
 private:
   void run() {
     time_t wait_duration;

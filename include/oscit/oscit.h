@@ -42,5 +42,6 @@
 #include "oscit/proxy_factory.h"
 #include "oscit/file_method.h"
 #include "oscit/hash_file_method.h"
+#include "oscit/timer.h"
 
 #endif // OSCIT_INCLUDE_OSCIT_H_
