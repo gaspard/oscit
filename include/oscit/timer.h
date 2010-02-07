@@ -39,7 +39,11 @@ namespace oscit {
 template<class T, void(T::*Tmethod)()>
 class Timer {
 public:
-  Timer(T *owner, time_t interval = 0) : owner_(owner), interval_(interval), running_(false) {}
+  Timer(T *owner, time_t interval = 0)
+      : owner_(owner),
+        interval_(interval),
+        last_interval_(interval),
+        running_(false) {}
 
   ~Timer() {
     // we could let Thread cancel the loop in ~Thread, but we
@@ -50,6 +54,7 @@ public:
   void start(time_t interval) {
     ScopedLock lock(mutex_);
     should_run_ = true;
+    last_interval_ = interval_;
     interval_ = interval;
     if (running_) {
       interrupt();
@@ -77,7 +82,12 @@ public:
   }
 
   void set_interval(time_t interval) {
-    start(interval);
+    ScopedLock lock(mutex_);
+    last_interval_ = interval_;
+    interval_ = interval;
+    if (running_) {
+      interrupt();
+    }
   }
 
   bool running() const {
@@ -100,6 +110,11 @@ private:
 
         // This can be used to ensure test...
         // printf("logical: %li real: %li wait: %li\n", next_fire, now, wait_duration);
+
+        if (next_fire > now + interval_) {
+          // interval_ got smaller
+          next_fire -= last_interval_;
+        }
 
        /* Timer sync issues:
         * We compute the new logical fire and sleep to sync real trigger as close as we can.
@@ -124,9 +139,10 @@ private:
 
         sleeper.tv_sec  = wait_duration / 1000;
         sleeper.tv_nsec = (wait_duration % 1000) * 1000000; // 1'000'000
-
       }
+      
       nanosleep(&sleeper, NULL);
+      
     }
 
     running_ = false;
@@ -159,6 +175,11 @@ private:
   /** Loop interval.
    */
   time_t interval_;
+  
+  /** We need this to anchor next_fire in case interval
+   * changes.
+   */
+  time_t last_interval_;
 
   /** We want to hold very precise timing.
    */

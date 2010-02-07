@@ -88,6 +88,16 @@ public:
     timer.start(5);
   }
 
+  void should_not_wait_when_reducing_interval( void ) {
+    Timer<TimerTest, &TimerTest::loop> timer(this);
+    timer.start(5000);
+    millisleep(10);
+    timer.set_interval(5);
+    millisleep(15);
+    timer.stop();
+    assert_equal("..", logger_.str());
+  }
+
   void loop() {
     logger_ << ".";
   }
