@@ -2,7 +2,7 @@
   ==============================================================================
 
    This file is part of the OSCIT library (http://rubyk.org/liboscit)
-   Copyright (c) 2007-2009 by Gaspard Bucher - Buma (http://teti.ch).
+   Copyright (c) 2007-2010 by Gaspard Bucher - Buma (http://teti.ch).
 
   ------------------------------------------------------------------------------
 
@@ -88,13 +88,13 @@ void Script::inspect(Value *hash) {
   hash->set("reload", reload_every_);
 }
 
-void Script::reload_script(time_t current_time) {
+const Value Script::reload_script(time_t current_time) {
   current_time_ = current_time;
   if ( !next_reload_ || (next_reload_ > current_time_) ) {
-    return;
+    return gNilValue;
   }
   set_next_reload();
-  load_script_from_file(false);
+  return load_script_from_file(false);
 }
 
 void Script::set_script_ok(bool state) {
@@ -128,6 +128,7 @@ const Value Script::load_script_from_file(bool is_new) {
 
   Value res = eval_script();
   set_script_ok(!res.is_error());
+
   if (res.is_error()) return res;
 
   set_next_reload();

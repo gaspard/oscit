@@ -1,8 +1,10 @@
+
+#line 1 "/Users/gaspard/git/oscit/src/mapper.rl"
 /*
   ==============================================================================
 
    This file is part of the OSCIT library (http://rubyk.org/liboscit)
-   Copyright (c) 2007-2009 by Gaspard Bucher - Buma (http://teti.ch).
+   Copyright (c) 2007-2010 by Gaspard Bucher - Buma (http://teti.ch).
 
   ------------------------------------------------------------------------------
 
@@ -27,7 +29,6 @@
   ==============================================================================
 */
 
-#line 1 "/home/gaspard/git/rubyk/oscit/src/mapper.rl"
 #include "oscit/mapper.h"
 
 #include <stdlib.h> // atof
@@ -90,11 +91,12 @@ bool Mapper::reverse_map(const std::string &source, Real value, std::string *tar
 
 //// Mapping parser ///////
 
-#line 176 "/home/gaspard/git/rubyk/oscit/src/mapper.rl"
+
+#line 205 "/Users/gaspard/git/oscit/src/mapper.rl"
 
 
 
-#line 69 "/home/gaspard/git/rubyk/oscit/src/mapper.cpp"
+#line 100 "/Users/gaspard/git/oscit/src/mapper.cpp"
 static const char _mapper_actions[] = {
 	0, 1, 0, 1, 1, 1, 2, 1, 
 	3, 1, 4, 1, 5, 1, 6, 1, 
@@ -241,7 +243,8 @@ static const int mapper_error = 0;
 static const int mapper_en_eat_line = 49;
 static const int mapper_en_main = 1;
 
-#line 179 "/home/gaspard/git/rubyk/oscit/src/mapper.rl"
+
+#line 208 "/Users/gaspard/git/oscit/src/mapper.rl"
 
 bool Mapper::parse(const std::string &definitions) {
  std::string script(definitions);
@@ -261,14 +264,15 @@ bool Mapper::parse(const std::string &definitions) {
  Real source_min, source_max, target_min, target_max;
 
  
-#line 236 "/home/gaspard/git/rubyk/oscit/src/mapper.cpp"
+#line 268 "/Users/gaspard/git/oscit/src/mapper.cpp"
 	{
 	cs = mapper_start;
 	}
-#line 198 "/home/gaspard/git/rubyk/oscit/src/mapper.rl"
+
+#line 227 "/Users/gaspard/git/oscit/src/mapper.rl"
 
  
-#line 243 "/home/gaspard/git/rubyk/oscit/src/mapper.cpp"
+#line 276 "/Users/gaspard/git/oscit/src/mapper.cpp"
 	{
 	int _klen;
 	unsigned int _trans;
@@ -343,7 +347,7 @@ _match:
 		switch ( *_acts++ )
 		{
 	case 0:
-#line 66 "/home/gaspard/git/rubyk/oscit/src/mapper.rl"
+#line 95 "/Users/gaspard/git/oscit/src/mapper.rl"
 	{
    #ifdef DEBUG_PARSER
      printf("_%c_",(*p));
@@ -352,7 +356,7 @@ _match:
   }
 	break;
 	case 1:
-#line 73 "/home/gaspard/git/rubyk/oscit/src/mapper.rl"
+#line 102 "/Users/gaspard/git/oscit/src/mapper.rl"
 	{
    source_url = str_buf;
    str_buf = "";
@@ -362,7 +366,7 @@ _match:
   }
 	break;
 	case 2:
-#line 81 "/home/gaspard/git/rubyk/oscit/src/mapper.rl"
+#line 110 "/Users/gaspard/git/oscit/src/mapper.rl"
 	{
    target_url = str_buf;
    str_buf = "";
@@ -372,7 +376,7 @@ _match:
   }
 	break;
 	case 3:
-#line 89 "/home/gaspard/git/rubyk/oscit/src/mapper.rl"
+#line 118 "/Users/gaspard/git/oscit/src/mapper.rl"
 	{
    source_min = atof(str_buf.c_str());
    str_buf = "";
@@ -382,7 +386,7 @@ _match:
   }
 	break;
 	case 4:
-#line 97 "/home/gaspard/git/rubyk/oscit/src/mapper.rl"
+#line 126 "/Users/gaspard/git/oscit/src/mapper.rl"
 	{
    source_max = atof(str_buf.c_str());
    str_buf = "";
@@ -392,7 +396,7 @@ _match:
   }
 	break;
 	case 5:
-#line 105 "/home/gaspard/git/rubyk/oscit/src/mapper.rl"
+#line 134 "/Users/gaspard/git/oscit/src/mapper.rl"
 	{
    target_min = atof(str_buf.c_str());
    str_buf = "";
@@ -402,7 +406,7 @@ _match:
   }
 	break;
 	case 6:
-#line 113 "/home/gaspard/git/rubyk/oscit/src/mapper.rl"
+#line 142 "/Users/gaspard/git/oscit/src/mapper.rl"
 	{
    target_max = atof(str_buf.c_str());
    str_buf = "";
@@ -412,7 +416,7 @@ _match:
   }
 	break;
 	case 7:
-#line 121 "/home/gaspard/git/rubyk/oscit/src/mapper.rl"
+#line 150 "/Users/gaspard/git/oscit/src/mapper.rl"
 	{
    #ifdef DEBUG_PARSER
      std::cout << "[set_map " << source_url << " [" << source_min << ", " << source_max << "]" << " --> " <<
@@ -429,7 +433,7 @@ _match:
   }
 	break;
 	case 8:
-#line 136 "/home/gaspard/git/rubyk/oscit/src/mapper.rl"
+#line 165 "/Users/gaspard/git/oscit/src/mapper.rl"
 	{
     p--; // move back one char
     char error_buffer[10];
@@ -448,17 +452,17 @@ _match:
   }
 	break;
 	case 9:
-#line 153 "/home/gaspard/git/rubyk/oscit/src/mapper.rl"
+#line 182 "/Users/gaspard/git/oscit/src/mapper.rl"
 	{
     state = cs;
     {cs = 49; goto _again;}
   }
 	break;
 	case 10:
-#line 158 "/home/gaspard/git/rubyk/oscit/src/mapper.rl"
+#line 187 "/Users/gaspard/git/oscit/src/mapper.rl"
 	{ {cs = (state); goto _again;} printf("comment: [%s:%i]\n", p, cs);}
 	break;
-#line 433 "/home/gaspard/git/rubyk/oscit/src/mapper.cpp"
+#line 466 "/Users/gaspard/git/oscit/src/mapper.cpp"
 		}
 	}
 
@@ -475,7 +479,7 @@ _again:
 	while ( __nacts-- > 0 ) {
 		switch ( *__acts++ ) {
 	case 8:
-#line 136 "/home/gaspard/git/rubyk/oscit/src/mapper.rl"
+#line 165 "/Users/gaspard/git/oscit/src/mapper.rl"
 	{
     p--; // move back one char
     char error_buffer[10];
@@ -493,14 +497,15 @@ _again:
     {cs = 49; goto _again;} // eat the rest of the line and continue parsing
   }
 	break;
-#line 468 "/home/gaspard/git/rubyk/oscit/src/mapper.cpp"
+#line 501 "/Users/gaspard/git/oscit/src/mapper.cpp"
 		}
 	}
 	}
 
 	_out: {}
 	}
-#line 200 "/home/gaspard/git/rubyk/oscit/src/mapper.rl"
+
+#line 229 "/Users/gaspard/git/oscit/src/mapper.rl"
 
  return true;
 }
