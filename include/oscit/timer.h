@@ -140,9 +140,9 @@ private:
         sleeper.tv_sec  = wait_duration / 1000;
         sleeper.tv_nsec = (wait_duration % 1000) * 1000000; // 1'000'000
       }
-      
+
       nanosleep(&sleeper, NULL);
-      
+
     }
 
     running_ = false;
@@ -164,6 +164,7 @@ private:
   void start_thread(Thread *runner) {
     signal(SIGUSR1, Timer::interrupt_sleep);
     running_ = true;
+    runner->high_priority();
     runner->thread_ready();
     run();
   }
@@ -175,7 +176,7 @@ private:
   /** Loop interval.
    */
   time_t interval_;
-  
+
   /** We need this to anchor next_fire in case interval
    * changes.
    */

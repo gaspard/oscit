@@ -76,7 +76,7 @@ public:
    * If the file's modification time has not changed, nothing
    * happens. If the file content changed, it is evaluated.
    */
-  void reload_script(time_t current_time);
+  const Value reload_script(time_t current_time);
 
   /** Evaluat the content of the script.
    * This method must be overwritten in sub-classes.

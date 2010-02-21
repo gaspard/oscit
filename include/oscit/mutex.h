@@ -98,6 +98,26 @@ public:
 };
 
 
+/** Scoped Mutex Unlock to release exclusive access to a resource.
+ */
+class ScopedUnlock : private NonCopyable {
+public:
+  ScopedUnlock(Mutex *mutex) : mutex_ptr_(mutex) {
+    mutex_ptr_->unlock();
+  }
+
+  ScopedUnlock(Mutex &mutex) : mutex_ptr_(&mutex) {
+    mutex_ptr_->unlock();
+  }
+
+  ~ScopedUnlock() {
+    mutex_ptr_->lock();
+  }
+ private:
+  Mutex *mutex_ptr_;
+};
+
+
 } // oscit
 
 #endif // OSCIT_INCLUDE_OSCIT_MUTEX_H_
