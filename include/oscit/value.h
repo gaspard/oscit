@@ -33,6 +33,7 @@
 #include <string.h> // strlen
 #include <string>
 #include <sstream>  // ostringstream
+#include <stdarg.h> // ... String and Error constructors
 
 #include "oscit/value_types.h"
 #include "oscit/thash.h"
@@ -44,6 +45,8 @@
 #include "oscit/midi_message.h"
 
 namespace oscit {
+
+#define FVALUE_BUFFER_SIZE 256
 
 /** This is just a different typedef for std::string. */
 class Json : public std::string
@@ -60,8 +63,7 @@ and return values for osc messages.
  *  Nil vs Empty: Empty means "not initialized", Nil means "initialized to 'no value'". If you pass
  *  Empty as a parameter it will be considered the same as Nil (root does a cast).
  */
-class Value
-{
+class Value {
 public:
 
   /** =========================================================    Empty   */
@@ -788,7 +790,7 @@ public:
     return *this;
   }
 
- private:
+ protected:
   /** Set the value to nil and release/free contained data. */
   void clear()  {
    switch (type_) {
@@ -985,6 +987,35 @@ public:
 };
 
 std::ostream &operator<< (std::ostream &out_stream, const Value &val);
+
+/** This is a sub-class of Value so that we can use printf style to create
+ * String and Error values.
+ */
+class FValue : public Value {
+public:
+  /** =========================================================    String  */
+  explicit FValue(const char *format, ...) {
+    char buffer[FVALUE_BUFFER_SIZE];
+    type_ = STRING_VALUE;
+    va_list args;
+    va_start(args, format);
+      vsnprintf(buffer, FVALUE_BUFFER_SIZE, format, args);
+    va_end(args);
+    set_string(buffer);
+  }
+
+  /** =========================================================    Error    */
+  explicit FValue(ErrorCode code, const char *format, ...) {
+    char buffer[FVALUE_BUFFER_SIZE];
+    type_ = ERROR_VALUE;
+    va_list args;
+    va_start(args, format);
+      vsnprintf(buffer, FVALUE_BUFFER_SIZE, format, args);
+    va_end(args);
+    set_error(code, buffer);
+  }
+};
+
 } // oscit
 
 #endif // OSCIT_INCLUDE_OSCIT_VALUE_H_

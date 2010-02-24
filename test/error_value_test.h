@@ -160,4 +160,34 @@ public:
     a.set_nil();
     assert_false(a == b);
   }
+
+  void test_stream_char( void ) {
+    Value s(BAD_REQUEST_ERROR, "Hello");
+    s << " " << "World!";
+    assert_equal("Hello World!", s.error_message());
+  }
+
+  void test_stream_ints( void ) {
+    Value s(BAD_REQUEST_ERROR, "");
+    s << 44 << " " << 55;
+    assert_equal("44 55", s.error_message());
+  }
+
+  void test_stream_double( void ) {
+    Value s(BAD_REQUEST_ERROR, "");
+    s << 4.4 << " " << 55;
+    assert_equal("4.4 55", s.error_message());
+  }
+
+  void test_stream_other_value( void ) {
+    Value s(BAD_REQUEST_ERROR, "");
+    Value list(Json("[1,2,3]"));
+    s << 4.4 << " " << list;
+    assert_equal("4.4 [1, 2, 3]", s.error_message());
+  }
+
+  void test_create_varargs( void ) {
+    FValue s(BAD_REQUEST_ERROR, "I am %i not '%s'.", 1337, "Superman");
+    assert_equal("I am 1337 not 'Superman'.", s.error_message());
+  }
 };

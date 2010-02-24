@@ -225,4 +225,9 @@ public:
     s << 4.4 << " " << list;
     assert_equal("4.4 [1, 2, 3]", s.str());
   }
+
+  void test_create_varargs( void ) {
+    FValue s("I am %i not '%s'.", 1337, "Superman");
+    assert_equal("I am 1337 not 'Superman'.", s.str());
+  }
 };
