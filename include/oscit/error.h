@@ -46,6 +46,8 @@ enum ErrorCode {
   UNKNOWN_ERROR = 0,
 };
 
+class Value;
+
 /** A Error stores an error description with an error code. */
 class Error : public ReferenceCounted
 {
@@ -82,7 +84,7 @@ class Error : public ReferenceCounted
   }
 
  private:
-
+  friend class Value;
   ErrorCode   code_;
   std::string message_;
 };

@@ -32,6 +32,8 @@
 
 #include <string.h> // strlen
 #include <string>
+#include <sstream>  // ostringstream
+
 #include "oscit/value_types.h"
 #include "oscit/thash.h"
 #include "oscit/string_data.h"
@@ -747,6 +749,44 @@ public:
    *  @param lazy print mode (lazy = unparsable json but can be easier to read)
    */
   void to_stream(std::ostream &out_stream, bool lazy = false) const;
+
+  template<class T>
+  Value &operator<<(const T &val) {
+    if (type_ == STRING_VALUE) {
+      std::ostringstream oss;
+      oss << val;
+      string_->append(oss.str());
+    } else if (type_ == ERROR_VALUE) {
+      std::ostringstream oss;
+      oss << val;
+      error_->message_.append(oss.str());
+    } else {
+      // ignore (maybe we could cast to string)
+    }
+    return *this;
+  }
+
+  Value &operator<<(const char *str) {
+    if (type_ == STRING_VALUE) {
+      string_->append(str);
+    } else if (type_ == ERROR_VALUE) {
+      error_->message_.append(str);
+    } else {
+      // ignore (maybe we could cast to string)
+    }
+    return *this;
+  }
+
+  Value &operator<<(const std::string &str) {
+    if (type_ == STRING_VALUE) {
+      string_->append(str);
+    } else if (type_ == ERROR_VALUE) {
+      error_->message_.append(str);
+    } else {
+      // ignore (maybe we could cast to string)
+    }
+    return *this;
+  }
 
  private:
   /** Set the value to nil and release/free contained data. */
