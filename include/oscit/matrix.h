@@ -32,6 +32,8 @@
 
 #include "opencv/cv.h"
 
+#include <ostream>
+
 /** \class Matrix is typedef of cv::Mat
  * cv::Mat is defined in cxcore.hpp:734
  */

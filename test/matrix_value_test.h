@@ -129,29 +129,95 @@ public:
   }
 
   void test_user_allocated_data( void ) {
-    float data[28] = { 9, 9, 9, 9, 9, 9, 9,  // 9 = padding
-                       9, 1, 0, 0, 0, 9, 9,  // 3x3
-                       9, 0, 2, 3, 0, 9, 9,  //
-                       9, 0, 0, 0, 4, 9, 9}; //
-    Value mat(4, 7, CV_32FC1, data);
+    double raw_data[28] = { 9, 9, 9, 9, 9, 9, 9, // 9 = padding
+                           9, 1, 0, 0, 0, 9, 9,  // 4x3
+                           9, 0, 2, 3, 0, 9, 9,  //
+                           9, 0, 0, 0, 4, 9, 9}; //
+    Value mat(4, 7, CV_64FC1, raw_data);
 
     // remove padding by setting Region of interest (ROI):
-    mat.matrix_->adjustROI(1, 0, 1, 2); // top, bottom, left, right
+    mat.matrix_->adjustROI(-1, 0, -1, -2); // top, bottom, left, right
 
+    assert_equal(3, mat.matrix_->rows);
+    assert_equal(4, mat.matrix_->cols);
+    double *data = (double*)mat.matrix_->data;
+    assert_equal(1.0, data[0]);
 
+    assert_equal(3.0, (data + mat.matrix_->step1())[2]);
   }
 
   void test_copy_user_allocated_data( void ) {
-    float data[28] = { 9, 9, 9, 9, 9, 9, 9,  // 9 = padding
-                       9, 1, 0, 0, 0, 9, 9,  // 3x3
-                       9, 0, 2, 3, 0, 9, 9,  //
-                       9, 0, 0, 0, 4, 9, 9}; //
-    Value mat_value(4, 7, CV_32FC1, data);
+    double raw_data[28] = { 1, 0, 0, 0,  // 3x4
+                            0, 2, 3, 0,  //
+                            0, 0, 0, 4}; //
+    Value mat(3, 4, CV_64FC1, raw_data);
+    double *mat_data = (double*)mat.matrix_->data;
+
     Value other;
 
-    other = mat_value;
+    other = mat;
     assert_equal(0, other.matrix_->rows);
     assert_equal(0, other.matrix_->cols);
+
+    other.adopt(new Matrix(3, 4, CV_64FC1, raw_data));
+
+    assert_equal(3, other.matrix_->rows);
+    assert_equal(4, other.matrix_->cols);
+    double *other_data = (double*)other.matrix_->data;
+    assert_equal(1.0, other_data[0]);
+
+    assert_equal(3.0, (other_data + other.matrix_->step1())[2]);
+
+    (other_data + other.matrix_->step1())[2] = 4.5;
+    // data was shared
+    assert_equal(4.5, (mat_data + mat.matrix_->step1())[2]);
+  }
+
+  void test_out_stream_single_channel( void ) {
+    double raw_data[12] = { 1, 2, 3, 4,
+                            5, 6, 7, 8,
+                            9,10,11,12};
+    Value mat(3, 4, CV_64FC1, raw_data);
+    std::ostringstream oss;
+    oss << *mat.matrix_;
+    assert_equal("[  1.000  2.000  3.000  4.000\n   5.000  6.000  7.000  8.000\n   9.000 10.000 11.000 12.000 ]\n", oss.str());
+  }
+
+  void test_out_stream_two_channels( void ) {
+    uint raw_data[8] = { 1, 2, 3, 4,
+                         5, 6, 7, 8};
+    Value mat(2, 2, CV_8UC2, raw_data);
+    std::ostringstream oss;
+    oss << *mat.matrix_;
+    assert_equal("[{  1   2}{  3   4}\n {  5   6}{  7   8} ]\n", oss.str());
+  }
+
+  void test_float_channels( void ) {
+    Value mat(2, 2, CV_32FC3);
+    // 12 bytes = size of 3 floats (1 per channel)
+    assert_equal(12, mat.matrix_->elemSize());
+    // 4 bytes = size of 1 float
+    assert_equal(4, mat.matrix_->elemSize1());
+    // 24 bytes = size of one row = 2 * 3 floats = 6 * 4 bytes
+    assert_equal(24, mat.matrix_->step);
+    // 6 elements = number elements to move to next row = 2 * 3
+    assert_equal(6, mat.matrix_->step1());
+    // 3 values per element
+    assert_equal(3, mat.matrix_->channels());
+  }
+
+  void test_uint_channels( void ) {
+    Value mat(2, 2, CV_8UC3);
+    // 3 bytes = size of 3 unsigned ints (1 per channel)
+    assert_equal(3, mat.matrix_->elemSize());
+    // 1 bytes = size of 1 unsigned int
+    assert_equal(1, mat.matrix_->elemSize1());
+    // 6 bytes = size of one row = 2 * 3 unsigned ints = 6 * 1 bytes
+    assert_equal(6, mat.matrix_->step);
+    // 6 elements = number elements to move to next row = 2 * 3
+    assert_equal(6, mat.matrix_->step1());
+    // 3 values per element
+    assert_equal(3, mat.matrix_->channels());
   }
 
   void test_set( void ) {

@@ -44,7 +44,8 @@ class MatrixValue : public Value
     set_type(MATRIX_VALUE);
   }
 
-  MatrixValue(size_t rows, size_t cols);
+  MatrixValue(size_t rows, size_t cols) : Value(rows, cols) {}
+  MatrixValue(size_t rows, size_t cols, int type) : Value(rows, cols, type) {}
 
   explicit MatrixValue(const Matrix &matrix) : Value(matrix) {}
   explicit MatrixValue(const Matrix *matrix) : Value(matrix) {}

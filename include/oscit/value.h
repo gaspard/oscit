@@ -136,7 +136,23 @@ public:
    *              value is <tt>AUTO_STEP</tt>, the number of bytes will be calculated
    *              from the type and number of columns.
    */
-  explicit Value(int rows, int cols, int type, void *data, size_t step=AUTO_STEP);
+  Value(size_t rows, size_t cols, size_t type, void *data, size_t step=AUTO_STEP);
+
+
+  /** Create a new matrix value of the given size and type.
+   *
+   * @param rows number of rows
+   * @param cols number of columns
+   * @param type an integer representing the \ref MagicType
+   */
+  Value(size_t rows, size_t cols, int type);
+
+  /** Create a new matrix of Real values of the given size.
+   *
+   * @param rows number of rows
+   * @param cols number of columns
+   */
+  Value(size_t rows, size_t cols);
 
   /** Create a new Value by making a copy of the header of the provided matrix (shared data).
    */
@@ -705,6 +721,14 @@ public:
     return *this;
   }
 
+  /** Adopt a given matrix (will be freed on Value destruction).
+   */
+  Matrix *adopt(Matrix *matrix) {
+    set_type_without_default(MATRIX_VALUE);
+    matrix_ = matrix;
+    return matrix_;
+  }
+
   /** Change the Value into a MatrixValue by making a reference to the argument. */
   Value &set(const Matrix &matrix) {
     set_type_without_default(MATRIX_VALUE);
@@ -1028,6 +1052,7 @@ public:
 };
 
 std::ostream &operator<< (std::ostream &out_stream, const Value &val);
+std::ostream &operator<< (std::ostream &out_stream, const Matrix &mat);
 
 /** This is a sub-class of Value so that we can use printf style to create
  * String and Error values.
