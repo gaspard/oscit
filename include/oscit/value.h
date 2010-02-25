@@ -34,6 +34,7 @@
 #include <string>
 #include <sstream>  // ostringstream
 #include <stdarg.h> // ... String and Error constructors
+#include <assert.h>
 
 #include "oscit/value_types.h"
 #include "oscit/thash.h"
@@ -41,12 +42,17 @@
 #include "oscit/error.h"
 #include "oscit/list.h"
 #include "oscit/hash.h"
-#include "oscit/matrix.h"
 #include "oscit/midi_message.h"
+
+namespace cv {
+ class Mat;
+}
 
 namespace oscit {
 
 #define FVALUE_BUFFER_SIZE 256
+
+typedef cv::Mat Matrix;
 
 /** This is just a different typedef for std::string. */
 class Json : public std::string
@@ -65,6 +71,8 @@ and return values for osc messages.
  */
 class Value {
 public:
+
+  enum { AUTO_STEP=0 };
 
   /** =========================================================    Empty   */
   Value() : type_(EMPTY_VALUE) {}
@@ -112,13 +120,36 @@ public:
   }
 
   /** =========================================================    Matrix  */
+  /** This is the easiest way to create a matrix from existing data.
+   * Please read opencv docs for information
+   */
+
+  /** Create a new matrix value pointing to user-allocated data.
+   * If this matrix is further assigned to another value, an error will be raised
+   * since the data is not reference counted.
+   *
+   * @param rows number of rows in the data
+   * @param cols number of columns in the data
+   * @param type an integer representing a \ref MatrixType of the data that is stored
+   * @param data a pointer to the user-allocated data
+   * @param step number of <b>bytes</b> to advance from one row to the other. If the
+   *              value is <tt>AUTO_STEP</tt>, the number of bytes will be calculated
+   *              from the type and number of columns.
+   */
+  explicit Value(int rows, int cols, int type, void *data, size_t step=AUTO_STEP);
+
+  /** Create a new Value by making a copy of the header of the provided matrix (shared data).
+   */
   explicit Value(const Matrix *matrix) : type_(MATRIX_VALUE) {
     set_matrix(matrix);
   }
 
+  /** Create a new Value by making a copy of the header of the provided matrix (shared data).
+   */
   explicit Value(const Matrix &matrix) : type_(MATRIX_VALUE) {
     set_matrix(&matrix);
   }
+
 
   /** =========================================================    Midi    */
   explicit Value(const MidiMessage *midi_message) : type_(MIDI_VALUE) {
@@ -262,7 +293,9 @@ public:
       case ERROR_VALUE:  return *error_ == *(other.error_);
       case STRING_VALUE: return *string_ == *(other.string_);
       case HASH_VALUE:   return *hash_ == *(other.hash_);
-      case MATRIX_VALUE: return *matrix_ == *(other.matrix_);
+      case MATRIX_VALUE: /* not supported */
+        std::cerr << "Matrix values cannot be compared.\n";
+        assert(false);
       case MIDI_VALUE:   return *midi_message_ == *(other.midi_message_);
       case LIST_VALUE:   return *list_ == *(other.list_);
       case NIL_VALUE:    /* continue */
@@ -679,17 +712,17 @@ public:
     return *this;
   }
 
-  size_t mat_size() const {
-    return is_matrix() ? matrix_->rows() * matrix_->cols() : 0;
-  }
+  /** Return the matrix size (number of rows * number of columns).
+   */
+  size_t mat_size() const;
 
-  int mat_type() const {
-    return is_matrix() ? matrix_->type() : 0;
-  }
+  /** Return the OpenCV type (CV_32FC1 for example).
+   */
+  int mat_type() const;
 
-  Real * mat_data() const {
-    return is_matrix() ? (Real*)matrix_->data() : NULL;
-  }
+  /** Return a pointer to the first element in the matrix.
+   */
+  void *mat_data() const;
 
   /** =========================================================    Midi  */
   bool is_midi() const   { return type_ == MIDI_VALUE; }
@@ -807,8 +840,7 @@ public:
      hash_ = ReferenceCounted::release(hash_);
      break;
    case MATRIX_VALUE:
-       // TODO: Same reference counting as others by using cv::Mat header counter ?
-     if (matrix_ != NULL) delete matrix_;
+     if (matrix_ != NULL) delete_matrix();
      matrix_ = NULL;
      break;
    case MIDI_VALUE:
@@ -845,7 +877,7 @@ public:
         hash_ = new Hash(DEFAULT_HASH_TABLE_SIZE);
         break;
       case MATRIX_VALUE:
-        matrix_ = new Matrix;
+        matrix_ = build_matrix();
         break;
       case MIDI_VALUE:
         midi_message_ = new MidiMessage;
@@ -921,11 +953,20 @@ public:
   }
 
   /** =========================================================    Matrix  */
+  /** Set matrix content. Matrix data is automatically shared
+   * through opencv's reference counting mechanism.
+   */
+  void set_matrix(const Matrix *matrix);
 
-  /** Set matrix content. */
-  void set_matrix(const Matrix *matrix) {
-    matrix_ = new Matrix(*matrix);
-  }
+  /** @internal.
+   * Create an empty matrix.
+   */
+  Matrix *build_matrix();
+
+  /** @internal.
+   * Delete a matrix.
+   */
+  void delete_matrix();
 
   /** =========================================================    Midi    */
   void share(const MidiMessage *midi_message) {

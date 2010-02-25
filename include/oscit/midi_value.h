@@ -37,12 +37,11 @@ namespace oscit {
 /** Value is the base type of all data transmitted between objects or used as parameters
 and return values for osc messages.*/
 class MidiValue : public Value
-{ 
- public: 
+{
+ public:
   explicit MidiValue() {
     set_type(MIDI_VALUE);
   }
-  explicit MidiValue(size_t rows, size_t cols) : Value(Matrix(rows,cols)) {}
   explicit MidiValue(const MidiMessage &msg) : Value(msg) {}
 };
 

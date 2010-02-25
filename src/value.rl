@@ -37,6 +37,7 @@
 #include <iostream>
 #include <sstream>
 
+#include "oscit/matrix.h"
 
 /** Ragel parser definition to create Values from JSON. */
 namespace oscit {
@@ -53,6 +54,50 @@ Value gFalseValue(0.0);
 Value gEmptyValue;
 Hash  gEmptyHash(1);
 
+/* ============================================= Value ========= */
+
+// -------------------------------------------------------------
+Value::Value(int rows, int cols, int type, void *data, size_t step)
+    : type_(MATRIX_VALUE) {
+  matrix_ = new Matrix(rows, cols, type, data, step);
+}
+
+// -------------------------------------------------------------
+void Value::set_matrix(const Matrix *matrix) {
+  if (!matrix->refcount) {
+    std::cerr << "Trying to copy a user-allocated data matrix without reference count !\n";
+    matrix_ = new Matrix(); // dummy
+  } else {
+    matrix_ = new Matrix(*matrix);
+  }
+}
+
+// -------------------------------------------------------------
+size_t Value::mat_size() const {
+  return is_matrix() ? matrix_->rows * matrix_->cols : 0;
+}
+
+// -------------------------------------------------------------
+int Value::mat_type() const {
+  return is_matrix() ? matrix_->type() : 0;
+}
+
+// -------------------------------------------------------------
+void *Value::mat_data() const {
+  return is_matrix() ? matrix_->data : NULL;
+}
+
+// -------------------------------------------------------------
+Matrix *Value::build_matrix() {
+  return new Matrix();
+}
+
+// -------------------------------------------------------------
+void Value::delete_matrix() {
+  delete matrix_;
+}
+
+// -------------------------------------------------------------
 static std::string escape(const std::string &string) {
   std::string res;
   size_t len = 0;
@@ -116,7 +161,7 @@ void Value::to_stream(std::ostream &out_stream, bool lazy) const {
       }
       break;
     case MATRIX_VALUE:
-      out_stream << "\"Matrix " << matrix_->rows() << "x" << matrix_->cols() << "\"";
+      out_stream << "\"Matrix " << matrix_->rows << "x" << matrix_->cols << "\"";
       break;
     case MIDI_VALUE:
       out_stream << "\"MidiMessage " << *midi_message_ << "\"";
@@ -222,7 +267,7 @@ void Value::deep_merge(const Value &other) {
   s_deep_merge(*this, other);
 }
 
-///////////////// ====== JSON PARSER ========= /////////////
+/* ============================================= JSON Parser ========= */
 %%{
   machine json;
 

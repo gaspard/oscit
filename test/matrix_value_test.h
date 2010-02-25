@@ -48,8 +48,8 @@ public:
     assert_false(v.is_any());
 
     Matrix * m = v.matrix_;
-    assert_equal(0, m->rows());
-    assert_equal(0, m->cols());
+    assert_equal(0, m->rows);
+    assert_equal(0, m->cols);
     assert_true(m->type() == 0);
 
     assert_equal("M", v.type_tag());
@@ -86,48 +86,77 @@ public:
 
   void test_copy( void ) {
     MatrixValue v(2,3);
+
 #if Real == double
     assert_true(v.mat_type() == CV_64FC1);
 #else
     assert_true(v.mat_type() == CV_32FC1);
 #endif
-    Real * mat = v.mat_data();
+    Real *mat = (Real*)v.mat_data();
 
     mat[0] = 0.0; mat[1] = 1.0; mat[2] = 2.0;
     mat[3] = 3.0; mat[4] = 4.0; mat[5] = 5.0;
 
     Value v2(v);
+    Real *v2_data = (Real*)v2.mat_data();
     Value v3;
 
     assert_true(v2.is_matrix());
     assert_true(v3.is_empty());
 
-    assert_equal(3.0, v2.mat_data()[3]);
+    assert_equal(3.0, v2_data[3]);
     assert_equal(6, v.mat_size());
     assert_equal(6, v2.mat_size());
 
     mat[3] = 3.5;
 
     // shared data
-    assert_equal(3.5,  v.mat_data()[3]);
-    assert_equal(3.5, v2.mat_data()[3]);
+    assert_equal(3.5,  mat[3]);
+    assert_equal(3.5, v2_data[3]);
 
     v3 = v;
+    Real *v3_data = (Real*)v3.mat_data();
 
     assert_true(v3.is_matrix());
     assert_equal(6, v3.mat_size());
-    assert_equal(3.5, v3.mat_data()[3]);
+    assert_equal(3.5, v3_data[3]);
 
     mat[3] = 3.8;
 
-    assert_equal(3.8,  v.mat_data()[3]);
-    assert_equal(3.8, v2.mat_data()[3]);
-    assert_equal(3.8, v3.mat_data()[3]);
+    assert_equal(3.8,  mat[3]);
+    assert_equal(3.8, v2_data[3]);
+    assert_equal(3.8, v3_data[3]);
+  }
+
+  void test_user_allocated_data( void ) {
+    float data[28] = { 9, 9, 9, 9, 9, 9, 9,  // 9 = padding
+                       9, 1, 0, 0, 0, 9, 9,  // 3x3
+                       9, 0, 2, 3, 0, 9, 9,  //
+                       9, 0, 0, 0, 4, 9, 9}; //
+    Value mat(4, 7, CV_32FC1, data);
+
+    // remove padding by setting Region of interest (ROI):
+    mat.matrix_->adjustROI(1, 0, 1, 2); // top, bottom, left, right
+
+
+  }
+
+  void test_copy_user_allocated_data( void ) {
+    float data[28] = { 9, 9, 9, 9, 9, 9, 9,  // 9 = padding
+                       9, 1, 0, 0, 0, 9, 9,  // 3x3
+                       9, 0, 2, 3, 0, 9, 9,  //
+                       9, 0, 0, 0, 4, 9, 9}; //
+    Value mat_value(4, 7, CV_32FC1, data);
+    Value other;
+
+    other = mat_value;
+    assert_equal(0, other.matrix_->rows);
+    assert_equal(0, other.matrix_->cols);
   }
 
   void test_set( void ) {
     Value v;
-    Matrix m(2,2);
+    Matrix m(2,2,CV_32FC1);
     assert_true(v.is_empty());
     v.set(m);
     assert_true(v.is_matrix());
@@ -169,17 +198,5 @@ public:
     assert_false(object.can_receive(HashValue()));
     assert_true (object.can_receive(MatrixValue(1,1)));
     assert_false(object.can_receive(MidiValue()));
-  }
-
-  void test_equal( void ) {
-    Value a(MatrixValue(2,3));
-    Value b(MatrixValue(2,3));
-    assert_equal(a, b);
-    a.set(MatrixValue(3,3));
-    assert_false(a == b);
-    a.set(4);
-    assert_false(a == b);
-    a.set_nil();
-    assert_false(a == b);
   }
 };

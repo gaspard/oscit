@@ -32,6 +32,7 @@ cmake_minimum_required(VERSION 2.6.2)
 #  Options
 #
 # ==============================================================================
+option (RELEASE                  "Universal build (release) ?"               NO  )
 option (OSCIT_MEMORY_CHECKING    "Enable checking against memory leaks ?"    NO  )
 option (OSCIT_ENABLE_TESTING     "Build and run tests ?"                     YES )
 option (OSCIT_ENABLE_EXAMPLES    "Build examples ?"                          NO  )
@@ -200,6 +201,7 @@ message (STATUS "===============================================================
 message (STATUS "   OSCIT build configuration settings                                      ")
 message (STATUS "===========================================================================")
 message (STATUS "   Platform                                                     = ${PLAT}")
+message (STATUS "   Release                                                      = ${RELEASE}")
 message (STATUS "   OSCIT_ENABLE_TESTING  (Build and run tests)                  = ${OSCIT_ENABLE_TESTING}")
 message (STATUS "   OSCIT_MEMORY_CHECKING (Enable checking against memory leaks) = ${OSCIT_MEMORY_CHECKING}")
 if(OSCIT_MEMORY_CHECKING)

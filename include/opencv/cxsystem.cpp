@@ -42,13 +42,22 @@
 
 #include "_cxcore.h"
 
-#if defined WIN32 || defined WIN64 || WINCE
-#include <windows.h>
+#if defined WIN32 || defined WIN64 || defined _WIN64 || defined WINCE
 #include <tchar.h>
 #else
 #include <pthread.h>
 #include <sys/time.h>
 #include <time.h>
+
+#ifdef __MACH__
+#include <mach/mach.h>
+#include <mach/mach_time.h>
+#endif
+
+#endif
+
+#ifdef _OPENMP
+#include "omp.h"
 #endif
 
 #include <stdarg.h>
@@ -58,6 +67,13 @@ namespace cv
 
 #ifdef HAVE_IPP
 volatile bool useOptimizedFlag = true;
+
+struct IPPInitializer
+{
+    IPPInitializer() { ippStaticInit(); }
+};
+
+IPPInitializer ippInitializer;
 #else
 volatile bool useOptimizedFlag = false;
 #endif
@@ -74,7 +90,7 @@ bool useOptimized()
 
 int64 getTickCount()
 {
-#if defined WIN32 || defined WIN64 || defined WINCE
+#if defined WIN32 || defined WIN64 || defined _WIN64 || defined WINCE
     LARGE_INTEGER counter;
     QueryPerformanceCounter( &counter );
     return (int64)counter.QuadPart;
@@ -82,7 +98,9 @@ int64 getTickCount()
     struct timespec tp;
     clock_gettime(CLOCK_MONOTONIC, &tp);
     return (int64)tp.tv_sec*1000000000 + tp.tv_nsec;
-#else
+#elif defined __MACH__
+    return (int64)mach_absolute_time();
+#else    
     struct timeval tv;
     struct timezone tz;
     gettimeofday( &tv, &tz );
@@ -92,16 +110,85 @@ int64 getTickCount()
 
 double getTickFrequency()
 {
-#if defined WIN32 || defined WIN64 || defined WINCE
+#if defined WIN32 || defined WIN64 || defined _WIN64 || defined WINCE
     LARGE_INTEGER freq;
     QueryPerformanceFrequency(&freq);
     return (double)freq.QuadPart;
 #elif defined __linux || defined __linux__
     return 1e9;
+#elif defined __MACH__
+    static double freq = 0;
+    if( freq == 0 )
+    {
+        mach_timebase_info_data_t sTimebaseInfo;
+        mach_timebase_info(&sTimebaseInfo);
+        freq = sTimebaseInfo.denom*1e9/sTimebaseInfo.numer;
+    }
+    return freq; 
 #else
     return 1e6;
 #endif
 }
+
+#if defined __GNUC__ && (defined __i386__ || defined __x86_64__ || defined __ppc__) 
+#if defined(__i386__)
+
+int64 getCPUTickCount(void)
+{
+    int64 x;
+    __asm__ volatile (".byte 0x0f, 0x31" : "=A" (x));
+    return x;
+}
+#elif defined(__x86_64__)
+
+int64 getCPUTickCount(void)
+{
+    unsigned hi, lo;
+    __asm__ __volatile__ ("rdtsc" : "=a"(lo), "=d"(hi));
+    return (int64)lo | ((int64)hi << 32);
+}
+
+#elif defined(__ppc__)
+
+int64 getCPUTickCount(void)
+{
+    int64 result=0;
+    unsigned upper, lower, tmp;
+    __asm__ volatile(
+                     "0:                  \n"
+                     "\tmftbu   %0           \n"
+                     "\tmftb    %1           \n"
+                     "\tmftbu   %2           \n"
+                     "\tcmpw    %2,%0        \n"
+                     "\tbne     0b         \n"
+                     : "=r"(upper),"=r"(lower),"=r"(tmp)
+                     );
+    return lower | ((int64)upper << 32);
+}
+
+#else
+
+#error "RDTSC not defined"
+
+#endif
+
+#elif defined _MSC_VER && defined WIN32 && !defined _WIN64
+
+int64 getCPUTickCount(void)
+{
+    __asm _emit 0x0f;
+    __asm _emit 0x31;
+}
+
+#else
+
+int64 getCPUTickCount()
+{
+    return getTickCount();
+}
+
+#endif
+
 
 static int numThreads = 0;
 static int numProcs = 0;
@@ -151,32 +238,62 @@ int getThreadNum(void)
 }
 
 
-String format( const char* fmt, ... )
+string format( const char* fmt, ... )
 {
     char buf[1 << 16];
     va_list args;
     va_start( args, fmt );
     vsprintf( buf, fmt, args );
-    return String(buf);
+    return string(buf);
 }
+
+static CvErrorCallback customErrorCallback = 0;
+static void* customErrorCallbackData = 0;
+static bool breakOnError = false;
+
+bool setBreakOnError(bool value)
+{
+    bool prevVal = breakOnError;
+    breakOnError = value;
+    return prevVal;
+}        
 
 void error( const Exception& exc )
 {
-    const char* errorStr = cvErrorStr(exc.code);
-    char buf[1 << 16];
+    if (customErrorCallback != 0) 
+        customErrorCallback(exc.code, exc.func.c_str(), exc.err.c_str(),
+                            exc.file.c_str(), exc.line, customErrorCallbackData);
+    else
+    {
+        const char* errorStr = cvErrorStr(exc.code);
+        char buf[1 << 16];
 
-    sprintf( buf, "OpenCV Error: %s (%s) in %s, file %s, line %d",
-        errorStr, exc.err.c_str(), exc.func.size() > 0 ?
-        exc.func.c_str() : "unknown function", exc.file.c_str(), exc.line );
-    fprintf( stderr, "%s\n", buf );
-    fflush( stderr );
-#ifdef _DEBUG
-    static volatile int* p = 0;
-    *p = 0;
-#endif
+        sprintf( buf, "OpenCV Error: %s (%s) in %s, file %s, line %d",
+            errorStr, exc.err.c_str(), exc.func.size() > 0 ?
+            exc.func.c_str() : "unknown function", exc.file.c_str(), exc.line );
+        fprintf( stderr, "%s\n", buf );
+        fflush( stderr );
+    }
+    if(breakOnError)
+    {
+        static volatile int* p = 0;
+        *p = 0;
+    }
     throw exc;
 }
-
+    
+CvErrorCallback
+redirectError( CvErrorCallback errCallback, void* userdata, void** prevUserdata)
+{
+    if( prevUserdata )
+        *prevUserdata = customErrorCallbackData;
+    CvErrorCallback prevCallback = customErrorCallback;
+    customErrorCallback = errCallback;
+    customErrorCallbackData = userdata;
+    
+    return prevCallback;
+}
+    
 }
 
 /*CV_IMPL int
@@ -247,9 +364,9 @@ CV_IMPL int cvGetThreadNum()
 
 
 CV_IMPL CvErrorCallback
-cvRedirectError( CvErrorCallback, void*, void** )
+cvRedirectError( CvErrorCallback errCallback, void* userdata, void** prevUserdata)
 {
-    return 0;
+    return cv::redirectError(errCallback, userdata, prevUserdata);
 }
 
 CV_IMPL int cvNulDevReport( int, const char*, const char*,

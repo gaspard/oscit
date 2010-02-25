@@ -40,6 +40,7 @@ extern Value gFalseValue;
 extern Value gEmptyValue;
 extern Hash  gEmptyHash;
 
+// TODO: could we move these enum into the Value class (please) ?
 enum ValueType
 {
   EMPTY_VALUE  = 0,
@@ -55,7 +56,7 @@ enum ValueType
 };
 
 enum ValueTypeTag
-{ 
+{
   NIL_TYPE_TAG    = 'N',
   REAL_TYPE_TAG   = 'f',
   STRING_TYPE_TAG = 's',

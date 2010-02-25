@@ -45,13 +45,15 @@
 
 #if defined _MSC_VER && _MSC_VER >= 1200
     /* disable warnings related to inline functions */
-    #pragma warning( disable: 4711 4710 4514 )
+    #pragma warning( disable: 4251 4711 4710 4514 )
 #endif
 
 typedef unsigned long ulong;
 
 #ifdef __BORLANDC__
+#ifndef WIN32
     #define     WIN32
+#endif
     #define     CV_DLL
 #endif
 
@@ -66,6 +68,15 @@ typedef unsigned long ulong;
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+#if defined WIN32 || defined _WIN32
+#  ifndef WIN32
+#    define WIN32
+#  endif
+#  ifndef _WIN32
+#    define _WIN32
+#  endif
+#endif
 
 #if defined WIN32 || defined WINCE
 #ifndef _WIN32_WINNT         // This is needed for the declaration of TryEnterCriticalSection in winbase.h with Visual Studio 2005 (and older?)
@@ -88,6 +99,75 @@ typedef unsigned long ulong;
 #include "ipp.h"
 #endif
 
+
+#define CV_MEMCPY_CHAR( dst, src, len )                 \
+{                                                       \
+    size_t _icv_memcpy_i_, _icv_memcpy_len_ = (len);    \
+    char* _icv_memcpy_dst_ = (char*)(dst);              \
+    const char* _icv_memcpy_src_ = (const char*)(src);  \
+                                                        \
+    for( _icv_memcpy_i_ = 0; _icv_memcpy_i_ < _icv_memcpy_len_; _icv_memcpy_i_++ )  \
+        _icv_memcpy_dst_[_icv_memcpy_i_] = _icv_memcpy_src_[_icv_memcpy_i_];        \
+}
+
+
+#define CV_MEMCPY_INT( dst, src, len )                  \
+{                                                       \
+    size_t _icv_memcpy_i_, _icv_memcpy_len_ = (len);    \
+    int* _icv_memcpy_dst_ = (int*)(dst);                \
+    const int* _icv_memcpy_src_ = (const int*)(src);    \
+    assert( ((size_t)_icv_memcpy_src_&(sizeof(int)-1)) == 0 && \
+    ((size_t)_icv_memcpy_dst_&(sizeof(int)-1)) == 0 );  \
+                                                        \
+    for(_icv_memcpy_i_=0;_icv_memcpy_i_<_icv_memcpy_len_;_icv_memcpy_i_++)  \
+        _icv_memcpy_dst_[_icv_memcpy_i_] = _icv_memcpy_src_[_icv_memcpy_i_];\
+}
+
+
+#define CV_MEMCPY_AUTO( dst, src, len )                                             \
+{                                                                                   \
+    size_t _icv_memcpy_i_, _icv_memcpy_len_ = (len);                                \
+    char* _icv_memcpy_dst_ = (char*)(dst);                                          \
+    const char* _icv_memcpy_src_ = (const char*)(src);                              \
+    if( (_icv_memcpy_len_ & (sizeof(int)-1)) == 0 )                                 \
+    {                                                                               \
+        assert( ((size_t)_icv_memcpy_src_&(sizeof(int)-1)) == 0 &&                  \
+                ((size_t)_icv_memcpy_dst_&(sizeof(int)-1)) == 0 );                  \
+        for( _icv_memcpy_i_ = 0; _icv_memcpy_i_ < _icv_memcpy_len_;                 \
+            _icv_memcpy_i_+=sizeof(int) )                                           \
+        {                                                                           \
+            *(int*)(_icv_memcpy_dst_+_icv_memcpy_i_) =                              \
+            *(const int*)(_icv_memcpy_src_+_icv_memcpy_i_);                         \
+        }                                                                           \
+    }                                                                               \
+    else                                                                            \
+    {                                                                               \
+        for(_icv_memcpy_i_ = 0; _icv_memcpy_i_ < _icv_memcpy_len_; _icv_memcpy_i_++)\
+            _icv_memcpy_dst_[_icv_memcpy_i_] = _icv_memcpy_src_[_icv_memcpy_i_];    \
+    }                                                                               \
+}
+
+
+#define CV_ZERO_CHAR( dst, len )                        \
+{                                                       \
+    size_t _icv_memcpy_i_, _icv_memcpy_len_ = (len);    \
+    char* _icv_memcpy_dst_ = (char*)(dst);              \
+                                                        \
+    for( _icv_memcpy_i_ = 0; _icv_memcpy_i_ < _icv_memcpy_len_; _icv_memcpy_i_++ )  \
+        _icv_memcpy_dst_[_icv_memcpy_i_] = '\0';        \
+}
+
+
+#define CV_ZERO_INT( dst, len )                                                     \
+{                                                                                   \
+    size_t _icv_memcpy_i_, _icv_memcpy_len_ = (len);                                \
+    int* _icv_memcpy_dst_ = (int*)(dst);                                            \
+    assert( ((size_t)_icv_memcpy_dst_&(sizeof(int)-1)) == 0 );                      \
+                                                                                    \
+    for(_icv_memcpy_i_=0;_icv_memcpy_i_<_icv_memcpy_len_;_icv_memcpy_i_++)          \
+        _icv_memcpy_dst_[_icv_memcpy_i_] = 0;                                       \
+}
+
 namespace cv
 {
 
@@ -99,10 +179,6 @@ extern const ushort g_8x16uSqrTab[];
 #define CV_SQR_8U(x)  cv::g_8x16uSqrTab[(x)+255]
 
 extern const char* g_HersheyGlyphs[];
-
-extern const signed char g_DepthToType[];
-#define IplToCvDepth( depth ) \
-    cv::g_DepthToType[(((depth) & 255) >> 2) + ((depth) < 0)]
 
 extern const uchar g_Saturate8u[];
 #define CV_FAST_CAST_8U(t)   (assert(-256 <= (t) && (t) <= 512), cv::g_Saturate8u[(t)+256])
@@ -121,7 +197,7 @@ static inline CopyMaskFunc getCopyMaskFunc(int esz)
     return func;
 }
 
-#ifdef WIN32
+#if defined WIN32 || defined _WIN32
 void deleteThreadAllocData();
 void deleteThreadRNGData();
 #endif
@@ -182,36 +258,36 @@ template<typename T> struct OpMax
     T operator ()(T a, T b) const { return std::max(a, b); }
 };
 
-static inline Size getContinuousSize( const Mat& m1, int widthScale=1 )
+inline Size getContinuousSize( const Mat& m1, int widthScale=1 )
 {
     return m1.isContinuous() ? Size(m1.cols*m1.rows*widthScale, 1) :
         Size(m1.cols*widthScale, m1.rows);
 }
 
-static inline Size getContinuousSize( const Mat& m1, const Mat& m2, int widthScale=1 )
+inline Size getContinuousSize( const Mat& m1, const Mat& m2, int widthScale=1 )
 {
     return (m1.flags & m2.flags & Mat::CONTINUOUS_FLAG) != 0 ?
         Size(m1.cols*m1.rows*widthScale, 1) : Size(m1.cols*widthScale, m1.rows);
 }
 
-static inline Size getContinuousSize( const Mat& m1, const Mat& m2,
-                                      const Mat& m3, int widthScale=1 )
+inline Size getContinuousSize( const Mat& m1, const Mat& m2,
+                               const Mat& m3, int widthScale=1 )
 {
     return (m1.flags & m2.flags & m3.flags & Mat::CONTINUOUS_FLAG) != 0 ?
         Size(m1.cols*m1.rows*widthScale, 1) : Size(m1.cols*widthScale, m1.rows);
 }
 
-static inline Size getContinuousSize( const Mat& m1, const Mat& m2,
-                                      const Mat& m3, const Mat& m4,
-                                      int widthScale=1 )
+inline Size getContinuousSize( const Mat& m1, const Mat& m2,
+                               const Mat& m3, const Mat& m4,
+                               int widthScale=1 )
 {
     return (m1.flags & m2.flags & m3.flags & m4.flags & Mat::CONTINUOUS_FLAG) != 0 ?
         Size(m1.cols*m1.rows*widthScale, 1) : Size(m1.cols*widthScale, m1.rows);
 }
 
-static inline Size getContinuousSize( const Mat& m1, const Mat& m2,
-                                      const Mat& m3, const Mat& m4,
-                                      const Mat& m5, int widthScale=1 )
+inline Size getContinuousSize( const Mat& m1, const Mat& m2,
+                               const Mat& m3, const Mat& m4,
+                               const Mat& m5, int widthScale=1 )
 {
     return (m1.flags & m2.flags & m3.flags & m4.flags & m5.flags & Mat::CONTINUOUS_FLAG) != 0 ?
         Size(m1.cols*m1.rows*widthScale, 1) : Size(m1.cols*widthScale, m1.rows);
@@ -233,9 +309,9 @@ binaryOpC1_( const Mat& srcmat1, const Mat& srcmat2, Mat& dstmat )
     const T1* src1 = (const T1*)srcmat1.data;
     const T2* src2 = (const T2*)srcmat2.data;
     DT* dst = (DT*)dstmat.data;
-    int step1 = srcmat1.step/sizeof(src1[0]);
-    int step2 = srcmat2.step/sizeof(src2[0]);
-    int step = dstmat.step/sizeof(dst[0]);
+    size_t step1 = srcmat1.step/sizeof(src1[0]);
+    size_t step2 = srcmat2.step/sizeof(src2[0]);
+    size_t step = dstmat.step/sizeof(dst[0]);
     Size size = getContinuousSize( srcmat1, srcmat2, dstmat, dstmat.channels() );
 
     if( size.width == 1 )
@@ -277,8 +353,8 @@ binarySOpCn_( const Mat& srcmat, Mat& dstmat, const Scalar& _scalar )
     typedef typename Op::rtype DT;
     const T* src0 = (const T*)srcmat.data;
     DT* dst0 = (DT*)dstmat.data;
-    int step1 = srcmat.step/sizeof(src0[0]);
-    int step = dstmat.step/sizeof(dst0[0]);
+    size_t step1 = srcmat.step/sizeof(src0[0]);
+    size_t step = dstmat.step/sizeof(dst0[0]);
     int cn = dstmat.channels();
     Size size = getContinuousSize( srcmat, dstmat, cn );
     WT scalar[12];
@@ -332,10 +408,10 @@ binarySOpC1_( const Mat& srcmat, Mat& dstmat, double _scalar )
     WT scalar = saturate_cast<WT>(_scalar);
     const T* src = (const T*)srcmat.data;
     DT* dst = (DT*)dstmat.data;
-    int step1 = srcmat.step/sizeof(src[0]);
-    int step = dstmat.step/sizeof(dst[0]);
+    size_t step1 = srcmat.step/sizeof(src[0]);
+    size_t step = dstmat.step/sizeof(dst[0]);
     Size size = srcmat.size();
-    
+
     size.width *= srcmat.channels();
     if( srcmat.isContinuous() && dstmat.isContinuous() )
     {

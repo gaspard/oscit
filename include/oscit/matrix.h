@@ -29,44 +29,11 @@
 
 #ifndef OSCIT_INCLUDE_OSCIT_MATRIX_H_
 #define OSCIT_INCLUDE_OSCIT_MATRIX_H_
-#include <vector>
 
-#include "oscit/values.h"
+#include "opencv/cv.h"
 
-namespace cv {
-  struct Mat;
-}
-
-namespace oscit {
-
-/** 
- * cv::Mat is defined in cxcore.hpp:686
+/** \class Matrix is typedef of cv::Mat
+ * cv::Mat is defined in cxcore.hpp:734
  */
-class Matrix {
- public: 
-  Matrix();
-  Matrix(int rows, int cols);
-  Matrix(int rows, int cols, int type);
-  Matrix(const Matrix &other);
-  
-  ~Matrix();
-  
-  int type();
-  
-  size_t rows();
-  
-  size_t cols();
-  
-  void *data();
-  
-  const cv::Mat *cv_mat();
-  
-  bool operator==(const Matrix &other) const;
- private:
-  class Implementation;
-  Implementation *impl_;
-};
-
-} // oscit
 
 #endif // OSCIT_INCLUDE_OSCIT_MATRIX_H_
