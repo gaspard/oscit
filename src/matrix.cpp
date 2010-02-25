@@ -124,12 +124,12 @@ static std::ostream &out_matrix(std::ostream &out_stream, const Matrix &mat, con
             out_stream << " ";
           }
 
-          snprintf(buf, 200, format, *(T*)(row_start + i * channels + c));
+          snprintf(buf, 200, format, *(row_start + i * channels + c));
           out_stream << buf;
         }
         out_stream << "}";
       } else {
-        snprintf(buf, 200, format, *(T*)(row_start + i));
+        snprintf(buf, 200, format, *(row_start + i));
         out_stream << buf;
       }
     }
@@ -155,7 +155,3 @@ std::ostream &operator<< (std::ostream &out_stream, const Matrix &mat) {
 }
 
 } // oscit
-
-// opencv
-#include "opencv/cxalloc.cpp"
-#include "opencv/cxsystem.cpp"
