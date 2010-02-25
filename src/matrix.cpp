@@ -62,8 +62,8 @@ Value::Value(size_t rows, size_t cols, int type)
 
 // -------------------------------------------------------------
 void Value::set_matrix(const Matrix *matrix) {
-  if (!matrix->refcount) {
-    std::cerr << "Trying to copy a user-allocated data matrix without reference count !\n";
+  if (matrix->data && !matrix->refcount) {
+    // Trying to copy a user-allocated data matrix without reference count
     matrix_ = new Matrix(); // dummy
   } else {
     matrix_ = new Matrix(*matrix);

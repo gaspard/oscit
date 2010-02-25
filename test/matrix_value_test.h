@@ -173,6 +173,13 @@ public:
     assert_equal(4.5, (mat_data + mat.matrix_->step1())[2]);
   }
 
+  void test_copy_empty_matrix( void ) {
+    Value a;
+    MatrixValue b;
+    a = b;
+    assert_equal(NULL, a.matrix_->data);
+  }
+
   void test_out_stream_single_channel( void ) {
     double raw_data[12] = { 1, 2, 3, 4,
                             5, 6, 7, 8,
