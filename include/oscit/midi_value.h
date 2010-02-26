@@ -29,8 +29,8 @@
 
 #ifndef OSCIT_INCLUDE_OSCIT_MIDI_VALUE_H_
 #define OSCIT_INCLUDE_OSCIT_MIDI_VALUE_H_
+
 #include "oscit/value.h"
-#include "oscit/matrix.h"
 
 namespace oscit {
 

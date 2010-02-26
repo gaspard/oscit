@@ -36,7 +36,6 @@ option (RELEASE                  "Universal build (release) ?"               NO 
 option (OSCIT_386_ONLY           "Compile for i386 target only (no 64bit) ?" NO  )
 option (OSCIT_MEMORY_CHECKING    "Enable checking against memory leaks ?"    NO  )
 option (OSCIT_ENABLE_TESTING     "Build and run tests ?"                     YES )
-option (OSCIT_ENABLE_EXAMPLES    "Build examples ?"                          NO  )
 option (OSCIT_WILL_LINK_OPENCV   "Will link to OpenCV lib ?"                 NO  )
 
 
@@ -54,11 +53,6 @@ if (OSCIT_MEMORY_CHECKING)
   endif (APPLE)
 
 endif (OSCIT_MEMORY_CHECKING)
-
-# handle testing option
-if (OSCIT_ENABLE_TESTING)
-  enable_testing()
-endif (OSCIT_ENABLE_TESTING)
 
 # ragel executable
 set(RAGEL "ragel")
@@ -105,6 +99,7 @@ endif(UNIX)
 
 add_definitions(-D__${PLAT}__)
 
+set(STATIC_LIBS)
 # ==============================================================================
 #
 #  oscit library build
@@ -115,11 +110,11 @@ file (GLOB OSCIT_SOURCES src/*.cpp src/${PLAT}/*.cpp)
 if(OSCIT_WILL_LINK_OPENCV)
   # do not include cxalloc.cpp and cxsystem.cpp
 else(OSCIT_WILL_LINK_OPENCV)
-  set(OSCIT_SOURCES ${OSCIT_SOURCES} ${OSCIT_SOURCE_DIR}/vendor/opencv/cxalloc.cpp ${OSCIT_SOURCE_DIR}/vendor/opencv/cxsystem.cpp)
+  add_subdirectory(vendor/opencv)
+  list(APPEND STATIC_LIBS opencv_mat)
 endif(OSCIT_WILL_LINK_OPENCV)
 
-
-include_directories (${OSCIT_SOURCE_DIR}/oscpack ${OSCIT_SOURCE_DIR}/include)
+include_directories (${OSCIT_SOURCE_DIR}/oscpack ${OSCIT_SOURCE_DIR}/include ${OSCIT_SOURCE_DIR}/vendor)
 include_directories (AFTER ${OSCIT_SOURCE_DIR}/test)
 
 file (GLOB RAGEL_SOURCES src/*.rl)
@@ -137,6 +132,7 @@ endforeach (RAGEL_SRC)
 
 file (GLOB OSCPACK_SOURCES oscpack/ip/*.cpp oscpack/ip/${OSCPACK_PLAT}/*.cpp oscpack/osc/*.cpp)
 add_library (oscit STATIC ${OSCIT_SOURCES} ${OSCPACK_SOURCES})
+target_link_libraries(oscit ${STATIC_LIBS})
 
 # ==============================================================================
 #
@@ -169,40 +165,44 @@ endforeach(OSCIT_EXAMPLE_ASSET)
 # ==============================================================================
 # (one test for all CxxTests)
 
-if(OSCIT_MEMORY_CHECKING)
-  file (GLOB OSCIT_TEST_SOURCES test/*_test.h test/*_test_slow.h test/zpause_for_memory_analysis.h)
-else(OSCIT_MEMORY_CHECKING)
-  file (GLOB OSCIT_TEST_SOURCES test/matrix_value_test.h test/*xx_test_slow.h)
-endif(OSCIT_MEMORY_CHECKING)
 
-file (GLOB OSCIT_TEST_MOCKS test/mock/*.h)
-add_custom_command ( PRE_BUILD
-  OUTPUT  test_runner.cpp
-  COMMAND ${OSCIT_SOURCE_DIR}/test/cxxtest/cxxtestgen.pl --error-printer -o test_runner.cpp ${OSCIT_TEST_SOURCES}
-  DEPENDS ${OSCIT_TEST_SOURCES} ${OSCIT_TEST_MOCKS}
-)
+# handle testing option
+if (OSCIT_ENABLE_TESTING)
+  enable_testing()
+  if(OSCIT_MEMORY_CHECKING)
+    file (GLOB OSCIT_TEST_SOURCES test/*_test.h test/*_test_slow.h test/zpause_for_memory_analysis.h)
+  else(OSCIT_MEMORY_CHECKING)
+    file (GLOB OSCIT_TEST_SOURCES test/*_test.h test/*_test_slow.h)
+  endif(OSCIT_MEMORY_CHECKING)
 
-add_executable (test_runner test_runner.cpp)
-target_link_libraries (test_runner oscit ${PLAT_LINK})
-add_test (oscit_test test_runner)
+  file (GLOB OSCIT_TEST_MOCKS test/mock/*.h)
+  add_custom_command ( PRE_BUILD
+    OUTPUT  test_runner.cpp
+    COMMAND ${OSCIT_SOURCE_DIR}/test/cxxtest/cxxtestgen.pl --error-printer -o test_runner.cpp ${OSCIT_TEST_SOURCES}
+    DEPENDS ${OSCIT_TEST_SOURCES} ${OSCIT_TEST_MOCKS}
+  )
 
-# this is to enable verbose output during testing
-add_custom_target (test_all ALL ${CMAKE_CTEST_COMMAND} -V)
-add_dependencies (test_all test_runner)
+  add_executable (test_runner test_runner.cpp)
+  target_link_libraries (test_runner oscit ${PLAT_LINK})
+  add_test (oscit_test test_runner)
 
-# avahi testing...
-if(PLAT STREQUAL "linux")
-  add_executable(publish ${OSCIT_SOURCE_DIR}/test/mock/publish.c)
-  target_link_libraries(publish ${PLAT_LINK})
+  # this is to enable verbose output during testing
+  add_custom_target (test_all ALL ${CMAKE_CTEST_COMMAND} -V)
+  add_dependencies (test_all test_runner)
 
-  add_executable(registration ${OSCIT_SOURCE_DIR}/test/mock/registration.cpp)
-  target_link_libraries(registration ${PLAT_LINK})
-endif(PLAT STREQUAL "linux")
+  # avahi testing...
+  if(PLAT STREQUAL "linux")
+    add_executable(publish ${OSCIT_SOURCE_DIR}/test/mock/publish.c)
+    target_link_libraries(publish ${PLAT_LINK})
+
+    add_executable(registration ${OSCIT_SOURCE_DIR}/test/mock/registration.cpp)
+    target_link_libraries(registration ${PLAT_LINK})
+  endif(PLAT STREQUAL "linux")
 
 
-# valgrind command ?
-# valgrind --leak-check=full --track-origins=yes ./test_runner
-
+  # valgrind command ?
+  # valgrind --leak-check=full --track-origins=yes ./test_runner
+endif (OSCIT_ENABLE_TESTING)
 
 # ==============================================================================
 #

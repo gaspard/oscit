@@ -29,7 +29,7 @@
 
 #include "test_helper.h"
 #include "oscit/values.h"
-#include "opencv/cxtypes.h"
+#include "oscit/matrix.h"
 
 class MatrixValueTest : public TestHelper
 {

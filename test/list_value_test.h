@@ -28,7 +28,9 @@
 */
 
 #include "test_helper.h"
+
 #include "oscit/values.h"
+#include "oscit/matrix.h"
 
 class ListValueTest : public TestHelper
 {

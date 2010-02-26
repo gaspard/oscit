@@ -39,6 +39,8 @@
 #include <iostream>
 #include <sstream>
 
+#include "oscit/matrix.h"
+
 /** Ragel parser definition to create Values from JSON. */
 namespace oscit {
 
@@ -227,12 +229,12 @@ void Value::deep_merge(const Value &other) {
 
 /* ============================================= JSON Parser ========= */
 
-#line 340 "/Users/gaspard/git/oscit/src/value.rl"
+#line 342 "/Users/gaspard/git/oscit/src/value.rl"
 
 
 // transition table
 
-#line 236 "/Users/gaspard/git/oscit/src/value.cpp"
+#line 238 "/Users/gaspard/git/oscit/src/value.cpp"
 static const char _json_actions[] = {
 	0, 1, 0, 1, 3, 1, 4, 1, 
 	7, 1, 9, 2, 1, 9, 2, 2, 
@@ -437,7 +439,7 @@ static const int json_en_main_strict = 40;
 static const int json_en_main_lazy = 1;
 
 
-#line 344 "/Users/gaspard/git/oscit/src/value.rl"
+#line 346 "/Users/gaspard/git/oscit/src/value.rl"
 
 /** This is a crude JSON parser. */
 size_t Value::build_from_json(const char *json, bool strict_mode) {
@@ -452,12 +454,12 @@ size_t Value::build_from_json(const char *json, bool strict_mode) {
   const char * pe = json + strlen(p) + 1;
 
   
-#line 456 "/Users/gaspard/git/oscit/src/value.cpp"
+#line 458 "/Users/gaspard/git/oscit/src/value.cpp"
 	{
 	cs = json_start;
 	}
 
-#line 358 "/Users/gaspard/git/oscit/src/value.rl"
+#line 360 "/Users/gaspard/git/oscit/src/value.rl"
 
   if (strict_mode) {
     cs = json_en_main_strict;
@@ -466,7 +468,7 @@ size_t Value::build_from_json(const char *json, bool strict_mode) {
   }
 
   
-#line 470 "/Users/gaspard/git/oscit/src/value.cpp"
+#line 472 "/Users/gaspard/git/oscit/src/value.cpp"
 	{
 	int _klen;
 	unsigned int _trans;
@@ -541,7 +543,7 @@ _match:
 		switch ( *_acts++ )
 		{
 	case 0:
-#line 230 "/Users/gaspard/git/oscit/src/value.rl"
+#line 232 "/Users/gaspard/git/oscit/src/value.rl"
 	{
      // append a char to build a std::string
     DEBUG(printf("%c-",(*p)));
@@ -550,7 +552,7 @@ _match:
   }
 	break;
 	case 1:
-#line 237 "/Users/gaspard/git/oscit/src/value.rl"
+#line 239 "/Users/gaspard/git/oscit/src/value.rl"
 	{
     // become a RealValue
     tmp_val.set(atof(str_buf.c_str()));
@@ -559,7 +561,7 @@ _match:
   }
 	break;
 	case 2:
-#line 244 "/Users/gaspard/git/oscit/src/value.rl"
+#line 246 "/Users/gaspard/git/oscit/src/value.rl"
 	{
     // become a StringValue
     tmp_val.set(str_buf);
@@ -568,7 +570,7 @@ _match:
   }
 	break;
 	case 3:
-#line 251 "/Users/gaspard/git/oscit/src/value.rl"
+#line 253 "/Users/gaspard/git/oscit/src/value.rl"
 	{
     // Parse a single element of a hash (key:value)
     // Build tmp_val from string and move p forward
@@ -583,7 +585,7 @@ _match:
   }
 	break;
 	case 4:
-#line 264 "/Users/gaspard/git/oscit/src/value.rl"
+#line 266 "/Users/gaspard/git/oscit/src/value.rl"
 	{
     // Parse a single element of a hash (key:value)
     // Build tmp_val from string and move p forward
@@ -597,7 +599,7 @@ _match:
   }
 	break;
 	case 5:
-#line 276 "/Users/gaspard/git/oscit/src/value.rl"
+#line 278 "/Users/gaspard/git/oscit/src/value.rl"
 	{
     // we have a value in tmp that should be changed into a list [tmp]
     DEBUG(printf("[%p:lazy_list %s]\n", this, tmp_val.to_json().c_str()));
@@ -605,7 +607,7 @@ _match:
   }
 	break;
 	case 6:
-#line 282 "/Users/gaspard/git/oscit/src/value.rl"
+#line 284 "/Users/gaspard/git/oscit/src/value.rl"
 	{
     DEBUG(printf("[%p:empty_hash %s]\n", this, tmp_val.to_json().c_str()));
     // become an empty HashValue
@@ -615,7 +617,7 @@ _match:
   }
 	break;
 	case 7:
-#line 290 "/Users/gaspard/git/oscit/src/value.rl"
+#line 292 "/Users/gaspard/git/oscit/src/value.rl"
 	{
     if (!is_list()) set_type(LIST_VALUE);
 
@@ -625,7 +627,7 @@ _match:
   }
 	break;
 	case 8:
-#line 298 "/Users/gaspard/git/oscit/src/value.rl"
+#line 300 "/Users/gaspard/git/oscit/src/value.rl"
 	{
     // become a NilValue
     DEBUG(printf("[nil]\n"));
@@ -633,13 +635,13 @@ _match:
   }
 	break;
 	case 9:
-#line 304 "/Users/gaspard/git/oscit/src/value.rl"
+#line 306 "/Users/gaspard/git/oscit/src/value.rl"
 	{
     DEBUG(printf("[set_from_tmp %s]\n", tmp_val.to_json().c_str()));
     if (!is_list() && !is_hash()) *this = tmp_val;
   }
 	break;
-#line 643 "/Users/gaspard/git/oscit/src/value.cpp"
+#line 645 "/Users/gaspard/git/oscit/src/value.cpp"
 		}
 	}
 
@@ -652,7 +654,7 @@ _again:
 	_out: {}
 	}
 
-#line 366 "/Users/gaspard/git/oscit/src/value.rl"
+#line 368 "/Users/gaspard/git/oscit/src/value.rl"
   if (p != pe) --p;
 
   return p - json;

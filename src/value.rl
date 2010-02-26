@@ -37,6 +37,8 @@
 #include <iostream>
 #include <sstream>
 
+#include "oscit/matrix.h"
+
 /** Ragel parser definition to create Values from JSON. */
 namespace oscit {
 

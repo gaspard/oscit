@@ -32,6 +32,7 @@
 #include <vector>
 
 #include "oscit/values.h"
+#include "oscit/matrix.h"
 
 
 namespace oscit {
