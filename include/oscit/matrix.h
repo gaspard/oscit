@@ -31,6 +31,7 @@
 #define OSCIT_INCLUDE_OSCIT_MATRIX_H_
 
 #include "opencv/cv.h"
+#include "oscit/values.h"
 
 /** \class Matrix is typedef of cv::Mat
  * cv::Mat is defined in cxcore.hpp:734

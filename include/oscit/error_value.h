@@ -44,6 +44,17 @@ public:
   explicit ErrorValue(ErrorCode code, const char *string) : Value(code, string) {}
 
   explicit ErrorValue(ErrorCode code, const std::string &string) : Value(code, string) {}
+
+  // FIXME: use this instead and support "%@" for std::string
+  // explicit FValue(ErrorCode code, const char *format, ...) {
+  //   char buffer[FVALUE_BUFFER_SIZE];
+  //   type_ = ERROR_VALUE;
+  //   va_list args;
+  //   va_start(args, format);
+  //     vsnprintf(buffer, FVALUE_BUFFER_SIZE, format, args);
+  //   va_end(args);
+  //   set_error(code, buffer);
+  // }
 };
 
 } // oscit

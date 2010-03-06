@@ -2,6 +2,12 @@
 
 The code written here conforms to http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml. Please follow these guidelines if you want to contribute (you should run misc/cpplint.py without any warning).
 
+== width, height order
+
+Pleae use [width, height] (in this order) for image related dimensions and [row, cols] (in this
+order) for matrix related dimensions, even if this is not consistent (x,y vs y,x) but that is how
+people are used to see these parameters.
+
 == additions
 
 - Write tests !

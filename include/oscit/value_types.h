@@ -30,6 +30,8 @@
 #ifndef OSCIT_INCLUDE_OSCIT_VALUE_TYPES_H_
 #define OSCIT_INCLUDE_OSCIT_VALUE_TYPES_H_
 
+#include <sys/types.h>
+
 namespace oscit {
 class Value;
 class Hash;

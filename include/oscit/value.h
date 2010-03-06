@@ -128,8 +128,8 @@ public:
    * If this matrix is further assigned to another value, an error will be raised
    * since the data is not reference counted.
    *
-   * @param rows number of rows in the data
-   * @param cols number of columns in the data
+   * @param rows number of rows in the data (height)
+   * @param cols number of columns in the data (width)
    * @param type an integer representing a \ref MatrixType of the data that is stored
    * @param data a pointer to the user-allocated data
    * @param step number of <b>bytes</b> to advance from one row to the other. If the
@@ -141,8 +141,8 @@ public:
 
   /** Create a new matrix value of the given size and type.
    *
-   * @param rows number of rows
-   * @param cols number of columns
+   * @param rows number of rows (height)
+   * @param cols number of columns (width)
    * @param type an integer representing the \ref MagicType
    */
   Value(size_t rows, size_t cols, int type);
@@ -713,6 +713,13 @@ public:
 
   /** =========================================================    Matrix  */
   bool is_matrix() const   { return type_ == MATRIX_VALUE; }
+
+  /** Return a reference to the current matrix (no type check).
+   * @return reference to current matrix
+   */
+  Matrix &matrix() {
+    return *matrix_;
+  }
 
   /** Change the Value into a MatrixValue by making a reference to the argument. */
   Value &set(const Matrix *matrix) {

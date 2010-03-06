@@ -29,7 +29,7 @@
 
 #include "test_helper.h"
 #include "oscit/values.h"
-#include "oscit/matrix.h"
+#include "opencv/cxtypes.h"
 
 class MatrixValueTest : public TestHelper
 {
@@ -86,16 +86,15 @@ public:
 
   void test_copy( void ) {
     MatrixValue v(2,3);
-
 #if Real == double
     assert_true(v.mat_type() == CV_64FC1);
 #else
     assert_true(v.mat_type() == CV_32FC1);
 #endif
-    Real *mat = (Real*)v.mat_data();
+    Real *v_data = (Real*)v.mat_data();
 
-    mat[0] = 0.0; mat[1] = 1.0; mat[2] = 2.0;
-    mat[3] = 3.0; mat[4] = 4.0; mat[5] = 5.0;
+    v_data[0] = 0.0; v_data[1] = 1.0; v_data[2] = 2.0;
+    v_data[3] = 3.0; v_data[4] = 4.0; v_data[5] = 5.0;
 
     Value v2(v);
     Real *v2_data = (Real*)v2.mat_data();
@@ -108,10 +107,9 @@ public:
     assert_equal(6, v.mat_size());
     assert_equal(6, v2.mat_size());
 
-    mat[3] = 3.5;
+    v_data[3] = 3.5;
 
     // shared data
-    assert_equal(3.5,  mat[3]);
     assert_equal(3.5, v2_data[3]);
 
     v3 = v;
@@ -121,12 +119,64 @@ public:
     assert_equal(6, v3.mat_size());
     assert_equal(3.5, v3_data[3]);
 
-    mat[3] = 3.8;
+    v_data[3] = 3.8;
 
-    assert_equal(3.8,  mat[3]);
+    assert_equal(3.8,  v_data[3]);
     assert_equal(3.8, v2_data[3]);
     assert_equal(3.8, v3_data[3]);
   }
+
+  void test_set( void ) {
+    Value v;
+#if Real == double
+    Matrix m(2,2, CV_64FC1);
+#else
+    Matrix m(2,2, CV_32FC1);
+#endif
+    assert_true(v.is_empty());
+    v.set(m);
+    assert_true(v.is_matrix());
+    assert_equal(4, v.mat_size());
+  }
+
+  void test_set_tag( void ) {
+    Value v;
+
+    v.set_type_tag("M");
+    assert_true(v.is_matrix());
+    assert_equal(0, v.mat_size());
+  }
+
+  void test_set_type( void ) {
+    Value v;
+
+    v.set_type(MATRIX_VALUE);
+    assert_true(v.is_matrix());
+    assert_equal(0, v.mat_size());
+  }
+
+  void test_to_json( void ) {
+    MatrixValue v(2,3);
+    std::ostringstream os(std::ostringstream::out);
+    os << v;
+    assert_equal("\"Matrix 2x3\"", os.str());
+    assert_equal("\"Matrix 2x3\"", v.to_json());
+  }
+
+  void test_can_receive( void ) {
+    Object object("foo", MatrixIO(1,5,"bar"));
+    assert_false(object.can_receive(Value()));
+    assert_true (object.can_receive(gNilValue));
+    assert_false(object.can_receive(Value(1.23)));
+    assert_false(object.can_receive(Value("foo")));
+    assert_false(object.can_receive(Value(BAD_REQUEST_ERROR, "foo")));
+    assert_false(object.can_receive(JsonValue("['','']")));
+    assert_false(object.can_receive(HashValue()));
+    assert_true (object.can_receive(MatrixValue(1,1)));
+    assert_false(object.can_receive(MidiValue()));
+  }
+
+  // test_equal not supported for matrix types
 
   void test_user_allocated_data( void ) {
     double raw_data[28] = { 9, 9, 9, 9, 9, 9, 9, // 9 = padding
@@ -227,49 +277,4 @@ public:
     assert_equal(3, mat.matrix_->channels());
   }
 
-  void test_set( void ) {
-    Value v;
-    Matrix m(2,2,CV_32FC1);
-    assert_true(v.is_empty());
-    v.set(m);
-    assert_true(v.is_matrix());
-    assert_equal(4, v.mat_size());
-  }
-
-  void test_set_tag( void ) {
-    Value v;
-
-    v.set_type_tag("M");
-    assert_true(v.is_matrix());
-    assert_equal(0, v.mat_size());
-  }
-
-  void test_set_type( void ) {
-    Value v;
-
-    v.set_type(MATRIX_VALUE);
-    assert_true(v.is_matrix());
-    assert_equal(0, v.mat_size());
-  }
-
-  void test_to_json( void ) {
-    MatrixValue v(2,3);
-    std::ostringstream os(std::ostringstream::out);
-    os << v;
-    assert_equal("\"Matrix 2x3\"", os.str());
-    assert_equal("\"Matrix 2x3\"", v.to_json());
-  }
-
-  void test_can_receive( void ) {
-    Object object("foo", MatrixIO(1,5,"bar"));
-    assert_false(object.can_receive(Value()));
-    assert_true (object.can_receive(gNilValue));
-    assert_false(object.can_receive(Value(1.23)));
-    assert_false(object.can_receive(Value("foo")));
-    assert_false(object.can_receive(Value(BAD_REQUEST_ERROR, "foo")));
-    assert_false(object.can_receive(JsonValue("['','']")));
-    assert_false(object.can_receive(HashValue()));
-    assert_true (object.can_receive(MatrixValue(1,1)));
-    assert_false(object.can_receive(MidiValue()));
-  }
 };
