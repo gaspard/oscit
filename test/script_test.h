@@ -46,7 +46,7 @@ public:
     assert_true(res.is_string());
     assert_equal("This script will compile fine.", res.str());
   }
-  
+
   void test_bad_script( void ) {
     DummyScript script;
     Value res = script.script(Value("This script will raise a [compilation error]."));
@@ -64,7 +64,7 @@ public:
     assert_equal("This script will compile fine.", res.str());
     assert_true(script.script_ok());
   }
-  
+
   void test_file( void ) {
     DummyScript script;
     Value res = script.file(Value(fixture_path("script_test_file.txt")));
@@ -78,7 +78,7 @@ public:
     res = script.script(gNilValue);
     assert_equal("On a dark, rainy day,\nWe will go out to fish.\nWith the elements we play\nAnd fishes end served on a dish.\n", res.str());
   }
-  
+
   void test_change_content_should_be_saved_in_file( void ) {
     DummyScript script;
     std::string new_file(fixture_path("script_test_new_file.txt"));
@@ -90,20 +90,20 @@ public:
     res = script.script(gNilValue);
     assert_true(res.is_string());
     assert_equal("", res.str());
-    
+
     res = script.script(Value("Foo bar baz !"));
     assert_true(res.is_string());
     assert_equal("Foo bar baz !", res.str());
-    
+
     std::ifstream in(new_file.c_str(), std::ios::in);
       std::ostringstream oss;
       oss << in.rdbuf();
     in.close();
     assert_equal("Foo bar baz !", oss.str());
-    
+
     remove(new_file.c_str());
   }
-  
+
   void test_file_not_found( void ) {
     DummyScript script;
     std::string not_found(fixture_path("script_test_file_not_found.txt"));
@@ -121,7 +121,7 @@ public:
     assert_equal(fixture_path("script_test_file.txt"), res.str());
     assert_true(script.script_ok());
   }
-  
+
   void test_bad_file( void ) {
     DummyScript script;
     std::string bad_file(fixture_path("script_test_bad_file.txt"));
@@ -130,6 +130,10 @@ public:
     assert_equal(BAD_REQUEST_ERROR, res.error_code());
     assert_equal("Compilation error near \'he [compilation error] \'.", res.error_message());
     assert_false(script.script_ok());
+
+    // keeps track of the last error message (TODO: split these long tests into simpler ones)
+    assert_equal("Compilation error near \'he [compilation error] \'.", script.last_error().error_message());
+
     res.set_nil();
     res = script.file(gNilValue);
     assert_true(res.is_string());
@@ -141,32 +145,32 @@ public:
     assert_equal(fixture_path("script_test_file.txt"), res.str());
     assert_true(script.script_ok());
   }
-  
+
   void test_reload( void ) {
     DummyScript script;
     std::string reload_file(fixture_path("script_test_reload.txt"));
     script.file(Value(reload_file));
-    
+
     assert_equal(1.0, script.reload(gNilValue).r);
     Value res = script.reload(Value(0.002)); // 1 [ms]
-    
+
     std::ofstream out(reload_file.c_str(), std::ios::out);
       out << "This is a nice script.";
     out.close();
-    
+
     // too soon, should not reload
     script.reload_script(1);
     assert_false(script.script_ok());
     assert_equal("", script.script(gNilValue).str());
-    
+
     // reload
     script.reload_script(2);
     assert_true(script.script_ok());
     assert_equal("This is a nice script.", script.script(gNilValue).str());
-    
+
     remove(reload_file.c_str());
   }
-  
+
   void test_inspect( void ) {
     DummyScript script;
     std::string new_file(fixture_path("script_test_new_file.txt"));

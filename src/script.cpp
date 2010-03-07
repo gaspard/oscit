@@ -108,7 +108,8 @@ const Value Script::load_script_from_file(bool is_new) {
     set_script_ok(false);
     script_mod_time_ = 0;
     set_next_reload();
-    return Value(BAD_REQUEST_ERROR, std::string("Could not stat '").append(script_file_).append("'."));
+    last_error_ = Value(BAD_REQUEST_ERROR, std::string("Could not stat '").append(script_file_).append("'."));
+    return last_error_;
   }
 
   if (!is_new && info.st_mtime == script_mod_time_) {
@@ -129,7 +130,10 @@ const Value Script::load_script_from_file(bool is_new) {
   Value res = eval_script();
   set_script_ok(!res.is_error());
 
-  if (res.is_error()) return res;
+  if (res.is_error()) {
+    last_error_ = res;
+    return last_error_;
+  }
 
   set_next_reload();
   return Value(script_file_);

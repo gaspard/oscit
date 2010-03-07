@@ -32,6 +32,7 @@
 #include <string>
 
 #include "oscit/conf.h"
+#include "oscit/values.h"
 
 namespace oscit {
 
@@ -69,6 +70,10 @@ public:
     return script_ok_;
   }
 
+  const Value last_error() const {
+    return last_error_;
+  }
+
  protected:
 
   /** Ask for a script reload.
@@ -89,13 +94,16 @@ public:
    */
   virtual void set_script_ok(bool state);
 
-protected:
   /** Simple flag that is set to true when the last
    * compilation was successful. This flag can be used
    * to avoid using compilation results if something
    * went wrong.
    */
   bool script_ok_;
+
+  /** Keep track of the last error to display instead of "script is broken".
+   */
+  Value last_error_;
 
   /** Script text.
    */
