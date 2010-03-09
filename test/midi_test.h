@@ -31,7 +31,7 @@
 #include "oscit/midi_message.h"
 
 class MidiTest : public TestHelper
-{  
+{
 public:
   void test_defaults( void ) {
     MidiMessage m;
@@ -42,8 +42,18 @@ public:
     assert_equal(0, m.wait());
     assert_equal(NoteOn, m.type());
   }
-  
+
   void test_create_note( void ) {
+    MidiMessage *m = MidiMessage::MidiNote(63, 74, 510);
+
+    assert_equal(63, m->note());
+    assert_equal(74, m->velocity());
+    assert_equal(510, m->length());
+    assert_equal(1, m->channel());
+    assert_equal(0, m->wait());
+  }
+
+  void test_set_as_note( void ) {
     MidiMessage m;
     m.set_as_note(63);
     assert_equal(63, m.note());
@@ -51,7 +61,7 @@ public:
     assert_equal(500, m.length());
     assert_equal(1, m.channel());
     assert_equal(0, m.wait());
-    
+
     m.set_as_note(68);
     assert_equal(68, m.note());
     assert_equal(80, m.velocity());
@@ -59,7 +69,7 @@ public:
     assert_equal(1, m.channel());
     assert_equal(0, m.wait());
   }
-  
+
   void test_create_ctrl( void ) {
     MidiMessage m;
     m.set_as_ctrl(19, 45);
@@ -67,14 +77,14 @@ public:
     assert_equal(45, m.value());
     assert_equal(1, m.channel());
     assert_equal(0, m.wait());
-    
+
     m.set_as_note(12, 55);
     assert_equal(12, m.ctrl());
     assert_equal(55, m.value());
     assert_equal(1, m.channel());
     assert_equal(0, m.wait());
   }
-  
+
   void test_set_note( void ) {
     MidiMessage m;
     m.set_as_note(212);
@@ -86,7 +96,7 @@ public:
     m.set_note(55);
     assert_equal(55, m.note());
   }
-  
+
   void test_set_velocity( void ) {
     MidiMessage m;
     m.set_as_note(55, 215);
@@ -98,7 +108,7 @@ public:
     m.set_velocity(55);
     assert_equal(55, m.velocity());
   }
-  
+
   void test_set_length( void ) {
     MidiMessage m;
     m.set_as_note(55, 110, 800);
@@ -108,7 +118,7 @@ public:
     m.set_length(125);
     assert_equal(125, m.length());
   }
-  
+
   void test_set_channel( void ) {
     MidiMessage m;
     m.set_as_note(55, 110, 800, 18);

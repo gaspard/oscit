@@ -103,6 +103,30 @@ class MidiMessage : public ReferenceCounted {
     return true;
   }
 
+  /** Create a new midi note on message.
+   * @todo optimize object creation with a pool ?
+   * @param note the midi note number from 0-127.
+   * @param velocity the note velocity from 0-127 (0 = NoteOff).
+   * @param length the note length in milliseconds.
+   * @param channel the channel number from 1-16.
+   * @param wait milliseconds to wait before firing this message.
+   * @return new MidiMessage pointer.
+   */
+  static MidiMessage *MidiNote(int note, int velocity = 80, int length = 500, int channel = 1, time_t wait = 0) {
+    MidiMessage *m = new MidiMessage();
+    m->set_as_note(note, velocity, length, channel, wait);
+    return m;
+  }
+
+  /** Set a midi message to NoteOn or NoteOff.
+   * @todo optimize object creation with a pool ?
+   * @param note the midi note number from 0-127.
+   * @param velocity the note velocity from 0-127 (0 = NoteOff).
+   * @param length the note length in milliseconds.
+   * @param channel the channel number from 1-16.
+   * @param wait milliseconds to wait before firing this message.
+   * @return new NoteOn MidiMessage.
+   */
   void set_as_note(int note, int velocity = 80, int length = 500, int channel = 1, time_t wait = 0) {
     if (velocity != 0) {
       type_ = NoteOn;
