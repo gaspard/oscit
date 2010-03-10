@@ -144,8 +144,8 @@ class ProxyFactoryTest : public TestHelper
     Root remote;
     remote.adopt_command(new OscCommand(REMOTE_PORT));
     Object *monitor = remote.adopt(new Object("monitor"));
-    monitor->adopt(new DummyObject("mode", "rgb", SelectIO("rgb, yuv", "color mode", "This is a menu.")));
-    monitor->adopt(new DummyObject("tint", 45.0, RangeIO(1, 127, "tint", "This is a slider from 1 to 127.")));
+    monitor->adopt(new DummyObject("mode", "rgb", SelectIO("rgb, yuv", "This is a menu.")));
+    monitor->adopt(new DummyObject("tint", 45.0, RangeIO(1, 127, "This is a slider from 1 to 127.")));
 
     // prepare local root
     Root local;
@@ -193,8 +193,8 @@ class ProxyFactoryTest : public TestHelper
     assert_equal("45", res.to_json());
 
     // should have same type as remote
-    assert_equal("[45, 1, 127, \"tint\", \"This is a slider from 1 to 127.\"]", bar->type().to_json());
-    assert_equal("[45, 1, 127, \"tint\", \"This is a slider from 1 to 127.\"]", bar_->type().to_json());
+    assert_equal("[45, 1, 127, \"This is a slider from 1 to 127.\"]", bar->type().to_json());
+    assert_equal("[45, 1, 127, \"This is a slider from 1 to 127.\"]", bar_->type().to_json());
   }
 
   void test_call_local_proxy_should_find_cached_value( void ) {
@@ -294,9 +294,9 @@ private:
   void build_foobar_local_and_remote(Root &local, Root &remote, MyProxyFactory &factory,  Logger &logger) {
 
     remote.adopt_command(new OscCommand(REMOTE_PORT));
-    foo_ = remote.adopt(new DummyObject("foo", "rgb", SelectIO("rgb, yuv", "color mode", "This is a menu.")));
-    bar_ = remote.adopt(new DummyObject("bar", 45.0, RangeIO(1, 127, "tint", "This is a slider from 1 to 127.")));
-    dummy_view_ = remote.adopt(new DummyObject("dummy_view", "view content", StringIO("view content", "Some dummy view.")));
+    foo_ = remote.adopt(new DummyObject("foo", "rgb", SelectIO("rgb, yuv", "This is a menu.")));
+    bar_ = remote.adopt(new DummyObject("bar", 45.0, RangeIO(1, 127, "This is a slider from 1 to 127.")));
+    dummy_view_ = remote.adopt(new DummyObject("dummy_view", "view content", StringIO("Some dummy view.")));
     dummy_view_->adopt(new DummyObject("update", HashValue(), HashIO("hash to update content")));
 
     OscCommand *cmd = local.adopt_command(new OscCommand(LOCAL_PORT));

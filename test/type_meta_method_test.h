@@ -47,13 +47,12 @@ public:
     res = root.call(TYPE_PATH, Value("/foo"));
     assert_equal("/foo", res[0].str());
     res = res[1];
-    assert_equal("fffss", res.type_tag());
+    assert_equal("fffs", res.type_tag());
     assert_equal(RangeIOTypeId, res.type_id());
     assert_equal(4.25,  res[0].r); // current
     assert_equal(0.0,   res[1].r); // min
     assert_equal(127.0, res[2].r); // max
-    assert_equal("lux", res[3].str()); // unit
-    assert_equal(DUMMY_OBJECT_INFO, res[4].str()); // info
+    assert_equal(DUMMY_OBJECT_INFO, res[3].str()); // info
 
     res = root.call(TYPE_PATH, Value("/blah"));
     assert_equal("/blah", res[0].str());
@@ -70,11 +69,10 @@ public:
     res = root.call(TYPE_PATH, Value("/foo"));
     assert_equal("/foo", res[0].str());
     res = res[1];
-    assert_equal("ssss", res.type_tag());
+    assert_equal("sss", res.type_tag());
     assert_equal("yuv",  res[0].str()); // current
     assert_equal("rgb,rgba,yuv",  res[1].str()); // current
-    assert_equal("color mode", res[2].str()); // unit
-    assert_equal("Set color mode.", res[3].str()); // info
+    assert_equal("Set color mode.", res[2].str()); // info
   }
 
   void test_any_type( void ) {
@@ -114,7 +112,7 @@ public:
 
   void test_matrix_type( void ) {
     Root root;
-    root.adopt(new DummyObject("master_of_time", MatrixValue(1,5), MatrixIO(1,5,"Stupid matrix.")));
+    root.adopt(new DummyObject("master_of_time", MatrixValue(1,5), MatrixIO("Stupid matrix.")));
     Value res;
     res = root.call(TYPE_PATH, Value("/master_of_time"));
     assert_equal("/master_of_time", res[0].str());

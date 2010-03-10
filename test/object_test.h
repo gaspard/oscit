@@ -166,7 +166,7 @@ public:
 
   void test_hash_type_id( void ) {
     Object hash("foo", HashIO("bar"));
-    Object matr("foo", MatrixIO(1,4,"bar"));
+    Object matr("foo", MatrixIO("bar"));
     assert_false(hash.type_id() == matr.type_id());
     assert_false(hash.type_id() == matr.type_id());
     assert_equal("Hs", hash.type().type_tag());
@@ -175,10 +175,10 @@ public:
 
   void test_list_with_type( void ) {
     Object base;
-    base.adopt(new DummyObject("mode", "rgb", SelectIO("rgb, yuv", "color mode", "This is a menu.")));
-    base.adopt(new DummyObject("tint", 45.0, RangeIO(1, 127, "tint", "This is a slider from 1 to 127.")));
+    base.adopt(new DummyObject("mode", "rgb", SelectIO("rgb, yuv", "This is a menu.")));
+    base.adopt(new DummyObject("tint", 45.0, RangeIO(1, 127, "This is a slider from 1 to 127.")));
     Value res = base.list_with_type();
-    assert_equal(res.type_tag(), "[s[ssss]][s[fffss]]"); // [name, [current, values, unit, info]], [name, [current, min, max, unit, info]]
+    assert_equal(res.type_tag(), "[s[sss]][s[fffs]]"); // [name, [current, values, unit, info]], [name, [current, min, max, unit, info]]
     assert_equal("mode", res[0][0].str());
     assert_equal("tint", res[1][0].str());
   }
@@ -214,7 +214,7 @@ public:
   // set_type is not a good idea. It should be immutable (or maybe I'm wrong, so I leave the test here)
   //void test_set_type( void ) {
   //  DummyObject one("one", 123.0);
-  //  assert_equal("fffss", one.type().type_tag()); // RangeIO
+  //  assert_equal("fffs", one.type().type_tag()); // RangeIO
   //  assert_equal(0.0, one.type()[0].r); // current
   //  assert_equal(0.0, one.type()[1].r);   // min
   //  assert_equal(127.0, one.type()[2].r); // max
@@ -223,12 +223,12 @@ public:
   //
   //  Value type(TypeTag("fss"));
   //  assert_false(one.set_type(type));
-  //  assert_equal("fffss", one.type().type_tag());
+  //  assert_equal("fffs", one.type().type_tag());
   //  assert_equal("lux", one.type()[3].str()); // unit
   //  type.set(0.0);
   //  type.push_back(0).push_back(5).push_back("eggs").push_back("I'm a hen !");
   //  assert_true(one.set_type(type));
-  //  assert_equal("fffss", one.type().type_tag());
+  //  assert_equal("fffs", one.type().type_tag());
   //  assert_equal("eggs", one.type()[1].str());
   //}
 };

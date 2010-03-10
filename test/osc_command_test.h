@@ -85,8 +85,8 @@ class OscCommandTest : public TestHelper
     // remote_ objects are cleared before each run
     remote_.adopt(new ListMetaMethod(Url(LIST_PATH).name()));
     Object * tmp = remote_.adopt(new Object("monitor"));
-    tmp->adopt(new DummyObject("mode", "rgb", SelectIO("rgb, yuv", "color mode", "This is a menu.")));
-    tmp->adopt(new DummyObject("tint", 45.0, RangeIO(1, 127, "tint", "This is a slider from 1 to 127.")));
+    tmp->adopt(new DummyObject("mode", "rgb", SelectIO("rgb, yuv", "This is a menu.")));
+    tmp->adopt(new DummyObject("tint", 45.0, RangeIO(1, 127, "This is a slider from 1 to 127.")));
 
     send(LIST_PATH, "/monitor");
     assert_equal("[\"/.list\", [\"/monitor\", [\"mode\", \"tint\"]]]\n", reply());
@@ -105,11 +105,11 @@ class OscCommandTest : public TestHelper
     // remote_ objects are cleared before each run
     remote_.adopt(new ListWithTypeMetaMethod(Url(LIST_WITH_TYPE_PATH).name()));
     Object * tmp = remote_.adopt(new Object("monitor"));
-    tmp->adopt(new DummyObject("mode", "rgb", SelectIO("rgb, yuv", "color mode", "This is a menu.")));
-    tmp->adopt(new DummyObject("tint", 45.0, RangeIO(1, 127, "tint", "This is a slider from 1 to 127.")));
+    tmp->adopt(new DummyObject("mode", "rgb", SelectIO("rgb, yuv", "This is a menu.")));
+    tmp->adopt(new DummyObject("tint", 45.0, RangeIO(1, 127, "This is a slider from 1 to 127.")));
 
     send(LIST_WITH_TYPE_PATH, "/monitor");
-    assert_equal("[\"/.list_with_type\", [\"/monitor\", [[\"mode\", [\"rgb\", \"rgb, yuv\", \"color mode\", \"This is a menu.\"]], [\"tint\", [45, 1, 127, \"tint\", \"This is a slider from 1 to 127.\"]]]]]\n", reply());
+    assert_equal("[\"/.list_with_type\", [\"/monitor\", [[\"mode\", [\"rgb\", \"rgb, yuv\", \"This is a menu.\"]], [\"tint\", [45, 1, 127, \"This is a slider from 1 to 127.\"]]]]]\n", reply());
   }
 
   void test_send_receive_hash( void ) {

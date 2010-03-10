@@ -39,8 +39,8 @@ public:
   /** Class signature. */
   TYPED("Object.TypeMetaMethod")
 
-  TypeMetaMethod(const char *name)        : Object(name, StringIO("path", "Return type and information on the given path.")) {}
-  TypeMetaMethod(const std::string &name) : Object(name, StringIO("path", "Return type and information on the given path.")) {}
+  TypeMetaMethod(const char *name)        : Object(name, StringIO("Return type and information on the given path.")) {}
+  TypeMetaMethod(const std::string &name) : Object(name, StringIO("Return type and information on the given path.")) {}
 
   virtual const Value trigger(const Value &val) {
     if (!val.is_string()) return gNilValue;

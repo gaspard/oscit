@@ -177,7 +177,7 @@ public:
   }
 
   void test_can_receive( void ) {
-    Object object("foo", StringIO("bar", "info"));
+    Object object("foo", StringIO("info"));
     assert_false(object.can_receive(Value()));
     assert_true (object.can_receive(gNilValue));
     assert_false(object.can_receive(Value(1.23)));

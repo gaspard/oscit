@@ -49,25 +49,24 @@
 #define NilIO(info)  ListValue("N").push_back(info)
 #define NilIOTypeId H("Ns")
 
-#define RealIO(units, info) Value(0.0).push_back(units).push_back(info)
-#define RealIOTypeId H("fss")
+#define RealIO(info) Value(0.0).push_back(info)
+#define RealIOTypeId H("fs")
 
-// FIXME: units for string IO does not make sense
-#define StringIO(units, info) Value("").push_back(units).push_back(info)
-#define StringIOTypeId H("sss")
+#define StringIO(info) Value("").push_back(info)
+#define StringIOTypeId H("ss")
 
-#define RangeIO(min, max, units, info) \
-  Value(0.0).push_back(min).push_back(max).push_back(units).push_back(info)
-#define RangeIOTypeId H("fffss")
+#define RangeIO(min, max, info) \
+  Value(0.0).push_back(min).push_back(max).push_back(info)
+#define RangeIOTypeId H("fffs")
 
-#define SelectIO(values, units, info) \
-  Value("").push_back(values).push_back(units).push_back(info)
-#define SelectIOTypeId H("ssss")
+#define SelectIO(values, info) \
+  Value("").push_back(values).push_back(info)
+#define SelectIOTypeId H("sss")
 
 #define HashIO(info) Value('H').push_back(info)
 #define HashIOTypeId H("Hs")
 
-#define MatrixIO(rows, cols, info) MatrixValue(rows, cols).push_back(info)
+#define MatrixIO(info) MatrixValue().push_back(info)
 #define MatrixIOTypeId H("Ms")
 
 #define MidiIO(info) MidiValue().push_back(info)

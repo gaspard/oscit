@@ -39,7 +39,7 @@ public:
   /** Class signature. */
   TYPED("Object.DummyObject")
 
-  DummyObject(const char *name, Real value) : Object(name, RangeIO(0, 127, "lux", DUMMY_OBJECT_INFO)), value_(value) {}
+  DummyObject(const char *name, Real value) : Object(name, RangeIO(0, 127, DUMMY_OBJECT_INFO)), value_(value) {}
   DummyObject(const char *name, Value value, const Value &type) : Object(name, type), value_(value) {}
   DummyObject(const char *name, Real value, const Value &type) : Object(name, type), value_(value) {}
   DummyObject(const char *name, const char *value, const Value &type) : Object(name, type), value_(value) {}
@@ -86,7 +86,7 @@ class DummyObject2 : public Object {
 public:
   TYPED("Object.DummyObject2")
 
-  DummyObject2(const char * name, const char *value) : Object(name, SelectIO("rgb,rgba,yuv", "color mode", "Set color mode.")), value_(value) {}
+  DummyObject2(const char * name, const char *value) : Object(name, SelectIO("rgb,rgba,yuv", "Set color mode.")), value_(value) {}
 
   DummyObject2(const char * name, const char *value, const Value &type) : Object(name, type), value_(value) {}
 

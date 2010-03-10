@@ -44,7 +44,7 @@ public:
   }
 
   void test_create_note( void ) {
-    MidiMessage *m = MidiMessage::MidiNote(63, 74, 510);
+    MidiMessage *m = MidiMessage::Note(63, 74, 510);
 
     assert_equal(63, m->note());
     assert_equal(74, m->velocity());

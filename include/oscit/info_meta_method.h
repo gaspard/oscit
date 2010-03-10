@@ -39,8 +39,8 @@ public:
   /** Class signature. */
   TYPED("Object.InfoMetaMethod")
 
-  InfoMetaMethod(const char *name)        : Object(name, StringIO("path", "Return information on the given path.")) {}
-  InfoMetaMethod(const std::string &name) : Object(name, StringIO("path", "Return information on the given path.")) {}
+  InfoMetaMethod(const char *name)        : Object(name, StringIO("Return information on the given path.")) {}
+  InfoMetaMethod(const std::string &name) : Object(name, StringIO("Return information on the given path.")) {}
 
   virtual const Value trigger(const Value &val) {
     if (!val.is_string()) return gNilValue;

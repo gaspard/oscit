@@ -52,7 +52,7 @@ public:
   void test_route_reply_messages_to_object_proxies( void ) {
     RootProxy proxy(Location("osc", "funky synth"));
     Logger logger;
-    proxy.adopt(new ObjectProxyLogger("seven", RangeIO(0.0, 2000.0, "bpm", "the sky is blue"), &logger));
+    proxy.adopt(new ObjectProxyLogger("seven", RangeIO(0.0, 2000.0, "the sky is blue"), &logger));
     logger.str("");
     proxy.handle_reply(std::string("/seven"), Value(300.0));
     assert_equal("[seven: value_changed 300]", logger.str());

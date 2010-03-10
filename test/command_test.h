@@ -165,7 +165,7 @@ public:
     CommandLogger cmd("dummy", &logger);
     assert_equal(0, cmd.observers().size());
     RootProxy *root_proxy = cmd.adopt_proxy(new RootProxy(Location("dummy", "some place")));
-    root_proxy->adopt(new ObjectProxyLogger("foo", RangeIO(1, 127, "tint", "This is a slider from 1 to 127."), &logger));
+    root_proxy->adopt(new ObjectProxyLogger("foo", RangeIO(1, 127, "This is a slider from 1 to 127."), &logger));
     // receive is protected, we need to be friend...
     logger.str("");
     cmd.receive(Url("dummy://\"some place\"/.reply"), Value(Json("[\"/foo\", 5]")));

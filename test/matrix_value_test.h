@@ -164,7 +164,7 @@ public:
   }
 
   void test_can_receive( void ) {
-    Object object("foo", MatrixIO(1,5,"bar"));
+    Object object("foo", MatrixIO("bar"));
     assert_false(object.can_receive(Value()));
     assert_true (object.can_receive(gNilValue));
     assert_false(object.can_receive(Value(1.23)));
