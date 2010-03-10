@@ -1,0 +1,580 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classoscit_1_1_location" kind="class" prot="public">
+    <compoundname>oscit::Location</compoundname>
+    <includes refid="location_8h" local="no">location.h</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classoscit_1_1_location_1a47ca1c41680c3db52a45125412564fae" prot="public" static="yes" mutable="no">
+        <type>const unsigned long</type>
+        <definition>const unsigned long oscit::Location::NO_IP</definition>
+        <argsstring></argsstring>
+        <name>NO_IP</name>
+        <initializer> 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>IP not configured yet. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="48" bodyfile="/Users/gaspard/git/oscit/include/oscit/location.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_location_1a5841afad1ee79c92ac172fe1c7f92c8d" prot="public" static="yes" mutable="no">
+        <type>const unsigned long</type>
+        <definition>const unsigned long oscit::Location::ANY_IP</definition>
+        <argsstring></argsstring>
+        <name>ANY_IP</name>
+        <initializer> 0xFFFFFFFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Any local IP. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="51" bodyfile="/Users/gaspard/git/oscit/include/oscit/location.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_location_1ac357484f2c5d45be56444872ce29cad7" prot="public" static="yes" mutable="no">
+        <type>const unsigned long</type>
+        <definition>const unsigned long oscit::Location::LOOPBACK</definition>
+        <argsstring></argsstring>
+        <name>LOOPBACK</name>
+        <initializer> (127&lt;&lt;24) + 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="52" bodyfile="/Users/gaspard/git/oscit/include/oscit/location.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_location_1a52dc55bc72edd85e3284095f8955889a" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref></type>
+        <definition>const uint oscit::Location::NO_PORT</definition>
+        <argsstring></argsstring>
+        <name>NO_PORT</name>
+        <initializer> 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="53" bodyfile="/Users/gaspard/git/oscit/include/oscit/location.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classoscit_1_1_location_1ac5eb062bf71ebf4ef114d256c79601f9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class Url</definition>
+        <argsstring></argsstring>
+        <name>Url</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="135" bodyfile="/Users/gaspard/git/oscit/include/oscit/location.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classoscit_1_1_location_1ad60c58b8a647ab11b76d001bb77b7029" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;out_stream, const Location &amp;location)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out_stream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classoscit_1_1_location" kindref="compound">Location</ref> &amp;</type>
+          <declname>location</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="134"/>
+      </memberdef>
+      <memberdef kind="friend" id="classoscit_1_1_location_1a60e7d1a2673cbdcceb610bf20ad55a47" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref></type>
+        <definition>uint hashId</definition>
+        <argsstring>(const Location &amp;location)</argsstring>
+        <name>hashId</name>
+        <param>
+          <type>const <ref refid="classoscit_1_1_location" kindref="compound">Location</ref> &amp;</type>
+          <declname>location</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="136" bodyfile="/Users/gaspard/git/oscit/include/oscit/location.h" bodystart="162" bodyend="169"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classoscit_1_1_location_1a842318b85cf081ee7bc36a8e1518153f" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string oscit::Location::protocol_</definition>
+        <argsstring></argsstring>
+        <name>protocol_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Protocol used (oscit, http, ...) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="141" bodyfile="/Users/gaspard/git/oscit/include/oscit/location.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_location_1a044e24d230fce89f4a4956e04b451479" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string oscit::Location::name_</definition>
+        <argsstring></argsstring>
+        <name>name_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This can contain either a hostname (example.com) or a service name (&quot;stage camera&quot;). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="146" bodyfile="/Users/gaspard/git/oscit/include/oscit/location.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_location_1ad606c85ab50d97e92fde0d2ba7fe6335" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool oscit::Location::reference_by_hostname_</definition>
+        <argsstring></argsstring>
+        <name>reference_by_hostname_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This tells us if the name_ contains a hostname or a service name (true if it is a hostname). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="151" bodyfile="/Users/gaspard/git/oscit/include/oscit/location.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_location_1ac1bae3afea571e4147b55c9fc11e007c" prot="private" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long oscit::Location::ip_</definition>
+        <argsstring></argsstring>
+        <name>ip_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Once the location has been resolved, we have an IP. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="155" bodyfile="/Users/gaspard/git/oscit/include/oscit/location.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_location_1a27040408dfa9c2c8ea3052153d8376f7" prot="private" static="no" mutable="no">
+        <type><ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref></type>
+        <definition>uint oscit::Location::port_</definition>
+        <argsstring></argsstring>
+        <name>port_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Port of the remote object (set when location is resolved) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="159" bodyfile="/Users/gaspard/git/oscit/include/oscit/location.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classoscit_1_1_location_1aa328cb7355a74deb0fd563cabf4fe1b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Location::Location</definition>
+        <argsstring>()</argsstring>
+        <name>Location</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="55" bodyfile="/Users/gaspard/git/oscit/include/oscit/location.h" bodystart="55" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_location_1a59b1aa16119bdadce3779b0276f0507f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Location::Location</definition>
+        <argsstring>(const char *protocol, const char *service_name)</argsstring>
+        <name>Location</name>
+        <param>
+          <type>const char *</type>
+          <declname>protocol</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>service_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="58" bodyfile="/Users/gaspard/git/oscit/include/oscit/location.h" bodystart="56" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_location_1af2c24e47bbf4f9f3646d4a76862fd253" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Location::Location</definition>
+        <argsstring>(const char *protocol, const char *service_name, const char *hostname, uint port)</argsstring>
+        <name>Location</name>
+        <param>
+          <type>const char *</type>
+          <declname>protocol</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>service_name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>hostname</declname>
+        </param>
+        <param>
+          <type><ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref></type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="61" bodyfile="/Users/gaspard/git/oscit/include/oscit/location.h" bodystart="59" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_location_1a30fa9ff5d809ccf732b8075594b79290" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Location::Location</definition>
+        <argsstring>(const char *protocol, const char *hostname, uint port)</argsstring>
+        <name>Location</name>
+        <param>
+          <type>const char *</type>
+          <declname>protocol</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>hostname</declname>
+        </param>
+        <param>
+          <type><ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref></type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="66" bodyfile="/Users/gaspard/git/oscit/include/oscit/location.h" bodystart="64" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_location_1a594032dce5bc9727196d9e8c842aff74" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Location::Location</definition>
+        <argsstring>(const char *protocol, unsigned long ip, uint port)</argsstring>
+        <name>Location</name>
+        <param>
+          <type>const char *</type>
+          <declname>protocol</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>ip</declname>
+        </param>
+        <param>
+          <type><ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref></type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="69" bodyfile="/Users/gaspard/git/oscit/include/oscit/location.h" bodystart="67" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_location_1a58e122a469e571d33c4bc3d014d15b8f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Location::Location</definition>
+        <argsstring>(const char *service_name)</argsstring>
+        <name>Location</name>
+        <param>
+          <type>const char *</type>
+          <declname>service_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="74" bodyfile="/Users/gaspard/git/oscit/include/oscit/location.h" bodystart="72" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_location_1ad0f4f11e77546eca83e119ca2ebefdd0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Location::Location</definition>
+        <argsstring>(const char *hostname, uint port)</argsstring>
+        <name>Location</name>
+        <param>
+          <type>const char *</type>
+          <declname>hostname</declname>
+        </param>
+        <param>
+          <type><ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref></type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="77" bodyfile="/Users/gaspard/git/oscit/include/oscit/location.h" bodystart="75" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_location_1a468704fb846262cb7a95aec2b1bd4cfb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Location::Location</definition>
+        <argsstring>(unsigned long ip, uint port)</argsstring>
+        <name>Location</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>ip</declname>
+        </param>
+        <param>
+          <type><ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref></type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="80" bodyfile="/Users/gaspard/git/oscit/include/oscit/location.h" bodystart="78" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_location_1a173d42d2d14c5a4578dbfabdef5254ab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Location::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="84" bodyfile="/Users/gaspard/git/oscit/include/oscit/location.h" bodystart="84" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_location_1a8ce06aef659949097d8143cc9f373e0d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool oscit::Location::operator!=</definition>
+        <argsstring>(const Location &amp;other) const </argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classoscit_1_1_location" kindref="compound">Location</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="92" bodyfile="/Users/gaspard/git/oscit/include/oscit/location.h" bodystart="92" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_location_1a8593a1d9f921d98b92cc404b8ccb0b8b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool oscit::Location::operator==</definition>
+        <argsstring>(const Location &amp;other) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classoscit_1_1_location" kindref="compound">Location</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="96" bodyfile="/Users/gaspard/git/oscit/include/oscit/location.h" bodystart="96" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_location_1acb6a88b0e11ba1e83545ddd0ee9f4955" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string&amp; oscit::Location::name</definition>
+        <argsstring>() const </argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="104" bodyfile="/Users/gaspard/git/oscit/include/oscit/location.h" bodystart="104" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_location_1a3f237fd412bbb0944eb22724691af242" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string&amp; oscit::Location::protocol</definition>
+        <argsstring>() const </argsstring>
+        <name>protocol</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="108" bodyfile="/Users/gaspard/git/oscit/include/oscit/location.h" bodystart="108" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_location_1ab83c3a100d4876a468f0e2f684ab7980" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const unsigned long &amp;</type>
+        <definition>const unsigned long&amp; oscit::Location::ip</definition>
+        <argsstring>() const </argsstring>
+        <name>ip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="112" bodyfile="/Users/gaspard/git/oscit/include/oscit/location.h" bodystart="112" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_location_1accfa20d96193ac73d4fbde93c535a2ea" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref> &amp;</type>
+        <definition>const uint&amp; oscit::Location::port</definition>
+        <argsstring>() const </argsstring>
+        <name>port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="116" bodyfile="/Users/gaspard/git/oscit/include/oscit/location.h" bodystart="116" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_location_1a604f4d0118ff079a2062cd9462d833f7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Location::set_port</definition>
+        <argsstring>(uint port)</argsstring>
+        <name>set_port</name>
+        <param>
+          <type><ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref></type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="120" bodyfile="/Users/gaspard/git/oscit/include/oscit/location.h" bodystart="120" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_location_1ab12498a35ca40d16c5b3e9b8bdc4b5fc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string</type>
+        <definition>const std::string oscit::Location::inspect</definition>
+        <argsstring>() const </argsstring>
+        <name>inspect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Used for debugging: show location with ip and port. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="126"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_location_1ab89b6362661377b7e268b5bbc754da8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Location::resolve_with</definition>
+        <argsstring>(const ZeroConfBrowser *browser)</argsstring>
+        <name>resolve_with</name>
+        <param>
+          <type>const <ref refid="classoscit_1_1_zero_conf_browser" kindref="compound">ZeroConfBrowser</ref> *</type>
+          <declname>browser</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="128"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classoscit_1_1_location_1a4cd800ea81f2c05eba3a3ceb5a66e26b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned long</type>
+        <definition>static unsigned long oscit::Location::ip_from_hostname</definition>
+        <argsstring>(const char *hostname)</argsstring>
+        <name>ip_from_hostname</name>
+        <param>
+          <type>const char *</type>
+          <declname>hostname</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="130"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_location_1ad45ea455be0e29925c30a4411ae9bef1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string</type>
+        <definition>static const std::string oscit::Location::name_from_ip</definition>
+        <argsstring>(unsigned long ip)</argsstring>
+        <name>name_from_ip</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>ip</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="131"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="44" bodyfile="/Users/gaspard/git/oscit/include/oscit/location.h" bodystart="43" bodyend="160"/>
+    <listofallmembers>
+      <member refid="classoscit_1_1_location_1a5841afad1ee79c92ac172fe1c7f92c8d" prot="public" virt="non-virtual"><scope>oscit::Location</scope><name>ANY_IP</name></member>
+      <member refid="classoscit_1_1_location_1a173d42d2d14c5a4578dbfabdef5254ab" prot="public" virt="non-virtual"><scope>oscit::Location</scope><name>clear</name></member>
+      <member refid="classoscit_1_1_location_1a60e7d1a2673cbdcceb610bf20ad55a47" prot="private" virt="non-virtual"><scope>oscit::Location</scope><name>hashId</name></member>
+      <member refid="classoscit_1_1_location_1ab12498a35ca40d16c5b3e9b8bdc4b5fc" prot="public" virt="non-virtual"><scope>oscit::Location</scope><name>inspect</name></member>
+      <member refid="classoscit_1_1_location_1ab83c3a100d4876a468f0e2f684ab7980" prot="public" virt="non-virtual"><scope>oscit::Location</scope><name>ip</name></member>
+      <member refid="classoscit_1_1_location_1ac1bae3afea571e4147b55c9fc11e007c" prot="private" virt="non-virtual"><scope>oscit::Location</scope><name>ip_</name></member>
+      <member refid="classoscit_1_1_location_1a4cd800ea81f2c05eba3a3ceb5a66e26b" prot="public" virt="non-virtual"><scope>oscit::Location</scope><name>ip_from_hostname</name></member>
+      <member refid="classoscit_1_1_location_1aa328cb7355a74deb0fd563cabf4fe1b8" prot="public" virt="non-virtual"><scope>oscit::Location</scope><name>Location</name></member>
+      <member refid="classoscit_1_1_location_1a59b1aa16119bdadce3779b0276f0507f" prot="public" virt="non-virtual"><scope>oscit::Location</scope><name>Location</name></member>
+      <member refid="classoscit_1_1_location_1af2c24e47bbf4f9f3646d4a76862fd253" prot="public" virt="non-virtual"><scope>oscit::Location</scope><name>Location</name></member>
+      <member refid="classoscit_1_1_location_1a30fa9ff5d809ccf732b8075594b79290" prot="public" virt="non-virtual"><scope>oscit::Location</scope><name>Location</name></member>
+      <member refid="classoscit_1_1_location_1a594032dce5bc9727196d9e8c842aff74" prot="public" virt="non-virtual"><scope>oscit::Location</scope><name>Location</name></member>
+      <member refid="classoscit_1_1_location_1a58e122a469e571d33c4bc3d014d15b8f" prot="public" virt="non-virtual"><scope>oscit::Location</scope><name>Location</name></member>
+      <member refid="classoscit_1_1_location_1ad0f4f11e77546eca83e119ca2ebefdd0" prot="public" virt="non-virtual"><scope>oscit::Location</scope><name>Location</name></member>
+      <member refid="classoscit_1_1_location_1a468704fb846262cb7a95aec2b1bd4cfb" prot="public" virt="non-virtual"><scope>oscit::Location</scope><name>Location</name></member>
+      <member refid="classoscit_1_1_location_1ac357484f2c5d45be56444872ce29cad7" prot="public" virt="non-virtual"><scope>oscit::Location</scope><name>LOOPBACK</name></member>
+      <member refid="classoscit_1_1_location_1acb6a88b0e11ba1e83545ddd0ee9f4955" prot="public" virt="non-virtual"><scope>oscit::Location</scope><name>name</name></member>
+      <member refid="classoscit_1_1_location_1a044e24d230fce89f4a4956e04b451479" prot="private" virt="non-virtual"><scope>oscit::Location</scope><name>name_</name></member>
+      <member refid="classoscit_1_1_location_1ad45ea455be0e29925c30a4411ae9bef1" prot="public" virt="non-virtual"><scope>oscit::Location</scope><name>name_from_ip</name></member>
+      <member refid="classoscit_1_1_location_1a47ca1c41680c3db52a45125412564fae" prot="public" virt="non-virtual"><scope>oscit::Location</scope><name>NO_IP</name></member>
+      <member refid="classoscit_1_1_location_1a52dc55bc72edd85e3284095f8955889a" prot="public" virt="non-virtual"><scope>oscit::Location</scope><name>NO_PORT</name></member>
+      <member refid="classoscit_1_1_location_1a8ce06aef659949097d8143cc9f373e0d" prot="public" virt="non-virtual"><scope>oscit::Location</scope><name>operator!=</name></member>
+      <member refid="classoscit_1_1_location_1ad60c58b8a647ab11b76d001bb77b7029" prot="private" virt="non-virtual"><scope>oscit::Location</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classoscit_1_1_location_1a8593a1d9f921d98b92cc404b8ccb0b8b" prot="public" virt="non-virtual"><scope>oscit::Location</scope><name>operator==</name></member>
+      <member refid="classoscit_1_1_location_1accfa20d96193ac73d4fbde93c535a2ea" prot="public" virt="non-virtual"><scope>oscit::Location</scope><name>port</name></member>
+      <member refid="classoscit_1_1_location_1a27040408dfa9c2c8ea3052153d8376f7" prot="private" virt="non-virtual"><scope>oscit::Location</scope><name>port_</name></member>
+      <member refid="classoscit_1_1_location_1a3f237fd412bbb0944eb22724691af242" prot="public" virt="non-virtual"><scope>oscit::Location</scope><name>protocol</name></member>
+      <member refid="classoscit_1_1_location_1a842318b85cf081ee7bc36a8e1518153f" prot="private" virt="non-virtual"><scope>oscit::Location</scope><name>protocol_</name></member>
+      <member refid="classoscit_1_1_location_1ad606c85ab50d97e92fde0d2ba7fe6335" prot="private" virt="non-virtual"><scope>oscit::Location</scope><name>reference_by_hostname_</name></member>
+      <member refid="classoscit_1_1_location_1ab89b6362661377b7e268b5bbc754da8b" prot="public" virt="non-virtual"><scope>oscit::Location</scope><name>resolve_with</name></member>
+      <member refid="classoscit_1_1_location_1a604f4d0118ff079a2062cd9462d833f7" prot="public" virt="non-virtual"><scope>oscit::Location</scope><name>set_port</name></member>
+      <member refid="classoscit_1_1_location_1ac5eb062bf71ebf4ef114d256c79601f9" prot="private" virt="non-virtual"><scope>oscit::Location</scope><name>Url</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

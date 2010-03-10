@@ -1,0 +1,286 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="observable_8h" kind="file">
+    <compoundname>observable.h</compoundname>
+    <includes local="no">list</includes>
+    <includes refid="observer_8h" local="yes">oscit/observer.h</includes>
+    <includes refid="on__destroy__notifier_8h" local="yes">oscit/on_destroy_notifier.h</includes>
+    <includedby refid="object_8h" local="yes">include/oscit/object.h</includedby>
+    <incdepgraph>
+      <node id="1846">
+        <label>list</label>
+      </node>
+      <node id="1851">
+        <label>oscit/non_copyable.h</label>
+        <link refid="non__copyable_8h"/>
+      </node>
+      <node id="1847">
+        <label>oscit/observer.h</label>
+        <link refid="observer_8h"/>
+        <childnode refid="1846" relation="include">
+        </childnode>
+        <childnode refid="1848" relation="include">
+        </childnode>
+        <childnode refid="1849" relation="include">
+        </childnode>
+      </node>
+      <node id="1849">
+        <label>oscit/callback_list.h</label>
+        <link refid="callback__list_8h"/>
+        <childnode refid="1846" relation="include">
+        </childnode>
+        <childnode refid="1850" relation="include">
+        </childnode>
+        <childnode refid="1851" relation="include">
+        </childnode>
+      </node>
+      <node id="1845">
+        <label>include/oscit/observable.h</label>
+        <link refid="observable.h"/>
+        <childnode refid="1846" relation="include">
+        </childnode>
+        <childnode refid="1847" relation="include">
+        </childnode>
+        <childnode refid="1852" relation="include">
+        </childnode>
+      </node>
+      <node id="1850">
+        <label>oscit/callback.h</label>
+        <link refid="callback_8h"/>
+      </node>
+      <node id="1848">
+        <label>iostream</label>
+      </node>
+      <node id="1852">
+        <label>oscit/on_destroy_notifier.h</label>
+        <link refid="on__destroy__notifier_8h"/>
+        <childnode refid="1849" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1867">
+        <label>include/oscit/list_with_type_meta_method.h</label>
+        <link refid="list__with__type__meta__method_8h"/>
+      </node>
+      <node id="1870">
+        <label>include/oscit/object_proxy.h</label>
+        <link refid="object__proxy_8h"/>
+        <childnode refid="1868" relation="include">
+        </childnode>
+      </node>
+      <node id="1875">
+        <label>include/oscit/osc_remote_object.h</label>
+        <link refid="osc__remote__object_8h"/>
+      </node>
+      <node id="1874">
+        <label>include/oscit/type_meta_method.h</label>
+        <link refid="type__meta__method_8h"/>
+      </node>
+      <node id="1859">
+        <label>include/oscit/root.h</label>
+        <link refid="root_8h"/>
+        <childnode refid="1860" relation="include">
+        </childnode>
+        <childnode refid="1861" relation="include">
+        </childnode>
+        <childnode refid="1862" relation="include">
+        </childnode>
+        <childnode refid="1863" relation="include">
+        </childnode>
+        <childnode refid="1865" relation="include">
+        </childnode>
+        <childnode refid="1866" relation="include">
+        </childnode>
+        <childnode refid="1867" relation="include">
+        </childnode>
+        <childnode refid="1857" relation="include">
+        </childnode>
+        <childnode refid="1868" relation="include">
+        </childnode>
+        <childnode refid="1869" relation="include">
+        </childnode>
+        <childnode refid="1873" relation="include">
+        </childnode>
+        <childnode refid="1874" relation="include">
+        </childnode>
+      </node>
+      <node id="1857">
+        <label>include/oscit/oscit.h</label>
+        <link refid="oscit_8h"/>
+      </node>
+      <node id="1865">
+        <label>include/oscit/info_meta_method.h</label>
+        <link refid="info__meta__method_8h"/>
+      </node>
+      <node id="1863">
+        <label>include/oscit/file_method.h</label>
+        <link refid="file__method_8h"/>
+        <childnode refid="1864" relation="include">
+        </childnode>
+        <childnode refid="1857" relation="include">
+        </childnode>
+      </node>
+      <node id="1862">
+        <label>include/oscit/error_meta_method.h</label>
+        <link refid="error__meta__method_8h"/>
+      </node>
+      <node id="1871">
+        <label>include/oscit/osc_root_proxy.h</label>
+        <link refid="osc__root__proxy_8h"/>
+      </node>
+      <node id="1855">
+        <label>include/oscit/log_object.h</label>
+        <link refid="log__object_8h"/>
+      </node>
+      <node id="1861">
+        <label>include/oscit/call.h</label>
+        <link refid="call_8h"/>
+        <childnode refid="1857" relation="include">
+        </childnode>
+      </node>
+      <node id="1853">
+        <label>include/oscit/observable.h</label>
+        <link refid="observable.h"/>
+        <childnode refid="1854" relation="include">
+        </childnode>
+      </node>
+      <node id="1868">
+        <label>include/oscit/proxy_factory.h</label>
+        <link refid="proxy__factory_8h"/>
+        <childnode refid="1857" relation="include">
+        </childnode>
+      </node>
+      <node id="1864">
+        <label>include/oscit/hash_file_method.h</label>
+        <link refid="hash__file__method_8h"/>
+        <childnode refid="1857" relation="include">
+        </childnode>
+      </node>
+      <node id="1866">
+        <label>include/oscit/list_meta_method.h</label>
+        <link refid="list__meta__method_8h"/>
+      </node>
+      <node id="1872">
+        <label>include/oscit/zeroconf_browser.h</label>
+        <link refid="zeroconf__browser_8h"/>
+        <childnode refid="1857" relation="include">
+        </childnode>
+      </node>
+      <node id="1869">
+        <label>include/oscit/root_proxy.h</label>
+        <link refid="root__proxy_8h"/>
+        <childnode refid="1870" relation="include">
+        </childnode>
+        <childnode refid="1871" relation="include">
+        </childnode>
+        <childnode refid="1868" relation="include">
+        </childnode>
+        <childnode refid="1872" relation="include">
+        </childnode>
+      </node>
+      <node id="1854">
+        <label>include/oscit/object.h</label>
+        <link refid="object_8h"/>
+        <childnode refid="1855" relation="include">
+        </childnode>
+        <childnode refid="1856" relation="include">
+        </childnode>
+        <childnode refid="1858" relation="include">
+        </childnode>
+        <childnode refid="1870" relation="include">
+        </childnode>
+        <childnode refid="1875" relation="include">
+        </childnode>
+        <childnode refid="1857" relation="include">
+        </childnode>
+        <childnode refid="1859" relation="include">
+        </childnode>
+      </node>
+      <node id="1860">
+        <label>include/oscit/alias.h</label>
+        <link refid="alias_8h"/>
+      </node>
+      <node id="1858">
+        <label>include/oscit/object_handle.h</label>
+        <link refid="object__handle_8h"/>
+        <childnode refid="1859" relation="include">
+        </childnode>
+      </node>
+      <node id="1856">
+        <label>include/oscit/method.h</label>
+        <link refid="method_8h"/>
+        <childnode refid="1857" relation="include">
+        </childnode>
+      </node>
+      <node id="1873">
+        <label>include/oscit/tree_meta_method.h</label>
+        <link refid="tree__meta__method_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classoscit_1_1_observable" prot="public">oscit::Observable</innerclass>
+    <innernamespace refid="namespaceoscit">oscit</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/>==============================================================================</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>OSCIT<sp/>library<sp/>(http://rubyk.org/liboscit)</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2007-2010<sp/>by<sp/>Gaspard<sp/>Bucher<sp/>-<sp/>Buma<sp/>(http://teti.ch).</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"></highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/><sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/><sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/><sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/><sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"></highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/><sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"></highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/><sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/><sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/><sp/><sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/><sp/><sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/><sp/><sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/><sp/><sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/><sp/><sp/>THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"></highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/><sp/>==============================================================================</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>OSCIT_INCLUDE_OSCIT_OBSERVABLE_H_</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>OSCIT_INCLUDE_OSCIT_OBSERVABLE_H_</highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;list&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="observer_8h" kindref="compound">oscit/observer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="on__destroy__notifier_8h" kindref="compound">oscit/on_destroy_notifier.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">oscit<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Callback;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="classoscit_1_1_observable" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classoscit_1_1_observable" kindref="compound">Observable</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_observer" kindref="compound">Observer</ref><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="47" refid="classoscit_1_1_observable_1add7ad7a51860b63b558685c950f2df63" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_observable_1add7ad7a51860b63b558685c950f2df63" kindref="member">Observable</ref>()<sp/>:<sp/>destruction_notifier_(this)<sp/>{}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="classoscit_1_1_observable_1af26c400580303db64255411c8378a5fc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_observable_1af26c400580303db64255411c8378a5fc" kindref="member">adopt_callback_on_destroy</ref>(<ref refid="classoscit_1_1_callback" kindref="compound">Callback</ref><sp/>*callback)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>destruction_notifier_.<ref refid="classoscit_1_1_on_destroy_notifier_1a03b02dd15f2141479dd7dfe68498b262" kindref="member">adopt_callback</ref>(callback);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_on_destroy_notifier" kindref="compound">OnDestroyNotifier</ref><sp/>destruction_notifier_;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>oscit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>OSCIT_INCLUDE_OSCIT_OBSERVABLE_H_</highlight></codeline>
+    </programlisting>
+    <location file="/Users/gaspard/git/oscit/include/oscit/observable.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="todo" kind="page">
+    <compoundname>todo</compoundname>
+    <title>Todo List</title>
+    <detaileddescription>
+<para><anchor id="todo_1_todo000001"/> <variablelist>
+<varlistentry><term>Member <ref refid="classoscit_1_1_midi_message_1a2438adcd7c7bd2fc95ecd03b4a265410" kindref="member">oscit::MidiMessage::Note</ref> (int note, int velocity=80, int length=500, int channel=1, time_t wait=0) </term></varlistentry>
+<listitem><para>optimize object creation with a pool ? </para></listitem>
+</variablelist>
+</para><para><anchor id="todo_1_todo000002"/> <variablelist>
+<varlistentry><term>Member <ref refid="classoscit_1_1_midi_message_1a33696e264eea5de6b69c9c5b7e6952a9" kindref="member">oscit::MidiMessage::set_as_note</ref> (int note, int velocity=80, int length=500, int channel=1, time_t wait=0) </term></varlistentry>
+<listitem><para>optimize object creation with a pool ? </para></listitem>
+</variablelist>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

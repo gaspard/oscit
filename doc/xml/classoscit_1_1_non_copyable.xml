@@ -1,0 +1,316 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classoscit_1_1_non_copyable" kind="class" prot="public">
+    <compoundname>oscit::NonCopyable</compoundname>
+    <derivedcompoundref refid="classoscit_1_1_callback_list" prot="private" virt="non-virtual">oscit::CallbackList</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_c_reference_counted" prot="private" virt="non-virtual">oscit::CReferenceCounted</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_mutex" prot="private" virt="non-virtual">oscit::Mutex</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_scoped_lock" prot="private" virt="non-virtual">oscit::ScopedLock</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_scoped_read" prot="private" virt="non-virtual">oscit::ScopedRead</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_scoped_retain" prot="private" virt="non-virtual">oscit::ScopedRetain</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_scoped_unlock" prot="private" virt="non-virtual">oscit::ScopedUnlock</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_scoped_write" prot="private" virt="non-virtual">oscit::ScopedWrite</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_semaphore" prot="private" virt="non-virtual">oscit::Semaphore</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_time_ref" prot="private" virt="non-virtual">oscit::TimeRef</derivedcompoundref>
+    <includes refid="non__copyable_8h" local="no">non_copyable.h</includes>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classoscit_1_1_non_copyable_1a1f0c0fedea54b6e20aeefbeefdce67f7" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::NonCopyable::NonCopyable</definition>
+        <argsstring>()</argsstring>
+        <name>NonCopyable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/non_copyable.h" line="37" bodyfile="/Users/gaspard/git/oscit/include/oscit/non_copyable.h" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_non_copyable_1ad21ed15dea6d4700732a2cbc7f98e20a" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::NonCopyable::~NonCopyable</definition>
+        <argsstring>()</argsstring>
+        <name>~NonCopyable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/non_copyable.h" line="38" bodyfile="/Users/gaspard/git/oscit/include/oscit/non_copyable.h" bodystart="38" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classoscit_1_1_non_copyable_1a75cd0d0d8e9d382f1413dd1e9fedb008" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>oscit::NonCopyable::NonCopyable</definition>
+        <argsstring>(const NonCopyable &amp;other)</argsstring>
+        <name>NonCopyable</name>
+        <param>
+          <type>const <ref refid="classoscit_1_1_non_copyable" kindref="compound">NonCopyable</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/non_copyable.h" line="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_non_copyable_1a14f971b0791c5242d6a4037c2b2a7ba4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classoscit_1_1_non_copyable" kindref="compound">NonCopyable</ref> &amp;</type>
+        <definition>NonCopyable&amp; oscit::NonCopyable::operator=</definition>
+        <argsstring>(const NonCopyable &amp;other)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classoscit_1_1_non_copyable" kindref="compound">NonCopyable</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/non_copyable.h" line="41"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="697">
+        <label>oscit::OscMapCommand</label>
+        <link refid="classoscit_1_1_osc_map_command"/>
+        <childnode refid="696" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="687">
+        <label>oscit::OscRemoteObject</label>
+        <link refid="classoscit_1_1_osc_remote_object"/>
+        <childnode refid="674" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="688">
+        <label>oscit::Root</label>
+        <link refid="classoscit_1_1_root"/>
+        <childnode refid="674" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="677">
+        <label>oscit::ErrorMetaMethod</label>
+        <link refid="classoscit_1_1_error_meta_method"/>
+        <childnode refid="674" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="703">
+        <label>oscit::ScopedUnlock</label>
+        <link refid="classoscit_1_1_scoped_unlock"/>
+        <childnode refid="670" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="701">
+        <label>oscit::ScopedRead</label>
+        <link refid="classoscit_1_1_scoped_read"/>
+        <childnode refid="670" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="693">
+        <label>oscit::Mutex</label>
+        <link refid="classoscit_1_1_mutex"/>
+        <childnode refid="670" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="679">
+        <label>oscit::HashFileMethod</label>
+        <link refid="classoscit_1_1_hash_file_method"/>
+        <childnode refid="674" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="706">
+        <label>oscit::TimeRef</label>
+        <link refid="classoscit_1_1_time_ref"/>
+        <childnode refid="670" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="675">
+        <label>oscit::Alias</label>
+        <link refid="classoscit_1_1_alias"/>
+        <childnode refid="674" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="694">
+        <label>oscit::Thread</label>
+        <link refid="classoscit_1_1_thread"/>
+        <childnode refid="693" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="685">
+        <label>oscit::TMethod&lt; T, Tmethod &gt;</label>
+        <link refid="classoscit_1_1_t_method"/>
+        <childnode refid="684" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="670">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+      <node id="699">
+        <label>oscit::ZeroConfRegistration</label>
+        <link refid="classoscit_1_1_zero_conf_registration"/>
+        <childnode refid="693" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="704">
+        <label>oscit::ScopedWrite</label>
+        <link refid="classoscit_1_1_scoped_write"/>
+        <childnode refid="670" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="700">
+        <label>oscit::ScopedLock</label>
+        <link refid="classoscit_1_1_scoped_lock"/>
+        <childnode refid="670" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="684">
+        <label>oscit::Method</label>
+        <link refid="classoscit_1_1_method"/>
+        <childnode refid="674" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="692">
+        <label>oscit::TypeMetaMethod</label>
+        <link refid="classoscit_1_1_type_meta_method"/>
+        <childnode refid="674" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="681">
+        <label>oscit::ListMetaMethod</label>
+        <link refid="classoscit_1_1_list_meta_method"/>
+        <childnode refid="674" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="683">
+        <label>oscit::LogObject</label>
+        <link refid="classoscit_1_1_log_object"/>
+        <childnode refid="674" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="689">
+        <label>oscit::RootProxy</label>
+        <link refid="classoscit_1_1_root_proxy"/>
+        <childnode refid="688" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="672">
+        <label>oscit::OnDestroyNotifier</label>
+        <link refid="classoscit_1_1_on_destroy_notifier"/>
+        <childnode refid="671" relation="public-inheritance">
+        </childnode>
+        <childnode refid="671" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="680">
+        <label>oscit::InfoMetaMethod</label>
+        <link refid="classoscit_1_1_info_meta_method"/>
+        <childnode refid="674" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="698">
+        <label>oscit::ZeroConfBrowser</label>
+        <link refid="classoscit_1_1_zero_conf_browser"/>
+        <childnode refid="693" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="691">
+        <label>oscit::TreeMetaMethod</label>
+        <link refid="classoscit_1_1_tree_meta_method"/>
+        <childnode refid="674" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="678">
+        <label>oscit::FileMethod</label>
+        <link refid="classoscit_1_1_file_method"/>
+        <childnode refid="674" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="705">
+        <label>oscit::Semaphore</label>
+        <link refid="classoscit_1_1_semaphore"/>
+        <childnode refid="670" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="673">
+        <label>oscit::CReferenceCounted</label>
+        <link refid="classoscit_1_1_c_reference_counted"/>
+        <childnode refid="670" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="696">
+        <label>oscit::OscCommand</label>
+        <link refid="classoscit_1_1_osc_command"/>
+        <childnode refid="695" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="674">
+        <label>oscit::Object</label>
+        <link refid="classoscit_1_1_object"/>
+        <childnode refid="673" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="682">
+        <label>oscit::ListWithTypeMetaMethod</label>
+        <link refid="classoscit_1_1_list_with_type_meta_method"/>
+        <childnode refid="674" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="686">
+        <label>oscit::ObjectProxy</label>
+        <link refid="classoscit_1_1_object_proxy"/>
+        <childnode refid="674" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="676">
+        <label>oscit::ClassMethod</label>
+        <link refid="classoscit_1_1_class_method"/>
+        <childnode refid="674" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="690">
+        <label>oscit::OscRootProxy</label>
+        <link refid="classoscit_1_1_osc_root_proxy"/>
+        <childnode refid="689" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="702">
+        <label>oscit::ScopedRetain</label>
+        <link refid="classoscit_1_1_scoped_retain"/>
+        <childnode refid="670" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="695">
+        <label>oscit::Command</label>
+        <link refid="classoscit_1_1_command"/>
+        <childnode refid="694" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="671">
+        <label>oscit::CallbackList</label>
+        <link refid="classoscit_1_1_callback_list"/>
+        <childnode refid="670" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/non_copyable.h" line="35" bodyfile="/Users/gaspard/git/oscit/include/oscit/non_copyable.h" bodystart="35" bodyend="42"/>
+    <listofallmembers>
+      <member refid="classoscit_1_1_non_copyable_1a1f0c0fedea54b6e20aeefbeefdce67f7" prot="protected" virt="non-virtual"><scope>oscit::NonCopyable</scope><name>NonCopyable</name></member>
+      <member refid="classoscit_1_1_non_copyable_1a75cd0d0d8e9d382f1413dd1e9fedb008" prot="private" virt="non-virtual"><scope>oscit::NonCopyable</scope><name>NonCopyable</name></member>
+      <member refid="classoscit_1_1_non_copyable_1a14f971b0791c5242d6a4037c2b2a7ba4" prot="private" virt="non-virtual"><scope>oscit::NonCopyable</scope><name>operator=</name></member>
+      <member refid="classoscit_1_1_non_copyable_1ad21ed15dea6d4700732a2cbc7f98e20a" prot="protected" virt="non-virtual"><scope>oscit::NonCopyable</scope><name>~NonCopyable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

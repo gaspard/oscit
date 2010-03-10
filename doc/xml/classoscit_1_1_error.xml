@@ -1,0 +1,309 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classoscit_1_1_error" kind="class" prot="public">
+    <compoundname>oscit::Error</compoundname>
+    <basecompoundref refid="classoscit_1_1_reference_counted" prot="public" virt="non-virtual">oscit::ReferenceCounted</basecompoundref>
+    <includes refid="error_8h" local="no">error.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classoscit_1_1_error_1aeceedf6e1a7d48a588516ce2b1983d6f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class Value</definition>
+        <argsstring></argsstring>
+        <name>Value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/error.h" line="87" bodyfile="/Users/gaspard/git/oscit/include/oscit/error.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classoscit_1_1_error_1ab6e07e6de4b1ce1081098dc1471dc906" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceoscit_1ab80f9f57bfa30aea952660b674e576c9" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode oscit::Error::code_</definition>
+        <argsstring></argsstring>
+        <name>code_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/error.h" line="88" bodyfile="/Users/gaspard/git/oscit/include/oscit/error.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_error_1afdbe3d41e5a3bd72daa982f3cec1a78d" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string oscit::Error::message_</definition>
+        <argsstring></argsstring>
+        <name>message_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/error.h" line="89" bodyfile="/Users/gaspard/git/oscit/include/oscit/error.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classoscit_1_1_error_1a10d0887e33558fe884e9658115f7e83d" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Error::Error</definition>
+        <argsstring>()</argsstring>
+        <name>Error</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/error.h" line="55" bodyfile="/Users/gaspard/git/oscit/include/oscit/error.h" bodystart="55" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_error_1a8c6058741fce77842eb56a77a9d2f332" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Error::Error</definition>
+        <argsstring>(ErrorCode code, const char *message)</argsstring>
+        <name>Error</name>
+        <param>
+          <type><ref refid="namespaceoscit_1ab80f9f57bfa30aea952660b674e576c9" kindref="member">ErrorCode</ref></type>
+          <declname>code</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/error.h" line="56" bodyfile="/Users/gaspard/git/oscit/include/oscit/error.h" bodystart="56" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_error_1aac72c2825b626d69d75ed96cd8d2d56e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Error::Error</definition>
+        <argsstring>(const Error &amp;other)</argsstring>
+        <name>Error</name>
+        <param>
+          <type>const <ref refid="classoscit_1_1_error" kindref="compound">Error</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copy constructor (needed because <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> relies on it in its own copy constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/error.h" line="59" bodyfile="/Users/gaspard/git/oscit/include/oscit/error.h" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_error_1a941f155be9cf603b9ee7f8a979c4bdcd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* oscit::Error::type_tag</definition>
+        <argsstring>() const </argsstring>
+        <name>type_tag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/error.h" line="61" bodyfile="/Users/gaspard/git/oscit/include/oscit/error.h" bodystart="61" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_error_1acf102ec2f1a28529bd1984e695ebd167" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespaceoscit_1acdd0211767952c9d583a6206c38dbd5f" kindref="member">TypeTagID</ref></type>
+        <definition>TypeTagID oscit::Error::type_id</definition>
+        <argsstring>() const </argsstring>
+        <name>type_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/error.h" line="63" bodyfile="/Users/gaspard/git/oscit/include/oscit/error.h" bodystart="63" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_error_1a36f05cb862c9c686f841cf724331a1e1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespaceoscit_1ab80f9f57bfa30aea952660b674e576c9" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode oscit::Error::code</definition>
+        <argsstring>() const </argsstring>
+        <name>code</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/error.h" line="65" bodyfile="/Users/gaspard/git/oscit/include/oscit/error.h" bodystart="65" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_error_1a521efb8df5a02cb377e6f49ca4f9075b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Error::set_code</definition>
+        <argsstring>(ErrorCode code)</argsstring>
+        <name>set_code</name>
+        <param>
+          <type><ref refid="namespaceoscit_1ab80f9f57bfa30aea952660b674e576c9" kindref="member">ErrorCode</ref></type>
+          <declname>code</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/error.h" line="67" bodyfile="/Users/gaspard/git/oscit/include/oscit/error.h" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_error_1a4cb3109c32cd7550ed5591a929ea152e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* oscit::Error::str</definition>
+        <argsstring>() const </argsstring>
+        <name>str</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/error.h" line="69" bodyfile="/Users/gaspard/git/oscit/include/oscit/error.h" bodystart="69" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_error_1addf18db2e0aef728c56ce440e946d912" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string&amp; oscit::Error::message</definition>
+        <argsstring>() const </argsstring>
+        <name>message</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/error.h" line="71" bodyfile="/Users/gaspard/git/oscit/include/oscit/error.h" bodystart="71" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_error_1a4bb3ba2d5746a57879f7498e76bc6498" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Error::set_message</definition>
+        <argsstring>(const char *string)</argsstring>
+        <name>set_message</name>
+        <param>
+          <type>const char *</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/error.h" line="73" bodyfile="/Users/gaspard/git/oscit/include/oscit/error.h" bodystart="73" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_error_1a000ffb3c9e8d4e06f207eaf146951244" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classoscit_1_1_error" kindref="compound">Error</ref> &amp;</type>
+        <definition>Error&amp; oscit::Error::append</definition>
+        <argsstring>(const char *str)</argsstring>
+        <name>append</name>
+        <param>
+          <type>const char *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/error.h" line="75" bodyfile="/Users/gaspard/git/oscit/include/oscit/error.h" bodystart="75" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_error_1a9803eaa068633771dcaf6753eb3cc98d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Error::set_message</definition>
+        <argsstring>(const std::string &amp;string)</argsstring>
+        <name>set_message</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/error.h" line="80" bodyfile="/Users/gaspard/git/oscit/include/oscit/error.h" bodystart="80" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_error_1aec5c80794501cc75f11f00d3fa87e6f5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool oscit::Error::operator==</definition>
+        <argsstring>(const Error &amp;other) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classoscit_1_1_error" kindref="compound">Error</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/error.h" line="82" bodyfile="/Users/gaspard/git/oscit/include/oscit/error.h" bodystart="82" bodyend="84"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A <ref refid="classoscit_1_1_error" kindref="compound">Error</ref> stores an error description with an error code. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="200">
+        <label>oscit::Error</label>
+        <link refid="classoscit_1_1_error"/>
+        <childnode refid="201" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="201">
+        <label>oscit::ReferenceCounted</label>
+        <link refid="classoscit_1_1_reference_counted"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="202">
+        <label>oscit::Error</label>
+        <link refid="classoscit_1_1_error"/>
+        <childnode refid="203" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="203">
+        <label>oscit::ReferenceCounted</label>
+        <link refid="classoscit_1_1_reference_counted"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/error.h" line="53" bodyfile="/Users/gaspard/git/oscit/include/oscit/error.h" bodystart="52" bodyend="90"/>
+    <listofallmembers>
+      <member refid="classoscit_1_1_reference_counted_1af382a537a3969b11530020715863e75c" prot="public" virt="non-virtual"><scope>oscit::Error</scope><name>acquire</name></member>
+      <member refid="classoscit_1_1_error_1a000ffb3c9e8d4e06f207eaf146951244" prot="public" virt="non-virtual"><scope>oscit::Error</scope><name>append</name></member>
+      <member refid="classoscit_1_1_error_1a36f05cb862c9c686f841cf724331a1e1" prot="public" virt="non-virtual"><scope>oscit::Error</scope><name>code</name></member>
+      <member refid="classoscit_1_1_error_1ab6e07e6de4b1ce1081098dc1471dc906" prot="private" virt="non-virtual"><scope>oscit::Error</scope><name>code_</name></member>
+      <member refid="classoscit_1_1_error_1a10d0887e33558fe884e9658115f7e83d" prot="public" virt="non-virtual"><scope>oscit::Error</scope><name>Error</name></member>
+      <member refid="classoscit_1_1_error_1a8c6058741fce77842eb56a77a9d2f332" prot="public" virt="non-virtual"><scope>oscit::Error</scope><name>Error</name></member>
+      <member refid="classoscit_1_1_error_1aac72c2825b626d69d75ed96cd8d2d56e" prot="public" virt="non-virtual"><scope>oscit::Error</scope><name>Error</name></member>
+      <member refid="classoscit_1_1_error_1addf18db2e0aef728c56ce440e946d912" prot="public" virt="non-virtual"><scope>oscit::Error</scope><name>message</name></member>
+      <member refid="classoscit_1_1_error_1afdbe3d41e5a3bd72daa982f3cec1a78d" prot="private" virt="non-virtual"><scope>oscit::Error</scope><name>message_</name></member>
+      <member refid="classoscit_1_1_error_1aec5c80794501cc75f11f00d3fa87e6f5" prot="public" virt="non-virtual"><scope>oscit::Error</scope><name>operator==</name></member>
+      <member refid="classoscit_1_1_reference_counted_1a8cf48a9a79dd47523eab197ec6c33f69" prot="public" virt="non-virtual"><scope>oscit::Error</scope><name>ref_count</name></member>
+      <member refid="classoscit_1_1_reference_counted_1a9be52b83e9ad4edee007eea34f5089ff" prot="protected" virt="non-virtual"><scope>oscit::Error</scope><name>ref_count_</name></member>
+      <member refid="classoscit_1_1_reference_counted_1a1e063507f60cf8b463772c47a8626f4a" prot="public" virt="non-virtual"><scope>oscit::Error</scope><name>ReferenceCounted</name></member>
+      <member refid="classoscit_1_1_reference_counted_1a84232e7ca91f7495b935cbecb8d1bb75" prot="public" virt="non-virtual"><scope>oscit::Error</scope><name>release</name></member>
+      <member refid="classoscit_1_1_reference_counted_1a34971a082c266cd111fa8c3fa6536e3f" prot="public" virt="non-virtual"><scope>oscit::Error</scope><name>release</name></member>
+      <member refid="classoscit_1_1_reference_counted_1ab837868cf995ca83f797dd48d85e9f3c" prot="public" virt="non-virtual"><scope>oscit::Error</scope><name>retain</name></member>
+      <member refid="classoscit_1_1_error_1a521efb8df5a02cb377e6f49ca4f9075b" prot="public" virt="non-virtual"><scope>oscit::Error</scope><name>set_code</name></member>
+      <member refid="classoscit_1_1_error_1a4bb3ba2d5746a57879f7498e76bc6498" prot="public" virt="non-virtual"><scope>oscit::Error</scope><name>set_message</name></member>
+      <member refid="classoscit_1_1_error_1a9803eaa068633771dcaf6753eb3cc98d" prot="public" virt="non-virtual"><scope>oscit::Error</scope><name>set_message</name></member>
+      <member refid="classoscit_1_1_error_1a4cb3109c32cd7550ed5591a929ea152e" prot="public" virt="non-virtual"><scope>oscit::Error</scope><name>str</name></member>
+      <member refid="classoscit_1_1_error_1acf102ec2f1a28529bd1984e695ebd167" prot="public" virt="non-virtual"><scope>oscit::Error</scope><name>type_id</name></member>
+      <member refid="classoscit_1_1_error_1a941f155be9cf603b9ee7f8a979c4bdcd" prot="public" virt="non-virtual"><scope>oscit::Error</scope><name>type_tag</name></member>
+      <member refid="classoscit_1_1_error_1aeceedf6e1a7d48a588516ce2b1983d6f" prot="private" virt="non-virtual"><scope>oscit::Error</scope><name>Value</name></member>
+      <member refid="classoscit_1_1_reference_counted_1aefe81cffcd79ab2756d637d6f9dc2377" prot="public" virt="virtual"><scope>oscit::Error</scope><name>~ReferenceCounted</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classoscit_1_1_typed" kind="class" prot="public">
+    <compoundname>oscit::Typed</compoundname>
+    <derivedcompoundref refid="classoscit_1_1_mutex" prot="public" virt="non-virtual">oscit::Mutex</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_object" prot="public" virt="non-virtual">oscit::Object</derivedcompoundref>
+    <includes refid="typed_8h" local="no">typed.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classoscit_1_1_typed_1ab92fb67d52050227718772b14f74b1b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual oscit::Typed::~Typed</definition>
+        <argsstring>()</argsstring>
+        <name>~Typed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/typed.h" line="82" bodyfile="/Users/gaspard/git/oscit/include/oscit/typed.h" bodystart="82" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_typed_1a4aba9ae57b258b6d678c685d190ec281" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool oscit::Typed::is_a</definition>
+        <argsstring>(const char *path)</argsstring>
+        <name>is_a</name>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/typed.h" line="94" bodyfile="/Users/gaspard/git/oscit/include/oscit/typed.h" bodystart="94" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_typed_1a9d91142c1ff172635833f4b2a06d5d3b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string</type>
+        <definition>const std::string oscit::Typed::class_name</definition>
+        <argsstring>() const </argsstring>
+        <name>class_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/typed.h" line="105" bodyfile="/Users/gaspard/git/oscit/include/oscit/typed.h" bodystart="105" bodyend="109"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classoscit_1_1_typed_1a72ecaff553f3b9028dd57afee597dc44" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>T *</type>
+        <definition>static T* oscit::Typed::type_cast</definition>
+        <argsstring>(Typed *obj)</argsstring>
+        <name>type_cast</name>
+        <param>
+          <type><ref refid="classoscit_1_1_typed" kindref="compound">Typed</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/typed.h" line="85" bodyfile="/Users/gaspard/git/oscit/include/oscit/typed.h" bodystart="85" bodyend="92"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1428">
+        <label>oscit::OscMapCommand</label>
+        <link refid="classoscit_1_1_osc_map_command"/>
+        <childnode refid="1427" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1444">
+        <label>oscit::OscRemoteObject</label>
+        <link refid="classoscit_1_1_osc_remote_object"/>
+        <childnode refid="1431" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1445">
+        <label>oscit::Root</label>
+        <link refid="classoscit_1_1_root"/>
+        <childnode refid="1431" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1434">
+        <label>oscit::ErrorMetaMethod</label>
+        <link refid="classoscit_1_1_error_meta_method"/>
+        <childnode refid="1431" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1424">
+        <label>oscit::Mutex</label>
+        <link refid="classoscit_1_1_mutex"/>
+        <childnode refid="1423" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1436">
+        <label>oscit::HashFileMethod</label>
+        <link refid="classoscit_1_1_hash_file_method"/>
+        <childnode refid="1431" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1432">
+        <label>oscit::Alias</label>
+        <link refid="classoscit_1_1_alias"/>
+        <childnode refid="1431" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1425">
+        <label>oscit::Thread</label>
+        <link refid="classoscit_1_1_thread"/>
+        <childnode refid="1424" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1442">
+        <label>oscit::TMethod&lt; T, Tmethod &gt;</label>
+        <link refid="classoscit_1_1_t_method"/>
+        <childnode refid="1441" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1430">
+        <label>oscit::ZeroConfRegistration</label>
+        <link refid="classoscit_1_1_zero_conf_registration"/>
+        <childnode refid="1424" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1441">
+        <label>oscit::Method</label>
+        <link refid="classoscit_1_1_method"/>
+        <childnode refid="1431" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1449">
+        <label>oscit::TypeMetaMethod</label>
+        <link refid="classoscit_1_1_type_meta_method"/>
+        <childnode refid="1431" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1438">
+        <label>oscit::ListMetaMethod</label>
+        <link refid="classoscit_1_1_list_meta_method"/>
+        <childnode refid="1431" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1440">
+        <label>oscit::LogObject</label>
+        <link refid="classoscit_1_1_log_object"/>
+        <childnode refid="1431" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1446">
+        <label>oscit::RootProxy</label>
+        <link refid="classoscit_1_1_root_proxy"/>
+        <childnode refid="1445" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1437">
+        <label>oscit::InfoMetaMethod</label>
+        <link refid="classoscit_1_1_info_meta_method"/>
+        <childnode refid="1431" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1429">
+        <label>oscit::ZeroConfBrowser</label>
+        <link refid="classoscit_1_1_zero_conf_browser"/>
+        <childnode refid="1424" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1448">
+        <label>oscit::TreeMetaMethod</label>
+        <link refid="classoscit_1_1_tree_meta_method"/>
+        <childnode refid="1431" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1435">
+        <label>oscit::FileMethod</label>
+        <link refid="classoscit_1_1_file_method"/>
+        <childnode refid="1431" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1427">
+        <label>oscit::OscCommand</label>
+        <link refid="classoscit_1_1_osc_command"/>
+        <childnode refid="1426" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1431">
+        <label>oscit::Object</label>
+        <link refid="classoscit_1_1_object"/>
+        <childnode refid="1423" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1439">
+        <label>oscit::ListWithTypeMetaMethod</label>
+        <link refid="classoscit_1_1_list_with_type_meta_method"/>
+        <childnode refid="1431" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1443">
+        <label>oscit::ObjectProxy</label>
+        <link refid="classoscit_1_1_object_proxy"/>
+        <childnode refid="1431" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1433">
+        <label>oscit::ClassMethod</label>
+        <link refid="classoscit_1_1_class_method"/>
+        <childnode refid="1431" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1447">
+        <label>oscit::OscRootProxy</label>
+        <link refid="classoscit_1_1_osc_root_proxy"/>
+        <childnode refid="1446" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="1423">
+        <label>oscit::Typed</label>
+        <link refid="classoscit_1_1_typed"/>
+      </node>
+      <node id="1426">
+        <label>oscit::Command</label>
+        <link refid="classoscit_1_1_command"/>
+        <childnode refid="1425" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/typed.h" line="79" bodyfile="/Users/gaspard/git/oscit/include/oscit/typed.h" bodystart="78" bodyend="111"/>
+    <listofallmembers>
+      <member refid="classoscit_1_1_typed_1a9d91142c1ff172635833f4b2a06d5d3b" prot="public" virt="non-virtual"><scope>oscit::Typed</scope><name>class_name</name></member>
+      <member refid="classoscit_1_1_typed_1a4aba9ae57b258b6d678c685d190ec281" prot="public" virt="non-virtual"><scope>oscit::Typed</scope><name>is_a</name></member>
+      <member refid="classoscit_1_1_typed_1a72ecaff553f3b9028dd57afee597dc44" prot="public" virt="non-virtual"><scope>oscit::Typed</scope><name>type_cast</name></member>
+      <member refid="classoscit_1_1_typed_1ab92fb67d52050227718772b14f74b1b6" prot="public" virt="virtual"><scope>oscit::Typed</scope><name>~Typed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

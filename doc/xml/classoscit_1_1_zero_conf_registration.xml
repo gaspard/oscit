@@ -1,0 +1,217 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classoscit_1_1_zero_conf_registration" kind="class" prot="public">
+    <compoundname>oscit::ZeroConfRegistration</compoundname>
+    <basecompoundref refid="classoscit_1_1_mutex" prot="public" virt="non-virtual">oscit::Mutex</basecompoundref>
+    <includes refid="zeroconf__registration_8h" local="no">zeroconf_registration.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classoscit_1_1_zero_conf_registration_1ac9986c71d9dbd97b71c238d6b6b5d056" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string oscit::ZeroConfRegistration::name_</definition>
+        <argsstring></argsstring>
+        <name>name_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_registration.h" line="57" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_registration.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_zero_conf_registration_1a99d24fc0102a374eda2d7644659a398d" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string oscit::ZeroConfRegistration::host_</definition>
+        <argsstring></argsstring>
+        <name>host_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_registration.h" line="58" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_registration.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_zero_conf_registration_1ab0777fdc34e0e0187a0422e9dc581a7b" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string oscit::ZeroConfRegistration::service_type_</definition>
+        <argsstring></argsstring>
+        <name>service_type_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_registration.h" line="59" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_registration.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_zero_conf_registration_1a70942f04e2be8f6f4fae225434859b3a" prot="protected" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t oscit::ZeroConfRegistration::port_</definition>
+        <argsstring></argsstring>
+        <name>port_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_registration.h" line="60" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_registration.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classoscit_1_1_zero_conf_registration_1a7c5e734b6460e6c0a69f051a52c0a886" prot="private" static="no" mutable="no">
+        <type>Implementation *</type>
+        <definition>Implementation* oscit::ZeroConfRegistration::impl_</definition>
+        <argsstring></argsstring>
+        <name>impl_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_registration.h" line="64" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_registration.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classoscit_1_1_zero_conf_registration_1adf4702fc786f56101fb4d383d91911d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>oscit::ZeroConfRegistration::ZeroConfRegistration</definition>
+        <argsstring>(const std::string &amp;name, const char *service_type, uint16_t port)</argsstring>
+        <name>ZeroConfRegistration</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>service_type</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_registration.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_zero_conf_registration_1a7758320eeb660293b2bb05d6add8a745" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual oscit::ZeroConfRegistration::~ZeroConfRegistration</definition>
+        <argsstring>()</argsstring>
+        <name>~ZeroConfRegistration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_registration.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_zero_conf_registration_1a35562950ed746f9eaae6cd3d59feb7d1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void oscit::ZeroConfRegistration::registration_done</definition>
+        <argsstring>()</argsstring>
+        <name>registration_done</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_registration.h" line="48" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_registration.h" bodystart="48" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classoscit_1_1_zero_conf_registration_1a9d719f7082bc6ac85bf2dd9b08ff9ef6" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void oscit::ZeroConfRegistration::stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method *must* be called from sub-classes in their destructors to make sure the callback (registration_done) is not called in the middle of a class destruction. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_registration.h" line="55"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class let&apos;s you easily register an application as providing a certain type of service. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1566">
+        <label>oscit::Mutex</label>
+        <link refid="classoscit_1_1_mutex"/>
+        <childnode refid="1567" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1568" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="1568">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+      <node id="1565">
+        <label>oscit::ZeroConfRegistration</label>
+        <link refid="classoscit_1_1_zero_conf_registration"/>
+        <childnode refid="1566" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1567">
+        <label>oscit::Typed</label>
+        <link refid="classoscit_1_1_typed"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1570">
+        <label>oscit::Mutex</label>
+        <link refid="classoscit_1_1_mutex"/>
+        <childnode refid="1571" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1572" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="1572">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+      <node id="1569">
+        <label>oscit::ZeroConfRegistration</label>
+        <link refid="classoscit_1_1_zero_conf_registration"/>
+        <childnode refid="1570" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1571">
+        <label>oscit::Typed</label>
+        <link refid="classoscit_1_1_typed"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_registration.h" line="42" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_registration.h" bodystart="42" bodyend="65"/>
+    <listofallmembers>
+      <member refid="classoscit_1_1_typed_1a9d91142c1ff172635833f4b2a06d5d3b" prot="public" virt="non-virtual"><scope>oscit::ZeroConfRegistration</scope><name>class_name</name></member>
+      <member refid="classoscit_1_1_zero_conf_registration_1a99d24fc0102a374eda2d7644659a398d" prot="protected" virt="non-virtual"><scope>oscit::ZeroConfRegistration</scope><name>host_</name></member>
+      <member refid="classoscit_1_1_zero_conf_registration_1a7c5e734b6460e6c0a69f051a52c0a886" prot="private" virt="non-virtual"><scope>oscit::ZeroConfRegistration</scope><name>impl_</name></member>
+      <member refid="classoscit_1_1_typed_1a4aba9ae57b258b6d678c685d190ec281" prot="public" virt="non-virtual"><scope>oscit::ZeroConfRegistration</scope><name>is_a</name></member>
+      <member refid="classoscit_1_1_mutex_1a016dda2b6b467aa8e3a866be3bd0f86e" prot="public" virt="non-virtual"><scope>oscit::ZeroConfRegistration</scope><name>lock</name></member>
+      <member refid="classoscit_1_1_mutex_1ae41e751604af40fc4ed78d16c63be52f" prot="public" virt="non-virtual"><scope>oscit::ZeroConfRegistration</scope><name>Mutex</name></member>
+      <member refid="classoscit_1_1_zero_conf_registration_1ac9986c71d9dbd97b71c238d6b6b5d056" prot="protected" virt="non-virtual"><scope>oscit::ZeroConfRegistration</scope><name>name_</name></member>
+      <member refid="classoscit_1_1_zero_conf_registration_1a70942f04e2be8f6f4fae225434859b3a" prot="protected" virt="non-virtual"><scope>oscit::ZeroConfRegistration</scope><name>port_</name></member>
+      <member refid="classoscit_1_1_zero_conf_registration_1a35562950ed746f9eaae6cd3d59feb7d1" prot="public" virt="virtual"><scope>oscit::ZeroConfRegistration</scope><name>registration_done</name></member>
+      <member refid="classoscit_1_1_zero_conf_registration_1ab0777fdc34e0e0187a0422e9dc581a7b" prot="protected" virt="non-virtual"><scope>oscit::ZeroConfRegistration</scope><name>service_type_</name></member>
+      <member refid="classoscit_1_1_zero_conf_registration_1a9d719f7082bc6ac85bf2dd9b08ff9ef6" prot="protected" virt="virtual"><scope>oscit::ZeroConfRegistration</scope><name>stop</name></member>
+      <member refid="classoscit_1_1_typed_1a72ecaff553f3b9028dd57afee597dc44" prot="public" virt="non-virtual"><scope>oscit::ZeroConfRegistration</scope><name>type_cast</name></member>
+      <member refid="classoscit_1_1_mutex_1a4eb03cce21055fcfd8ae3462661fac6f" prot="public" virt="non-virtual"><scope>oscit::ZeroConfRegistration</scope><name>unlock</name></member>
+      <member refid="classoscit_1_1_zero_conf_registration_1adf4702fc786f56101fb4d383d91911d6" prot="public" virt="non-virtual"><scope>oscit::ZeroConfRegistration</scope><name>ZeroConfRegistration</name></member>
+      <member refid="classoscit_1_1_mutex_1abc6c403ed2bd809dead4e1307e18cc65" prot="public" virt="virtual"><scope>oscit::ZeroConfRegistration</scope><name>~Mutex</name></member>
+      <member refid="classoscit_1_1_typed_1ab92fb67d52050227718772b14f74b1b6" prot="public" virt="virtual"><scope>oscit::ZeroConfRegistration</scope><name>~Typed</name></member>
+      <member refid="classoscit_1_1_zero_conf_registration_1a7758320eeb660293b2bb05d6add8a745" prot="public" virt="virtual"><scope>oscit::ZeroConfRegistration</scope><name>~ZeroConfRegistration</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

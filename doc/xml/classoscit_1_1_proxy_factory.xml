@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classoscit_1_1_proxy_factory" kind="class" prot="public">
+    <compoundname>oscit::ProxyFactory</compoundname>
+    <includes refid="proxy__factory_8h" local="no">proxy_factory.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classoscit_1_1_proxy_factory_1a84b982c3a99618009cc160b987825a06" prot="private" static="no" mutable="no">
+        <type>std::list&lt; <ref refid="classoscit_1_1_root_proxy" kindref="compound">RootProxy</ref> * &gt;</type>
+        <definition>std::list&lt;RootProxy *&gt; oscit::ProxyFactory::root_proxies_</definition>
+        <argsstring></argsstring>
+        <name>root_proxies_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classoscit_1_1_list" kindref="compound">List</ref> of RootProxies that use this factory. The list simply serves to remove the dependency when the <ref refid="classoscit_1_1_proxy_factory" kindref="compound">ProxyFactory</ref> is deleted. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/proxy_factory.h" line="92" bodyfile="/Users/gaspard/git/oscit/include/oscit/proxy_factory.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classoscit_1_1_proxy_factory_1ae9cb92c76d2211c05717fbf44da64c35" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::ProxyFactory::ProxyFactory</definition>
+        <argsstring>()</argsstring>
+        <name>ProxyFactory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/proxy_factory.h" line="52" bodyfile="/Users/gaspard/git/oscit/include/oscit/proxy_factory.h" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_proxy_factory_1aae6c10ddb9538a73abe0b4fdbe8898b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual oscit::ProxyFactory::~ProxyFactory</definition>
+        <argsstring>()</argsstring>
+        <name>~ProxyFactory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/proxy_factory.h" line="54" bodyfile="/Users/gaspard/git/oscit/include/oscit/proxy_factory.h" bodystart="54" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_proxy_factory_1aa5fff6efc9201cd6781578725605b203" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classoscit_1_1_root_proxy" kindref="compound">RootProxy</ref> *</type>
+        <definition>RootProxy* oscit::ProxyFactory::build_and_init_root_proxy</definition>
+        <argsstring>(const Location &amp;location)</argsstring>
+        <name>build_and_init_root_proxy</name>
+        <param>
+          <type>const <ref refid="classoscit_1_1_location" kindref="compound">Location</ref> &amp;</type>
+          <declname>location</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called by <ref refid="classoscit_1_1_zero_conf_browser" kindref="compound">ZeroConfBrowser</ref> to create a new <ref refid="classoscit_1_1_root_proxy" kindref="compound">RootProxy</ref> and pass it this object as factory. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/proxy_factory.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_proxy_factory_1afdb8805cc6eb9a17e2ef296cb2ee7130" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="classoscit_1_1_root_proxy" kindref="compound">RootProxy</ref> *</type>
+        <definition>virtual RootProxy* oscit::ProxyFactory::build_root_proxy</definition>
+        <argsstring>(const Location &amp;location)</argsstring>
+        <name>build_root_proxy</name>
+        <param>
+          <type>const <ref refid="classoscit_1_1_location" kindref="compound">Location</ref> &amp;</type>
+          <declname>location</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classoscit_1_1_root" kindref="compound">Root</ref> proxy factory. This method should be overwritten in subclasses in order to create custom <ref refid="classoscit_1_1_root_proxy" kindref="compound">RootProxy</ref> objects. This is called by build_and_init_root_proxy. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/proxy_factory.h" line="64" bodyfile="/Users/gaspard/git/oscit/include/oscit/proxy_factory.h" bodystart="64" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_proxy_factory_1ad62ae7fda2c801ad2af38262f11784de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="classoscit_1_1_object_proxy" kindref="compound">ObjectProxy</ref> *</type>
+        <definition>virtual ObjectProxy* oscit::ProxyFactory::build_object_proxy</definition>
+        <argsstring>(Object *parent, const std::string &amp;name, const Value &amp;type)</argsstring>
+        <name>build_object_proxy</name>
+        <param>
+          <type><ref refid="classoscit_1_1_object" kindref="compound">Object</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classoscit_1_1_object" kindref="compound">Object</ref> proxy factory. This method should be overwritten in subclasses in order to create custom <ref refid="classoscit_1_1_object_proxy" kindref="compound">ObjectProxy</ref> objects. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/proxy_factory.h" line="71" bodyfile="/Users/gaspard/git/oscit/include/oscit/proxy_factory.h" bodystart="71" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_proxy_factory_1a11658b3bd42ee10a87db4bfaec7f5ce0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::ProxyFactory::register_proxy</definition>
+        <argsstring>(RootProxy *proxy)</argsstring>
+        <name>register_proxy</name>
+        <param>
+          <type><ref refid="classoscit_1_1_root_proxy" kindref="compound">RootProxy</ref> *</type>
+          <declname>proxy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A <ref refid="classoscit_1_1_root_proxy" kindref="compound">RootProxy</ref> is using this object as factory, keep a link in case it is removed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/proxy_factory.h" line="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_proxy_factory_1a796d60ea05ac86e4e3cfadbb20cbe942" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::ProxyFactory::unregister_proxy</definition>
+        <argsstring>(RootProxy *proxy)</argsstring>
+        <name>unregister_proxy</name>
+        <param>
+          <type><ref refid="classoscit_1_1_root_proxy" kindref="compound">RootProxy</ref> *</type>
+          <declname>proxy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Forget about this root proxy. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/proxy_factory.h" line="81"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classoscit_1_1_proxy_factory_1a5eefae12184ed587ac8874c357fe8af8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool oscit::ProxyFactory::is_meta_method</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>is_meta_method</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/proxy_factory.h" line="83" bodyfile="/Users/gaspard/git/oscit/include/oscit/proxy_factory.h" bodystart="83" bodyend="85"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is used to bridge between oscit and a GUI when building a &apos;ghost&apos; tree that mirrors a remote &apos;real&apos; tree. </para>    </detaileddescription>
+    <location file="/Users/gaspard/git/oscit/include/oscit/proxy_factory.h" line="50" bodyfile="/Users/gaspard/git/oscit/include/oscit/proxy_factory.h" bodystart="49" bodyend="93"/>
+    <listofallmembers>
+      <member refid="classoscit_1_1_proxy_factory_1aa5fff6efc9201cd6781578725605b203" prot="public" virt="non-virtual"><scope>oscit::ProxyFactory</scope><name>build_and_init_root_proxy</name></member>
+      <member refid="classoscit_1_1_proxy_factory_1ad62ae7fda2c801ad2af38262f11784de" prot="public" virt="virtual"><scope>oscit::ProxyFactory</scope><name>build_object_proxy</name></member>
+      <member refid="classoscit_1_1_proxy_factory_1afdb8805cc6eb9a17e2ef296cb2ee7130" prot="public" virt="virtual"><scope>oscit::ProxyFactory</scope><name>build_root_proxy</name></member>
+      <member refid="classoscit_1_1_proxy_factory_1a5eefae12184ed587ac8874c357fe8af8" prot="public" virt="non-virtual"><scope>oscit::ProxyFactory</scope><name>is_meta_method</name></member>
+      <member refid="classoscit_1_1_proxy_factory_1ae9cb92c76d2211c05717fbf44da64c35" prot="public" virt="non-virtual"><scope>oscit::ProxyFactory</scope><name>ProxyFactory</name></member>
+      <member refid="classoscit_1_1_proxy_factory_1a11658b3bd42ee10a87db4bfaec7f5ce0" prot="public" virt="non-virtual"><scope>oscit::ProxyFactory</scope><name>register_proxy</name></member>
+      <member refid="classoscit_1_1_proxy_factory_1a84b982c3a99618009cc160b987825a06" prot="private" virt="non-virtual"><scope>oscit::ProxyFactory</scope><name>root_proxies_</name></member>
+      <member refid="classoscit_1_1_proxy_factory_1a796d60ea05ac86e4e3cfadbb20cbe942" prot="public" virt="non-virtual"><scope>oscit::ProxyFactory</scope><name>unregister_proxy</name></member>
+      <member refid="classoscit_1_1_proxy_factory_1aae6c10ddb9538a73abe0b4fdbe8898b1" prot="public" virt="virtual"><scope>oscit::ProxyFactory</scope><name>~ProxyFactory</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classoscit_1_1_t_callback" kind="class" prot="public">
+    <compoundname>oscit::TCallback</compoundname>
+    <basecompoundref refid="classoscit_1_1_callback" prot="public" virt="non-virtual">oscit::Callback</basecompoundref>
+    <includes refid="callback_8h" local="no">callback.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class T</type>
+      </param>
+      <param>
+        <type>void(T::*)(void *data)</type>
+        <declname>Tmethod</declname>
+        <defname>Tmethod</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classoscit_1_1_t_callback_1a2ca14198ddf3d2eda235924b1a562294" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::TCallback&lt; T, Tmethod &gt;::TCallback</definition>
+        <argsstring>(T *observer, void *data)</argsstring>
+        <name>TCallback</name>
+        <param>
+          <type>T *</type>
+          <declname>observer</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/callback.h" line="103" bodyfile="/Users/gaspard/git/oscit/include/oscit/callback.h" bodystart="103" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_t_callback_1a1bff91037aad955c1ce58c6982d0cc36" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::TCallback&lt; T, Tmethod &gt;::~TCallback</definition>
+        <argsstring>()</argsstring>
+        <name>~TCallback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/callback.h" line="105" bodyfile="/Users/gaspard/git/oscit/include/oscit/callback.h" bodystart="105" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_t_callback_1ab6cb5a4b30fd2e938251c4cf71b3a390" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void oscit::TCallback&lt; T, Tmethod &gt;::trigger</definition>
+        <argsstring>()</argsstring>
+        <name>trigger</name>
+        <reimplements refid="classoscit_1_1_callback_1a85eae4755a7f03099aa8c8ff32c49a8e">trigger</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/callback.h" line="107" bodyfile="/Users/gaspard/git/oscit/include/oscit/callback.h" bodystart="107" bodyend="109"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1301">
+        <label>oscit::Callback</label>
+        <link refid="classoscit_1_1_callback"/>
+      </node>
+      <node id="1300">
+        <label>oscit::TCallback&lt; T, Tmethod &gt;</label>
+        <link refid="classoscit_1_1_t_callback"/>
+        <childnode refid="1301" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1305">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+      <node id="1303">
+        <label>oscit::Callback</label>
+        <link refid="classoscit_1_1_callback"/>
+        <childnode refid="1304" relation="usage">
+          <edgelabel>callback_list_</edgelabel>
+        </childnode>
+        <childnode refid="1306" relation="usage">
+          <edgelabel>observer_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1306">
+        <label>oscit::Observer</label>
+        <link refid="classoscit_1_1_observer"/>
+      </node>
+      <node id="1302">
+        <label>oscit::TCallback&lt; T, Tmethod &gt;</label>
+        <link refid="classoscit_1_1_t_callback"/>
+        <childnode refid="1303" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1304">
+        <label>oscit::CallbackList</label>
+        <link refid="classoscit_1_1_callback_list"/>
+        <childnode refid="1305" relation="private-inheritance">
+        </childnode>
+        <childnode refid="1306" relation="usage">
+          <edgelabel>list_owner_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/callback.h" line="101" bodyfile="/Users/gaspard/git/oscit/include/oscit/callback.h" bodystart="101" bodyend="110"/>
+    <listofallmembers>
+      <member refid="classoscit_1_1_callback_1a87da41d5bec2b68723eb72c0e48921f3" prot="public" virt="non-virtual"><scope>oscit::TCallback</scope><name>Callback</name></member>
+      <member refid="classoscit_1_1_callback_1a230e5c937c78ee10f7aae5c86d73bafa" prot="protected" virt="non-virtual"><scope>oscit::TCallback</scope><name>data_</name></member>
+      <member refid="classoscit_1_1_callback_1a269c76b64d4bb87750142af1158d5792" prot="public" virt="non-virtual"><scope>oscit::TCallback</scope><name>match_data</name></member>
+      <member refid="classoscit_1_1_callback_1a5ee6cee97f4bef726e9d18dce77f87ce" prot="public" virt="non-virtual"><scope>oscit::TCallback</scope><name>observer</name></member>
+      <member refid="classoscit_1_1_callback_1a1bc1613ca5d6d0e8b2fbce5ef15dd38f" prot="protected" virt="non-virtual"><scope>oscit::TCallback</scope><name>Observer</name></member>
+      <member refid="classoscit_1_1_callback_1a39d8ef3ba248e273ae695600fc2f2b5c" prot="protected" virt="non-virtual"><scope>oscit::TCallback</scope><name>observer_</name></member>
+      <member refid="classoscit_1_1_callback_1a806fe8ec0816517eea1ef29563b2f7ba" prot="public" virt="non-virtual"><scope>oscit::TCallback</scope><name>set_list</name></member>
+      <member refid="classoscit_1_1_t_callback_1a2ca14198ddf3d2eda235924b1a562294" prot="public" virt="non-virtual"><scope>oscit::TCallback</scope><name>TCallback</name></member>
+      <member refid="classoscit_1_1_t_callback_1ab6cb5a4b30fd2e938251c4cf71b3a390" prot="public" virt="virtual"><scope>oscit::TCallback</scope><name>trigger</name></member>
+      <member refid="classoscit_1_1_callback_1a1081856cd6050825541383364a4484f5" prot="public" virt="virtual"><scope>oscit::TCallback</scope><name>~Callback</name></member>
+      <member refid="classoscit_1_1_t_callback_1a1bff91037aad955c1ce58c6982d0cc36" prot="public" virt="non-virtual"><scope>oscit::TCallback</scope><name>~TCallback</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

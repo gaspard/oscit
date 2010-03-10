@@ -1,0 +1,759 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classoscit_1_1_osc_map_command" kind="class" prot="public">
+    <compoundname>oscit::OscMapCommand</compoundname>
+    <basecompoundref refid="classoscit_1_1_script" prot="public" virt="non-virtual">oscit::Script</basecompoundref>
+    <basecompoundref refid="classoscit_1_1_osc_command" prot="public" virt="non-virtual">oscit::OscCommand</basecompoundref>
+    <includes refid="osc__map__command_8h" local="no">osc_map_command.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classoscit_1_1_osc_map_command_1ade8cd4f68409460529e8bf392fd5ec5e" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t oscit::OscMapCommand::reply_port_</definition>
+        <argsstring></argsstring>
+        <name>reply_port_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/osc_map_command.h" line="99" bodyfile="/Users/gaspard/git/oscit/include/oscit/osc_map_command.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_osc_map_command_1aabdcbf6428d8928416d3a9afffb094a8" prot="private" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_mapper" kindref="compound">Mapper</ref></type>
+        <definition>Mapper oscit::OscMapCommand::mapper_</definition>
+        <argsstring></argsstring>
+        <name>mapper_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/osc_map_command.h" line="101" bodyfile="/Users/gaspard/git/oscit/include/oscit/osc_map_command.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_osc_map_command_1a32bcc156878c6c4beefc8f8089db62bf" prot="private" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_time_ref" kindref="compound">TimeRef</ref></type>
+        <definition>TimeRef oscit::OscMapCommand::time_ref_</definition>
+        <argsstring></argsstring>
+        <name>time_ref_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/osc_map_command.h" line="102" bodyfile="/Users/gaspard/git/oscit/include/oscit/osc_map_command.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classoscit_1_1_osc_map_command_1a9f7a30e1d03b2d6a3dff66d9464f7835" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>oscit::OscMapCommand::OscMapCommand</definition>
+        <argsstring>()</argsstring>
+        <name>OscMapCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/osc_map_command.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_osc_map_command_1ac26629a1e35270a715ac849f6172891b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>oscit::OscMapCommand::OscMapCommand</definition>
+        <argsstring>(uint16_t port, uint16_t reply_port)</argsstring>
+        <name>OscMapCommand</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>reply_port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/osc_map_command.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_osc_map_command_1aae220fec0d669b941dcb055b3cf1b3ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual oscit::OscMapCommand::~OscMapCommand</definition>
+        <argsstring>()</argsstring>
+        <name>~OscMapCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/osc_map_command.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_osc_map_command_1a6976232bb93e0a9779aa98cd771989a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>const Value oscit::OscMapCommand::port</definition>
+        <argsstring>(const Value &amp;val)</argsstring>
+        <name>port</name>
+        <param>
+          <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/osc_map_command.h" line="53" bodyfile="/Users/gaspard/git/oscit/include/oscit/osc_map_command.h" bodystart="53" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_osc_map_command_1a28223507bf4dde05c319b52a58857ba0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>const Value oscit::OscMapCommand::reply_port</definition>
+        <argsstring>(const Value &amp;val)</argsstring>
+        <name>reply_port</name>
+        <param>
+          <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/osc_map_command.h" line="64" bodyfile="/Users/gaspard/git/oscit/include/oscit/osc_map_command.h" bodystart="64" bodyend="72"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classoscit_1_1_osc_map_command_1a99a1043b021b4dd391f8df4b1375b7a2" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void oscit::OscMapCommand::receive</definition>
+        <argsstring>(const Url &amp;url, const Value &amp;ext_val)</argsstring>
+        <name>receive</name>
+        <reimplements refid="classoscit_1_1_command_1a101ed477d16883d1ff713f87c726025e">receive</reimplements>
+        <param>
+          <type>const <ref refid="classoscit_1_1_url" kindref="compound">Url</ref> &amp;</type>
+          <declname>url</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
+          <declname>ext_val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Executed within mutex lock from own thread. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/osc_map_command.h" line="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_osc_map_command_1af0dc101e7053965f282f3bb342e1ea1a" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void oscit::OscMapCommand::notify_observers</definition>
+        <argsstring>(const char *path, const Value &amp;val)</argsstring>
+        <name>notify_observers</name>
+        <reimplements refid="classoscit_1_1_osc_command_1a42c83b5c851262720e6f2d12debe89ff">notify_observers</reimplements>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Executed within mutex lock from root. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/osc_map_command.h" line="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_osc_map_command_1accad90bdae048361e4c1cca8944edfc3" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>virtual const Value oscit::OscMapCommand::eval_script</definition>
+        <argsstring>()</argsstring>
+        <name>eval_script</name>
+        <reimplements refid="classoscit_1_1_script_1a376b979d2850aa6591aa227812065567">eval_script</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mappings compilation. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/osc_map_command.h" line="85" bodyfile="/Users/gaspard/git/oscit/include/oscit/osc_map_command.h" bodystart="85" bodyend="95"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="949">
+        <label>oscit::OscMapCommand</label>
+        <link refid="classoscit_1_1_osc_map_command"/>
+        <childnode refid="950" relation="public-inheritance">
+        </childnode>
+        <childnode refid="951" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="954">
+        <label>oscit::Mutex</label>
+        <link refid="classoscit_1_1_mutex"/>
+        <childnode refid="955" relation="public-inheritance">
+        </childnode>
+        <childnode refid="956" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="953">
+        <label>oscit::Thread</label>
+        <link refid="classoscit_1_1_thread"/>
+        <childnode refid="954" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="956">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+      <node id="950">
+        <label>oscit::Script</label>
+        <link refid="classoscit_1_1_script"/>
+      </node>
+      <node id="951">
+        <label>oscit::OscCommand</label>
+        <link refid="classoscit_1_1_osc_command"/>
+        <childnode refid="952" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="955">
+        <label>oscit::Typed</label>
+        <link refid="classoscit_1_1_typed"/>
+      </node>
+      <node id="952">
+        <label>oscit::Command</label>
+        <link refid="classoscit_1_1_command"/>
+        <childnode refid="953" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1002">
+        <label>oscit::Mapper</label>
+        <link refid="classoscit_1_1_mapper"/>
+        <childnode refid="1003" relation="usage">
+          <edgelabel>map_</edgelabel>
+          <edgelabel>reverse_map_</edgelabel>
+        </childnode>
+      </node>
+      <node id="957">
+        <label>oscit::OscMapCommand</label>
+        <link refid="classoscit_1_1_osc_map_command"/>
+        <childnode refid="958" relation="public-inheritance">
+        </childnode>
+        <childnode refid="969" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1002" relation="usage">
+          <edgelabel>mapper_</edgelabel>
+        </childnode>
+        <childnode refid="1007" relation="usage">
+          <edgelabel>time_ref_</edgelabel>
+        </childnode>
+      </node>
+      <node id="976">
+        <label>oscit::Root</label>
+        <link refid="classoscit_1_1_root"/>
+        <childnode refid="977" relation="public-inheritance">
+        </childnode>
+        <childnode refid="983" relation="usage">
+          <edgelabel>objects_</edgelabel>
+        </childnode>
+        <childnode refid="988" relation="usage">
+          <edgelabel>callbacks_on_register_</edgelabel>
+        </childnode>
+        <childnode refid="990" relation="usage">
+          <edgelabel>commands_</edgelabel>
+        </childnode>
+      </node>
+      <node id="965">
+        <label>Matrix</label>
+        <link refid="class_matrix"/>
+      </node>
+      <node id="988">
+        <label>oscit::CTHash&lt; std::string, CallbackList * &gt;</label>
+        <link refid="classoscit_1_1_c_t_hash"/>
+        <childnode refid="989" relation="public-inheritance">
+        </childnode>
+        <childnode refid="985" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="972">
+        <label>oscit::Mutex</label>
+        <link refid="classoscit_1_1_mutex"/>
+        <childnode refid="973" relation="public-inheritance">
+        </childnode>
+        <childnode refid="974" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="995">
+        <label>oscit::THash&lt; std::string, Object * &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+        <childnode refid="996" relation="usage">
+          <edgelabel>thash_table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="964">
+        <label>oscit::List</label>
+        <link refid="classoscit_1_1_list"/>
+        <childnode refid="961" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="997">
+        <label>oscit::THash&lt; Location, RootProxy * &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+        <childnode refid="998" relation="usage">
+          <edgelabel>thash_table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1007">
+        <label>oscit::TimeRef</label>
+        <link refid="classoscit_1_1_time_ref"/>
+        <childnode refid="974" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="959">
+        <label>oscit::Value</label>
+        <link refid="classoscit_1_1_value"/>
+        <childnode refid="960" relation="usage">
+          <edgelabel>midi_message_</edgelabel>
+        </childnode>
+        <childnode refid="962" relation="usage">
+          <edgelabel>string_</edgelabel>
+        </childnode>
+        <childnode refid="963" relation="usage">
+          <edgelabel>error_</edgelabel>
+        </childnode>
+        <childnode refid="964" relation="usage">
+          <edgelabel>list_</edgelabel>
+        </childnode>
+        <childnode refid="965" relation="usage">
+          <edgelabel>matrix_</edgelabel>
+        </childnode>
+        <childnode refid="966" relation="usage">
+          <edgelabel>hash_</edgelabel>
+        </childnode>
+      </node>
+      <node id="984">
+        <label>oscit::THash&lt; std::string,Object * &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+      </node>
+      <node id="971">
+        <label>oscit::Thread</label>
+        <link refid="classoscit_1_1_thread"/>
+        <childnode refid="972" relation="public-inheritance">
+        </childnode>
+        <childnode refid="975" relation="usage">
+          <edgelabel>semaphore_</edgelabel>
+        </childnode>
+      </node>
+      <node id="998">
+        <label>oscit::THashElement&lt; Location, RootProxy * &gt;</label>
+        <link refid="structoscit_1_1_t_hash_element"/>
+        <childnode refid="999" relation="usage">
+          <edgelabel>obj</edgelabel>
+        </childnode>
+        <childnode refid="998" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="994" relation="usage">
+          <edgelabel>key</edgelabel>
+        </childnode>
+      </node>
+      <node id="960">
+        <label>oscit::MidiMessage</label>
+        <link refid="classoscit_1_1_midi_message"/>
+        <childnode refid="961" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="968">
+        <label>oscit::THashElement&lt; std::string, Value &gt;</label>
+        <link refid="structoscit_1_1_t_hash_element"/>
+        <childnode refid="968" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="959" relation="usage">
+          <edgelabel>obj</edgelabel>
+        </childnode>
+      </node>
+      <node id="974">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+      <node id="1001">
+        <label>oscit::ZeroConfRegistration</label>
+        <link refid="classoscit_1_1_zero_conf_registration"/>
+        <childnode refid="972" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="996">
+        <label>oscit::THashElement&lt; std::string, Object * &gt;</label>
+        <link refid="structoscit_1_1_t_hash_element"/>
+        <childnode refid="996" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="977" relation="usage">
+          <edgelabel>obj</edgelabel>
+        </childnode>
+      </node>
+      <node id="991">
+        <label>std::list&lt;Command * &gt;</label>
+        <link refid="classstd_1_1list"/>
+      </node>
+      <node id="992">
+        <label>oscit::THash&lt; Location, unsigned int &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+        <childnode refid="993" relation="usage">
+          <edgelabel>thash_table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="987">
+        <label>std::vector&lt;Object * &gt;</label>
+        <link refid="classstd_1_1vector"/>
+      </node>
+      <node id="989">
+        <label>oscit::THash&lt; std::string,CallbackList * &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+      </node>
+      <node id="990">
+        <label>oscit::CTList&lt; Command * &gt;</label>
+        <link refid="classoscit_1_1_c_t_list"/>
+        <childnode refid="991" relation="public-inheritance">
+        </childnode>
+        <childnode refid="985" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="999">
+        <label>oscit::RootProxy</label>
+        <link refid="classoscit_1_1_root_proxy"/>
+        <childnode refid="976" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1000" relation="usage">
+          <edgelabel>proxy_factory_</edgelabel>
+        </childnode>
+        <childnode refid="970" relation="usage">
+          <edgelabel>command_</edgelabel>
+        </childnode>
+        <childnode refid="994" relation="usage">
+          <edgelabel>remote_location_</edgelabel>
+        </childnode>
+      </node>
+      <node id="978">
+        <label>oscit::Observable</label>
+        <link refid="classoscit_1_1_observable"/>
+        <childnode refid="979" relation="public-inheritance">
+        </childnode>
+        <childnode refid="980" relation="usage">
+          <edgelabel>destruction_notifier_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1006">
+        <label>oscit::ScaleReal</label>
+        <link refid="classoscit_1_1_scale_real"/>
+      </node>
+      <node id="980">
+        <label>oscit::OnDestroyNotifier</label>
+        <link refid="classoscit_1_1_on_destroy_notifier"/>
+        <childnode refid="981" relation="public-inheritance">
+        </childnode>
+        <childnode refid="981" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1005">
+        <label>oscit::Mapper::MapElement</label>
+        <childnode refid="1006" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="979">
+        <label>oscit::Observer</label>
+        <link refid="classoscit_1_1_observer"/>
+      </node>
+      <node id="975">
+        <label>oscit::Semaphore</label>
+        <link refid="classoscit_1_1_semaphore"/>
+        <childnode refid="974" relation="private-inheritance">
+        </childnode>
+        <childnode refid="972" relation="usage">
+          <edgelabel>acquire_mutex_</edgelabel>
+        </childnode>
+      </node>
+      <node id="982">
+        <label>oscit::CReferenceCounted</label>
+        <link refid="classoscit_1_1_c_reference_counted"/>
+        <childnode refid="974" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="958">
+        <label>oscit::Script</label>
+        <link refid="classoscit_1_1_script"/>
+        <childnode refid="959" relation="usage">
+          <edgelabel>last_error_</edgelabel>
+        </childnode>
+      </node>
+      <node id="969">
+        <label>oscit::OscCommand</label>
+        <link refid="classoscit_1_1_osc_command"/>
+        <childnode refid="970" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="977">
+        <label>oscit::Object</label>
+        <link refid="classoscit_1_1_object"/>
+        <childnode refid="973" relation="public-inheritance">
+        </childnode>
+        <childnode refid="978" relation="public-inheritance">
+        </childnode>
+        <childnode refid="982" relation="public-inheritance">
+        </childnode>
+        <childnode refid="983" relation="usage">
+          <edgelabel>children_</edgelabel>
+        </childnode>
+        <childnode refid="976" relation="usage">
+          <edgelabel>root_</edgelabel>
+        </childnode>
+        <childnode refid="959" relation="usage">
+          <edgelabel>type_</edgelabel>
+        </childnode>
+        <childnode refid="986" relation="usage">
+          <edgelabel>children_vector_</edgelabel>
+        </childnode>
+        <childnode refid="972" relation="usage">
+          <edgelabel>context_</edgelabel>
+        </childnode>
+        <childnode refid="977" relation="usage">
+          <edgelabel>parent_</edgelabel>
+        </childnode>
+      </node>
+      <node id="963">
+        <label>oscit::Error</label>
+        <link refid="classoscit_1_1_error"/>
+        <childnode refid="961" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="967">
+        <label>oscit::THash&lt; std::string, Value &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+        <childnode refid="968" relation="usage">
+          <edgelabel>thash_table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="994">
+        <label>oscit::Location</label>
+        <link refid="classoscit_1_1_location"/>
+      </node>
+      <node id="983">
+        <label>oscit::CTHash&lt; std::string, Object * &gt;</label>
+        <link refid="classoscit_1_1_c_t_hash"/>
+        <childnode refid="984" relation="public-inheritance">
+        </childnode>
+        <childnode refid="985" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="973">
+        <label>oscit::Typed</label>
+        <link refid="classoscit_1_1_typed"/>
+      </node>
+      <node id="966">
+        <label>oscit::Hash</label>
+        <link refid="classoscit_1_1_hash"/>
+        <childnode refid="961" relation="public-inheritance">
+        </childnode>
+        <childnode refid="967" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="961">
+        <label>oscit::ReferenceCounted</label>
+        <link refid="classoscit_1_1_reference_counted"/>
+      </node>
+      <node id="993">
+        <label>oscit::THashElement&lt; Location, unsigned int &gt;</label>
+        <link refid="structoscit_1_1_t_hash_element"/>
+        <childnode refid="993" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="994" relation="usage">
+          <edgelabel>key</edgelabel>
+        </childnode>
+      </node>
+      <node id="970">
+        <label>oscit::Command</label>
+        <link refid="classoscit_1_1_command"/>
+        <childnode refid="971" relation="public-inheritance">
+        </childnode>
+        <childnode refid="976" relation="usage">
+          <edgelabel>root_</edgelabel>
+        </childnode>
+        <childnode refid="992" relation="usage">
+          <edgelabel>observers_</edgelabel>
+        </childnode>
+        <childnode refid="995" relation="usage">
+          <edgelabel>remote_objects_</edgelabel>
+        </childnode>
+        <childnode refid="997" relation="usage">
+          <edgelabel>root_proxies_</edgelabel>
+        </childnode>
+        <childnode refid="1001" relation="usage">
+          <edgelabel>zeroconf_registration_</edgelabel>
+        </childnode>
+      </node>
+      <node id="986">
+        <label>oscit::CTVector&lt; Object * &gt;</label>
+        <link refid="classoscit_1_1_c_t_vector"/>
+        <childnode refid="987" relation="public-inheritance">
+        </childnode>
+        <childnode refid="985" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1004">
+        <label>oscit::THashElement&lt; std::string, MapElement &gt;</label>
+        <link refid="structoscit_1_1_t_hash_element"/>
+        <childnode refid="1005" relation="usage">
+          <edgelabel>obj</edgelabel>
+        </childnode>
+        <childnode refid="1004" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+      <node id="985">
+        <label>oscit::RWMutex</label>
+        <link refid="classoscit_1_1_r_w_mutex"/>
+      </node>
+      <node id="981">
+        <label>oscit::CallbackList</label>
+        <link refid="classoscit_1_1_callback_list"/>
+        <childnode refid="974" relation="private-inheritance">
+        </childnode>
+        <childnode refid="979" relation="usage">
+          <edgelabel>list_owner_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1003">
+        <label>oscit::THash&lt; std::string, MapElement &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+        <childnode refid="1004" relation="usage">
+          <edgelabel>thash_table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1000">
+        <label>oscit::ProxyFactory</label>
+        <link refid="classoscit_1_1_proxy_factory"/>
+      </node>
+      <node id="962">
+        <label>oscit::StringData</label>
+        <link refid="classoscit_1_1_string_data"/>
+        <childnode refid="961" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/osc_map_command.h" line="44" bodyfile="/Users/gaspard/git/oscit/include/oscit/osc_map_command.h" bodystart="44" bodyend="103"/>
+    <listofallmembers>
+      <member refid="classoscit_1_1_command_1af6251b0ea9670a79aed81d12b428bbb5" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>adopt_proxy</name></member>
+      <member refid="classoscit_1_1_command_1a5b21956a255ef7745080ec997a2e94b1" prot="protected" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>adopt_remote_object</name></member>
+      <member refid="classoscit_1_1_osc_command_1a58cf9b3e3a4d1e2e704b96b272dfb4ec" prot="protected" virt="virtual"><scope>oscit::OscMapCommand</scope><name>build_remote_object</name></member>
+      <member refid="classoscit_1_1_osc_command_1a569d3cab5a1a18a1c6ce95748c04066e" prot="protected" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>change_port</name></member>
+      <member refid="classoscit_1_1_typed_1a9d91142c1ff172635833f4b2a06d5d3b" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>class_name</name></member>
+      <member refid="classoscit_1_1_command_1a70b392e3ac51ccee3ce820368becc73b" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>Command</name></member>
+      <member refid="classoscit_1_1_command_1af193c0c45836ae7bed2f2b9ef6568e85" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>Command</name></member>
+      <member refid="classoscit_1_1_command_1a226db1d0b0072f75dadf24398ba2e2b5" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>Command</name></member>
+      <member refid="classoscit_1_1_command_1a9c38503c8afca833ce5db5c0f54f7bb9" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>Command</name></member>
+      <member refid="classoscit_1_1_command_1a92cf49967065f161388462d920e175d2" prot="protected" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>CommandTest</name></member>
+      <member refid="classoscit_1_1_script_1a8a1f71ca560be8590cfa99f2b1a16b43" prot="protected" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>current_time_</name></member>
+      <member refid="classoscit_1_1_osc_map_command_1accad90bdae048361e4c1cca8944edfc3" prot="protected" virt="virtual"><scope>oscit::OscMapCommand</scope><name>eval_script</name></member>
+      <member refid="classoscit_1_1_script_1a72aa3a1c145c9e30eb48393123ea08dd" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>file</name></member>
+      <member refid="classoscit_1_1_command_1a9c21ba78ff43955d2e353b585f6766e4" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>find_proxy</name></member>
+      <member refid="classoscit_1_1_command_1a51e05a4579088c31d3815b0328a52da8" prot="protected" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>handle_register_message</name></member>
+      <member refid="classoscit_1_1_command_1a7bd106ee15dcfa25639f96dea69ea2db" prot="protected" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>handle_reply_message</name></member>
+      <member refid="classoscit_1_1_thread_1aaad5213036214bf55dbcaf532d0b528e" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>high_priority</name></member>
+      <member refid="classoscit_1_1_script_1adf1cc09da403d294048c7765b0cf8de6" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>inspect</name></member>
+      <member refid="classoscit_1_1_typed_1a4aba9ae57b258b6d678c685d190ec281" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>is_a</name></member>
+      <member refid="classoscit_1_1_thread_1aee8748532b84f6c7468b143322883597" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>join</name></member>
+      <member refid="classoscit_1_1_osc_command_1a6d0f2a7b6faa718b753c29d5398b18f1" prot="public" virt="virtual"><scope>oscit::OscMapCommand</scope><name>kill</name></member>
+      <member refid="classoscit_1_1_script_1ae9e7fa70580ba3b27ce69a43ba75a505" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>last_error</name></member>
+      <member refid="classoscit_1_1_script_1a5c0bd07b2f9903c3e613dfbdc5cd729e" prot="protected" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>last_error_</name></member>
+      <member refid="classoscit_1_1_osc_command_1a03e06431c791d4fc67c045748874ccff" prot="protected" virt="virtual"><scope>oscit::OscMapCommand</scope><name>listen</name></member>
+      <member refid="classoscit_1_1_mutex_1a016dda2b6b467aa8e3a866be3bd0f86e" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>lock</name></member>
+      <member refid="classoscit_1_1_osc_map_command_1aabdcbf6428d8928416d3a9afffb094a8" prot="private" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>mapper_</name></member>
+      <member refid="classoscit_1_1_thread_1a40c15a9203e95fa9e1888a678d581be0" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>millisleep</name></member>
+      <member refid="classoscit_1_1_mutex_1ae41e751604af40fc4ed78d16c63be52f" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>Mutex</name></member>
+      <member refid="classoscit_1_1_script_1ad383b5359cdec5a427055b294639a197" prot="protected" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>next_reload_</name></member>
+      <member refid="classoscit_1_1_thread_1a0c51ff3a71ef65bfbef2da36528a9508" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>normal_priority</name></member>
+      <member refid="classoscit_1_1_osc_map_command_1af0dc101e7053965f282f3bb342e1ea1a" prot="protected" virt="virtual"><scope>oscit::OscMapCommand</scope><name>notify_observers</name></member>
+      <member refid="classoscit_1_1_command_1a787fb18ee41c02998374156dc7666784" prot="protected" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>observers</name></member>
+      <member refid="classoscit_1_1_osc_command_1aa1f8388262afa89f7e34ca01c43af0ef" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>OscCommand</name></member>
+      <member refid="classoscit_1_1_osc_command_1a80889ef761ecc04c9044b66e30028b9e" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>OscCommand</name></member>
+      <member refid="classoscit_1_1_osc_map_command_1a9f7a30e1d03b2d6a3dff66d9464f7835" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>OscMapCommand</name></member>
+      <member refid="classoscit_1_1_osc_map_command_1ac26629a1e35270a715ac849f6172891b" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>OscMapCommand</name></member>
+      <member refid="classoscit_1_1_thread_1a668701b16f7e18eef3d324401877be66" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>parameter_</name></member>
+      <member refid="classoscit_1_1_osc_map_command_1a6976232bb93e0a9779aa98cd771989a2" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>port</name></member>
+      <member refid="classoscit_1_1_command_1a4b897b305e935c8cf58734dac6f882a7" prot="public" virt="non-virtual" ambiguityscope="oscit::OscCommand::"><scope>oscit::OscMapCommand</scope><name>port</name></member>
+      <member refid="classoscit_1_1_command_1a213b745a3507b14283c076decef84604" prot="protected" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>port_</name></member>
+      <member refid="classoscit_1_1_command_1a89cbe68fec95d8105f45ead7f34d4383" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>protocol</name></member>
+      <member refid="classoscit_1_1_command_1a82283a6a862f215f963ca19da9a91311" prot="protected" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>publish_service</name></member>
+      <member refid="classoscit_1_1_thread_1ada993f1c96a4f1cc51b5b69f6cb5d6b0" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>quit</name></member>
+      <member refid="classoscit_1_1_osc_map_command_1a99a1043b021b4dd391f8df4b1375b7a2" prot="protected" virt="virtual"><scope>oscit::OscMapCommand</scope><name>receive</name></member>
+      <member refid="classoscit_1_1_command_1a75f3f19b243873c75f167bbefe4dd056" prot="protected" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>register_proxy</name></member>
+      <member refid="classoscit_1_1_script_1a253c72cb21e38e4dd2a8b5df523dc88d" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>reload</name></member>
+      <member refid="classoscit_1_1_script_1a542893797cbcf40e5a1e70ad4df39d5f" prot="protected" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>reload_every_</name></member>
+      <member refid="classoscit_1_1_script_1ac7dece29f8ead802cdcaede65a51c873" prot="protected" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>reload_script</name></member>
+      <member refid="classoscit_1_1_command_1a581299bb4c1274dd543b4dc4a4d06e74" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>remote_object</name></member>
+      <member refid="classoscit_1_1_command_1a88e892bece3544d379c69d83ee3f5e6e" prot="protected" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>remote_objects_</name></member>
+      <member refid="classoscit_1_1_osc_map_command_1a28223507bf4dde05c319b52a58857ba0" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>reply_port</name></member>
+      <member refid="classoscit_1_1_osc_map_command_1ade8cd4f68409460529e8bf392fd5ec5e" prot="private" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>reply_port_</name></member>
+      <member refid="classoscit_1_1_command_1a4966338964dbcd90cba2a6b4bd1b3521" prot="protected" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>Root</name></member>
+      <member refid="classoscit_1_1_command_1adfdef7bf6f6015137169119a63166595" prot="protected" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>root_</name></member>
+      <member refid="classoscit_1_1_command_1adb1f2142cbdbf8c3ad4c69c49aa26080" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>root_proxies_count</name></member>
+      <member refid="classoscit_1_1_command_1ad3e90debf6a11f4c7faf23b155e099dd" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>root_proxy_at_index</name></member>
+      <member refid="classoscit_1_1_command_1a4dcd2aff114d1a9cc923a9cbb1aabe81" prot="protected" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>RootProxy</name></member>
+      <member refid="classoscit_1_1_script_1acaad29095a4ae6dcd8e30b3222d9cafc" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>Script</name></member>
+      <member refid="classoscit_1_1_script_1aa9ad0b185c2137f0295b589599de0376" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>script</name></member>
+      <member refid="classoscit_1_1_script_1ab4c96e1a89a42748cf8594a4f565e41d" prot="protected" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>script_</name></member>
+      <member refid="classoscit_1_1_script_1a93b1ceb29aef0d01608e7af4f0c14e28" prot="protected" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>script_file_</name></member>
+      <member refid="classoscit_1_1_script_1a3df4ee6533fb329814ef5aebc6863a3c" prot="protected" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>script_mod_time_</name></member>
+      <member refid="classoscit_1_1_script_1a954b692dd09d0b04fd803fe96def970f" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>script_ok</name></member>
+      <member refid="classoscit_1_1_script_1afe687a347f5f6df4918e69e1b60eedf1" prot="protected" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>script_ok_</name></member>
+      <member refid="classoscit_1_1_thread_1ab82f6e51badc2bee9b2693d984add161" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>semaphore</name></member>
+      <member refid="classoscit_1_1_command_1a1a7b550f6ddcbe69194c4f7be5978c7e" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>send</name></member>
+      <member refid="classoscit_1_1_command_1ad4f0a8844c29d34c94a7d4fed92ff5d9" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>send</name></member>
+      <member refid="classoscit_1_1_osc_command_1ad18b8c85a97ba892df54f387c7904f40" prot="protected" virt="virtual"><scope>oscit::OscMapCommand</scope><name>send_message</name></member>
+      <member refid="classoscit_1_1_thread_1a3b5b22e665dc684be5c6a98c9b404968" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>send_signal</name></member>
+      <member refid="classoscit_1_1_command_1aa685ec9ee1e4b3e7a36d78d2be997c2b" prot="protected" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>set_port</name></member>
+      <member refid="classoscit_1_1_command_1a10d0ac61ce77a53b507beb92c09b59ff" prot="protected" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>set_root</name></member>
+      <member refid="classoscit_1_1_script_1ace6cc17204880372ecd2625754ed0476" prot="protected" virt="virtual"><scope>oscit::OscMapCommand</scope><name>set_script_ok</name></member>
+      <member refid="classoscit_1_1_thread_1a835cce43082e48865d64d9724733c385" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>should_run</name></member>
+      <member refid="classoscit_1_1_thread_1ac14a7771b2b20e79b5de860e69880386" prot="protected" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>should_run_</name></member>
+      <member refid="classoscit_1_1_command_1a81f74e6363bdd10f969e3edd4ae31175" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>start_command</name></member>
+      <member refid="classoscit_1_1_thread_1a8ff725bd92baa91a1af56f2220402687" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>start_thread</name></member>
+      <member refid="classoscit_1_1_thread_1a75a606dfb4fdae23dc691b4ff9c575b3" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>start_thread</name></member>
+      <member refid="classoscit_1_1_thread_1a865b8ceed25d894de9e055c1c6db1324" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>start_thread</name></member>
+      <member refid="classoscit_1_1_thread_1a865b8ceed25d894de9e055c1c6db1324" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>start_thread</name></member>
+      <member refid="classoscit_1_1_thread_1a3ef55ef30cb89b171a7fc2596a79ab7c" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>sThisKey</name></member>
+      <member refid="classoscit_1_1_thread_1aaf0789bf491951f40956bddef73a2ea7" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>Thread</name></member>
+      <member refid="classoscit_1_1_thread_1a0e8495bb727bccd28d1bc0fdc4f332f1" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>thread_ready</name></member>
+      <member refid="classoscit_1_1_thread_1af9e624afe0741e2376366518f53a827e" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>thread_this</name></member>
+      <member refid="classoscit_1_1_osc_map_command_1a32bcc156878c6c4beefc8f8089db62bf" prot="private" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>time_ref_</name></member>
+      <member refid="classoscit_1_1_typed_1a72ecaff553f3b9028dd57afee597dc44" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>type_cast</name></member>
+      <member refid="classoscit_1_1_mutex_1a4eb03cce21055fcfd8ae3462661fac6f" prot="public" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>unlock</name></member>
+      <member refid="classoscit_1_1_command_1a13388867c17c7a6b6140b340cb0627d4" prot="protected" virt="non-virtual"><scope>oscit::OscMapCommand</scope><name>unregister_proxy</name></member>
+      <member refid="classoscit_1_1_command_1ab945e18104440e336a0ad4cf440d20f7" prot="public" virt="virtual"><scope>oscit::OscMapCommand</scope><name>~Command</name></member>
+      <member refid="classoscit_1_1_mutex_1abc6c403ed2bd809dead4e1307e18cc65" prot="public" virt="virtual"><scope>oscit::OscMapCommand</scope><name>~Mutex</name></member>
+      <member refid="classoscit_1_1_osc_command_1a6831bbbd1556bf641f749f2ca0ef8389" prot="public" virt="virtual"><scope>oscit::OscMapCommand</scope><name>~OscCommand</name></member>
+      <member refid="classoscit_1_1_osc_map_command_1aae220fec0d669b941dcb055b3cf1b3ea" prot="public" virt="virtual"><scope>oscit::OscMapCommand</scope><name>~OscMapCommand</name></member>
+      <member refid="classoscit_1_1_script_1aaad9aa090a16c07b7975c6823aca3a55" prot="public" virt="virtual"><scope>oscit::OscMapCommand</scope><name>~Script</name></member>
+      <member refid="classoscit_1_1_thread_1aae027cef80dc02fc408320f52f441080" prot="public" virt="virtual"><scope>oscit::OscMapCommand</scope><name>~Thread</name></member>
+      <member refid="classoscit_1_1_typed_1ab92fb67d52050227718772b14f74b1b6" prot="public" virt="virtual"><scope>oscit::OscMapCommand</scope><name>~Typed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

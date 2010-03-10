@@ -1,0 +1,1505 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classoscit_1_1_object" kind="class" prot="public">
+    <compoundname>oscit::Object</compoundname>
+    <basecompoundref refid="classoscit_1_1_typed" prot="public" virt="non-virtual">oscit::Typed</basecompoundref>
+    <basecompoundref refid="classoscit_1_1_observable" prot="public" virt="non-virtual">oscit::Observable</basecompoundref>
+    <basecompoundref refid="classoscit_1_1_c_reference_counted" prot="public" virt="non-virtual">oscit::CReferenceCounted</basecompoundref>
+    <derivedcompoundref refid="classoscit_1_1_alias" prot="public" virt="non-virtual">oscit::Alias</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_class_method" prot="public" virt="non-virtual">oscit::ClassMethod</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_error_meta_method" prot="public" virt="non-virtual">oscit::ErrorMetaMethod</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_file_method" prot="public" virt="non-virtual">oscit::FileMethod</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_hash_file_method" prot="public" virt="non-virtual">oscit::HashFileMethod</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_info_meta_method" prot="public" virt="non-virtual">oscit::InfoMetaMethod</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_list_meta_method" prot="public" virt="non-virtual">oscit::ListMetaMethod</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_list_with_type_meta_method" prot="public" virt="non-virtual">oscit::ListWithTypeMetaMethod</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_log_object" prot="public" virt="non-virtual">oscit::LogObject</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_method" prot="public" virt="non-virtual">oscit::Method</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_object_proxy" prot="public" virt="non-virtual">oscit::ObjectProxy</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_osc_remote_object" prot="public" virt="non-virtual">oscit::OscRemoteObject</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_root" prot="public" virt="non-virtual">oscit::Root</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_tree_meta_method" prot="public" virt="non-virtual">oscit::TreeMetaMethod</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_type_meta_method" prot="public" virt="non-virtual">oscit::TypeMetaMethod</derivedcompoundref>
+    <includes refid="object_8h" local="no">object.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classoscit_1_1_object_1afd7aefd054740ee2d3a0e5a5733804df" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class ObjectProxy</definition>
+        <argsstring></argsstring>
+        <name>ObjectProxy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="393" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="393" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classoscit_1_1_object_1a9232185195dafdc4d5caa9c2c86340fe" prot="private" static="no" mutable="no">
+        <type>std::list&lt; <ref refid="classoscit_1_1_alias" kindref="compound">Alias</ref> * &gt;</type>
+        <definition>std::list&lt;Alias *&gt; oscit::Object::aliases_</definition>
+        <argsstring></argsstring>
+        <name>aliases_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classoscit_1_1_list" kindref="compound">List</ref> of aliases to destroy when this node disappears. FIXME: clarify usage and RW lock need. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="405" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="405" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_object_1a7a51b76c323e085772e068044fee3955" prot="private" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>Value oscit::Object::type_</definition>
+        <argsstring></argsstring>
+        <name>type_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classoscit_1_1_value" kindref="compound">Value</ref> that holds type information on the &apos;trigger&apos; method of this object. If the type_ is not a list, this means the object is not callable and the type_ member only holds a string with general information on the object. If the type_ is a list, the first element is the actual type of <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> the object can receive in it&apos;s &apos;trigger&apos; method and the other elements are information on the range of allowed values and such. The last element of type_ is always an information string. FIXME: clarify usage and RW lock need. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="456" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="456" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_object_1a9ef9883eab436f83078aaea21042f214" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceoscit_1acdd0211767952c9d583a6206c38dbd5f" kindref="member">TypeTagID</ref></type>
+        <definition>TypeTagID oscit::Object::type_id_</definition>
+        <argsstring></argsstring>
+        <name>type_id_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Identifier for the type of the values the element can receive. The value is a hash of the type tag list (multiple osc type tags) such as &quot;f&quot; (single Real) or &quot;fss&quot; (Real, String, String). This is cached from the first element in type_. FIXME: clarify usage and RW lock need. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="464" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="464" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classoscit_1_1_object_1a79b51de62975104798324567ab68566c" prot="protected" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_root" kindref="compound">Root</ref> *</type>
+        <definition>Root* oscit::Object::root_</definition>
+        <argsstring></argsstring>
+        <name>root_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classoscit_1_1_root" kindref="compound">Root</ref> object used to access application methods/ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="412" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="412" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_object_1a30078b27dfeb7591e7cae7ff9516ae4f" prot="protected" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_object" kindref="compound">Object</ref> *</type>
+        <definition>Object* oscit::Object::parent_</definition>
+        <argsstring></argsstring>
+        <name>parent_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pointer to parent object. Can be NULL if the object does not have a parent. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="417" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="417" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_object_1acbd1ef524ef4ca1a7793a40e8ad3c9a6" prot="protected" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_c_t_hash" kindref="compound">CTHash</ref>&lt; std::string, <ref refid="classoscit_1_1_object" kindref="compound">Object</ref> * &gt;</type>
+        <definition>CTHash&lt;std::string, Object *&gt; oscit::Object::children_</definition>
+        <argsstring></argsstring>
+        <name>children_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classoscit_1_1_hash" kindref="compound">Hash</ref> with pointers to children objects or methods. The children objects unregister themselves when they die or change their parent by calling &apos;unregister_child&apos;. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="423" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="423" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_object_1a3c3ccd6c862acb8a1890eb51056f97bd" prot="protected" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_c_t_vector" kindref="compound">CTVector</ref>&lt; <ref refid="classoscit_1_1_object" kindref="compound">Object</ref> * &gt;</type>
+        <definition>CTVector&lt;Object*&gt; oscit::Object::children_vector_</definition>
+        <argsstring></argsstring>
+        <name>children_vector_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classoscit_1_1_list" kindref="compound">List</ref> of children as a vector for faster enumeration type of access. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="427" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="427" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_object_1a28adb2acc229aaf0210e07520addafdf" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string oscit::Object::name_</definition>
+        <argsstring></argsstring>
+        <name>name_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unique name in parent&apos;s context. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="431" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="431" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_object_1aff1923f15589c4f01216270292b439ae" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string oscit::Object::url_</definition>
+        <argsstring></argsstring>
+        <name>url_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Absolute path to object (cached). FIXME: clarify usage and RW lock need. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="436" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="436" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_object_1a5da077bd2474029c931f49d92c291181" prot="protected" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_mutex" kindref="compound">Mutex</ref> *</type>
+        <definition>Mutex* oscit::Object::context_</definition>
+        <argsstring></argsstring>
+        <name>context_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classoscit_1_1_mutex" kindref="compound">Mutex</ref> to make sure only one thread is using a given context at a time. FIXME: remove. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="441" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="441" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classoscit_1_1_object_1afc7c68fa73ccc93c3f021b68c52d02fd" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Object::Object</definition>
+        <argsstring>()</argsstring>
+        <name>Object</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Class signature. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="67" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="66" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1a57e051f3a81fe55e09e9abbfcad5411b" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Object::Object</definition>
+        <argsstring>(const char *name)</argsstring>
+        <name>Object</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="74" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="73" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1a3fe8ac33a99f99c6e9ce50fde76c0452" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Object::Object</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>Object</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="80" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="78" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1a02b9d095f61c48b2c4d762b20c033797" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Object::Object</definition>
+        <argsstring>(const Value &amp;type)</argsstring>
+        <name>Object</name>
+        <param>
+          <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="85" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="84" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1afd5a334f27a5b8196e69165efb553a30" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Object::Object</definition>
+        <argsstring>(const char *name, const Value &amp;type)</argsstring>
+        <name>Object</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="92" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="91" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1a8f7e0cdc1ae5578b0829c0e427f2f676" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Object::Object</definition>
+        <argsstring>(const std::string &amp;name, const Value &amp;type)</argsstring>
+        <name>Object</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="98" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="96" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1a48d9081741075e668c1dfb7357e196f7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Object::Object</definition>
+        <argsstring>(Object *parent, const char *name)</argsstring>
+        <name>Object</name>
+        <param>
+          <type><ref refid="classoscit_1_1_object" kindref="compound">Object</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="103" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="102" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1aa314d577f92e7bb042f35b3c87af86cb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Object::Object</definition>
+        <argsstring>(Object *parent, const char *name, const Value &amp;type)</argsstring>
+        <name>Object</name>
+        <param>
+          <type><ref refid="classoscit_1_1_object" kindref="compound">Object</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="109" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="108" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1ae875b68c72ba87f1d6d3a09d4df22938" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Object::Object</definition>
+        <argsstring>(Object *parent, const std::string &amp;name, const Value &amp;type)</argsstring>
+        <name>Object</name>
+        <param>
+          <type><ref refid="classoscit_1_1_object" kindref="compound">Object</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="116" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="114" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1a7804faf5ddca82c30fee98e9d10b9734" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual oscit::Object::~Object</definition>
+        <argsstring>()</argsstring>
+        <name>~Object</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1a62434e83343a3446e5112f8de13a0272" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>const Value oscit::Object::set</definition>
+        <argsstring>(const Value &amp;val)</argsstring>
+        <name>set</name>
+        <param>
+          <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Shortcut to call multiple methods on an object. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Using &quot;obj.set(tempo:45 rubato:1.5)&quot; is equivalent to calling &quot;obj.tempo(45)&quot; and &quot;obj.rubato(1.5)&quot;. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a hash with the result for each call. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1a72a0145db445cb50f93ab57ab611ef0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool oscit::Object::set_all_ok</definition>
+        <argsstring>(const Value &amp;val)</argsstring>
+        <name>set_all_ok</name>
+        <param>
+          <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Shortcut to call multiple methods on an object. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Using &quot;obj.set(tempo:45 rubato:1.5)&quot; is equivalent to calling &quot;obj.tempo(45)&quot; and &quot;obj.rubato(1.5)&quot;. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, false if any call failed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1a5f8efaea98d7db104b5d93fd4f4b48c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>T *</type>
+        <definition>T* oscit::Object::adopt</definition>
+        <argsstring>(T *object)</argsstring>
+        <name>adopt</name>
+        <param>
+          <type>T *</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is the prefered way to insert new objects in the tree since it clearly highlights ownership in the parent. TODO: make sure a parent is not adopted by it&apos;s child. TODO: if we want to make this thread safe, we need a handle. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="143" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="143" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1a7586ea404946ee1519d86d8bf732854e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Object::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <reimplementedby refid="classoscit_1_1_root_1a0b5086f53e60982e30c5abc2c84ffaf0">clear</reimplementedby>
+        <reimplementedby refid="classoscit_1_1_log_object_1a780dc98c4ddac3094487e3281abebe50">clear</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Clear all children (delete). TODO: make thread safe </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="151"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1a0a73489bc24b72f31c3865e8eb8fc113" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>virtual const Value oscit::Object::trigger</definition>
+        <argsstring>(const Value &amp;val)</argsstring>
+        <name>trigger</name>
+        <reimplementedby refid="classoscit_1_1_type_meta_method_1ab4f43f25f794025b39251aaf86c86def">trigger</reimplementedby>
+        <reimplementedby refid="classoscit_1_1_tree_meta_method_1a20cc536898cd9c28de37c9c561ae5998">trigger</reimplementedby>
+        <reimplementedby refid="classoscit_1_1_osc_remote_object_1af1a5c40d081605ebc6fa5ebd6af5b9aa">trigger</reimplementedby>
+        <reimplementedby refid="classoscit_1_1_object_proxy_1a1a45159680daae2b78d74b93d812eb82">trigger</reimplementedby>
+        <reimplementedby refid="classoscit_1_1_method_1ae177e1e1cc9e7c19a82343173a79aea3">trigger</reimplementedby>
+        <reimplementedby refid="classoscit_1_1_class_method_1aca946f6d3d559526c77b11899ae423cf">trigger</reimplementedby>
+        <reimplementedby refid="classoscit_1_1_log_object_1a163f2623f21791b95f3cc60f0d4aedad">trigger</reimplementedby>
+        <reimplementedby refid="classoscit_1_1_list_with_type_meta_method_1a0358a12c663c4ffe06d171e139a6e621">trigger</reimplementedby>
+        <reimplementedby refid="classoscit_1_1_list_meta_method_1acac310cdcb706c978f3816e1a1933bd5">trigger</reimplementedby>
+        <reimplementedby refid="classoscit_1_1_info_meta_method_1a12e0c44c01adaa406bc711b88a32ecb5">trigger</reimplementedby>
+        <reimplementedby refid="classoscit_1_1_hash_file_method_1aa68cd99164288e0612b29551b16656ca">trigger</reimplementedby>
+        <reimplementedby refid="classoscit_1_1_file_method_1a9bdc592847dec7f7586018d841defda7">trigger</reimplementedby>
+        <reimplementedby refid="classoscit_1_1_error_meta_method_1a9d7fa068fbd092cda624bc28b31d9405">trigger</reimplementedby>
+        <reimplementedby refid="classoscit_1_1_alias_1a64b2e61eb46212877621ddd751e45ae0">trigger</reimplementedby>
+        <param>
+          <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is the operation executed when the object is called. In order to benefit from return value optimization and avoid too many copy you have to use <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> v = xxx.trigger(val). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="156" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="156" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1a5755a4de12647c68a5fcc2158433f863" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool oscit::Object::build_child</definition>
+        <argsstring>(const std::string &amp;name, const Value &amp;type, Value *error, ObjectHandle *handle)</argsstring>
+        <name>build_child</name>
+        <reimplementedby refid="classoscit_1_1_root_proxy_1aa73170fda9a5711872ffcfa053587c31">build_child</reimplementedby>
+        <reimplementedby refid="classoscit_1_1_object_proxy_1a73f85f12248437e093548e80e4dd85da">build_child</reimplementedby>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type><ref refid="classoscit_1_1_value" kindref="compound">Value</ref> *</type>
+          <declname>error</declname>
+        </param>
+        <param>
+          <type><ref refid="classoscit_1_1_object_handle" kindref="compound">ObjectHandle</ref> *</type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Dynamically build a child from the given name. This method is called whenever a sub-node or branch is not found and this is the last found object along the path. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="164" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="164" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1ad9104e48c683463d6fa6b11ef0f48015" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Object::lock</definition>
+        <argsstring>()</argsstring>
+        <name>lock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Lock resource (used by commands). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="169" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="169" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1a8d5e13941e410b6d86a3492cb16cb9f8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Object::unlock</definition>
+        <argsstring>()</argsstring>
+        <name>unlock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unlock resource (used by commands). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="174" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="174" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1a5c993e705821e5d03190ef58568719a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Object::register_alias</definition>
+        <argsstring>(Alias *alias)</argsstring>
+        <name>register_alias</name>
+        <param>
+          <type><ref refid="classoscit_1_1_alias" kindref="compound">Alias</ref> *</type>
+          <declname>alias</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Inform the object of an alias linked to this object (has to be deleted on destruction). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="181"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1a3780d31ff03fc7c2736b87d9277f19a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Object::unregister_alias</definition>
+        <argsstring>(Alias *alias)</argsstring>
+        <name>unregister_alias</name>
+        <param>
+          <type><ref refid="classoscit_1_1_alias" kindref="compound">Alias</ref> *</type>
+          <declname>alias</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Inform the object that an alias no longer exists. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="184"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1a7e34fb8368986560d6ca120e679b4a4e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string&amp; oscit::Object::url</definition>
+        <argsstring>() const </argsstring>
+        <name>url</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the object&apos;s unique url. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="187" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="187" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1a9bb6955e387325190835361c1d1e72da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Object::set_name</definition>
+        <argsstring>(const char *name)</argsstring>
+        <name>set_name</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set name from string. If the name is not unique in the parent&apos;s scope, the name is changed as &quot;name-1&quot;, &quot;name-2&quot;, etc. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="194" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="194" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1ae491927434513000db13fcf8f10dafc3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Object::set_name</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>set_name</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set name from string. If the name is not unique in the parent&apos;s scope, the name is changed as &quot;name-1&quot;, &quot;name-2&quot;, etc. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="200" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="200" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1ac496efa52da888ff46e2d68265da1ad1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string</type>
+        <definition>const std::string oscit::Object::name</definition>
+        <argsstring>() const </argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return name of object. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="208" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="208" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1ab3d7e09f1f76c23b93b9219fbfb49b7c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>const Value oscit::Object::list</definition>
+        <argsstring>() const </argsstring>
+        <name>list</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>========================== REPLIES TO META METHODS ====================== The replies to meta methods are implemented as virtuals so that objects that inherit from osc::Object just need to overwrite these in order to return more meaningful information / content. <ref refid="classoscit_1_1_list" kindref="compound">List</ref> sub-nodes. This method is used as a reply to the /.list meta method. The format of the reply is a list of names with the type: [name, name, ...]. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="223"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1a414e24a6cd6b0efa384664992de36907" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>const Value oscit::Object::list_with_type</definition>
+        <argsstring>() const </argsstring>
+        <name>list_with_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classoscit_1_1_list" kindref="compound">List</ref> sub-nodes with their current value and type. This method is used as a reply to the /.list_with_type meta method. The format of the reply is a list of names with the type: [name, current, unit, ...], [name, current, unit, ...], etc. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="230"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1a3efa5720f9817fb5d1ea84afbea927ca" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Object::tree</definition>
+        <argsstring>(size_t base_length, Value *tree) const </argsstring>
+        <name>tree</name>
+        <param>
+          <type>size_t</type>
+          <declname>base_length</declname>
+        </param>
+        <param>
+          <type><ref refid="classoscit_1_1_value" kindref="compound">Value</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classoscit_1_1_list" kindref="compound">List</ref> full tree under this node. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>base_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the length of the url for the initial call (removed from results). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tree</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>returned value. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="237"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1a00b462f53a9a3a554469665893eed395" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
+        <definition>const Value&amp; oscit::Object::info</definition>
+        <argsstring>() const </argsstring>
+        <name>info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Human readable information method. Called as a response to &quot;/.info &apos;/this/url&apos;&quot;. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="242" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="242" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1ace8d4494f5940334d6353b2a9889c4c2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
+        <definition>const Value&amp; oscit::Object::type</definition>
+        <argsstring>() const </argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Type information on node. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="248" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="248" bodyend="250"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1ab95b455fe0ab73da1f15399704e744de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>const Value oscit::Object::type_with_current_value</definition>
+        <argsstring>()</argsstring>
+        <name>type_with_current_value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Type information with current value (used to automatically generate the correct control). Called during response to &quot;/.type &apos;/this/url&apos;&quot;. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="255"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1a43ec5d9a5fbd8de5b2355f8910a07e3f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classoscit_1_1_c_t_hash" kindref="compound">CTHash</ref>&lt; std::string, <ref refid="classoscit_1_1_object" kindref="compound">Object</ref> * &gt; &amp;</type>
+        <definition>const CTHash&lt;std::string, Object *&gt;&amp; oscit::Object::children</definition>
+        <argsstring>() const </argsstring>
+        <name>children</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set meta type (signature, range, units). The type should be immutable. this method is not a good idea. Return the list of children as a hash. FIXME: if this is a const how does the user of this method RW lock ? </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="273" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="273" bodyend="275"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1a835f295e18da70529107509f6da92f14" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool oscit::Object::first_child</definition>
+        <argsstring>(ObjectHandle *handle)</argsstring>
+        <name>first_child</name>
+        <param>
+          <type><ref refid="classoscit_1_1_object_handle" kindref="compound">ObjectHandle</ref> *</type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return first child. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="279" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="279" bodyend="281"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1a6a71331c5dbe0d0b6579410c2f1b13b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool oscit::Object::get_child</definition>
+        <argsstring>(const std::string &amp;name, ObjectHandle *handle)</argsstring>
+        <name>get_child</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="classoscit_1_1_object_handle" kindref="compound">ObjectHandle</ref> *</type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tries to find a child named &apos;name&apos;. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="285"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1a8f41ba458a3967d1e188b10909835613" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool oscit::Object::get_child</definition>
+        <argsstring>(size_t index, ObjectHandle *handle)</argsstring>
+        <name>get_child</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type><ref refid="classoscit_1_1_object_handle" kindref="compound">ObjectHandle</ref> *</type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tries to find the child at a specific index. Returns false on failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="290"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1a1c6bcda9390b68f93ed6287cf46a22ab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t oscit::Object::children_count</definition>
+        <argsstring>()</argsstring>
+        <name>children_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the number of children objects. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="294" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="294" bodyend="297"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1ae673c75d02da068beac4316f9a7c4429" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classoscit_1_1_object" kindref="compound">Object</ref> *</type>
+        <definition>Object* oscit::Object::parent</definition>
+        <argsstring>()</argsstring>
+        <name>parent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="300" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="300" bodyend="302"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1a3773c011a07411b64ec2f317cbe29ce7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void oscit::Object::adopted</definition>
+        <argsstring>()</argsstring>
+        <name>adopted</name>
+        <reimplementedby refid="classoscit_1_1_object_proxy_1a8f67bbbc8fc14f52d9a39b9293b82fcb">adopted</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called whenever the parent changes. It can be used to finish initializing the object. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="307" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="307" bodyend="307"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1aacc22da11d84919f001a3732123a9968" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Object::set_parent</definition>
+        <argsstring>(Object *parent)</argsstring>
+        <name>set_parent</name>
+        <param>
+          <type><ref refid="classoscit_1_1_object" kindref="compound">Object</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set object&apos;s new parent. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="311"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1af83dd0bb922d3cbc3fac0f61a765dc87" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void oscit::Object::set_context</definition>
+        <argsstring>(Mutex *context)</argsstring>
+        <name>set_context</name>
+        <param>
+          <type><ref refid="classoscit_1_1_mutex" kindref="compound">Mutex</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parent changed, set new context. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="314" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="314" bodyend="314"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1a34c0a7e5786a1bddbe54529abafe522d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespaceoscit_1acdd0211767952c9d583a6206c38dbd5f" kindref="member">TypeTagID</ref></type>
+        <definition>TypeTagID oscit::Object::type_id</definition>
+        <argsstring>()</argsstring>
+        <name>type_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the type tag signature id (uint) of the trigger method of this object (what it wants to receive as arguments).</para><para>TODO: rename, it&apos;s confusing with <ref refid="classoscit_1_1_object_1ace8d4494f5940334d6353b2a9889c4c2" kindref="member">type()</ref>.<ref refid="classoscit_1_1_object_1a34c0a7e5786a1bddbe54529abafe522d" kindref="member">type_id()</ref>. Use accept_type_id() instead ? </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="321" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="321" bodyend="323"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1a6962c57c4f1887a48ad702854425e8b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool oscit::Object::accept_any_type</definition>
+        <argsstring>()</argsstring>
+        <name>accept_any_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="325" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="325" bodyend="327"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1ad624d0994776be24718f18563ad02050" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool oscit::Object::can_receive</definition>
+        <argsstring>(const Value &amp;val)</argsstring>
+        <name>can_receive</name>
+        <param>
+          <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="329" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="329" bodyend="348"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classoscit_1_1_object_1a0a0d3496199e134d568c87f8122b4c4e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Object::set_root</definition>
+        <argsstring>(Root *root)</argsstring>
+        <name>set_root</name>
+        <param>
+          <type><ref refid="classoscit_1_1_root" kindref="compound">Root</ref> *</type>
+          <declname>root</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set object&apos;s new root. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="354"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1a43f259903782a874ab9d210eb386b3d3" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Object::register_child</definition>
+        <argsstring>(Object *child)</argsstring>
+        <name>register_child</name>
+        <param>
+          <type><ref refid="classoscit_1_1_object" kindref="compound">Object</ref> *</type>
+          <declname>child</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Child sends a notification to the parent when it&apos;s name changes so that the parent/root keep their url hash in sync. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="359"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1ad4981ad22e3e1fa7bf6d0f64d152e845" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Object::unregister_child</definition>
+        <argsstring>(Object *child)</argsstring>
+        <name>unregister_child</name>
+        <param>
+          <type><ref refid="classoscit_1_1_object" kindref="compound">Object</ref> *</type>
+          <declname>child</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Free the child from the list of children. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="363"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1ad2d56eb93ab7656aadab92ed2d3ce34a" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Object::moved</definition>
+        <argsstring>()</argsstring>
+        <name>moved</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Update cached url, notify root_ of the position change. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="367"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1a2ae7faf5c357c1c78d7f08c302b32d5f" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Object::find_next_name</definition>
+        <argsstring>()</argsstring>
+        <name>find_next_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add &apos;-1&apos;, &apos;-2&apos;, ... at the end of the current name. bob --&gt; bob-1 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="371" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="371" bodyend="382"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1a0765b2288555f19ca5dfc12075117f0a" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void oscit::Object::observer_lock</definition>
+        <argsstring>()</argsstring>
+        <name>observer_lock</name>
+        <reimplements refid="classoscit_1_1_observer_1a35b3c99a9cdaa3826aafae6a1d9f21fb">observer_lock</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If you are in a multi-threaded environment, you should overwrite this method. to lock before notification trigger. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="384" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="384" bodyend="386"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_1a48cca8b50208000365a76bc03ef836b2" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void oscit::Object::observer_unlock</definition>
+        <argsstring>()</argsstring>
+        <name>observer_unlock</name>
+        <reimplements refid="classoscit_1_1_observer_1a0c3ab3c1660ff92f0c9a26122718f2c8">observer_unlock</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If you are in a multi-threaded environment, you should overwrite this method. to unlock after notification trigger. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="388" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="388" bodyend="390"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classoscit_1_1_object_1a73a53c75236c87e3db8eb4d26c49515a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Object::sync_type_id</definition>
+        <argsstring>()</argsstring>
+        <name>sync_type_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Keep type_id_ in sync with type_. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="397" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="397" bodyend="399"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="726">
+        <label>oscit::OscRemoteObject</label>
+        <link refid="classoscit_1_1_osc_remote_object"/>
+        <childnode refid="708" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="727">
+        <label>oscit::Root</label>
+        <link refid="classoscit_1_1_root"/>
+        <childnode refid="708" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="716">
+        <label>oscit::ErrorMetaMethod</label>
+        <link refid="classoscit_1_1_error_meta_method"/>
+        <childnode refid="708" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="718">
+        <label>oscit::HashFileMethod</label>
+        <link refid="classoscit_1_1_hash_file_method"/>
+        <childnode refid="708" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="714">
+        <label>oscit::Alias</label>
+        <link refid="classoscit_1_1_alias"/>
+        <childnode refid="708" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="724">
+        <label>oscit::TMethod&lt; T, Tmethod &gt;</label>
+        <link refid="classoscit_1_1_t_method"/>
+        <childnode refid="723" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="713">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+      <node id="723">
+        <label>oscit::Method</label>
+        <link refid="classoscit_1_1_method"/>
+        <childnode refid="708" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="731">
+        <label>oscit::TypeMetaMethod</label>
+        <link refid="classoscit_1_1_type_meta_method"/>
+        <childnode refid="708" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="720">
+        <label>oscit::ListMetaMethod</label>
+        <link refid="classoscit_1_1_list_meta_method"/>
+        <childnode refid="708" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="722">
+        <label>oscit::LogObject</label>
+        <link refid="classoscit_1_1_log_object"/>
+        <childnode refid="708" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="728">
+        <label>oscit::RootProxy</label>
+        <link refid="classoscit_1_1_root_proxy"/>
+        <childnode refid="727" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="710">
+        <label>oscit::Observable</label>
+        <link refid="classoscit_1_1_observable"/>
+        <childnode refid="711" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="719">
+        <label>oscit::InfoMetaMethod</label>
+        <link refid="classoscit_1_1_info_meta_method"/>
+        <childnode refid="708" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="730">
+        <label>oscit::TreeMetaMethod</label>
+        <link refid="classoscit_1_1_tree_meta_method"/>
+        <childnode refid="708" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="717">
+        <label>oscit::FileMethod</label>
+        <link refid="classoscit_1_1_file_method"/>
+        <childnode refid="708" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="711">
+        <label>oscit::Observer</label>
+        <link refid="classoscit_1_1_observer"/>
+      </node>
+      <node id="712">
+        <label>oscit::CReferenceCounted</label>
+        <link refid="classoscit_1_1_c_reference_counted"/>
+        <childnode refid="713" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="708">
+        <label>oscit::Object</label>
+        <link refid="classoscit_1_1_object"/>
+        <childnode refid="709" relation="public-inheritance">
+        </childnode>
+        <childnode refid="710" relation="public-inheritance">
+        </childnode>
+        <childnode refid="712" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="721">
+        <label>oscit::ListWithTypeMetaMethod</label>
+        <link refid="classoscit_1_1_list_with_type_meta_method"/>
+        <childnode refid="708" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="725">
+        <label>oscit::ObjectProxy</label>
+        <link refid="classoscit_1_1_object_proxy"/>
+        <childnode refid="708" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="715">
+        <label>oscit::ClassMethod</label>
+        <link refid="classoscit_1_1_class_method"/>
+        <childnode refid="708" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="729">
+        <label>oscit::OscRootProxy</label>
+        <link refid="classoscit_1_1_osc_root_proxy"/>
+        <childnode refid="728" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="709">
+        <label>oscit::Typed</label>
+        <link refid="classoscit_1_1_typed"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="743">
+        <label>oscit::Root</label>
+        <link refid="classoscit_1_1_root"/>
+        <childnode refid="732" relation="public-inheritance">
+        </childnode>
+        <childnode refid="740" relation="usage">
+          <edgelabel>objects_</edgelabel>
+        </childnode>
+        <childnode refid="744" relation="usage">
+          <edgelabel>callbacks_on_register_</edgelabel>
+        </childnode>
+        <childnode refid="746" relation="usage">
+          <edgelabel>commands_</edgelabel>
+        </childnode>
+      </node>
+      <node id="754">
+        <label>Matrix</label>
+        <link refid="class_matrix"/>
+      </node>
+      <node id="744">
+        <label>oscit::CTHash&lt; std::string, CallbackList * &gt;</label>
+        <link refid="classoscit_1_1_c_t_hash"/>
+        <childnode refid="745" relation="public-inheritance">
+        </childnode>
+        <childnode refid="742" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="760">
+        <label>oscit::Mutex</label>
+        <link refid="classoscit_1_1_mutex"/>
+        <childnode refid="733" relation="public-inheritance">
+        </childnode>
+        <childnode refid="738" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="753">
+        <label>oscit::List</label>
+        <link refid="classoscit_1_1_list"/>
+        <childnode refid="750" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="748">
+        <label>oscit::Value</label>
+        <link refid="classoscit_1_1_value"/>
+        <childnode refid="749" relation="usage">
+          <edgelabel>midi_message_</edgelabel>
+        </childnode>
+        <childnode refid="751" relation="usage">
+          <edgelabel>string_</edgelabel>
+        </childnode>
+        <childnode refid="752" relation="usage">
+          <edgelabel>error_</edgelabel>
+        </childnode>
+        <childnode refid="753" relation="usage">
+          <edgelabel>list_</edgelabel>
+        </childnode>
+        <childnode refid="754" relation="usage">
+          <edgelabel>matrix_</edgelabel>
+        </childnode>
+        <childnode refid="755" relation="usage">
+          <edgelabel>hash_</edgelabel>
+        </childnode>
+      </node>
+      <node id="741">
+        <label>oscit::THash&lt; std::string,Object * &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+      </node>
+      <node id="749">
+        <label>oscit::MidiMessage</label>
+        <link refid="classoscit_1_1_midi_message"/>
+        <childnode refid="750" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="757">
+        <label>oscit::THashElement&lt; std::string, Value &gt;</label>
+        <link refid="structoscit_1_1_t_hash_element"/>
+        <childnode refid="757" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="748" relation="usage">
+          <edgelabel>obj</edgelabel>
+        </childnode>
+      </node>
+      <node id="738">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+      <node id="747">
+        <label>std::list&lt;Command * &gt;</label>
+        <link refid="classstd_1_1list"/>
+      </node>
+      <node id="759">
+        <label>std::vector&lt;Object * &gt;</label>
+        <link refid="classstd_1_1vector"/>
+      </node>
+      <node id="745">
+        <label>oscit::THash&lt; std::string,CallbackList * &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+      </node>
+      <node id="746">
+        <label>oscit::CTList&lt; Command * &gt;</label>
+        <link refid="classoscit_1_1_c_t_list"/>
+        <childnode refid="747" relation="public-inheritance">
+        </childnode>
+        <childnode refid="742" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="734">
+        <label>oscit::Observable</label>
+        <link refid="classoscit_1_1_observable"/>
+        <childnode refid="735" relation="public-inheritance">
+        </childnode>
+        <childnode refid="736" relation="usage">
+          <edgelabel>destruction_notifier_</edgelabel>
+        </childnode>
+      </node>
+      <node id="736">
+        <label>oscit::OnDestroyNotifier</label>
+        <link refid="classoscit_1_1_on_destroy_notifier"/>
+        <childnode refid="737" relation="public-inheritance">
+        </childnode>
+        <childnode refid="737" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="735">
+        <label>oscit::Observer</label>
+        <link refid="classoscit_1_1_observer"/>
+      </node>
+      <node id="739">
+        <label>oscit::CReferenceCounted</label>
+        <link refid="classoscit_1_1_c_reference_counted"/>
+        <childnode refid="738" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="732">
+        <label>oscit::Object</label>
+        <link refid="classoscit_1_1_object"/>
+        <childnode refid="733" relation="public-inheritance">
+        </childnode>
+        <childnode refid="734" relation="public-inheritance">
+        </childnode>
+        <childnode refid="739" relation="public-inheritance">
+        </childnode>
+        <childnode refid="740" relation="usage">
+          <edgelabel>children_</edgelabel>
+        </childnode>
+        <childnode refid="743" relation="usage">
+          <edgelabel>root_</edgelabel>
+        </childnode>
+        <childnode refid="748" relation="usage">
+          <edgelabel>type_</edgelabel>
+        </childnode>
+        <childnode refid="758" relation="usage">
+          <edgelabel>children_vector_</edgelabel>
+        </childnode>
+        <childnode refid="760" relation="usage">
+          <edgelabel>context_</edgelabel>
+        </childnode>
+        <childnode refid="732" relation="usage">
+          <edgelabel>parent_</edgelabel>
+        </childnode>
+      </node>
+      <node id="752">
+        <label>oscit::Error</label>
+        <link refid="classoscit_1_1_error"/>
+        <childnode refid="750" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="756">
+        <label>oscit::THash&lt; std::string, Value &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+        <childnode refid="757" relation="usage">
+          <edgelabel>thash_table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="740">
+        <label>oscit::CTHash&lt; std::string, Object * &gt;</label>
+        <link refid="classoscit_1_1_c_t_hash"/>
+        <childnode refid="741" relation="public-inheritance">
+        </childnode>
+        <childnode refid="742" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="733">
+        <label>oscit::Typed</label>
+        <link refid="classoscit_1_1_typed"/>
+      </node>
+      <node id="755">
+        <label>oscit::Hash</label>
+        <link refid="classoscit_1_1_hash"/>
+        <childnode refid="750" relation="public-inheritance">
+        </childnode>
+        <childnode refid="756" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="750">
+        <label>oscit::ReferenceCounted</label>
+        <link refid="classoscit_1_1_reference_counted"/>
+      </node>
+      <node id="758">
+        <label>oscit::CTVector&lt; Object * &gt;</label>
+        <link refid="classoscit_1_1_c_t_vector"/>
+        <childnode refid="759" relation="public-inheritance">
+        </childnode>
+        <childnode refid="742" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="742">
+        <label>oscit::RWMutex</label>
+        <link refid="classoscit_1_1_r_w_mutex"/>
+      </node>
+      <node id="737">
+        <label>oscit::CallbackList</label>
+        <link refid="classoscit_1_1_callback_list"/>
+        <childnode refid="738" relation="private-inheritance">
+        </childnode>
+        <childnode refid="735" relation="usage">
+          <edgelabel>list_owner_</edgelabel>
+        </childnode>
+      </node>
+      <node id="751">
+        <label>oscit::StringData</label>
+        <link refid="classoscit_1_1_string_data"/>
+        <childnode refid="750" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/object.h" line="61" bodyfile="/Users/gaspard/git/oscit/include/oscit/object.h" bodystart="61" bodyend="465"/>
+    <listofallmembers>
+      <member refid="classoscit_1_1_object_1a6962c57c4f1887a48ad702854425e8b7" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>accept_any_type</name></member>
+      <member refid="classoscit_1_1_c_reference_counted_1af03ea73d1321a2cea7a0b1035696357c" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>acquire</name></member>
+      <member refid="classoscit_1_1_object_1a5f8efaea98d7db104b5d93fd4f4b48c7" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>adopt</name></member>
+      <member refid="classoscit_1_1_observable_1af26c400580303db64255411c8378a5fc" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>adopt_callback_on_destroy</name></member>
+      <member refid="classoscit_1_1_object_1a3773c011a07411b64ec2f317cbe29ce7" prot="public" virt="virtual"><scope>oscit::Object</scope><name>adopted</name></member>
+      <member refid="classoscit_1_1_object_1a9232185195dafdc4d5caa9c2c86340fe" prot="private" virt="non-virtual"><scope>oscit::Object</scope><name>aliases_</name></member>
+      <member refid="classoscit_1_1_object_1a5755a4de12647c68a5fcc2158433f863" prot="public" virt="virtual"><scope>oscit::Object</scope><name>build_child</name></member>
+      <member refid="classoscit_1_1_object_1ad624d0994776be24718f18563ad02050" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>can_receive</name></member>
+      <member refid="classoscit_1_1_object_1a43ec5d9a5fbd8de5b2355f8910a07e3f" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>children</name></member>
+      <member refid="classoscit_1_1_object_1acbd1ef524ef4ca1a7793a40e8ad3c9a6" prot="protected" virt="non-virtual"><scope>oscit::Object</scope><name>children_</name></member>
+      <member refid="classoscit_1_1_object_1a1c6bcda9390b68f93ed6287cf46a22ab" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>children_count</name></member>
+      <member refid="classoscit_1_1_object_1a3c3ccd6c862acb8a1890eb51056f97bd" prot="protected" virt="non-virtual"><scope>oscit::Object</scope><name>children_vector_</name></member>
+      <member refid="classoscit_1_1_typed_1a9d91142c1ff172635833f4b2a06d5d3b" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>class_name</name></member>
+      <member refid="classoscit_1_1_object_1a7586ea404946ee1519d86d8bf732854e" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>clear</name></member>
+      <member refid="classoscit_1_1_object_1a5da077bd2474029c931f49d92c291181" prot="protected" virt="non-virtual"><scope>oscit::Object</scope><name>context_</name></member>
+      <member refid="classoscit_1_1_c_reference_counted_1af26aaaa40dd9297f5529f38894044875" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>CReferenceCounted</name></member>
+      <member refid="classoscit_1_1_observer_1a0460e53a6d44a9388dec23ff76ba83f2" prot="protected" virt="non-virtual"><scope>oscit::Object</scope><name>delete_produced_callbacks_with_data</name></member>
+      <member refid="classoscit_1_1_object_1a2ae7faf5c357c1c78d7f08c302b32d5f" prot="protected" virt="non-virtual"><scope>oscit::Object</scope><name>find_next_name</name></member>
+      <member refid="classoscit_1_1_object_1a835f295e18da70529107509f6da92f14" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>first_child</name></member>
+      <member refid="classoscit_1_1_object_1a6a71331c5dbe0d0b6579410c2f1b13b0" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>get_child</name></member>
+      <member refid="classoscit_1_1_object_1a8f41ba458a3967d1e188b10909835613" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>get_child</name></member>
+      <member refid="classoscit_1_1_object_1a00b462f53a9a3a554469665893eed395" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>info</name></member>
+      <member refid="classoscit_1_1_typed_1a4aba9ae57b258b6d678c685d190ec281" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>is_a</name></member>
+      <member refid="classoscit_1_1_object_1ab3d7e09f1f76c23b93b9219fbfb49b7c" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>list</name></member>
+      <member refid="classoscit_1_1_object_1a414e24a6cd6b0efa384664992de36907" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>list_with_type</name></member>
+      <member refid="classoscit_1_1_object_1ad9104e48c683463d6fa6b11ef0f48015" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>lock</name></member>
+      <member refid="classoscit_1_1_object_1ad2d56eb93ab7656aadab92ed2d3ce34a" prot="protected" virt="non-virtual"><scope>oscit::Object</scope><name>moved</name></member>
+      <member refid="classoscit_1_1_object_1ac496efa52da888ff46e2d68265da1ad1" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>name</name></member>
+      <member refid="classoscit_1_1_object_1a28adb2acc229aaf0210e07520addafdf" prot="protected" virt="non-virtual"><scope>oscit::Object</scope><name>name_</name></member>
+      <member refid="classoscit_1_1_object_1afc7c68fa73ccc93c3f021b68c52d02fd" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>Object</name></member>
+      <member refid="classoscit_1_1_object_1a57e051f3a81fe55e09e9abbfcad5411b" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>Object</name></member>
+      <member refid="classoscit_1_1_object_1a3fe8ac33a99f99c6e9ce50fde76c0452" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>Object</name></member>
+      <member refid="classoscit_1_1_object_1a02b9d095f61c48b2c4d762b20c033797" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>Object</name></member>
+      <member refid="classoscit_1_1_object_1afd5a334f27a5b8196e69165efb553a30" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>Object</name></member>
+      <member refid="classoscit_1_1_object_1a8f7e0cdc1ae5578b0829c0e427f2f676" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>Object</name></member>
+      <member refid="classoscit_1_1_object_1a48d9081741075e668c1dfb7357e196f7" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>Object</name></member>
+      <member refid="classoscit_1_1_object_1aa314d577f92e7bb042f35b3c87af86cb" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>Object</name></member>
+      <member refid="classoscit_1_1_object_1ae875b68c72ba87f1d6d3a09d4df22938" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>Object</name></member>
+      <member refid="classoscit_1_1_object_1afd7aefd054740ee2d3a0e5a5733804df" prot="private" virt="non-virtual"><scope>oscit::Object</scope><name>ObjectProxy</name></member>
+      <member refid="classoscit_1_1_observable_1add7ad7a51860b63b558685c950f2df63" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>Observable</name></member>
+      <member refid="classoscit_1_1_object_1a0765b2288555f19ca5dfc12075117f0a" prot="protected" virt="virtual"><scope>oscit::Object</scope><name>observer_lock</name></member>
+      <member refid="classoscit_1_1_object_1a48cca8b50208000365a76bc03ef836b2" prot="protected" virt="virtual"><scope>oscit::Object</scope><name>observer_unlock</name></member>
+      <member refid="classoscit_1_1_object_1ae673c75d02da068beac4316f9a7c4429" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>parent</name></member>
+      <member refid="classoscit_1_1_object_1a30078b27dfeb7591e7cae7ff9516ae4f" prot="protected" virt="non-virtual"><scope>oscit::Object</scope><name>parent_</name></member>
+      <member refid="classoscit_1_1_c_reference_counted_1abe49f3c60ebe0364d7590a42a4afa8b2" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>ref_count</name></member>
+      <member refid="classoscit_1_1_object_1a5c993e705821e5d03190ef58568719a0" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>register_alias</name></member>
+      <member refid="classoscit_1_1_object_1a43f259903782a874ab9d210eb386b3d3" prot="protected" virt="non-virtual"><scope>oscit::Object</scope><name>register_child</name></member>
+      <member refid="classoscit_1_1_c_reference_counted_1af937a9fdcb7b0af90e7a99e8413a041f" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>release</name></member>
+      <member refid="classoscit_1_1_c_reference_counted_1a14432013e00b30693b89212ee244f330" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>release</name></member>
+      <member refid="classoscit_1_1_c_reference_counted_1a25c5b24bbd95ad923e77d4f0fa94b888" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>retain</name></member>
+      <member refid="classoscit_1_1_object_1a79b51de62975104798324567ab68566c" prot="protected" virt="non-virtual"><scope>oscit::Object</scope><name>root_</name></member>
+      <member refid="classoscit_1_1_object_1a62434e83343a3446e5112f8de13a0272" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>set</name></member>
+      <member refid="classoscit_1_1_object_1a72a0145db445cb50f93ab57ab611ef0d" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>set_all_ok</name></member>
+      <member refid="classoscit_1_1_observer_1ab856c4b8fac03abcb75fe3884a363a6b" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>set_and_hold</name></member>
+      <member refid="classoscit_1_1_object_1af83dd0bb922d3cbc3fac0f61a765dc87" prot="public" virt="virtual"><scope>oscit::Object</scope><name>set_context</name></member>
+      <member refid="classoscit_1_1_object_1a9bb6955e387325190835361c1d1e72da" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>set_name</name></member>
+      <member refid="classoscit_1_1_object_1ae491927434513000db13fcf8f10dafc3" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>set_name</name></member>
+      <member refid="classoscit_1_1_object_1aacc22da11d84919f001a3732123a9968" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>set_parent</name></member>
+      <member refid="classoscit_1_1_object_1a0a0d3496199e134d568c87f8122b4c4e" prot="protected" virt="non-virtual"><scope>oscit::Object</scope><name>set_root</name></member>
+      <member refid="classoscit_1_1_object_1a73a53c75236c87e3db8eb4d26c49515a" prot="private" virt="non-virtual"><scope>oscit::Object</scope><name>sync_type_id</name></member>
+      <member refid="classoscit_1_1_object_1a3efa5720f9817fb5d1ea84afbea927ca" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>tree</name></member>
+      <member refid="classoscit_1_1_object_1a0a73489bc24b72f31c3865e8eb8fc113" prot="public" virt="virtual"><scope>oscit::Object</scope><name>trigger</name></member>
+      <member refid="classoscit_1_1_object_1ace8d4494f5940334d6353b2a9889c4c2" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>type</name></member>
+      <member refid="classoscit_1_1_object_1a7a51b76c323e085772e068044fee3955" prot="private" virt="non-virtual"><scope>oscit::Object</scope><name>type_</name></member>
+      <member refid="classoscit_1_1_typed_1a72ecaff553f3b9028dd57afee597dc44" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>type_cast</name></member>
+      <member refid="classoscit_1_1_object_1a34c0a7e5786a1bddbe54529abafe522d" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>type_id</name></member>
+      <member refid="classoscit_1_1_object_1a9ef9883eab436f83078aaea21042f214" prot="private" virt="non-virtual"><scope>oscit::Object</scope><name>type_id_</name></member>
+      <member refid="classoscit_1_1_object_1ab95b455fe0ab73da1f15399704e744de" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>type_with_current_value</name></member>
+      <member refid="classoscit_1_1_object_1a8d5e13941e410b6d86a3492cb16cb9f8" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>unlock</name></member>
+      <member refid="classoscit_1_1_object_1a3780d31ff03fc7c2736b87d9277f19a6" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>unregister_alias</name></member>
+      <member refid="classoscit_1_1_object_1ad4981ad22e3e1fa7bf6d0f64d152e845" prot="protected" virt="non-virtual"><scope>oscit::Object</scope><name>unregister_child</name></member>
+      <member refid="classoscit_1_1_object_1a7e34fb8368986560d6ca120e679b4a4e" prot="public" virt="non-virtual"><scope>oscit::Object</scope><name>url</name></member>
+      <member refid="classoscit_1_1_object_1aff1923f15589c4f01216270292b439ae" prot="protected" virt="non-virtual"><scope>oscit::Object</scope><name>url_</name></member>
+      <member refid="classoscit_1_1_c_reference_counted_1adf83fb16489f561db168e11d5c7e19c5" prot="public" virt="virtual"><scope>oscit::Object</scope><name>~CReferenceCounted</name></member>
+      <member refid="classoscit_1_1_object_1a7804faf5ddca82c30fee98e9d10b9734" prot="public" virt="virtual"><scope>oscit::Object</scope><name>~Object</name></member>
+      <member refid="classoscit_1_1_observer_1ac42ab921bb3a679a9abaf483f1559c00" prot="public" virt="virtual"><scope>oscit::Object</scope><name>~Observer</name></member>
+      <member refid="classoscit_1_1_typed_1ab92fb67d52050227718772b14f74b1b6" prot="public" virt="virtual"><scope>oscit::Object</scope><name>~Typed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

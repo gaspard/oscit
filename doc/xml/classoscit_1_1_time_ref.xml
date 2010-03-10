@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classoscit_1_1_time_ref" kind="class" prot="public">
+    <compoundname>oscit::TimeRef</compoundname>
+    <basecompoundref refid="classoscit_1_1_non_copyable" prot="private" virt="non-virtual">oscit::NonCopyable</basecompoundref>
+    <includes refid="time__ref_8h" local="no">time_ref.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classoscit_1_1_time_ref_1a517872cdf9e84e5f150bc77901f9c309" prot="private" static="no" mutable="no">
+        <type>TimeRefData *</type>
+        <definition>TimeRefData* oscit::TimeRef::reference_</definition>
+        <argsstring></argsstring>
+        <name>reference_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/time_ref.h" line="49" bodyfile="/Users/gaspard/git/oscit/include/oscit/time_ref.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classoscit_1_1_time_ref_1ada3739bc0ae361e6a525392843457de8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>oscit::TimeRef::TimeRef</definition>
+        <argsstring>()</argsstring>
+        <name>TimeRef</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/time_ref.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_time_ref_1af5584aaa35edda62c47143f7b5cc94c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>oscit::TimeRef::~TimeRef</definition>
+        <argsstring>()</argsstring>
+        <name>~TimeRef</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/time_ref.h" line="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_time_ref_1a112a2dd03f51b912df9596035abbe851" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>time_t</type>
+        <definition>time_t oscit::TimeRef::elapsed</definition>
+        <argsstring>()</argsstring>
+        <name>elapsed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get current real time in [ms] since the time ref object was created. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/time_ref.h" line="46"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1336">
+        <label>oscit::TimeRef</label>
+        <link refid="classoscit_1_1_time_ref"/>
+        <childnode refid="1337" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="1337">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1338">
+        <label>oscit::TimeRef</label>
+        <link refid="classoscit_1_1_time_ref"/>
+        <childnode refid="1339" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="1339">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/time_ref.h" line="39" bodyfile="/Users/gaspard/git/oscit/include/oscit/time_ref.h" bodystart="39" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classoscit_1_1_time_ref_1a112a2dd03f51b912df9596035abbe851" prot="public" virt="non-virtual"><scope>oscit::TimeRef</scope><name>elapsed</name></member>
+      <member refid="classoscit_1_1_non_copyable_1a1f0c0fedea54b6e20aeefbeefdce67f7" prot="private" virt="non-virtual"><scope>oscit::TimeRef</scope><name>NonCopyable</name></member>
+      <member refid="classoscit_1_1_time_ref_1a517872cdf9e84e5f150bc77901f9c309" prot="private" virt="non-virtual"><scope>oscit::TimeRef</scope><name>reference_</name></member>
+      <member refid="classoscit_1_1_time_ref_1ada3739bc0ae361e6a525392843457de8" prot="public" virt="non-virtual"><scope>oscit::TimeRef</scope><name>TimeRef</name></member>
+      <member refid="classoscit_1_1_non_copyable_1ad21ed15dea6d4700732a2cbc7f98e20a" prot="private" virt="non-virtual"><scope>oscit::TimeRef</scope><name>~NonCopyable</name></member>
+      <member refid="classoscit_1_1_time_ref_1af5584aaa35edda62c47143f7b5cc94c9" prot="public" virt="non-virtual"><scope>oscit::TimeRef</scope><name>~TimeRef</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

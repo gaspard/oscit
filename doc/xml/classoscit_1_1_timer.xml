@@ -1,0 +1,378 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classoscit_1_1_timer" kind="class" prot="public">
+    <compoundname>oscit::Timer</compoundname>
+    <includes refid="timer_8h" local="no">timer.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class T</type>
+      </param>
+      <param>
+        <type>void(T::*)()</type>
+        <declname>Tmethod</declname>
+        <defname>Tmethod</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classoscit_1_1_timer_1a73426c76fd8846d53d086df14388e0bc" prot="private" static="no" mutable="no">
+        <type>T *</type>
+        <definition>T* oscit::Timer&lt; T, Tmethod &gt;::owner_</definition>
+        <argsstring></argsstring>
+        <name>owner_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classoscit_1_1_object" kindref="compound">Object</ref> to trigger. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/timer.h" line="174" bodyfile="/Users/gaspard/git/oscit/include/oscit/timer.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_timer_1a5e6fc9ce946633209ea9da600228990a" prot="private" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t oscit::Timer&lt; T, Tmethod &gt;::interval_</definition>
+        <argsstring></argsstring>
+        <name>interval_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Loop interval. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/timer.h" line="178" bodyfile="/Users/gaspard/git/oscit/include/oscit/timer.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_timer_1a0e12d612ca6690420e68c1a2222df1e1" prot="private" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t oscit::Timer&lt; T, Tmethod &gt;::last_interval_</definition>
+        <argsstring></argsstring>
+        <name>last_interval_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>We need this to anchor next_fire in case interval changes. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/timer.h" line="183" bodyfile="/Users/gaspard/git/oscit/include/oscit/timer.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_timer_1a94631e93d43a87cc0929f2fbe5688c1a" prot="private" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_time_ref" kindref="compound">TimeRef</ref></type>
+        <definition>TimeRef oscit::Timer&lt; T, Tmethod &gt;::time_ref_</definition>
+        <argsstring></argsstring>
+        <name>time_ref_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>We want to hold very precise timing. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/timer.h" line="187" bodyfile="/Users/gaspard/git/oscit/include/oscit/timer.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_timer_1aae80c57d2018f9ffda7ea94186981fbc" prot="private" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_mutex" kindref="compound">Mutex</ref></type>
+        <definition>Mutex oscit::Timer&lt; T, Tmethod &gt;::mutex_</definition>
+        <argsstring></argsstring>
+        <name>mutex_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Protect internals. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/timer.h" line="191" bodyfile="/Users/gaspard/git/oscit/include/oscit/timer.h" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_timer_1a8e658863009c4fa93e77205c1ee084bd" prot="private" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_thread" kindref="compound">Thread</ref></type>
+        <definition>Thread oscit::Timer&lt; T, Tmethod &gt;::thread_</definition>
+        <argsstring></argsstring>
+        <name>thread_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Running thread. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/timer.h" line="195" bodyfile="/Users/gaspard/git/oscit/include/oscit/timer.h" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_timer_1a7d67501fe0d0660debee5b9aae973a4d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool oscit::Timer&lt; T, Tmethod &gt;::running_</definition>
+        <argsstring></argsstring>
+        <name>running_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flag indicating if the thread is actually running. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/timer.h" line="199" bodyfile="/Users/gaspard/git/oscit/include/oscit/timer.h" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_timer_1afa340a5a42cc0539cf43f56a2e9cc780" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool oscit::Timer&lt; T, Tmethod &gt;::should_run_</definition>
+        <argsstring></argsstring>
+        <name>should_run_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flag indicating that we want the timer to fire or die. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/timer.h" line="203" bodyfile="/Users/gaspard/git/oscit/include/oscit/timer.h" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classoscit_1_1_timer_1a28c76cdcbdf1f2e610739f862166c71a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Timer&lt; T, Tmethod &gt;::Timer</definition>
+        <argsstring>(T *owner, time_t interval=0)</argsstring>
+        <name>Timer</name>
+        <param>
+          <type>T *</type>
+          <declname>owner</declname>
+        </param>
+        <param>
+          <type>time_t</type>
+          <declname>interval</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/timer.h" line="46" bodyfile="/Users/gaspard/git/oscit/include/oscit/timer.h" bodystart="42" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_timer_1a47181f88101372f89dccf0956fcc3ea4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Timer&lt; T, Tmethod &gt;::~Timer</definition>
+        <argsstring>()</argsstring>
+        <name>~Timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/timer.h" line="48" bodyfile="/Users/gaspard/git/oscit/include/oscit/timer.h" bodystart="48" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_timer_1abfffa5df3590ce615282d3a59e972dfb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Timer&lt; T, Tmethod &gt;::start</definition>
+        <argsstring>(time_t interval)</argsstring>
+        <name>start</name>
+        <param>
+          <type>time_t</type>
+          <declname>interval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/timer.h" line="54" bodyfile="/Users/gaspard/git/oscit/include/oscit/timer.h" bodystart="54" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_timer_1a5eb16401dd38582ce30676d1847aaeae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Timer&lt; T, Tmethod &gt;::start</definition>
+        <argsstring>()</argsstring>
+        <name>start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/timer.h" line="66" bodyfile="/Users/gaspard/git/oscit/include/oscit/timer.h" bodystart="66" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_timer_1a05dc9bfdb1e904fe00894d0c5cda2df2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Timer&lt; T, Tmethod &gt;::stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/timer.h" line="76" bodyfile="/Users/gaspard/git/oscit/include/oscit/timer.h" bodystart="76" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_timer_1a0b9211e9b04be8c3386f361e2e2f38fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Timer&lt; T, Tmethod &gt;::set_interval</definition>
+        <argsstring>(time_t interval)</argsstring>
+        <name>set_interval</name>
+        <param>
+          <type>time_t</type>
+          <declname>interval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/timer.h" line="84" bodyfile="/Users/gaspard/git/oscit/include/oscit/timer.h" bodystart="84" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_timer_1a1b1119e9be7d0742f0f24ed2c4f3d36d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool oscit::Timer&lt; T, Tmethod &gt;::running</definition>
+        <argsstring>() const </argsstring>
+        <name>running</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/timer.h" line="93" bodyfile="/Users/gaspard/git/oscit/include/oscit/timer.h" bodystart="93" bodyend="95"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classoscit_1_1_timer_1a7d4d56d92a4671b54773e3f3033aee5c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Timer&lt; T, Tmethod &gt;::run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/timer.h" line="98" bodyfile="/Users/gaspard/git/oscit/include/oscit/timer.h" bodystart="98" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_timer_1a36bde8a3d6eb508c6957bc05176cd02b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Timer&lt; T, Tmethod &gt;::interrupt</definition>
+        <argsstring>()</argsstring>
+        <name>interrupt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Must be called within a loop lock. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/timer.h" line="160" bodyfile="/Users/gaspard/git/oscit/include/oscit/timer.h" bodystart="160" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_timer_1a44563a23cff05432f591c52bb6a09a3c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Timer&lt; T, Tmethod &gt;::start_thread</definition>
+        <argsstring>(Thread *runner)</argsstring>
+        <name>start_thread</name>
+        <param>
+          <type><ref refid="classoscit_1_1_thread" kindref="compound">Thread</ref> *</type>
+          <declname>runner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/timer.h" line="164" bodyfile="/Users/gaspard/git/oscit/include/oscit/timer.h" bodystart="164" bodyend="170"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classoscit_1_1_timer_1a4b762749e0dea779ee47ca1901c600eb" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void oscit::Timer&lt; T, Tmethod &gt;::interrupt_sleep</definition>
+        <argsstring>(int sig)</argsstring>
+        <name>interrupt_sleep</name>
+        <param>
+          <type>int</type>
+          <declname>sig</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/timer.h" line="151" bodyfile="/Users/gaspard/git/oscit/include/oscit/timer.h" bodystart="151" bodyend="156"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1331">
+        <label>oscit::Mutex</label>
+        <link refid="classoscit_1_1_mutex"/>
+        <childnode refid="1332" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1333" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="1335">
+        <label>oscit::TimeRef</label>
+        <link refid="classoscit_1_1_time_ref"/>
+        <childnode refid="1333" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="1330">
+        <label>oscit::Thread</label>
+        <link refid="classoscit_1_1_thread"/>
+        <childnode refid="1331" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1334" relation="usage">
+          <edgelabel>semaphore_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1333">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+      <node id="1329">
+        <label>oscit::Timer&lt; T, Tmethod &gt;</label>
+        <link refid="classoscit_1_1_timer"/>
+        <childnode refid="1330" relation="usage">
+          <edgelabel>thread_</edgelabel>
+        </childnode>
+        <childnode refid="1335" relation="usage">
+          <edgelabel>time_ref_</edgelabel>
+        </childnode>
+        <childnode refid="1331" relation="usage">
+          <edgelabel>mutex_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1334">
+        <label>oscit::Semaphore</label>
+        <link refid="classoscit_1_1_semaphore"/>
+        <childnode refid="1333" relation="private-inheritance">
+        </childnode>
+        <childnode refid="1331" relation="usage">
+          <edgelabel>acquire_mutex_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1332">
+        <label>oscit::Typed</label>
+        <link refid="classoscit_1_1_typed"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/timer.h" line="40" bodyfile="/Users/gaspard/git/oscit/include/oscit/timer.h" bodystart="40" bodyend="204"/>
+    <listofallmembers>
+      <member refid="classoscit_1_1_timer_1a36bde8a3d6eb508c6957bc05176cd02b" prot="private" virt="non-virtual"><scope>oscit::Timer</scope><name>interrupt</name></member>
+      <member refid="classoscit_1_1_timer_1a4b762749e0dea779ee47ca1901c600eb" prot="private" virt="non-virtual"><scope>oscit::Timer</scope><name>interrupt_sleep</name></member>
+      <member refid="classoscit_1_1_timer_1a5e6fc9ce946633209ea9da600228990a" prot="private" virt="non-virtual"><scope>oscit::Timer</scope><name>interval_</name></member>
+      <member refid="classoscit_1_1_timer_1a0e12d612ca6690420e68c1a2222df1e1" prot="private" virt="non-virtual"><scope>oscit::Timer</scope><name>last_interval_</name></member>
+      <member refid="classoscit_1_1_timer_1aae80c57d2018f9ffda7ea94186981fbc" prot="private" virt="non-virtual"><scope>oscit::Timer</scope><name>mutex_</name></member>
+      <member refid="classoscit_1_1_timer_1a73426c76fd8846d53d086df14388e0bc" prot="private" virt="non-virtual"><scope>oscit::Timer</scope><name>owner_</name></member>
+      <member refid="classoscit_1_1_timer_1a7d4d56d92a4671b54773e3f3033aee5c" prot="private" virt="non-virtual"><scope>oscit::Timer</scope><name>run</name></member>
+      <member refid="classoscit_1_1_timer_1a1b1119e9be7d0742f0f24ed2c4f3d36d" prot="public" virt="non-virtual"><scope>oscit::Timer</scope><name>running</name></member>
+      <member refid="classoscit_1_1_timer_1a7d67501fe0d0660debee5b9aae973a4d" prot="private" virt="non-virtual"><scope>oscit::Timer</scope><name>running_</name></member>
+      <member refid="classoscit_1_1_timer_1a0b9211e9b04be8c3386f361e2e2f38fc" prot="public" virt="non-virtual"><scope>oscit::Timer</scope><name>set_interval</name></member>
+      <member refid="classoscit_1_1_timer_1afa340a5a42cc0539cf43f56a2e9cc780" prot="private" virt="non-virtual"><scope>oscit::Timer</scope><name>should_run_</name></member>
+      <member refid="classoscit_1_1_timer_1abfffa5df3590ce615282d3a59e972dfb" prot="public" virt="non-virtual"><scope>oscit::Timer</scope><name>start</name></member>
+      <member refid="classoscit_1_1_timer_1a5eb16401dd38582ce30676d1847aaeae" prot="public" virt="non-virtual"><scope>oscit::Timer</scope><name>start</name></member>
+      <member refid="classoscit_1_1_timer_1a44563a23cff05432f591c52bb6a09a3c" prot="private" virt="non-virtual"><scope>oscit::Timer</scope><name>start_thread</name></member>
+      <member refid="classoscit_1_1_timer_1a05dc9bfdb1e904fe00894d0c5cda2df2" prot="public" virt="non-virtual"><scope>oscit::Timer</scope><name>stop</name></member>
+      <member refid="classoscit_1_1_timer_1a8e658863009c4fa93e77205c1ee084bd" prot="private" virt="non-virtual"><scope>oscit::Timer</scope><name>thread_</name></member>
+      <member refid="classoscit_1_1_timer_1a94631e93d43a87cc0929f2fbe5688c1a" prot="private" virt="non-virtual"><scope>oscit::Timer</scope><name>time_ref_</name></member>
+      <member refid="classoscit_1_1_timer_1a28c76cdcbdf1f2e610739f862166c71a" prot="public" virt="non-virtual"><scope>oscit::Timer</scope><name>Timer</name></member>
+      <member refid="classoscit_1_1_timer_1a47181f88101372f89dccf0956fcc3ea4" prot="public" virt="non-virtual"><scope>oscit::Timer</scope><name>~Timer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

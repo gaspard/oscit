@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="struct_t_smart_ptr_1_1_ptr" kind="struct" prot="protected">
+    <compoundname>TSmartPtr::Ptr</compoundname>
+    <includes refid="tsmart__ptr_8h" local="no">tsmart_ptr.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_t_smart_ptr_1_1_ptr_1a33bd8f2b200131f875c091fc29f6a343" prot="public" static="no" mutable="no">
+        <type>T *</type>
+        <definition>T* TSmartPtr&lt; T &gt;::Ptr::data_</definition>
+        <argsstring></argsstring>
+        <name>data_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/tsmart_ptr.h" line="80" bodyfile="/Users/gaspard/git/oscit/include/oscit/tsmart_ptr.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_smart_ptr_1_1_ptr_1a39329905463ec3a64eb5d47cb65eadb8" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t TSmartPtr&lt; T &gt;::Ptr::ref_count_</definition>
+        <argsstring></argsstring>
+        <name>ref_count_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/tsmart_ptr.h" line="81" bodyfile="/Users/gaspard/git/oscit/include/oscit/tsmart_ptr.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_t_smart_ptr_1_1_ptr_1aa3c6d4e9fc4736a22457ab67eb996240" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TSmartPtr&lt; T &gt;::Ptr::Ptr</definition>
+        <argsstring>(T *p=0, size_t c=1)</argsstring>
+        <name>Ptr</name>
+        <param>
+          <type>T *</type>
+          <declname>p</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>c</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/tsmart_ptr.h" line="79" bodyfile="/Users/gaspard/git/oscit/include/oscit/tsmart_ptr.h" bodystart="79" bodyend="79"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Structure shared by all smart pointers pointing to the same data. Holds the pointer to the &quot;content&quot; and the reference count. </para>    </detaileddescription>
+    <location file="/Users/gaspard/git/oscit/include/oscit/tsmart_ptr.h" line="78" bodyfile="/Users/gaspard/git/oscit/include/oscit/tsmart_ptr.h" bodystart="77" bodyend="82"/>
+    <listofallmembers>
+      <member refid="struct_t_smart_ptr_1_1_ptr_1a33bd8f2b200131f875c091fc29f6a343" prot="public" virt="non-virtual"><scope>TSmartPtr::Ptr</scope><name>data_</name></member>
+      <member refid="struct_t_smart_ptr_1_1_ptr_1aa3c6d4e9fc4736a22457ab67eb996240" prot="public" virt="non-virtual"><scope>TSmartPtr::Ptr</scope><name>Ptr</name></member>
+      <member refid="struct_t_smart_ptr_1_1_ptr_1a39329905463ec3a64eb5d47cb65eadb8" prot="public" virt="non-virtual"><scope>TSmartPtr::Ptr</scope><name>ref_count_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

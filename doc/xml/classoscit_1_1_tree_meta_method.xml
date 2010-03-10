@@ -1,0 +1,419 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classoscit_1_1_tree_meta_method" kind="class" prot="public">
+    <compoundname>oscit::TreeMetaMethod</compoundname>
+    <basecompoundref refid="classoscit_1_1_object" prot="public" virt="non-virtual">oscit::Object</basecompoundref>
+    <includes refid="tree__meta__method_8h" local="no">tree_meta_method.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classoscit_1_1_tree_meta_method_1a55c85398ddd877fb70d8b4e5a97df602" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::TreeMetaMethod::TreeMetaMethod</definition>
+        <argsstring>(const char *name)</argsstring>
+        <name>TreeMetaMethod</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Class signature. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/tree_meta_method.h" line="42" bodyfile="/Users/gaspard/git/oscit/include/oscit/tree_meta_method.h" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_tree_meta_method_1a561b0cf3949fbd12c33a1322c0766539" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::TreeMetaMethod::TreeMetaMethod</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>TreeMetaMethod</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/tree_meta_method.h" line="43" bodyfile="/Users/gaspard/git/oscit/include/oscit/tree_meta_method.h" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_tree_meta_method_1a20cc536898cd9c28de37c9c561ae5998" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>virtual const Value oscit::TreeMetaMethod::trigger</definition>
+        <argsstring>(const Value &amp;val)</argsstring>
+        <name>trigger</name>
+        <reimplements refid="classoscit_1_1_object_1a0a73489bc24b72f31c3865e8eb8fc113">trigger</reimplements>
+        <param>
+          <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is the operation executed when the object is called. In order to benefit from return value optimization and avoid too many copy you have to use <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> v = xxx.trigger(val). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/tree_meta_method.h" line="45" bodyfile="/Users/gaspard/git/oscit/include/oscit/tree_meta_method.h" bodystart="45" bodyend="61"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1389">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+      <node id="1386">
+        <label>oscit::Observable</label>
+        <link refid="classoscit_1_1_observable"/>
+        <childnode refid="1387" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1383">
+        <label>oscit::TreeMetaMethod</label>
+        <link refid="classoscit_1_1_tree_meta_method"/>
+        <childnode refid="1384" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1387">
+        <label>oscit::Observer</label>
+        <link refid="classoscit_1_1_observer"/>
+      </node>
+      <node id="1388">
+        <label>oscit::CReferenceCounted</label>
+        <link refid="classoscit_1_1_c_reference_counted"/>
+        <childnode refid="1389" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="1384">
+        <label>oscit::Object</label>
+        <link refid="classoscit_1_1_object"/>
+        <childnode refid="1385" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1386" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1388" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1385">
+        <label>oscit::Typed</label>
+        <link refid="classoscit_1_1_typed"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1402">
+        <label>oscit::Root</label>
+        <link refid="classoscit_1_1_root"/>
+        <childnode refid="1391" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1399" relation="usage">
+          <edgelabel>objects_</edgelabel>
+        </childnode>
+        <childnode refid="1403" relation="usage">
+          <edgelabel>callbacks_on_register_</edgelabel>
+        </childnode>
+        <childnode refid="1405" relation="usage">
+          <edgelabel>commands_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1413">
+        <label>Matrix</label>
+        <link refid="class_matrix"/>
+      </node>
+      <node id="1403">
+        <label>oscit::CTHash&lt; std::string, CallbackList * &gt;</label>
+        <link refid="classoscit_1_1_c_t_hash"/>
+        <childnode refid="1404" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1401" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1419">
+        <label>oscit::Mutex</label>
+        <link refid="classoscit_1_1_mutex"/>
+        <childnode refid="1392" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1397" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="1412">
+        <label>oscit::List</label>
+        <link refid="classoscit_1_1_list"/>
+        <childnode refid="1409" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1407">
+        <label>oscit::Value</label>
+        <link refid="classoscit_1_1_value"/>
+        <childnode refid="1408" relation="usage">
+          <edgelabel>midi_message_</edgelabel>
+        </childnode>
+        <childnode refid="1410" relation="usage">
+          <edgelabel>string_</edgelabel>
+        </childnode>
+        <childnode refid="1411" relation="usage">
+          <edgelabel>error_</edgelabel>
+        </childnode>
+        <childnode refid="1412" relation="usage">
+          <edgelabel>list_</edgelabel>
+        </childnode>
+        <childnode refid="1413" relation="usage">
+          <edgelabel>matrix_</edgelabel>
+        </childnode>
+        <childnode refid="1414" relation="usage">
+          <edgelabel>hash_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1400">
+        <label>oscit::THash&lt; std::string,Object * &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+      </node>
+      <node id="1408">
+        <label>oscit::MidiMessage</label>
+        <link refid="classoscit_1_1_midi_message"/>
+        <childnode refid="1409" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1416">
+        <label>oscit::THashElement&lt; std::string, Value &gt;</label>
+        <link refid="structoscit_1_1_t_hash_element"/>
+        <childnode refid="1416" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="1407" relation="usage">
+          <edgelabel>obj</edgelabel>
+        </childnode>
+      </node>
+      <node id="1397">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+      <node id="1406">
+        <label>std::list&lt;Command * &gt;</label>
+        <link refid="classstd_1_1list"/>
+      </node>
+      <node id="1418">
+        <label>std::vector&lt;Object * &gt;</label>
+        <link refid="classstd_1_1vector"/>
+      </node>
+      <node id="1404">
+        <label>oscit::THash&lt; std::string,CallbackList * &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+      </node>
+      <node id="1405">
+        <label>oscit::CTList&lt; Command * &gt;</label>
+        <link refid="classoscit_1_1_c_t_list"/>
+        <childnode refid="1406" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1401" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1393">
+        <label>oscit::Observable</label>
+        <link refid="classoscit_1_1_observable"/>
+        <childnode refid="1394" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1395" relation="usage">
+          <edgelabel>destruction_notifier_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1395">
+        <label>oscit::OnDestroyNotifier</label>
+        <link refid="classoscit_1_1_on_destroy_notifier"/>
+        <childnode refid="1396" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1396" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1390">
+        <label>oscit::TreeMetaMethod</label>
+        <link refid="classoscit_1_1_tree_meta_method"/>
+        <childnode refid="1391" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1394">
+        <label>oscit::Observer</label>
+        <link refid="classoscit_1_1_observer"/>
+      </node>
+      <node id="1398">
+        <label>oscit::CReferenceCounted</label>
+        <link refid="classoscit_1_1_c_reference_counted"/>
+        <childnode refid="1397" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="1391">
+        <label>oscit::Object</label>
+        <link refid="classoscit_1_1_object"/>
+        <childnode refid="1392" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1393" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1398" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1399" relation="usage">
+          <edgelabel>children_</edgelabel>
+        </childnode>
+        <childnode refid="1402" relation="usage">
+          <edgelabel>root_</edgelabel>
+        </childnode>
+        <childnode refid="1407" relation="usage">
+          <edgelabel>type_</edgelabel>
+        </childnode>
+        <childnode refid="1417" relation="usage">
+          <edgelabel>children_vector_</edgelabel>
+        </childnode>
+        <childnode refid="1419" relation="usage">
+          <edgelabel>context_</edgelabel>
+        </childnode>
+        <childnode refid="1391" relation="usage">
+          <edgelabel>parent_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1411">
+        <label>oscit::Error</label>
+        <link refid="classoscit_1_1_error"/>
+        <childnode refid="1409" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1415">
+        <label>oscit::THash&lt; std::string, Value &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+        <childnode refid="1416" relation="usage">
+          <edgelabel>thash_table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1399">
+        <label>oscit::CTHash&lt; std::string, Object * &gt;</label>
+        <link refid="classoscit_1_1_c_t_hash"/>
+        <childnode refid="1400" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1401" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1392">
+        <label>oscit::Typed</label>
+        <link refid="classoscit_1_1_typed"/>
+      </node>
+      <node id="1414">
+        <label>oscit::Hash</label>
+        <link refid="classoscit_1_1_hash"/>
+        <childnode refid="1409" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1415" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1409">
+        <label>oscit::ReferenceCounted</label>
+        <link refid="classoscit_1_1_reference_counted"/>
+      </node>
+      <node id="1417">
+        <label>oscit::CTVector&lt; Object * &gt;</label>
+        <link refid="classoscit_1_1_c_t_vector"/>
+        <childnode refid="1418" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1401" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1401">
+        <label>oscit::RWMutex</label>
+        <link refid="classoscit_1_1_r_w_mutex"/>
+      </node>
+      <node id="1396">
+        <label>oscit::CallbackList</label>
+        <link refid="classoscit_1_1_callback_list"/>
+        <childnode refid="1397" relation="private-inheritance">
+        </childnode>
+        <childnode refid="1394" relation="usage">
+          <edgelabel>list_owner_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1410">
+        <label>oscit::StringData</label>
+        <link refid="classoscit_1_1_string_data"/>
+        <childnode refid="1409" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/tree_meta_method.h" line="37" bodyfile="/Users/gaspard/git/oscit/include/oscit/tree_meta_method.h" bodystart="36" bodyend="62"/>
+    <listofallmembers>
+      <member refid="classoscit_1_1_object_1a6962c57c4f1887a48ad702854425e8b7" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>accept_any_type</name></member>
+      <member refid="classoscit_1_1_c_reference_counted_1af03ea73d1321a2cea7a0b1035696357c" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>acquire</name></member>
+      <member refid="classoscit_1_1_object_1a5f8efaea98d7db104b5d93fd4f4b48c7" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>adopt</name></member>
+      <member refid="classoscit_1_1_observable_1af26c400580303db64255411c8378a5fc" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>adopt_callback_on_destroy</name></member>
+      <member refid="classoscit_1_1_object_1a3773c011a07411b64ec2f317cbe29ce7" prot="public" virt="virtual"><scope>oscit::TreeMetaMethod</scope><name>adopted</name></member>
+      <member refid="classoscit_1_1_object_1a5755a4de12647c68a5fcc2158433f863" prot="public" virt="virtual"><scope>oscit::TreeMetaMethod</scope><name>build_child</name></member>
+      <member refid="classoscit_1_1_object_1ad624d0994776be24718f18563ad02050" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>can_receive</name></member>
+      <member refid="classoscit_1_1_object_1a43ec5d9a5fbd8de5b2355f8910a07e3f" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>children</name></member>
+      <member refid="classoscit_1_1_object_1acbd1ef524ef4ca1a7793a40e8ad3c9a6" prot="protected" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>children_</name></member>
+      <member refid="classoscit_1_1_object_1a1c6bcda9390b68f93ed6287cf46a22ab" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>children_count</name></member>
+      <member refid="classoscit_1_1_object_1a3c3ccd6c862acb8a1890eb51056f97bd" prot="protected" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>children_vector_</name></member>
+      <member refid="classoscit_1_1_typed_1a9d91142c1ff172635833f4b2a06d5d3b" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>class_name</name></member>
+      <member refid="classoscit_1_1_object_1a7586ea404946ee1519d86d8bf732854e" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>clear</name></member>
+      <member refid="classoscit_1_1_object_1a5da077bd2474029c931f49d92c291181" prot="protected" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>context_</name></member>
+      <member refid="classoscit_1_1_c_reference_counted_1af26aaaa40dd9297f5529f38894044875" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>CReferenceCounted</name></member>
+      <member refid="classoscit_1_1_observer_1a0460e53a6d44a9388dec23ff76ba83f2" prot="protected" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>delete_produced_callbacks_with_data</name></member>
+      <member refid="classoscit_1_1_object_1a2ae7faf5c357c1c78d7f08c302b32d5f" prot="protected" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>find_next_name</name></member>
+      <member refid="classoscit_1_1_object_1a835f295e18da70529107509f6da92f14" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>first_child</name></member>
+      <member refid="classoscit_1_1_object_1a6a71331c5dbe0d0b6579410c2f1b13b0" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>get_child</name></member>
+      <member refid="classoscit_1_1_object_1a8f41ba458a3967d1e188b10909835613" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>get_child</name></member>
+      <member refid="classoscit_1_1_object_1a00b462f53a9a3a554469665893eed395" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>info</name></member>
+      <member refid="classoscit_1_1_typed_1a4aba9ae57b258b6d678c685d190ec281" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>is_a</name></member>
+      <member refid="classoscit_1_1_object_1ab3d7e09f1f76c23b93b9219fbfb49b7c" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>list</name></member>
+      <member refid="classoscit_1_1_object_1a414e24a6cd6b0efa384664992de36907" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>list_with_type</name></member>
+      <member refid="classoscit_1_1_object_1ad9104e48c683463d6fa6b11ef0f48015" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>lock</name></member>
+      <member refid="classoscit_1_1_object_1ad2d56eb93ab7656aadab92ed2d3ce34a" prot="protected" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>moved</name></member>
+      <member refid="classoscit_1_1_object_1ac496efa52da888ff46e2d68265da1ad1" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>name</name></member>
+      <member refid="classoscit_1_1_object_1a28adb2acc229aaf0210e07520addafdf" prot="protected" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>name_</name></member>
+      <member refid="classoscit_1_1_object_1afc7c68fa73ccc93c3f021b68c52d02fd" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>Object</name></member>
+      <member refid="classoscit_1_1_object_1a57e051f3a81fe55e09e9abbfcad5411b" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>Object</name></member>
+      <member refid="classoscit_1_1_object_1a3fe8ac33a99f99c6e9ce50fde76c0452" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>Object</name></member>
+      <member refid="classoscit_1_1_object_1a02b9d095f61c48b2c4d762b20c033797" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>Object</name></member>
+      <member refid="classoscit_1_1_object_1afd5a334f27a5b8196e69165efb553a30" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>Object</name></member>
+      <member refid="classoscit_1_1_object_1a8f7e0cdc1ae5578b0829c0e427f2f676" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>Object</name></member>
+      <member refid="classoscit_1_1_object_1a48d9081741075e668c1dfb7357e196f7" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>Object</name></member>
+      <member refid="classoscit_1_1_object_1aa314d577f92e7bb042f35b3c87af86cb" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>Object</name></member>
+      <member refid="classoscit_1_1_object_1ae875b68c72ba87f1d6d3a09d4df22938" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>Object</name></member>
+      <member refid="classoscit_1_1_observable_1add7ad7a51860b63b558685c950f2df63" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>Observable</name></member>
+      <member refid="classoscit_1_1_object_1a0765b2288555f19ca5dfc12075117f0a" prot="protected" virt="virtual"><scope>oscit::TreeMetaMethod</scope><name>observer_lock</name></member>
+      <member refid="classoscit_1_1_object_1a48cca8b50208000365a76bc03ef836b2" prot="protected" virt="virtual"><scope>oscit::TreeMetaMethod</scope><name>observer_unlock</name></member>
+      <member refid="classoscit_1_1_object_1ae673c75d02da068beac4316f9a7c4429" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>parent</name></member>
+      <member refid="classoscit_1_1_object_1a30078b27dfeb7591e7cae7ff9516ae4f" prot="protected" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>parent_</name></member>
+      <member refid="classoscit_1_1_c_reference_counted_1abe49f3c60ebe0364d7590a42a4afa8b2" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>ref_count</name></member>
+      <member refid="classoscit_1_1_object_1a5c993e705821e5d03190ef58568719a0" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>register_alias</name></member>
+      <member refid="classoscit_1_1_object_1a43f259903782a874ab9d210eb386b3d3" prot="protected" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>register_child</name></member>
+      <member refid="classoscit_1_1_c_reference_counted_1af937a9fdcb7b0af90e7a99e8413a041f" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>release</name></member>
+      <member refid="classoscit_1_1_c_reference_counted_1a14432013e00b30693b89212ee244f330" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>release</name></member>
+      <member refid="classoscit_1_1_c_reference_counted_1a25c5b24bbd95ad923e77d4f0fa94b888" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>retain</name></member>
+      <member refid="classoscit_1_1_object_1a79b51de62975104798324567ab68566c" prot="protected" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>root_</name></member>
+      <member refid="classoscit_1_1_object_1a62434e83343a3446e5112f8de13a0272" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>set</name></member>
+      <member refid="classoscit_1_1_object_1a72a0145db445cb50f93ab57ab611ef0d" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>set_all_ok</name></member>
+      <member refid="classoscit_1_1_observer_1ab856c4b8fac03abcb75fe3884a363a6b" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>set_and_hold</name></member>
+      <member refid="classoscit_1_1_object_1af83dd0bb922d3cbc3fac0f61a765dc87" prot="public" virt="virtual"><scope>oscit::TreeMetaMethod</scope><name>set_context</name></member>
+      <member refid="classoscit_1_1_object_1a9bb6955e387325190835361c1d1e72da" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>set_name</name></member>
+      <member refid="classoscit_1_1_object_1ae491927434513000db13fcf8f10dafc3" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>set_name</name></member>
+      <member refid="classoscit_1_1_object_1aacc22da11d84919f001a3732123a9968" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>set_parent</name></member>
+      <member refid="classoscit_1_1_object_1a0a0d3496199e134d568c87f8122b4c4e" prot="protected" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>set_root</name></member>
+      <member refid="classoscit_1_1_object_1a3efa5720f9817fb5d1ea84afbea927ca" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>tree</name></member>
+      <member refid="classoscit_1_1_tree_meta_method_1a55c85398ddd877fb70d8b4e5a97df602" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>TreeMetaMethod</name></member>
+      <member refid="classoscit_1_1_tree_meta_method_1a561b0cf3949fbd12c33a1322c0766539" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>TreeMetaMethod</name></member>
+      <member refid="classoscit_1_1_tree_meta_method_1a20cc536898cd9c28de37c9c561ae5998" prot="public" virt="virtual"><scope>oscit::TreeMetaMethod</scope><name>trigger</name></member>
+      <member refid="classoscit_1_1_object_1ace8d4494f5940334d6353b2a9889c4c2" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>type</name></member>
+      <member refid="classoscit_1_1_typed_1a72ecaff553f3b9028dd57afee597dc44" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>type_cast</name></member>
+      <member refid="classoscit_1_1_object_1a34c0a7e5786a1bddbe54529abafe522d" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>type_id</name></member>
+      <member refid="classoscit_1_1_object_1ab95b455fe0ab73da1f15399704e744de" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>type_with_current_value</name></member>
+      <member refid="classoscit_1_1_object_1a8d5e13941e410b6d86a3492cb16cb9f8" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>unlock</name></member>
+      <member refid="classoscit_1_1_object_1a3780d31ff03fc7c2736b87d9277f19a6" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>unregister_alias</name></member>
+      <member refid="classoscit_1_1_object_1ad4981ad22e3e1fa7bf6d0f64d152e845" prot="protected" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>unregister_child</name></member>
+      <member refid="classoscit_1_1_object_1a7e34fb8368986560d6ca120e679b4a4e" prot="public" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>url</name></member>
+      <member refid="classoscit_1_1_object_1aff1923f15589c4f01216270292b439ae" prot="protected" virt="non-virtual"><scope>oscit::TreeMetaMethod</scope><name>url_</name></member>
+      <member refid="classoscit_1_1_c_reference_counted_1adf83fb16489f561db168e11d5c7e19c5" prot="public" virt="virtual"><scope>oscit::TreeMetaMethod</scope><name>~CReferenceCounted</name></member>
+      <member refid="classoscit_1_1_object_1a7804faf5ddca82c30fee98e9d10b9734" prot="public" virt="virtual"><scope>oscit::TreeMetaMethod</scope><name>~Object</name></member>
+      <member refid="classoscit_1_1_observer_1ac42ab921bb3a679a9abaf483f1559c00" prot="public" virt="virtual"><scope>oscit::TreeMetaMethod</scope><name>~Observer</name></member>
+      <member refid="classoscit_1_1_typed_1ab92fb67d52050227718772b14f74b1b6" prot="public" virt="virtual"><scope>oscit::TreeMetaMethod</scope><name>~Typed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

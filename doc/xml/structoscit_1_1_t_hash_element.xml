@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="structoscit_1_1_t_hash_element" kind="struct" prot="public">
+    <compoundname>oscit::THashElement</compoundname>
+    <includes refid="thash_8h" local="no">thash.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>K</declname>
+        <defname>K</defname>
+      </param>
+      <param>
+        <type>class</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structoscit_1_1_t_hash_element_1ad48d9fdaa670e135ba256cc25ccb7c1d" prot="public" static="no" mutable="no">
+        <type>K</type>
+        <definition>K oscit::THashElement&lt; K, T &gt;::key</definition>
+        <argsstring></argsstring>
+        <name>key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="79" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structoscit_1_1_t_hash_element_1a1e68bf66f97cf7c09ce63054fb178cea" prot="public" static="no" mutable="no">
+        <type>T *</type>
+        <definition>T* oscit::THashElement&lt; K, T &gt;::obj</definition>
+        <argsstring></argsstring>
+        <name>obj</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="80" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structoscit_1_1_t_hash_element_1a8c8c2961aa02b9636ea10266596a6f9a" prot="public" static="no" mutable="no">
+        <type><ref refid="structoscit_1_1_t_hash_element" kindref="compound">THashElement</ref>&lt; K, T &gt; *</type>
+        <definition>THashElement&lt;K,T&gt;* oscit::THashElement&lt; K, T &gt;::next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <briefdescription>
+<para>lookup collision chain </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="82" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structoscit_1_1_t_hash_element_1a2712bcdc6e89758b62ce73a6b3640248" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::THashElement&lt; K, T &gt;::THashElement</definition>
+        <argsstring>()</argsstring>
+        <name>THashElement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="77" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="77" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="structoscit_1_1_t_hash_element_1ab79c53cd289da99f0f0b070cfcef2b03" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::THashElement&lt; K, T &gt;::~THashElement</definition>
+        <argsstring>()</argsstring>
+        <name>~THashElement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="78" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="78" bodyend="78"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1314">
+        <label>K</label>
+      </node>
+      <node id="1315">
+        <label>T</label>
+      </node>
+      <node id="1313">
+        <label>oscit::THashElement&lt; K, T &gt;</label>
+        <link refid="structoscit_1_1_t_hash_element"/>
+        <childnode refid="1314" relation="usage">
+          <edgelabel>key</edgelabel>
+        </childnode>
+        <childnode refid="1315" relation="usage">
+          <edgelabel>obj</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="76" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="75" bodyend="83"/>
+    <listofallmembers>
+      <member refid="structoscit_1_1_t_hash_element_1ad48d9fdaa670e135ba256cc25ccb7c1d" prot="public" virt="non-virtual"><scope>oscit::THashElement</scope><name>key</name></member>
+      <member refid="structoscit_1_1_t_hash_element_1a8c8c2961aa02b9636ea10266596a6f9a" prot="public" virt="non-virtual"><scope>oscit::THashElement</scope><name>next</name></member>
+      <member refid="structoscit_1_1_t_hash_element_1a1e68bf66f97cf7c09ce63054fb178cea" prot="public" virt="non-virtual"><scope>oscit::THashElement</scope><name>obj</name></member>
+      <member refid="structoscit_1_1_t_hash_element_1a2712bcdc6e89758b62ce73a6b3640248" prot="public" virt="non-virtual"><scope>oscit::THashElement</scope><name>THashElement</name></member>
+      <member refid="structoscit_1_1_t_hash_element_1ab79c53cd289da99f0f0b070cfcef2b03" prot="public" virt="non-virtual"><scope>oscit::THashElement</scope><name>~THashElement</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

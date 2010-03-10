@@ -1,0 +1,491 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classoscit_1_1_file" kind="class" prot="public">
+    <compoundname>oscit::File</compoundname>
+    <includes refid="file_8h" local="no">file.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classoscit_1_1_file_1a789687cc69e5fa0c4c6e385587629d7e" prot="private" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>Value oscit::File::last_error_</definition>
+        <argsstring></argsstring>
+        <name>last_error_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/file.h" line="142" bodyfile="/Users/gaspard/git/oscit/include/oscit/file.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_file_1ab5961ee295a1bb7e9ed935c6b54afa88" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string oscit::File::path_</definition>
+        <argsstring></argsstring>
+        <name>path_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/file.h" line="143" bodyfile="/Users/gaspard/git/oscit/include/oscit/file.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classoscit_1_1_file_1ad1f2a4a9fb3bb02367baa5a5212d2086" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::File::File</definition>
+        <argsstring>(const char *path)</argsstring>
+        <name>File</name>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/file.h" line="47" bodyfile="/Users/gaspard/git/oscit/include/oscit/file.h" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_file_1a2b9bee6c04f8b4a9ea4c124e7c521b8d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::File::File</definition>
+        <argsstring>(const std::string &amp;path)</argsstring>
+        <name>File</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/file.h" line="48" bodyfile="/Users/gaspard/git/oscit/include/oscit/file.h" bodystart="48" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_file_1a3e1bc352054264fe59ead1f03212e517" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual oscit::File::~File</definition>
+        <argsstring>()</argsstring>
+        <name>~File</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/file.h" line="49" bodyfile="/Users/gaspard/git/oscit/include/oscit/file.h" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_file_1af1550a9070a583ba95be305f6d78c8e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>Value oscit::File::read</definition>
+        <argsstring>()</argsstring>
+        <name>read</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read all content of file into a <ref refid="classoscit_1_1_value" kindref="compound">Value</ref>. <simplesect kind="return"><para>a <ref refid="classoscit_1_1_string_value" kindref="compound">StringValue</ref> on success and an <ref refid="classoscit_1_1_error_value" kindref="compound">ErrorValue</ref> in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/file.h" line="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_file_1a14a9e247cbc611fc7fb732b93b769a01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool oscit::File::write</definition>
+        <argsstring>(const std::string &amp;data)</argsstring>
+        <name>write</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Replace the current file&apos;s content by the new content. Returns false on failure (use <ref refid="classoscit_1_1_file_1aa7f42a0625d596382581416776720ebc" kindref="member">File::last_error()</ref> for an <ref refid="classoscit_1_1_error_value" kindref="compound">ErrorValue</ref>). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/file.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_file_1a18234e2d68e2336dd1835637382abdb4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool oscit::File::write</definition>
+        <argsstring>(const char *data)</argsstring>
+        <name>write</name>
+        <param>
+          <type>const char *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Replace the current file&apos;s content by the new content. Returns false on failure (use <ref refid="classoscit_1_1_file_1aa7f42a0625d596382581416776720ebc" kindref="member">File::last_error()</ref> for an <ref refid="classoscit_1_1_error_value" kindref="compound">ErrorValue</ref>). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/file.h" line="64" bodyfile="/Users/gaspard/git/oscit/include/oscit/file.h" bodystart="64" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_file_1ad8f1706c35a3462da75951b8123a6730" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool oscit::File::append</definition>
+        <argsstring>(const std::string &amp;data)</argsstring>
+        <name>append</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Append some content to the end of the file. Returns false on failure (use <ref refid="classoscit_1_1_file_1aa7f42a0625d596382581416776720ebc" kindref="member">File::last_error()</ref> for an <ref refid="classoscit_1_1_error_value" kindref="compound">ErrorValue</ref>). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/file.h" line="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_file_1a216ad1aaa85ddb0d57ad10b0f9ae5003" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool oscit::File::append</definition>
+        <argsstring>(const char *data)</argsstring>
+        <name>append</name>
+        <param>
+          <type>const char *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Append some content to the end of the file. Returns false on failure (use <ref refid="classoscit_1_1_file_1aa7f42a0625d596382581416776720ebc" kindref="member">File::last_error()</ref> for an <ref refid="classoscit_1_1_error_value" kindref="compound">ErrorValue</ref>). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/file.h" line="74" bodyfile="/Users/gaspard/git/oscit/include/oscit/file.h" bodystart="74" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_file_1a95bb7311f09dd01f03bd45fea220adb8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool oscit::File::has_error</definition>
+        <argsstring>()</argsstring>
+        <name>has_error</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return true if an error occured (during initialization, read, write, etc). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/file.h" line="78" bodyfile="/Users/gaspard/git/oscit/include/oscit/file.h" bodystart="78" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_file_1aa7f42a0625d596382581416776720ebc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>Value oscit::File::last_error</definition>
+        <argsstring>() const </argsstring>
+        <name>last_error</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If an error occured, use this method to get information on the error. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/file.h" line="84" bodyfile="/Users/gaspard/git/oscit/include/oscit/file.h" bodystart="84" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_file_1afb023b7ee7bdbc2db30da5f9cf9562bf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string oscit::File::path</definition>
+        <argsstring>() const </argsstring>
+        <name>path</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/file.h" line="88" bodyfile="/Users/gaspard/git/oscit/include/oscit/file.h" bodystart="88" bodyend="90"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classoscit_1_1_file_1a8c1b9cfd0a2193e949800e2c9f428e4e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>static Value oscit::File::list</definition>
+        <argsstring>(const std::string &amp;folder, const std::string &amp;ends_with)</argsstring>
+        <name>list</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>folder</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>ends_with</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return a list of file names found in the given folder and matching the given end string. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/file.h" line="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_file_1a021d53f11e5eb79648ae51b3885ea151" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>static Value oscit::File::list</definition>
+        <argsstring>(const std::string &amp;folder, const char *ends_with)</argsstring>
+        <name>list</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>folder</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>ends_with</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return a list of file names found in the given folder and matching the given end string. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/file.h" line="100" bodyfile="/Users/gaspard/git/oscit/include/oscit/file.h" bodystart="100" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_file_1a768577a960a5844e0ab6b6876216a1fb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>static Value oscit::File::list</definition>
+        <argsstring>(const char *folder, const std::string &amp;ends_with)</argsstring>
+        <name>list</name>
+        <param>
+          <type>const char *</type>
+          <declname>folder</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>ends_with</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return a list of file names found in the given folder and matching the given end string. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/file.h" line="107" bodyfile="/Users/gaspard/git/oscit/include/oscit/file.h" bodystart="107" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_file_1ac1afc8ee848c185ab7246291621ed746" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>static Value oscit::File::list</definition>
+        <argsstring>(const char *folder, const char *ends_with)</argsstring>
+        <name>list</name>
+        <param>
+          <type>const char *</type>
+          <declname>folder</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>ends_with</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return a list of file names found in the given folder and matching the given end string. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/file.h" line="114" bodyfile="/Users/gaspard/git/oscit/include/oscit/file.h" bodystart="114" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_file_1a89f40695aa5e0a3f1241dc21409ae546" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string oscit::File::join</definition>
+        <argsstring>(const std::string &amp;base, const std::string &amp;path)</argsstring>
+        <name>join</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Join file names to build a path. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/file.h" line="120" bodyfile="/Users/gaspard/git/oscit/include/oscit/file.h" bodystart="120" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_file_1ac93218846b6a01fba26fa3aa86a1d081" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string oscit::File::join</definition>
+        <argsstring>(const std::string &amp;base, const char *path)</argsstring>
+        <name>join</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Join file names to build a path. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/file.h" line="126" bodyfile="/Users/gaspard/git/oscit/include/oscit/file.h" bodystart="126" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_file_1a6022fbaccd415d2ac82278769e1853aa" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string oscit::File::join</definition>
+        <argsstring>(const char *base, const std::string &amp;path)</argsstring>
+        <name>join</name>
+        <param>
+          <type>const char *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Join file names to build a path. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/file.h" line="132" bodyfile="/Users/gaspard/git/oscit/include/oscit/file.h" bodystart="132" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_file_1a56ea0fa4d1b4b5469a02be35c642e00f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string oscit::File::join</definition>
+        <argsstring>(const char *base, const char *path)</argsstring>
+        <name>join</name>
+        <param>
+          <type>const char *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Join file names to build a path. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/file.h" line="138" bodyfile="/Users/gaspard/git/oscit/include/oscit/file.h" bodystart="138" bodyend="140"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is responsible for managaging access to the filesystem. All operations are atomic and the <ref refid="classoscit_1_1_file" kindref="compound">File</ref> never holds a lock on the file representation. This means that you should prepare all the content in a string instead of calling <ref refid="classoscit_1_1_file_1ad8f1706c35a3462da75951b8123a6730" kindref="member">File::append</ref> again and again. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="262">
+        <label>Matrix</label>
+        <link refid="class_matrix"/>
+      </node>
+      <node id="261">
+        <label>oscit::List</label>
+        <link refid="classoscit_1_1_list"/>
+        <childnode refid="258" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="256">
+        <label>oscit::Value</label>
+        <link refid="classoscit_1_1_value"/>
+        <childnode refid="257" relation="usage">
+          <edgelabel>midi_message_</edgelabel>
+        </childnode>
+        <childnode refid="259" relation="usage">
+          <edgelabel>string_</edgelabel>
+        </childnode>
+        <childnode refid="260" relation="usage">
+          <edgelabel>error_</edgelabel>
+        </childnode>
+        <childnode refid="261" relation="usage">
+          <edgelabel>list_</edgelabel>
+        </childnode>
+        <childnode refid="262" relation="usage">
+          <edgelabel>matrix_</edgelabel>
+        </childnode>
+        <childnode refid="263" relation="usage">
+          <edgelabel>hash_</edgelabel>
+        </childnode>
+      </node>
+      <node id="257">
+        <label>oscit::MidiMessage</label>
+        <link refid="classoscit_1_1_midi_message"/>
+        <childnode refid="258" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="265">
+        <label>oscit::THashElement&lt; std::string, Value &gt;</label>
+        <link refid="structoscit_1_1_t_hash_element"/>
+        <childnode refid="265" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="256" relation="usage">
+          <edgelabel>obj</edgelabel>
+        </childnode>
+      </node>
+      <node id="255">
+        <label>oscit::File</label>
+        <link refid="classoscit_1_1_file"/>
+        <childnode refid="256" relation="usage">
+          <edgelabel>last_error_</edgelabel>
+        </childnode>
+      </node>
+      <node id="260">
+        <label>oscit::Error</label>
+        <link refid="classoscit_1_1_error"/>
+        <childnode refid="258" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="264">
+        <label>oscit::THash&lt; std::string, Value &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+        <childnode refid="265" relation="usage">
+          <edgelabel>thash_table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="263">
+        <label>oscit::Hash</label>
+        <link refid="classoscit_1_1_hash"/>
+        <childnode refid="258" relation="public-inheritance">
+        </childnode>
+        <childnode refid="264" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="258">
+        <label>oscit::ReferenceCounted</label>
+        <link refid="classoscit_1_1_reference_counted"/>
+      </node>
+      <node id="259">
+        <label>oscit::StringData</label>
+        <link refid="classoscit_1_1_string_data"/>
+        <childnode refid="258" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/file.h" line="45" bodyfile="/Users/gaspard/git/oscit/include/oscit/file.h" bodystart="45" bodyend="144"/>
+    <listofallmembers>
+      <member refid="classoscit_1_1_file_1ad8f1706c35a3462da75951b8123a6730" prot="public" virt="non-virtual"><scope>oscit::File</scope><name>append</name></member>
+      <member refid="classoscit_1_1_file_1a216ad1aaa85ddb0d57ad10b0f9ae5003" prot="public" virt="non-virtual"><scope>oscit::File</scope><name>append</name></member>
+      <member refid="classoscit_1_1_file_1ad1f2a4a9fb3bb02367baa5a5212d2086" prot="public" virt="non-virtual"><scope>oscit::File</scope><name>File</name></member>
+      <member refid="classoscit_1_1_file_1a2b9bee6c04f8b4a9ea4c124e7c521b8d" prot="public" virt="non-virtual"><scope>oscit::File</scope><name>File</name></member>
+      <member refid="classoscit_1_1_file_1a95bb7311f09dd01f03bd45fea220adb8" prot="public" virt="non-virtual"><scope>oscit::File</scope><name>has_error</name></member>
+      <member refid="classoscit_1_1_file_1a89f40695aa5e0a3f1241dc21409ae546" prot="public" virt="non-virtual"><scope>oscit::File</scope><name>join</name></member>
+      <member refid="classoscit_1_1_file_1ac93218846b6a01fba26fa3aa86a1d081" prot="public" virt="non-virtual"><scope>oscit::File</scope><name>join</name></member>
+      <member refid="classoscit_1_1_file_1a6022fbaccd415d2ac82278769e1853aa" prot="public" virt="non-virtual"><scope>oscit::File</scope><name>join</name></member>
+      <member refid="classoscit_1_1_file_1a56ea0fa4d1b4b5469a02be35c642e00f" prot="public" virt="non-virtual"><scope>oscit::File</scope><name>join</name></member>
+      <member refid="classoscit_1_1_file_1aa7f42a0625d596382581416776720ebc" prot="public" virt="non-virtual"><scope>oscit::File</scope><name>last_error</name></member>
+      <member refid="classoscit_1_1_file_1a789687cc69e5fa0c4c6e385587629d7e" prot="private" virt="non-virtual"><scope>oscit::File</scope><name>last_error_</name></member>
+      <member refid="classoscit_1_1_file_1a8c1b9cfd0a2193e949800e2c9f428e4e" prot="public" virt="non-virtual"><scope>oscit::File</scope><name>list</name></member>
+      <member refid="classoscit_1_1_file_1a021d53f11e5eb79648ae51b3885ea151" prot="public" virt="non-virtual"><scope>oscit::File</scope><name>list</name></member>
+      <member refid="classoscit_1_1_file_1a768577a960a5844e0ab6b6876216a1fb" prot="public" virt="non-virtual"><scope>oscit::File</scope><name>list</name></member>
+      <member refid="classoscit_1_1_file_1ac1afc8ee848c185ab7246291621ed746" prot="public" virt="non-virtual"><scope>oscit::File</scope><name>list</name></member>
+      <member refid="classoscit_1_1_file_1afb023b7ee7bdbc2db30da5f9cf9562bf" prot="public" virt="non-virtual"><scope>oscit::File</scope><name>path</name></member>
+      <member refid="classoscit_1_1_file_1ab5961ee295a1bb7e9ed935c6b54afa88" prot="private" virt="non-virtual"><scope>oscit::File</scope><name>path_</name></member>
+      <member refid="classoscit_1_1_file_1af1550a9070a583ba95be305f6d78c8e3" prot="public" virt="non-virtual"><scope>oscit::File</scope><name>read</name></member>
+      <member refid="classoscit_1_1_file_1a14a9e247cbc611fc7fb732b93b769a01" prot="public" virt="non-virtual"><scope>oscit::File</scope><name>write</name></member>
+      <member refid="classoscit_1_1_file_1a18234e2d68e2336dd1835637382abdb4" prot="public" virt="non-virtual"><scope>oscit::File</scope><name>write</name></member>
+      <member refid="classoscit_1_1_file_1a3e1bc352054264fe59ead1f03212e517" prot="public" virt="virtual"><scope>oscit::File</scope><name>~File</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

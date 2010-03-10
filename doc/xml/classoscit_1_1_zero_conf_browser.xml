@@ -1,0 +1,832 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classoscit_1_1_zero_conf_browser" kind="class" prot="public">
+    <compoundname>oscit::ZeroConfBrowser</compoundname>
+    <basecompoundref refid="classoscit_1_1_mutex" prot="public" virt="non-virtual">oscit::Mutex</basecompoundref>
+    <includes refid="zeroconf__browser_8h" local="no">zeroconf_browser.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classoscit_1_1_zero_conf_browser_1a4b4e5c506748d54b201efc04c436ed08" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool oscit::ZeroConfBrowser::running_</definition>
+        <argsstring></argsstring>
+        <name>running_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="114" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_zero_conf_browser_1a7a152c93ea7ecd1014a428eaa48ad755" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string oscit::ZeroConfBrowser::protocol_</definition>
+        <argsstring></argsstring>
+        <name>protocol_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="115" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_zero_conf_browser_1a9a3691f807a3e879e73fd4d18fdd658c" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string oscit::ZeroConfBrowser::service_type_</definition>
+        <argsstring></argsstring>
+        <name>service_type_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="116" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_zero_conf_browser_1af016b7a98be2f7b15a662c4d74f51650" prot="protected" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_command" kindref="compound">Command</ref> *</type>
+        <definition>Command* oscit::ZeroConfBrowser::command_</definition>
+        <argsstring></argsstring>
+        <name>command_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="117" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_zero_conf_browser_1a477e6c4d06251fdb524e124368601b0c" prot="protected" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_proxy_factory" kindref="compound">ProxyFactory</ref> *</type>
+        <definition>ProxyFactory* oscit::ZeroConfBrowser::proxy_factory_</definition>
+        <argsstring></argsstring>
+        <name>proxy_factory_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="118" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classoscit_1_1_zero_conf_browser_1a62c79d8c86e25909d44c646d95c2fdc5" prot="private" static="no" mutable="no">
+        <type>Implementation *</type>
+        <definition>Implementation* oscit::ZeroConfBrowser::impl_</definition>
+        <argsstring></argsstring>
+        <name>impl_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="124" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_zero_conf_browser_1a71c852c6459abd2d785a13638604a6f3" prot="private" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_t_hash" kindref="compound">THash</ref>&lt; std::string, <ref refid="classoscit_1_1_location" kindref="compound">Location</ref> &gt;</type>
+        <definition>THash&lt;std::string, Location&gt; oscit::ZeroConfBrowser::found_devices_</definition>
+        <argsstring></argsstring>
+        <name>found_devices_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="126" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classoscit_1_1_zero_conf_browser_1aba7b4ffba2edf7add717439f51ba6976" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>oscit::ZeroConfBrowser::ZeroConfBrowser</definition>
+        <argsstring>(const char *service_type)</argsstring>
+        <name>ZeroConfBrowser</name>
+        <param>
+          <type>const char *</type>
+          <declname>service_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_zero_conf_browser_1a0d01d8dc168e7f10213bc4e3a6113eaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual oscit::ZeroConfBrowser::~ZeroConfBrowser</definition>
+        <argsstring>()</argsstring>
+        <name>~ZeroConfBrowser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_zero_conf_browser_1ae9f07384355a90374fd96c0e4a40fed3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void oscit::ZeroConfBrowser::added_proxy</definition>
+        <argsstring>(RootProxy *proxy)</argsstring>
+        <name>added_proxy</name>
+        <param>
+          <type><ref refid="classoscit_1_1_root_proxy" kindref="compound">RootProxy</ref> *</type>
+          <declname>proxy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called just after a new proxy has been added to the list. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="59" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_zero_conf_browser_1a244bea243024b782445e85de9fb760f2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void oscit::ZeroConfBrowser::delete_proxy</definition>
+        <argsstring>(RootProxy *proxy)</argsstring>
+        <name>delete_proxy</name>
+        <param>
+          <type><ref refid="classoscit_1_1_root_proxy" kindref="compound">RootProxy</ref> *</type>
+          <declname>proxy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called so that you have an opportunity to delete it cleanly. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="63" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" bodystart="63" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_zero_conf_browser_1a3331e60344fa0f4542b11f5f748d41d2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>T *</type>
+        <definition>T* oscit::ZeroConfBrowser::adopt_proxy_factory</definition>
+        <argsstring>(T *factory)</argsstring>
+        <name>adopt_proxy_factory</name>
+        <param>
+          <type>T *</type>
+          <declname>factory</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="68" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" bodystart="68" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_zero_conf_browser_1ad823dfd59b6c3b3b75975aa8bd779e79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::ZeroConfBrowser::set_command</definition>
+        <argsstring>(Command *command)</argsstring>
+        <name>set_command</name>
+        <param>
+          <type><ref refid="classoscit_1_1_command" kindref="compound">Command</ref> *</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FIXME: make this internal and use command-&gt;adopt_browser </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_zero_conf_browser_1a2dd601c4b70fa228a0c855461bf833a6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool oscit::ZeroConfBrowser::get_location_from_name</definition>
+        <argsstring>(const char *service_name, Location *location) const </argsstring>
+        <name>get_location_from_name</name>
+        <param>
+          <type>const char *</type>
+          <declname>service_name</declname>
+        </param>
+        <param>
+          <type><ref refid="classoscit_1_1_location" kindref="compound">Location</ref> *</type>
+          <declname>location</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_zero_conf_browser_1a69176a13ad82b2e18c38011ac1131ac5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::ZeroConfBrowser::add_device</definition>
+        <argsstring>(const Location &amp;location)</argsstring>
+        <name>add_device</name>
+        <param>
+          <type>const <ref refid="classoscit_1_1_location" kindref="compound">Location</ref> &amp;</type>
+          <declname>location</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_zero_conf_browser_1ac05159d42f5a54396450b85d1e3048ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::ZeroConfBrowser::remove_device</definition>
+        <argsstring>(const char *name)</argsstring>
+        <name>remove_device</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="83"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classoscit_1_1_zero_conf_browser_1a88855d15d5e5663148d083cd3e5d4cec" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void oscit::ZeroConfBrowser::start</definition>
+        <argsstring>()</argsstring>
+        <name>start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called when the command_ is set. Sub-classes can call this method if they want to use the browser without creating proxies (without a command). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_zero_conf_browser_1ab6f439456d744e0295769b49201f4a90" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void oscit::ZeroConfBrowser::stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method *must* be called from sub-classes in their destructors to make sure the callbacks (add_device, remove_device) are not called in the middle of a class destruction. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_zero_conf_browser_1a2009c0a25bcbb93774a1c65066a48d36" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool oscit::ZeroConfBrowser::is_running</definition>
+        <argsstring>()</argsstring>
+        <name>is_running</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return true if the browser is running (searching for devices). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="100" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" bodystart="100" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_zero_conf_browser_1ad4078ec7874518dde8f1ceb2ca0f8277" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::ZeroConfBrowser::set_running</definition>
+        <argsstring>(bool is_running)</argsstring>
+        <name>set_running</name>
+        <param>
+          <type>bool</type>
+          <declname>is_running</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="104" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" bodystart="104" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_zero_conf_browser_1af8a8085968ed205206e8b4c5863a6e1b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::ZeroConfBrowser::get_protocol_from_service_type</definition>
+        <argsstring>()</argsstring>
+        <name>get_protocol_from_service_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_zero_conf_browser_1a529adc4f9a8fc5bd3dca911289200969" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::ZeroConfBrowser::add_proxy</definition>
+        <argsstring>(const Location &amp;location)</argsstring>
+        <name>add_proxy</name>
+        <param>
+          <type>const <ref refid="classoscit_1_1_location" kindref="compound">Location</ref> &amp;</type>
+          <declname>location</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_zero_conf_browser_1a0c8ace6aa8252e5e2811eb2a191be3d4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::ZeroConfBrowser::remove_proxy</definition>
+        <argsstring>(const Location &amp;location)</argsstring>
+        <name>remove_proxy</name>
+        <param>
+          <type>const <ref refid="classoscit_1_1_location" kindref="compound">Location</ref> &amp;</type>
+          <declname>location</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="112"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classoscit_1_1_zero_conf_browser_1ab75dd33f294ef99b098878db97667f9f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::ZeroConfBrowser::do_adopt_proxy_factory</definition>
+        <argsstring>(ProxyFactory *factory)</argsstring>
+        <name>do_adopt_proxy_factory</name>
+        <param>
+          <type><ref refid="classoscit_1_1_proxy_factory" kindref="compound">ProxyFactory</ref> *</type>
+          <declname>factory</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="121"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class let&apos;s you easily found applications providing a certain service. To make sure that everything works as expected, you should do all the setup work (set <ref refid="classoscit_1_1_proxy_factory" kindref="compound">ProxyFactory</ref> for example), BEFORE the browser is adopted by a command (since this operation starts the service browsing). </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1517">
+        <label>oscit::Mutex</label>
+        <link refid="classoscit_1_1_mutex"/>
+        <childnode refid="1518" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1519" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="1519">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+      <node id="1516">
+        <label>oscit::ZeroConfBrowser</label>
+        <link refid="classoscit_1_1_zero_conf_browser"/>
+        <childnode refid="1517" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1518">
+        <label>oscit::Typed</label>
+        <link refid="classoscit_1_1_typed"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1528">
+        <label>oscit::Root</label>
+        <link refid="classoscit_1_1_root"/>
+        <childnode refid="1529" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1535" relation="usage">
+          <edgelabel>objects_</edgelabel>
+        </childnode>
+        <childnode refid="1550" relation="usage">
+          <edgelabel>callbacks_on_register_</edgelabel>
+        </childnode>
+        <childnode refid="1552" relation="usage">
+          <edgelabel>commands_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1544">
+        <label>Matrix</label>
+        <link refid="class_matrix"/>
+      </node>
+      <node id="1550">
+        <label>oscit::CTHash&lt; std::string, CallbackList * &gt;</label>
+        <link refid="classoscit_1_1_c_t_hash"/>
+        <childnode refid="1551" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1537" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1521">
+        <label>oscit::Mutex</label>
+        <link refid="classoscit_1_1_mutex"/>
+        <childnode refid="1522" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1523" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="1557">
+        <label>oscit::THash&lt; std::string, Object * &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+        <childnode refid="1558" relation="usage">
+          <edgelabel>thash_table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1564">
+        <label>oscit::THashElement&lt; std::string, Location &gt;</label>
+        <link refid="structoscit_1_1_t_hash_element"/>
+        <childnode refid="1564" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="1556" relation="usage">
+          <edgelabel>obj</edgelabel>
+        </childnode>
+      </node>
+      <node id="1543">
+        <label>oscit::List</label>
+        <link refid="classoscit_1_1_list"/>
+        <childnode refid="1540" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1559">
+        <label>oscit::THash&lt; Location, RootProxy * &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+        <childnode refid="1560" relation="usage">
+          <edgelabel>thash_table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1538">
+        <label>oscit::Value</label>
+        <link refid="classoscit_1_1_value"/>
+        <childnode refid="1539" relation="usage">
+          <edgelabel>midi_message_</edgelabel>
+        </childnode>
+        <childnode refid="1541" relation="usage">
+          <edgelabel>string_</edgelabel>
+        </childnode>
+        <childnode refid="1542" relation="usage">
+          <edgelabel>error_</edgelabel>
+        </childnode>
+        <childnode refid="1543" relation="usage">
+          <edgelabel>list_</edgelabel>
+        </childnode>
+        <childnode refid="1544" relation="usage">
+          <edgelabel>matrix_</edgelabel>
+        </childnode>
+        <childnode refid="1545" relation="usage">
+          <edgelabel>hash_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1536">
+        <label>oscit::THash&lt; std::string,Object * &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+      </node>
+      <node id="1526">
+        <label>oscit::Thread</label>
+        <link refid="classoscit_1_1_thread"/>
+        <childnode refid="1521" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1527" relation="usage">
+          <edgelabel>semaphore_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1560">
+        <label>oscit::THashElement&lt; Location, RootProxy * &gt;</label>
+        <link refid="structoscit_1_1_t_hash_element"/>
+        <childnode refid="1561" relation="usage">
+          <edgelabel>obj</edgelabel>
+        </childnode>
+        <childnode refid="1560" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="1556" relation="usage">
+          <edgelabel>key</edgelabel>
+        </childnode>
+      </node>
+      <node id="1539">
+        <label>oscit::MidiMessage</label>
+        <link refid="classoscit_1_1_midi_message"/>
+        <childnode refid="1540" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1547">
+        <label>oscit::THashElement&lt; std::string, Value &gt;</label>
+        <link refid="structoscit_1_1_t_hash_element"/>
+        <childnode refid="1547" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="1538" relation="usage">
+          <edgelabel>obj</edgelabel>
+        </childnode>
+      </node>
+      <node id="1523">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+      <node id="1562">
+        <label>oscit::ZeroConfRegistration</label>
+        <link refid="classoscit_1_1_zero_conf_registration"/>
+        <childnode refid="1521" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1558">
+        <label>oscit::THashElement&lt; std::string, Object * &gt;</label>
+        <link refid="structoscit_1_1_t_hash_element"/>
+        <childnode refid="1558" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="1529" relation="usage">
+          <edgelabel>obj</edgelabel>
+        </childnode>
+      </node>
+      <node id="1553">
+        <label>std::list&lt;Command * &gt;</label>
+        <link refid="classstd_1_1list"/>
+      </node>
+      <node id="1554">
+        <label>oscit::THash&lt; Location, unsigned int &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+        <childnode refid="1555" relation="usage">
+          <edgelabel>thash_table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1549">
+        <label>std::vector&lt;Object * &gt;</label>
+        <link refid="classstd_1_1vector"/>
+      </node>
+      <node id="1563">
+        <label>oscit::THash&lt; std::string, Location &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+        <childnode refid="1564" relation="usage">
+          <edgelabel>thash_table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1551">
+        <label>oscit::THash&lt; std::string,CallbackList * &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+      </node>
+      <node id="1552">
+        <label>oscit::CTList&lt; Command * &gt;</label>
+        <link refid="classoscit_1_1_c_t_list"/>
+        <childnode refid="1553" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1537" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1561">
+        <label>oscit::RootProxy</label>
+        <link refid="classoscit_1_1_root_proxy"/>
+        <childnode refid="1528" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1524" relation="usage">
+          <edgelabel>proxy_factory_</edgelabel>
+        </childnode>
+        <childnode refid="1525" relation="usage">
+          <edgelabel>command_</edgelabel>
+        </childnode>
+        <childnode refid="1556" relation="usage">
+          <edgelabel>remote_location_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1530">
+        <label>oscit::Observable</label>
+        <link refid="classoscit_1_1_observable"/>
+        <childnode refid="1531" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1532" relation="usage">
+          <edgelabel>destruction_notifier_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1532">
+        <label>oscit::OnDestroyNotifier</label>
+        <link refid="classoscit_1_1_on_destroy_notifier"/>
+        <childnode refid="1533" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1533" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1520">
+        <label>oscit::ZeroConfBrowser</label>
+        <link refid="classoscit_1_1_zero_conf_browser"/>
+        <childnode refid="1521" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1524" relation="usage">
+          <edgelabel>proxy_factory_</edgelabel>
+        </childnode>
+        <childnode refid="1525" relation="usage">
+          <edgelabel>command_</edgelabel>
+        </childnode>
+        <childnode refid="1563" relation="usage">
+          <edgelabel>found_devices_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1531">
+        <label>oscit::Observer</label>
+        <link refid="classoscit_1_1_observer"/>
+      </node>
+      <node id="1527">
+        <label>oscit::Semaphore</label>
+        <link refid="classoscit_1_1_semaphore"/>
+        <childnode refid="1523" relation="private-inheritance">
+        </childnode>
+        <childnode refid="1521" relation="usage">
+          <edgelabel>acquire_mutex_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1534">
+        <label>oscit::CReferenceCounted</label>
+        <link refid="classoscit_1_1_c_reference_counted"/>
+        <childnode refid="1523" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="1529">
+        <label>oscit::Object</label>
+        <link refid="classoscit_1_1_object"/>
+        <childnode refid="1522" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1530" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1534" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1535" relation="usage">
+          <edgelabel>children_</edgelabel>
+        </childnode>
+        <childnode refid="1528" relation="usage">
+          <edgelabel>root_</edgelabel>
+        </childnode>
+        <childnode refid="1538" relation="usage">
+          <edgelabel>type_</edgelabel>
+        </childnode>
+        <childnode refid="1548" relation="usage">
+          <edgelabel>children_vector_</edgelabel>
+        </childnode>
+        <childnode refid="1521" relation="usage">
+          <edgelabel>context_</edgelabel>
+        </childnode>
+        <childnode refid="1529" relation="usage">
+          <edgelabel>parent_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1542">
+        <label>oscit::Error</label>
+        <link refid="classoscit_1_1_error"/>
+        <childnode refid="1540" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1546">
+        <label>oscit::THash&lt; std::string, Value &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+        <childnode refid="1547" relation="usage">
+          <edgelabel>thash_table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1556">
+        <label>oscit::Location</label>
+        <link refid="classoscit_1_1_location"/>
+      </node>
+      <node id="1535">
+        <label>oscit::CTHash&lt; std::string, Object * &gt;</label>
+        <link refid="classoscit_1_1_c_t_hash"/>
+        <childnode refid="1536" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1537" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1522">
+        <label>oscit::Typed</label>
+        <link refid="classoscit_1_1_typed"/>
+      </node>
+      <node id="1545">
+        <label>oscit::Hash</label>
+        <link refid="classoscit_1_1_hash"/>
+        <childnode refid="1540" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1546" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1540">
+        <label>oscit::ReferenceCounted</label>
+        <link refid="classoscit_1_1_reference_counted"/>
+      </node>
+      <node id="1555">
+        <label>oscit::THashElement&lt; Location, unsigned int &gt;</label>
+        <link refid="structoscit_1_1_t_hash_element"/>
+        <childnode refid="1555" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="1556" relation="usage">
+          <edgelabel>key</edgelabel>
+        </childnode>
+      </node>
+      <node id="1525">
+        <label>oscit::Command</label>
+        <link refid="classoscit_1_1_command"/>
+        <childnode refid="1526" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1528" relation="usage">
+          <edgelabel>root_</edgelabel>
+        </childnode>
+        <childnode refid="1554" relation="usage">
+          <edgelabel>observers_</edgelabel>
+        </childnode>
+        <childnode refid="1557" relation="usage">
+          <edgelabel>remote_objects_</edgelabel>
+        </childnode>
+        <childnode refid="1559" relation="usage">
+          <edgelabel>root_proxies_</edgelabel>
+        </childnode>
+        <childnode refid="1562" relation="usage">
+          <edgelabel>zeroconf_registration_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1548">
+        <label>oscit::CTVector&lt; Object * &gt;</label>
+        <link refid="classoscit_1_1_c_t_vector"/>
+        <childnode refid="1549" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1537" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1537">
+        <label>oscit::RWMutex</label>
+        <link refid="classoscit_1_1_r_w_mutex"/>
+      </node>
+      <node id="1533">
+        <label>oscit::CallbackList</label>
+        <link refid="classoscit_1_1_callback_list"/>
+        <childnode refid="1523" relation="private-inheritance">
+        </childnode>
+        <childnode refid="1531" relation="usage">
+          <edgelabel>list_owner_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1524">
+        <label>oscit::ProxyFactory</label>
+        <link refid="classoscit_1_1_proxy_factory"/>
+      </node>
+      <node id="1541">
+        <label>oscit::StringData</label>
+        <link refid="classoscit_1_1_string_data"/>
+        <childnode refid="1540" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="51" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" bodystart="51" bodyend="127"/>
+    <listofallmembers>
+      <member refid="classoscit_1_1_zero_conf_browser_1a69176a13ad82b2e18c38011ac1131ac5" prot="public" virt="non-virtual"><scope>oscit::ZeroConfBrowser</scope><name>add_device</name></member>
+      <member refid="classoscit_1_1_zero_conf_browser_1a529adc4f9a8fc5bd3dca911289200969" prot="protected" virt="non-virtual"><scope>oscit::ZeroConfBrowser</scope><name>add_proxy</name></member>
+      <member refid="classoscit_1_1_zero_conf_browser_1ae9f07384355a90374fd96c0e4a40fed3" prot="public" virt="virtual"><scope>oscit::ZeroConfBrowser</scope><name>added_proxy</name></member>
+      <member refid="classoscit_1_1_zero_conf_browser_1a3331e60344fa0f4542b11f5f748d41d2" prot="public" virt="non-virtual"><scope>oscit::ZeroConfBrowser</scope><name>adopt_proxy_factory</name></member>
+      <member refid="classoscit_1_1_typed_1a9d91142c1ff172635833f4b2a06d5d3b" prot="public" virt="non-virtual"><scope>oscit::ZeroConfBrowser</scope><name>class_name</name></member>
+      <member refid="classoscit_1_1_zero_conf_browser_1af016b7a98be2f7b15a662c4d74f51650" prot="protected" virt="non-virtual"><scope>oscit::ZeroConfBrowser</scope><name>command_</name></member>
+      <member refid="classoscit_1_1_zero_conf_browser_1a244bea243024b782445e85de9fb760f2" prot="public" virt="virtual"><scope>oscit::ZeroConfBrowser</scope><name>delete_proxy</name></member>
+      <member refid="classoscit_1_1_zero_conf_browser_1ab75dd33f294ef99b098878db97667f9f" prot="private" virt="non-virtual"><scope>oscit::ZeroConfBrowser</scope><name>do_adopt_proxy_factory</name></member>
+      <member refid="classoscit_1_1_zero_conf_browser_1a71c852c6459abd2d785a13638604a6f3" prot="private" virt="non-virtual"><scope>oscit::ZeroConfBrowser</scope><name>found_devices_</name></member>
+      <member refid="classoscit_1_1_zero_conf_browser_1a2dd601c4b70fa228a0c855461bf833a6" prot="public" virt="non-virtual"><scope>oscit::ZeroConfBrowser</scope><name>get_location_from_name</name></member>
+      <member refid="classoscit_1_1_zero_conf_browser_1af8a8085968ed205206e8b4c5863a6e1b" prot="protected" virt="non-virtual"><scope>oscit::ZeroConfBrowser</scope><name>get_protocol_from_service_type</name></member>
+      <member refid="classoscit_1_1_zero_conf_browser_1a62c79d8c86e25909d44c646d95c2fdc5" prot="private" virt="non-virtual"><scope>oscit::ZeroConfBrowser</scope><name>impl_</name></member>
+      <member refid="classoscit_1_1_typed_1a4aba9ae57b258b6d678c685d190ec281" prot="public" virt="non-virtual"><scope>oscit::ZeroConfBrowser</scope><name>is_a</name></member>
+      <member refid="classoscit_1_1_zero_conf_browser_1a2009c0a25bcbb93774a1c65066a48d36" prot="protected" virt="non-virtual"><scope>oscit::ZeroConfBrowser</scope><name>is_running</name></member>
+      <member refid="classoscit_1_1_mutex_1a016dda2b6b467aa8e3a866be3bd0f86e" prot="public" virt="non-virtual"><scope>oscit::ZeroConfBrowser</scope><name>lock</name></member>
+      <member refid="classoscit_1_1_mutex_1ae41e751604af40fc4ed78d16c63be52f" prot="public" virt="non-virtual"><scope>oscit::ZeroConfBrowser</scope><name>Mutex</name></member>
+      <member refid="classoscit_1_1_zero_conf_browser_1a7a152c93ea7ecd1014a428eaa48ad755" prot="protected" virt="non-virtual"><scope>oscit::ZeroConfBrowser</scope><name>protocol_</name></member>
+      <member refid="classoscit_1_1_zero_conf_browser_1a477e6c4d06251fdb524e124368601b0c" prot="protected" virt="non-virtual"><scope>oscit::ZeroConfBrowser</scope><name>proxy_factory_</name></member>
+      <member refid="classoscit_1_1_zero_conf_browser_1ac05159d42f5a54396450b85d1e3048ab" prot="public" virt="non-virtual"><scope>oscit::ZeroConfBrowser</scope><name>remove_device</name></member>
+      <member refid="classoscit_1_1_zero_conf_browser_1a0c8ace6aa8252e5e2811eb2a191be3d4" prot="protected" virt="non-virtual"><scope>oscit::ZeroConfBrowser</scope><name>remove_proxy</name></member>
+      <member refid="classoscit_1_1_zero_conf_browser_1a4b4e5c506748d54b201efc04c436ed08" prot="protected" virt="non-virtual"><scope>oscit::ZeroConfBrowser</scope><name>running_</name></member>
+      <member refid="classoscit_1_1_zero_conf_browser_1a9a3691f807a3e879e73fd4d18fdd658c" prot="protected" virt="non-virtual"><scope>oscit::ZeroConfBrowser</scope><name>service_type_</name></member>
+      <member refid="classoscit_1_1_zero_conf_browser_1ad823dfd59b6c3b3b75975aa8bd779e79" prot="public" virt="non-virtual"><scope>oscit::ZeroConfBrowser</scope><name>set_command</name></member>
+      <member refid="classoscit_1_1_zero_conf_browser_1ad4078ec7874518dde8f1ceb2ca0f8277" prot="protected" virt="non-virtual"><scope>oscit::ZeroConfBrowser</scope><name>set_running</name></member>
+      <member refid="classoscit_1_1_zero_conf_browser_1a88855d15d5e5663148d083cd3e5d4cec" prot="protected" virt="virtual"><scope>oscit::ZeroConfBrowser</scope><name>start</name></member>
+      <member refid="classoscit_1_1_zero_conf_browser_1ab6f439456d744e0295769b49201f4a90" prot="protected" virt="virtual"><scope>oscit::ZeroConfBrowser</scope><name>stop</name></member>
+      <member refid="classoscit_1_1_typed_1a72ecaff553f3b9028dd57afee597dc44" prot="public" virt="non-virtual"><scope>oscit::ZeroConfBrowser</scope><name>type_cast</name></member>
+      <member refid="classoscit_1_1_mutex_1a4eb03cce21055fcfd8ae3462661fac6f" prot="public" virt="non-virtual"><scope>oscit::ZeroConfBrowser</scope><name>unlock</name></member>
+      <member refid="classoscit_1_1_zero_conf_browser_1aba7b4ffba2edf7add717439f51ba6976" prot="public" virt="non-virtual"><scope>oscit::ZeroConfBrowser</scope><name>ZeroConfBrowser</name></member>
+      <member refid="classoscit_1_1_mutex_1abc6c403ed2bd809dead4e1307e18cc65" prot="public" virt="virtual"><scope>oscit::ZeroConfBrowser</scope><name>~Mutex</name></member>
+      <member refid="classoscit_1_1_typed_1ab92fb67d52050227718772b14f74b1b6" prot="public" virt="virtual"><scope>oscit::ZeroConfBrowser</scope><name>~Typed</name></member>
+      <member refid="classoscit_1_1_zero_conf_browser_1a0d01d8dc168e7f10213bc4e3a6113eaa" prot="public" virt="virtual"><scope>oscit::ZeroConfBrowser</scope><name>~ZeroConfBrowser</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

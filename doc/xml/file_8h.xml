@@ -1,0 +1,362 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="file_8h" kind="file">
+    <compoundname>file.h</compoundname>
+    <includes local="no">string</includes>
+    <includes refid="values_8h" local="yes">oscit/values.h</includes>
+    <includedby refid="file__method_8h" local="yes">include/oscit/file_method.h</includedby>
+    <incdepgraph>
+      <node id="626">
+        <label>list</label>
+      </node>
+      <node id="633">
+        <label>oscit/value_types.h</label>
+        <link refid="value__types_8h"/>
+        <childnode refid="634" relation="include">
+        </childnode>
+      </node>
+      <node id="631">
+        <label>stdarg.h</label>
+      </node>
+      <node id="628">
+        <label>oscit/value.h</label>
+        <link refid="value_8h"/>
+        <childnode refid="629" relation="include">
+        </childnode>
+        <childnode refid="621" relation="include">
+        </childnode>
+        <childnode refid="630" relation="include">
+        </childnode>
+        <childnode refid="631" relation="include">
+        </childnode>
+        <childnode refid="632" relation="include">
+        </childnode>
+        <childnode refid="633" relation="include">
+        </childnode>
+        <childnode refid="624" relation="include">
+        </childnode>
+        <childnode refid="635" relation="include">
+        </childnode>
+        <childnode refid="637" relation="include">
+        </childnode>
+        <childnode refid="638" relation="include">
+        </childnode>
+        <childnode refid="640" relation="include">
+        </childnode>
+        <childnode refid="641" relation="include">
+        </childnode>
+      </node>
+      <node id="632">
+        <label>assert.h</label>
+      </node>
+      <node id="646">
+        <label>oscit/hash_value.h</label>
+        <link refid="hash__value_8h"/>
+        <childnode refid="628" relation="include">
+        </childnode>
+      </node>
+      <node id="641">
+        <label>oscit/midi_message.h</label>
+        <link refid="midi__message_8h"/>
+        <childnode refid="639" relation="include">
+        </childnode>
+        <childnode refid="627" relation="include">
+        </childnode>
+        <childnode refid="636" relation="include">
+        </childnode>
+      </node>
+      <node id="624">
+        <label>oscit/thash.h</label>
+        <link refid="thash_8h"/>
+        <childnode refid="625" relation="include">
+        </childnode>
+        <childnode refid="621" relation="include">
+        </childnode>
+        <childnode refid="626" relation="include">
+        </childnode>
+        <childnode refid="627" relation="include">
+        </childnode>
+      </node>
+      <node id="638">
+        <label>oscit/list.h</label>
+        <link refid="list_8h"/>
+        <childnode refid="633" relation="include">
+        </childnode>
+        <childnode refid="636" relation="include">
+        </childnode>
+        <childnode refid="639" relation="include">
+        </childnode>
+      </node>
+      <node id="642">
+        <label>oscit/list_value.h</label>
+        <link refid="list__value_8h"/>
+        <childnode refid="628" relation="include">
+        </childnode>
+      </node>
+      <node id="621">
+        <label>string</label>
+      </node>
+      <node id="620">
+        <label>include/oscit/file.h</label>
+        <link refid="file.h"/>
+        <childnode refid="621" relation="include">
+        </childnode>
+        <childnode refid="622" relation="include">
+        </childnode>
+      </node>
+      <node id="647">
+        <label>oscit/matrix_value.h</label>
+        <link refid="matrix__value_8h"/>
+        <childnode refid="628" relation="include">
+        </childnode>
+      </node>
+      <node id="623">
+        <label>oscit/conf.h</label>
+        <link refid="conf_8h"/>
+      </node>
+      <node id="643">
+        <label>oscit/real_value.h</label>
+        <link refid="real__value_8h"/>
+        <childnode refid="628" relation="include">
+        </childnode>
+      </node>
+      <node id="622">
+        <label>oscit/values.h</label>
+        <link refid="values_8h"/>
+        <childnode refid="623" relation="include">
+        </childnode>
+        <childnode refid="624" relation="include">
+        </childnode>
+        <childnode refid="628" relation="include">
+        </childnode>
+        <childnode refid="642" relation="include">
+        </childnode>
+        <childnode refid="643" relation="include">
+        </childnode>
+        <childnode refid="644" relation="include">
+        </childnode>
+        <childnode refid="645" relation="include">
+        </childnode>
+        <childnode refid="646" relation="include">
+        </childnode>
+        <childnode refid="647" relation="include">
+        </childnode>
+        <childnode refid="648" relation="include">
+        </childnode>
+      </node>
+      <node id="645">
+        <label>oscit/error_value.h</label>
+        <link refid="error__value_8h"/>
+        <childnode refid="628" relation="include">
+        </childnode>
+      </node>
+      <node id="634">
+        <label>sys/types.h</label>
+      </node>
+      <node id="629">
+        <label>string.h</label>
+      </node>
+      <node id="625">
+        <label>cstdio</label>
+      </node>
+      <node id="639">
+        <label>vector</label>
+      </node>
+      <node id="637">
+        <label>oscit/error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="622" relation="include">
+        </childnode>
+        <childnode refid="636" relation="include">
+        </childnode>
+      </node>
+      <node id="630">
+        <label>sstream</label>
+      </node>
+      <node id="635">
+        <label>oscit/string_data.h</label>
+        <link refid="string__data_8h"/>
+        <childnode refid="622" relation="include">
+        </childnode>
+        <childnode refid="636" relation="include">
+        </childnode>
+      </node>
+      <node id="636">
+        <label>oscit/reference_counted.h</label>
+        <link refid="reference__counted_8h"/>
+      </node>
+      <node id="648">
+        <label>oscit/midi_value.h</label>
+        <link refid="midi__value_8h"/>
+        <childnode refid="628" relation="include">
+        </childnode>
+      </node>
+      <node id="627">
+        <label>iostream</label>
+      </node>
+      <node id="644">
+        <label>oscit/string_value.h</label>
+        <link refid="string__value_8h"/>
+        <childnode refid="628" relation="include">
+        </childnode>
+      </node>
+      <node id="640">
+        <label>oscit/hash.h</label>
+        <link refid="hash_8h"/>
+        <childnode refid="622" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="652">
+        <label>include/oscit/oscit.h</label>
+        <link refid="oscit_8h"/>
+      </node>
+      <node id="649">
+        <label>include/oscit/file.h</label>
+        <link refid="file.h"/>
+        <childnode refid="650" relation="include">
+        </childnode>
+      </node>
+      <node id="650">
+        <label>include/oscit/file_method.h</label>
+        <link refid="file__method_8h"/>
+        <childnode refid="651" relation="include">
+        </childnode>
+        <childnode refid="652" relation="include">
+        </childnode>
+      </node>
+      <node id="651">
+        <label>include/oscit/hash_file_method.h</label>
+        <link refid="hash__file__method_8h"/>
+        <childnode refid="652" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classoscit_1_1_file" prot="public">oscit::File</innerclass>
+    <innernamespace refid="namespaceoscit">oscit</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="file_8h_1a91966c19c42150c10a5255787832014b" prot="public" static="no">
+        <name>FILE_SEP</name>
+        <initializer>&quot;/&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/file.h" line="38" bodyfile="/Users/gaspard/git/oscit/include/oscit/file.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/>==============================================================================</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>OSCIT<sp/>library<sp/>(http://rubyk.org/liboscit)</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2007-2010<sp/>by<sp/>Gaspard<sp/>Bucher<sp/>-<sp/>Buma<sp/>(http://teti.ch).</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"></highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/><sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/><sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/><sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/><sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"></highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/><sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"></highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/><sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/><sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/><sp/><sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/><sp/><sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/><sp/><sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/><sp/><sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/><sp/><sp/>THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"></highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/><sp/>==============================================================================</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>OSCIT_INCLUDE_OSCIT_FILE_H_</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>OSCIT_INCLUDE_OSCIT_FILE_H_</highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="values_8h" kindref="compound">oscit/values.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">oscit<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="file_8h_1a91966c19c42150c10a5255787832014b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FILE_SEP<sp/>&quot;/&quot;</highlight></codeline>
+<codeline lineno="39"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="45" refid="classoscit_1_1_file" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classoscit_1_1_file" kindref="compound">File</ref><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="47" refid="classoscit_1_1_file_1ad1f2a4a9fb3bb02367baa5a5212d2086" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_file_1ad1f2a4a9fb3bb02367baa5a5212d2086" kindref="member">File</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classoscit_1_1_file_1afb023b7ee7bdbc2db30da5f9cf9562bf" kindref="member">path</ref>)<sp/>:<sp/>path_(path)<sp/>{}</highlight></codeline>
+<codeline lineno="48" refid="classoscit_1_1_file_1a2b9bee6c04f8b4a9ea4c124e7c521b8d" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_file_1a2b9bee6c04f8b4a9ea4c124e7c521b8d" kindref="member">File</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<ref refid="classoscit_1_1_file_1afb023b7ee7bdbc2db30da5f9cf9562bf" kindref="member">path</ref>)<sp/>:<sp/>path_(path)<sp/>{}</highlight></codeline>
+<codeline lineno="49" refid="classoscit_1_1_file_1a3e1bc352054264fe59ead1f03212e517" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_file_1a3e1bc352054264fe59ead1f03212e517" kindref="member">~File</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/><ref refid="classoscit_1_1_file_1af1550a9070a583ba95be305f6d78c8e3" kindref="member">read</ref>();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_file_1a14a9e247cbc611fc7fb732b93b769a01" kindref="member">write</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>data);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="classoscit_1_1_file_1a18234e2d68e2336dd1835637382abdb4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_file_1a18234e2d68e2336dd1835637382abdb4" kindref="member">write</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*data)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_file_1a18234e2d68e2336dd1835637382abdb4" kindref="member">write</ref>(std::string(data));<sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_file_1ad8f1706c35a3462da75951b8123a6730" kindref="member">append</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>data);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="classoscit_1_1_file_1a216ad1aaa85ddb0d57ad10b0f9ae5003" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_file_1a216ad1aaa85ddb0d57ad10b0f9ae5003" kindref="member">append</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*data)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_file_1a216ad1aaa85ddb0d57ad10b0f9ae5003" kindref="member">append</ref>(std::string(data));<sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="classoscit_1_1_file_1a95bb7311f09dd01f03bd45fea220adb8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_file_1a95bb7311f09dd01f03bd45fea220adb8" kindref="member">has_error</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>last_error_.<ref refid="classoscit_1_1_value_1a49aefc14ebd88febb6ba6712f870f159" kindref="member">is_error</ref>();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="classoscit_1_1_file_1aa7f42a0625d596382581416776720ebc" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/><ref refid="classoscit_1_1_file_1aa7f42a0625d596382581416776720ebc" kindref="member">last_error</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>last_error_;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="classoscit_1_1_file_1afb023b7ee7bdbc2db30da5f9cf9562bf" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classoscit_1_1_file_1afb023b7ee7bdbc2db30da5f9cf9562bf" kindref="member">path</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>path_;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/><ref refid="classoscit_1_1_file_1a8c1b9cfd0a2193e949800e2c9f428e4e" kindref="member">list</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;folder,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;ends_with);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="classoscit_1_1_file_1a021d53f11e5eb79648ae51b3885ea151" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/><ref refid="classoscit_1_1_file_1a021d53f11e5eb79648ae51b3885ea151" kindref="member">list</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;folder,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*ends_with)<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_file_1a8c1b9cfd0a2193e949800e2c9f428e4e" kindref="member">list</ref>(folder,<sp/>std::string(ends_with));</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="classoscit_1_1_file_1a768577a960a5844e0ab6b6876216a1fb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/><ref refid="classoscit_1_1_file_1a768577a960a5844e0ab6b6876216a1fb" kindref="member">list</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*folder,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;ends_with)<sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_file_1a8c1b9cfd0a2193e949800e2c9f428e4e" kindref="member">list</ref>(std::string(folder),<sp/>ends_with);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="classoscit_1_1_file_1ac1afc8ee848c185ab7246291621ed746" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/><ref refid="classoscit_1_1_file_1ac1afc8ee848c185ab7246291621ed746" kindref="member">list</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*folder,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*ends_with)<sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_file_1a8c1b9cfd0a2193e949800e2c9f428e4e" kindref="member">list</ref>(std::string(folder),<sp/>std::string(ends_with));</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="classoscit_1_1_file_1a89f40695aa5e0a3f1241dc21409ae546" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classoscit_1_1_file_1a89f40695aa5e0a3f1241dc21409ae546" kindref="member">join</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;base,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<ref refid="classoscit_1_1_file_1afb023b7ee7bdbc2db30da5f9cf9562bf" kindref="member">path</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::string(base).append(<ref refid="file_8h_1a91966c19c42150c10a5255787832014b" kindref="member">FILE_SEP</ref>).append(path);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="classoscit_1_1_file_1ac93218846b6a01fba26fa3aa86a1d081" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classoscit_1_1_file_1ac93218846b6a01fba26fa3aa86a1d081" kindref="member">join</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;base,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classoscit_1_1_file_1afb023b7ee7bdbc2db30da5f9cf9562bf" kindref="member">path</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::string(base).append(<ref refid="file_8h_1a91966c19c42150c10a5255787832014b" kindref="member">FILE_SEP</ref>).append(path);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="classoscit_1_1_file_1a6022fbaccd415d2ac82278769e1853aa" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classoscit_1_1_file_1a6022fbaccd415d2ac82278769e1853aa" kindref="member">join</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*base,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<ref refid="classoscit_1_1_file_1afb023b7ee7bdbc2db30da5f9cf9562bf" kindref="member">path</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::string(base).append(<ref refid="file_8h_1a91966c19c42150c10a5255787832014b" kindref="member">FILE_SEP</ref>).append(path);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="classoscit_1_1_file_1a56ea0fa4d1b4b5469a02be35c642e00f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classoscit_1_1_file_1a56ea0fa4d1b4b5469a02be35c642e00f" kindref="member">join</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*base,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classoscit_1_1_file_1afb023b7ee7bdbc2db30da5f9cf9562bf" kindref="member">path</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::string(base).append(<ref refid="file_8h_1a91966c19c42150c10a5255787832014b" kindref="member">FILE_SEP</ref>).append(path);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/>last_error_;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/>std::string<sp/>path_;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>oscit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>OSCIT_INCLUDE_OSCIT_FILE_H_</highlight></codeline>
+    </programlisting>
+    <location file="/Users/gaspard/git/oscit/include/oscit/file.h"/>
+  </compounddef>
+</doxygen>

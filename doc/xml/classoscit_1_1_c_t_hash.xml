@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classoscit_1_1_c_t_hash" kind="class" prot="public">
+    <compoundname>oscit::CTHash</compoundname>
+    <basecompoundref refid="classoscit_1_1_t_hash" prot="public" virt="non-virtual">oscit::THash&lt; K, T &gt;</basecompoundref>
+    <basecompoundref refid="classoscit_1_1_r_w_mutex" prot="public" virt="non-virtual">oscit::RWMutex</basecompoundref>
+    <includes refid="c__thash_8h" local="no">c_thash.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>K</declname>
+        <defname>K</defname>
+      </param>
+      <param>
+        <type>class</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classoscit_1_1_c_t_hash_1a43ea3733aa857af0983f4b0ad69cd177" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::CTHash&lt; K, T &gt;::CTHash</definition>
+        <argsstring>(unsigned int size)</argsstring>
+        <name>CTHash</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/c_thash.h" line="63" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_thash.h" bodystart="63" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_c_t_hash_1a35dd459f69b9dd8deec2ea2809d9dea8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::CTHash&lt; K, T &gt;::CTHash</definition>
+        <argsstring>(const CTHash &amp;other)</argsstring>
+        <name>CTHash</name>
+        <param>
+          <type>const <ref refid="classoscit_1_1_c_t_hash" kindref="compound">CTHash</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/c_thash.h" line="66" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_thash.h" bodystart="66" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_c_t_hash_1a00f5e21be31898da99ba8ec44ef3f3ec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classoscit_1_1_c_t_hash" kindref="compound">CTHash</ref> &amp;</type>
+        <definition>CTHash&amp; oscit::CTHash&lt; K, T &gt;::operator=</definition>
+        <argsstring>(const CTHash &amp;other)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classoscit_1_1_c_t_hash" kindref="compound">CTHash</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/c_thash.h" line="70" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_thash.h" bodystart="70" bodyend="73"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The Concurrent <ref refid="classoscit_1_1_hash" kindref="compound">Hash</ref> template is a <ref refid="classoscit_1_1_hash" kindref="compound">Hash</ref> with a read-write mutex. The class does not lock/unlock the mutex, this is the responsability of the class using the hash. The reason for this is that it is often necessary to read-lock a little longer then the &quot;get&quot; call because you might need to reference increment or lock the found object before releasing the lock:</para><para><programlisting><codeline><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>ScopedRead<sp/><ref refid="classoscit_1_1_r_w_mutex_1ac549bb3340bac6726bce2863f80a240e" kindref="member">lock</ref>(objects_);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(objects_.get(key,<sp/>&amp;target))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>target-&gt;retain();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/>..</highlight></codeline>
+<codeline><highlight class="normal"><sp/>target-&gt;release();</highlight></codeline>
+</programlisting> K is the key class, T is the object class </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="187">
+        <label>oscit::THash&lt; K, T &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+      </node>
+      <node id="186">
+        <label>oscit::CTHash&lt; K, T &gt;</label>
+        <link refid="classoscit_1_1_c_t_hash"/>
+        <childnode refid="187" relation="public-inheritance">
+        </childnode>
+        <childnode refid="188" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="188">
+        <label>oscit::RWMutex</label>
+        <link refid="classoscit_1_1_r_w_mutex"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="190">
+        <label>oscit::THash&lt; K, T &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+      </node>
+      <node id="189">
+        <label>oscit::CTHash&lt; K, T &gt;</label>
+        <link refid="classoscit_1_1_c_t_hash"/>
+        <childnode refid="190" relation="public-inheritance">
+        </childnode>
+        <childnode refid="191" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="191">
+        <label>oscit::RWMutex</label>
+        <link refid="classoscit_1_1_r_w_mutex"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/c_thash.h" line="61" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_thash.h" bodystart="61" bodyend="74"/>
+    <listofallmembers>
+      <member refid="classoscit_1_1_t_hash_1af9e1afc048b95e0313be311f0e309876" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>begin</name></member>
+      <member refid="classoscit_1_1_t_hash_1a6718c393533092065b774b11681ee225" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>begin</name></member>
+      <member refid="classoscit_1_1_t_hash_1a26cdaed40618b5a78e16241d9731fdef" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>clear</name></member>
+      <member refid="classoscit_1_1_t_hash_1a4a365a0afc80f4d9f2ffb2abc6a9abae" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>ConstIterator</name></member>
+      <member refid="classoscit_1_1_t_hash_1a0209bd9dcc512d40137e7ab196aea0ec" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>copy</name></member>
+      <member refid="classoscit_1_1_c_t_hash_1a43ea3733aa857af0983f4b0ad69cd177" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>CTHash</name></member>
+      <member refid="classoscit_1_1_c_t_hash_1a35dd459f69b9dd8deec2ea2809d9dea8" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>CTHash</name></member>
+      <member refid="classoscit_1_1_t_hash_1adda538d62e50833e43c2cfeeb0539f53" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>empty</name></member>
+      <member refid="classoscit_1_1_t_hash_1a07e1605003ccb55fc46916987f67f1a2" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>end</name></member>
+      <member refid="classoscit_1_1_t_hash_1a96f695b486d20ee7da5b02dbc7a7c2fe" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>end</name></member>
+      <member refid="classoscit_1_1_t_hash_1ae8128283b5bffa0ef82d300219e3c52d" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>get</name></member>
+      <member refid="classoscit_1_1_t_hash_1a4f1444233f752e04f564355829e5773e" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>get</name></member>
+      <member refid="classoscit_1_1_t_hash_1af23e4ebcba12ac4d6b0565ac7a8c745b" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>get</name></member>
+      <member refid="classoscit_1_1_t_hash_1a271f9e1c624dadf1882be9003db67bd7" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>get_key</name></member>
+      <member refid="classoscit_1_1_t_hash_1a13bd22ce3920712bf37f92a49f5d97cf" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>has_key</name></member>
+      <member refid="classoscit_1_1_t_hash_1a452fb54a3a3275228b57d7c4d354e215" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>Iterator</name></member>
+      <member refid="classoscit_1_1_t_hash_1a589e30efb2dba4d0637935be5e81e474" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>keys</name></member>
+      <member refid="classoscit_1_1_t_hash_1a920bb7454f04af182c3664ab5779f79e" prot="protected" virt="non-virtual"><scope>oscit::CTHash</scope><name>keys_</name></member>
+      <member refid="classoscit_1_1_r_w_mutex_1ac549bb3340bac6726bce2863f80a240e" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>lock</name></member>
+      <member refid="classoscit_1_1_c_t_hash_1a00f5e21be31898da99ba8ec44ef3f3ec" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>operator=</name></member>
+      <member refid="classoscit_1_1_t_hash_1a789de8a3d30af33159282c42b0f89f5c" prot="public" virt="non-virtual" ambiguityscope="oscit::THash::"><scope>oscit::CTHash</scope><name>operator=</name></member>
+      <member refid="classoscit_1_1_t_hash_1a90064ec1a0d5aebf5e0a50005cc0bebd" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>operator==</name></member>
+      <member refid="classoscit_1_1_r_w_mutex_1a672d9bfefbc1839d9e196e90a1963f39" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>read_lock</name></member>
+      <member refid="classoscit_1_1_r_w_mutex_1a97010c1b513da70f8c1c9e671529abb0" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>read_unlock</name></member>
+      <member refid="classoscit_1_1_t_hash_1adbe83080707f499c5d1fb1e996de324f" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>remove</name></member>
+      <member refid="classoscit_1_1_t_hash_1a9d7eef150485b61668bae3cd48c257d0" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>remove_element</name></member>
+      <member refid="classoscit_1_1_t_hash_1ae7d875d19dc0bb85c3f3cfd245dd4b8e" prot="protected" virt="non-virtual"><scope>oscit::CTHash</scope><name>remove_keeping_key</name></member>
+      <member refid="classoscit_1_1_r_w_mutex_1aa1110a616ea1cdee191912e2e136e45a" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>RWMutex</name></member>
+      <member refid="classoscit_1_1_t_hash_1a089378b838f685efba0a9bfd4c5d272f" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>set</name></member>
+      <member refid="classoscit_1_1_t_hash_1a64178a4381db789034c646e88007c102" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>size</name></member>
+      <member refid="classoscit_1_1_t_hash_1ab7bfb1b5425ce4b4adff54fb5428ab70" prot="protected" virt="non-virtual"><scope>oscit::CTHash</scope><name>size_</name></member>
+      <member refid="classoscit_1_1_t_hash_1a25f4538f31acbab210afc42d9fdf4df9" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>storage_size</name></member>
+      <member refid="classoscit_1_1_t_hash_1a9410a3a4dc3081683d7d65afc3daf94e" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>THash</name></member>
+      <member refid="classoscit_1_1_t_hash_1a0521cf97cb9efdf80ff8297ecc0d42e8" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>THash</name></member>
+      <member refid="classoscit_1_1_t_hash_1ab1917a0e697513dcbcb6a8cf64ac15d6" prot="protected" virt="non-virtual"><scope>oscit::CTHash</scope><name>thash_table_</name></member>
+      <member refid="classoscit_1_1_t_hash_1aa8c34375f9f5e55601c628cbea02aa70" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>to_stream</name></member>
+      <member refid="classoscit_1_1_r_w_mutex_1ae74be65c4bbcc16313b5ca56d17db947" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>unlock</name></member>
+      <member refid="classoscit_1_1_r_w_mutex_1a1fbdf80ace36018183196f92a2193ceb" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>~RWMutex</name></member>
+      <member refid="classoscit_1_1_t_hash_1ad4c6fa3e6189d10cf45619a724d10c7f" prot="public" virt="virtual"><scope>oscit::CTHash</scope><name>~THash</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

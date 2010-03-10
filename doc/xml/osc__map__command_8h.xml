@@ -1,0 +1,510 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="osc__map__command_8h" kind="file">
+    <compoundname>osc_map_command.h</compoundname>
+    <includes local="no">list</includes>
+    <includes local="no">stdexcept</includes>
+    <includes refid="osc__command_8h" local="yes">oscit/osc_command.h</includes>
+    <includes refid="script_8h" local="yes">oscit/script.h</includes>
+    <includes refid="mapper_8h" local="yes">oscit/mapper.h</includes>
+    <includes refid="values_8h" local="yes">oscit/values.h</includes>
+    <includes refid="time__ref_8h" local="yes">oscit/time_ref.h</includes>
+    <includedby refid="oscit_8h" local="yes">include/oscit/oscit.h</includedby>
+    <incdepgraph>
+      <node id="1966">
+        <label>list</label>
+      </node>
+      <node id="1997">
+        <label>oscit/value_types.h</label>
+        <link refid="value__types_8h"/>
+        <childnode refid="1998" relation="include">
+        </childnode>
+      </node>
+      <node id="1979">
+        <label>oscit/non_copyable.h</label>
+        <link refid="non__copyable_8h"/>
+      </node>
+      <node id="1996">
+        <label>stdarg.h</label>
+      </node>
+      <node id="1980">
+        <label>oscit/mutex.h</label>
+        <link refid="mutex_8h"/>
+        <childnode refid="1981" relation="include">
+        </childnode>
+        <childnode refid="1978" relation="include">
+        </childnode>
+        <childnode refid="1982" relation="include">
+        </childnode>
+        <childnode refid="1979" relation="include">
+        </childnode>
+        <childnode refid="1983" relation="include">
+        </childnode>
+      </node>
+      <node id="1994">
+        <label>oscit/value.h</label>
+        <link refid="value_8h"/>
+        <childnode refid="1974" relation="include">
+        </childnode>
+        <childnode refid="1987" relation="include">
+        </childnode>
+        <childnode refid="1995" relation="include">
+        </childnode>
+        <childnode refid="1996" relation="include">
+        </childnode>
+        <childnode refid="1978" relation="include">
+        </childnode>
+        <childnode refid="1997" relation="include">
+        </childnode>
+        <childnode refid="1990" relation="include">
+        </childnode>
+        <childnode refid="1999" relation="include">
+        </childnode>
+        <childnode refid="2001" relation="include">
+        </childnode>
+        <childnode refid="2002" relation="include">
+        </childnode>
+        <childnode refid="2003" relation="include">
+        </childnode>
+        <childnode refid="2004" relation="include">
+        </childnode>
+      </node>
+      <node id="1978">
+        <label>assert.h</label>
+      </node>
+      <node id="1969">
+        <label>oscit/command.h</label>
+        <link refid="command_8h"/>
+        <childnode refid="1970" relation="include">
+        </childnode>
+        <childnode refid="1971" relation="include">
+        </childnode>
+        <childnode refid="1972" relation="include">
+        </childnode>
+        <childnode refid="1986" relation="include">
+        </childnode>
+        <childnode refid="1990" relation="include">
+        </childnode>
+      </node>
+      <node id="1972">
+        <label>oscit/thread.h</label>
+        <link refid="thread_8h"/>
+        <childnode refid="1973" relation="include">
+        </childnode>
+        <childnode refid="1974" relation="include">
+        </childnode>
+        <childnode refid="1975" relation="include">
+        </childnode>
+        <childnode refid="1976" relation="include">
+        </childnode>
+        <childnode refid="1977" relation="include">
+        </childnode>
+        <childnode refid="1978" relation="include">
+        </childnode>
+        <childnode refid="1980" relation="include">
+        </childnode>
+      </node>
+      <node id="2009">
+        <label>oscit/hash_value.h</label>
+        <link refid="hash__value_8h"/>
+        <childnode refid="1994" relation="include">
+        </childnode>
+      </node>
+      <node id="2004">
+        <label>oscit/midi_message.h</label>
+        <link refid="midi__message_8h"/>
+        <childnode refid="1971" relation="include">
+        </childnode>
+        <childnode refid="1985" relation="include">
+        </childnode>
+        <childnode refid="2000" relation="include">
+        </childnode>
+      </node>
+      <node id="1970">
+        <label>stdint.h</label>
+      </node>
+      <node id="1990">
+        <label>oscit/thash.h</label>
+        <link refid="thash_8h"/>
+        <childnode refid="1982" relation="include">
+        </childnode>
+        <childnode refid="1987" relation="include">
+        </childnode>
+        <childnode refid="1966" relation="include">
+        </childnode>
+        <childnode refid="1985" relation="include">
+        </childnode>
+      </node>
+      <node id="1968">
+        <label>oscit/osc_command.h</label>
+        <link refid="osc__command_8h"/>
+        <childnode refid="1966" relation="include">
+        </childnode>
+        <childnode refid="1969" relation="include">
+        </childnode>
+      </node>
+      <node id="2002">
+        <label>oscit/list.h</label>
+        <link refid="list_8h"/>
+        <childnode refid="1997" relation="include">
+        </childnode>
+        <childnode refid="2000" relation="include">
+        </childnode>
+        <childnode refid="1971" relation="include">
+        </childnode>
+      </node>
+      <node id="2005">
+        <label>oscit/list_value.h</label>
+        <link refid="list__value_8h"/>
+        <childnode refid="1994" relation="include">
+        </childnode>
+      </node>
+      <node id="1973">
+        <label>errno.h</label>
+      </node>
+      <node id="1967">
+        <label>stdexcept</label>
+      </node>
+      <node id="1989">
+        <label>oscit/location.h</label>
+        <link refid="location_8h"/>
+        <childnode refid="1987" relation="include">
+        </childnode>
+        <childnode refid="1988" relation="include">
+        </childnode>
+        <childnode refid="1990" relation="include">
+        </childnode>
+      </node>
+      <node id="1987">
+        <label>string</label>
+      </node>
+      <node id="2013">
+        <label>oscit/scale_real.h</label>
+        <link refid="scale__real_8h"/>
+        <childnode refid="1978" relation="include">
+        </childnode>
+        <childnode refid="1987" relation="include">
+        </childnode>
+        <childnode refid="1992" relation="include">
+        </childnode>
+      </node>
+      <node id="2010">
+        <label>oscit/matrix_value.h</label>
+        <link refid="matrix__value_8h"/>
+        <childnode refid="1994" relation="include">
+        </childnode>
+      </node>
+      <node id="1992">
+        <label>oscit/conf.h</label>
+        <link refid="conf_8h"/>
+      </node>
+      <node id="1976">
+        <label>fstream</label>
+      </node>
+      <node id="1988">
+        <label>ostream</label>
+      </node>
+      <node id="2006">
+        <label>oscit/real_value.h</label>
+        <link refid="real__value_8h"/>
+        <childnode refid="1994" relation="include">
+        </childnode>
+      </node>
+      <node id="1993">
+        <label>oscit/values.h</label>
+        <link refid="values_8h"/>
+        <childnode refid="1992" relation="include">
+        </childnode>
+        <childnode refid="1990" relation="include">
+        </childnode>
+        <childnode refid="1994" relation="include">
+        </childnode>
+        <childnode refid="2005" relation="include">
+        </childnode>
+        <childnode refid="2006" relation="include">
+        </childnode>
+        <childnode refid="2007" relation="include">
+        </childnode>
+        <childnode refid="2008" relation="include">
+        </childnode>
+        <childnode refid="2009" relation="include">
+        </childnode>
+        <childnode refid="2010" relation="include">
+        </childnode>
+        <childnode refid="2011" relation="include">
+        </childnode>
+      </node>
+      <node id="2008">
+        <label>oscit/error_value.h</label>
+        <link refid="error__value_8h"/>
+        <childnode refid="1994" relation="include">
+        </childnode>
+      </node>
+      <node id="1991">
+        <label>oscit/script.h</label>
+        <link refid="script_8h"/>
+        <childnode refid="1987" relation="include">
+        </childnode>
+        <childnode refid="1992" relation="include">
+        </childnode>
+        <childnode refid="1993" relation="include">
+        </childnode>
+      </node>
+      <node id="1981">
+        <label>pthread.h</label>
+      </node>
+      <node id="1998">
+        <label>sys/types.h</label>
+      </node>
+      <node id="1974">
+        <label>string.h</label>
+      </node>
+      <node id="1965">
+        <label>include/oscit/osc_map_command.h</label>
+        <link refid="osc_map_command.h"/>
+        <childnode refid="1966" relation="include">
+        </childnode>
+        <childnode refid="1967" relation="include">
+        </childnode>
+        <childnode refid="1968" relation="include">
+        </childnode>
+        <childnode refid="1991" relation="include">
+        </childnode>
+        <childnode refid="2012" relation="include">
+        </childnode>
+        <childnode refid="1993" relation="include">
+        </childnode>
+        <childnode refid="2014" relation="include">
+        </childnode>
+      </node>
+      <node id="1982">
+        <label>cstdio</label>
+      </node>
+      <node id="1971">
+        <label>vector</label>
+      </node>
+      <node id="2014">
+        <label>oscit/time_ref.h</label>
+        <link refid="time__ref_8h"/>
+        <childnode refid="1998" relation="include">
+        </childnode>
+        <childnode refid="1979" relation="include">
+        </childnode>
+      </node>
+      <node id="2001">
+        <label>oscit/error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="1993" relation="include">
+        </childnode>
+        <childnode refid="2000" relation="include">
+        </childnode>
+      </node>
+      <node id="1995">
+        <label>sstream</label>
+      </node>
+      <node id="1999">
+        <label>oscit/string_data.h</label>
+        <link refid="string__data_8h"/>
+        <childnode refid="1993" relation="include">
+        </childnode>
+        <childnode refid="2000" relation="include">
+        </childnode>
+      </node>
+      <node id="2000">
+        <label>oscit/reference_counted.h</label>
+        <link refid="reference__counted_8h"/>
+      </node>
+      <node id="1977">
+        <label>semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="1978" relation="include">
+        </childnode>
+        <childnode refid="1977" relation="include">
+        </childnode>
+        <childnode refid="1973" relation="include">
+        </childnode>
+        <childnode refid="1974" relation="include">
+        </childnode>
+        <childnode refid="1979" relation="include">
+        </childnode>
+        <childnode refid="1980" relation="include">
+        </childnode>
+      </node>
+      <node id="2011">
+        <label>oscit/midi_value.h</label>
+        <link refid="midi__value_8h"/>
+        <childnode refid="1994" relation="include">
+        </childnode>
+      </node>
+      <node id="1986">
+        <label>oscit/url.h</label>
+        <link refid="url_8h"/>
+        <childnode refid="1987" relation="include">
+        </childnode>
+        <childnode refid="1988" relation="include">
+        </childnode>
+        <childnode refid="1989" relation="include">
+        </childnode>
+      </node>
+      <node id="1985">
+        <label>iostream</label>
+      </node>
+      <node id="2007">
+        <label>oscit/string_value.h</label>
+        <link refid="string__value_8h"/>
+        <childnode refid="1994" relation="include">
+        </childnode>
+      </node>
+      <node id="1975">
+        <label>csignal</label>
+      </node>
+      <node id="1983">
+        <label>oscit/typed.h</label>
+        <link refid="typed_8h"/>
+        <childnode refid="1984" relation="include">
+        </childnode>
+        <childnode refid="1985" relation="include">
+        </childnode>
+      </node>
+      <node id="2003">
+        <label>oscit/hash.h</label>
+        <link refid="hash_8h"/>
+        <childnode refid="1993" relation="include">
+        </childnode>
+      </node>
+      <node id="2012">
+        <label>oscit/mapper.h</label>
+        <link refid="mapper_8h"/>
+        <childnode refid="2013" relation="include">
+        </childnode>
+        <childnode refid="1990" relation="include">
+        </childnode>
+      </node>
+      <node id="1984">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2016">
+        <label>include/oscit/oscit.h</label>
+        <link refid="oscit_8h"/>
+      </node>
+      <node id="2015">
+        <label>include/oscit/osc_map_command.h</label>
+        <link refid="osc_map_command.h"/>
+        <childnode refid="2016" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classoscit_1_1_osc_map_command" prot="public">oscit::OscMapCommand</innerclass>
+    <innernamespace refid="namespaceoscit">oscit</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/>==============================================================================</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>OSCIT<sp/>library<sp/>(http://rubyk.org/liboscit)</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2007-2010<sp/>by<sp/>Gaspard<sp/>Bucher<sp/>-<sp/>Buma<sp/>(http://teti.ch).</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"></highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/><sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/><sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/><sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/><sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"></highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/><sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"></highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/><sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/><sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/><sp/><sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/><sp/><sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/><sp/><sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/><sp/><sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/><sp/><sp/>THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"></highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/><sp/>==============================================================================</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>OSCIT_INCLUDE_OSCIT_OSC_MAP_COMMAND_H_</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>OSCIT_INCLUDE_OSCIT_OSC_MAP_COMMAND_H_</highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;list&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>runtime_error</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="osc__command_8h" kindref="compound">oscit/osc_command.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="script_8h" kindref="compound">oscit/script.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mapper_8h" kindref="compound">oscit/mapper.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="values_8h" kindref="compound">oscit/values.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="time__ref_8h" kindref="compound">oscit/time_ref.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">oscit<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="classoscit_1_1_osc_map_command" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classoscit_1_1_osc_map_command" kindref="compound">OscMapCommand</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_script" kindref="compound">Script</ref>,<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_osc_command" kindref="compound">OscCommand</ref><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_osc_map_command_1a9f7a30e1d03b2d6a3dff66d9464f7835" kindref="member">OscMapCommand</ref>();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_osc_map_command_1a9f7a30e1d03b2d6a3dff66d9464f7835" kindref="member">OscMapCommand</ref>(uint16_t<sp/><ref refid="classoscit_1_1_command_1a4b897b305e935c8cf58734dac6f882a7" kindref="member">port</ref>,<sp/>uint16_t<sp/><ref refid="classoscit_1_1_osc_map_command_1a28223507bf4dde05c319b52a58857ba0" kindref="member">reply_port</ref>);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_osc_map_command_1aae220fec0d669b941dcb055b3cf1b3ea" kindref="member">~OscMapCommand</ref>();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>{4}<sp/>set/change<sp/>input<sp/>port</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="classoscit_1_1_osc_map_command_1a6976232bb93e0a9779aa98cd771989a2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/><ref refid="classoscit_1_1_osc_map_command_1a6976232bb93e0a9779aa98cd771989a2" kindref="member">port</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/>&amp;val)<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(val.<ref refid="classoscit_1_1_value_1a2ecb230a2c852cfbaa3be4578fd83768" kindref="member">is_real</ref>()<sp/>&amp;&amp;<sp/>val.<ref refid="classoscit_1_1_value_1a32817b564b91700888d7b5975a195a53" kindref="member">r</ref><sp/>&gt;<sp/>0<sp/>&amp;&amp;<sp/>val.<ref refid="classoscit_1_1_value_1a32817b564b91700888d7b5975a195a53" kindref="member">r</ref><sp/>!=<sp/><ref refid="classoscit_1_1_command_1a213b745a3507b14283c076decef84604" kindref="member">port_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classoscit_1_1_mutex_1a016dda2b6b467aa8e3a866be3bd0f86e" kindref="member">lock</ref>();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classoscit_1_1_osc_command_1a569d3cab5a1a18a1c6ce95748c04066e" kindref="member">change_port</ref>(val.<ref refid="classoscit_1_1_value_1a32817b564b91700888d7b5975a195a53" kindref="member">r</ref>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classoscit_1_1_mutex_1a4eb03cce21055fcfd8ae3462661fac6f" kindref="member">unlock</ref>();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref>(<ref refid="classoscit_1_1_command_1a213b745a3507b14283c076decef84604" kindref="member">port_</ref>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>{5}<sp/>set/change<sp/>input<sp/>port</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="classoscit_1_1_osc_map_command_1a28223507bf4dde05c319b52a58857ba0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/><ref refid="classoscit_1_1_osc_map_command_1a28223507bf4dde05c319b52a58857ba0" kindref="member">reply_port</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/>&amp;val)<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(val.<ref refid="classoscit_1_1_value_1a2ecb230a2c852cfbaa3be4578fd83768" kindref="member">is_real</ref>()<sp/>&amp;&amp;<sp/>val.<ref refid="classoscit_1_1_value_1a32817b564b91700888d7b5975a195a53" kindref="member">r</ref><sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classoscit_1_1_mutex_1a016dda2b6b467aa8e3a866be3bd0f86e" kindref="member">lock</ref>();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reply_port_<sp/>=<sp/>val.<ref refid="classoscit_1_1_value_1a32817b564b91700888d7b5975a195a53" kindref="member">r</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classoscit_1_1_mutex_1a4eb03cce21055fcfd8ae3462661fac6f" kindref="member">unlock</ref>();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref>(reply_port_);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_osc_map_command_1a99a1043b021b4dd391f8df4b1375b7a2" kindref="member">receive</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_url" kindref="compound">Url</ref><sp/>&amp;url,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/>&amp;ext_val);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_osc_map_command_1af0dc101e7053965f282f3bb342e1ea1a" kindref="member">notify_observers</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*path,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/>&amp;val);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="classoscit_1_1_osc_map_command_1accad90bdae048361e4c1cca8944edfc3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/><ref refid="classoscit_1_1_osc_map_command_1accad90bdae048361e4c1cca8944edfc3" kindref="member">eval_script</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/>res;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classoscit_1_1_mutex_1a016dda2b6b467aa8e3a866be3bd0f86e" kindref="member">lock</ref>();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mapper_.<ref refid="classoscit_1_1_mapper_1a024d5e9dfa10d1fb7c2794c1d37d14a3" kindref="member">parse</ref>(<ref refid="classoscit_1_1_script_1ab4c96e1a89a42748cf8594a4f565e41d" kindref="member">script_</ref>.c_str()))<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>res<sp/>=<sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref>(<ref refid="classoscit_1_1_script_1ab4c96e1a89a42748cf8594a4f565e41d" kindref="member">script_</ref>);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>res<sp/>=<sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref>(<ref refid="namespaceoscit_1ab80f9f57bfa30aea952660b674e576c9abfa5bf629c27909f85853228c047ef5f" kindref="member">BAD_REQUEST_ERROR</ref>,<sp/>mapper_.<ref refid="classoscit_1_1_mapper_1ab12461b6c03e9442414cd739ba38f5a9" kindref="member">error</ref>());</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classoscit_1_1_mutex_1a4eb03cce21055fcfd8ae3462661fac6f" kindref="member">unlock</ref>();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>res;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/>uint16_t<sp/>reply_port_;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_mapper" kindref="compound">Mapper</ref><sp/>mapper_;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_time_ref" kindref="compound">TimeRef</ref><sp/>time_ref_;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>oscit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>OSCIT_INCLUDE_OSCIT_OSC_MAP_COMMAND_H_</highlight></codeline>
+    </programlisting>
+    <location file="/Users/gaspard/git/oscit/include/oscit/osc_map_command.h"/>
+  </compounddef>
+</doxygen>

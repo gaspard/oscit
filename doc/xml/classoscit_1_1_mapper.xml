@@ -1,0 +1,291 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classoscit_1_1_mapper" kind="class" prot="public">
+    <compoundname>oscit::Mapper</compoundname>
+    <includes refid="mapper_8h" local="no">mapper.h</includes>
+    <innerclass refid="structoscit_1_1_mapper_1_1_map_element" prot="private">oscit::Mapper::MapElement</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classoscit_1_1_mapper_1ae67d606cfb7a9b5d7475b35ad1b49411" prot="private" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_t_hash" kindref="compound">THash</ref>&lt; std::string, MapElement &gt;</type>
+        <definition>THash&lt;std::string, MapElement&gt; oscit::Mapper::map_</definition>
+        <argsstring></argsstring>
+        <name>map_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/mapper.h" line="87" bodyfile="/Users/gaspard/git/oscit/include/oscit/mapper.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_mapper_1a0ebe80983005d6173f499462efdcc8b1" prot="private" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_t_hash" kindref="compound">THash</ref>&lt; std::string, MapElement &gt;</type>
+        <definition>THash&lt;std::string, MapElement&gt; oscit::Mapper::reverse_map_</definition>
+        <argsstring></argsstring>
+        <name>reverse_map_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/mapper.h" line="88" bodyfile="/Users/gaspard/git/oscit/include/oscit/mapper.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_mapper_1a728a138511d0eecc4c35ecb45aef71d2" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string oscit::Mapper::error_</definition>
+        <argsstring></argsstring>
+        <name>error_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/mapper.h" line="89" bodyfile="/Users/gaspard/git/oscit/include/oscit/mapper.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classoscit_1_1_mapper_1a666f9381cea7e6606a8e81c2fe5735d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Mapper::Mapper</definition>
+        <argsstring>()</argsstring>
+        <name>Mapper</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/mapper.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_mapper_1ad3827c81d1182e323a03a00407dcbaec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Mapper::Mapper</definition>
+        <argsstring>(size_t hash_table_size)</argsstring>
+        <name>Mapper</name>
+        <param>
+          <type>size_t</type>
+          <declname>hash_table_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/mapper.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_mapper_1ae70da3e7814cc68f47c05269b40213e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual oscit::Mapper::~Mapper</definition>
+        <argsstring>()</argsstring>
+        <name>~Mapper</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/mapper.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_mapper_1a024d5e9dfa10d1fb7c2794c1d37d14a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool oscit::Mapper::parse</definition>
+        <argsstring>(const std::string &amp;definitions)</argsstring>
+        <name>parse</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>definitions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/mapper.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_mapper_1ab12461b6c03e9442414cd739ba38f5a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string&amp; oscit::Mapper::error</definition>
+        <argsstring>()</argsstring>
+        <name>error</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/mapper.h" line="52" bodyfile="/Users/gaspard/git/oscit/include/oscit/mapper.h" bodystart="52" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_mapper_1abf581dd04901102184b82c4b7376301d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool oscit::Mapper::map</definition>
+        <argsstring>(const std::string &amp;source, Real value, std::string *target, Real *target_value)</argsstring>
+        <name>map</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref></type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>std::string *</type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref> *</type>
+          <declname>target_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Find a mapping for the given source. If the mapping is found, scale value. <simplesect kind="return"><para>false if no mapping is found. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/mapper.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_mapper_1af16ebd222e7afee1f10ca450612e4970" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool oscit::Mapper::reverse_map</definition>
+        <argsstring>(const std::string &amp;source, Real value, std::string *target, Real *target_value)</argsstring>
+        <name>reverse_map</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref></type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>std::string *</type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref> *</type>
+          <declname>target_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Find a reverse mapping for the given target (find source from target). If the mapping is found, reverse scale value. <simplesect kind="return"><para>false if no mapping is found. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/mapper.h" line="66"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classoscit_1_1_mapper_1a8b543fa334d89badd5db3e55be897d37" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Mapper::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/mapper.h" line="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_mapper_1a9cfafed8b4054fda7d8b3790d7edca92" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool oscit::Mapper::set_map</definition>
+        <argsstring>(const std::string &amp;source_url, Real source_min, Real source_max, const std::string &amp;target_url, Real target_min, Real target_max)</argsstring>
+        <name>set_map</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>source_url</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref></type>
+          <declname>source_min</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref></type>
+          <declname>source_max</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>target_url</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref></type>
+          <declname>target_min</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref></type>
+          <declname>target_max</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/mapper.h" line="85"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classoscit_1_1_mapper" kindref="compound">Mapper</ref> class helps transform some input data into something else based on strings for mapping and on Real numbers for scaling. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="571">
+        <label>oscit::Mapper</label>
+        <link refid="classoscit_1_1_mapper"/>
+        <childnode refid="572" relation="usage">
+          <edgelabel>map_</edgelabel>
+          <edgelabel>reverse_map_</edgelabel>
+        </childnode>
+      </node>
+      <node id="575">
+        <label>oscit::ScaleReal</label>
+        <link refid="classoscit_1_1_scale_real"/>
+      </node>
+      <node id="574">
+        <label>oscit::Mapper::MapElement</label>
+        <childnode refid="575" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="573">
+        <label>oscit::THashElement&lt; std::string, MapElement &gt;</label>
+        <link refid="structoscit_1_1_t_hash_element"/>
+        <childnode refid="574" relation="usage">
+          <edgelabel>obj</edgelabel>
+        </childnode>
+        <childnode refid="573" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+      <node id="572">
+        <label>oscit::THash&lt; std::string, MapElement &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+        <childnode refid="573" relation="usage">
+          <edgelabel>thash_table_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/mapper.h" line="42" bodyfile="/Users/gaspard/git/oscit/include/oscit/mapper.h" bodystart="42" bodyend="90"/>
+    <listofallmembers>
+      <member refid="classoscit_1_1_mapper_1a8b543fa334d89badd5db3e55be897d37" prot="private" virt="non-virtual"><scope>oscit::Mapper</scope><name>clear</name></member>
+      <member refid="classoscit_1_1_mapper_1ab12461b6c03e9442414cd739ba38f5a9" prot="public" virt="non-virtual"><scope>oscit::Mapper</scope><name>error</name></member>
+      <member refid="classoscit_1_1_mapper_1a728a138511d0eecc4c35ecb45aef71d2" prot="private" virt="non-virtual"><scope>oscit::Mapper</scope><name>error_</name></member>
+      <member refid="classoscit_1_1_mapper_1abf581dd04901102184b82c4b7376301d" prot="public" virt="non-virtual"><scope>oscit::Mapper</scope><name>map</name></member>
+      <member refid="classoscit_1_1_mapper_1ae67d606cfb7a9b5d7475b35ad1b49411" prot="private" virt="non-virtual"><scope>oscit::Mapper</scope><name>map_</name></member>
+      <member refid="classoscit_1_1_mapper_1a666f9381cea7e6606a8e81c2fe5735d6" prot="public" virt="non-virtual"><scope>oscit::Mapper</scope><name>Mapper</name></member>
+      <member refid="classoscit_1_1_mapper_1ad3827c81d1182e323a03a00407dcbaec" prot="public" virt="non-virtual"><scope>oscit::Mapper</scope><name>Mapper</name></member>
+      <member refid="classoscit_1_1_mapper_1a024d5e9dfa10d1fb7c2794c1d37d14a3" prot="public" virt="non-virtual"><scope>oscit::Mapper</scope><name>parse</name></member>
+      <member refid="classoscit_1_1_mapper_1af16ebd222e7afee1f10ca450612e4970" prot="public" virt="non-virtual"><scope>oscit::Mapper</scope><name>reverse_map</name></member>
+      <member refid="classoscit_1_1_mapper_1a0ebe80983005d6173f499462efdcc8b1" prot="private" virt="non-virtual"><scope>oscit::Mapper</scope><name>reverse_map_</name></member>
+      <member refid="classoscit_1_1_mapper_1a9cfafed8b4054fda7d8b3790d7edca92" prot="private" virt="non-virtual"><scope>oscit::Mapper</scope><name>set_map</name></member>
+      <member refid="classoscit_1_1_mapper_1ae70da3e7814cc68f47c05269b40213e5" prot="public" virt="virtual"><scope>oscit::Mapper</scope><name>~Mapper</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

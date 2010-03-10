@@ -1,0 +1,270 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classoscit_1_1_t_observable_list" kind="class" prot="public">
+    <compoundname>oscit::TObservableList</compoundname>
+    <basecompoundref refid="classoscit_1_1_observer" prot="public" virt="non-virtual">oscit::Observer</basecompoundref>
+    <includes refid="tobservable__list_8h" local="no">tobservable_list.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classoscit_1_1_t_observable_list_1a9562fd478a36b48d623635c751546663" prot="private" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_observer" kindref="compound">Observer</ref> *</type>
+        <definition>Observer* oscit::TObservableList&lt; T &gt;::list_owner_</definition>
+        <argsstring></argsstring>
+        <name>list_owner_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/tobservable_list.h" line="110" bodyfile="/Users/gaspard/git/oscit/include/oscit/tobservable_list.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_t_observable_list_1a3a6d6c818ffab77f6409e8057eb007b0" prot="private" static="no" mutable="no">
+        <type>std::list&lt; T &gt;</type>
+        <definition>std::list&lt;T&gt; oscit::TObservableList&lt; T &gt;::list_</definition>
+        <argsstring></argsstring>
+        <name>list_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/tobservable_list.h" line="111" bodyfile="/Users/gaspard/git/oscit/include/oscit/tobservable_list.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classoscit_1_1_t_observable_list_1a404da5c7b20b9372cb0c8cd140938931" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::TObservableList&lt; T &gt;::TObservableList</definition>
+        <argsstring>(Observer *list_owner)</argsstring>
+        <name>TObservableList</name>
+        <param>
+          <type><ref refid="classoscit_1_1_observer" kindref="compound">Observer</ref> *</type>
+          <declname>list_owner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/tobservable_list.h" line="49" bodyfile="/Users/gaspard/git/oscit/include/oscit/tobservable_list.h" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_t_observable_list_1a64e8f7d53548cab71e7421c3e672e306" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::TObservableList&lt; T &gt;::push_back</definition>
+        <argsstring>(T target)</argsstring>
+        <name>push_back</name>
+        <param>
+          <type>T</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/tobservable_list.h" line="51" bodyfile="/Users/gaspard/git/oscit/include/oscit/tobservable_list.h" bodystart="51" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_t_observable_list_1aebf7ccacdb4c6518c7518c774cacb339" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::TObservableList&lt; T &gt;::remove</definition>
+        <argsstring>(T target)</argsstring>
+        <name>remove</name>
+        <param>
+          <type>T</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/tobservable_list.h" line="60" bodyfile="/Users/gaspard/git/oscit/include/oscit/tobservable_list.h" bodystart="60" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_t_observable_list_1a8bc35b6ab020595112c5263b3cf5b210" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>T oscit::TObservableList&lt; T &gt;::front</definition>
+        <argsstring>()</argsstring>
+        <name>front</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/tobservable_list.h" line="66" bodyfile="/Users/gaspard/git/oscit/include/oscit/tobservable_list.h" bodystart="66" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_t_observable_list_1a434e768ab92ece958799ec58d68475fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t oscit::TObservableList&lt; T &gt;::size</definition>
+        <argsstring>()</argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/tobservable_list.h" line="70" bodyfile="/Users/gaspard/git/oscit/include/oscit/tobservable_list.h" bodystart="70" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_t_observable_list_1ab5831af07a18557568567dccd7c2b249" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::list&lt; T &gt;::iterator</type>
+        <definition>std::list&lt;T&gt;::iterator oscit::TObservableList&lt; T &gt;::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/tobservable_list.h" line="74" bodyfile="/Users/gaspard/git/oscit/include/oscit/tobservable_list.h" bodystart="74" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_t_observable_list_1ab11fc67fe9d946d14ff0f52e64e6a937" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::list&lt; T &gt;::iterator</type>
+        <definition>std::list&lt;T&gt;::iterator oscit::TObservableList&lt; T &gt;::end</definition>
+        <argsstring>()</argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/tobservable_list.h" line="78" bodyfile="/Users/gaspard/git/oscit/include/oscit/tobservable_list.h" bodystart="78" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_t_observable_list_1af88d9693351e57a9f6e5183b320f0d69" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::list&lt; T &gt;::const_iterator</type>
+        <definition>std::list&lt;T&gt;::const_iterator oscit::TObservableList&lt; T &gt;::begin</definition>
+        <argsstring>() const </argsstring>
+        <name>begin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/tobservable_list.h" line="82" bodyfile="/Users/gaspard/git/oscit/include/oscit/tobservable_list.h" bodystart="82" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_t_observable_list_1a17b4ada53ef016420a19a34589080ca8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::list&lt; T &gt;::const_iterator</type>
+        <definition>std::list&lt;T&gt;::const_iterator oscit::TObservableList&lt; T &gt;::end</definition>
+        <argsstring>() const </argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/tobservable_list.h" line="86" bodyfile="/Users/gaspard/git/oscit/include/oscit/tobservable_list.h" bodystart="86" bodyend="88"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classoscit_1_1_t_observable_list_1a31eafdb91bfeca93c85689b66bdfb821" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::TObservableList&lt; T &gt;::remove_from_list</definition>
+        <argsstring>(void *data)</argsstring>
+        <name>remove_from_list</name>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The target is becoming invalid, remove from list (called from the target&apos;s &quot;on_destroy&quot; list). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/tobservable_list.h" line="93" bodyfile="/Users/gaspard/git/oscit/include/oscit/tobservable_list.h" bodystart="93" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_t_observable_list_1a6784876d1e564be602276ff712165093" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void oscit::TObservableList&lt; T &gt;::observer_lock</definition>
+        <argsstring>()</argsstring>
+        <name>observer_lock</name>
+        <reimplements refid="classoscit_1_1_observer_1a35b3c99a9cdaa3826aafae6a1d9f21fb">observer_lock</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If you are in a multi-threaded environment, you should overwrite this method. to lock before notification trigger. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/tobservable_list.h" line="101" bodyfile="/Users/gaspard/git/oscit/include/oscit/tobservable_list.h" bodystart="101" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_t_observable_list_1a8b62386f79518223314fc3ff96d68d10" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void oscit::TObservableList&lt; T &gt;::observer_unlock</definition>
+        <argsstring>()</argsstring>
+        <name>observer_unlock</name>
+        <reimplements refid="classoscit_1_1_observer_1a0c3ab3c1660ff92f0c9a26122718f2c8">observer_unlock</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If you are in a multi-threaded environment, you should overwrite this method. to unlock after notification trigger. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/tobservable_list.h" line="105" bodyfile="/Users/gaspard/git/oscit/include/oscit/tobservable_list.h" bodystart="105" bodyend="107"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Use this instead of a <ref refid="classstd_1_1list" kindref="compound">std::list</ref> to hold pointers to <ref refid="classoscit_1_1_observable" kindref="compound">Observable</ref> instances if these instances might become invalid before the owner of the list.</para><para>TODO: make this a sub-class of <ref refid="classstd_1_1list" kindref="compound">std::list</ref> ? </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1380">
+        <label>oscit::Observer</label>
+        <link refid="classoscit_1_1_observer"/>
+      </node>
+      <node id="1379">
+        <label>oscit::TObservableList&lt; T &gt;</label>
+        <link refid="classoscit_1_1_t_observable_list"/>
+        <childnode refid="1380" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1382">
+        <label>oscit::Observer</label>
+        <link refid="classoscit_1_1_observer"/>
+      </node>
+      <node id="1381">
+        <label>oscit::TObservableList&lt; T &gt;</label>
+        <link refid="classoscit_1_1_t_observable_list"/>
+        <childnode refid="1382" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1382" relation="usage">
+          <edgelabel>list_owner_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/tobservable_list.h" line="47" bodyfile="/Users/gaspard/git/oscit/include/oscit/tobservable_list.h" bodystart="47" bodyend="112"/>
+    <listofallmembers>
+      <member refid="classoscit_1_1_t_observable_list_1ab5831af07a18557568567dccd7c2b249" prot="public" virt="non-virtual"><scope>oscit::TObservableList</scope><name>begin</name></member>
+      <member refid="classoscit_1_1_t_observable_list_1af88d9693351e57a9f6e5183b320f0d69" prot="public" virt="non-virtual"><scope>oscit::TObservableList</scope><name>begin</name></member>
+      <member refid="classoscit_1_1_observer_1a0460e53a6d44a9388dec23ff76ba83f2" prot="protected" virt="non-virtual"><scope>oscit::TObservableList</scope><name>delete_produced_callbacks_with_data</name></member>
+      <member refid="classoscit_1_1_t_observable_list_1ab11fc67fe9d946d14ff0f52e64e6a937" prot="public" virt="non-virtual"><scope>oscit::TObservableList</scope><name>end</name></member>
+      <member refid="classoscit_1_1_t_observable_list_1a17b4ada53ef016420a19a34589080ca8" prot="public" virt="non-virtual"><scope>oscit::TObservableList</scope><name>end</name></member>
+      <member refid="classoscit_1_1_t_observable_list_1a8bc35b6ab020595112c5263b3cf5b210" prot="public" virt="non-virtual"><scope>oscit::TObservableList</scope><name>front</name></member>
+      <member refid="classoscit_1_1_t_observable_list_1a3a6d6c818ffab77f6409e8057eb007b0" prot="private" virt="non-virtual"><scope>oscit::TObservableList</scope><name>list_</name></member>
+      <member refid="classoscit_1_1_t_observable_list_1a9562fd478a36b48d623635c751546663" prot="private" virt="non-virtual"><scope>oscit::TObservableList</scope><name>list_owner_</name></member>
+      <member refid="classoscit_1_1_t_observable_list_1a6784876d1e564be602276ff712165093" prot="protected" virt="virtual"><scope>oscit::TObservableList</scope><name>observer_lock</name></member>
+      <member refid="classoscit_1_1_t_observable_list_1a8b62386f79518223314fc3ff96d68d10" prot="protected" virt="virtual"><scope>oscit::TObservableList</scope><name>observer_unlock</name></member>
+      <member refid="classoscit_1_1_t_observable_list_1a64e8f7d53548cab71e7421c3e672e306" prot="public" virt="non-virtual"><scope>oscit::TObservableList</scope><name>push_back</name></member>
+      <member refid="classoscit_1_1_t_observable_list_1aebf7ccacdb4c6518c7518c774cacb339" prot="public" virt="non-virtual"><scope>oscit::TObservableList</scope><name>remove</name></member>
+      <member refid="classoscit_1_1_t_observable_list_1a31eafdb91bfeca93c85689b66bdfb821" prot="protected" virt="non-virtual"><scope>oscit::TObservableList</scope><name>remove_from_list</name></member>
+      <member refid="classoscit_1_1_observer_1ab856c4b8fac03abcb75fe3884a363a6b" prot="public" virt="non-virtual"><scope>oscit::TObservableList</scope><name>set_and_hold</name></member>
+      <member refid="classoscit_1_1_t_observable_list_1a434e768ab92ece958799ec58d68475fb" prot="public" virt="non-virtual"><scope>oscit::TObservableList</scope><name>size</name></member>
+      <member refid="classoscit_1_1_t_observable_list_1a404da5c7b20b9372cb0c8cd140938931" prot="public" virt="non-virtual"><scope>oscit::TObservableList</scope><name>TObservableList</name></member>
+      <member refid="classoscit_1_1_observer_1ac42ab921bb3a679a9abaf483f1559c00" prot="public" virt="virtual"><scope>oscit::TObservableList</scope><name>~Observer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

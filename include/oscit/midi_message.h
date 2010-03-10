@@ -112,7 +112,7 @@ class MidiMessage : public ReferenceCounted {
    * @param wait milliseconds to wait before firing this message.
    * @return new MidiMessage pointer.
    */
-  static MidiMessage *MidiNote(int note, int velocity = 80, int length = 500, int channel = 1, time_t wait = 0) {
+  static MidiMessage *Note(int note, int velocity = 80, int length = 500, int channel = 1, time_t wait = 0) {
     MidiMessage *m = new MidiMessage();
     m->set_as_note(note, velocity, length, channel, wait);
     return m;

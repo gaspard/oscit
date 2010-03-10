@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classoscit_1_1_scoped_read" kind="class" prot="public">
+    <compoundname>oscit::ScopedRead</compoundname>
+    <basecompoundref refid="classoscit_1_1_non_copyable" prot="private" virt="non-virtual">oscit::NonCopyable</basecompoundref>
+    <includes refid="rw__mutex_8h" local="no">rw_mutex.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classoscit_1_1_scoped_read_1aec16e01573ed73103bc019cdb46ebd0f" prot="private" static="no" mutable="no">
+        <type>const <ref refid="classoscit_1_1_r_w_mutex" kindref="compound">RWMutex</ref> *</type>
+        <definition>const RWMutex* oscit::ScopedRead::mutex_ptr_</definition>
+        <argsstring></argsstring>
+        <name>mutex_ptr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="195" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classoscit_1_1_scoped_read_1aa13e290b4c74db4e6f2b1ea64bc68a51" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::ScopedRead::ScopedRead</definition>
+        <argsstring>(const RWMutex *mutex)</argsstring>
+        <name>ScopedRead</name>
+        <param>
+          <type>const <ref refid="classoscit_1_1_r_w_mutex" kindref="compound">RWMutex</ref> *</type>
+          <declname>mutex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="182" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="182" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_scoped_read_1a419837b64261345efaa219439a96469b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::ScopedRead::ScopedRead</definition>
+        <argsstring>(const RWMutex &amp;mutex)</argsstring>
+        <name>ScopedRead</name>
+        <param>
+          <type>const <ref refid="classoscit_1_1_r_w_mutex" kindref="compound">RWMutex</ref> &amp;</type>
+          <declname>mutex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="186" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="186" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_scoped_read_1a35a24a6ae347366adddf659927d0b3fe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::ScopedRead::~ScopedRead</definition>
+        <argsstring>()</argsstring>
+        <name>~ScopedRead</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="190" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="190" bodyend="192"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Lock for read-only access to a resource. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1243">
+        <label>oscit::ScopedRead</label>
+        <link refid="classoscit_1_1_scoped_read"/>
+        <childnode refid="1244" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="1244">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1245">
+        <label>oscit::ScopedRead</label>
+        <link refid="classoscit_1_1_scoped_read"/>
+        <childnode refid="1246" relation="private-inheritance">
+        </childnode>
+        <childnode refid="1247" relation="usage">
+          <edgelabel>mutex_ptr_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1246">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+      <node id="1247">
+        <label>oscit::RWMutex</label>
+        <link refid="classoscit_1_1_r_w_mutex"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="180" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="180" bodyend="196"/>
+    <listofallmembers>
+      <member refid="classoscit_1_1_scoped_read_1aec16e01573ed73103bc019cdb46ebd0f" prot="private" virt="non-virtual"><scope>oscit::ScopedRead</scope><name>mutex_ptr_</name></member>
+      <member refid="classoscit_1_1_non_copyable_1a1f0c0fedea54b6e20aeefbeefdce67f7" prot="private" virt="non-virtual"><scope>oscit::ScopedRead</scope><name>NonCopyable</name></member>
+      <member refid="classoscit_1_1_scoped_read_1aa13e290b4c74db4e6f2b1ea64bc68a51" prot="public" virt="non-virtual"><scope>oscit::ScopedRead</scope><name>ScopedRead</name></member>
+      <member refid="classoscit_1_1_scoped_read_1a419837b64261345efaa219439a96469b" prot="public" virt="non-virtual"><scope>oscit::ScopedRead</scope><name>ScopedRead</name></member>
+      <member refid="classoscit_1_1_non_copyable_1ad21ed15dea6d4700732a2cbc7f98e20a" prot="private" virt="non-virtual"><scope>oscit::ScopedRead</scope><name>~NonCopyable</name></member>
+      <member refid="classoscit_1_1_scoped_read_1a35a24a6ae347366adddf659927d0b3fe" prot="public" virt="non-virtual"><scope>oscit::ScopedRead</scope><name>~ScopedRead</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

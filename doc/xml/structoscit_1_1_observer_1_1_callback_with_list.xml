@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="structoscit_1_1_observer_1_1_callback_with_list" kind="struct" prot="private">
+    <compoundname>oscit::Observer::CallbackWithList</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structoscit_1_1_observer_1_1_callback_with_list_1ab0f1c5720eedc654492b636fcf2992bc" prot="public" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_callback_list" kindref="compound">CallbackList</ref> *</type>
+        <definition>CallbackList* oscit::Observer::CallbackWithList::list_</definition>
+        <argsstring></argsstring>
+        <name>list_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/observer.h" line="113" bodyfile="/Users/gaspard/git/oscit/include/oscit/observer.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structoscit_1_1_observer_1_1_callback_with_list_1aa4ea1f3a81757bfde0e87fca3185cf31" prot="public" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_callback" kindref="compound">Callback</ref> *</type>
+        <definition>Callback* oscit::Observer::CallbackWithList::callback_</definition>
+        <argsstring></argsstring>
+        <name>callback_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/observer.h" line="114" bodyfile="/Users/gaspard/git/oscit/include/oscit/observer.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structoscit_1_1_observer_1_1_callback_with_list_1a1a3bfe4124bfbd4c31b9c1232bb90be8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Observer::CallbackWithList::CallbackWithList</definition>
+        <argsstring>(CallbackList *list, Callback *callback)</argsstring>
+        <name>CallbackWithList</name>
+        <param>
+          <type><ref refid="classoscit_1_1_callback_list" kindref="compound">CallbackList</ref> *</type>
+          <declname>list</declname>
+        </param>
+        <param>
+          <type><ref refid="classoscit_1_1_callback" kindref="compound">Callback</ref> *</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/observer.h" line="112" bodyfile="/Users/gaspard/git/oscit/include/oscit/observer.h" bodystart="112" bodyend="112"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Struct containing a callback with the list it is currently in. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="72">
+        <label>oscit::Observer::CallbackWithList</label>
+        <childnode refid="73" relation="usage">
+          <edgelabel>list_</edgelabel>
+        </childnode>
+        <childnode refid="76" relation="usage">
+          <edgelabel>callback_</edgelabel>
+        </childnode>
+      </node>
+      <node id="74">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+      <node id="76">
+        <label>oscit::Callback</label>
+        <link refid="classoscit_1_1_callback"/>
+        <childnode refid="73" relation="usage">
+          <edgelabel>callback_list_</edgelabel>
+        </childnode>
+        <childnode refid="75" relation="usage">
+          <edgelabel>observer_</edgelabel>
+        </childnode>
+      </node>
+      <node id="75">
+        <label>oscit::Observer</label>
+        <link refid="classoscit_1_1_observer"/>
+      </node>
+      <node id="73">
+        <label>oscit::CallbackList</label>
+        <link refid="classoscit_1_1_callback_list"/>
+        <childnode refid="74" relation="private-inheritance">
+        </childnode>
+        <childnode refid="75" relation="usage">
+          <edgelabel>list_owner_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/observer.h" line="111" bodyfile="/Users/gaspard/git/oscit/include/oscit/observer.h" bodystart="111" bodyend="115"/>
+    <listofallmembers>
+      <member refid="structoscit_1_1_observer_1_1_callback_with_list_1aa4ea1f3a81757bfde0e87fca3185cf31" prot="public" virt="non-virtual"><scope>oscit::Observer::CallbackWithList</scope><name>callback_</name></member>
+      <member refid="structoscit_1_1_observer_1_1_callback_with_list_1a1a3bfe4124bfbd4c31b9c1232bb90be8" prot="public" virt="non-virtual"><scope>oscit::Observer::CallbackWithList</scope><name>CallbackWithList</name></member>
+      <member refid="structoscit_1_1_observer_1_1_callback_with_list_1ab0f1c5720eedc654492b636fcf2992bc" prot="public" virt="non-virtual"><scope>oscit::Observer::CallbackWithList</scope><name>list_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

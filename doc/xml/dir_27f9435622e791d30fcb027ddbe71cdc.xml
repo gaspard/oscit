@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="dir_27f9435622e791d30fcb027ddbe71cdc" kind="dir">
+    <compoundname>include/oscit/</compoundname>
+    <innerfile refid="alias_8h">alias.h</innerfile>
+    <innerfile refid="atomic__counter_8h">atomic_counter.h</innerfile>
+    <innerfile refid="c__reference__counted_8h">c_reference_counted.h</innerfile>
+    <innerfile refid="c__thash_8h">c_thash.h</innerfile>
+    <innerfile refid="c__tlist_8h">c_tlist.h</innerfile>
+    <innerfile refid="c__tvector_8h">c_tvector.h</innerfile>
+    <innerfile refid="call_8h">call.h</innerfile>
+    <innerfile refid="callback_8h">callback.h</innerfile>
+    <innerfile refid="callback__list_8h">callback_list.h</innerfile>
+    <innerfile refid="callback__observer_8h">callback_observer.h</innerfile>
+    <innerfile refid="command_8h">command.h</innerfile>
+    <innerfile refid="conf_8h">conf.h</innerfile>
+    <innerfile refid="error_8h">error.h</innerfile>
+    <innerfile refid="error__meta__method_8h">error_meta_method.h</innerfile>
+    <innerfile refid="error__value_8h">error_value.h</innerfile>
+    <innerfile refid="file_8h">file.h</innerfile>
+    <innerfile refid="file__method_8h">file_method.h</innerfile>
+    <innerfile refid="hash_8h">hash.h</innerfile>
+    <innerfile refid="hash__file__method_8h">hash_file_method.h</innerfile>
+    <innerfile refid="hash__value_8h">hash_value.h</innerfile>
+    <innerfile refid="info__meta__method_8h">info_meta_method.h</innerfile>
+    <innerfile refid="list_8h">list.h</innerfile>
+    <innerfile refid="list__meta__method_8h">list_meta_method.h</innerfile>
+    <innerfile refid="list__value_8h">list_value.h</innerfile>
+    <innerfile refid="list__with__type__meta__method_8h">list_with_type_meta_method.h</innerfile>
+    <innerfile refid="location_8h">location.h</innerfile>
+    <innerfile refid="log__object_8h">log_object.h</innerfile>
+    <innerfile refid="mapper_8h">mapper.h</innerfile>
+    <innerfile refid="matrix_8h">matrix.h</innerfile>
+    <innerfile refid="matrix__value_8h">matrix_value.h</innerfile>
+    <innerfile refid="method_8h">method.h</innerfile>
+    <innerfile refid="midi__message_8h">midi_message.h</innerfile>
+    <innerfile refid="midi__value_8h">midi_value.h</innerfile>
+    <innerfile refid="mutex_8h">mutex.h</innerfile>
+    <innerfile refid="non__copyable_8h">non_copyable.h</innerfile>
+    <innerfile refid="object_8h">object.h</innerfile>
+    <innerfile refid="object__handle_8h">object_handle.h</innerfile>
+    <innerfile refid="object__proxy_8h">object_proxy.h</innerfile>
+    <innerfile refid="observable_8h">observable.h</innerfile>
+    <innerfile refid="observer_8h">observer.h</innerfile>
+    <innerfile refid="on__destroy__callback_8h">on_destroy_callback.h</innerfile>
+    <innerfile refid="on__destroy__notifier_8h">on_destroy_notifier.h</innerfile>
+    <innerfile refid="osc__command_8h">osc_command.h</innerfile>
+    <innerfile refid="osc__map__command_8h">osc_map_command.h</innerfile>
+    <innerfile refid="osc__remote__object_8h">osc_remote_object.h</innerfile>
+    <innerfile refid="osc__root__proxy_8h">osc_root_proxy.h</innerfile>
+    <innerfile refid="oscit_8h">oscit.h</innerfile>
+    <innerfile refid="pointer_8h">pointer.h</innerfile>
+    <innerfile refid="proxy__factory_8h">proxy_factory.h</innerfile>
+    <innerfile refid="real__value_8h">real_value.h</innerfile>
+    <innerfile refid="reference__counted_8h">reference_counted.h</innerfile>
+    <innerfile refid="root_8h">root.h</innerfile>
+    <innerfile refid="root__proxy_8h">root_proxy.h</innerfile>
+    <innerfile refid="rw__mutex_8h">rw_mutex.h</innerfile>
+    <innerfile refid="scale__real_8h">scale_real.h</innerfile>
+    <innerfile refid="script_8h">script.h</innerfile>
+    <innerfile refid="semaphore_8h">semaphore.h</innerfile>
+    <innerfile refid="string__data_8h">string_data.h</innerfile>
+    <innerfile refid="string__value_8h">string_value.h</innerfile>
+    <innerfile refid="thash_8h">thash.h</innerfile>
+    <innerfile refid="thread_8h">thread.h</innerfile>
+    <innerfile refid="time__ref_8h">time_ref.h</innerfile>
+    <innerfile refid="timer_8h">timer.h</innerfile>
+    <innerfile refid="tobservable__list_8h">tobservable_list.h</innerfile>
+    <innerfile refid="tree__meta__method_8h">tree_meta_method.h</innerfile>
+    <innerfile refid="tsmart__ptr_8h">tsmart_ptr.h</innerfile>
+    <innerfile refid="type__meta__method_8h">type_meta_method.h</innerfile>
+    <innerfile refid="typed_8h">typed.h</innerfile>
+    <innerfile refid="url_8h">url.h</innerfile>
+    <innerfile refid="value_8h">value.h</innerfile>
+    <innerfile refid="value__types_8h">value_types.h</innerfile>
+    <innerfile refid="values_8h">values.h</innerfile>
+    <innerfile refid="zeroconf__browser_8h">zeroconf_browser.h</innerfile>
+    <innerfile refid="zeroconf__registration_8h">zeroconf_registration.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/gaspard/git/oscit/include/oscit/"/>
+  </compounddef>
+</doxygen>

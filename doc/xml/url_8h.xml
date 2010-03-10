@@ -1,0 +1,385 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="url_8h" kind="file">
+    <compoundname>url.h</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">ostream</includes>
+    <includes refid="location_8h" local="yes">oscit/location.h</includes>
+    <includedby refid="command_8h" local="yes">include/oscit/command.h</includedby>
+    <incdepgraph>
+      <node id="3063">
+        <label>list</label>
+      </node>
+      <node id="3061">
+        <label>oscit/thash.h</label>
+        <link refid="thash_8h"/>
+        <childnode refid="3062" relation="include">
+        </childnode>
+        <childnode refid="3058" relation="include">
+        </childnode>
+        <childnode refid="3063" relation="include">
+        </childnode>
+        <childnode refid="3064" relation="include">
+        </childnode>
+      </node>
+      <node id="3060">
+        <label>oscit/location.h</label>
+        <link refid="location_8h"/>
+        <childnode refid="3058" relation="include">
+        </childnode>
+        <childnode refid="3059" relation="include">
+        </childnode>
+        <childnode refid="3061" relation="include">
+        </childnode>
+      </node>
+      <node id="3058">
+        <label>string</label>
+      </node>
+      <node id="3059">
+        <label>ostream</label>
+      </node>
+      <node id="3062">
+        <label>cstdio</label>
+      </node>
+      <node id="3057">
+        <label>include/oscit/url.h</label>
+        <link refid="url.h"/>
+        <childnode refid="3058" relation="include">
+        </childnode>
+        <childnode refid="3059" relation="include">
+        </childnode>
+        <childnode refid="3060" relation="include">
+        </childnode>
+      </node>
+      <node id="3064">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3078">
+        <label>include/oscit/list_with_type_meta_method.h</label>
+        <link refid="list__with__type__meta__method_8h"/>
+      </node>
+      <node id="3066">
+        <label>include/oscit/command.h</label>
+        <link refid="command_8h"/>
+        <childnode refid="3067" relation="include">
+        </childnode>
+        <childnode refid="3069" relation="include">
+        </childnode>
+        <childnode refid="3070" relation="include">
+        </childnode>
+      </node>
+      <node id="3067">
+        <label>include/oscit/osc_command.h</label>
+        <link refid="osc__command_8h"/>
+        <childnode refid="3068" relation="include">
+        </childnode>
+        <childnode refid="3069" relation="include">
+        </childnode>
+      </node>
+      <node id="3081">
+        <label>include/oscit/object_proxy.h</label>
+        <link refid="object__proxy_8h"/>
+        <childnode refid="3079" relation="include">
+        </childnode>
+      </node>
+      <node id="3085">
+        <label>include/oscit/type_meta_method.h</label>
+        <link refid="type__meta__method_8h"/>
+      </node>
+      <node id="3070">
+        <label>include/oscit/root.h</label>
+        <link refid="root_8h"/>
+        <childnode refid="3071" relation="include">
+        </childnode>
+        <childnode refid="3072" relation="include">
+        </childnode>
+        <childnode refid="3073" relation="include">
+        </childnode>
+        <childnode refid="3074" relation="include">
+        </childnode>
+        <childnode refid="3076" relation="include">
+        </childnode>
+        <childnode refid="3077" relation="include">
+        </childnode>
+        <childnode refid="3078" relation="include">
+        </childnode>
+        <childnode refid="3069" relation="include">
+        </childnode>
+        <childnode refid="3079" relation="include">
+        </childnode>
+        <childnode refid="3080" relation="include">
+        </childnode>
+        <childnode refid="3084" relation="include">
+        </childnode>
+        <childnode refid="3085" relation="include">
+        </childnode>
+      </node>
+      <node id="3069">
+        <label>include/oscit/oscit.h</label>
+        <link refid="oscit_8h"/>
+      </node>
+      <node id="3076">
+        <label>include/oscit/info_meta_method.h</label>
+        <link refid="info__meta__method_8h"/>
+      </node>
+      <node id="3074">
+        <label>include/oscit/file_method.h</label>
+        <link refid="file__method_8h"/>
+        <childnode refid="3075" relation="include">
+        </childnode>
+        <childnode refid="3069" relation="include">
+        </childnode>
+      </node>
+      <node id="3073">
+        <label>include/oscit/error_meta_method.h</label>
+        <link refid="error__meta__method_8h"/>
+      </node>
+      <node id="3082">
+        <label>include/oscit/osc_root_proxy.h</label>
+        <link refid="osc__root__proxy_8h"/>
+      </node>
+      <node id="3068">
+        <label>include/oscit/osc_map_command.h</label>
+        <link refid="osc__map__command_8h"/>
+        <childnode refid="3069" relation="include">
+        </childnode>
+      </node>
+      <node id="3072">
+        <label>include/oscit/call.h</label>
+        <link refid="call_8h"/>
+        <childnode refid="3069" relation="include">
+        </childnode>
+      </node>
+      <node id="3079">
+        <label>include/oscit/proxy_factory.h</label>
+        <link refid="proxy__factory_8h"/>
+        <childnode refid="3069" relation="include">
+        </childnode>
+      </node>
+      <node id="3075">
+        <label>include/oscit/hash_file_method.h</label>
+        <link refid="hash__file__method_8h"/>
+        <childnode refid="3069" relation="include">
+        </childnode>
+      </node>
+      <node id="3077">
+        <label>include/oscit/list_meta_method.h</label>
+        <link refid="list__meta__method_8h"/>
+      </node>
+      <node id="3065">
+        <label>include/oscit/url.h</label>
+        <link refid="url.h"/>
+        <childnode refid="3066" relation="include">
+        </childnode>
+      </node>
+      <node id="3083">
+        <label>include/oscit/zeroconf_browser.h</label>
+        <link refid="zeroconf__browser_8h"/>
+        <childnode refid="3069" relation="include">
+        </childnode>
+      </node>
+      <node id="3080">
+        <label>include/oscit/root_proxy.h</label>
+        <link refid="root__proxy_8h"/>
+        <childnode refid="3081" relation="include">
+        </childnode>
+        <childnode refid="3082" relation="include">
+        </childnode>
+        <childnode refid="3079" relation="include">
+        </childnode>
+        <childnode refid="3083" relation="include">
+        </childnode>
+      </node>
+      <node id="3071">
+        <label>include/oscit/alias.h</label>
+        <link refid="alias_8h"/>
+      </node>
+      <node id="3084">
+        <label>include/oscit/tree_meta_method.h</label>
+        <link refid="tree__meta__method_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classoscit_1_1_url" prot="public">oscit::Url</innerclass>
+    <innernamespace refid="namespaceoscit">oscit</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/>==============================================================================</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>OSCIT<sp/>library<sp/>(http://rubyk.org/liboscit)</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2007-2010<sp/>by<sp/>Gaspard<sp/>Bucher<sp/>-<sp/>Buma<sp/>(http://teti.ch).</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"></highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/><sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/><sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/><sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/><sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"></highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/><sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"></highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/><sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/><sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/><sp/><sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/><sp/><sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/><sp/><sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/><sp/><sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/><sp/><sp/>THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"></highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/><sp/>==============================================================================</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>OSCIT_INCLUDE_OSCIT_URL_H_</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>OSCIT_INCLUDE_OSCIT_URL_H_</highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="location_8h" kindref="compound">oscit/location.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">oscit<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">ZeroConfBrowser;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="classoscit_1_1_url" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classoscit_1_1_url" kindref="compound">Url</ref></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="48" refid="classoscit_1_1_url_1ac58c1b83dbf5622ca6f8867d74eff7c8" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_url_1ac58c1b83dbf5622ca6f8867d74eff7c8" kindref="member">Url</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_url_1a29ad8ca1bc7f72b1d144a371b194fddf" kindref="member">ip</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref><sp/><ref refid="classoscit_1_1_url_1a42ef206080f4fd7b0e2271f324de0645" kindref="member">port</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classoscit_1_1_url_1ac7908bfecee5ccd65b165c96b31ae46f" kindref="member">path</ref>)<sp/>:<sp/>path_(path)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>location_.protocol_<sp/>=<sp/><ref refid="location_8h_1a63206d24a4d41cf5443f3b0731238da6" kindref="member">DEFAULT_PROTOCOL</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>location_.reference_by_hostname_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>location_.ip_<sp/><sp/><sp/>=<sp/>ip;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>location_.port_<sp/>=<sp/>port;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>location_.name_<sp/>=<sp/><ref refid="classoscit_1_1_location_1ad45ea455be0e29925c30a4411ae9bef1" kindref="member">Location::name_from_ip</ref>(ip);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>rebuild_full_url();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="classoscit_1_1_url_1a9a0b3dc819e2c13b2256383ddf67ea32" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_url_1a9a0b3dc819e2c13b2256383ddf67ea32" kindref="member">Url</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_url_1a29ad8ca1bc7f72b1d144a371b194fddf" kindref="member">ip</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref><sp/><ref refid="classoscit_1_1_url_1a42ef206080f4fd7b0e2271f324de0645" kindref="member">port</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<ref refid="classoscit_1_1_url_1ac7908bfecee5ccd65b165c96b31ae46f" kindref="member">path</ref>)<sp/>:<sp/>path_(path)<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>location_.protocol_<sp/>=<sp/><ref refid="location_8h_1a63206d24a4d41cf5443f3b0731238da6" kindref="member">DEFAULT_PROTOCOL</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>location_.reference_by_hostname_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>location_.ip_<sp/><sp/><sp/>=<sp/>ip;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>location_.port_<sp/>=<sp/>port;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>location_.name_<sp/>=<sp/><ref refid="classoscit_1_1_location_1ad45ea455be0e29925c30a4411ae9bef1" kindref="member">Location::name_from_ip</ref>(ip);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>rebuild_full_url();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="classoscit_1_1_url_1a5a6f71be6ff331060c8d2f43ebfbc647" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_url_1a5a6f71be6ff331060c8d2f43ebfbc647" kindref="member">Url</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_location" kindref="compound">Location</ref><sp/>&amp;<ref refid="classoscit_1_1_url_1adec8cf47c3d35875f4c66a643f4b80b1" kindref="member">location</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<ref refid="classoscit_1_1_url_1ac7908bfecee5ccd65b165c96b31ae46f" kindref="member">path</ref>)<sp/>:<sp/>location_(location),<sp/>path_(path)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>rebuild_full_url();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="classoscit_1_1_url_1a18815d39576b943031ef1d004ecbe8bd" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_url_1a18815d39576b943031ef1d004ecbe8bd" kindref="member">Url</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_location" kindref="compound">Location</ref><sp/>*<ref refid="classoscit_1_1_url_1adec8cf47c3d35875f4c66a643f4b80b1" kindref="member">location</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<ref refid="classoscit_1_1_url_1ac7908bfecee5ccd65b165c96b31ae46f" kindref="member">path</ref>)<sp/>:<sp/>path_(path)<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(location)<sp/>location_<sp/>=<sp/>*location;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>rebuild_full_url();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="classoscit_1_1_url_1ae1edd9ec3f21cd6bd89a9a9f100d51aa" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_url_1ae1edd9ec3f21cd6bd89a9a9f100d51aa" kindref="member">Url</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>parse(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">.c_str());</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="classoscit_1_1_url_1a0012093a42693e5f8efef6ea7734b99f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_url_1a0012093a42693e5f8efef6ea7734b99f" kindref="member">Url</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>parse(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="classoscit_1_1_url_1aac0eb11d82bc4001b3ae8a33954b68d0" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_url_1aac0eb11d82bc4001b3ae8a33954b68d0" kindref="member">Url</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="classoscit_1_1_url_1a58ec08a5d6f9a243921f99b9e6e2944a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<ref refid="classoscit_1_1_url_1a58ec08a5d6f9a243921f99b9e6e2944a" kindref="member">str</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>full_url_;<sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="classoscit_1_1_url_1adec8cf47c3d35875f4c66a643f4b80b1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_location" kindref="compound">Location</ref><sp/>&amp;<ref refid="classoscit_1_1_url_1adec8cf47c3d35875f4c66a643f4b80b1" kindref="member">location</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>location_;<sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="classoscit_1_1_url_1a33ad34359b5b2b106b38f6f5fabed9c9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<ref refid="classoscit_1_1_url_1a33ad34359b5b2b106b38f6f5fabed9c9" kindref="member">protocol</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>location_.protocol_;<sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="classoscit_1_1_url_1ac74e23f7360f0f375e3f4d38498da817" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_url_1ac74e23f7360f0f375e3f4d38498da817" kindref="member">has_hostname</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>location_.reference_by_hostname_;<sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="classoscit_1_1_url_1a37e56d2124f6192529914190470883af" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_url_1a37e56d2124f6192529914190470883af" kindref="member">has_service_name</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!location_.reference_by_hostname_;<sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="classoscit_1_1_url_1a8a8b11eef17ec828e7d06f3731e9c8eb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_url_1a8a8b11eef17ec828e7d06f3731e9c8eb" kindref="member">is_meta</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>path_.compare(0,<sp/>2,<sp/></highlight><highlight class="stringliteral">&quot;/.&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="classoscit_1_1_url_1a9799462b2b31543b3af728beb4704729" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_url_1a9799462b2b31543b3af728beb4704729" kindref="member">is_meta</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;url)<sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>url.compare(0,<sp/>2,<sp/></highlight><highlight class="stringliteral">&quot;/.&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="classoscit_1_1_url_1ad4a0f97238a10f53ceecb7c35994ebae" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<ref refid="classoscit_1_1_url_1ad4a0f97238a10f53ceecb7c35994ebae" kindref="member">hostname</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>location_.name_;<sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="classoscit_1_1_url_1a6ef369d11809f23c8f23f8a6aecd27d8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<ref refid="classoscit_1_1_url_1a6ef369d11809f23c8f23f8a6aecd27d8" kindref="member">service_name</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>location_.name_;<sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="classoscit_1_1_url_1a4203eaae9268a6ce2d419fbc62b3b1dc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_url_1a4203eaae9268a6ce2d419fbc62b3b1dc" kindref="member">resolve_with</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_zero_conf_browser" kindref="compound">ZeroConfBrowser</ref><sp/>*browser)<sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>location_.<ref refid="classoscit_1_1_location_1ab89b6362661377b7e268b5bbc754da8b" kindref="member">resolve_with</ref>(browser);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="classoscit_1_1_url_1a29ad8ca1bc7f72b1d144a371b194fddf" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_url_1a29ad8ca1bc7f72b1d144a371b194fddf" kindref="member">ip</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>location_.ip_;<sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="classoscit_1_1_url_1a42ef206080f4fd7b0e2271f324de0645" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref><sp/><ref refid="classoscit_1_1_url_1a42ef206080f4fd7b0e2271f324de0645" kindref="member">port</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>location_.port_;<sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="classoscit_1_1_url_1ac7908bfecee5ccd65b165c96b31ae46f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<ref refid="classoscit_1_1_url_1ac7908bfecee5ccd65b165c96b31ae46f" kindref="member">path</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>path_;<sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="classoscit_1_1_url_1a9ace4daf275f01ad0e2414bbaab4eb12" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classoscit_1_1_url_1a9ace4daf275f01ad0e2414bbaab4eb12" kindref="member">name</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>pos<sp/>=<sp/>path_.rfind(</highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pos<sp/>!=<sp/>std::string::npos)<sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>path_.substr(pos<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>path_;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="classoscit_1_1_url_1ad24e6c2835e838aa82e49d5a31e5f22c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_url_1ad24e6c2835e838aa82e49d5a31e5f22c" kindref="member">get_parent_url</ref>(<ref refid="classoscit_1_1_url" kindref="compound">Url</ref><sp/>*parent_url)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>pos<sp/>=<sp/>path_.rfind(</highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pos<sp/>!=<sp/>std::string::npos)<sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>parent_url-&gt;location_<sp/>=<sp/>location_;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>parent_url-&gt;path_<sp/>=<sp/>path_.substr(0,<sp/>pos);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>parent_url-&gt;rebuild_full_url();</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143" refid="classoscit_1_1_url_1a5567cb4d27962ac3ecfa9d117dda8fc9" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_url" kindref="compound">Url</ref><sp/>&amp;</highlight><highlight class="keyword">set</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classoscit_1_1_url_1a58ec08a5d6f9a243921f99b9e6e2944a" kindref="member">str</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>clear();</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>parse(<ref refid="classoscit_1_1_url_1a58ec08a5d6f9a243921f99b9e6e2944a" kindref="member">str</ref>);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="classoscit_1_1_url_1ae1715bfe5b9d646fac725b725e2695de" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<ref refid="classoscit_1_1_url_1a58ec08a5d6f9a243921f99b9e6e2944a" kindref="member">str</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>clear();</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>parse(<ref refid="classoscit_1_1_url_1a58ec08a5d6f9a243921f99b9e6e2944a" kindref="member">str</ref>.c_str());</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154" refid="classoscit_1_1_url_1af4f971609c195b29a60aff863f8b69e9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_url_1af4f971609c195b29a60aff863f8b69e9" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_url" kindref="compound">Url</ref><sp/>&amp;other)<sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>full_url_<sp/>==<sp/>other.full_url_;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>std::ostream<sp/>&amp;<ref refid="classoscit_1_1_url_1a2791c6caa2aec4c32d0beb6d285ac447" kindref="member">operator&lt;&lt;</ref>(std::ostream<sp/>&amp;out_stream,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_url" kindref="compound">Url</ref><sp/>&amp;url);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>parse(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>rebuild_full_url();</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>clear()<sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>location_.<ref refid="classoscit_1_1_location_1a173d42d2d14c5a4578dbfabdef5254ab" kindref="member">clear</ref>();</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>path_<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/>std::string<sp/>full_url_;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/>Location<sp/>location_;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/>std::string<sp/>path_;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal">std::ostream<sp/>&amp;<ref refid="namespaceoscit_1a7f56d4a4601e20f9486271dd95cea4c5" kindref="member">operator&lt;&lt;</ref>(std::ostream<sp/>&amp;out_stream,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Url<sp/>&amp;url);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>oscit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>OSCIT_INCLUDE_OSCIT_URL_H_</highlight></codeline>
+    </programlisting>
+    <location file="/Users/gaspard/git/oscit/include/oscit/url.h"/>
+  </compounddef>
+</doxygen>

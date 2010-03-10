@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classoscit_1_1_r_w_mutex" kind="class" prot="public">
+    <compoundname>oscit::RWMutex</compoundname>
+    <derivedcompoundref refid="classoscit_1_1_c_t_hash" prot="public" virt="non-virtual">oscit::CTHash&lt; std::string, CallbackList * &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_c_t_hash" prot="public" virt="non-virtual">oscit::CTHash&lt; std::string, Object * &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_c_t_list" prot="public" virt="non-virtual">oscit::CTList&lt; Command * &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_c_t_vector" prot="public" virt="non-virtual">oscit::CTVector&lt; Object * &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_c_t_hash" prot="public" virt="non-virtual">oscit::CTHash&lt; K, T &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_c_t_list" prot="public" virt="non-virtual">oscit::CTList&lt; T &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_c_t_vector" prot="public" virt="non-virtual">oscit::CTVector&lt; T &gt;</derivedcompoundref>
+    <includes refid="rw__mutex_8h" local="no">rw_mutex.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classoscit_1_1_r_w_mutex_1acacd6ae19df1fcec036a3fcfe059424d" prot="private" static="no" mutable="yes">
+        <type>pthread_rwlock_t</type>
+        <definition>pthread_rwlock_t oscit::RWMutex::rwlock_</definition>
+        <argsstring></argsstring>
+        <name>rwlock_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pthread readers-writer lock. We need to make it mutable so that we can access it from const &apos;read_unlock&apos;. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="110" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classoscit_1_1_r_w_mutex_1aa1110a616ea1cdee191912e2e136e45a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::RWMutex::RWMutex</definition>
+        <argsstring>()</argsstring>
+        <name>RWMutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="68" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="68" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_r_w_mutex_1a1fbdf80ace36018183196f92a2193ceb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::RWMutex::~RWMutex</definition>
+        <argsstring>()</argsstring>
+        <name>~RWMutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="75" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="75" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_r_w_mutex_1ac549bb3340bac6726bce2863f80a240e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::RWMutex::lock</definition>
+        <argsstring>()</argsstring>
+        <name>lock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gain exclusive access to resource (write). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="84" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="84" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_r_w_mutex_1ae74be65c4bbcc16313b5ca56d17db947" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::RWMutex::unlock</definition>
+        <argsstring>()</argsstring>
+        <name>unlock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Release exclusive access to resource. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="90" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="90" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_r_w_mutex_1a672d9bfefbc1839d9e196e90a1963f39" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::RWMutex::read_lock</definition>
+        <argsstring>() const </argsstring>
+        <name>read_lock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gain read-only access to resource. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="96" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="96" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_r_w_mutex_1a97010c1b513da70f8c1c9e671529abb0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::RWMutex::read_unlock</definition>
+        <argsstring>() const </argsstring>
+        <name>read_unlock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Release read-only access to resource. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="102" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="102" bodyend="105"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class implements a read/write mutex. It should be used when there are many more reads then writes, otherwize a normal mutex is faster. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1226">
+        <label>oscit::CTHash&lt; std::string, CallbackList * &gt;</label>
+        <link refid="classoscit_1_1_c_t_hash"/>
+        <childnode refid="1225" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1232">
+        <label>oscit::CTVector&lt; T &gt;</label>
+        <link refid="classoscit_1_1_c_t_vector"/>
+        <childnode refid="1225" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1231">
+        <label>oscit::CTList&lt; T &gt;</label>
+        <link refid="classoscit_1_1_c_t_list"/>
+        <childnode refid="1225" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1228">
+        <label>oscit::CTList&lt; Command * &gt;</label>
+        <link refid="classoscit_1_1_c_t_list"/>
+        <childnode refid="1225" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1227">
+        <label>oscit::CTHash&lt; std::string, Object * &gt;</label>
+        <link refid="classoscit_1_1_c_t_hash"/>
+        <childnode refid="1225" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1230">
+        <label>oscit::CTHash&lt; K, T &gt;</label>
+        <link refid="classoscit_1_1_c_t_hash"/>
+        <childnode refid="1225" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1229">
+        <label>oscit::CTVector&lt; Object * &gt;</label>
+        <link refid="classoscit_1_1_c_t_vector"/>
+        <childnode refid="1225" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1225">
+        <label>oscit::RWMutex</label>
+        <link refid="classoscit_1_1_r_w_mutex"/>
+      </node>
+    </inheritancegraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="66" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="66" bodyend="111"/>
+    <listofallmembers>
+      <member refid="classoscit_1_1_r_w_mutex_1ac549bb3340bac6726bce2863f80a240e" prot="public" virt="non-virtual"><scope>oscit::RWMutex</scope><name>lock</name></member>
+      <member refid="classoscit_1_1_r_w_mutex_1a672d9bfefbc1839d9e196e90a1963f39" prot="public" virt="non-virtual"><scope>oscit::RWMutex</scope><name>read_lock</name></member>
+      <member refid="classoscit_1_1_r_w_mutex_1a97010c1b513da70f8c1c9e671529abb0" prot="public" virt="non-virtual"><scope>oscit::RWMutex</scope><name>read_unlock</name></member>
+      <member refid="classoscit_1_1_r_w_mutex_1acacd6ae19df1fcec036a3fcfe059424d" prot="private" virt="non-virtual"><scope>oscit::RWMutex</scope><name>rwlock_</name></member>
+      <member refid="classoscit_1_1_r_w_mutex_1aa1110a616ea1cdee191912e2e136e45a" prot="public" virt="non-virtual"><scope>oscit::RWMutex</scope><name>RWMutex</name></member>
+      <member refid="classoscit_1_1_r_w_mutex_1ae74be65c4bbcc16313b5ca56d17db947" prot="public" virt="non-virtual"><scope>oscit::RWMutex</scope><name>unlock</name></member>
+      <member refid="classoscit_1_1_r_w_mutex_1a1fbdf80ace36018183196f92a2193ceb" prot="public" virt="non-virtual"><scope>oscit::RWMutex</scope><name>~RWMutex</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

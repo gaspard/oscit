@@ -1,0 +1,259 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classoscit_1_1_callback" kind="class" prot="public">
+    <compoundname>oscit::Callback</compoundname>
+    <derivedcompoundref refid="classoscit_1_1_callback_to_delete" prot="public" virt="non-virtual">oscit::CallbackToDelete</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_t_callback" prot="public" virt="non-virtual">oscit::TCallback&lt; T, Tmethod &gt;</derivedcompoundref>
+    <includes refid="callback_8h" local="no">callback.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classoscit_1_1_callback_1a1bc1613ca5d6d0e8b2fbce5ef15dd38f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class Observer</definition>
+        <argsstring></argsstring>
+        <name>Observer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/callback.h" line="74" bodyfile="/Users/gaspard/git/oscit/include/oscit/callback.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classoscit_1_1_callback_1acfa3c77559048daef19189c2648c6b38" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class CallbackToDelete</definition>
+        <argsstring></argsstring>
+        <name>CallbackToDelete</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/callback.h" line="88" bodyfile="/Users/gaspard/git/oscit/include/oscit/callback.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classoscit_1_1_callback_1a39d8ef3ba248e273ae695600fc2f2b5c" prot="protected" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_observer" kindref="compound">Observer</ref> *</type>
+        <definition>Observer* oscit::Callback::observer_</definition>
+        <argsstring></argsstring>
+        <name>observer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pointer to the observer so we can reach it&apos;s on_destroy notification list. The observer&apos;s on_destroy list is used to invalidate registered callback for the observer. If this callback is destroyed before the observer, we must remove it from the list. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/callback.h" line="81" bodyfile="/Users/gaspard/git/oscit/include/oscit/callback.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_callback_1a230e5c937c78ee10f7aae5c86d73bafa" prot="protected" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* oscit::Callback::data_</definition>
+        <argsstring></argsstring>
+        <name>data_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Any data that will be passed back to the caller. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/callback.h" line="85" bodyfile="/Users/gaspard/git/oscit/include/oscit/callback.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classoscit_1_1_callback_1a078be91b0006afc40b25acb95865ef40" prot="private" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_callback_list" kindref="compound">CallbackList</ref> *</type>
+        <definition>CallbackList* oscit::Callback::callback_list_</definition>
+        <argsstring></argsstring>
+        <name>callback_list_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The <ref refid="classoscit_1_1_callback_list" kindref="compound">CallbackList</ref> containing this <ref refid="classoscit_1_1_callback" kindref="compound">Callback</ref>. We need a pointer to the list in order to remove the on_destroy callback reference in the observer. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/callback.h" line="97" bodyfile="/Users/gaspard/git/oscit/include/oscit/callback.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classoscit_1_1_callback_1a87da41d5bec2b68723eb72c0e48921f3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Callback::Callback</definition>
+        <argsstring>(Observer *observer, void *data)</argsstring>
+        <name>Callback</name>
+        <param>
+          <type><ref refid="classoscit_1_1_observer" kindref="compound">Observer</ref> *</type>
+          <declname>observer</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/callback.h" line="55" bodyfile="/Users/gaspard/git/oscit/include/oscit/callback.h" bodystart="52" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_callback_1a1081856cd6050825541383364a4484f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual oscit::Callback::~Callback</definition>
+        <argsstring>()</argsstring>
+        <name>~Callback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/callback.h" line="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_callback_1a806fe8ec0816517eea1ef29563b2f7ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Callback::set_list</definition>
+        <argsstring>(CallbackList *list)</argsstring>
+        <name>set_list</name>
+        <param>
+          <type><ref refid="classoscit_1_1_callback_list" kindref="compound">CallbackList</ref> *</type>
+          <declname>list</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The callback has been inserted in a <ref refid="classoscit_1_1_callback_list" kindref="compound">CallbackList</ref>, we can install the on_destroy notification in the observer. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/callback.h" line="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_callback_1a5ee6cee97f4bef726e9d18dce77f87ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classoscit_1_1_observer" kindref="compound">Observer</ref> *</type>
+        <definition>Observer* oscit::Callback::observer</definition>
+        <argsstring>()</argsstring>
+        <name>observer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/callback.h" line="64" bodyfile="/Users/gaspard/git/oscit/include/oscit/callback.h" bodystart="64" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_callback_1a85eae4755a7f03099aa8c8ff32c49a8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void oscit::Callback::trigger</definition>
+        <argsstring>()=0</argsstring>
+        <name>trigger</name>
+        <reimplementedby refid="classoscit_1_1_callback_to_delete_1aa8205bc5cbc09746c08979a57c4d36db">trigger</reimplementedby>
+        <reimplementedby refid="classoscit_1_1_t_callback_1ab6cb5a4b30fd2e938251c4cf71b3a390">trigger</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/callback.h" line="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_callback_1a269c76b64d4bb87750142af1158d5792" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool oscit::Callback::match_data</definition>
+        <argsstring>(void *data)</argsstring>
+        <name>match_data</name>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/callback.h" line="70" bodyfile="/Users/gaspard/git/oscit/include/oscit/callback.h" bodystart="70" bodyend="72"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classoscit_1_1_callback_1ad032434401be109e737fd50990541083" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Callback::cleanup_on_destruction</definition>
+        <argsstring>()</argsstring>
+        <name>cleanup_on_destruction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method removes the &apos;on_destroy&apos; callback in the observer. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/callback.h" line="92"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classoscit_1_1_callback" kindref="compound">Callback</ref> class holds a pointer to the target of the callback and a method (eventually with parameters) to call the target back.</para><para>The class should be used in conjonction with the <ref refid="classoscit_1_1_callback_list" kindref="compound">CallbackList</ref> so that the <ref refid="classoscit_1_1_callback" kindref="compound">Callback</ref> is removed from the <ref refid="classoscit_1_1_callback_list" kindref="compound">CallbackList</ref> if it&apos;s target pointer becomes invalid. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="51">
+        <label>oscit::Callback</label>
+        <link refid="classoscit_1_1_callback"/>
+      </node>
+      <node id="53">
+        <label>oscit::TCallback&lt; T, Tmethod &gt;</label>
+        <link refid="classoscit_1_1_t_callback"/>
+        <childnode refid="51" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>oscit::CallbackToDelete</label>
+        <link refid="classoscit_1_1_callback_to_delete"/>
+        <childnode refid="51" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="56">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+      <node id="54">
+        <label>oscit::Callback</label>
+        <link refid="classoscit_1_1_callback"/>
+        <childnode refid="55" relation="usage">
+          <edgelabel>callback_list_</edgelabel>
+        </childnode>
+        <childnode refid="57" relation="usage">
+          <edgelabel>observer_</edgelabel>
+        </childnode>
+      </node>
+      <node id="57">
+        <label>oscit::Observer</label>
+        <link refid="classoscit_1_1_observer"/>
+      </node>
+      <node id="55">
+        <label>oscit::CallbackList</label>
+        <link refid="classoscit_1_1_callback_list"/>
+        <childnode refid="56" relation="private-inheritance">
+        </childnode>
+        <childnode refid="57" relation="usage">
+          <edgelabel>list_owner_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/callback.h" line="50" bodyfile="/Users/gaspard/git/oscit/include/oscit/callback.h" bodystart="50" bodyend="98"/>
+    <listofallmembers>
+      <member refid="classoscit_1_1_callback_1a87da41d5bec2b68723eb72c0e48921f3" prot="public" virt="non-virtual"><scope>oscit::Callback</scope><name>Callback</name></member>
+      <member refid="classoscit_1_1_callback_1a078be91b0006afc40b25acb95865ef40" prot="private" virt="non-virtual"><scope>oscit::Callback</scope><name>callback_list_</name></member>
+      <member refid="classoscit_1_1_callback_1acfa3c77559048daef19189c2648c6b38" prot="private" virt="non-virtual"><scope>oscit::Callback</scope><name>CallbackToDelete</name></member>
+      <member refid="classoscit_1_1_callback_1ad032434401be109e737fd50990541083" prot="private" virt="non-virtual"><scope>oscit::Callback</scope><name>cleanup_on_destruction</name></member>
+      <member refid="classoscit_1_1_callback_1a230e5c937c78ee10f7aae5c86d73bafa" prot="protected" virt="non-virtual"><scope>oscit::Callback</scope><name>data_</name></member>
+      <member refid="classoscit_1_1_callback_1a269c76b64d4bb87750142af1158d5792" prot="public" virt="non-virtual"><scope>oscit::Callback</scope><name>match_data</name></member>
+      <member refid="classoscit_1_1_callback_1a5ee6cee97f4bef726e9d18dce77f87ce" prot="public" virt="non-virtual"><scope>oscit::Callback</scope><name>observer</name></member>
+      <member refid="classoscit_1_1_callback_1a1bc1613ca5d6d0e8b2fbce5ef15dd38f" prot="protected" virt="non-virtual"><scope>oscit::Callback</scope><name>Observer</name></member>
+      <member refid="classoscit_1_1_callback_1a39d8ef3ba248e273ae695600fc2f2b5c" prot="protected" virt="non-virtual"><scope>oscit::Callback</scope><name>observer_</name></member>
+      <member refid="classoscit_1_1_callback_1a806fe8ec0816517eea1ef29563b2f7ba" prot="public" virt="non-virtual"><scope>oscit::Callback</scope><name>set_list</name></member>
+      <member refid="classoscit_1_1_callback_1a85eae4755a7f03099aa8c8ff32c49a8e" prot="public" virt="pure-virtual"><scope>oscit::Callback</scope><name>trigger</name></member>
+      <member refid="classoscit_1_1_callback_1a1081856cd6050825541383364a4484f5" prot="public" virt="virtual"><scope>oscit::Callback</scope><name>~Callback</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

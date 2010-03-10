@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="structoscit_1_1_mapper_1_1_map_element" kind="struct" prot="private">
+    <compoundname>oscit::Mapper::MapElement</compoundname>
+    <basecompoundref refid="classoscit_1_1_scale_real" prot="public" virt="non-virtual">oscit::ScaleReal</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structoscit_1_1_mapper_1_1_map_element_1ad6a5e0645305bee7ef85bae6b34600b5" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string oscit::Mapper::MapElement::target_url_</definition>
+        <argsstring></argsstring>
+        <name>target_url_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/mapper.h" line="79" bodyfile="/Users/gaspard/git/oscit/include/oscit/mapper.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structoscit_1_1_mapper_1_1_map_element_1ad15e8dad5a4593803f36d07d0f68bab0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Mapper::MapElement::MapElement</definition>
+        <argsstring>(const std::string &amp;target_url, Real source_min, Real source_max, Real target_min, Real target_max)</argsstring>
+        <name>MapElement</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>target_url</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref></type>
+          <declname>source_min</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref></type>
+          <declname>source_max</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref></type>
+          <declname>target_min</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref></type>
+          <declname>target_max</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/mapper.h" line="72" bodyfile="/Users/gaspard/git/oscit/include/oscit/mapper.h" bodystart="71" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="structoscit_1_1_mapper_1_1_map_element_1a21915303648a27ccbf648ea7e1eb40ad" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string&amp; oscit::Mapper::MapElement::target_url</definition>
+        <argsstring>() const </argsstring>
+        <name>target_url</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/mapper.h" line="74" bodyfile="/Users/gaspard/git/oscit/include/oscit/mapper.h" bodystart="74" bodyend="76"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="567">
+        <label>oscit::ScaleReal</label>
+        <link refid="classoscit_1_1_scale_real"/>
+      </node>
+      <node id="566">
+        <label>oscit::Mapper::MapElement</label>
+        <childnode refid="567" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="569">
+        <label>oscit::ScaleReal</label>
+        <link refid="classoscit_1_1_scale_real"/>
+      </node>
+      <node id="568">
+        <label>oscit::Mapper::MapElement</label>
+        <childnode refid="569" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/mapper.h" line="69" bodyfile="/Users/gaspard/git/oscit/include/oscit/mapper.h" bodystart="69" bodyend="80"/>
+    <listofallmembers>
+      <member refid="structoscit_1_1_mapper_1_1_map_element_1ad15e8dad5a4593803f36d07d0f68bab0" prot="public" virt="non-virtual"><scope>oscit::Mapper::MapElement</scope><name>MapElement</name></member>
+      <member refid="classoscit_1_1_scale_real_1a224e99b1ee6d9e064e0ac37e4159623a" prot="public" virt="non-virtual"><scope>oscit::Mapper::MapElement</scope><name>scale</name></member>
+      <member refid="classoscit_1_1_scale_real_1a659515f8a3aa4456ec57f37c896fc918" prot="public" virt="non-virtual"><scope>oscit::Mapper::MapElement</scope><name>ScaleReal</name></member>
+      <member refid="structoscit_1_1_mapper_1_1_map_element_1a21915303648a27ccbf648ea7e1eb40ad" prot="public" virt="non-virtual"><scope>oscit::Mapper::MapElement</scope><name>target_url</name></member>
+      <member refid="structoscit_1_1_mapper_1_1_map_element_1ad6a5e0645305bee7ef85bae6b34600b5" prot="private" virt="non-virtual"><scope>oscit::Mapper::MapElement</scope><name>target_url_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

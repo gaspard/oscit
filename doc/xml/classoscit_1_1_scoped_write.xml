@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classoscit_1_1_scoped_write" kind="class" prot="public">
+    <compoundname>oscit::ScopedWrite</compoundname>
+    <basecompoundref refid="classoscit_1_1_non_copyable" prot="private" virt="non-virtual">oscit::NonCopyable</basecompoundref>
+    <includes refid="rw__mutex_8h" local="no">rw_mutex.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classoscit_1_1_scoped_write_1a7d3105731e07f38f5224e5749cf48104" prot="private" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_r_w_mutex" kindref="compound">RWMutex</ref> *</type>
+        <definition>RWMutex* oscit::ScopedWrite::mutex_ptr_</definition>
+        <argsstring></argsstring>
+        <name>mutex_ptr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="175" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classoscit_1_1_scoped_write_1ac9c9ee62680aaa4ee0a18d26a4dd6825" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::ScopedWrite::ScopedWrite</definition>
+        <argsstring>(RWMutex *mutex)</argsstring>
+        <name>ScopedWrite</name>
+        <param>
+          <type><ref refid="classoscit_1_1_r_w_mutex" kindref="compound">RWMutex</ref> *</type>
+          <declname>mutex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="162" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="162" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_scoped_write_1adb0be76704f1612526aa47decd86decf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::ScopedWrite::ScopedWrite</definition>
+        <argsstring>(RWMutex &amp;mutex)</argsstring>
+        <name>ScopedWrite</name>
+        <param>
+          <type><ref refid="classoscit_1_1_r_w_mutex" kindref="compound">RWMutex</ref> &amp;</type>
+          <declname>mutex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="166" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="166" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_scoped_write_1af206668d7987b5e01ffe9fbe25889f6b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::ScopedWrite::~ScopedWrite</definition>
+        <argsstring>()</argsstring>
+        <name>~ScopedWrite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="170" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="170" bodyend="172"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Scoped <ref refid="classoscit_1_1_r_w_mutex" kindref="compound">RWMutex</ref> Lock for exclusive access to a resource. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1260">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+      <node id="1259">
+        <label>oscit::ScopedWrite</label>
+        <link refid="classoscit_1_1_scoped_write"/>
+        <childnode refid="1260" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1262">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+      <node id="1261">
+        <label>oscit::ScopedWrite</label>
+        <link refid="classoscit_1_1_scoped_write"/>
+        <childnode refid="1262" relation="private-inheritance">
+        </childnode>
+        <childnode refid="1263" relation="usage">
+          <edgelabel>mutex_ptr_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1263">
+        <label>oscit::RWMutex</label>
+        <link refid="classoscit_1_1_r_w_mutex"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="160" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="160" bodyend="176"/>
+    <listofallmembers>
+      <member refid="classoscit_1_1_scoped_write_1a7d3105731e07f38f5224e5749cf48104" prot="private" virt="non-virtual"><scope>oscit::ScopedWrite</scope><name>mutex_ptr_</name></member>
+      <member refid="classoscit_1_1_non_copyable_1a1f0c0fedea54b6e20aeefbeefdce67f7" prot="private" virt="non-virtual"><scope>oscit::ScopedWrite</scope><name>NonCopyable</name></member>
+      <member refid="classoscit_1_1_scoped_write_1ac9c9ee62680aaa4ee0a18d26a4dd6825" prot="public" virt="non-virtual"><scope>oscit::ScopedWrite</scope><name>ScopedWrite</name></member>
+      <member refid="classoscit_1_1_scoped_write_1adb0be76704f1612526aa47decd86decf" prot="public" virt="non-virtual"><scope>oscit::ScopedWrite</scope><name>ScopedWrite</name></member>
+      <member refid="classoscit_1_1_non_copyable_1ad21ed15dea6d4700732a2cbc7f98e20a" prot="private" virt="non-virtual"><scope>oscit::ScopedWrite</scope><name>~NonCopyable</name></member>
+      <member refid="classoscit_1_1_scoped_write_1af206668d7987b5e01ffe9fbe25889f6b" prot="public" virt="non-virtual"><scope>oscit::ScopedWrite</scope><name>~ScopedWrite</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

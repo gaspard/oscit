@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="structoscit_1_1_call" kind="struct" prot="public">
+    <compoundname>oscit::Call</compoundname>
+    <includes refid="call_8h" local="no">call.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structoscit_1_1_call_1a02be914bb55b295f17cccfcb1816822a" prot="public" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_url" kindref="compound">Url</ref></type>
+        <definition>Url oscit::Call::url_</definition>
+        <argsstring></argsstring>
+        <name>url_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/call.h" line="47" bodyfile="/Users/gaspard/git/oscit/include/oscit/call.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structoscit_1_1_call_1a474d8450b801327bcaa751e420e3f717" prot="public" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>Value oscit::Call::param_</definition>
+        <argsstring></argsstring>
+        <name>param_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/call.h" line="48" bodyfile="/Users/gaspard/git/oscit/include/oscit/call.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structoscit_1_1_call_1ab59869747b5b2302371dd99f6d516d61" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Call::Call</definition>
+        <argsstring>(const std::string &amp;url, const Value &amp;param)</argsstring>
+        <name>Call</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>url</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/call.h" line="39" bodyfile="/Users/gaspard/git/oscit/include/oscit/call.h" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="structoscit_1_1_call_1a6cf686bcda7d8098170d10061a9509a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Call::Call</definition>
+        <argsstring>(const char *url, const Value &amp;param)</argsstring>
+        <name>Call</name>
+        <param>
+          <type>const char *</type>
+          <declname>url</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/call.h" line="40" bodyfile="/Users/gaspard/git/oscit/include/oscit/call.h" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="structoscit_1_1_call_1a4a5cc1e198dfc6386a39dea6087f60a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Call::Call</definition>
+        <argsstring>(const Url &amp;url, const Value &amp;param)</argsstring>
+        <name>Call</name>
+        <param>
+          <type>const <ref refid="classoscit_1_1_url" kindref="compound">Url</ref> &amp;</type>
+          <declname>url</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/call.h" line="41" bodyfile="/Users/gaspard/git/oscit/include/oscit/call.h" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="structoscit_1_1_call_1a0b8712392b1411c3d9ff676c5d9936e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>const Value oscit::Call::trigger_call</definition>
+        <argsstring>(Root *root)</argsstring>
+        <name>trigger_call</name>
+        <param>
+          <type><ref refid="classoscit_1_1_root" kindref="compound">Root</ref> *</type>
+          <declname>root</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/call.h" line="43" bodyfile="/Users/gaspard/git/oscit/include/oscit/call.h" bodystart="43" bodyend="45"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This is a simple struct to store a call (url and parameter). </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="45">
+        <label>Matrix</label>
+        <link refid="class_matrix"/>
+      </node>
+      <node id="44">
+        <label>oscit::List</label>
+        <link refid="classoscit_1_1_list"/>
+        <childnode refid="41" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>oscit::Value</label>
+        <link refid="classoscit_1_1_value"/>
+        <childnode refid="40" relation="usage">
+          <edgelabel>midi_message_</edgelabel>
+        </childnode>
+        <childnode refid="42" relation="usage">
+          <edgelabel>string_</edgelabel>
+        </childnode>
+        <childnode refid="43" relation="usage">
+          <edgelabel>error_</edgelabel>
+        </childnode>
+        <childnode refid="44" relation="usage">
+          <edgelabel>list_</edgelabel>
+        </childnode>
+        <childnode refid="45" relation="usage">
+          <edgelabel>matrix_</edgelabel>
+        </childnode>
+        <childnode refid="46" relation="usage">
+          <edgelabel>hash_</edgelabel>
+        </childnode>
+      </node>
+      <node id="40">
+        <label>oscit::MidiMessage</label>
+        <link refid="classoscit_1_1_midi_message"/>
+        <childnode refid="41" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>oscit::THashElement&lt; std::string, Value &gt;</label>
+        <link refid="structoscit_1_1_t_hash_element"/>
+        <childnode refid="48" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="39" relation="usage">
+          <edgelabel>obj</edgelabel>
+        </childnode>
+      </node>
+      <node id="38">
+        <label>oscit::Call</label>
+        <link refid="structoscit_1_1_call"/>
+        <childnode refid="39" relation="usage">
+          <edgelabel>param_</edgelabel>
+        </childnode>
+        <childnode refid="49" relation="usage">
+          <edgelabel>url_</edgelabel>
+        </childnode>
+      </node>
+      <node id="43">
+        <label>oscit::Error</label>
+        <link refid="classoscit_1_1_error"/>
+        <childnode refid="41" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>oscit::THash&lt; std::string, Value &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+        <childnode refid="48" relation="usage">
+          <edgelabel>thash_table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="50">
+        <label>oscit::Location</label>
+        <link refid="classoscit_1_1_location"/>
+      </node>
+      <node id="46">
+        <label>oscit::Hash</label>
+        <link refid="classoscit_1_1_hash"/>
+        <childnode refid="41" relation="public-inheritance">
+        </childnode>
+        <childnode refid="47" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>oscit::ReferenceCounted</label>
+        <link refid="classoscit_1_1_reference_counted"/>
+      </node>
+      <node id="49">
+        <label>oscit::Url</label>
+        <link refid="classoscit_1_1_url"/>
+        <childnode refid="50" relation="usage">
+          <edgelabel>location_</edgelabel>
+        </childnode>
+      </node>
+      <node id="42">
+        <label>oscit::StringData</label>
+        <link refid="classoscit_1_1_string_data"/>
+        <childnode refid="41" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/call.h" line="38" bodyfile="/Users/gaspard/git/oscit/include/oscit/call.h" bodystart="38" bodyend="49"/>
+    <listofallmembers>
+      <member refid="structoscit_1_1_call_1ab59869747b5b2302371dd99f6d516d61" prot="public" virt="non-virtual"><scope>oscit::Call</scope><name>Call</name></member>
+      <member refid="structoscit_1_1_call_1a6cf686bcda7d8098170d10061a9509a9" prot="public" virt="non-virtual"><scope>oscit::Call</scope><name>Call</name></member>
+      <member refid="structoscit_1_1_call_1a4a5cc1e198dfc6386a39dea6087f60a9" prot="public" virt="non-virtual"><scope>oscit::Call</scope><name>Call</name></member>
+      <member refid="structoscit_1_1_call_1a474d8450b801327bcaa751e420e3f717" prot="public" virt="non-virtual"><scope>oscit::Call</scope><name>param_</name></member>
+      <member refid="structoscit_1_1_call_1a0b8712392b1411c3d9ff676c5d9936e0" prot="public" virt="non-virtual"><scope>oscit::Call</scope><name>trigger_call</name></member>
+      <member refid="structoscit_1_1_call_1a02be914bb55b295f17cccfcb1816822a" prot="public" virt="non-virtual"><scope>oscit::Call</scope><name>url_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

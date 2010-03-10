@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classoscit_1_1_scale_real" kind="class" prot="public">
+    <compoundname>oscit::ScaleReal</compoundname>
+    <derivedcompoundref refid="structoscit_1_1_mapper_1_1_map_element" prot="public" virt="non-virtual">oscit::Mapper::MapElement</derivedcompoundref>
+    <includes refid="scale__real_8h" local="no">scale_real.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classoscit_1_1_scale_real_1a361e30e62759c47c0f18d15ade48dfe6" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref></type>
+        <definition>Real oscit::ScaleReal::source_min_</definition>
+        <argsstring></argsstring>
+        <name>source_min_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/scale_real.h" line="54" bodyfile="/Users/gaspard/git/oscit/include/oscit/scale_real.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_scale_real_1a4fbd904bd960a20cd38867e8c3131ffa" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref></type>
+        <definition>Real oscit::ScaleReal::target_min_</definition>
+        <argsstring></argsstring>
+        <name>target_min_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/scale_real.h" line="55" bodyfile="/Users/gaspard/git/oscit/include/oscit/scale_real.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_scale_real_1a27a921aeb37b289c3729753a654cef95" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref></type>
+        <definition>Real oscit::ScaleReal::target_max_</definition>
+        <argsstring></argsstring>
+        <name>target_max_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/scale_real.h" line="56" bodyfile="/Users/gaspard/git/oscit/include/oscit/scale_real.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_scale_real_1a49fc6462353586850bf105be2a62a49d" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref></type>
+        <definition>Real oscit::ScaleReal::scale_</definition>
+        <argsstring></argsstring>
+        <name>scale_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/scale_real.h" line="57" bodyfile="/Users/gaspard/git/oscit/include/oscit/scale_real.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classoscit_1_1_scale_real_1a659515f8a3aa4456ec57f37c896fc918" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::ScaleReal::ScaleReal</definition>
+        <argsstring>(Real source_min, Real source_max, Real target_min, Real target_max)</argsstring>
+        <name>ScaleReal</name>
+        <param>
+          <type><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref></type>
+          <declname>source_min</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref></type>
+          <declname>source_max</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref></type>
+          <declname>target_min</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref></type>
+          <declname>target_max</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/scale_real.h" line="43" bodyfile="/Users/gaspard/git/oscit/include/oscit/scale_real.h" bodystart="41" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_scale_real_1a224e99b1ee6d9e064e0ac37e4159623a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref></type>
+        <definition>Real oscit::ScaleReal::scale</definition>
+        <argsstring>(Real source_value) const </argsstring>
+        <name>scale</name>
+        <param>
+          <type><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref></type>
+          <declname>source_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/scale_real.h" line="48" bodyfile="/Users/gaspard/git/oscit/include/oscit/scale_real.h" bodystart="48" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1234">
+        <label>oscit::ScaleReal</label>
+        <link refid="classoscit_1_1_scale_real"/>
+      </node>
+      <node id="1235">
+        <label>oscit::Mapper::MapElement</label>
+        <childnode refid="1234" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/scale_real.h" line="39" bodyfile="/Users/gaspard/git/oscit/include/oscit/scale_real.h" bodystart="39" bodyend="58"/>
+    <listofallmembers>
+      <member refid="classoscit_1_1_scale_real_1a224e99b1ee6d9e064e0ac37e4159623a" prot="public" virt="non-virtual"><scope>oscit::ScaleReal</scope><name>scale</name></member>
+      <member refid="classoscit_1_1_scale_real_1a49fc6462353586850bf105be2a62a49d" prot="private" virt="non-virtual"><scope>oscit::ScaleReal</scope><name>scale_</name></member>
+      <member refid="classoscit_1_1_scale_real_1a659515f8a3aa4456ec57f37c896fc918" prot="public" virt="non-virtual"><scope>oscit::ScaleReal</scope><name>ScaleReal</name></member>
+      <member refid="classoscit_1_1_scale_real_1a361e30e62759c47c0f18d15ade48dfe6" prot="private" virt="non-virtual"><scope>oscit::ScaleReal</scope><name>source_min_</name></member>
+      <member refid="classoscit_1_1_scale_real_1a27a921aeb37b289c3729753a654cef95" prot="private" virt="non-virtual"><scope>oscit::ScaleReal</scope><name>target_max_</name></member>
+      <member refid="classoscit_1_1_scale_real_1a4fbd904bd960a20cd38867e8c3131ffa" prot="private" virt="non-virtual"><scope>oscit::ScaleReal</scope><name>target_min_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

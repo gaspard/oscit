@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classoscit_1_1_observable" kind="class" prot="public">
+    <compoundname>oscit::Observable</compoundname>
+    <basecompoundref refid="classoscit_1_1_observer" prot="public" virt="non-virtual">oscit::Observer</basecompoundref>
+    <derivedcompoundref refid="classoscit_1_1_object" prot="public" virt="non-virtual">oscit::Object</derivedcompoundref>
+    <includes refid="observable_8h" local="no">observable.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classoscit_1_1_observable_1a59f92f8a3ca83fe9b345a584a599432b" prot="private" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_on_destroy_notifier" kindref="compound">OnDestroyNotifier</ref></type>
+        <definition>OnDestroyNotifier oscit::Observable::destruction_notifier_</definition>
+        <argsstring></argsstring>
+        <name>destruction_notifier_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classoscit_1_1_list" kindref="compound">List</ref> of callbacks to trigger on destruction. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/observable.h" line="56" bodyfile="/Users/gaspard/git/oscit/include/oscit/observable.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classoscit_1_1_observable_1add7ad7a51860b63b558685c950f2df63" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Observable::Observable</definition>
+        <argsstring>()</argsstring>
+        <name>Observable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/observable.h" line="47" bodyfile="/Users/gaspard/git/oscit/include/oscit/observable.h" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_observable_1af26c400580303db64255411c8378a5fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Observable::adopt_callback_on_destroy</definition>
+        <argsstring>(Callback *callback)</argsstring>
+        <name>adopt_callback_on_destroy</name>
+        <param>
+          <type><ref refid="classoscit_1_1_callback" kindref="compound">Callback</ref> *</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/observable.h" line="49" bodyfile="/Users/gaspard/git/oscit/include/oscit/observable.h" bodystart="49" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class should be used with the <ref refid="classoscit_1_1_observer" kindref="compound">Observer</ref> class. It holds a list of callbacks to trigger on destruction (to invalidate the references pointing to instances of this class). </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="858">
+        <label>oscit::OscRemoteObject</label>
+        <link refid="classoscit_1_1_osc_remote_object"/>
+        <childnode refid="845" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="859">
+        <label>oscit::Root</label>
+        <link refid="classoscit_1_1_root"/>
+        <childnode refid="845" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="848">
+        <label>oscit::ErrorMetaMethod</label>
+        <link refid="classoscit_1_1_error_meta_method"/>
+        <childnode refid="845" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="850">
+        <label>oscit::HashFileMethod</label>
+        <link refid="classoscit_1_1_hash_file_method"/>
+        <childnode refid="845" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="846">
+        <label>oscit::Alias</label>
+        <link refid="classoscit_1_1_alias"/>
+        <childnode refid="845" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="856">
+        <label>oscit::TMethod&lt; T, Tmethod &gt;</label>
+        <link refid="classoscit_1_1_t_method"/>
+        <childnode refid="855" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="855">
+        <label>oscit::Method</label>
+        <link refid="classoscit_1_1_method"/>
+        <childnode refid="845" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="863">
+        <label>oscit::TypeMetaMethod</label>
+        <link refid="classoscit_1_1_type_meta_method"/>
+        <childnode refid="845" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="852">
+        <label>oscit::ListMetaMethod</label>
+        <link refid="classoscit_1_1_list_meta_method"/>
+        <childnode refid="845" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="854">
+        <label>oscit::LogObject</label>
+        <link refid="classoscit_1_1_log_object"/>
+        <childnode refid="845" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="860">
+        <label>oscit::RootProxy</label>
+        <link refid="classoscit_1_1_root_proxy"/>
+        <childnode refid="859" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="843">
+        <label>oscit::Observable</label>
+        <link refid="classoscit_1_1_observable"/>
+        <childnode refid="844" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="851">
+        <label>oscit::InfoMetaMethod</label>
+        <link refid="classoscit_1_1_info_meta_method"/>
+        <childnode refid="845" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="862">
+        <label>oscit::TreeMetaMethod</label>
+        <link refid="classoscit_1_1_tree_meta_method"/>
+        <childnode refid="845" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="849">
+        <label>oscit::FileMethod</label>
+        <link refid="classoscit_1_1_file_method"/>
+        <childnode refid="845" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="844">
+        <label>oscit::Observer</label>
+        <link refid="classoscit_1_1_observer"/>
+      </node>
+      <node id="845">
+        <label>oscit::Object</label>
+        <link refid="classoscit_1_1_object"/>
+        <childnode refid="843" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="853">
+        <label>oscit::ListWithTypeMetaMethod</label>
+        <link refid="classoscit_1_1_list_with_type_meta_method"/>
+        <childnode refid="845" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="857">
+        <label>oscit::ObjectProxy</label>
+        <link refid="classoscit_1_1_object_proxy"/>
+        <childnode refid="845" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="847">
+        <label>oscit::ClassMethod</label>
+        <link refid="classoscit_1_1_class_method"/>
+        <childnode refid="845" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="861">
+        <label>oscit::OscRootProxy</label>
+        <link refid="classoscit_1_1_osc_root_proxy"/>
+        <childnode refid="860" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="868">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+      <node id="864">
+        <label>oscit::Observable</label>
+        <link refid="classoscit_1_1_observable"/>
+        <childnode refid="865" relation="public-inheritance">
+        </childnode>
+        <childnode refid="866" relation="usage">
+          <edgelabel>destruction_notifier_</edgelabel>
+        </childnode>
+      </node>
+      <node id="866">
+        <label>oscit::OnDestroyNotifier</label>
+        <link refid="classoscit_1_1_on_destroy_notifier"/>
+        <childnode refid="867" relation="public-inheritance">
+        </childnode>
+        <childnode refid="867" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="865">
+        <label>oscit::Observer</label>
+        <link refid="classoscit_1_1_observer"/>
+      </node>
+      <node id="867">
+        <label>oscit::CallbackList</label>
+        <link refid="classoscit_1_1_callback_list"/>
+        <childnode refid="868" relation="private-inheritance">
+        </childnode>
+        <childnode refid="865" relation="usage">
+          <edgelabel>list_owner_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/observable.h" line="45" bodyfile="/Users/gaspard/git/oscit/include/oscit/observable.h" bodystart="45" bodyend="57"/>
+    <listofallmembers>
+      <member refid="classoscit_1_1_observable_1af26c400580303db64255411c8378a5fc" prot="public" virt="non-virtual"><scope>oscit::Observable</scope><name>adopt_callback_on_destroy</name></member>
+      <member refid="classoscit_1_1_observer_1a0460e53a6d44a9388dec23ff76ba83f2" prot="protected" virt="non-virtual"><scope>oscit::Observable</scope><name>delete_produced_callbacks_with_data</name></member>
+      <member refid="classoscit_1_1_observable_1a59f92f8a3ca83fe9b345a584a599432b" prot="private" virt="non-virtual"><scope>oscit::Observable</scope><name>destruction_notifier_</name></member>
+      <member refid="classoscit_1_1_observable_1add7ad7a51860b63b558685c950f2df63" prot="public" virt="non-virtual"><scope>oscit::Observable</scope><name>Observable</name></member>
+      <member refid="classoscit_1_1_observer_1a35b3c99a9cdaa3826aafae6a1d9f21fb" prot="public" virt="pure-virtual"><scope>oscit::Observable</scope><name>observer_lock</name></member>
+      <member refid="classoscit_1_1_observer_1a0c3ab3c1660ff92f0c9a26122718f2c8" prot="public" virt="pure-virtual"><scope>oscit::Observable</scope><name>observer_unlock</name></member>
+      <member refid="classoscit_1_1_observer_1ab856c4b8fac03abcb75fe3884a363a6b" prot="public" virt="non-virtual"><scope>oscit::Observable</scope><name>set_and_hold</name></member>
+      <member refid="classoscit_1_1_observer_1ac42ab921bb3a679a9abaf483f1559c00" prot="public" virt="virtual"><scope>oscit::Observable</scope><name>~Observer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

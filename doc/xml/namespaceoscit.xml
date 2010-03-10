@@ -1,0 +1,824 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="namespaceoscit" kind="namespace">
+    <compoundname>oscit</compoundname>
+    <innerclass refid="classoscit_1_1_alias" prot="public">oscit::Alias</innerclass>
+    <innerclass refid="classoscit_1_1_c_reference_counted" prot="public">oscit::CReferenceCounted</innerclass>
+    <innerclass refid="classoscit_1_1_scoped_retain" prot="public">oscit::ScopedRetain</innerclass>
+    <innerclass refid="classoscit_1_1_c_t_hash" prot="public">oscit::CTHash</innerclass>
+    <innerclass refid="classoscit_1_1_c_t_list" prot="public">oscit::CTList</innerclass>
+    <innerclass refid="classoscit_1_1_c_t_vector" prot="public">oscit::CTVector</innerclass>
+    <innerclass refid="structoscit_1_1_call" prot="public">oscit::Call</innerclass>
+    <innerclass refid="classoscit_1_1_callback" prot="public">oscit::Callback</innerclass>
+    <innerclass refid="classoscit_1_1_t_callback" prot="public">oscit::TCallback</innerclass>
+    <innerclass refid="classoscit_1_1_callback_to_delete" prot="public">oscit::CallbackToDelete</innerclass>
+    <innerclass refid="classoscit_1_1_callback_list" prot="public">oscit::CallbackList</innerclass>
+    <innerclass refid="classoscit_1_1_command" prot="public">oscit::Command</innerclass>
+    <innerclass refid="classoscit_1_1_error" prot="public">oscit::Error</innerclass>
+    <innerclass refid="classoscit_1_1_error_meta_method" prot="public">oscit::ErrorMetaMethod</innerclass>
+    <innerclass refid="classoscit_1_1_error_value" prot="public">oscit::ErrorValue</innerclass>
+    <innerclass refid="classoscit_1_1_file" prot="public">oscit::File</innerclass>
+    <innerclass refid="classoscit_1_1_file_method" prot="public">oscit::FileMethod</innerclass>
+    <innerclass refid="classoscit_1_1_hash" prot="public">oscit::Hash</innerclass>
+    <innerclass refid="classoscit_1_1_hash_file_method" prot="public">oscit::HashFileMethod</innerclass>
+    <innerclass refid="classoscit_1_1_hash_value" prot="public">oscit::HashValue</innerclass>
+    <innerclass refid="classoscit_1_1_info_meta_method" prot="public">oscit::InfoMetaMethod</innerclass>
+    <innerclass refid="classoscit_1_1_list" prot="public">oscit::List</innerclass>
+    <innerclass refid="classoscit_1_1_list_meta_method" prot="public">oscit::ListMetaMethod</innerclass>
+    <innerclass refid="classoscit_1_1_list_value" prot="public">oscit::ListValue</innerclass>
+    <innerclass refid="classoscit_1_1_list_with_type_meta_method" prot="public">oscit::ListWithTypeMetaMethod</innerclass>
+    <innerclass refid="classoscit_1_1_location" prot="public">oscit::Location</innerclass>
+    <innerclass refid="classoscit_1_1_log_object" prot="public">oscit::LogObject</innerclass>
+    <innerclass refid="classoscit_1_1_mapper" prot="public">oscit::Mapper</innerclass>
+    <innerclass refid="classoscit_1_1_matrix_value" prot="public">oscit::MatrixValue</innerclass>
+    <innerclass refid="classoscit_1_1_class_method" prot="public">oscit::ClassMethod</innerclass>
+    <innerclass refid="structoscit_1_1_method_prototype" prot="public">oscit::MethodPrototype</innerclass>
+    <innerclass refid="classoscit_1_1_method" prot="public">oscit::Method</innerclass>
+    <innerclass refid="classoscit_1_1_t_method" prot="public">oscit::TMethod</innerclass>
+    <innerclass refid="classoscit_1_1_midi_message" prot="public">oscit::MidiMessage</innerclass>
+    <innerclass refid="classoscit_1_1_midi_value" prot="public">oscit::MidiValue</innerclass>
+    <innerclass refid="classoscit_1_1_mutex" prot="public">oscit::Mutex</innerclass>
+    <innerclass refid="classoscit_1_1_scoped_lock" prot="public">oscit::ScopedLock</innerclass>
+    <innerclass refid="classoscit_1_1_scoped_unlock" prot="public">oscit::ScopedUnlock</innerclass>
+    <innerclass refid="classoscit_1_1_non_copyable" prot="public">oscit::NonCopyable</innerclass>
+    <innerclass refid="classoscit_1_1_object" prot="public">oscit::Object</innerclass>
+    <innerclass refid="classoscit_1_1_object_handle" prot="public">oscit::ObjectHandle</innerclass>
+    <innerclass refid="classoscit_1_1_object_proxy" prot="public">oscit::ObjectProxy</innerclass>
+    <innerclass refid="classoscit_1_1_observable" prot="public">oscit::Observable</innerclass>
+    <innerclass refid="classoscit_1_1_observer" prot="public">oscit::Observer</innerclass>
+    <innerclass refid="classoscit_1_1_on_destroy_notifier" prot="public">oscit::OnDestroyNotifier</innerclass>
+    <innerclass refid="classoscit_1_1_osc_command" prot="public">oscit::OscCommand</innerclass>
+    <innerclass refid="classoscit_1_1_osc_map_command" prot="public">oscit::OscMapCommand</innerclass>
+    <innerclass refid="classoscit_1_1_osc_remote_object" prot="public">oscit::OscRemoteObject</innerclass>
+    <innerclass refid="classoscit_1_1_osc_root_proxy" prot="public">oscit::OscRootProxy</innerclass>
+    <innerclass refid="classoscit_1_1_proxy_factory" prot="public">oscit::ProxyFactory</innerclass>
+    <innerclass refid="classoscit_1_1_real_value" prot="public">oscit::RealValue</innerclass>
+    <innerclass refid="classoscit_1_1_reference_counted" prot="public">oscit::ReferenceCounted</innerclass>
+    <innerclass refid="classoscit_1_1_root" prot="public">oscit::Root</innerclass>
+    <innerclass refid="classoscit_1_1_root_proxy" prot="public">oscit::RootProxy</innerclass>
+    <innerclass refid="classoscit_1_1_r_w_mutex" prot="public">oscit::RWMutex</innerclass>
+    <innerclass refid="classoscit_1_1_scoped_write" prot="public">oscit::ScopedWrite</innerclass>
+    <innerclass refid="classoscit_1_1_scoped_read" prot="public">oscit::ScopedRead</innerclass>
+    <innerclass refid="classoscit_1_1_scale_real" prot="public">oscit::ScaleReal</innerclass>
+    <innerclass refid="classoscit_1_1_script" prot="public">oscit::Script</innerclass>
+    <innerclass refid="classoscit_1_1_semaphore" prot="public">oscit::Semaphore</innerclass>
+    <innerclass refid="classoscit_1_1_string_data" prot="public">oscit::StringData</innerclass>
+    <innerclass refid="classoscit_1_1_string_value" prot="public">oscit::StringValue</innerclass>
+    <innerclass refid="structoscit_1_1_t_hash_element" prot="public">oscit::THashElement</innerclass>
+    <innerclass refid="classoscit_1_1_t_hash" prot="public">oscit::THash</innerclass>
+    <innerclass refid="classoscit_1_1_thread" prot="public">oscit::Thread</innerclass>
+    <innerclass refid="classoscit_1_1_time_ref" prot="public">oscit::TimeRef</innerclass>
+    <innerclass refid="classoscit_1_1_timer" prot="public">oscit::Timer</innerclass>
+    <innerclass refid="classoscit_1_1_t_observable_list" prot="public">oscit::TObservableList</innerclass>
+    <innerclass refid="classoscit_1_1_tree_meta_method" prot="public">oscit::TreeMetaMethod</innerclass>
+    <innerclass refid="classoscit_1_1_type_meta_method" prot="public">oscit::TypeMetaMethod</innerclass>
+    <innerclass refid="classoscit_1_1_typed" prot="public">oscit::Typed</innerclass>
+    <innerclass refid="classoscit_1_1_url" prot="public">oscit::Url</innerclass>
+    <innerclass refid="classoscit_1_1_json" prot="public">oscit::Json</innerclass>
+    <innerclass refid="classoscit_1_1_value" prot="public">oscit::Value</innerclass>
+    <innerclass refid="classoscit_1_1_json_value" prot="public">oscit::JsonValue</innerclass>
+    <innerclass refid="classoscit_1_1_f_value" prot="public">oscit::FValue</innerclass>
+    <innerclass refid="structoscit_1_1_type_tag" prot="public">oscit::TypeTag</innerclass>
+    <innerclass refid="classoscit_1_1_zero_conf_browser" prot="public">oscit::ZeroConfBrowser</innerclass>
+    <innerclass refid="classoscit_1_1_zero_conf_registration" prot="public">oscit::ZeroConfRegistration</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespaceoscit_1ab80f9f57bfa30aea952660b674e576c9" prot="public" static="no">
+        <name>ErrorCode</name>
+        <enumvalue id="namespaceoscit_1ab80f9f57bfa30aea952660b674e576c9abfa5bf629c27909f85853228c047ef5f" prot="public">
+          <name>BAD_REQUEST_ERROR</name>
+          <initializer> 400</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceoscit_1ab80f9f57bfa30aea952660b674e576c9aae4a7641e506907722581fbb99ed0ce2" prot="public">
+          <name>NOT_FOUND_ERROR</name>
+          <initializer> 404</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceoscit_1ab80f9f57bfa30aea952660b674e576c9a7224d1352f0dfbe55262a5525c83f669" prot="public">
+          <name>INTERNAL_SERVER_ERROR</name>
+          <initializer> 500</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceoscit_1ab80f9f57bfa30aea952660b674e576c9a5e8cd7d50d6e9a93d0080d99ee664ef8" prot="public">
+          <name>UNKNOWN_ERROR</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/error.h" line="42" bodyfile="/Users/gaspard/git/oscit/include/oscit/error.h" bodystart="42" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceoscit_1a451028d8d1fc9978967dc1d51d28aeee" prot="public" static="no">
+        <name>MidiMessageType</name>
+        <enumvalue id="namespaceoscit_1a451028d8d1fc9978967dc1d51d28aeeea07af2c43885fafdba7169acb3e975d0a" prot="public">
+          <name>NoteOn</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Note on message. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceoscit_1a451028d8d1fc9978967dc1d51d28aeeea84bc6da54efa08257c8e8e15d077860f" prot="public">
+          <name>NoteOff</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Note off message. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceoscit_1a451028d8d1fc9978967dc1d51d28aeeea5ad17a437f49ca4ec2a6b27419ae1972" prot="public">
+          <name>CtrlChange</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceoscit_1a451028d8d1fc9978967dc1d51d28aeeeacb685d2583312f925d5c0361418f20a1" prot="public">
+          <name>ClockStart</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Start sequencer. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceoscit_1a451028d8d1fc9978967dc1d51d28aeeeaa2633f1f2f88f76dc47afe8a739335e8" prot="public">
+          <name>ClockStop</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Stop sequencer. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceoscit_1a451028d8d1fc9978967dc1d51d28aeeead7c4bc846ac842f40052779a16d6470e" prot="public">
+          <name>ClockTick</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Tick 24 times for every 1/4 note. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceoscit_1a451028d8d1fc9978967dc1d51d28aeeea12733e575f5414cf09116c20642b8ee1" prot="public">
+          <name>ClockContinue</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Continue sequencer after &apos;pause&apos;. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceoscit_1a451028d8d1fc9978967dc1d51d28aeeeaae88eb3ca36acdbdd601b01c684191da" prot="public">
+          <name>RawMidi</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Other midi message. </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Midi messages types. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="43" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="43" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceoscit_1a9f19df528648365fd3c442d588100386" prot="public" static="no">
+        <name>ValueType</name>
+        <enumvalue id="namespaceoscit_1a9f19df528648365fd3c442d588100386af3bd9df641b23e941b39248b3c4c8d02" prot="public">
+          <name>EMPTY_VALUE</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceoscit_1a9f19df528648365fd3c442d588100386a2d3d059677a6543bc02c92158281fe37" prot="public">
+          <name>NIL_VALUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceoscit_1a9f19df528648365fd3c442d588100386a89d34d299818532b20779178dfda1955" prot="public">
+          <name>REAL_VALUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceoscit_1a9f19df528648365fd3c442d588100386a6b3801eb0e3edc5ddef8eeefb4eea17b" prot="public">
+          <name>STRING_VALUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceoscit_1a9f19df528648365fd3c442d588100386aa584a1d5d3f1d828bf3e9e08b60eaf68" prot="public">
+          <name>ERROR_VALUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceoscit_1a9f19df528648365fd3c442d588100386a516e0490290bb46af04664cd9e15f19e" prot="public">
+          <name>LIST_VALUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceoscit_1a9f19df528648365fd3c442d588100386a580a8ec45711852773ded9dc99820ac4" prot="public">
+          <name>HASH_VALUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceoscit_1a9f19df528648365fd3c442d588100386add8413378d9696622eec33f6d774162b" prot="public">
+          <name>MATRIX_VALUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceoscit_1a9f19df528648365fd3c442d588100386ace2acc5625b61149095a85e45dbe53de" prot="public">
+          <name>MIDI_VALUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceoscit_1a9f19df528648365fd3c442d588100386a3e8c6a537254b7ddf39cc235d62d0b87" prot="public">
+          <name>ANY_VALUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/value_types.h" line="47" bodyfile="/Users/gaspard/git/oscit/include/oscit/value_types.h" bodystart="46" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceoscit_1ab9134532fcf13e3a733f4b09c8410465" prot="public" static="no">
+        <name>ValueTypeTag</name>
+        <enumvalue id="namespaceoscit_1ab9134532fcf13e3a733f4b09c8410465a7db76a3cbd9df5d0521d1b137cd78d31" prot="public">
+          <name>NIL_TYPE_TAG</name>
+          <initializer> &apos;N&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceoscit_1ab9134532fcf13e3a733f4b09c8410465a5dab6c8d480c32b16353f80ee8dce2dd" prot="public">
+          <name>REAL_TYPE_TAG</name>
+          <initializer> &apos;f&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceoscit_1ab9134532fcf13e3a733f4b09c8410465a9c2783f41350df828d05bf830b8ece68" prot="public">
+          <name>STRING_TYPE_TAG</name>
+          <initializer> &apos;s&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceoscit_1ab9134532fcf13e3a733f4b09c8410465a7c622ed6ff489f537e3a0a4178df2784" prot="public">
+          <name>ERROR_TYPE_TAG</name>
+          <initializer> &apos;E&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceoscit_1ab9134532fcf13e3a733f4b09c8410465aace1566dd71469fa0e0ff707e05bd8bf" prot="public">
+          <name>HASH_TYPE_TAG</name>
+          <initializer> &apos;H&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceoscit_1ab9134532fcf13e3a733f4b09c8410465a7ef6a83272797471fa9fab600d30fecf" prot="public">
+          <name>MATRIX_TYPE_TAG</name>
+          <initializer> &apos;M&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceoscit_1ab9134532fcf13e3a733f4b09c8410465a754452fba2342a5aac7b6b46c5268404" prot="public">
+          <name>MIDI_MESSAGE_TYPE_TAG</name>
+          <initializer> &apos;m&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceoscit_1ab9134532fcf13e3a733f4b09c8410465a8f00ff07feb224db0175ca4961977792" prot="public">
+          <name>ANY_TYPE_TAG</name>
+          <initializer> &apos;*&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/value_types.h" line="61" bodyfile="/Users/gaspard/git/oscit/include/oscit/value_types.h" bodystart="60" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceoscit_1ae84197bb4b2a80bdbe087098444477fa" prot="public" static="no">
+        <name>HashDefaultSize</name>
+        <enumvalue id="namespaceoscit_1ae84197bb4b2a80bdbe087098444477faab0681226d9eec2f98986c75d7874e346" prot="public">
+          <name>DEFAULT_HASH_TABLE_SIZE</name>
+          <initializer> 20</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/value_types.h" line="73" bodyfile="/Users/gaspard/git/oscit/include/oscit/value_types.h" bodystart="72" bodyend="75"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespaceoscit_1a414efa850882bba6134fdd9b1ee99906" prot="public" static="no">
+        <type>void(</type>
+        <definition>typedef void( oscit::CallbackToDeleteMethod)(Observer *observer)</definition>
+        <argsstring>)(Observer *observer)</argsstring>
+        <name>CallbackToDeleteMethod</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/callback.h" line="113" bodyfile="/Users/gaspard/git/oscit/include/oscit/callback.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" prot="public" static="no">
+        <type>double</type>
+        <definition>typedef double oscit::Real</definition>
+        <argsstring></argsstring>
+        <name>Real</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/conf.h" line="34" bodyfile="/Users/gaspard/git/oscit/include/oscit/conf.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceoscit_1acdd0211767952c9d583a6206c38dbd5f" prot="public" static="no">
+        <type><ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref></type>
+        <definition>typedef uint oscit::TypeTagID</definition>
+        <argsstring></argsstring>
+        <name>TypeTagID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unique identifier for osc type tags strings. Redefinition from <ref refid="value_8h" kindref="compound">value.h</ref> because of inclusion order.</para><para>Unique identifier for osc type tags strings. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/error.h" line="40" bodyfile="/Users/gaspard/git/oscit/include/oscit/error.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceoscit_1a862f7344e3dd363af4be27122b3aba0f" prot="public" static="no">
+        <type>std::list&lt; std::string &gt;::const_iterator</type>
+        <definition>typedef std::list&lt;std::string&gt;::const_iterator oscit::HashIterator</definition>
+        <argsstring></argsstring>
+        <name>HashIterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/hash.h" line="36" bodyfile="/Users/gaspard/git/oscit/include/oscit/hash.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceoscit_1a751f32f43d957623714c9bf143e3c555" prot="public" static="no">
+        <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref>(*</type>
+        <definition>typedef const Value(* oscit::member_method_t)(void *receiver, const Value &amp;val)</definition>
+        <argsstring>)(void *receiver, const Value &amp;val)</argsstring>
+        <name>member_method_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function pointer to trigger a member method. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/method.h" line="37" bodyfile="/Users/gaspard/git/oscit/include/oscit/method.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceoscit_1a9328b4d884096d3640a1fddb939dbdd9" prot="public" static="no">
+        <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref>(*</type>
+        <definition>typedef const Value(* oscit::class_method_t)(Root *root, const Value &amp;val)</definition>
+        <argsstring>)(Root *root, const Value &amp;val)</argsstring>
+        <name>class_method_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function pointer to trigger a class method. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/method.h" line="40" bodyfile="/Users/gaspard/git/oscit/include/oscit/method.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceoscit_1a82be99be6a9783ae0183a542bd2cfc55" prot="public" static="no">
+        <type>std::list&lt; std::string &gt;::iterator</type>
+        <definition>typedef std::list&lt;std::string&gt;::iterator oscit::StringIterator</definition>
+        <argsstring></argsstring>
+        <name>StringIterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="71" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceoscit_1a3cec9cff42cf1feda2f12674cf938a3a" prot="public" static="no">
+        <type>std::list&lt; std::string &gt;::const_iterator</type>
+        <definition>typedef std::list&lt;std::string&gt;::const_iterator oscit::ConstStringIterator</definition>
+        <argsstring></argsstring>
+        <name>ConstStringIterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="72" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceoscit_1aabd74e477b66cf6bb2aeb07cae77beea" prot="public" static="no">
+        <type>cv::Mat</type>
+        <definition>typedef cv::Mat oscit::Matrix</definition>
+        <argsstring></argsstring>
+        <name>Matrix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/value.h" line="55" bodyfile="/Users/gaspard/git/oscit/include/oscit/value.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceoscit_1a4254b522502b06add34adb0bbf0cb55f" prot="public" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>Value oscit::gNilValue</definition>
+        <argsstring></argsstring>
+        <name>gNilValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/value_types.h" line="39"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceoscit_1ad509ec94cb5255d7b201ba38b091768f" prot="public" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>Value oscit::gTrueValue</definition>
+        <argsstring></argsstring>
+        <name>gTrueValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/value_types.h" line="40"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceoscit_1a0b478cf3b2ee295be1a4ac5ea243c24d" prot="public" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>Value oscit::gFalseValue</definition>
+        <argsstring></argsstring>
+        <name>gFalseValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/value_types.h" line="41"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceoscit_1a63f587250c0daf0d3cb685806a4cb285" prot="public" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>Value oscit::gEmptyValue</definition>
+        <argsstring></argsstring>
+        <name>gEmptyValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/value_types.h" line="42"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceoscit_1aead904d071309e109afc0c96e70b58f7" prot="public" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_hash" kindref="compound">Hash</ref></type>
+        <definition>Hash oscit::gEmptyHash</definition>
+        <argsstring></argsstring>
+        <name>gEmptyHash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/value_types.h" line="43"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceoscit_1a3e04adc1de36dae20f9d99d55579bab8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref></type>
+        <definition>uint oscit::hashId</definition>
+        <argsstring>(const Location &amp;location)</argsstring>
+        <name>hashId</name>
+        <param>
+          <type>const <ref refid="classoscit_1_1_location" kindref="compound">Location</ref> &amp;</type>
+          <declname>location</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="162" bodyfile="/Users/gaspard/git/oscit/include/oscit/location.h" bodystart="162" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceoscit_1a7f56d4a4601e20f9486271dd95cea4c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; oscit::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;out_stream, const std::list&lt; Location &gt; &amp;locations)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out_stream</declname>
+        </param>
+        <param>
+          <type>const std::list&lt; <ref refid="classoscit_1_1_location" kindref="compound">Location</ref> &gt; &amp;</type>
+          <declname>locations</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="171"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceoscit_1ae86b723d0aaf9e2639f2338fb4085d63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; oscit::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;out_stream, const MidiMessage &amp;midi_message)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out_stream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classoscit_1_1_midi_message" kindref="compound">MidiMessage</ref> &amp;</type>
+          <declname>midi_message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="371"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceoscit_1a828ad561caac5ac7683ee465b381c0a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class K</type>
+          </param>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; oscit::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;pStream, const THash&lt; K, T &gt; &amp;hash)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>pStream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classoscit_1_1_t_hash" kindref="compound">THash</ref>&lt; K, T &gt; &amp;</type>
+          <declname>hash</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="392" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="392" bodyend="405"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceoscit_1ab2d11eb6512adf789f5b64ae4ca5d289" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; oscit::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;out_stream, const THash&lt; std::string, T &gt; &amp;hash)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out_stream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classoscit_1_1_t_hash" kindref="compound">THash</ref>&lt; std::string, T &gt; &amp;</type>
+          <declname>hash</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="408" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="408" bodyend="411"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceoscit_1aad6b8804dc27660e11e37e0afb7309a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref></type>
+        <definition>uint oscit::hashId</definition>
+        <argsstring>(const uint key)</argsstring>
+        <name>hashId</name>
+        <param>
+          <type>const <ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref></type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="443" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="443" bodyend="452"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceoscit_1a004b76c07a57ac503870ba5f96c615f0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref></type>
+        <definition>uint oscit::hashId</definition>
+        <argsstring>(const unsigned long key)</argsstring>
+        <name>hashId</name>
+        <param>
+          <type>const unsigned long</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="454" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="454" bodyend="463"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceoscit_1a209ba2b025ac0ee5df74ab1d5654eb37" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref></type>
+        <definition>uint oscit::hashId</definition>
+        <argsstring>(const char *str)</argsstring>
+        <name>hashId</name>
+        <param>
+          <type>const char *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="467" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="467" bodyend="476"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceoscit_1afed36dd4cf61d339f5ca9171a24712b4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref></type>
+        <definition>uint oscit::hashId</definition>
+        <argsstring>(const char c)</argsstring>
+        <name>hashId</name>
+        <param>
+          <type>const char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="480" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="480" bodyend="482"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceoscit_1a43fb3c28cf7b43955a1dc21edd135395" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref></type>
+        <definition>uint oscit::hashId</definition>
+        <argsstring>(const std::string &amp;key)</argsstring>
+        <name>hashId</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="491" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="491" bodyend="494"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceoscit_1ac7fad3fd131a725b599418f2457517aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; oscit::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;out_stream, const Url &amp;url)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out_stream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classoscit_1_1_url" kindref="compound">Url</ref> &amp;</type>
+          <declname>url</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/url.h" line="184"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceoscit_1a817b0ff213baba4a9ec25d372bc81051" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; oscit::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;out_stream, const Value &amp;val)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out_stream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/value.h" line="1061"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceoscit_1af231706a930d098723c3f18e8e1ac6be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; oscit::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;out_stream, const Matrix &amp;mat)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out_stream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_matrix" kindref="compound">Matrix</ref> &amp;</type>
+          <declname>mat</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/value.h" line="1062"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Copyright 2009 Gaspard Bucher </para>    </detaileddescription>
+    <location file="/Users/gaspard/git/oscit/include/oscit/alias.h" line="35"/>
+  </compounddef>
+</doxygen>

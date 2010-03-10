@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classoscit_1_1_semaphore" kind="class" prot="public">
+    <compoundname>oscit::Semaphore</compoundname>
+    <basecompoundref refid="classoscit_1_1_non_copyable" prot="private" virt="non-virtual">oscit::NonCopyable</basecompoundref>
+    <includes refid="semaphore_8h" local="no">semaphore.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classoscit_1_1_semaphore_1a6de5ab66561c3ba1471d0efca7d527c1" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t oscit::Semaphore::resource_count_</definition>
+        <argsstring></argsstring>
+        <name>resource_count_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/semaphore.h" line="92" bodyfile="/Users/gaspard/git/oscit/include/oscit/semaphore.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_semaphore_1aac81e3b583fe5a51a280c0ee18e74fc1" prot="private" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_mutex" kindref="compound">Mutex</ref></type>
+        <definition>Mutex oscit::Semaphore::acquire_mutex_</definition>
+        <argsstring></argsstring>
+        <name>acquire_mutex_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/semaphore.h" line="93" bodyfile="/Users/gaspard/git/oscit/include/oscit/semaphore.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_semaphore_1ac37d9e03f2718087d0779ad5f6cadf71" prot="private" static="no" mutable="no">
+        <type>sem_t *</type>
+        <definition>sem_t* oscit::Semaphore::semaphore_</definition>
+        <argsstring></argsstring>
+        <name>semaphore_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/semaphore.h" line="94" bodyfile="/Users/gaspard/git/oscit/include/oscit/semaphore.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classoscit_1_1_semaphore_1a72634bc5f069c692fdd81fefa6bab53e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Semaphore::Semaphore</definition>
+        <argsstring>(int resource_count=0)</argsstring>
+        <name>Semaphore</name>
+        <param>
+          <type>int</type>
+          <declname>resource_count</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/semaphore.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_semaphore_1a2f9dfa766234df79cfaadfe2d6808c10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Semaphore::~Semaphore</definition>
+        <argsstring>()</argsstring>
+        <name>~Semaphore</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/semaphore.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_semaphore_1a6abb227cea5114eaa9c531a23c7103fd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Semaphore::acquire</definition>
+        <argsstring>()</argsstring>
+        <name>acquire</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get resource or wait until it is available. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/semaphore.h" line="50" bodyfile="/Users/gaspard/git/oscit/include/oscit/semaphore.h" bodystart="50" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_semaphore_1a6563d83a1b37c5c217e3e5d60f8bc109" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Semaphore::release</definition>
+        <argsstring>()</argsstring>
+        <name>release</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Release resource. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/semaphore.h" line="56" bodyfile="/Users/gaspard/git/oscit/include/oscit/semaphore.h" bodystart="56" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_semaphore_1a51dd2f1cdb1d56912a5c6d101a3f079b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Semaphore::acquire</definition>
+        <argsstring>(size_t count)</argsstring>
+        <name>acquire</name>
+        <param>
+          <type>size_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Acquire multiple resources at the same time. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/semaphore.h" line="62" bodyfile="/Users/gaspard/git/oscit/include/oscit/semaphore.h" bodystart="62" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_semaphore_1acfa132aa6c419b88e8809d7b0a653e44" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Semaphore::release</definition>
+        <argsstring>(size_t count)</argsstring>
+        <name>release</name>
+        <param>
+          <type>size_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Release multiple resources at the same time. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/semaphore.h" line="72" bodyfile="/Users/gaspard/git/oscit/include/oscit/semaphore.h" bodystart="72" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_semaphore_1a84d4d2a1322e2335e65badfc85c24585" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Semaphore::acquire_all</definition>
+        <argsstring>()</argsstring>
+        <name>acquire_all</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Acquire all resources protected by this semaphore </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/semaphore.h" line="81" bodyfile="/Users/gaspard/git/oscit/include/oscit/semaphore.h" bodystart="81" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_semaphore_1aa8c051b779117736991f4fe3cbd222cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Semaphore::release_all</definition>
+        <argsstring>()</argsstring>
+        <name>release_all</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Release all resources previously acquired with a call to &apos;acquire_all&apos;. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/semaphore.h" line="87" bodyfile="/Users/gaspard/git/oscit/include/oscit/semaphore.h" bodystart="87" bodyend="89"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1278">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+      <node id="1277">
+        <label>oscit::Semaphore</label>
+        <link refid="classoscit_1_1_semaphore"/>
+        <childnode refid="1278" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1281">
+        <label>oscit::Mutex</label>
+        <link refid="classoscit_1_1_mutex"/>
+        <childnode refid="1282" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1280" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="1280">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+      <node id="1279">
+        <label>oscit::Semaphore</label>
+        <link refid="classoscit_1_1_semaphore"/>
+        <childnode refid="1280" relation="private-inheritance">
+        </childnode>
+        <childnode refid="1281" relation="usage">
+          <edgelabel>acquire_mutex_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1282">
+        <label>oscit::Typed</label>
+        <link refid="classoscit_1_1_typed"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/semaphore.h" line="42" bodyfile="/Users/gaspard/git/oscit/include/oscit/semaphore.h" bodystart="42" bodyend="95"/>
+    <listofallmembers>
+      <member refid="classoscit_1_1_semaphore_1a6abb227cea5114eaa9c531a23c7103fd" prot="public" virt="non-virtual"><scope>oscit::Semaphore</scope><name>acquire</name></member>
+      <member refid="classoscit_1_1_semaphore_1a51dd2f1cdb1d56912a5c6d101a3f079b" prot="public" virt="non-virtual"><scope>oscit::Semaphore</scope><name>acquire</name></member>
+      <member refid="classoscit_1_1_semaphore_1a84d4d2a1322e2335e65badfc85c24585" prot="public" virt="non-virtual"><scope>oscit::Semaphore</scope><name>acquire_all</name></member>
+      <member refid="classoscit_1_1_semaphore_1aac81e3b583fe5a51a280c0ee18e74fc1" prot="private" virt="non-virtual"><scope>oscit::Semaphore</scope><name>acquire_mutex_</name></member>
+      <member refid="classoscit_1_1_non_copyable_1a1f0c0fedea54b6e20aeefbeefdce67f7" prot="private" virt="non-virtual"><scope>oscit::Semaphore</scope><name>NonCopyable</name></member>
+      <member refid="classoscit_1_1_semaphore_1a6563d83a1b37c5c217e3e5d60f8bc109" prot="public" virt="non-virtual"><scope>oscit::Semaphore</scope><name>release</name></member>
+      <member refid="classoscit_1_1_semaphore_1acfa132aa6c419b88e8809d7b0a653e44" prot="public" virt="non-virtual"><scope>oscit::Semaphore</scope><name>release</name></member>
+      <member refid="classoscit_1_1_semaphore_1aa8c051b779117736991f4fe3cbd222cd" prot="public" virt="non-virtual"><scope>oscit::Semaphore</scope><name>release_all</name></member>
+      <member refid="classoscit_1_1_semaphore_1a6de5ab66561c3ba1471d0efca7d527c1" prot="private" virt="non-virtual"><scope>oscit::Semaphore</scope><name>resource_count_</name></member>
+      <member refid="classoscit_1_1_semaphore_1a72634bc5f069c692fdd81fefa6bab53e" prot="public" virt="non-virtual"><scope>oscit::Semaphore</scope><name>Semaphore</name></member>
+      <member refid="classoscit_1_1_semaphore_1ac37d9e03f2718087d0779ad5f6cadf71" prot="private" virt="non-virtual"><scope>oscit::Semaphore</scope><name>semaphore_</name></member>
+      <member refid="classoscit_1_1_non_copyable_1ad21ed15dea6d4700732a2cbc7f98e20a" prot="private" virt="non-virtual"><scope>oscit::Semaphore</scope><name>~NonCopyable</name></member>
+      <member refid="classoscit_1_1_semaphore_1a2f9dfa766234df79cfaadfe2d6808c10" prot="public" virt="non-virtual"><scope>oscit::Semaphore</scope><name>~Semaphore</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classoscit_1_1_c_t_list" kind="class" prot="public">
+    <compoundname>oscit::CTList</compoundname>
+    <basecompoundref refid="classoscit_1_1_r_w_mutex" prot="public" virt="non-virtual">oscit::RWMutex</basecompoundref>
+    <includes refid="c__tlist_8h" local="no">c_tlist.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classoscit_1_1_c_t_list_1a850537dbc751850f4ca5bb3d29aa6f47" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::CTList&lt; T &gt;::CTList</definition>
+        <argsstring>()</argsstring>
+        <name>CTList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/c_tlist.h" line="47" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_tlist.h" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_c_t_list_1a2600eae694cf90ce3e0936f2240f1ce5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::CTList&lt; T &gt;::CTList</definition>
+        <argsstring>(const CTList &amp;other)</argsstring>
+        <name>CTList</name>
+        <param>
+          <type>const <ref refid="classoscit_1_1_c_t_list" kindref="compound">CTList</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/c_tlist.h" line="50" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_tlist.h" bodystart="50" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The Concurrent <ref refid="classoscit_1_1_list" kindref="compound">List</ref> template is a <ref refid="classstd_1_1list" kindref="compound">std::list</ref> with a read-write mutex. The class does not lock/unlock the mutex, this is the responsability of the class using the list. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="192">
+        <label>oscit::CTList&lt; T &gt;</label>
+        <link refid="classoscit_1_1_c_t_list"/>
+        <childnode refid="193" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="193">
+        <label>oscit::RWMutex</label>
+        <link refid="classoscit_1_1_r_w_mutex"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="194">
+        <label>oscit::CTList&lt; T &gt;</label>
+        <link refid="classoscit_1_1_c_t_list"/>
+        <childnode refid="195" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="195">
+        <label>oscit::RWMutex</label>
+        <link refid="classoscit_1_1_r_w_mutex"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/c_tlist.h" line="45" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_tlist.h" bodystart="45" bodyend="51"/>
+    <listofallmembers>
+      <member refid="classoscit_1_1_c_t_list_1a850537dbc751850f4ca5bb3d29aa6f47" prot="public" virt="non-virtual"><scope>oscit::CTList</scope><name>CTList</name></member>
+      <member refid="classoscit_1_1_c_t_list_1a2600eae694cf90ce3e0936f2240f1ce5" prot="public" virt="non-virtual"><scope>oscit::CTList</scope><name>CTList</name></member>
+      <member refid="classoscit_1_1_r_w_mutex_1ac549bb3340bac6726bce2863f80a240e" prot="public" virt="non-virtual"><scope>oscit::CTList</scope><name>lock</name></member>
+      <member refid="classoscit_1_1_r_w_mutex_1a672d9bfefbc1839d9e196e90a1963f39" prot="public" virt="non-virtual"><scope>oscit::CTList</scope><name>read_lock</name></member>
+      <member refid="classoscit_1_1_r_w_mutex_1a97010c1b513da70f8c1c9e671529abb0" prot="public" virt="non-virtual"><scope>oscit::CTList</scope><name>read_unlock</name></member>
+      <member refid="classoscit_1_1_r_w_mutex_1aa1110a616ea1cdee191912e2e136e45a" prot="public" virt="non-virtual"><scope>oscit::CTList</scope><name>RWMutex</name></member>
+      <member refid="classoscit_1_1_r_w_mutex_1ae74be65c4bbcc16313b5ca56d17db947" prot="public" virt="non-virtual"><scope>oscit::CTList</scope><name>unlock</name></member>
+      <member refid="classoscit_1_1_r_w_mutex_1a1fbdf80ace36018183196f92a2193ceb" prot="public" virt="non-virtual"><scope>oscit::CTList</scope><name>~RWMutex</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

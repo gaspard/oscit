@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classoscit_1_1_scoped_lock" kind="class" prot="public">
+    <compoundname>oscit::ScopedLock</compoundname>
+    <basecompoundref refid="classoscit_1_1_non_copyable" prot="private" virt="non-virtual">oscit::NonCopyable</basecompoundref>
+    <includes refid="mutex_8h" local="no">mutex.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classoscit_1_1_scoped_lock_1a81437f7b1580121b3cadea930872a8d4" prot="private" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_mutex" kindref="compound">Mutex</ref> *</type>
+        <definition>Mutex* oscit::ScopedLock::mutex_ptr_</definition>
+        <argsstring></argsstring>
+        <name>mutex_ptr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/mutex.h" line="97" bodyfile="/Users/gaspard/git/oscit/include/oscit/mutex.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classoscit_1_1_scoped_lock_1a9e3d1bfe4c3e4fc020a9cd6815fda4eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::ScopedLock::ScopedLock</definition>
+        <argsstring>(Mutex *mutex)</argsstring>
+        <name>ScopedLock</name>
+        <param>
+          <type><ref refid="classoscit_1_1_mutex" kindref="compound">Mutex</ref> *</type>
+          <declname>mutex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/mutex.h" line="85" bodyfile="/Users/gaspard/git/oscit/include/oscit/mutex.h" bodystart="85" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_scoped_lock_1a0248f94e9d112b09739ce3c28457fdd1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::ScopedLock::ScopedLock</definition>
+        <argsstring>(Mutex &amp;mutex)</argsstring>
+        <name>ScopedLock</name>
+        <param>
+          <type><ref refid="classoscit_1_1_mutex" kindref="compound">Mutex</ref> &amp;</type>
+          <declname>mutex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/mutex.h" line="89" bodyfile="/Users/gaspard/git/oscit/include/oscit/mutex.h" bodystart="89" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_scoped_lock_1a46c5a972c65418721b8ea4731cefb2eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::ScopedLock::~ScopedLock</definition>
+        <argsstring>()</argsstring>
+        <name>~ScopedLock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/mutex.h" line="93" bodyfile="/Users/gaspard/git/oscit/include/oscit/mutex.h" bodystart="93" bodyend="95"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Scoped <ref refid="classoscit_1_1_mutex" kindref="compound">Mutex</ref> Lock for exclusive access to a resource. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1238">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+      <node id="1237">
+        <label>oscit::ScopedLock</label>
+        <link refid="classoscit_1_1_scoped_lock"/>
+        <childnode refid="1238" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1241">
+        <label>oscit::Mutex</label>
+        <link refid="classoscit_1_1_mutex"/>
+        <childnode refid="1242" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1240" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="1240">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+      <node id="1239">
+        <label>oscit::ScopedLock</label>
+        <link refid="classoscit_1_1_scoped_lock"/>
+        <childnode refid="1240" relation="private-inheritance">
+        </childnode>
+        <childnode refid="1241" relation="usage">
+          <edgelabel>mutex_ptr_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1242">
+        <label>oscit::Typed</label>
+        <link refid="classoscit_1_1_typed"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/mutex.h" line="83" bodyfile="/Users/gaspard/git/oscit/include/oscit/mutex.h" bodystart="83" bodyend="98"/>
+    <listofallmembers>
+      <member refid="classoscit_1_1_scoped_lock_1a81437f7b1580121b3cadea930872a8d4" prot="private" virt="non-virtual"><scope>oscit::ScopedLock</scope><name>mutex_ptr_</name></member>
+      <member refid="classoscit_1_1_non_copyable_1a1f0c0fedea54b6e20aeefbeefdce67f7" prot="private" virt="non-virtual"><scope>oscit::ScopedLock</scope><name>NonCopyable</name></member>
+      <member refid="classoscit_1_1_scoped_lock_1a9e3d1bfe4c3e4fc020a9cd6815fda4eb" prot="public" virt="non-virtual"><scope>oscit::ScopedLock</scope><name>ScopedLock</name></member>
+      <member refid="classoscit_1_1_scoped_lock_1a0248f94e9d112b09739ce3c28457fdd1" prot="public" virt="non-virtual"><scope>oscit::ScopedLock</scope><name>ScopedLock</name></member>
+      <member refid="classoscit_1_1_non_copyable_1ad21ed15dea6d4700732a2cbc7f98e20a" prot="private" virt="non-virtual"><scope>oscit::ScopedLock</scope><name>~NonCopyable</name></member>
+      <member refid="classoscit_1_1_scoped_lock_1a46c5a972c65418721b8ea4731cefb2eb" prot="public" virt="non-virtual"><scope>oscit::ScopedLock</scope><name>~ScopedLock</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

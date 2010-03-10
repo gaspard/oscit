@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classoscit_1_1_scoped_unlock" kind="class" prot="public">
+    <compoundname>oscit::ScopedUnlock</compoundname>
+    <basecompoundref refid="classoscit_1_1_non_copyable" prot="private" virt="non-virtual">oscit::NonCopyable</basecompoundref>
+    <includes refid="mutex_8h" local="no">mutex.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classoscit_1_1_scoped_unlock_1af98f04f2e5197b7aaa586f18298579e6" prot="private" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_mutex" kindref="compound">Mutex</ref> *</type>
+        <definition>Mutex* oscit::ScopedUnlock::mutex_ptr_</definition>
+        <argsstring></argsstring>
+        <name>mutex_ptr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/mutex.h" line="117" bodyfile="/Users/gaspard/git/oscit/include/oscit/mutex.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classoscit_1_1_scoped_unlock_1a6a643ecfbfef0610c515fefdec904a74" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::ScopedUnlock::ScopedUnlock</definition>
+        <argsstring>(Mutex *mutex)</argsstring>
+        <name>ScopedUnlock</name>
+        <param>
+          <type><ref refid="classoscit_1_1_mutex" kindref="compound">Mutex</ref> *</type>
+          <declname>mutex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/mutex.h" line="105" bodyfile="/Users/gaspard/git/oscit/include/oscit/mutex.h" bodystart="105" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_scoped_unlock_1a579afe4b9293910290c28489f094246b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::ScopedUnlock::ScopedUnlock</definition>
+        <argsstring>(Mutex &amp;mutex)</argsstring>
+        <name>ScopedUnlock</name>
+        <param>
+          <type><ref refid="classoscit_1_1_mutex" kindref="compound">Mutex</ref> &amp;</type>
+          <declname>mutex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/mutex.h" line="109" bodyfile="/Users/gaspard/git/oscit/include/oscit/mutex.h" bodystart="109" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_scoped_unlock_1a9632acea879598598944f59eb5b2dc6d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::ScopedUnlock::~ScopedUnlock</definition>
+        <argsstring>()</argsstring>
+        <name>~ScopedUnlock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/mutex.h" line="113" bodyfile="/Users/gaspard/git/oscit/include/oscit/mutex.h" bodystart="113" bodyend="115"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Scoped <ref refid="classoscit_1_1_mutex" kindref="compound">Mutex</ref> Unlock to release exclusive access to a resource. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1253">
+        <label>oscit::ScopedUnlock</label>
+        <link refid="classoscit_1_1_scoped_unlock"/>
+        <childnode refid="1254" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="1254">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1255">
+        <label>oscit::ScopedUnlock</label>
+        <link refid="classoscit_1_1_scoped_unlock"/>
+        <childnode refid="1256" relation="private-inheritance">
+        </childnode>
+        <childnode refid="1257" relation="usage">
+          <edgelabel>mutex_ptr_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1257">
+        <label>oscit::Mutex</label>
+        <link refid="classoscit_1_1_mutex"/>
+        <childnode refid="1258" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1256" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="1256">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+      <node id="1258">
+        <label>oscit::Typed</label>
+        <link refid="classoscit_1_1_typed"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/mutex.h" line="103" bodyfile="/Users/gaspard/git/oscit/include/oscit/mutex.h" bodystart="103" bodyend="118"/>
+    <listofallmembers>
+      <member refid="classoscit_1_1_scoped_unlock_1af98f04f2e5197b7aaa586f18298579e6" prot="private" virt="non-virtual"><scope>oscit::ScopedUnlock</scope><name>mutex_ptr_</name></member>
+      <member refid="classoscit_1_1_non_copyable_1a1f0c0fedea54b6e20aeefbeefdce67f7" prot="private" virt="non-virtual"><scope>oscit::ScopedUnlock</scope><name>NonCopyable</name></member>
+      <member refid="classoscit_1_1_scoped_unlock_1a6a643ecfbfef0610c515fefdec904a74" prot="public" virt="non-virtual"><scope>oscit::ScopedUnlock</scope><name>ScopedUnlock</name></member>
+      <member refid="classoscit_1_1_scoped_unlock_1a579afe4b9293910290c28489f094246b" prot="public" virt="non-virtual"><scope>oscit::ScopedUnlock</scope><name>ScopedUnlock</name></member>
+      <member refid="classoscit_1_1_non_copyable_1ad21ed15dea6d4700732a2cbc7f98e20a" prot="private" virt="non-virtual"><scope>oscit::ScopedUnlock</scope><name>~NonCopyable</name></member>
+      <member refid="classoscit_1_1_scoped_unlock_1a9632acea879598598944f59eb5b2dc6d" prot="public" virt="non-virtual"><scope>oscit::ScopedUnlock</scope><name>~ScopedUnlock</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

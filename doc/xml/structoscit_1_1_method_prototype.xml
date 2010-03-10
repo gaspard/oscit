@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="structoscit_1_1_method_prototype" kind="struct" prot="public">
+    <compoundname>oscit::MethodPrototype</compoundname>
+    <includes refid="method_8h" local="no">method.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structoscit_1_1_method_prototype_1a69ea6f742da15ff2ed65e27322be5999" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* oscit::MethodPrototype::name_</definition>
+        <argsstring></argsstring>
+        <name>name_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/method.h" line="72" bodyfile="/Users/gaspard/git/oscit/include/oscit/method.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structoscit_1_1_method_prototype_1a9212df6d161987bf2443a3a6da78280d" prot="public" static="no" mutable="no">
+        <type><ref refid="namespaceoscit_1a751f32f43d957623714c9bf143e3c555" kindref="member">member_method_t</ref></type>
+        <definition>member_method_t oscit::MethodPrototype::member_method_</definition>
+        <argsstring></argsstring>
+        <name>member_method_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/method.h" line="73" bodyfile="/Users/gaspard/git/oscit/include/oscit/method.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structoscit_1_1_method_prototype_1a0d4bb611d9077421e57c34cc325a33cb" prot="public" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>Value oscit::MethodPrototype::type_</definition>
+        <argsstring></argsstring>
+        <name>type_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/method.h" line="74" bodyfile="/Users/gaspard/git/oscit/include/oscit/method.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structoscit_1_1_method_prototype_1a21810c54cd7cc29d9a25b40065390c32" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::MethodPrototype::MethodPrototype</definition>
+        <argsstring>(const char *name, member_method_t method, const Value &amp;type)</argsstring>
+        <name>MethodPrototype</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceoscit_1a751f32f43d957623714c9bf143e3c555" kindref="member">member_method_t</ref></type>
+          <declname>method</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/method.h" line="71" bodyfile="/Users/gaspard/git/oscit/include/oscit/method.h" bodystart="70" bodyend="71"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Prototype constructor for <ref refid="classoscit_1_1_method" kindref="compound">Method</ref>. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="637">
+        <label>Matrix</label>
+        <link refid="class_matrix"/>
+      </node>
+      <node id="636">
+        <label>oscit::List</label>
+        <link refid="classoscit_1_1_list"/>
+        <childnode refid="633" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="631">
+        <label>oscit::Value</label>
+        <link refid="classoscit_1_1_value"/>
+        <childnode refid="632" relation="usage">
+          <edgelabel>midi_message_</edgelabel>
+        </childnode>
+        <childnode refid="634" relation="usage">
+          <edgelabel>string_</edgelabel>
+        </childnode>
+        <childnode refid="635" relation="usage">
+          <edgelabel>error_</edgelabel>
+        </childnode>
+        <childnode refid="636" relation="usage">
+          <edgelabel>list_</edgelabel>
+        </childnode>
+        <childnode refid="637" relation="usage">
+          <edgelabel>matrix_</edgelabel>
+        </childnode>
+        <childnode refid="638" relation="usage">
+          <edgelabel>hash_</edgelabel>
+        </childnode>
+      </node>
+      <node id="632">
+        <label>oscit::MidiMessage</label>
+        <link refid="classoscit_1_1_midi_message"/>
+        <childnode refid="633" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="640">
+        <label>oscit::THashElement&lt; std::string, Value &gt;</label>
+        <link refid="structoscit_1_1_t_hash_element"/>
+        <childnode refid="640" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="631" relation="usage">
+          <edgelabel>obj</edgelabel>
+        </childnode>
+      </node>
+      <node id="635">
+        <label>oscit::Error</label>
+        <link refid="classoscit_1_1_error"/>
+        <childnode refid="633" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="639">
+        <label>oscit::THash&lt; std::string, Value &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+        <childnode refid="640" relation="usage">
+          <edgelabel>thash_table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="630">
+        <label>oscit::MethodPrototype</label>
+        <link refid="structoscit_1_1_method_prototype"/>
+        <childnode refid="631" relation="usage">
+          <edgelabel>member_method_</edgelabel>
+          <edgelabel>type_</edgelabel>
+        </childnode>
+      </node>
+      <node id="638">
+        <label>oscit::Hash</label>
+        <link refid="classoscit_1_1_hash"/>
+        <childnode refid="633" relation="public-inheritance">
+        </childnode>
+        <childnode refid="639" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="633">
+        <label>oscit::ReferenceCounted</label>
+        <link refid="classoscit_1_1_reference_counted"/>
+      </node>
+      <node id="634">
+        <label>oscit::StringData</label>
+        <link refid="classoscit_1_1_string_data"/>
+        <childnode refid="633" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/method.h" line="69" bodyfile="/Users/gaspard/git/oscit/include/oscit/method.h" bodystart="68" bodyend="75"/>
+    <listofallmembers>
+      <member refid="structoscit_1_1_method_prototype_1a9212df6d161987bf2443a3a6da78280d" prot="public" virt="non-virtual"><scope>oscit::MethodPrototype</scope><name>member_method_</name></member>
+      <member refid="structoscit_1_1_method_prototype_1a21810c54cd7cc29d9a25b40065390c32" prot="public" virt="non-virtual"><scope>oscit::MethodPrototype</scope><name>MethodPrototype</name></member>
+      <member refid="structoscit_1_1_method_prototype_1a69ea6f742da15ff2ed65e27322be5999" prot="public" virt="non-virtual"><scope>oscit::MethodPrototype</scope><name>name_</name></member>
+      <member refid="structoscit_1_1_method_prototype_1a0d4bb611d9077421e57c34cc325a33cb" prot="public" virt="non-virtual"><scope>oscit::MethodPrototype</scope><name>type_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

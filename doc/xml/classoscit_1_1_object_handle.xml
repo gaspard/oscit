@@ -1,0 +1,476 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classoscit_1_1_object_handle" kind="class" prot="public">
+    <compoundname>oscit::ObjectHandle</compoundname>
+    <includes refid="object__handle_8h" local="no">object_handle.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classoscit_1_1_object_handle_1a3812efca47dd51f5624577d448fad0d1" prot="protected" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_object" kindref="compound">Object</ref> *</type>
+        <definition>Object* oscit::ObjectHandle::object_</definition>
+        <argsstring></argsstring>
+        <name>object_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object_handle.h" line="111" bodyfile="/Users/gaspard/git/oscit/include/oscit/object_handle.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classoscit_1_1_object_handle_1a7104f5d755e541ec3a3de0399a25a30e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::ObjectHandle::ObjectHandle</definition>
+        <argsstring>(Object *object)</argsstring>
+        <name>ObjectHandle</name>
+        <param>
+          <type><ref refid="classoscit_1_1_object" kindref="compound">Object</ref> *</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object_handle.h" line="42" bodyfile="/Users/gaspard/git/oscit/include/oscit/object_handle.h" bodystart="42" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_handle_1a576a616a001e49164ff8509765371b44" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::ObjectHandle::ObjectHandle</definition>
+        <argsstring>()</argsstring>
+        <name>ObjectHandle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object_handle.h" line="46" bodyfile="/Users/gaspard/git/oscit/include/oscit/object_handle.h" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_handle_1a98a3cfea85f51d0698b5d0c8f1a2a2cc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::ObjectHandle::operator=</definition>
+        <argsstring>(const ObjectHandle &amp;other)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classoscit_1_1_object_handle" kindref="compound">ObjectHandle</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object_handle.h" line="55" bodyfile="/Users/gaspard/git/oscit/include/oscit/object_handle.h" bodystart="55" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_handle_1a598e1cf62e5a2c28ed65d03321573e4d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::ObjectHandle::operator=</definition>
+        <argsstring>(Object *object)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classoscit_1_1_object" kindref="compound">Object</ref> *</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object_handle.h" line="61" bodyfile="/Users/gaspard/git/oscit/include/oscit/object_handle.h" bodystart="61" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_handle_1a24886e17debece24c642d62abec46dfe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::ObjectHandle::~ObjectHandle</definition>
+        <argsstring>()</argsstring>
+        <name>~ObjectHandle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object_handle.h" line="65" bodyfile="/Users/gaspard/git/oscit/include/oscit/object_handle.h" bodystart="65" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_handle_1ac2f1d66752f118da48503f3a92e69eb7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::ObjectHandle::hold</definition>
+        <argsstring>(Object *object)</argsstring>
+        <name>hold</name>
+        <param>
+          <type><ref refid="classoscit_1_1_object" kindref="compound">Object</ref> *</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object_handle.h" line="69" bodyfile="/Users/gaspard/git/oscit/include/oscit/object_handle.h" bodystart="69" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_handle_1ade3da688c7ceb683090392f6ace4a5bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::ObjectHandle::hold_fast</definition>
+        <argsstring>(Object *object)</argsstring>
+        <name>hold_fast</name>
+        <param>
+          <type><ref refid="classoscit_1_1_object" kindref="compound">Object</ref> *</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This code is meant to run on empty <ref refid="classoscit_1_1_scoped_retain" kindref="compound">ScopedRetain</ref> handles, if you need to hold an object longer, you should use a temporary to get the value and copy it. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object_handle.h" line="80" bodyfile="/Users/gaspard/git/oscit/include/oscit/object_handle.h" bodystart="80" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_handle_1a03bba3a4be0a47a8d0eea2ad841d1939" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classoscit_1_1_object" kindref="compound">Object</ref> &amp;</type>
+        <definition>Object&amp; oscit::ObjectHandle::operator*</definition>
+        <argsstring>()</argsstring>
+        <name>operator*</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Make sure you are holding an object before calling this ! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object_handle.h" line="90" bodyfile="/Users/gaspard/git/oscit/include/oscit/object_handle.h" bodystart="90" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_handle_1a1ba64e21921611cfcd0fb8997dcad792" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classoscit_1_1_object" kindref="compound">Object</ref> *</type>
+        <definition>Object* oscit::ObjectHandle::operator-&gt;</definition>
+        <argsstring>()</argsstring>
+        <name>operator-&gt;</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Make sure you are holding an object before calling this ! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object_handle.h" line="97" bodyfile="/Users/gaspard/git/oscit/include/oscit/object_handle.h" bodystart="97" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_handle_1aa4968313f2c9f20c0f71920be17d6641" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>T *</type>
+        <definition>T* oscit::ObjectHandle::type_cast</definition>
+        <argsstring>()</argsstring>
+        <name>type_cast</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object_handle.h" line="102" bodyfile="/Users/gaspard/git/oscit/include/oscit/object_handle.h" bodystart="102" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_handle_1a1d7fe3d7300f9914401290f3f394eaca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classoscit_1_1_object" kindref="compound">Object</ref> *</type>
+        <definition>Object* oscit::ObjectHandle::ptr</definition>
+        <argsstring>()</argsstring>
+        <name>ptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object_handle.h" line="106" bodyfile="/Users/gaspard/git/oscit/include/oscit/object_handle.h" bodystart="106" bodyend="108"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classoscit_1_1_object_handle_1aad18ed68eb27851ff3c3af35866fc05b" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::ObjectHandle::release</definition>
+        <argsstring>()</argsstring>
+        <name>release</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object_handle.h" line="113" bodyfile="/Users/gaspard/git/oscit/include/oscit/object_handle.h" bodystart="113" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_object_handle_1a6dcd728ebdc5fd6de5ef01fe1a881069" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::ObjectHandle::retain</definition>
+        <argsstring>()</argsstring>
+        <name>retain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/object_handle.h" line="117" bodyfile="/Users/gaspard/git/oscit/include/oscit/object_handle.h" bodystart="117" bodyend="119"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This is a handle that automatically retains and releases the object it is holding. It should be used as a specialized <ref refid="classoscit_1_1_scoped_retain" kindref="compound">ScopedRetain</ref> for Objects. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="774">
+        <label>oscit::Root</label>
+        <link refid="classoscit_1_1_root"/>
+        <childnode refid="763" relation="public-inheritance">
+        </childnode>
+        <childnode refid="771" relation="usage">
+          <edgelabel>objects_</edgelabel>
+        </childnode>
+        <childnode refid="775" relation="usage">
+          <edgelabel>callbacks_on_register_</edgelabel>
+        </childnode>
+        <childnode refid="777" relation="usage">
+          <edgelabel>commands_</edgelabel>
+        </childnode>
+      </node>
+      <node id="785">
+        <label>Matrix</label>
+        <link refid="class_matrix"/>
+      </node>
+      <node id="775">
+        <label>oscit::CTHash&lt; std::string, CallbackList * &gt;</label>
+        <link refid="classoscit_1_1_c_t_hash"/>
+        <childnode refid="776" relation="public-inheritance">
+        </childnode>
+        <childnode refid="773" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="791">
+        <label>oscit::Mutex</label>
+        <link refid="classoscit_1_1_mutex"/>
+        <childnode refid="764" relation="public-inheritance">
+        </childnode>
+        <childnode refid="769" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="784">
+        <label>oscit::List</label>
+        <link refid="classoscit_1_1_list"/>
+        <childnode refid="781" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="779">
+        <label>oscit::Value</label>
+        <link refid="classoscit_1_1_value"/>
+        <childnode refid="780" relation="usage">
+          <edgelabel>midi_message_</edgelabel>
+        </childnode>
+        <childnode refid="782" relation="usage">
+          <edgelabel>string_</edgelabel>
+        </childnode>
+        <childnode refid="783" relation="usage">
+          <edgelabel>error_</edgelabel>
+        </childnode>
+        <childnode refid="784" relation="usage">
+          <edgelabel>list_</edgelabel>
+        </childnode>
+        <childnode refid="785" relation="usage">
+          <edgelabel>matrix_</edgelabel>
+        </childnode>
+        <childnode refid="786" relation="usage">
+          <edgelabel>hash_</edgelabel>
+        </childnode>
+      </node>
+      <node id="772">
+        <label>oscit::THash&lt; std::string,Object * &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+      </node>
+      <node id="780">
+        <label>oscit::MidiMessage</label>
+        <link refid="classoscit_1_1_midi_message"/>
+        <childnode refid="781" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="788">
+        <label>oscit::THashElement&lt; std::string, Value &gt;</label>
+        <link refid="structoscit_1_1_t_hash_element"/>
+        <childnode refid="788" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="779" relation="usage">
+          <edgelabel>obj</edgelabel>
+        </childnode>
+      </node>
+      <node id="769">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+      <node id="778">
+        <label>std::list&lt;Command * &gt;</label>
+        <link refid="classstd_1_1list"/>
+      </node>
+      <node id="790">
+        <label>std::vector&lt;Object * &gt;</label>
+        <link refid="classstd_1_1vector"/>
+      </node>
+      <node id="776">
+        <label>oscit::THash&lt; std::string,CallbackList * &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+      </node>
+      <node id="777">
+        <label>oscit::CTList&lt; Command * &gt;</label>
+        <link refid="classoscit_1_1_c_t_list"/>
+        <childnode refid="778" relation="public-inheritance">
+        </childnode>
+        <childnode refid="773" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="765">
+        <label>oscit::Observable</label>
+        <link refid="classoscit_1_1_observable"/>
+        <childnode refid="766" relation="public-inheritance">
+        </childnode>
+        <childnode refid="767" relation="usage">
+          <edgelabel>destruction_notifier_</edgelabel>
+        </childnode>
+      </node>
+      <node id="767">
+        <label>oscit::OnDestroyNotifier</label>
+        <link refid="classoscit_1_1_on_destroy_notifier"/>
+        <childnode refid="768" relation="public-inheritance">
+        </childnode>
+        <childnode refid="768" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="766">
+        <label>oscit::Observer</label>
+        <link refid="classoscit_1_1_observer"/>
+      </node>
+      <node id="770">
+        <label>oscit::CReferenceCounted</label>
+        <link refid="classoscit_1_1_c_reference_counted"/>
+        <childnode refid="769" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="763">
+        <label>oscit::Object</label>
+        <link refid="classoscit_1_1_object"/>
+        <childnode refid="764" relation="public-inheritance">
+        </childnode>
+        <childnode refid="765" relation="public-inheritance">
+        </childnode>
+        <childnode refid="770" relation="public-inheritance">
+        </childnode>
+        <childnode refid="771" relation="usage">
+          <edgelabel>children_</edgelabel>
+        </childnode>
+        <childnode refid="774" relation="usage">
+          <edgelabel>root_</edgelabel>
+        </childnode>
+        <childnode refid="779" relation="usage">
+          <edgelabel>type_</edgelabel>
+        </childnode>
+        <childnode refid="789" relation="usage">
+          <edgelabel>children_vector_</edgelabel>
+        </childnode>
+        <childnode refid="791" relation="usage">
+          <edgelabel>context_</edgelabel>
+        </childnode>
+        <childnode refid="763" relation="usage">
+          <edgelabel>parent_</edgelabel>
+        </childnode>
+      </node>
+      <node id="783">
+        <label>oscit::Error</label>
+        <link refid="classoscit_1_1_error"/>
+        <childnode refid="781" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="787">
+        <label>oscit::THash&lt; std::string, Value &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+        <childnode refid="788" relation="usage">
+          <edgelabel>thash_table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="771">
+        <label>oscit::CTHash&lt; std::string, Object * &gt;</label>
+        <link refid="classoscit_1_1_c_t_hash"/>
+        <childnode refid="772" relation="public-inheritance">
+        </childnode>
+        <childnode refid="773" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="762">
+        <label>oscit::ObjectHandle</label>
+        <link refid="classoscit_1_1_object_handle"/>
+        <childnode refid="763" relation="usage">
+          <edgelabel>object_</edgelabel>
+        </childnode>
+      </node>
+      <node id="764">
+        <label>oscit::Typed</label>
+        <link refid="classoscit_1_1_typed"/>
+      </node>
+      <node id="786">
+        <label>oscit::Hash</label>
+        <link refid="classoscit_1_1_hash"/>
+        <childnode refid="781" relation="public-inheritance">
+        </childnode>
+        <childnode refid="787" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="781">
+        <label>oscit::ReferenceCounted</label>
+        <link refid="classoscit_1_1_reference_counted"/>
+      </node>
+      <node id="789">
+        <label>oscit::CTVector&lt; Object * &gt;</label>
+        <link refid="classoscit_1_1_c_t_vector"/>
+        <childnode refid="790" relation="public-inheritance">
+        </childnode>
+        <childnode refid="773" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="773">
+        <label>oscit::RWMutex</label>
+        <link refid="classoscit_1_1_r_w_mutex"/>
+      </node>
+      <node id="768">
+        <label>oscit::CallbackList</label>
+        <link refid="classoscit_1_1_callback_list"/>
+        <childnode refid="769" relation="private-inheritance">
+        </childnode>
+        <childnode refid="766" relation="usage">
+          <edgelabel>list_owner_</edgelabel>
+        </childnode>
+      </node>
+      <node id="782">
+        <label>oscit::StringData</label>
+        <link refid="classoscit_1_1_string_data"/>
+        <childnode refid="781" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/object_handle.h" line="40" bodyfile="/Users/gaspard/git/oscit/include/oscit/object_handle.h" bodystart="40" bodyend="120"/>
+    <listofallmembers>
+      <member refid="classoscit_1_1_object_handle_1ac2f1d66752f118da48503f3a92e69eb7" prot="public" virt="non-virtual"><scope>oscit::ObjectHandle</scope><name>hold</name></member>
+      <member refid="classoscit_1_1_object_handle_1ade3da688c7ceb683090392f6ace4a5bc" prot="public" virt="non-virtual"><scope>oscit::ObjectHandle</scope><name>hold_fast</name></member>
+      <member refid="classoscit_1_1_object_handle_1a3812efca47dd51f5624577d448fad0d1" prot="protected" virt="non-virtual"><scope>oscit::ObjectHandle</scope><name>object_</name></member>
+      <member refid="classoscit_1_1_object_handle_1a7104f5d755e541ec3a3de0399a25a30e" prot="public" virt="non-virtual"><scope>oscit::ObjectHandle</scope><name>ObjectHandle</name></member>
+      <member refid="classoscit_1_1_object_handle_1a576a616a001e49164ff8509765371b44" prot="public" virt="non-virtual"><scope>oscit::ObjectHandle</scope><name>ObjectHandle</name></member>
+      <member refid="classoscit_1_1_object_handle_1a03bba3a4be0a47a8d0eea2ad841d1939" prot="public" virt="non-virtual"><scope>oscit::ObjectHandle</scope><name>operator*</name></member>
+      <member refid="classoscit_1_1_object_handle_1a1ba64e21921611cfcd0fb8997dcad792" prot="public" virt="non-virtual"><scope>oscit::ObjectHandle</scope><name>operator-&gt;</name></member>
+      <member refid="classoscit_1_1_object_handle_1a98a3cfea85f51d0698b5d0c8f1a2a2cc" prot="public" virt="non-virtual"><scope>oscit::ObjectHandle</scope><name>operator=</name></member>
+      <member refid="classoscit_1_1_object_handle_1a598e1cf62e5a2c28ed65d03321573e4d" prot="public" virt="non-virtual"><scope>oscit::ObjectHandle</scope><name>operator=</name></member>
+      <member refid="classoscit_1_1_object_handle_1a1d7fe3d7300f9914401290f3f394eaca" prot="public" virt="non-virtual"><scope>oscit::ObjectHandle</scope><name>ptr</name></member>
+      <member refid="classoscit_1_1_object_handle_1aad18ed68eb27851ff3c3af35866fc05b" prot="protected" virt="non-virtual"><scope>oscit::ObjectHandle</scope><name>release</name></member>
+      <member refid="classoscit_1_1_object_handle_1a6dcd728ebdc5fd6de5ef01fe1a881069" prot="protected" virt="non-virtual"><scope>oscit::ObjectHandle</scope><name>retain</name></member>
+      <member refid="classoscit_1_1_object_handle_1aa4968313f2c9f20c0f71920be17d6641" prot="public" virt="non-virtual"><scope>oscit::ObjectHandle</scope><name>type_cast</name></member>
+      <member refid="classoscit_1_1_object_handle_1a24886e17debece24c642d62abec46dfe" prot="public" virt="non-virtual"><scope>oscit::ObjectHandle</scope><name>~ObjectHandle</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

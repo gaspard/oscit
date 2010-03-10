@@ -1,0 +1,624 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="object__handle_8h" kind="file">
+    <compoundname>object_handle.h</compoundname>
+    <includes refid="object_8h" local="yes">oscit/object.h</includes>
+    <includedby refid="root_8h" local="yes">include/oscit/root.h</includedby>
+    <incdepgraph>
+      <node id="1716">
+        <label>list</label>
+      </node>
+      <node id="1736">
+        <label>oscit/value_types.h</label>
+        <link refid="value__types_8h"/>
+        <childnode refid="1737" relation="include">
+        </childnode>
+      </node>
+      <node id="1725">
+        <label>oscit/non_copyable.h</label>
+        <link refid="non__copyable_8h"/>
+      </node>
+      <node id="1734">
+        <label>stdarg.h</label>
+      </node>
+      <node id="1752">
+        <label>oscit/mutex.h</label>
+        <link refid="mutex_8h"/>
+        <childnode refid="1753" relation="include">
+        </childnode>
+        <childnode refid="1735" relation="include">
+        </childnode>
+        <childnode refid="1730" relation="include">
+        </childnode>
+        <childnode refid="1725" relation="include">
+        </childnode>
+        <childnode refid="1718" relation="include">
+        </childnode>
+      </node>
+      <node id="1722">
+        <label>oscit/observer.h</label>
+        <link refid="observer_8h"/>
+        <childnode refid="1716" relation="include">
+        </childnode>
+        <childnode refid="1720" relation="include">
+        </childnode>
+        <childnode refid="1723" relation="include">
+        </childnode>
+      </node>
+      <node id="1731">
+        <label>oscit/value.h</label>
+        <link refid="value_8h"/>
+        <childnode refid="1732" relation="include">
+        </childnode>
+        <childnode refid="1717" relation="include">
+        </childnode>
+        <childnode refid="1733" relation="include">
+        </childnode>
+        <childnode refid="1734" relation="include">
+        </childnode>
+        <childnode refid="1735" relation="include">
+        </childnode>
+        <childnode refid="1736" relation="include">
+        </childnode>
+        <childnode refid="1729" relation="include">
+        </childnode>
+        <childnode refid="1738" relation="include">
+        </childnode>
+        <childnode refid="1740" relation="include">
+        </childnode>
+        <childnode refid="1741" relation="include">
+        </childnode>
+        <childnode refid="1743" relation="include">
+        </childnode>
+        <childnode refid="1744" relation="include">
+        </childnode>
+      </node>
+      <node id="1735">
+        <label>assert.h</label>
+      </node>
+      <node id="1756">
+        <label>oscit/c_reference_counted.h</label>
+        <link refid="c__reference__counted_8h"/>
+        <childnode refid="1735" relation="include">
+        </childnode>
+        <childnode refid="1757" relation="include">
+        </childnode>
+        <childnode refid="1725" relation="include">
+        </childnode>
+      </node>
+      <node id="1749">
+        <label>oscit/hash_value.h</label>
+        <link refid="hash__value_8h"/>
+        <childnode refid="1731" relation="include">
+        </childnode>
+      </node>
+      <node id="1744">
+        <label>oscit/midi_message.h</label>
+        <link refid="midi__message_8h"/>
+        <childnode refid="1742" relation="include">
+        </childnode>
+        <childnode refid="1720" relation="include">
+        </childnode>
+        <childnode refid="1739" relation="include">
+        </childnode>
+      </node>
+      <node id="1715">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1762">
+        <label>oscit/c_thash.h</label>
+        <link refid="c__thash_8h"/>
+        <childnode refid="1729" relation="include">
+        </childnode>
+        <childnode refid="1759" relation="include">
+        </childnode>
+      </node>
+      <node id="1729">
+        <label>oscit/thash.h</label>
+        <link refid="thash_8h"/>
+        <childnode refid="1730" relation="include">
+        </childnode>
+        <childnode refid="1717" relation="include">
+        </childnode>
+        <childnode refid="1716" relation="include">
+        </childnode>
+        <childnode refid="1720" relation="include">
+        </childnode>
+      </node>
+      <node id="1741">
+        <label>oscit/list.h</label>
+        <link refid="list_8h"/>
+        <childnode refid="1736" relation="include">
+        </childnode>
+        <childnode refid="1739" relation="include">
+        </childnode>
+        <childnode refid="1742" relation="include">
+        </childnode>
+      </node>
+      <node id="1745">
+        <label>oscit/list_value.h</label>
+        <link refid="list__value_8h"/>
+        <childnode refid="1731" relation="include">
+        </childnode>
+      </node>
+      <node id="1761">
+        <label>errno.h</label>
+      </node>
+      <node id="1723">
+        <label>oscit/callback_list.h</label>
+        <link refid="callback__list_8h"/>
+        <childnode refid="1716" relation="include">
+        </childnode>
+        <childnode refid="1724" relation="include">
+        </childnode>
+        <childnode refid="1725" relation="include">
+        </childnode>
+      </node>
+      <node id="1754">
+        <label>oscit/location.h</label>
+        <link refid="location_8h"/>
+        <childnode refid="1717" relation="include">
+        </childnode>
+        <childnode refid="1755" relation="include">
+        </childnode>
+        <childnode refid="1729" relation="include">
+        </childnode>
+      </node>
+      <node id="1717">
+        <label>string</label>
+      </node>
+      <node id="1750">
+        <label>oscit/matrix_value.h</label>
+        <link refid="matrix__value_8h"/>
+        <childnode refid="1731" relation="include">
+        </childnode>
+      </node>
+      <node id="1728">
+        <label>oscit/conf.h</label>
+        <link refid="conf_8h"/>
+      </node>
+      <node id="1755">
+        <label>ostream</label>
+      </node>
+      <node id="1746">
+        <label>oscit/real_value.h</label>
+        <link refid="real__value_8h"/>
+        <childnode refid="1731" relation="include">
+        </childnode>
+      </node>
+      <node id="1727">
+        <label>oscit/values.h</label>
+        <link refid="values_8h"/>
+        <childnode refid="1728" relation="include">
+        </childnode>
+        <childnode refid="1729" relation="include">
+        </childnode>
+        <childnode refid="1731" relation="include">
+        </childnode>
+        <childnode refid="1745" relation="include">
+        </childnode>
+        <childnode refid="1746" relation="include">
+        </childnode>
+        <childnode refid="1747" relation="include">
+        </childnode>
+        <childnode refid="1748" relation="include">
+        </childnode>
+        <childnode refid="1749" relation="include">
+        </childnode>
+        <childnode refid="1750" relation="include">
+        </childnode>
+        <childnode refid="1751" relation="include">
+        </childnode>
+      </node>
+      <node id="1748">
+        <label>oscit/error_value.h</label>
+        <link refid="error__value_8h"/>
+        <childnode refid="1731" relation="include">
+        </childnode>
+      </node>
+      <node id="1753">
+        <label>pthread.h</label>
+      </node>
+      <node id="1737">
+        <label>sys/types.h</label>
+      </node>
+      <node id="1732">
+        <label>string.h</label>
+      </node>
+      <node id="1730">
+        <label>cstdio</label>
+      </node>
+      <node id="1742">
+        <label>vector</label>
+      </node>
+      <node id="1721">
+        <label>oscit/observable.h</label>
+        <link refid="observable_8h"/>
+        <childnode refid="1716" relation="include">
+        </childnode>
+        <childnode refid="1722" relation="include">
+        </childnode>
+        <childnode refid="1726" relation="include">
+        </childnode>
+      </node>
+      <node id="1740">
+        <label>oscit/error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="1727" relation="include">
+        </childnode>
+        <childnode refid="1739" relation="include">
+        </childnode>
+      </node>
+      <node id="1733">
+        <label>sstream</label>
+      </node>
+      <node id="1724">
+        <label>oscit/callback.h</label>
+        <link refid="callback_8h"/>
+      </node>
+      <node id="1759">
+        <label>oscit/rw_mutex.h</label>
+        <link refid="rw__mutex_8h"/>
+        <childnode refid="1760" relation="include">
+        </childnode>
+        <childnode refid="1725" relation="include">
+        </childnode>
+        <childnode refid="1732" relation="include">
+        </childnode>
+      </node>
+      <node id="1738">
+        <label>oscit/string_data.h</label>
+        <link refid="string__data_8h"/>
+        <childnode refid="1727" relation="include">
+        </childnode>
+        <childnode refid="1739" relation="include">
+        </childnode>
+      </node>
+      <node id="1739">
+        <label>oscit/reference_counted.h</label>
+        <link refid="reference__counted_8h"/>
+      </node>
+      <node id="1760">
+        <label>oscit/semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="1735" relation="include">
+        </childnode>
+        <childnode refid="1760" relation="include">
+        </childnode>
+        <childnode refid="1761" relation="include">
+        </childnode>
+        <childnode refid="1732" relation="include">
+        </childnode>
+        <childnode refid="1725" relation="include">
+        </childnode>
+        <childnode refid="1752" relation="include">
+        </childnode>
+      </node>
+      <node id="1751">
+        <label>oscit/midi_value.h</label>
+        <link refid="midi__value_8h"/>
+        <childnode refid="1731" relation="include">
+        </childnode>
+      </node>
+      <node id="1758">
+        <label>oscit/c_tvector.h</label>
+        <link refid="c__tvector_8h"/>
+        <childnode refid="1742" relation="include">
+        </childnode>
+        <childnode refid="1759" relation="include">
+        </childnode>
+      </node>
+      <node id="1720">
+        <label>iostream</label>
+      </node>
+      <node id="1747">
+        <label>oscit/string_value.h</label>
+        <link refid="string__value_8h"/>
+        <childnode refid="1731" relation="include">
+        </childnode>
+      </node>
+      <node id="1757">
+        <label>oscit/atomic_counter.h</label>
+        <link refid="atomic__counter_8h"/>
+      </node>
+      <node id="1718">
+        <label>oscit/typed.h</label>
+        <link refid="typed_8h"/>
+        <childnode refid="1719" relation="include">
+        </childnode>
+        <childnode refid="1720" relation="include">
+        </childnode>
+      </node>
+      <node id="1743">
+        <label>oscit/hash.h</label>
+        <link refid="hash_8h"/>
+        <childnode refid="1727" relation="include">
+        </childnode>
+      </node>
+      <node id="1714">
+        <label>oscit/object.h</label>
+        <link refid="object_8h"/>
+        <childnode refid="1715" relation="include">
+        </childnode>
+        <childnode refid="1716" relation="include">
+        </childnode>
+        <childnode refid="1717" relation="include">
+        </childnode>
+        <childnode refid="1718" relation="include">
+        </childnode>
+        <childnode refid="1721" relation="include">
+        </childnode>
+        <childnode refid="1727" relation="include">
+        </childnode>
+        <childnode refid="1729" relation="include">
+        </childnode>
+        <childnode refid="1752" relation="include">
+        </childnode>
+        <childnode refid="1754" relation="include">
+        </childnode>
+        <childnode refid="1756" relation="include">
+        </childnode>
+        <childnode refid="1758" relation="include">
+        </childnode>
+        <childnode refid="1762" relation="include">
+        </childnode>
+      </node>
+      <node id="1719">
+        <label>stdio.h</label>
+      </node>
+      <node id="1713">
+        <label>include/oscit/object_handle.h</label>
+        <link refid="object_handle.h"/>
+        <childnode refid="1714" relation="include">
+        </childnode>
+      </node>
+      <node id="1726">
+        <label>oscit/on_destroy_notifier.h</label>
+        <link refid="on__destroy__notifier_8h"/>
+        <childnode refid="1723" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1773">
+        <label>include/oscit/list_with_type_meta_method.h</label>
+        <link refid="list__with__type__meta__method_8h"/>
+      </node>
+      <node id="1776">
+        <label>include/oscit/object_proxy.h</label>
+        <link refid="object__proxy_8h"/>
+        <childnode refid="1774" relation="include">
+        </childnode>
+      </node>
+      <node id="1780">
+        <label>include/oscit/type_meta_method.h</label>
+        <link refid="type__meta__method_8h"/>
+      </node>
+      <node id="1767">
+        <label>include/oscit/oscit.h</label>
+        <link refid="oscit_8h"/>
+      </node>
+      <node id="1764">
+        <label>include/oscit/root.h</label>
+        <link refid="root_8h"/>
+        <childnode refid="1765" relation="include">
+        </childnode>
+        <childnode refid="1766" relation="include">
+        </childnode>
+        <childnode refid="1768" relation="include">
+        </childnode>
+        <childnode refid="1769" relation="include">
+        </childnode>
+        <childnode refid="1771" relation="include">
+        </childnode>
+        <childnode refid="1772" relation="include">
+        </childnode>
+        <childnode refid="1773" relation="include">
+        </childnode>
+        <childnode refid="1767" relation="include">
+        </childnode>
+        <childnode refid="1774" relation="include">
+        </childnode>
+        <childnode refid="1775" relation="include">
+        </childnode>
+        <childnode refid="1779" relation="include">
+        </childnode>
+        <childnode refid="1780" relation="include">
+        </childnode>
+      </node>
+      <node id="1771">
+        <label>include/oscit/info_meta_method.h</label>
+        <link refid="info__meta__method_8h"/>
+      </node>
+      <node id="1769">
+        <label>include/oscit/file_method.h</label>
+        <link refid="file__method_8h"/>
+        <childnode refid="1770" relation="include">
+        </childnode>
+        <childnode refid="1767" relation="include">
+        </childnode>
+      </node>
+      <node id="1768">
+        <label>include/oscit/error_meta_method.h</label>
+        <link refid="error__meta__method_8h"/>
+      </node>
+      <node id="1777">
+        <label>include/oscit/osc_root_proxy.h</label>
+        <link refid="osc__root__proxy_8h"/>
+      </node>
+      <node id="1766">
+        <label>include/oscit/call.h</label>
+        <link refid="call_8h"/>
+        <childnode refid="1767" relation="include">
+        </childnode>
+      </node>
+      <node id="1774">
+        <label>include/oscit/proxy_factory.h</label>
+        <link refid="proxy__factory_8h"/>
+        <childnode refid="1767" relation="include">
+        </childnode>
+      </node>
+      <node id="1770">
+        <label>include/oscit/hash_file_method.h</label>
+        <link refid="hash__file__method_8h"/>
+        <childnode refid="1767" relation="include">
+        </childnode>
+      </node>
+      <node id="1772">
+        <label>include/oscit/list_meta_method.h</label>
+        <link refid="list__meta__method_8h"/>
+      </node>
+      <node id="1778">
+        <label>include/oscit/zeroconf_browser.h</label>
+        <link refid="zeroconf__browser_8h"/>
+        <childnode refid="1767" relation="include">
+        </childnode>
+      </node>
+      <node id="1775">
+        <label>include/oscit/root_proxy.h</label>
+        <link refid="root__proxy_8h"/>
+        <childnode refid="1776" relation="include">
+        </childnode>
+        <childnode refid="1777" relation="include">
+        </childnode>
+        <childnode refid="1774" relation="include">
+        </childnode>
+        <childnode refid="1778" relation="include">
+        </childnode>
+      </node>
+      <node id="1765">
+        <label>include/oscit/alias.h</label>
+        <link refid="alias_8h"/>
+      </node>
+      <node id="1763">
+        <label>include/oscit/object_handle.h</label>
+        <link refid="object_handle.h"/>
+        <childnode refid="1764" relation="include">
+        </childnode>
+      </node>
+      <node id="1779">
+        <label>include/oscit/tree_meta_method.h</label>
+        <link refid="tree__meta__method_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classoscit_1_1_object_handle" prot="public">oscit::ObjectHandle</innerclass>
+    <innernamespace refid="namespaceoscit">oscit</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/>==============================================================================</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>OSCIT<sp/>library<sp/>(http://rubyk.org/liboscit)</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2007-2010<sp/>by<sp/>Gaspard<sp/>Bucher<sp/>-<sp/>Buma<sp/>(http://teti.ch).</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"></highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/><sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/><sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/><sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/><sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"></highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/><sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"></highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/><sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/><sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/><sp/><sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/><sp/><sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/><sp/><sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/><sp/><sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/><sp/><sp/>THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"></highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/><sp/>==============================================================================</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="object_8h" kindref="compound">oscit/object.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>OSCIT_INCLUDE_OSCIT_OBJECT_HANDLE_H_</highlight></codeline>
+<codeline lineno="33"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>OSCIT_INCLUDE_OSCIT_OBJECT_HANDLE_H_</highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">oscit<sp/>{</highlight></codeline>
+<codeline lineno="40" refid="classoscit_1_1_object_handle" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classoscit_1_1_object_handle" kindref="compound">ObjectHandle</ref><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="42" refid="classoscit_1_1_object_handle_1a7104f5d755e541ec3a3de0399a25a30e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_object_handle_1a7104f5d755e541ec3a3de0399a25a30e" kindref="member">ObjectHandle</ref>(<ref refid="classoscit_1_1_object" kindref="compound">Object</ref><sp/>*</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">)<sp/>:<sp/><ref refid="classoscit_1_1_object_handle_1a3812efca47dd51f5624577d448fad0d1" kindref="member">object_</ref>(object)<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classoscit_1_1_object_handle_1a6dcd728ebdc5fd6de5ef01fe1a881069" kindref="member">retain</ref>();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="classoscit_1_1_object_handle_1a576a616a001e49164ff8509765371b44" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_object_handle_1a576a616a001e49164ff8509765371b44" kindref="member">ObjectHandle</ref>()<sp/>:<sp/><ref refid="classoscit_1_1_object_handle_1a3812efca47dd51f5624577d448fad0d1" kindref="member">object_</ref>(NULL)<sp/>{}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>no<sp/>copy<sp/>for<sp/>the<sp/>moment</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>ObjectHandle(const<sp/>ObjectHandle<sp/>&amp;other)<sp/>:<sp/>object_(other.object_)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>if<sp/>(object_)<sp/>retain();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="classoscit_1_1_object_handle_1a98a3cfea85f51d0698b5d0c8f1a2a2cc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_object_handle_1a98a3cfea85f51d0698b5d0c8f1a2a2cc" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_object_handle" kindref="compound">ObjectHandle</ref><sp/>&amp;other)<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classoscit_1_1_object_handle_1aad18ed68eb27851ff3c3af35866fc05b" kindref="member">release</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classoscit_1_1_object_handle_1a3812efca47dd51f5624577d448fad0d1" kindref="member">object_</ref><sp/>=<sp/>other.<ref refid="classoscit_1_1_object_handle_1a3812efca47dd51f5624577d448fad0d1" kindref="member">object_</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classoscit_1_1_object_handle_1a3812efca47dd51f5624577d448fad0d1" kindref="member">object_</ref>)<sp/><ref refid="classoscit_1_1_object_handle_1a6dcd728ebdc5fd6de5ef01fe1a881069" kindref="member">retain</ref>();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="classoscit_1_1_object_handle_1a598e1cf62e5a2c28ed65d03321573e4d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_object_handle_1a598e1cf62e5a2c28ed65d03321573e4d" kindref="member">operator=</ref>(<ref refid="classoscit_1_1_object" kindref="compound">Object</ref><sp/>*</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classoscit_1_1_object_handle_1ac2f1d66752f118da48503f3a92e69eb7" kindref="member">hold</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="classoscit_1_1_object_handle_1a24886e17debece24c642d62abec46dfe" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_object_handle_1a24886e17debece24c642d62abec46dfe" kindref="member">~ObjectHandle</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classoscit_1_1_object_handle_1aad18ed68eb27851ff3c3af35866fc05b" kindref="member">release</ref>();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="classoscit_1_1_object_handle_1ac2f1d66752f118da48503f3a92e69eb7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_object_handle_1ac2f1d66752f118da48503f3a92e69eb7" kindref="member">hold</ref>(<ref refid="classoscit_1_1_object" kindref="compound">Object</ref><sp/>*</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>==<sp/><ref refid="classoscit_1_1_object_handle_1a3812efca47dd51f5624577d448fad0d1" kindref="member">object_</ref>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classoscit_1_1_object_handle_1aad18ed68eb27851ff3c3af35866fc05b" kindref="member">release</ref>();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classoscit_1_1_object_handle_1a3812efca47dd51f5624577d448fad0d1" kindref="member">object_</ref><sp/>=<sp/>object;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classoscit_1_1_object_handle_1a3812efca47dd51f5624577d448fad0d1" kindref="member">object_</ref>)<sp/><ref refid="classoscit_1_1_object_handle_1a6dcd728ebdc5fd6de5ef01fe1a881069" kindref="member">retain</ref>();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="classoscit_1_1_object_handle_1ade3da688c7ceb683090392f6ace4a5bc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_object_handle_1ade3da688c7ceb683090392f6ace4a5bc" kindref="member">hold_fast</ref>(<ref refid="classoscit_1_1_object" kindref="compound">Object</ref><sp/>*</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(!<ref refid="classoscit_1_1_object_handle_1a3812efca47dd51f5624577d448fad0d1" kindref="member">object_</ref>);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classoscit_1_1_object_handle_1a3812efca47dd51f5624577d448fad0d1" kindref="member">object_</ref><sp/>=<sp/>object;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classoscit_1_1_object_handle_1a6dcd728ebdc5fd6de5ef01fe1a881069" kindref="member">retain</ref>();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="classoscit_1_1_object_handle_1a03bba3a4be0a47a8d0eea2ad841d1939" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_object" kindref="compound">Object</ref><sp/>&amp;<ref refid="classoscit_1_1_object_handle_1a03bba3a4be0a47a8d0eea2ad841d1939" kindref="member">operator*</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*<ref refid="classoscit_1_1_object_handle_1a3812efca47dd51f5624577d448fad0d1" kindref="member">object_</ref>;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="classoscit_1_1_object_handle_1a1ba64e21921611cfcd0fb8997dcad792" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_object" kindref="compound">Object</ref><sp/>*<ref refid="classoscit_1_1_object_handle_1a1ba64e21921611cfcd0fb8997dcad792" kindref="member">operator-&gt;</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_object_handle_1a3812efca47dd51f5624577d448fad0d1" kindref="member">object_</ref>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="102" refid="classoscit_1_1_object_handle_1aa4968313f2c9f20c0f71920be17d6641" refkind="member"><highlight class="normal"><sp/><sp/>T<sp/>*<ref refid="classoscit_1_1_object_handle_1aa4968313f2c9f20c0f71920be17d6641" kindref="member">type_cast</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="typed_8h_1a460141e623c139370ea33a1309e41c83" kindref="member">TYPE_CAST</ref>(T,<sp/><ref refid="classoscit_1_1_object_handle_1a3812efca47dd51f5624577d448fad0d1" kindref="member">object_</ref>);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="classoscit_1_1_object_handle_1a1d7fe3d7300f9914401290f3f394eaca" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_object" kindref="compound">Object</ref><sp/>*<ref refid="classoscit_1_1_object_handle_1a1d7fe3d7300f9914401290f3f394eaca" kindref="member">ptr</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_object_handle_1a3812efca47dd51f5624577d448fad0d1" kindref="member">object_</ref>;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="111" refid="classoscit_1_1_object_handle_1a3812efca47dd51f5624577d448fad0d1" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_object" kindref="compound">Object</ref><sp/>*<ref refid="classoscit_1_1_object_handle_1a3812efca47dd51f5624577d448fad0d1" kindref="member">object_</ref>;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="classoscit_1_1_object_handle_1aad18ed68eb27851ff3c3af35866fc05b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_object_handle_1aad18ed68eb27851ff3c3af35866fc05b" kindref="member">release</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classoscit_1_1_object_handle_1a3812efca47dd51f5624577d448fad0d1" kindref="member">object_</ref>)<sp/><ref refid="classoscit_1_1_object_handle_1a3812efca47dd51f5624577d448fad0d1" kindref="member">object_</ref>-&gt;<ref refid="classoscit_1_1_c_reference_counted_1af937a9fdcb7b0af90e7a99e8413a041f" kindref="member">release</ref>();</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="classoscit_1_1_object_handle_1a6dcd728ebdc5fd6de5ef01fe1a881069" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_object_handle_1a6dcd728ebdc5fd6de5ef01fe1a881069" kindref="member">retain</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classoscit_1_1_object_handle_1a3812efca47dd51f5624577d448fad0d1" kindref="member">object_</ref>-&gt;<ref refid="classoscit_1_1_c_reference_counted_1a25c5b24bbd95ad923e77d4f0fa94b888" kindref="member">retain</ref>();</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>oscit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>OSCIT_INCLUDE_OSCIT_OBJECT_HANDLE_H_</highlight></codeline>
+    </programlisting>
+    <location file="/Users/gaspard/git/oscit/include/oscit/object_handle.h"/>
+  </compounddef>
+</doxygen>

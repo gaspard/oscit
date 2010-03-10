@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classoscit_1_1_reference_counted" kind="class" prot="public">
+    <compoundname>oscit::ReferenceCounted</compoundname>
+    <derivedcompoundref refid="classoscit_1_1_error" prot="public" virt="non-virtual">oscit::Error</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_hash" prot="public" virt="non-virtual">oscit::Hash</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_list" prot="public" virt="non-virtual">oscit::List</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_midi_message" prot="public" virt="non-virtual">oscit::MidiMessage</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_string_data" prot="public" virt="non-virtual">oscit::StringData</derivedcompoundref>
+    <includes refid="reference__counted_8h" local="no">reference_counted.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classoscit_1_1_reference_counted_1a9be52b83e9ad4edee007eea34f5089ff" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t oscit::ReferenceCounted::ref_count_</definition>
+        <argsstring></argsstring>
+        <name>ref_count_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/reference_counted.h" line="68" bodyfile="/Users/gaspard/git/oscit/include/oscit/reference_counted.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classoscit_1_1_reference_counted_1a1e063507f60cf8b463772c47a8626f4a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::ReferenceCounted::ReferenceCounted</definition>
+        <argsstring>()</argsstring>
+        <name>ReferenceCounted</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/reference_counted.h" line="42" bodyfile="/Users/gaspard/git/oscit/include/oscit/reference_counted.h" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_reference_counted_1aefe81cffcd79ab2756d637d6f9dc2377" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual oscit::ReferenceCounted::~ReferenceCounted</definition>
+        <argsstring>()</argsstring>
+        <name>~ReferenceCounted</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/reference_counted.h" line="44" bodyfile="/Users/gaspard/git/oscit/include/oscit/reference_counted.h" bodystart="44" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_reference_counted_1a8cf48a9a79dd47523eab197ec6c33f69" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t oscit::ReferenceCounted::ref_count</definition>
+        <argsstring>()</argsstring>
+        <name>ref_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/reference_counted.h" line="46" bodyfile="/Users/gaspard/git/oscit/include/oscit/reference_counted.h" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_reference_counted_1ab837868cf995ca83f797dd48d85e9f3c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::ReferenceCounted::retain</definition>
+        <argsstring>()</argsstring>
+        <name>retain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/reference_counted.h" line="60" bodyfile="/Users/gaspard/git/oscit/include/oscit/reference_counted.h" bodystart="60" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_reference_counted_1a34971a082c266cd111fa8c3fa6536e3f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::ReferenceCounted::release</definition>
+        <argsstring>()</argsstring>
+        <name>release</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/reference_counted.h" line="64" bodyfile="/Users/gaspard/git/oscit/include/oscit/reference_counted.h" bodystart="64" bodyend="66"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classoscit_1_1_reference_counted_1af382a537a3969b11530020715863e75c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>T *</type>
+        <definition>static T* oscit::ReferenceCounted::acquire</definition>
+        <argsstring>(T *elem)</argsstring>
+        <name>acquire</name>
+        <param>
+          <type>T *</type>
+          <declname>elem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/reference_counted.h" line="49" bodyfile="/Users/gaspard/git/oscit/include/oscit/reference_counted.h" bodystart="49" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_reference_counted_1a84232e7ca91f7495b935cbecb8d1bb75" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>T *</type>
+        <definition>static T* oscit::ReferenceCounted::release</definition>
+        <argsstring>(T *elem)</argsstring>
+        <name>release</name>
+        <param>
+          <type>T *</type>
+          <declname>elem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/reference_counted.h" line="55" bodyfile="/Users/gaspard/git/oscit/include/oscit/reference_counted.h" bodystart="55" bodyend="58"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Maintains a reference count of an element. When the reference count reaches zero, the object is deleted. Note that this class *is not thread-safe*. You should use <ref refid="classoscit_1_1_c_reference_counted" kindref="compound">CReferenceCounted</ref> for a thread-safe version. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1132">
+        <label>oscit::List</label>
+        <link refid="classoscit_1_1_list"/>
+        <childnode refid="1129" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1133">
+        <label>oscit::MidiMessage</label>
+        <link refid="classoscit_1_1_midi_message"/>
+        <childnode refid="1129" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1130">
+        <label>oscit::Error</label>
+        <link refid="classoscit_1_1_error"/>
+        <childnode refid="1129" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1131">
+        <label>oscit::Hash</label>
+        <link refid="classoscit_1_1_hash"/>
+        <childnode refid="1129" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1129">
+        <label>oscit::ReferenceCounted</label>
+        <link refid="classoscit_1_1_reference_counted"/>
+      </node>
+      <node id="1134">
+        <label>oscit::StringData</label>
+        <link refid="classoscit_1_1_string_data"/>
+        <childnode refid="1129" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/reference_counted.h" line="40" bodyfile="/Users/gaspard/git/oscit/include/oscit/reference_counted.h" bodystart="40" bodyend="69"/>
+    <listofallmembers>
+      <member refid="classoscit_1_1_reference_counted_1af382a537a3969b11530020715863e75c" prot="public" virt="non-virtual"><scope>oscit::ReferenceCounted</scope><name>acquire</name></member>
+      <member refid="classoscit_1_1_reference_counted_1a8cf48a9a79dd47523eab197ec6c33f69" prot="public" virt="non-virtual"><scope>oscit::ReferenceCounted</scope><name>ref_count</name></member>
+      <member refid="classoscit_1_1_reference_counted_1a9be52b83e9ad4edee007eea34f5089ff" prot="protected" virt="non-virtual"><scope>oscit::ReferenceCounted</scope><name>ref_count_</name></member>
+      <member refid="classoscit_1_1_reference_counted_1a1e063507f60cf8b463772c47a8626f4a" prot="public" virt="non-virtual"><scope>oscit::ReferenceCounted</scope><name>ReferenceCounted</name></member>
+      <member refid="classoscit_1_1_reference_counted_1a84232e7ca91f7495b935cbecb8d1bb75" prot="public" virt="non-virtual"><scope>oscit::ReferenceCounted</scope><name>release</name></member>
+      <member refid="classoscit_1_1_reference_counted_1a34971a082c266cd111fa8c3fa6536e3f" prot="public" virt="non-virtual"><scope>oscit::ReferenceCounted</scope><name>release</name></member>
+      <member refid="classoscit_1_1_reference_counted_1ab837868cf995ca83f797dd48d85e9f3c" prot="public" virt="non-virtual"><scope>oscit::ReferenceCounted</scope><name>retain</name></member>
+      <member refid="classoscit_1_1_reference_counted_1aefe81cffcd79ab2756d637d6f9dc2377" prot="public" virt="virtual"><scope>oscit::ReferenceCounted</scope><name>~ReferenceCounted</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

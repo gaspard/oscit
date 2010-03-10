@@ -1,0 +1,440 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="mutex_8h" kind="file">
+    <compoundname>mutex.h</compoundname>
+    <includes local="no">pthread.h</includes>
+    <includes local="no">assert.h</includes>
+    <includes local="no">cstdio</includes>
+    <includes refid="non__copyable_8h" local="yes">oscit/non_copyable.h</includes>
+    <includes refid="typed_8h" local="yes">oscit/typed.h</includes>
+    <includedby refid="object_8h" local="yes">include/oscit/object.h</includedby>
+    <includedby refid="root_8h" local="yes">include/oscit/root.h</includedby>
+    <includedby refid="semaphore_8h" local="yes">include/oscit/semaphore.h</includedby>
+    <includedby refid="thread_8h" local="yes">include/oscit/thread.h</includedby>
+    <includedby refid="timer_8h" local="yes">include/oscit/timer.h</includedby>
+    <includedby refid="zeroconf__browser_8h" local="yes">include/oscit/zeroconf_browser.h</includedby>
+    <includedby refid="zeroconf__registration_8h" local="yes">include/oscit/zeroconf_registration.h</includedby>
+    <incdepgraph>
+      <node id="1561">
+        <label>oscit/non_copyable.h</label>
+        <link refid="non__copyable_8h"/>
+      </node>
+      <node id="1557">
+        <label>include/oscit/mutex.h</label>
+        <link refid="mutex.h"/>
+        <childnode refid="1558" relation="include">
+        </childnode>
+        <childnode refid="1559" relation="include">
+        </childnode>
+        <childnode refid="1560" relation="include">
+        </childnode>
+        <childnode refid="1561" relation="include">
+        </childnode>
+        <childnode refid="1562" relation="include">
+        </childnode>
+      </node>
+      <node id="1559">
+        <label>assert.h</label>
+      </node>
+      <node id="1558">
+        <label>pthread.h</label>
+      </node>
+      <node id="1560">
+        <label>cstdio</label>
+      </node>
+      <node id="1564">
+        <label>iostream</label>
+      </node>
+      <node id="1562">
+        <label>oscit/typed.h</label>
+        <link refid="typed_8h"/>
+        <childnode refid="1563" relation="include">
+        </childnode>
+        <childnode refid="1564" relation="include">
+        </childnode>
+      </node>
+      <node id="1563">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1579">
+        <label>include/oscit/list_with_type_meta_method.h</label>
+        <link refid="list__with__type__meta__method_8h"/>
+      </node>
+      <node id="1565">
+        <label>include/oscit/mutex.h</label>
+        <link refid="mutex.h"/>
+        <childnode refid="1566" relation="include">
+        </childnode>
+        <childnode refid="1571" relation="include">
+        </childnode>
+        <childnode refid="1588" relation="include">
+        </childnode>
+        <childnode refid="1593" relation="include">
+        </childnode>
+        <childnode refid="1597" relation="include">
+        </childnode>
+        <childnode refid="1584" relation="include">
+        </childnode>
+        <childnode refid="1598" relation="include">
+        </childnode>
+      </node>
+      <node id="1594">
+        <label>include/oscit/command.h</label>
+        <link refid="command_8h"/>
+        <childnode refid="1595" relation="include">
+        </childnode>
+        <childnode refid="1569" relation="include">
+        </childnode>
+        <childnode refid="1571" relation="include">
+        </childnode>
+      </node>
+      <node id="1598">
+        <label>include/oscit/zeroconf_registration.h</label>
+        <link refid="zeroconf__registration_8h"/>
+      </node>
+      <node id="1593">
+        <label>include/oscit/thread.h</label>
+        <link refid="thread_8h"/>
+        <childnode refid="1594" relation="include">
+        </childnode>
+        <childnode refid="1569" relation="include">
+        </childnode>
+        <childnode refid="1597" relation="include">
+        </childnode>
+      </node>
+      <node id="1590">
+        <label>include/oscit/c_thash.h</label>
+        <link refid="c__thash_8h"/>
+        <childnode refid="1566" relation="include">
+        </childnode>
+        <childnode refid="1571" relation="include">
+        </childnode>
+      </node>
+      <node id="1595">
+        <label>include/oscit/osc_command.h</label>
+        <link refid="osc__command_8h"/>
+        <childnode refid="1596" relation="include">
+        </childnode>
+        <childnode refid="1569" relation="include">
+        </childnode>
+      </node>
+      <node id="1582">
+        <label>include/oscit/object_proxy.h</label>
+        <link refid="object__proxy_8h"/>
+        <childnode refid="1580" relation="include">
+        </childnode>
+      </node>
+      <node id="1587">
+        <label>include/oscit/osc_remote_object.h</label>
+        <link refid="osc__remote__object_8h"/>
+      </node>
+      <node id="1586">
+        <label>include/oscit/type_meta_method.h</label>
+        <link refid="type__meta__method_8h"/>
+      </node>
+      <node id="1571">
+        <label>include/oscit/root.h</label>
+        <link refid="root_8h"/>
+        <childnode refid="1572" relation="include">
+        </childnode>
+        <childnode refid="1573" relation="include">
+        </childnode>
+        <childnode refid="1574" relation="include">
+        </childnode>
+        <childnode refid="1575" relation="include">
+        </childnode>
+        <childnode refid="1577" relation="include">
+        </childnode>
+        <childnode refid="1578" relation="include">
+        </childnode>
+        <childnode refid="1579" relation="include">
+        </childnode>
+        <childnode refid="1569" relation="include">
+        </childnode>
+        <childnode refid="1580" relation="include">
+        </childnode>
+        <childnode refid="1581" relation="include">
+        </childnode>
+        <childnode refid="1585" relation="include">
+        </childnode>
+        <childnode refid="1586" relation="include">
+        </childnode>
+      </node>
+      <node id="1569">
+        <label>include/oscit/oscit.h</label>
+        <link refid="oscit_8h"/>
+      </node>
+      <node id="1577">
+        <label>include/oscit/info_meta_method.h</label>
+        <link refid="info__meta__method_8h"/>
+      </node>
+      <node id="1575">
+        <label>include/oscit/file_method.h</label>
+        <link refid="file__method_8h"/>
+        <childnode refid="1576" relation="include">
+        </childnode>
+        <childnode refid="1569" relation="include">
+        </childnode>
+      </node>
+      <node id="1574">
+        <label>include/oscit/error_meta_method.h</label>
+        <link refid="error__meta__method_8h"/>
+      </node>
+      <node id="1583">
+        <label>include/oscit/osc_root_proxy.h</label>
+        <link refid="osc__root__proxy_8h"/>
+      </node>
+      <node id="1567">
+        <label>include/oscit/log_object.h</label>
+        <link refid="log__object_8h"/>
+      </node>
+      <node id="1596">
+        <label>include/oscit/osc_map_command.h</label>
+        <link refid="osc__map__command_8h"/>
+        <childnode refid="1569" relation="include">
+        </childnode>
+      </node>
+      <node id="1597">
+        <label>include/oscit/timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="1569" relation="include">
+        </childnode>
+      </node>
+      <node id="1573">
+        <label>include/oscit/call.h</label>
+        <link refid="call_8h"/>
+        <childnode refid="1569" relation="include">
+        </childnode>
+      </node>
+      <node id="1580">
+        <label>include/oscit/proxy_factory.h</label>
+        <link refid="proxy__factory_8h"/>
+        <childnode refid="1569" relation="include">
+        </childnode>
+      </node>
+      <node id="1576">
+        <label>include/oscit/hash_file_method.h</label>
+        <link refid="hash__file__method_8h"/>
+        <childnode refid="1569" relation="include">
+        </childnode>
+      </node>
+      <node id="1578">
+        <label>include/oscit/list_meta_method.h</label>
+        <link refid="list__meta__method_8h"/>
+      </node>
+      <node id="1589">
+        <label>include/oscit/rw_mutex.h</label>
+        <link refid="rw__mutex_8h"/>
+        <childnode refid="1590" relation="include">
+        </childnode>
+        <childnode refid="1591" relation="include">
+        </childnode>
+        <childnode refid="1592" relation="include">
+        </childnode>
+      </node>
+      <node id="1588">
+        <label>include/oscit/semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="1589" relation="include">
+        </childnode>
+        <childnode refid="1588" relation="include">
+        </childnode>
+        <childnode refid="1593" relation="include">
+        </childnode>
+      </node>
+      <node id="1592">
+        <label>include/oscit/c_tvector.h</label>
+        <link refid="c__tvector_8h"/>
+        <childnode refid="1566" relation="include">
+        </childnode>
+      </node>
+      <node id="1584">
+        <label>include/oscit/zeroconf_browser.h</label>
+        <link refid="zeroconf__browser_8h"/>
+        <childnode refid="1569" relation="include">
+        </childnode>
+      </node>
+      <node id="1581">
+        <label>include/oscit/root_proxy.h</label>
+        <link refid="root__proxy_8h"/>
+        <childnode refid="1582" relation="include">
+        </childnode>
+        <childnode refid="1583" relation="include">
+        </childnode>
+        <childnode refid="1580" relation="include">
+        </childnode>
+        <childnode refid="1584" relation="include">
+        </childnode>
+      </node>
+      <node id="1591">
+        <label>include/oscit/c_tlist.h</label>
+        <link refid="c__tlist_8h"/>
+        <childnode refid="1571" relation="include">
+        </childnode>
+      </node>
+      <node id="1566">
+        <label>include/oscit/object.h</label>
+        <link refid="object_8h"/>
+        <childnode refid="1567" relation="include">
+        </childnode>
+        <childnode refid="1568" relation="include">
+        </childnode>
+        <childnode refid="1570" relation="include">
+        </childnode>
+        <childnode refid="1582" relation="include">
+        </childnode>
+        <childnode refid="1587" relation="include">
+        </childnode>
+        <childnode refid="1569" relation="include">
+        </childnode>
+        <childnode refid="1571" relation="include">
+        </childnode>
+      </node>
+      <node id="1572">
+        <label>include/oscit/alias.h</label>
+        <link refid="alias_8h"/>
+      </node>
+      <node id="1570">
+        <label>include/oscit/object_handle.h</label>
+        <link refid="object__handle_8h"/>
+        <childnode refid="1571" relation="include">
+        </childnode>
+      </node>
+      <node id="1568">
+        <label>include/oscit/method.h</label>
+        <link refid="method_8h"/>
+        <childnode refid="1569" relation="include">
+        </childnode>
+      </node>
+      <node id="1585">
+        <label>include/oscit/tree_meta_method.h</label>
+        <link refid="tree__meta__method_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classoscit_1_1_mutex" prot="public">oscit::Mutex</innerclass>
+    <innerclass refid="classoscit_1_1_scoped_lock" prot="public">oscit::ScopedLock</innerclass>
+    <innerclass refid="classoscit_1_1_scoped_unlock" prot="public">oscit::ScopedUnlock</innerclass>
+    <innernamespace refid="namespaceoscit">oscit</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/>==============================================================================</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>OSCIT<sp/>library<sp/>(http://rubyk.org/liboscit)</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2007-2010<sp/>by<sp/>Gaspard<sp/>Bucher<sp/>-<sp/>Buma<sp/>(http://teti.ch).</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"></highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/><sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/><sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/><sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/><sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"></highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/><sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"></highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/><sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/><sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/><sp/><sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/><sp/><sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/><sp/><sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/><sp/><sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/><sp/><sp/>THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"></highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/><sp/>==============================================================================</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>OSCIT_INCLUDE_OSCIT_MUTEX_H_</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>OSCIT_INCLUDE_OSCIT_MUTEX_H_</highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&lt;pthread.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdio&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="non__copyable_8h" kindref="compound">oscit/non_copyable.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="typed_8h" kindref="compound">oscit/typed.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">oscit<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="classoscit_1_1_mutex" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classoscit_1_1_mutex" kindref="compound">Mutex</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_typed" kindref="compound">Typed</ref>,<sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_non_copyable" kindref="compound">NonCopyable</ref><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><ref refid="typed_8h_1abaf25d3e77e6e8bc3eff62b79e641f4d" kindref="member">TYPED</ref>(</highlight><highlight class="stringliteral">&quot;Mutex&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="classoscit_1_1_mutex_1ae41e751604af40fc4ed78d16c63be52f" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_mutex" kindref="compound">Mutex</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>status<sp/>=<sp/>pthread_mutex_init(&amp;mutex_,<sp/>NULL);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Could<sp/>not<sp/>initialize<sp/>mutex<sp/>(%s)\n&quot;</highlight><highlight class="normal">,<sp/>strerror(status));</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>FIXME:<sp/>remove<sp/>virtual,<sp/>typed<sp/>and<sp/>sub-classes<sp/>(Thread,<sp/>ZeroConf..)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="classoscit_1_1_mutex_1abc6c403ed2bd809dead4e1307e18cc65" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_mutex_1abc6c403ed2bd809dead4e1307e18cc65" kindref="member">~Mutex</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>status<sp/>=<sp/>pthread_mutex_destroy(&amp;mutex_);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Could<sp/>not<sp/>destroy<sp/>mutex<sp/>(%s)\n&quot;</highlight><highlight class="normal">,<sp/>strerror(status));</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>assert(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="classoscit_1_1_mutex_1a016dda2b6b467aa8e3a866be3bd0f86e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_mutex_1a016dda2b6b467aa8e3a866be3bd0f86e" kindref="member">lock</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>pthread_mutex_lock(&amp;mutex_);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="classoscit_1_1_mutex_1a4eb03cce21055fcfd8ae3462661fac6f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_mutex_1a4eb03cce21055fcfd8ae3462661fac6f" kindref="member">unlock</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>pthread_mutex_unlock(&amp;mutex_);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>pthread_mutex_t<sp/>mutex_;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="classoscit_1_1_scoped_lock" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classoscit_1_1_scoped_lock" kindref="compound">ScopedLock</ref><sp/>:<sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_non_copyable" kindref="compound">NonCopyable</ref><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="85" refid="classoscit_1_1_scoped_lock_1a9e3d1bfe4c3e4fc020a9cd6815fda4eb" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_scoped_lock_1a9e3d1bfe4c3e4fc020a9cd6815fda4eb" kindref="member">ScopedLock</ref>(<ref refid="classoscit_1_1_mutex" kindref="compound">Mutex</ref><sp/>*mutex)<sp/>:<sp/>mutex_ptr_(mutex)<sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>mutex_ptr_-&gt;<ref refid="classoscit_1_1_mutex_1a016dda2b6b467aa8e3a866be3bd0f86e" kindref="member">lock</ref>();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="classoscit_1_1_scoped_lock_1a0248f94e9d112b09739ce3c28457fdd1" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_scoped_lock_1a0248f94e9d112b09739ce3c28457fdd1" kindref="member">ScopedLock</ref>(<ref refid="classoscit_1_1_mutex" kindref="compound">Mutex</ref><sp/>&amp;mutex)<sp/>:<sp/>mutex_ptr_(&amp;mutex)<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>mutex_ptr_-&gt;<ref refid="classoscit_1_1_mutex_1a016dda2b6b467aa8e3a866be3bd0f86e" kindref="member">lock</ref>();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="classoscit_1_1_scoped_lock_1a46c5a972c65418721b8ea4731cefb2eb" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_scoped_lock_1a46c5a972c65418721b8ea4731cefb2eb" kindref="member">~ScopedLock</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>mutex_ptr_-&gt;<ref refid="classoscit_1_1_mutex_1a4eb03cce21055fcfd8ae3462661fac6f" kindref="member">unlock</ref>();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_mutex" kindref="compound">Mutex</ref><sp/>*mutex_ptr_;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="classoscit_1_1_scoped_unlock" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classoscit_1_1_scoped_unlock" kindref="compound">ScopedUnlock</ref><sp/>:<sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_non_copyable" kindref="compound">NonCopyable</ref><sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="105" refid="classoscit_1_1_scoped_unlock_1a6a643ecfbfef0610c515fefdec904a74" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_scoped_unlock_1a6a643ecfbfef0610c515fefdec904a74" kindref="member">ScopedUnlock</ref>(<ref refid="classoscit_1_1_mutex" kindref="compound">Mutex</ref><sp/>*mutex)<sp/>:<sp/>mutex_ptr_(mutex)<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>mutex_ptr_-&gt;<ref refid="classoscit_1_1_mutex_1a4eb03cce21055fcfd8ae3462661fac6f" kindref="member">unlock</ref>();</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="classoscit_1_1_scoped_unlock_1a579afe4b9293910290c28489f094246b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_scoped_unlock_1a579afe4b9293910290c28489f094246b" kindref="member">ScopedUnlock</ref>(<ref refid="classoscit_1_1_mutex" kindref="compound">Mutex</ref><sp/>&amp;mutex)<sp/>:<sp/>mutex_ptr_(&amp;mutex)<sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>mutex_ptr_-&gt;<ref refid="classoscit_1_1_mutex_1a4eb03cce21055fcfd8ae3462661fac6f" kindref="member">unlock</ref>();</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="classoscit_1_1_scoped_unlock_1a9632acea879598598944f59eb5b2dc6d" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_scoped_unlock_1a9632acea879598598944f59eb5b2dc6d" kindref="member">~ScopedUnlock</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>mutex_ptr_-&gt;<ref refid="classoscit_1_1_mutex_1a016dda2b6b467aa8e3a866be3bd0f86e" kindref="member">lock</ref>();</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_mutex" kindref="compound">Mutex</ref><sp/>*mutex_ptr_;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>oscit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>OSCIT_INCLUDE_OSCIT_MUTEX_H_</highlight></codeline>
+    </programlisting>
+    <location file="/Users/gaspard/git/oscit/include/oscit/mutex.h"/>
+  </compounddef>
+</doxygen>

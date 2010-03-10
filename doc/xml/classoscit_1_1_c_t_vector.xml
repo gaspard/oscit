@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classoscit_1_1_c_t_vector" kind="class" prot="public">
+    <compoundname>oscit::CTVector</compoundname>
+    <basecompoundref refid="classoscit_1_1_r_w_mutex" prot="public" virt="non-virtual">oscit::RWMutex</basecompoundref>
+    <includes refid="c__tvector_8h" local="no">c_tvector.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classoscit_1_1_c_t_vector_1a461c6dae0b952ad1014f109dcd549e29" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::CTVector&lt; T &gt;::CTVector</definition>
+        <argsstring>()</argsstring>
+        <name>CTVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/c_tvector.h" line="46" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_tvector.h" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_c_t_vector_1a9d3e0657d4945886fefd11047e2feec7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::CTVector&lt; T &gt;::CTVector</definition>
+        <argsstring>(const CTVector &amp;other)</argsstring>
+        <name>CTVector</name>
+        <param>
+          <type>const <ref refid="classoscit_1_1_c_t_vector" kindref="compound">CTVector</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/c_tvector.h" line="49" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_tvector.h" bodystart="49" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The Concurrent Vector template is a <ref refid="classstd_1_1vector" kindref="compound">std::vector</ref> with a read-write mutex. The class does not lock/unlock the mutex, this is the responsability of the class using the vector. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="196">
+        <label>oscit::CTVector&lt; T &gt;</label>
+        <link refid="classoscit_1_1_c_t_vector"/>
+        <childnode refid="197" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="197">
+        <label>oscit::RWMutex</label>
+        <link refid="classoscit_1_1_r_w_mutex"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="198">
+        <label>oscit::CTVector&lt; T &gt;</label>
+        <link refid="classoscit_1_1_c_t_vector"/>
+        <childnode refid="199" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="199">
+        <label>oscit::RWMutex</label>
+        <link refid="classoscit_1_1_r_w_mutex"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/c_tvector.h" line="44" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_tvector.h" bodystart="44" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classoscit_1_1_c_t_vector_1a461c6dae0b952ad1014f109dcd549e29" prot="public" virt="non-virtual"><scope>oscit::CTVector</scope><name>CTVector</name></member>
+      <member refid="classoscit_1_1_c_t_vector_1a9d3e0657d4945886fefd11047e2feec7" prot="public" virt="non-virtual"><scope>oscit::CTVector</scope><name>CTVector</name></member>
+      <member refid="classoscit_1_1_r_w_mutex_1ac549bb3340bac6726bce2863f80a240e" prot="public" virt="non-virtual"><scope>oscit::CTVector</scope><name>lock</name></member>
+      <member refid="classoscit_1_1_r_w_mutex_1a672d9bfefbc1839d9e196e90a1963f39" prot="public" virt="non-virtual"><scope>oscit::CTVector</scope><name>read_lock</name></member>
+      <member refid="classoscit_1_1_r_w_mutex_1a97010c1b513da70f8c1c9e671529abb0" prot="public" virt="non-virtual"><scope>oscit::CTVector</scope><name>read_unlock</name></member>
+      <member refid="classoscit_1_1_r_w_mutex_1aa1110a616ea1cdee191912e2e136e45a" prot="public" virt="non-virtual"><scope>oscit::CTVector</scope><name>RWMutex</name></member>
+      <member refid="classoscit_1_1_r_w_mutex_1ae74be65c4bbcc16313b5ca56d17db947" prot="public" virt="non-virtual"><scope>oscit::CTVector</scope><name>unlock</name></member>
+      <member refid="classoscit_1_1_r_w_mutex_1a1fbdf80ace36018183196f92a2193ceb" prot="public" virt="non-virtual"><scope>oscit::CTVector</scope><name>~RWMutex</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
