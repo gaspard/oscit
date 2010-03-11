@@ -41,7 +41,7 @@
 #include "oscit/matrix_value.h"
 #include "oscit/midi_value.h"
 
-// FIXME: remove units (info is enough)
+// FIXME: replace by enums in oscit namespace
 
 #define NoIO(info)  Value(info)
 #define NoIOTypeId H("s")

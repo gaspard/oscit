@@ -75,22 +75,22 @@ static int MidiMessage_Note(lua_State *L) {
   MidiMessage * retval__;
   int note = luaL_checkint(L, 1);
   if (top__ < 2) {
-    retval__ = Note(note);
+    retval__ = MidiMessage::Note(note);
   } else {
     int velocity = luaL_checkint(L, 2);
     if (top__ < 3) {
-      retval__ = Note(note, velocity);
+      retval__ = MidiMessage::Note(note, velocity);
     } else {
       int length = luaL_checkint(L, 3);
       if (top__ < 4) {
-        retval__ = Note(note, velocity, length);
+        retval__ = MidiMessage::Note(note, velocity, length);
       } else {
         int channel = luaL_checkint(L, 4);
         if (top__ < 5) {
-          retval__ = Note(note, velocity, length, channel);
+          retval__ = MidiMessage::Note(note, velocity, length, channel);
         } else {
           time_t wait = luaL_checknumber(L, 5);
-          retval__ = Note(note, velocity, length, channel, wait);
+          retval__ = MidiMessage::Note(note, velocity, length, channel, wait);
         }
       }
     }
@@ -156,6 +156,26 @@ static int MidiMessage_note_on_to_off(lua_State *L) {
   lua_remove(L, 1);
   self__->note_on_to_off();
   return 0;
+}
+
+
+/** bool oscit::MidiMessage::set(std::vector< unsigned char > &message, time_t wait=0)
+ * include/oscit/midi_message.h:67
+ */
+static int MidiMessage_set(lua_State *L) {
+  MidiMessage *self__ = *((MidiMessage**)luaL_checkudata(L, 1, "oscit.MidiMessage"));
+  lua_remove(L, 1);
+  int top__ = lua_gettop(L);
+  bool  retval__;
+  std::vector< unsigned char > *message = *((std::vector< unsigned char > **)luaL_checkudata(L, 1, "std.vector< unsigned char >"));
+  if (top__ < 2) {
+    retval__ = self__->set(*message);
+  } else {
+    time_t wait = luaL_checknumber(L, 2);
+    retval__ = self__->set(*message, wait);
+  }
+  lua_pushnumber(L, retval__);
+  return 1;
 }
 
 
@@ -365,12 +385,12 @@ static int MidiMessage_wait(lua_State *L) {
 /* ============================ Lua Registration ====================== */
 
 static const struct luaL_Reg MidiMessage_member_methods[] = {
-  ,
   {"channel"           , MidiMessage_channel},
   {"ctrl"              , MidiMessage_ctrl},
   {"length"            , MidiMessage_length},
   {"note"              , MidiMessage_note},
   {"note_on_to_off"    , MidiMessage_note_on_to_off},
+  {"set"               , MidiMessage_set},
   {"set_as_ctrl"       , MidiMessage_set_as_ctrl},
   {"set_as_note"       , MidiMessage_set_as_note},
   {"set_channel"       , MidiMessage_set_channel},
