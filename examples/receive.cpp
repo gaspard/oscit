@@ -12,7 +12,7 @@ using namespace oscit;
 class Message : public Object
 {
 public:
-  Message(const char *name, const char *message) : Object(name, StringIO("a message", "Stores a message (string only).")), message_(message) {}
+  Message(const char *name, const char *message) : Object(name, StringIO("Stores a message (string only).")), message_(message) {}
 
   /** This is the method triggered in response to the object's url.
    *  In this example this url is "/message".
