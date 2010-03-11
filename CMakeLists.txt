@@ -99,7 +99,7 @@ endif(UNIX)
 
 add_definitions(-D__${PLAT}__)
 
-set(STATIC_LIBS)
+set(EXT_SOURCES)
 # ==============================================================================
 #
 #  oscit library build
@@ -110,8 +110,8 @@ file (GLOB OSCIT_SOURCES src/*.cpp src/${PLAT}/*.cpp)
 if(OSCIT_WILL_LINK_OPENCV)
   # do not include cxalloc.cpp and cxsystem.cpp
 else(OSCIT_WILL_LINK_OPENCV)
-  add_subdirectory(vendor/opencv)
-  list(APPEND STATIC_LIBS opencv_mat)
+  file (GLOB OPENCV_SOURCES vendor/opencv/*.cpp)
+  list(APPEND EXT_SOURCES ${OPENCV_SOURCES})
 endif(OSCIT_WILL_LINK_OPENCV)
 
 include_directories (${OSCIT_SOURCE_DIR}/oscpack ${OSCIT_SOURCE_DIR}/include ${OSCIT_SOURCE_DIR}/vendor)
@@ -130,9 +130,11 @@ foreach (RAGEL_SRC ${RAGEL_SOURCES})
   set (OSCIT_SOURCES ${OSCIT_SOURCES} ${OSCIT_SOURCE_DIR}/src/${RAGEL_SRC_NAME}.cpp)
 endforeach (RAGEL_SRC)
 
+# oscpack
 file (GLOB OSCPACK_SOURCES oscpack/ip/*.cpp oscpack/ip/${OSCPACK_PLAT}/*.cpp oscpack/osc/*.cpp)
-add_library (oscit STATIC ${OSCIT_SOURCES} ${OSCPACK_SOURCES})
-target_link_libraries(oscit ${STATIC_LIBS})
+list (APPEND EXT_SOURCES ${OSCPACK_SOURCES})
+
+add_library (oscit STATIC ${OSCIT_SOURCES} ${OSCPACK_SOURCES} ${EXT_SOURCES})
 
 # ==============================================================================
 #
