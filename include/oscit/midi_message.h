@@ -32,6 +32,7 @@
 
 #include <vector>
 #include <iostream>
+#include <sstream>
 
 #include "oscit/reference_counted.h"
 
@@ -344,6 +345,12 @@ class MidiMessage : public ReferenceCounted {
            data_[0] == other.data_[0] &&
            data_[1] == other.data_[1] &&
            data_[2] == other.data_[2];
+  }
+
+  std::string to_string() const {
+    std::ostringstream oss;
+    oss << *this;
+    return oss.str();
   }
 
  private:

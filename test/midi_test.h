@@ -132,4 +132,9 @@ public:
     m.set_channel(3);
     assert_equal(3, m.channel());
   }
+
+  void test_to_string( void ) {
+    MidiMessage m;
+    assert_equal("+1:C3(80), 0/500", m.to_string());
+  }
 };

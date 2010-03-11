@@ -35,13 +35,13 @@ static int MidiMessage_MidiMessage2(lua_State *L) {
 static int MidiMessage_MidiMessage(lua_State *L) {
   int type__ = lua_type(L, 1);
   int top__  = lua_gettop(L);
-  if (type__ == LUA_TNUMBER) {
-    return MidiMessage_MidiMessage2(L);
-  } else if (top__ < 1) {
+  if (top__ < 1) {
     return MidiMessage_MidiMessage1(L);
+  } else if (type__ == LUA_TNUMBER) {
+    return MidiMessage_MidiMessage2(L);
   } else {
     // use any to raise errors
-    return MidiMessage_MidiMessage1(L);
+    return MidiMessage_MidiMessage2(L);
   }
 }
 
@@ -59,7 +59,7 @@ static int MidiMessage_destructor(lua_State *L) {
 static int MidiMessage__tostring(lua_State *L) {
   MidiMessage **userdata = (MidiMessage**)luaL_checkudata(L, 1, "oscit.MidiMessage");
   
-  lua_pushfstring(L, "<oscit.MidiMessage: %p>", *userdata);
+  lua_pushfstring(L, "<oscit.MidiMessage: %p %s>", *userdata, (*userdata)->to_string().c_str());
   
   return 1;
 }
