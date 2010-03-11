@@ -1,4 +1,4 @@
-#include "midi_message.h"
+#include "oscit/midi_message.h"
 
 #include "lua_cpp_helper.h"
 

@@ -10,6 +10,8 @@ oscit = Dub::Lua.bind Dub.parse(XML_DOC_PATH + "namespaceoscit.xml")[:oscit]
 
 %w{MidiMessage}.each do |name|
   File.open(BINDINGS_PATH + "oscit_#{name}.cpp", 'wb') do |f|
-    f.puts oscit[name]
+    klass = oscit[name]
+    klass.header = 'oscit/midi_message.h'
+    f.puts klass
   end
 end
