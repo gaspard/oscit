@@ -55,7 +55,7 @@ Value gEmptyValue;
 Hash  gEmptyHash(1);
 
 
-// -------------------------------------------------------------
+// ------------------------------------------------------------- escape
 static std::string escape(const std::string &string) {
   std::string res;
   size_t len = 0;
@@ -90,11 +90,13 @@ static std::string escape(const std::string &string) {
   return res;
 }
 
+// ------------------------------------------------------------- operator<<
 std::ostream &operator<<(std::ostream &out_stream, const Value &val) {
   val.to_stream(out_stream);
   return out_stream;
 }
 
+// ------------------------------------------------------------- to_stream
 void Value::to_stream(std::ostream &out_stream, bool lazy) const {
   size_t sz;
   switch (type()) {
@@ -142,18 +144,21 @@ void Value::to_stream(std::ostream &out_stream, bool lazy) const {
   }
 }
 
+// ------------------------------------------------------------- to_json
 Json Value::to_json() const {
   std::ostringstream os(std::ostringstream::out);
   os << *this;
   return (Json)os.str();
 }
 
+// ------------------------------------------------------------- lazy_json
 Json Value::lazy_json() const {
   std::ostringstream os(std::ostringstream::out);
   to_stream(os, true);
   return (Json)os.str();
 }
 
+// ------------------------------------------------------------- push_back
 Value &Value::push_back(const Value& val) {
   if (!val.is_empty()) {
     if (is_list()) {
@@ -174,6 +179,7 @@ Value &Value::push_back(const Value& val) {
   return *this;
 }
 
+// ------------------------------------------------------------- push_front
 Value &Value::push_front(const Value& val) {
   if (!val.is_empty()) {
     if (is_list()) {
@@ -191,6 +197,7 @@ Value &Value::push_front(const Value& val) {
   return *this;
 }
 
+// ------------------------------------------------------------- s_deep_merge
 static void s_deep_merge(const Value a, const Value b) {
   HashIterator it, end = b.end();
   std::string key;
@@ -220,9 +227,27 @@ static void s_deep_merge(const Value a, const Value b) {
   }
 }
 
+// ------------------------------------------------------------- deep_merge
 void Value::deep_merge(const Value &other) {
   if (!is_hash() || !other.is_hash()) return;
   s_deep_merge(*this, other);
+}
+
+// ------------------------------------------------------------- split
+Value Value::split(char c) const {
+  ListValue res;
+  std::string element;
+
+  size_t start_pos = 0;
+  size_t end_pos;
+
+  do {
+    end_pos = string_->find(c, start_pos);
+    res.push_back(string_->substr(start_pos, end_pos - start_pos));
+    start_pos = end_pos + 1;
+  } while (end_pos != std::string::npos);
+
+  return res;
 }
 
 /* ============================================= JSON Parser ========= */

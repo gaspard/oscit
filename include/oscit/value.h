@@ -487,6 +487,12 @@ public:
     return string_->c_str();
   }
 
+  /** Split the string with the given character.
+   * @param c the character to use for string splitting
+   * @return a ListValue with one or more strings
+   */
+  Value split(char c) const;
+
   /** =========================================================    List    */
   bool is_list() const   { return type_ == LIST_VALUE; }
 

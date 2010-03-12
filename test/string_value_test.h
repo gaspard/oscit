@@ -230,4 +230,11 @@ public:
     FValue s("I am %i not '%s'.", 1337, "Superman");
     assert_equal("I am 1337 not 'Superman'.", s.str());
   }
+
+  void test_split_char( void ) {
+    Value s("one:.:/user/local/lib/rubyk:~/rubyk/lib");
+    Value list = s.split(':');
+    assert_equal("[\"one\", \".\", \"/user/local/lib/rubyk\", \"~/rubyk/lib\"]", list.to_json());
+  }
+
 };

@@ -102,7 +102,6 @@ public:
   }
 
   void should_not_wait_when_reducing_interval( void ) {
-  std::cout << "===== init\n\n";
     Timer<TimerTest, &TimerTest::loop> timer(this);
     timer.start(5000);     // 0
     millisleep(12);
