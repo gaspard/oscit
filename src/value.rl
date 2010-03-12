@@ -236,6 +236,8 @@ void Value::deep_merge(const Value &other) {
 // ------------------------------------------------------------- split
 Value Value::split(char c) const {
   ListValue res;
+  if (!is_string()) return res;
+
   std::string element;
 
   size_t start_pos = 0;
