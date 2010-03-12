@@ -237,6 +237,12 @@ public:
     assert_equal("[\"one\", \".\", \"/user/local/lib/rubyk\", \"~/rubyk/lib\"]", list.to_json());
   }
 
+  void test_split_const_char( void ) {
+    Value s("one::.::/user/local/lib/rubyk::~/rubyk/lib");
+    Value list = s.split("::");
+    assert_equal("[\"one\", \".\", \"/user/local/lib/rubyk\", \"~/rubyk/lib\"]", list.to_json());
+  }
+
   void test_split_not_a_string( void ) {
     Value s(45);
     Value list = s.split(':');

@@ -234,9 +234,9 @@ void Value::deep_merge(const Value &other) {
 }
 
 // ------------------------------------------------------------- split
-Value Value::split(char c) const {
+template<typename T>
+Value s_split(T &token, size_t token_len, const std::string &string) {
   ListValue res;
-  if (!is_string()) return res;
 
   std::string element;
 
@@ -244,26 +244,51 @@ Value Value::split(char c) const {
   size_t end_pos;
 
   do {
-    end_pos = string_->find(c, start_pos);
-    res.push_back(string_->substr(start_pos, end_pos - start_pos));
-    start_pos = end_pos + 1;
+    end_pos = string.find(token, start_pos);
+    res.push_back(string.substr(start_pos, end_pos - start_pos));
+    start_pos = end_pos + token_len;
   } while (end_pos != std::string::npos);
 
   return res;
 }
 
+Value Value::split(char c) const {
+  if (!is_string()) return ListValue();
+  return s_split(c, 1, *string_);
+}
+
+Value Value::split(const char *str) const {
+  if (!is_string()) return ListValue();
+  return s_split(str, strlen(str), *string_);
+}
+
 // ------------------------------------------------------------- join
-Value Value::join(const char *str) const {
+template<typename T>
+Value s_join(T &token, const List &list) {
   std::string res;
 
-  size_t max = size();
+  size_t max = list.size();
   for(size_t i = 0; i < max; ++i) {
-    if (!value_at(i).is_string()) continue;
-    if (res != "") res.append(str);
-    res.append(value_at(i).str());
+    if (!list[i]->is_string()) continue;
+    if (res != "") res.append(token);
+    res.append(list[i]->str());
   }
   return Value(res);
 }
+
+Value Value::join(const char *str) const {
+  if (!is_list()) return StringValue();
+  return s_join(str, *list_);
+}
+
+Value Value::join(char c) const {
+  char buf[2];
+  buf[0] = c;
+  buf[1] = '\0';
+  if (!is_list()) return StringValue();
+  return s_join(buf, *list_);
+}
+
 /* ============================================= JSON Parser ========= */
 %%{
   machine json;

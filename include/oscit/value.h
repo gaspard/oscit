@@ -493,6 +493,12 @@ public:
    */
   Value split(char c) const;
 
+  /** Split the string with the given character.
+   * @param str the string to use for splitting
+   * @return a ListValue with one or more strings
+   */
+  Value split(const char *str) const;
+
   /** =========================================================    List    */
   bool is_list() const   { return type_ == LIST_VALUE; }
 
@@ -566,6 +572,12 @@ public:
   }
 
   Value &push_front(const Value& val);
+
+  /** Join the strings in the list with the given character.
+   * @param str the character to join elements with
+   * @return a StringValue with the result of the join operation
+   */
+  Value join(char c) const;
 
   /** Join the strings in the list with the given string.
    * @param str the string to join elements with
