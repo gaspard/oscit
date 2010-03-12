@@ -577,4 +577,16 @@ public:
     a.set_nil();
     assert_false(a == b);
   }
+
+  void test_join( void ) {
+    Value l(Json("[\"one\", \".\", \"/user/local/lib/rubyk\", \"~/rubyk/lib\"]"));
+    Value s = l.join(":");
+    assert_equal("one:.:/user/local/lib/rubyk:~/rubyk/lib", s.str());
+  }
+
+  void test_join_ignore_non_string_values( void ) {
+    Value l(Json("[\"one\", \".\", 45, [1,2], \"/user/local/lib/rubyk\", \"~/rubyk/lib\"]"));
+    Value s = l.join(":");
+    assert_equal("one:.:/user/local/lib/rubyk:~/rubyk/lib", s.str());
+  }
 };

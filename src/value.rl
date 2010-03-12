@@ -252,6 +252,18 @@ Value Value::split(char c) const {
   return res;
 }
 
+// ------------------------------------------------------------- join
+Value Value::join(const char *str) const {
+  std::string res;
+
+  size_t max = size();
+  for(size_t i = 0; i < max; ++i) {
+    if (!value_at(i).is_string()) continue;
+    if (res != "") res.append(str);
+    res.append(value_at(i).str());
+  }
+  return Value(res);
+}
 /* ============================================= JSON Parser ========= */
 %%{
   machine json;

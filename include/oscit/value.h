@@ -567,6 +567,12 @@ public:
 
   Value &push_front(const Value& val);
 
+  /** Join the strings in the list with the given string.
+   * @param str the string to join elements with
+   * @return a StringValue with the result of the join operation
+   */
+  Value join(const char *str) const;
+
   /** =========================================================    Error   */
   bool is_error() const  { return type_ == ERROR_VALUE; }
 
