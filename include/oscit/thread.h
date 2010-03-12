@@ -55,7 +55,7 @@ class Thread : public Mutex {
   /** Start a new thread with a class method. */
   template<void(*Tmethod)(Thread*)>
   void start_thread(void *parameter = NULL) {
-    if (thread_id_) {
+    if (is_running()) {
       fprintf(stderr, "Trying to start thread when it is already running ! (in Thread::start)");
       return;
     }
@@ -73,7 +73,7 @@ class Thread : public Mutex {
 
   /** Start a new thread with a static function. */
   void start_thread(void (*static_method)(Thread*), void *parameter = NULL) {
-     if (thread_id_) {
+     if (is_running()) {
        fprintf(stderr, "Trying to start thread when it is already running ! (in Thread::start)");
        return;
      }
@@ -94,7 +94,7 @@ class Thread : public Mutex {
    *  a SIGTERM, the class's terminate() method is called. */
   template<class T, void(T::*Tmethod)(Thread*)>
   void start_thread(T *owner, void *parameter = NULL) {
-    if (thread_id_) {
+    if (is_running()) {
       fprintf(stderr, "Trying to start thread when it is already running ! (in Thread::start)");
       return;
     }
@@ -114,7 +114,7 @@ class Thread : public Mutex {
    *  a SIGTERM, the class's terminate() method is called. */
   template<class T, void(T::*Tmethod)()>
   void start_thread(T *owner, void *parameter = NULL) {
-    if (thread_id_) {
+    if (is_running()) {
       fprintf(stderr, "Trying to start thread when it is already running ! (in Thread::start)");
       return;
     }
@@ -165,6 +165,12 @@ class Thread : public Mutex {
    */
   void quit() {
     should_run_ = false;
+  }
+
+  /** Return true if the thread is running.
+   */
+  bool is_running() {
+    return thread_id_ != NULL;
   }
 
   /** Set thread priority to high. */
@@ -229,6 +235,7 @@ class Thread : public Mutex {
 
     (*thread->static_method_)(thread);
 
+    thread->thread_id_ = NULL; // not running anymore
     return NULL;
   }
 
@@ -249,6 +256,7 @@ class Thread : public Mutex {
 
     (owner->*Tmethod)(thread);
 
+    thread->thread_id_ = NULL; // not running anymore
     return NULL;
   }
 
@@ -267,6 +275,7 @@ class Thread : public Mutex {
 
     (owner->*Tmethod)();
 
+    thread->thread_id_ = NULL; // not running anymore
     return NULL;
   }
 

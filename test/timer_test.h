@@ -36,7 +36,8 @@ class TimerTest : public TestHelper
 public:
   void setUp() {
     sleep_in_loop_ = 0;
-    logger_.str("");
+    counter_ = 0;
+    //std::cout << "\n\n";
   }
 
   void should_fire_between_start_and_stop( void ) {
@@ -45,9 +46,9 @@ public:
     timer.start(10);
     millisleep(35);
     timer.stop();
-    assert_equal("....", logger_.str());
+    assert_equal(4, counter_);
     millisleep(20);
-    assert_equal("....", logger_.str());
+    assert_equal(4, counter_);
   }
 // FIXME: how to test without printing results of timer ?
 // Run 50 times and ensure now - start = 50 * elapsed ?
@@ -57,29 +58,41 @@ public:
     timer.start(10);
     millisleep(35);
     timer.stop();
-    assert_equal("....", logger_.str());
+    assert_equal(4, counter_);
   }
 
-  void should_change_interval_but_stay_in_sync( void ) {
+  void should_change_interval_but_stay_in_sync_on_set_interval( void ) {
     Timer<TimerTest, &TimerTest::loop> timer(this);
-    timer.start(20); // ..
-    millisleep(35);
-    timer.start(4); // ....
-    millisleep(15);
-    timer.start(10); // ...
-    millisleep(35);
+    timer.start(20);
+    millisleep(30); // 0 .. 20
+    timer.set_interval(8);
+    millisleep(12); // 0 .. 20 (28) [30:change] .. 36
+    timer.set_interval(10);
+    millisleep(30); // 0 .. 20 (28) [30:change] .. 36 .. [42:change] 46 .. 56 .. 66 .. [72:end]
     timer.stop();
-    assert_equal(".........", logger_.str());
+    assert_equal(6, counter_);
+  }
+
+  void should_not_stay_in_sync_on_start( void ) {
+    Timer<TimerTest, &TimerTest::loop> timer(this);
+    timer.start(20);
+    millisleep(30); // 0 .. 20
+    timer.start(8);
+    millisleep(12); // 0 .. 20 .. [30:change] .. 38
+    timer.start(10);
+    millisleep(35); // 0 .. 20 .. [30:change] .. 38 .. [42:change] .. 52 .. 62 .. 72
+    timer.stop();
+    assert_equal(8, counter_);
   }
 
   void should_stop_on_delete( void ) {
     Timer<TimerTest, &TimerTest::loop> *timer = new Timer<TimerTest, &TimerTest::loop>(this);
     timer->start(10);
     millisleep(35);
-    assert_equal("....", logger_.str());
+    assert_equal(4, counter_);
     delete timer;
     millisleep(35);
-    assert_equal("....", logger_.str());
+    assert_equal(4, counter_);
   }
 
   void should_ignore_restart( void ) {
@@ -89,21 +102,37 @@ public:
   }
 
   void should_not_wait_when_reducing_interval( void ) {
+  std::cout << "===== init\n\n";
     Timer<TimerTest, &TimerTest::loop> timer(this);
-    timer.start(5000);
-    millisleep(10);
-    timer.set_interval(5);
+    timer.start(5000);     // 0
+    millisleep(12);
+    timer.set_interval(10);
+    millisleep(15);        // 0 .. (10) [12:change = should not fire] .. 20 .. [25:stop]
+    timer.stop();
+    assert_equal(2, counter_);
+  }
+
+  void test_create_stop_start_again( void ) {
+    Timer<TimerTest, &TimerTest::loop> timer(this);
+    timer.start(10);
     millisleep(15);
     timer.stop();
-    assert_equal("..", logger_.str());
+    millisleep(10);
+    assert_equal(2, counter_);
+    timer.start(10);
+    millisleep(15);
+    timer.stop();
+    assert_equal(4, counter_);
   }
 
   void loop() {
-    logger_ << ".";
+    //std::cout << time_ref_.elapsed() << "\n";
+    counter_ += 1;
   }
 
 private:
   time_t sleep_in_loop_;
-  Logger logger_;
+  TimeRef time_ref_;
+  int counter_;
 };
 

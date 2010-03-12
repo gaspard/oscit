@@ -53,24 +53,24 @@ public:
 
   void start(time_t interval) {
     ScopedLock lock(mutex_);
-    should_run_ = true;
     last_interval_ = interval_;
     interval_ = interval;
     if (running_) {
+      should_run_ = false;
       interrupt();
-    } else {
-      thread_.start_thread<Timer, &Timer::start_thread>(this, NULL);
+      thread_.join();
     }
+    thread_.start_thread<Timer, &Timer::start_thread>(this, NULL);
   }
 
   void start() {
     ScopedLock lock(mutex_);
-    should_run_ = true;
     if (running_) {
+      should_run_ = false;
       interrupt();
-    } else {
-      thread_.start_thread<Timer, &Timer::start_thread>(this, NULL);
+      thread_.join();
     }
+    thread_.start_thread<Timer, &Timer::start_thread>(this, NULL);
   }
 
   void stop() {
@@ -78,6 +78,7 @@ public:
     if (running_) {
       should_run_ = false;
       interrupt();
+      thread_.join();
     }
   }
 
@@ -98,22 +99,23 @@ private:
   void run() {
     time_t wait_duration;
     time_t now;
-    time_t next_fire = time_ref_.elapsed(); // this is our 0
+    time_t next_fire = time_ref_.elapsed(); // this is our anchor
     struct timespec sleeper;
 
     while (should_run_) {
       { ScopedLock lock(mutex_);
-        // We trigger at time t = 0
-        (owner_->*Tmethod)();
 
         now = time_ref_.elapsed();
 
         // This can be used to ensure test...
         // printf("logical: %li real: %li wait: %li\n", next_fire, now, wait_duration);
 
-        if (next_fire > now + interval_) {
-          // interval_ got smaller
+        if (next_fire > now) {
+          // interrupted
+          // we do not fire on interval change
           next_fire -= last_interval_;
+        } else {
+          (owner_->*Tmethod)();
         }
 
        /* Timer sync issues:
@@ -142,7 +144,6 @@ private:
       }
 
       nanosleep(&sleeper, NULL);
-
     }
 
     running_ = false;
@@ -163,6 +164,7 @@ private:
 
   void start_thread(Thread *runner) {
     signal(SIGUSR1, Timer::interrupt_sleep);
+    should_run_ = true;
     running_ = true;
     runner->high_priority();
     runner->thread_ready();
