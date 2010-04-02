@@ -128,11 +128,8 @@ public:
 
   void test_set( void ) {
     Value v;
-#if Real == double
-    Matrix m(2,2, CV_64FC1);
-#else
-    Matrix m(2,2, CV_32FC1);
-#endif
+    Matrix m(2, 2);
+
     assert_true(v.is_empty());
     v.set(m);
     assert_true(v.is_matrix());

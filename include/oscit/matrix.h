@@ -37,4 +37,53 @@
  * cv::Mat is defined in cxcore.hpp:734
  */
 
+namespace oscit {
+
+/** The Matrix class is a cv::Mat with a default type of CV_64FC1 / CV_32FC1
+ * depending on what Real represents.
+ */
+class Matrix : public cv::Mat {
+public:
+#if Real == double
+  enum { DefaultType=CV_64FC1 };
+#else
+  enum { DefaultType=CV_32FC1 };
+#endif
+  Matrix() : cv::Mat() {}
+
+  Matrix(int _rows, int _cols, int _type = DefaultType) : cv::Mat(_rows, _cols, _type) {}
+
+  Matrix(cv::Size size, int _type = DefaultType) : cv::Mat(size, _type) {}
+
+  Matrix(int _rows, int _cols, int _type, const cv::Scalar& _s) : cv::Mat(_rows, _cols, _type, _s) {}
+
+  /** Construct a default _type matrix and fill it with value r.
+   */
+  Matrix(int _rows, int _cols, Real r) : cv::Mat(_rows, _cols, DefaultType, cv::Scalar(r)) {}
+
+  Matrix(cv::Size size, int _type, const cv::Scalar& _s) : cv::Mat(size, _type, _s) {}
+
+  // copy constructor
+  Matrix(const Matrix& m) : cv::Mat(m) {}
+
+  Matrix(int _rows, int _cols, int _type, void* _data, size_t _step=cv::Mat::AUTO_STEP) :
+      cv::Mat(_rows, _cols, _type, _data, _step) {}
+  Matrix(cv::Size _size, int _type, void* _data, size_t _step=cv::Mat::AUTO_STEP) : cv::Mat(_size, _type, _data, _step) {}
+  // creates a matrix header for a part of the bigger matrix
+  Matrix(const cv::Mat& m, const cv::Range& rowRange, const cv::Range& colRange) : cv::Mat(m, rowRange, colRange) {}
+
+  /** Create a sub-matrix from a bigger matrix
+   *
+   * @param m the original matrix
+   * @param roi the region of interest
+   */
+  Matrix(const cv::Mat& m, const cv::Rect& roi) : cv::Mat(m, roi) {}
+
+  // builds matrix from std::vector with or without copying the data
+  template<typename _Tp> explicit Matrix(const std::vector<_Tp>& vec, bool copyData=false) : cv::Mat(vec, copyData) {}
+  // helper constructor to compile matrix expressions
+  Matrix(const cv::MatExpr_Base& expr) : cv::Mat(expr) {}
+};
+}
+
 #endif // OSCIT_INCLUDE_OSCIT_MATRIX_H_

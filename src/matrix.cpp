@@ -40,7 +40,7 @@ namespace oscit {
 /* ============================================= Value ========= */
 
 // -------------------------------------------------------------
-Value::Value(size_t rows, size_t cols, size_t type, void *data, size_t step)
+Value::Value(size_t rows, size_t cols, int type, void *data, size_t step)
     : type_(MATRIX_VALUE) {
   matrix_ = new Matrix(rows, cols, type, data, step);
 }
@@ -48,11 +48,7 @@ Value::Value(size_t rows, size_t cols, size_t type, void *data, size_t step)
 // -------------------------------------------------------------
 Value::Value(size_t rows, size_t cols)
     : type_(MATRIX_VALUE) {
-#if Real == double
-  matrix_ = new Matrix(rows, cols, CV_64FC1);
-#else
-  matrix_ = new Matrix(rows, cols, CV_32FC1);
-#endif
+  matrix_ = new Matrix(rows, cols);
 }
 
 // -------------------------------------------------------------

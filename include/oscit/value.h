@@ -44,15 +44,11 @@
 #include "oscit/hash.h"
 #include "oscit/midi_message.h"
 
-namespace cv {
- class Mat;
-}
-
 namespace oscit {
 
 #define FVALUE_BUFFER_SIZE 256
 
-typedef cv::Mat Matrix;
+class Matrix;
 
 /** This is just a different typedef for std::string. */
 class Json : public std::string
@@ -136,7 +132,7 @@ public:
    *              value is <tt>AUTO_STEP</tt>, the number of bytes will be calculated
    *              from the type and number of columns.
    */
-  Value(size_t rows, size_t cols, size_t type, void *data, size_t step=AUTO_STEP);
+  Value(size_t rows, size_t cols, int type, void *data, size_t step=AUTO_STEP);
 
 
   /** Create a new matrix value of the given size and type.
