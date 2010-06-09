@@ -161,8 +161,8 @@ void Command::receive(const Url &url, const Value &val) {
   }
 }
 
-/** Add a new satellite to the list of observers. This method is whenever we receive messages from
- * a given location.
+/** Add a new satellite to the list of observers. Explicit registration is only needed if the
+ * observer does not interact to keep link alive (usually as a response to TTL going down).
  */
 bool Command::handle_register_message(const Url &url, const Value &val) {
   if (url.path() == REGISTER_PATH) {
@@ -176,6 +176,7 @@ bool Command::handle_register_message(const Url &url, const Value &val) {
     }
     return true;
   } else {
+    observers_.set(url.location(), DEFAULT_TTL);
     return false;
   }
 }

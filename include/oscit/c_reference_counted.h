@@ -39,7 +39,8 @@ namespace oscit {
 
 /** Maintains a thread-safe reference count of an element.
  * When the reference count reaches zero, the object is deleted.
- * Use this class with the ScopedRetain class.
+ * The reference count of an object starts at 1 and is incremented on <tt>retain</tt> and
+ * decremented on <tt>release</tt>.
  * The 'C' in the name stands for 'concurrent'.
  */
 class CReferenceCounted : private NonCopyable {

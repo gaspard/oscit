@@ -121,24 +121,24 @@ class Object : public Typed, public Observable, public CReferenceCounted {
   virtual ~Object();
 
   /** Shortcut to call multiple methods on an object.
-    * @param val Using "obj.set(tempo:45 rubato:1.5)" is equivalent to calling
-    *            "obj.tempo(45)" and "obj.rubato(1.5)".
-    * @return    a hash with the result for each call.
-    */
+   * @param val Using "obj.set(tempo:45 rubato:1.5)" is equivalent to calling
+   *            "obj.tempo(45)" and "obj.rubato(1.5)".
+   * @return    a hash with the result for each call.
+   */
   const Value set(const Value &val);
 
   /** Shortcut to call multiple methods on an object.
-    * @param val Using "obj.set(tempo:45 rubato:1.5)" is equivalent to calling
-    *            "obj.tempo(45)" and "obj.rubato(1.5)".
-    * @return true on success, false if any call failed.
-    */
+   * @param val Using "obj.set(tempo:45 rubato:1.5)" is equivalent to calling
+   *            "obj.tempo(45)" and "obj.rubato(1.5)".
+   * @return true on success, false if any call failed.
+   */
   bool set_all_ok(const Value &val);
 
   /** This is the prefered way to insert new objects in the tree since it clearly
-    * highlights ownership in the parent.
-    * TODO: make sure a parent is not adopted by it's child.
-    * TODO: if we want to make this thread safe, we need a handle.
-    */
+   * highlights ownership in the parent.
+   * TODO: make sure a parent is not adopted by it's child.
+   * TODO: if we want to make this thread safe, we need a handle.
+   */
   template<class T>
   T *adopt(T *object) {
     object->set_parent(this);
@@ -151,15 +151,17 @@ class Object : public Typed, public Observable, public CReferenceCounted {
   void clear();
 
   /** This is the operation executed when the object is called.
-   *  In order to benefit from return value optimization and avoid too many copy
-   *  you have to use Value v = xxx.trigger(val). */
+   * In order to benefit from return value optimization and avoid too many copy
+   * you have to use Value v = xxx.trigger(val).
+   * @todo why is the return value const ?
+   */
   virtual const Value trigger(const Value &val) {
     return gNilValue;
   }
 
   /** Dynamically build a child from the given name. This method is called whenever
-   *  a sub-node or branch is not found and this is the last found object along
-   *  the path.
+   * a sub-node or branch is not found and this is the last found object along
+   * the path.
    */
   virtual bool build_child(const std::string &name, const Value &type, Value *error, ObjectHandle *handle) {
     return false;
@@ -176,7 +178,7 @@ class Object : public Typed, public Observable, public CReferenceCounted {
   }
 
   /** Inform the object of an alias linked to this object (has to be deleted
-   *  on destruction).
+   * on destruction).
    */
   void register_alias(Alias *alias);
 

@@ -38,11 +38,13 @@ namespace oscit {
 class Location;
 class Root;
 
+#define OSCIT_SRV_TYPE "_oscit._udp"
+
 class OscCommand : public Command {
 public:
   TYPED("Mutex.Thread.Command.OscCommand")
 
-  OscCommand(uint16_t port);
+  OscCommand(uint16_t port = 0);
 
   OscCommand(const char *protocol, const char *service_type = "", uint16_t port = 0);
 

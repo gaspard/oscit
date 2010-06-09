@@ -6,9 +6,6 @@
 #include "oscit/oscit.h"
 using namespace oscit;
 
-
-#define OSC_PORT 7020
-
 class Message : public Object
 {
 public:
@@ -18,7 +15,8 @@ public:
    *  In this example this url is "/message".
    */
   virtual const Value trigger(const Value &val) {
-    std::cout << "[" << url() << "] received " << val << std::endl;
+    std::cout << "** " << url() << " received " << val << std::endl << std::endl;
+
     if (val.is_string()) {
       message_ = val.str();
     }
@@ -40,13 +38,13 @@ void terminate(int sig) {
 int main(int argc, char * argv[]) {
   Root root("receive");
 
-  // open osc command on port OSC_PORT
-  root.adopt_command(new OscCommand("oscit", "_oscit._udp", OSC_PORT));
+  // open an osc command responding to OSCIT service type
+  OscCommand *cmd = root.adopt_command(new OscCommand("oscit", OSCIT_SRV_TYPE));
 
   // create '/message' url
   root.adopt(new Message("message", "message in a bottle"));
 
-  printf("Simple started and listening on port %i.\nType Ctrl+C to stop.\n", OSC_PORT);
+  printf("Receive started and listening on port %i.\nType Ctrl+C to stop.\n", cmd->port());
 
   // register signals
   signal(SIGINT,  terminate);

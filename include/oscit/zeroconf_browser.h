@@ -111,10 +111,25 @@ class ZeroConfBrowser : public Mutex {
 
   void remove_proxy(const Location &location);
 
+  /** This value is on if the browser is running (listening for new devices).
+   */
   bool          running_;
+
+  /** Protocol used in communication (usually 'oscit').
+   */
   std::string   protocol_;
+
+  /** Service-type to browse.
+   */
   std::string   service_type_;
+
+  /** Pointer to a Command that can be used to build proxy objects.
+   */
   Command      *command_;
+
+  /** Factory to use to bild proxy objects. If this value is NULL, the
+   * browser does not build proxies.
+   */
   ProxyFactory *proxy_factory_;
 
  private:

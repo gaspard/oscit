@@ -33,9 +33,11 @@
 #define OSCIT_INCLUDE_OSCIT_OBJECT_HANDLE_H_
 
 namespace oscit {
+  
 /** This is a handle that automatically retains and releases
  * the object it is holding.
- * It should be used as a specialized ScopedRetain for Objects.
+ * It is used as a smart pointer for objects and is the prefered way to hold references
+ * to objects (in scripting languages for example).
  */
 class ObjectHandle {
 public:

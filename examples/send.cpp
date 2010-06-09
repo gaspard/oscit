@@ -12,8 +12,6 @@
 using namespace oscit;
 
 
-#define OSC_PORT 7000
-
 bool gRun = true;
 
 void terminate(int sig) {
@@ -30,10 +28,10 @@ void input(const char *name, std::string &rval) {
 
 class OscCommandShowReplies : public OscCommand {
 public:
-  OscCommandShowReplies(uint port) : OscCommand(port) {}
+  OscCommandShowReplies() {}
 
   virtual void receive(const Url &url, const Value &val) {
-    std::cout << "[" << url << "] received " << val << std::endl;
+    std::cout << "** " << url.path() << " received " << val << std::endl << std::endl;
     Command::receive(url, val);
   }
 };
@@ -41,32 +39,25 @@ public:
 
 int main(int argc, char * argv[]) {
   Root root;
-  std::string port_str("7020");
-  int in_port;
-
-  if (argc > 1) {
-    in_port = atoi(argv[1]);
-  } else {
-    in_port = OSC_PORT;
-  }
 
   std::string url_str("oscit://\"receive\"/message");
   std::string value_str("null");
   std::string continue_input("yes");
   Value value;
 
-  // open osc command on port OSC_PORT
-  OscCommand *sender = root.adopt_command(new OscCommandShowReplies(in_port));
+  // open osc command.
+  OscCommand *sender = root.adopt_command(new OscCommandShowReplies());
 
-  ZeroConfBrowser browser("_oscit._udp");
+  ZeroConfBrowser browser(OSCIT_SRV_TYPE);
   browser.set_command(sender);
   // FIXME: the lines above should be:
-  // ZeroConfBrowser *browser = sender->adopt_zeroconf_browser(new ZeroConfBrowser("_oscit._udp"));
+  // ZeroConfBrowser *browser = sender->adopt_zeroconf_browser(new ZeroConfBrowser(oscit::SERVICE_TYPE));
 
   // register signals
   signal(SIGINT,  terminate);
 
-  printf("Send started and listening on port %i.\nValues are parsed as Json\n", in_port);
+  printf("Send started and listening on port %i.\nValues are parsed as Json\n", sender->port());
+
   while (gRun) {
     input("Enter   url", url_str);
     input("Enter value", value_str);

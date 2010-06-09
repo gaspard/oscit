@@ -67,6 +67,8 @@ enum ValueTypeTag
   MATRIX_TYPE_TAG = 'M',
   MIDI_MESSAGE_TYPE_TAG = 'm',
   ANY_TYPE_TAG    = '*',
+  ARRAY_START_TYPE_TAG = '[',
+  ARRAY_END_TYPE_TAG =  ']',
 };
 
 enum HashDefaultSize

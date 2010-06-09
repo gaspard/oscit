@@ -85,7 +85,7 @@ int main(int argc, char * argv[]) {
   }
 
   // open osc command on port OSC_PORT
-  root.adopt_command(new SleepyOscCommand("oscit", "_oscit._udp", &gSleepy));
+  root.adopt_command(new SleepyOscCommand("oscit", OSCIT_SRV_TYPE, &gSleepy));
 
   // create '/tempo' url
   root.adopt(new ValueDisplay("tempo", 120, &gSleepy));

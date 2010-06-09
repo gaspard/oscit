@@ -106,6 +106,8 @@ class Command : public Thread {
    */
   bool remote_object(const Url &remote_url, Value *error, ObjectHandle *handle);
 
+  /** Returns the port number at which the Command is listening.
+   */
   uint16_t port() { return port_; }
 
   /** Adopt a new RootProxy and start using it to route messages for its

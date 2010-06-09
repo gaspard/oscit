@@ -83,7 +83,7 @@ class ZeroConfTest : public TestHelper {
  public:
 
   void test_register_browse( void ) {
-    DummyBrowser browser("_oscit._udp");
+    DummyBrowser browser(OSCIT_SRV_TYPE);
     browser.adopt_proxy_factory(new ProxyFactory);
     Logger logger;
     CommandLogger cmd("oscit", &logger);
@@ -92,7 +92,7 @@ class ZeroConfTest : public TestHelper {
     browser.lock();
       browser.str(""); // clear
     browser.unlock();
-    DummyRegistration *registration = new DummyRegistration("foobar", "_oscit._udp", 5007);
+    DummyRegistration *registration = new DummyRegistration("foobar", OSCIT_SRV_TYPE, 5007);
 
     wait(1500);
     registration->lock();
