@@ -67,11 +67,12 @@ class ClassMethod : public Object
 /** Prototype constructor for Method. */
 struct MethodPrototype
 {
-  MethodPrototype(const char *name, member_method_t method, const Value &type) :
-      name_(name), member_method_(method), type_(type) {}
+  MethodPrototype(const char *name, member_method_t method, const Value &type, bool keep_last = false) :
+      name_(name), member_method_(method), type_(type), keep_last_(keep_last) {}
   const char *    name_;
   member_method_t member_method_;
   Value           type_;
+  bool            keep_last_;
 };
 
 /** Object instance to trigger a member method (stores a reference to the receiver). */
@@ -89,7 +90,7 @@ class Method : public Object
       Object(name, type), receiver_(receiver), member_method_(method) {}
 
   /** Prototype based constructor. */
-  Method (void * receiver, const MethodPrototype &prototype) : Object(prototype.name_, prototype.type_),
+  Method(void *receiver, const MethodPrototype &prototype) : Object(prototype.name_, prototype.type_, prototype.keep_last_),
       receiver_(receiver), member_method_(prototype.member_method_) {}
 
   /** Trigger: call the member method on the receiver. */

@@ -71,6 +71,10 @@ public:
     return list_.size();
   }
 
+  bool empty() {
+    return list_.empty();
+  }
+
   typename std::list<T>::iterator begin() {
     return list_.begin();
   }

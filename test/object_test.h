@@ -211,6 +211,25 @@ public:
     assert_false(base.get_child(0, &obj));
   }
 
+  void test_should_keep_last( void ) {
+    Object base("base");
+    Object *last = base.adopt(new Object("last"));
+    last->set_keep_last(true);
+    assert_equal(1, base.children_count());
+
+    base.adopt(new Object("one"));
+    assert_equal(2, base.children_count());
+    assert_equal("[\"one\", \"last\"]", base.list().to_json());
+
+    base.adopt(new Object("two"));
+    assert_equal(3, base.children_count());
+    assert_equal("[\"one\", \"two\", \"last\"]", base.list().to_json());
+
+    base.adopt(new Object("last2", DEFAULT_TYPE, true));
+    assert_equal(4, base.children_count());
+    assert_equal("[\"one\", \"two\", \"last\", \"last2\"]", base.list().to_json());
+  }
+
   // set_type is not a good idea. It should be immutable (or maybe I'm wrong, so I leave the test here)
   //void test_set_type( void ) {
   //  DummyObject one("one", 123.0);

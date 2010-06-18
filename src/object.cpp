@@ -109,6 +109,7 @@ void Object::unregister_child(Object *object) {
     for(it = children_vector_.begin(); it != end; ++it) {
       if (*it == object) {
         it = children_vector_.erase(it);
+        break;
       }
     }
   }
@@ -158,7 +159,21 @@ void Object::register_child(Object *object) {
   }
 
   { ScopedWrite lock(children_vector_);
-    children_vector_.push_back(object);
+    size_t sz = children_vector_.size();
+        // goes last anyway   // empty list   // no keep_last_ object in list
+    if (object->keep_last_    || sz == 0      || !children_vector_[sz-1]->keep_last_) {
+      // just append at the end
+      children_vector_.push_back(object);
+    } else {
+      // insert before the first 'keep_last_' child
+      std::vector<Object*>::iterator it, end = children_vector_.end();
+      for(it = children_vector_.begin(); it != end; ++it) {
+        if ((*it)->keep_last_) {
+          children_vector_.insert(it, object);
+          break;
+        }
+      }
+    }
   }
 }
 
@@ -196,47 +211,39 @@ void Object::clear() {
 
 
 const Value Object::list() const {
-  ScopedRead lock(children_);
-  ListValue res;
-  ConstStringIterator it, end = children_.end();
-  for (it = children_.begin(); it != end; ++it) {
-    Object * obj;
-    if (children_.get(*it, &obj)) {
-      // if (!obj->kind_of(Alias)) {
-        // do not list alias (Alias are used as internal helpers and do not
-        // need to be advertised) ?
-        if (obj->children_.empty()) {
-          res.push_back(obj->name_);
-        } else {
-          res.push_back(std::string(obj->name_).append("/"));
-        }
-      // }
+  ScopedRead lock(children_vector_);
+  ListValue list;
+
+  std::vector<Object*>::const_iterator it, end = children_vector_.end();
+  for(it = children_vector_.begin(); it != end; ++it) {
+    const Object *obj = *it;
+    if (obj->children_.empty()) {
+      list.push_back(obj->name_);
+    } else {
+      list.push_back(std::string(obj->name_).append("/"));
     }
   }
-  return res;
+
+  return list;
 }
 
-const Value Object::list_with_type() const {
-  ScopedRead lock(children_);
+const Value Object::list_with_type() {
+  ScopedRead lock(children_vector_);
   ListValue list;
-  ConstStringIterator it, end = children_.end();
-  for (it = children_.begin(); it != end; ++it) {
+
+  std::vector<Object*>::iterator it, end = children_vector_.end();
+  for(it = children_vector_.begin(); it != end; ++it) {
     ListValue name_with_type;
-    Object * obj;
-    if (children_.get(*it, &obj)) {
-      // if (!obj->kind_of(Alias)) {
-        // do not list alias (Alias are used as internal helpers and do not
-        // need to be advertised) ?
-        if (obj->children_.empty()) {
-          name_with_type.push_back(obj->name_);
-        } else {
-          name_with_type.push_back(std::string(obj->name_).append("/"));
-        }
-        name_with_type.push_back(obj->type_with_current_value());
-        list.push_back(name_with_type);
-      // }
+    Object *obj = *it;
+    if (obj->children_.empty()) {
+      name_with_type.push_back(obj->name_);
+    } else {
+      name_with_type.push_back(std::string(obj->name_).append("/"));
     }
+    name_with_type.push_back(obj->type_with_current_value());
+    list.push_back(name_with_type);
   }
+
   return list;
 }
 

@@ -51,6 +51,7 @@ public:
   }
 
 private:
+
   /** List of callbacks to trigger on destruction.
    */
   OnDestroyNotifier destruction_notifier_;

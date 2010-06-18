@@ -63,57 +63,61 @@ class Object : public Typed, public Observable, public CReferenceCounted {
   /** Class signature. */
   TYPED("Object")
 
-  explicit Object() : root_(NULL), parent_(NULL), children_(20), context_(NULL),
+  explicit Object() : root_(NULL), parent_(NULL), children_(20), context_(NULL), keep_last_(false),
     type_(DEFAULT_TYPE) {
     sync_type_id();
     name_ = "";
     url_  = name_;
   }
 
-  explicit Object(const char *name) : root_(NULL), parent_(NULL), children_(20),
-    name_(name), url_(name), context_(NULL), type_(DEFAULT_TYPE) {
+  explicit Object(const char *name) : root_(NULL), parent_(NULL),
+    children_(20), name_(name), url_(name), context_(NULL), keep_last_(false),
+    type_(DEFAULT_TYPE) {
     sync_type_id();
   }
 
   explicit Object(const std::string &name) : root_(NULL), parent_(NULL),
-    children_(20), name_(name), url_(name), context_(NULL),
+    children_(20), name_(name), url_(name), context_(NULL), keep_last_(false),
     type_(DEFAULT_TYPE) {
     sync_type_id();
   }
 
   explicit Object(const Value &type) : root_(NULL), parent_(NULL),
-    children_(20), context_(NULL), type_(type) {
+    children_(20), context_(NULL), keep_last_(false), type_(type) {
     sync_type_id();
     name_ = "";
     url_  = name_;
   }
 
-  Object(const char *name, const Value &type) : root_(NULL), parent_(NULL),
-    children_(20), name_(name), url_(name), context_(NULL), type_(type) {
-    sync_type_id();
-  }
-
-  Object(const std::string &name, const Value &type) : root_(NULL),
-    parent_(NULL), children_(20), name_(name), url_(name), context_(NULL),
+  Object(const char *name, const Value &type, bool keep_last = false) : root_(NULL), parent_(NULL),
+    children_(20), name_(name), url_(name), context_(NULL), keep_last_(keep_last),
     type_(type) {
     sync_type_id();
   }
 
+  Object(const std::string &name, const Value &type, bool keep_last = false) : root_(NULL),
+    parent_(NULL), children_(20), name_(name), url_(name), context_(NULL),
+    keep_last_(keep_last), type_(type) {
+    sync_type_id();
+  }
+
   Object(Object *parent, const char *name) : root_(NULL), parent_(NULL),
-    children_(20), name_(name), context_(NULL), type_(DEFAULT_TYPE) {
+    children_(20), name_(name), context_(NULL), keep_last_(false),
+    type_(DEFAULT_TYPE) {
     sync_type_id();
     parent->adopt(this);
   }
 
   Object(Object *parent, const char *name, const Value &type) : root_(NULL),
-    parent_(NULL), children_(20), name_(name), context_(NULL), type_(type) {
+    parent_(NULL), children_(20), name_(name), context_(NULL), keep_last_(false),
+    type_(type) {
     sync_type_id();
     parent->adopt(this);
   }
 
   Object(Object *parent, const std::string &name, const Value &type) :
     root_(NULL), parent_(NULL), children_(20), name_(name), context_(NULL),
-    type_(type) {
+    keep_last_(false), type_(type) {
     sync_type_id();
     parent->adopt(this);
   }
@@ -206,6 +210,12 @@ class Object : public Typed, public Observable, public CReferenceCounted {
     moved();
   }
 
+  void set_keep_last(bool should_keep_last) {
+    if (should_keep_last != keep_last_) {
+      keep_last_ = should_keep_last;
+      set_parent(parent_); // reset
+    }
+  }
   /** Return name of object. */
   inline const std::string name() const {
     return name_;
@@ -228,8 +238,10 @@ class Object : public Typed, public Observable, public CReferenceCounted {
    * This method is used as a reply to the /.list_with_type meta method.
    * The format of the reply is a list of names with the type:
    * [name, current, unit, ...], [name, current, unit, ...], etc.
+   *
+   * This method is not 'const' because it triggers the object to get the current value.
    */
-  const Value list_with_type() const;
+  const Value list_with_type();
 
   /** List full tree under this node.
    *  @param base_length is the length of the url for the initial call
@@ -441,6 +453,12 @@ class Object : public Typed, public Observable, public CReferenceCounted {
    * FIXME: remove.
    */
   Mutex *context_;
+
+  /** Flag to force this object at the end of the children list.
+   * If more then one child has this setting, they are kept in insertion order at
+   * the end.
+   */
+  bool keep_last_;
 
  private:
 
