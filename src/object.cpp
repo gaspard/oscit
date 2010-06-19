@@ -228,8 +228,7 @@ const Value Object::list() const {
 }
 
 
-const Value Object::to_hash() {
-  HashValue hash;
+void Object::to_hash(Value *result) {
 
   { ScopedRead lock(children_vector_);
     if (children_vector_.size() > 0) {
@@ -237,18 +236,20 @@ const Value Object::to_hash() {
 
       for(it = children_vector_.begin(); it != end; ++it) {
         Object *obj = *it;
-        const Value obj_hash = obj->to_hash();
+
+        Value obj_hash;
+        obj->to_hash(&obj_hash);
+
         if (!obj_hash.is_nil()) {
-          hash.set(obj->name(), obj->to_hash());
+          result->set(obj->name(), obj_hash);
         }
       }
-
-      return hash;
+      return;
     }
   }
 
   // no children get value by sending trigger.
-  return trigger(gNilValue);
+  *result = trigger(gNilValue);
 }
 
 const Value Object::list_with_type() {

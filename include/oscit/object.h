@@ -239,7 +239,18 @@ class Object : public Typed, public Observable, public CReferenceCounted {
    * on the children objects. This method is not const because
    * the objects might need to trigger to get their current value.
    */
-  virtual const Value to_hash();
+  virtual void to_hash(Value *result);
+
+  /** Return a hash representing the current object. The
+   * default behavior is to build a hash by sending 'to_hash'
+   * on the children objects. This method is just a convenient method
+   * that calls to_hash(Value *result).
+   */
+  const Value to_hash() {
+    Value result;
+    to_hash(&result);
+    return result;
+  }
 
   /** List sub-nodes with their current value and type.
    * This method is used as a reply to the /.list_with_type meta method.
