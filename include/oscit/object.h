@@ -235,20 +235,20 @@ class Object : public Typed, public Observable, public CReferenceCounted {
   const Value list() const;
 
   /** Return a hash representing the current object. The
-   * default behavior is to build a hash by sending 'to_hash'
+   * default behavior is to build a hash by sending 'make_hash'
    * on the children objects. This method is not const because
    * the objects might need to trigger to get their current value.
    */
-  virtual void to_hash(Value *result);
+  virtual void make_hash(Value *result);
 
   /** Return a hash representing the current object. The
    * default behavior is to build a hash by sending 'to_hash'
    * on the children objects. This method is just a convenient method
-   * that calls to_hash(Value *result).
+   * that calls make_hash.
    */
   const Value to_hash() {
     Value result;
-    to_hash(&result);
+    make_hash(&result);
     return result;
   }
 
