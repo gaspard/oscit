@@ -731,6 +731,20 @@ public:
     return hash_->has_key(key);
   }
 
+  /** Remove entry with the given key.
+   */
+  void remove(const char *key) {
+    if (!is_hash()) return;
+    hash_->remove(std::string(key));
+  }
+
+  /** Remove entry with the given key.
+   */
+  void remove(std::string &key) {
+    if (!is_hash()) return;
+    hash_->remove(key);
+  }
+
   /** =========================================================    Matrix  */
   bool is_matrix() const   { return type_ == MATRIX_VALUE; }
 

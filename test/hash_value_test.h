@@ -340,4 +340,15 @@ public:
     assert_true(a.has_key(std::string("one")));
     assert_false(a.has_key(std::string("four")));
   }
+
+  void test_remove( void ) {
+    Value a(Json("one: 1 two: 2"));
+    Value b;
+    assert_true(a.has_key("one"));
+
+    a.remove("one");
+    a.remove("xyz"); // should just ignore
+    assert_false(a.has_key("one"));
+    assert_true(a.has_key("two"));
+  }
 };

@@ -63,6 +63,7 @@ public:
 
   /** Set hash to script content.
    * @param hash should be a pointer to a HashValue.
+   * FIXME: remove. Using to_hash instead.
    */
   void inspect(Value *hash);
 
