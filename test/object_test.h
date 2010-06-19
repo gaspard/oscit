@@ -230,6 +230,22 @@ public:
     assert_equal("[\"one\", \"two\", \"last\", \"last2\"]", base.list().to_json());
   }
 
+  void test_to_hash_should_list_children( void ) {
+    Object base("base");
+    base.adopt(new DummyObject("width", 100));
+    base.adopt(new DummyObject("height", 60));
+    assert_equal("{\"width\":100, \"height\":60}", base.to_hash().to_json());
+  }
+
+  void test_nested_to_hash_should_list_children( void ) {
+    Object base("base");
+    base.adopt(new DummyObject("width", 100));
+    base.adopt(new DummyObject("height", 60));
+    Object *patch = base.adopt(new Object("patch"));
+    patch->adopt(new DummyObject("Africa", Value("Unite!"), StringIO("Something")));
+    assert_equal("{\"width\":100, \"height\":60, \"patch\":{\"Africa\":\"Unite!\"}}", base.to_hash().to_json());
+  }
+
   // set_type is not a good idea. It should be immutable (or maybe I'm wrong, so I leave the test here)
   //void test_set_type( void ) {
   //  DummyObject one("one", 123.0);

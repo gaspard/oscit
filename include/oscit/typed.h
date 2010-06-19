@@ -41,7 +41,7 @@ namespace oscit {
 #define TYPED(str) \
   virtual const char *class_path() const { return str; } \
   static  const char *_path() { return str; } \
-
+// TODO: can we make this a const var instead ?
 #ifdef USE_RTTI_TYPE
 
 #define kind_of(klass) is_a<klass *>()

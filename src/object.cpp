@@ -227,6 +227,30 @@ const Value Object::list() const {
   return list;
 }
 
+
+const Value Object::to_hash() {
+  HashValue hash;
+
+  { ScopedRead lock(children_vector_);
+    if (children_vector_.size() > 0) {
+      std::vector<Object*>::iterator it, end = children_vector_.end();
+
+      for(it = children_vector_.begin(); it != end; ++it) {
+        Object *obj = *it;
+        const Value obj_hash = obj->to_hash();
+        if (!obj_hash.is_nil()) {
+          hash.set(obj->name(), obj->to_hash());
+        }
+      }
+
+      return hash;
+    }
+  }
+
+  // no children get value by sending trigger.
+  return trigger(gNilValue);
+}
+
 const Value Object::list_with_type() {
   ScopedRead lock(children_vector_);
   ListValue list;

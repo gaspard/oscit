@@ -96,20 +96,20 @@ public:
   void test_update( void ) {
     Root root(false);
     root.adopt(new HashFileMethod("simple_view", fixture_path(HASH_FILE_METHOD_PATH), std::string("Basic synth view.")));
-    Value res = root.call("/simple_view/update", Value(Json("{parts:{1:{x:11}}}")));
+    Value res = root.call("/simple_view/update", Value(Json("{patch:{1:{x:11}}}")));
     assert_true(res.is_hash());
-    assert_equal("{\"parts\":{\"1\":{\"x\":11}}}", res.to_json());
+    assert_equal("{\"patch\":{\"1\":{\"x\":11}}}", res.to_json());
 
     res = root.call("/simple_view");
     assert_true(res.is_hash());
-    assert_equal("\"parts\":{\"1\":{\"class\":\"Slider\", \"x\":11, \"y\":10, \"width\":30", res.to_json().substr(42, 58));
-    assert_equal(11, res["parts"]["1"]["x"].r);
+    assert_equal("\"patch\":{\"1\":{\"class\":\"Slider\", \"x\":11, \"y\":10, \"width\":30", res.to_json().substr(42, 58));
+    assert_equal(11, res["patch"]["1"]["x"].r);
 
     std::ifstream in(fixture_path(HASH_FILE_METHOD_PATH).c_str(), std::ios::in);
       std::ostringstream oss;
       oss << in.rdbuf();
     in.close();
-    assert_equal("\"parts\":{\"1\":{\"class\":\"Slider\", \"x\":11, \"y\":10, \"width\":30", oss.str().substr(42, 58));
+    assert_equal("\"patch\":{\"1\":{\"class\":\"Slider\", \"x\":11, \"y\":10, \"width\":30", oss.str().substr(42, 58));
   }
 
   void test_read_bad_file( void ) {
