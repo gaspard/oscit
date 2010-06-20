@@ -228,7 +228,7 @@ const Value Object::list() const {
 }
 
 
-void Object::make_hash(Value *result) {
+void Object::insert_in_hash(Value *result) {
 
   { ScopedRead lock(children_vector_);
     if (children_vector_.size() > 0) {
@@ -238,7 +238,7 @@ void Object::make_hash(Value *result) {
         Object *obj = *it;
 
         Value obj_hash;
-        obj->make_hash(&obj_hash);
+        obj->insert_in_hash(&obj_hash);
 
         if (!obj_hash.is_nil()) {
           result->set(obj->name(), obj_hash);
