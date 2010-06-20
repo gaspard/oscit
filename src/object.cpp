@@ -53,22 +53,19 @@ Object::~Object() {
   clear();
 }
 
-const Value Object::set(const Value &val) {
+void Object::from_hash(const Value &val, Value *result) {
   HashIterator it;
   HashIterator end = val.end();
   Value param;
-  Value res;
   ObjectHandle handle;
 
   for (it = val.begin(); it != end; ++it) {
     if (get_child(*it, &handle) && val.get(*it, &param)) {
-      res.set(*it, root_->call(handle, param, NULL));
+      result->set(*it, root_->call(handle, param, NULL));
     } else {
-      res.set(*it, ErrorValue(NOT_FOUND_ERROR, *it));
+      result->set(*it, ErrorValue(NOT_FOUND_ERROR, *it));
     }
   }
-
-  return res;
 }
 
 bool Object::set_all_ok(const Value &val) {
