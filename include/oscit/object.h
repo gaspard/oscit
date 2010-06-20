@@ -124,40 +124,6 @@ class Object : public Typed, public Observable, public CReferenceCounted {
 
   virtual ~Object();
 
-  /** Shortcut to call multiple methods on an object. This method simply calls from_hash.
-   * @param val Using "obj.set(tempo:45 rubato:1.5)" is equivalent to calling
-   *            "obj.tempo(45)" and "obj.rubato(1.5)".
-   * @return    a hash with the result for each call.
-   */
-  const Value set(const Value &val) {
-    Value result;
-    from_hash(val, &result);
-    return result;
-  }
-
-  /** Update an object from a hash, inserting results for each call
-   * in the results hash.
-   */
-  virtual void from_hash(const Value &hash, Value *results);
-
-  /** Shortcut to call multiple methods on an object.
-   * @param val Using "obj.set(tempo:45 rubato:1.5)" is equivalent to calling
-   *            "obj.tempo(45)" and "obj.rubato(1.5)".
-   * @return true on success, false if any call failed.
-   */
-  bool set_all_ok(const Value &val);
-
-  /** This is the prefered way to insert new objects in the tree since it clearly
-   * highlights ownership in the parent.
-   * TODO: make sure a parent is not adopted by it's child.
-   * TODO: if we want to make this thread safe, we need a handle.
-   */
-  template<class T>
-  T *adopt(T *object) {
-    object->set_parent(this);
-    return object;
-  }
-
   /** Clear all children (delete).
    * TODO: make thread safe
    */
@@ -242,6 +208,40 @@ class Object : public Typed, public Observable, public CReferenceCounted {
    * [name, name, ...].
    */
   const Value list() const;
+
+  /** Shortcut to call multiple methods on an object. This method simply calls from_hash.
+   * @param val Using "obj.set(tempo:45 rubato:1.5)" is equivalent to calling
+   *            "obj.tempo(45)" and "obj.rubato(1.5)".
+   * @return    a hash with the result for each call.
+   */
+  const Value set(const Value &val) {
+    Value result;
+    from_hash(val, &result);
+    return result;
+  }
+
+  /** Update an object from a hash, inserting results for each call
+   * in the results hash.
+   */
+  virtual void from_hash(const Value &hash, Value *results);
+
+  /** Shortcut to call multiple methods on an object.
+   * @param val Using "obj.set(tempo:45 rubato:1.5)" is equivalent to calling
+   *            "obj.tempo(45)" and "obj.rubato(1.5)".
+   * @return true on success, false if any call failed.
+   */
+  bool set_all_ok(const Value &val);
+
+  /** This is the prefered way to insert new objects in the tree since it clearly
+   * highlights ownership in the parent.
+   * TODO: make sure a parent is not adopted by it's child.
+   * TODO: if we want to make this thread safe, we need a handle.
+   */
+  template<class T>
+  T *adopt(T *object) {
+    object->set_parent(this);
+    return object;
+  }
 
   /** Return a hash representing the current object. The
    * default behavior is to build a hash by sending 'insert_in_hash'
