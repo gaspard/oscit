@@ -246,6 +246,15 @@ public:
     assert_equal("{\"width\":100, \"height\":60, \"patch\":{\"Africa\":\"Unite!\"}}", base.to_hash().to_json());
   }
 
+  void test_from_hash_should_ignore_at( void ) {
+    Object base("base");
+    DummyObject *width  = base.adopt(new DummyObject("width", 100));
+    DummyObject *height = base.adopt(new DummyObject("height", 60));
+    Value res = base.set(Value(Json("{width:101, height:59, @foo:\"bar\"}")));
+    assert_equal(101, width->real());
+    assert_equal(59, height->real());
+  }
+
   // set_type is not a good idea. It should be immutable (or maybe I'm wrong, so I leave the test here)
   //void test_set_type( void ) {
   //  DummyObject one("one", 123.0);

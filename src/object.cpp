@@ -60,6 +60,9 @@ void Object::from_hash(const Value &val, Value *result) {
   ObjectHandle handle;
 
   for (it = val.begin(); it != end; ++it) {
+    // ignore methods that start with '@'.
+    if ((*it).at(0) == '@') continue;
+
     if (get_child(*it, &handle) && val.get(*it, &param)) {
       result->set(*it, root_->call(handle, param, NULL));
     } else {

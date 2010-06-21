@@ -197,8 +197,14 @@ public:
     clear();
   }
 
-  /** Share the content of another Value. */
-  Value &set(const Value &other) { // TODO: use 'const' to select between 'share' and 'copy' ? Do the same with Root::call return values.
+
+  /** Share the content of another Value.
+   * TODO: use 'const' to select between 'share' and 'copy' ?
+   * FIXME: we are sharing a 'const' !
+   * Solution: const Value = const xxx ==> share
+   *           Value = const xxx       ==> copy first
+   */
+  Value &set(const Value &other) {
     // In case current value is a Hash or List, we must retain ReferenceCounted element before clear
     // or foo = foo[3] will fail.
     ReferenceCounted *old_ref = NULL;

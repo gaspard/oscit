@@ -221,7 +221,8 @@ class Object : public Typed, public Observable, public CReferenceCounted {
   }
 
   /** Update an object from a hash, inserting results for each call
-   * in the results hash.
+   * in the results hash. All keys in the hash that start with '@' are
+   * ignored.
    */
   virtual void from_hash(const Value &hash, Value *results);
 
