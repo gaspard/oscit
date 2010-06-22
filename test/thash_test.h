@@ -30,8 +30,12 @@
 #include "test_helper.h"
 #include "oscit/thash.h"
 
+class DummyTHashTest : private NonCopyable {
+public:
+  DummyTHashTest() {}
+};
 
-class StringTHashTest : public TestHelper
+class THashTest : public TestHelper
 {
 public:
   void test_set_get( void ) {
@@ -45,6 +49,22 @@ public:
     assert_equal("world", res);
     assert_true(hash.get("my", &res));
     assert_equal("mum", res);
+    assert_false(hash.get("money", &res));
+  }
+
+  void test_set_get_ptr( void ) {
+    THash<std::string, DummyTHashTest*> hash(10);
+    DummyTHashTest *a = new DummyTHashTest;
+    DummyTHashTest *b = new DummyTHashTest;
+    DummyTHashTest *res;
+
+    hash.set(std::string("hello"), a);
+    hash.set(std::string("my"),    b);
+
+    assert_true(hash.get("hello", &res));
+    assert_equal(a, res);
+    assert_true(hash.get("my", &res));
+    assert_equal(b, res);
     assert_false(hash.get("money", &res));
   }
 
