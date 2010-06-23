@@ -214,4 +214,19 @@ public:
     assert_equal("oscit://\"foobar\"/a/b/good", url2.str());
     assert_equal("oscit://\"foobar\"/a/b/good/or/evil", url3.str());
   }
+
+  void test_hash_url( void ) {
+    THash<Url, std::string> dict(20);
+    dict.set(Url("oscit://one.com/a/b/c"), std::string("my super url"));
+    dict.set(Url("oscit://one.com/a/b/d"), std::string("my other url"));
+
+    std::string tmp;
+    assert_true(dict.get(Url("oscit://one.com/a/b/c"), &tmp));
+    assert_equal("my super url", tmp);
+
+    assert_true(dict.get(Url("oscit://one.com/a/b/d"), &tmp));
+    assert_equal("my other url", tmp);
+
+    assert_false(dict.get(Url("oscit://one.com/a/b/e"), &tmp));
+  }
 };

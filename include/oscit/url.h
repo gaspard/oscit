@@ -163,6 +163,19 @@ class Url
     return Url(location_, std::string(path_).append("/").append(sub_name));
   }
 
+  /** Return false if the url is exactly the same as the other one.
+   */
+  bool operator!=(const Url &other) const {
+    return !(this->operator==(other));
+  }
+
+  /** Return true if the url is exactly the same as the other one.
+   */
+  bool operator==(const Url &other) const {
+    return full_url_ == other.full_url_;
+  }
+
+
  private:
   friend std::ostream &operator<<(std::ostream &out_stream, const Url &url);
   void parse(const char *string);
@@ -188,6 +201,10 @@ class Url
    */
   std::string path_;
 };
+
+inline uint hashId(const Url &url) {
+  return hashId(url.str());
+}
 
 std::ostream &operator<<(std::ostream &out_stream, const Url &url);
 
