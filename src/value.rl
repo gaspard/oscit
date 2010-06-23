@@ -49,11 +49,12 @@ namespace oscit {
 #endif
 
 Value gNilValue('N');
-Value gTrueValue(1.0);
-Value gFalseValue(0.0);
+Value gTrueValue('T');
+Value gFalseValue('F');
 Value gEmptyValue;
 Hash  gEmptyHash(1);
 
+#define gBangValue gTrueValue
 
 // ------------------------------------------------------------- escape
 static std::string escape(const std::string &string) {
@@ -121,9 +122,11 @@ void Value::to_stream(std::ostream &out_stream, bool lazy) const {
       }
       break;
     case MATRIX_VALUE:
+      // FIXME: replace by {"=M":[[xxx], [xxx]]}
       out_stream << "\"Matrix " << matrix_->rows << "x" << matrix_->cols << "\"";
       break;
     case MIDI_VALUE:
+      // FIXME: replace by {"=m":[byte, byte, byte, ...]}
       out_stream << "\"MidiMessage " << *midi_message_ << "\"";
       break;
     case LIST_VALUE:
@@ -135,10 +138,15 @@ void Value::to_stream(std::ostream &out_stream, bool lazy) const {
       }
       if (!lazy) out_stream << "]";
       break;
-    case EMPTY_VALUE:
-      break; // nothing
-    case ANY_VALUE: /* continue */
-    case NIL_VALUE: /* continue */
+    case TRUE_VALUE:
+      out_stream << "true";
+      break;
+    case FALSE_VALUE:
+      out_stream << "false";
+      break;
+    case EMPTY_VALUE: /* continue */
+    case ANY_VALUE:   /* continue */
+    case NIL_VALUE:   /* continue */
     default:
       out_stream << "null";
   }
@@ -367,6 +375,18 @@ Value Value::join(char c) const {
     tmp_val.set_type(NIL_VALUE);
   }
 
+  action true {
+    // become a TrueValue
+    DEBUG(printf("[true]\n"));
+    tmp_val.set_type(TRUE_VALUE);
+  }
+
+  action false {
+    // become a FalseValue
+    DEBUG(printf("[false]\n"));
+    tmp_val.set_type(FALSE_VALUE);
+  }
+
   action set_from_tmp {
     DEBUG(printf("[set_from_tmp %s]\n", tmp_val.to_json().c_str()));
     if (!is_list() && !is_hash()) *this = tmp_val;
@@ -392,6 +412,8 @@ Value Value::join(char c) const {
               ws* '{' ws* '}'        %empty_hash |
                       string             %string |
                       number             %number |
+                      true               %true   |
+                      false              %false  |
                       nil                %nil;
 
   lazy_list_content = strict %lazy_list ',' >list_value (',' >list_value)*;

@@ -38,6 +38,8 @@ public:
 
     assert_false(v.is_empty());
     assert_false(v.is_nil());
+    assert_false(v.is_true());
+    assert_false(v.is_false());
     assert_true (v.is_real());
     assert_false(v.is_string());
     assert_false(v.is_list());
@@ -53,19 +55,6 @@ public:
     assert_equal("f", v.type_tag());
     int i = H("f");
     assert_equal(i, v.type_id());
-  }
-
-  void test_true_value( void ) {
-    assert_equal("f", gTrueValue.type_tag());
-    assert_equal(1.0, gTrueValue.r);
-    assert_true(gTrueValue.is_true());
-    assert_true(Value(1.0).is_true());
-  }
-
-  void test_false_value( void ) {
-    assert_equal("f", gFalseValue.type_tag());
-    assert_equal(0.0, gFalseValue.r);
-    assert_false(gFalseValue.is_true());
   }
 
   void test_create_real_value( void ) {

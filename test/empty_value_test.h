@@ -38,6 +38,8 @@ public:
 
     assert_true (v.is_empty());
     assert_false(v.is_nil());
+    assert_false(v.is_true());
+    assert_false(v.is_false());
     assert_false(v.is_real());
     assert_false(v.is_string());
     assert_false(v.is_list());
@@ -98,8 +100,8 @@ public:
     Value v;
     std::ostringstream os(std::ostringstream::out);
     os << v;
-    assert_equal("", os.str());
-    assert_equal("", v.to_json());
+    assert_equal("null", os.str());
+    assert_equal("null", v.to_json());
   }
 
   void test_from_json( void ) {

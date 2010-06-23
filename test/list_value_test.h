@@ -40,6 +40,8 @@ public:
 
     assert_false(v.is_empty());
     assert_false(v.is_nil());
+    assert_false(v.is_true());
+    assert_false(v.is_false());
     assert_false(v.is_real());
     assert_false(v.is_string());
     assert_true (v.is_list());

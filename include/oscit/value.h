@@ -240,6 +240,12 @@ public:
       case ANY_VALUE:
         set_any();
         break;
+      case TRUE_VALUE:
+        set_true();
+        break;
+      case FALSE_VALUE:
+        set_false();
+        break;
       case EMPTY_VALUE:
         /* we consider that if you set a value with empty it means you want Nil.
          * This is very useful for return values. */
@@ -284,12 +290,19 @@ public:
       case ANY_VALUE:
         set_any();
         break;
+      case TRUE_VALUE:
+        set_true();
+        break;
+      case FALSE_VALUE:
+        set_false();
+        break;
       case EMPTY_VALUE:
         /* we consider that if you set a value with empty it means you want Nil.
-         * This is very useful for return values. */
+         * This is very useful for return values.
+         * THIS IS BAD. FIXME: remove.
+         */
         /* continue */
-      case NIL_VALUE:
-        /* continue */
+      case NIL_VALUE:   /* continue */
       default:
         set_nil();
     }
@@ -316,10 +329,12 @@ public:
         assert(false);
       case MIDI_VALUE:   return *midi_message_ == *(other.midi_message_);
       case LIST_VALUE:   return *list_ == *(other.list_);
+      case TRUE_VALUE:   /* continue */
+      case FALSE_VALUE:  /* continue */
       case NIL_VALUE:    /* continue */
       case ANY_VALUE:    /* continue */
       case EMPTY_VALUE:  /* continue */
-      default:           return true;
+      default:           return true; // ==> type_ == other.type_ (see above)
     }
   }
 
@@ -330,6 +345,8 @@ public:
   const char *type_tag() const {
     switch (type_) {
       case NIL_VALUE:    return "N";
+      case TRUE_VALUE:   return "T";
+      case FALSE_VALUE:  return "F";
       case REAL_VALUE:   return "f";
       case ERROR_VALUE:  return "E";
       case STRING_VALUE: return "s";
@@ -346,6 +363,8 @@ public:
   TypeTagID type_id() const {
     switch (type_) {
       case NIL_VALUE:    return H("N");
+      case TRUE_VALUE:   return H("T");
+      case FALSE_VALUE:  return H("F");
       case REAL_VALUE:   return H("f");
       case ERROR_VALUE:  return H("E");
       case STRING_VALUE: return H("s");
@@ -404,6 +423,8 @@ public:
       case MIDI_MESSAGE_TYPE_TAG: return MIDI_VALUE;
       case ANY_TYPE_TAG:    return ANY_VALUE;
       case NIL_TYPE_TAG:    return NIL_VALUE;
+      case TRUE_TYPE_TAG:   return TRUE_VALUE;
+      case FALSE_TYPE_TAG:  return FALSE_VALUE;
       default:              return EMPTY_VALUE;
     }
   }
@@ -428,10 +449,27 @@ public:
     return *this;
   }
 
+  /** =========================================================    True     */
+  bool is_true() const    { return type_ == TRUE_VALUE; }
+
+  /** Change the value to nil. */
+  Value &set_true() {
+    set_type_without_default(TRUE_VALUE);
+    return *this;
+  }
+
+
+  /** =========================================================    False     */
+  bool is_false() const    { return type_ == FALSE_VALUE; }
+
+  /** Change the value to nil. */
+  Value &set_false() {
+    set_type_without_default(FALSE_VALUE);
+    return *this;
+  }
+
   /** =========================================================    Real    */
   bool is_real() const  { return type_ == REAL_VALUE; }
-  bool is_true() const  { return type_ == REAL_VALUE && r == 1.0; }
-  bool is_false() const { return type_ == REAL_VALUE && r == 0.0; }
 
   /** Change the Value into a RealValue. */
   Value &set(Real real) {

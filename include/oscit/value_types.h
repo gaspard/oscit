@@ -47,6 +47,8 @@ enum ValueType
 {
   EMPTY_VALUE  = 0,
   NIL_VALUE,
+  TRUE_VALUE,
+  FALSE_VALUE,
   REAL_VALUE,
   STRING_VALUE,
   ERROR_VALUE,
@@ -60,6 +62,8 @@ enum ValueType
 enum ValueTypeTag
 {
   NIL_TYPE_TAG    = 'N',
+  TRUE_TYPE_TAG   = 'T',
+  FALSE_TYPE_TAG  = 'F',
   REAL_TYPE_TAG   = 'f',
   STRING_TYPE_TAG = 's',
   ERROR_TYPE_TAG  = 'E',

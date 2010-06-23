@@ -75,6 +75,12 @@ static void to_stream(osc::OutboundPacketStream &out_stream, const Value &val, b
     case ANY_VALUE:
       out_stream << osc::Any;
       break;
+    case TRUE_VALUE:
+      out_stream << true;
+      break;
+    case FALSE_VALUE:
+      out_stream << false;
+      break;
     case HASH_VALUE:   /* continue */
       out_stream << (osc::JsonHash)val.to_json().c_str();
     case MATRIX_VALUE: /* continue */
@@ -205,10 +211,10 @@ public:
     while (*type_tags) {
       switch (*type_tags) {
         case osc::TRUE_TYPE_TAG:
-          res.push_back(1.0);
+          res.push_back(gTrueValue);
           break;
         case osc::FALSE_TYPE_TAG:
-          res.push_back(0.0);
+          res.push_back(gFalseValue);
           break;
         case osc::NIL_TYPE_TAG:
           res.push_back(gNilValue);

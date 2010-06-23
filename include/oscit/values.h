@@ -46,8 +46,8 @@
 #define NoIO(info)  Value(info)
 #define NoIOTypeId H("s")
 
-#define NilIO(info)  ListValue("N").push_back(info)
-#define NilIOTypeId H("Ns")
+#define BangIO(info)  ListValue("T").push_back(info)
+#define BangIOTypeId H("Ts")
 
 #define RealIO(info) Value(0.0).push_back(info)
 #define RealIOTypeId H("fs")
