@@ -116,7 +116,7 @@ class Url
 
   /** Return the name of the last element in the url's path.
    */
-  const std::string name() {
+  const std::string name() const {
     size_t pos = path_.rfind("/");
     if (pos != std::string::npos) {
       return path_.substr(pos + 1);
@@ -153,6 +153,14 @@ class Url
 
   bool operator==(const Url &other) {
     return full_url_ == other.full_url_;
+  }
+
+  Url operator+(const std::string &sub_name) {
+    return Url(location_, std::string(path_).append("/").append(sub_name));
+  }
+
+  Url operator+(const char *sub_name) {
+    return Url(location_, std::string(path_).append("/").append(sub_name));
   }
 
  private:

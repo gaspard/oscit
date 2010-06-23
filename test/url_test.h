@@ -204,4 +204,14 @@ public:
     url2.set("oscit://\"foobar\"/a/b");
     assert_true(url1 == url2);
   }
+
+  void test_operator_plus( void ) {
+    Url url1("oscit://\"foobar\"/a/b");
+    Url url2 = url1 + "good";
+    Url url3 = url2 + std::string("or") + "evil";
+
+    assert_equal("oscit://\"foobar\"/a/b", url1.str());
+    assert_equal("oscit://\"foobar\"/a/b/good", url2.str());
+    assert_equal("oscit://\"foobar\"/a/b/good/or/evil", url3.str());
+  }
 };
