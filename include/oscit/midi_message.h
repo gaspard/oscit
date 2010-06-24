@@ -38,6 +38,8 @@
 
 namespace oscit {
 
+class Value;
+
 #define MIDI_NOTE_C0 24
 
 /** Midi messages types. */
@@ -61,47 +63,23 @@ class MidiMessage : public ReferenceCounted {
 
   explicit MidiMessage(unsigned int data_size) : type_(RawMidi), data_(data_size) {}
 
+  explicit MidiMessage(const Value &message, time_t wait = 0);
+
   virtual ~MidiMessage () {}
 
   /** Set message from raw midi data. Return false if message could not be set.
    */
+  bool unpack(const Value &message, time_t wait = 0);
+
+  /** Set message from raw midi data. Return false if message could not be set.
+   */
   bool set(std::vector<unsigned char> &message, time_t wait = 0) {
-    unsigned char channel;
     if (message.size() == 0) return false;  // no message
 
-    switch(message[0]) {
-      case 0xfa:
-        type_ = ClockStart;
-        break;
-      case 0xfc:
-        type_ = ClockStop;
-        break;
-      case 0xf8:
-        type_ = ClockTick;
-        break;
-      case 0xfb:
-        type_ = ClockContinue;
-        break;
-      default:
-        // FIXME: other messages not implemented yet.
-        channel = message[0];
-        if (channel >= 0x90) {
-          type_ = NoteOn;
-          data_ = message;
-          if (velocity() == 0) type_ = NoteOff;
-        } else if (channel >= 0x80) {
-          type_ = NoteOff;
-          data_ = message;
-        } else if (channel >= 0xB0) {
-          type_ = CtrlChange;
-          data_ = message;
-        } else {
-          std::cerr << "unknown message type " << channel << ".\n";
-          return false;
-        }
-    }
+    data_ = message;
     wait_ = wait;
-    return true;
+
+    return set_type_from_data();
   }
 
   /** Create a new midi note on message.
@@ -353,9 +331,59 @@ class MidiMessage : public ReferenceCounted {
     return oss.str();
   }
 
+  std::string to_json() const {
+    std::ostringstream oss;
+    oss << "{\"=m\":[";
+
+    size_t sz = data_.size();
+    for(size_t i = 0; i < sz; ++i) {
+      if (i != 0) oss << ", ";
+      oss << (int)data_[i];
+    }
+
+    oss << ", " << length_;
+    oss << "]" << "}";
+
+    return oss.str();
+  }
+
  private:
   friend std::ostream &operator<<(std::ostream &out_stream,
     const MidiMessage &midi_message);
+
+  /** Set message type from raw data.
+   */
+  bool set_type_from_data() {
+    switch(data_[0]) {
+      case 0xfa:
+        type_ = ClockStart;
+        break;
+      case 0xfc:
+        type_ = ClockStop;
+        break;
+      case 0xf8:
+        type_ = ClockTick;
+        break;
+      case 0xfb:
+        type_ = ClockContinue;
+        break;
+      default:
+        // FIXME: other messages not implemented yet.
+        unsigned char channel = data_[0];
+        if (channel >= 0x90) {
+          type_ = NoteOn;
+          if (velocity() == 0) type_ = NoteOff;
+        } else if (channel >= 0x80) {
+          type_ = NoteOff;
+        } else if (channel >= 0xB0) {
+          type_ = CtrlChange;
+        } else {
+          std::cerr << "unknown message type " << channel << ".\n";
+          return false;
+        }
+    }
+    return true;
+  }
 
   /** Type of midi messate (NoteOn, NoteOff, etc).
    */

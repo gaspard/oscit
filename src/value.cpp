@@ -126,8 +126,7 @@ void Value::to_stream(std::ostream &out_stream, bool lazy) const {
       out_stream << "\"Matrix " << matrix_->rows << "x" << matrix_->cols << "\"";
       break;
     case MIDI_VALUE:
-      // FIXME: replace by {"=m":[byte, byte, byte, ...]}
-      out_stream << "\"MidiMessage " << *midi_message_ << "\"";
+      out_stream << midi_message_->to_json();
       break;
     case LIST_VALUE:
       sz = size();
@@ -299,12 +298,12 @@ Value Value::join(char c) const {
 
 /* ============================================= JSON Parser ========= */
 
-#line 426 "/Users/gaspard/git/oscit/src/value.rl"
+#line 434 "/Users/gaspard/git/oscit/src/value.rl"
 
 
 // transition table
 
-#line 308 "/Users/gaspard/git/oscit/src/value.cpp"
+#line 307 "/Users/gaspard/git/oscit/src/value.cpp"
 static const char _json_actions[] = {
 	0, 1, 0, 1, 3, 1, 4, 1, 
 	7, 1, 11, 2, 1, 11, 2, 2, 
@@ -546,7 +545,7 @@ static const int json_en_main_strict = 49;
 static const int json_en_main_lazy = 1;
 
 
-#line 430 "/Users/gaspard/git/oscit/src/value.rl"
+#line 438 "/Users/gaspard/git/oscit/src/value.rl"
 
 /** This is a crude JSON parser. */
 size_t Value::build_from_json(const char *json, bool strict_mode) {
@@ -561,12 +560,12 @@ size_t Value::build_from_json(const char *json, bool strict_mode) {
   const char * pe = json + strlen(p) + 1;
 
   
-#line 565 "/Users/gaspard/git/oscit/src/value.cpp"
+#line 564 "/Users/gaspard/git/oscit/src/value.cpp"
 	{
 	cs = json_start;
 	}
 
-#line 444 "/Users/gaspard/git/oscit/src/value.rl"
+#line 452 "/Users/gaspard/git/oscit/src/value.rl"
 
   if (strict_mode) {
     cs = json_en_main_strict;
@@ -575,7 +574,7 @@ size_t Value::build_from_json(const char *json, bool strict_mode) {
   }
 
   
-#line 579 "/Users/gaspard/git/oscit/src/value.cpp"
+#line 578 "/Users/gaspard/git/oscit/src/value.cpp"
 	{
 	int _klen;
 	unsigned int _trans;
@@ -650,7 +649,7 @@ _match:
 		switch ( *_acts++ )
 		{
 	case 0:
-#line 302 "/Users/gaspard/git/oscit/src/value.rl"
+#line 301 "/Users/gaspard/git/oscit/src/value.rl"
 	{
      // append a char to build a std::string
     DEBUG(printf("%c-",(*p)));
@@ -659,7 +658,7 @@ _match:
   }
 	break;
 	case 1:
-#line 309 "/Users/gaspard/git/oscit/src/value.rl"
+#line 308 "/Users/gaspard/git/oscit/src/value.rl"
 	{
     // become a RealValue
     tmp_val.set(atof(str_buf.c_str()));
@@ -668,7 +667,7 @@ _match:
   }
 	break;
 	case 2:
-#line 316 "/Users/gaspard/git/oscit/src/value.rl"
+#line 315 "/Users/gaspard/git/oscit/src/value.rl"
 	{
     // become a StringValue
     tmp_val.set(str_buf);
@@ -677,22 +676,31 @@ _match:
   }
 	break;
 	case 3:
-#line 323 "/Users/gaspard/git/oscit/src/value.rl"
+#line 322 "/Users/gaspard/git/oscit/src/value.rl"
 	{
     // Parse a single element of a hash (key:value)
     // Build tmp_val from string and move p forward
     p++;
     p += tmp_val.build_from_json(p, true);
-    set(str_buf, tmp_val);
+
+    if (str_buf.at(0) == '=') {
+      tmp_val.unpack(str_buf, tmp_val); // set_from_tmp will set current obj
+
+      DEBUG(printf("[serialized_value \"%s\":%s]\n", str_buf.c_str(), to_json().c_str()));
+      DEBUG(printf("[continue \"%s\"]\n",p));
+    } else {
+      set(str_buf, tmp_val);
+      DEBUG(printf("[hash_value \"%s\":%s]\n", str_buf.c_str(), tmp_val.to_json().c_str()));
+      DEBUG(printf("[continue \"%s\"]\n",p));
+    }
+
     p--;
-    DEBUG(printf("[hash_value \"%s\":%s]\n", str_buf.c_str(), tmp_val.to_json().c_str()));
-    DEBUG(printf("[continue \"%s\"]\n",p));
 
     str_buf = "";
   }
 	break;
 	case 4:
-#line 336 "/Users/gaspard/git/oscit/src/value.rl"
+#line 344 "/Users/gaspard/git/oscit/src/value.rl"
 	{
     // Parse a single element of a hash (key:value)
     // Build tmp_val from string and move p forward
@@ -706,7 +714,7 @@ _match:
   }
 	break;
 	case 5:
-#line 348 "/Users/gaspard/git/oscit/src/value.rl"
+#line 356 "/Users/gaspard/git/oscit/src/value.rl"
 	{
     // we have a value in tmp that should be changed into a list [tmp]
     DEBUG(printf("[%p:lazy_list %s]\n", this, tmp_val.to_json().c_str()));
@@ -714,17 +722,17 @@ _match:
   }
 	break;
 	case 6:
-#line 354 "/Users/gaspard/git/oscit/src/value.rl"
+#line 362 "/Users/gaspard/git/oscit/src/value.rl"
 	{
     DEBUG(printf("[%p:empty_hash %s]\n", this, tmp_val.to_json().c_str()));
     // become an empty HashValue
-    if (!is_hash()) {
+    if (is_empty()) {
       set_type(HASH_VALUE);
     }
   }
 	break;
 	case 7:
-#line 362 "/Users/gaspard/git/oscit/src/value.rl"
+#line 370 "/Users/gaspard/git/oscit/src/value.rl"
 	{
     if (!is_list()) set_type(LIST_VALUE);
 
@@ -734,7 +742,7 @@ _match:
   }
 	break;
 	case 8:
-#line 370 "/Users/gaspard/git/oscit/src/value.rl"
+#line 378 "/Users/gaspard/git/oscit/src/value.rl"
 	{
     // become a NilValue
     DEBUG(printf("[nil]\n"));
@@ -742,7 +750,7 @@ _match:
   }
 	break;
 	case 9:
-#line 376 "/Users/gaspard/git/oscit/src/value.rl"
+#line 384 "/Users/gaspard/git/oscit/src/value.rl"
 	{
     // become a TrueValue
     DEBUG(printf("[true]\n"));
@@ -750,7 +758,7 @@ _match:
   }
 	break;
 	case 10:
-#line 382 "/Users/gaspard/git/oscit/src/value.rl"
+#line 390 "/Users/gaspard/git/oscit/src/value.rl"
 	{
     // become a FalseValue
     DEBUG(printf("[false]\n"));
@@ -758,13 +766,13 @@ _match:
   }
 	break;
 	case 11:
-#line 388 "/Users/gaspard/git/oscit/src/value.rl"
+#line 396 "/Users/gaspard/git/oscit/src/value.rl"
 	{
     DEBUG(printf("[set_from_tmp %s]\n", tmp_val.to_json().c_str()));
     if (!is_list() && !is_hash()) *this = tmp_val;
   }
 	break;
-#line 768 "/Users/gaspard/git/oscit/src/value.cpp"
+#line 776 "/Users/gaspard/git/oscit/src/value.cpp"
 		}
 	}
 
@@ -777,10 +785,23 @@ _again:
 	_out: {}
 	}
 
-#line 452 "/Users/gaspard/git/oscit/src/value.rl"
+#line 460 "/Users/gaspard/git/oscit/src/value.rl"
   if (p != pe) --p;
 
   return p - json;
+}
+
+void Value::unpack(const std::string &key, const Value &data) {
+  if (key == "=m") {
+    MidiMessage msg;
+    if (msg.unpack(data)) {
+      set(msg); // makes a copy
+    } else {
+      std::cerr << "Could not unpack " << data << " as midi.\n";
+    }
+  } else {
+    // ignore
+  }
 }
 
 } // oscit

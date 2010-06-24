@@ -124,8 +124,7 @@ void Value::to_stream(std::ostream &out_stream, bool lazy) const {
       out_stream << "\"Matrix " << matrix_->rows << "x" << matrix_->cols << "\"";
       break;
     case MIDI_VALUE:
-      // FIXME: replace by {"=m":[byte, byte, byte, ...]}
-      out_stream << "\"MidiMessage " << *midi_message_ << "\"";
+      out_stream << midi_message_->to_json();
       break;
     case LIST_VALUE:
       sz = size();
@@ -325,10 +324,19 @@ Value Value::join(char c) const {
     // Build tmp_val from string and move p forward
     p++;
     p += tmp_val.build_from_json(p, true);
-    set(str_buf, tmp_val);
+
+    if (str_buf.at(0) == '=') {
+      tmp_val.unpack(str_buf, tmp_val); // set_from_tmp will set current obj
+
+      DEBUG(printf("[serialized_value \"%s\":%s]\n", str_buf.c_str(), to_json().c_str()));
+      DEBUG(printf("[continue \"%s\"]\n",p));
+    } else {
+      set(str_buf, tmp_val);
+      DEBUG(printf("[hash_value \"%s\":%s]\n", str_buf.c_str(), tmp_val.to_json().c_str()));
+      DEBUG(printf("[continue \"%s\"]\n",p));
+    }
+
     fhold;
-    DEBUG(printf("[hash_value \"%s\":%s]\n", str_buf.c_str(), tmp_val.to_json().c_str()));
-    DEBUG(printf("[continue \"%s\"]\n",p));
 
     str_buf = "";
   }
@@ -354,7 +362,7 @@ Value Value::join(char c) const {
   action empty_hash {
     DEBUG(printf("[%p:empty_hash %s]\n", this, tmp_val.to_json().c_str()));
     // become an empty HashValue
-    if (!is_hash()) {
+    if (is_empty()) {
       set_type(HASH_VALUE);
     }
   }
@@ -452,6 +460,19 @@ size_t Value::build_from_json(const char *json, bool strict_mode) {
   if (p != pe) --p;
 
   return p - json;
+}
+
+void Value::unpack(const std::string &key, const Value &data) {
+  if (key == "=m") {
+    MidiMessage msg;
+    if (msg.unpack(data)) {
+      set(msg); // makes a copy
+    } else {
+      std::cerr << "Could not unpack " << data << " as midi.\n";
+    }
+  } else {
+    // ignore
+  }
 }
 
 } // oscit

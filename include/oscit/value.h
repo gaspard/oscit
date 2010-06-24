@@ -387,6 +387,11 @@ public:
    */
   size_t build_from_json(const char *json, bool strict_mode = false);
 
+  /** Build value by unpacking a special key and
+   * serialized data (used when deserializing custom objects form Json).
+   */
+  void unpack(const std::string &key, const Value &data);
+
   /** Return a string representation of the value. */
   Json to_json() const;
 

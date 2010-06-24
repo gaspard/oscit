@@ -146,11 +146,20 @@ public:
     v.set_as_note(60, 80, 400, 4, 50);
     std::ostringstream os(std::ostringstream::out);
     os << v;
-    assert_equal("\"MidiMessage +4:C3(80), 50/400\"", os.str());
-    assert_equal("\"MidiMessage +4:C3(80), 50/400\"", v.to_json());
+    // \"MidiMessage +4:C3(80), 50/400\"
+    assert_equal("{\"=m\":[147, 60, 80, 400]}", os.str());
+    assert_equal("{\"=m\":[147, 60, 80, 400]}", v.to_json());
   }
 
-  // to and from_json not possible yet.
+  void test_from_json( void ) {
+    Value v(Json("{\"=m\":[147, 60, 80, 400]}"));
+    assert_true(v.is_midi());
+    assert_equal(NoteOn, v.midi_message_->type());
+    assert_equal(60,  v.midi_message_->note());
+    assert_equal(4,   v.midi_message_->channel());
+    assert_equal(80,  v.midi_message_->velocity());
+    assert_equal(400, v.midi_message_->length());
+  }
 
   void test_can_receive( void ) {
     Object object("foo", MidiIO("notes and stuff"));

@@ -32,11 +32,36 @@
 #include <vector>
 #include <iostream>
 
+#include "oscit/values.h"
 
 namespace oscit {
+MidiMessage::MidiMessage(const Value &message, time_t wait)
+  : type_(RawMidi),
+    data_(message.size()) {
+  unpack(message, wait);
+}
 
-std::ostream &operator<<(std::ostream &out_stream,
-  const MidiMessage &midi_message) {
+bool MidiMessage::unpack(const Value &message, time_t wait) {
+  data_.clear();
+  if (message.size() < 2) return false;  // no message
+
+  size_t sz = message.size();
+  for(size_t i = 0; i < sz; ++i) {
+    if (!message[i].is_real()) return false;
+
+    if (i == sz - 1) {
+      // last is length
+      length_ = message[i].r;
+    } else {
+      data_.push_back((unsigned char)message[i].r);
+    }
+  }
+
+  wait_ = wait;
+  return set_type_from_data();
+}
+
+std::ostream &operator<<(std::ostream &out_stream, const MidiMessage &midi_message) {
   std::vector<unsigned char>::const_iterator it,begin,end;
   char buffer[10];
   if (midi_message.type_ == NoteOn || midi_message.type_ == NoteOff) {
