@@ -38,6 +38,8 @@ class Hash;
 
 extern Value gNilValue;
 extern Value gTrueValue;
+#define gBangValue gTrueValue
+
 extern Value gFalseValue;
 extern Value gEmptyValue;
 extern Hash  gEmptyHash;

@@ -54,8 +54,6 @@ Value gFalseValue('F');
 Value gEmptyValue;
 Hash  gEmptyHash(1);
 
-#define gBangValue gTrueValue
-
 // ------------------------------------------------------------- escape
 static std::string escape(const std::string &string) {
   std::string res;
