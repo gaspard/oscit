@@ -46,6 +46,11 @@ public:
     assert_false(gNilValue.is_any());
 
     assert_equal("N", gNilValue.type_tag());
+    assert_equal(NIL_TYPE_TAG_ID, gNilValue.type_id());
+
+    uint type_id = H("N");
+    assert_equal(NIL_TYPE_TAG_ID, type_id);
+
   }
 
   void test_create_with_char( void ) {

@@ -50,8 +50,11 @@ public:
     assert_false(v.is_any());
 
     assert_equal("", v.type_tag());
-    int i = NO_TYPE_TAG_ID;
-    assert_equal(i, v.type_id());
+    assert_equal(NO_TYPE_TAG_ID, v.type_id());
+
+    uint type_id = H("");
+    assert_equal(NO_TYPE_TAG_ID, type_id);
+
   }
 
   void test_create_with_TypeTag( void ) {

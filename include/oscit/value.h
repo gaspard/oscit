@@ -362,17 +362,17 @@ public:
 
   TypeTagID type_id() const {
     switch (type_) {
-      case NIL_VALUE:    return H("N");
-      case TRUE_VALUE:   return H("T");
-      case FALSE_VALUE:  return H("F");
-      case REAL_VALUE:   return H("f");
-      case ERROR_VALUE:  return H("E");
-      case STRING_VALUE: return H("s");
-      case HASH_VALUE:   return H("H");
-      case MATRIX_VALUE: return H("M");
-      case MIDI_VALUE:   return H("m");
+      case NIL_VALUE:    return NIL_TYPE_TAG_ID;
+      case TRUE_VALUE:   return TRUE_TYPE_TAG_ID;
+      case FALSE_VALUE:  return FALSE_TYPE_TAG_ID;
+      case REAL_VALUE:   return REAL_TYPE_TAG_ID;
+      case ERROR_VALUE:  return ERROR_TYPE_TAG_ID;
+      case STRING_VALUE: return STRING_TYPE_TAG_ID;
+      case HASH_VALUE:   return HASH_TYPE_TAG_ID;
+      case MATRIX_VALUE: return MATRIX_TYPE_TAG_ID;
+      case MIDI_VALUE:   return MIDI_MESSAGE_TYPE_TAG_ID;
       case LIST_VALUE:   return list_->type_id();
-      case ANY_VALUE:    return H("*");
+      case ANY_VALUE:    return ANY_TYPE_TAG_ID;
       case EMPTY_VALUE:  /* continue */
       default:           return NO_TYPE_TAG_ID;  // EMPTY_VALUE
     }

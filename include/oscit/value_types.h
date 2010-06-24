@@ -92,8 +92,20 @@ struct TypeTag
 /** Unique identifier for osc type tags strings. */
 typedef uint TypeTagID;
 
-#define ANY_TYPE_TAG_ID H("*")
-#define NO_TYPE_TAG_ID H("")
+// TODO: I think we should use enum here.
+enum ValueTypeTagId {
+  NO_TYPE_TAG_ID           = 0,
+  ANY_TYPE_TAG_ID          = 21566,
+  ERROR_TYPE_TAG_ID        = 21593,
+  FALSE_TYPE_TAG_ID        = 21594,
+  HASH_TYPE_TAG_ID         = 21596,
+  MATRIX_TYPE_TAG_ID       = 21601,
+  NIL_TYPE_TAG_ID          = 21602,
+  TRUE_TYPE_TAG_ID         = 21608,
+  REAL_TYPE_TAG_ID         = 21626,
+  STRING_TYPE_TAG_ID       = 21639,
+  MIDI_MESSAGE_TYPE_TAG_ID = 21633,
+};
 
 } // oscit
 

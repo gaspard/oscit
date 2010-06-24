@@ -60,7 +60,7 @@ class Error : public ReferenceCounted
 
   const char * type_tag() const { return "s"; }
 
-  TypeTagID type_id() const { return H("s"); }
+  TypeTagID type_id() const { return STRING_TYPE_TAG_ID; }
 
   ErrorCode code() const { return code_; }
 

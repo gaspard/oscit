@@ -56,8 +56,10 @@ public:
     assert_equal(3.5, res.r);
 
     assert_equal("H", v.type_tag());
-    int i = H("H");
-    assert_equal(i, v.type_id());
+    assert_equal(HASH_TYPE_TAG_ID, v.type_id());
+
+    uint type_id = H("H");
+    assert_equal(HASH_TYPE_TAG_ID, type_id);
   }
 
   void test_create_set( void ) {

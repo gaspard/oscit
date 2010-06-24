@@ -44,7 +44,7 @@
 // FIXME: replace by enums in oscit namespace
 
 #define NoIO(info)  Value(info)
-#define NoIOTypeId H("s")
+#define NoIOTypeId STRING_TYPE_TAG_ID
 
 #define BangIO(info)  ListValue("T").push_back(info)
 #define BangIOTypeId H("Ts")

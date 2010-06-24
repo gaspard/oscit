@@ -51,9 +51,10 @@ public:
     assert_equal("foo", v.str());
 
     assert_equal("s", v.type_tag());
+    assert_equal(STRING_TYPE_TAG_ID, v.type_id());
 
-    int i = H("s");
-    assert_equal(i, v.type_id());
+    uint type_id = H("s");
+    assert_equal(STRING_TYPE_TAG_ID, type_id);
   }
 
   void test_create_string_value( void ) {

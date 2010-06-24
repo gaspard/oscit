@@ -189,6 +189,8 @@ public:
   }
 
   void test_N_type_id( void ) {
+    assert_false(H("N") == H("T"));
+    assert_false(H("N") == H("F"));
     assert_false(H("N") == H("f"));
     assert_false(H("N") == H("s"));
     assert_false(H("N") == H("H"));
@@ -197,8 +199,32 @@ public:
     assert_false(H("N") == H("*"));
   }
 
+  void test_T_type_id( void ) {
+    assert_false(H("T") == H("N"));
+    assert_false(H("T") == H("F"));
+    assert_false(H("T") == H("f"));
+    assert_false(H("T") == H("s"));
+    assert_false(H("T") == H("H"));
+    assert_false(H("T") == H("M"));
+    assert_false(H("T") == H("m"));
+    assert_false(H("T") == H("*"));
+  }
+
+  void test_F_type_id( void ) {
+    assert_false(H("F") == H("N"));
+    assert_false(H("F") == H("T"));
+    assert_false(H("F") == H("f"));
+    assert_false(H("F") == H("s"));
+    assert_false(H("F") == H("H"));
+    assert_false(H("F") == H("M"));
+    assert_false(H("F") == H("m"));
+    assert_false(H("F") == H("*"));
+  }
+
   void test_f_type_id( void ) {
     assert_false(H("f") == H("N"));
+    assert_false(H("f") == H("T"));
+    assert_false(H("f") == H("F"));
     assert_false(H("f") == H("s"));
     assert_false(H("f") == H("H"));
     assert_false(H("f") == H("M"));
@@ -208,6 +234,8 @@ public:
 
   void test_s_type_id( void ) {
     assert_false(H("s") == H("N"));
+    assert_false(H("s") == H("T"));
+    assert_false(H("s") == H("F"));
     assert_false(H("s") == H("f"));
     assert_false(H("s") == H("H"));
     assert_false(H("s") == H("M"));
@@ -226,6 +254,8 @@ public:
 
   void test_M_type_id( void ) {
     assert_false(H("M") == H("N"));
+    assert_false(H("M") == H("T"));
+    assert_false(H("M") == H("F"));
     assert_false(H("M") == H("f"));
     assert_false(H("M") == H("s"));
     assert_false(H("M") == H("H"));
@@ -235,6 +265,8 @@ public:
 
   void test_m_type_id( void ) {
     assert_false(H("m") == H("N"));
+    assert_false(H("m") == H("T"));
+    assert_false(H("m") == H("F"));
     assert_false(H("m") == H("f"));
     assert_false(H("m") == H("s"));
     assert_false(H("m") == H("H"));
@@ -244,6 +276,8 @@ public:
 
   void test_any_type_id( void ) {
     assert_false(H("*") == H("N"));
+    assert_false(H("*") == H("T"));
+    assert_false(H("*") == H("F"));
     assert_false(H("*") == H("f"));
     assert_false(H("*") == H("s"));
     assert_false(H("*") == H("H"));

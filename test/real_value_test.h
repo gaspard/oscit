@@ -53,8 +53,11 @@ public:
     assert_equal(3.5, v.r);
 
     assert_equal("f", v.type_tag());
-    int i = H("f");
-    assert_equal(i, v.type_id());
+    assert_equal(REAL_TYPE_TAG_ID, v.type_id());
+
+    uint type_id = H("f");
+    assert_equal(REAL_TYPE_TAG_ID, type_id);
+
   }
 
   void test_create_real_value( void ) {

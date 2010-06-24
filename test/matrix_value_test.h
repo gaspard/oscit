@@ -55,9 +55,11 @@ public:
     assert_true(m->type() == 0);
 
     assert_equal("M", v.type_tag());
+    assert_equal(MATRIX_TYPE_TAG_ID, v.type_id());
 
-    int i = H("M");
-    assert_equal(i, v.type_id());
+    uint type_id = H("M");
+    assert_equal(MATRIX_TYPE_TAG_ID, type_id);
+
   }
 
   void test_create_matrix_value( void ) {

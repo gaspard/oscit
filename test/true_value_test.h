@@ -30,103 +30,99 @@
 #include "test_helper.h"
 #include "oscit/values.h"
 
-class AnyValueTest : public TestHelper
+class TrueValueTest : public TestHelper
 {
 public:
-  void test_is_any( void ) {
-    Value v('*');
+  void test_is_true( void ) {
 
-    assert_false(v.is_empty());
-    assert_false(v.is_nil());
-    assert_false(v.is_true());
-    assert_false(v.is_false());
-    assert_false(v.is_true());
-    assert_false(v.is_false());
-    assert_false(v.is_real());
-    assert_false(v.is_string());
-    assert_false(v.is_list());
-    assert_false(v.is_error());
-    assert_false(v.is_hash());
-    assert_false(v.is_matrix());
-    assert_false(v.is_midi());
-    assert_true (v.is_any());
+    assert_false(gTrueValue.is_empty());
+    assert_false(gTrueValue.is_nil());
+    assert_true (gTrueValue.is_true());
+    assert_true (gTrueValue.is_bang());
+    assert_false(gTrueValue.is_false());
+    assert_false(gTrueValue.is_real());
+    assert_false(gTrueValue.is_string());
+    assert_false(gTrueValue.is_list());
+    assert_false(gTrueValue.is_error());
+    assert_false(gTrueValue.is_hash());
+    assert_false(gTrueValue.is_matrix());
+    assert_false(gTrueValue.is_any());
 
-    assert_equal("*", v.type_tag());
-    assert_equal(ANY_TYPE_TAG_ID, v.type_id());
+    assert_equal("T", gTrueValue.type_tag());
+    assert_equal(TRUE_TYPE_TAG_ID, gTrueValue.type_id());
 
-    uint type_id = H("*");
-    assert_equal(ANY_TYPE_TAG_ID, type_id);
+    uint type_id = H("T");
+    assert_equal(TRUE_TYPE_TAG_ID, type_id);
+
+  }
+
+  void test_create_with_char( void ) {
+    Value v('T');
+
+    assert_true(v.is_true());
   }
 
   void test_create_with_TypeTag( void ) {
-    Value v(TypeTag("*"));
+    Value v(TypeTag("T"));
 
-    assert_true(v.is_any());
+    assert_true(v.is_true());
   }
 
   void test_copy( void ) {
-    Value v('*');
+    Value v('T');
     Value v2(v);
-    Value v3;
+    Value v3(1.2);
 
-    assert_true(v2.is_any());
+    assert_true(v3.is_real());
 
     v3 = v;
 
-    assert_true(v3.is_any());
+    assert_true(v3.is_true());
+    assert_true(v2.is_true());
   }
 
   void test_set( void ) {
-    Value v;
+    Value v(1.2);
 
-    v.set_any();
-    assert_true(v.is_any());
+    assert_true(v.is_real());
+    v.set_true();
+    assert_true(v.is_true());
   }
 
   void test_set_tag( void ) {
-    Value v;
+    Value v(1.2);
 
-    v.set_type_tag("*");
-    assert_true(v.is_any());
-    assert_equal("*", v.type_tag());
+    v.set_type_tag("T");
+    assert_true(v.is_true());
   }
 
   void test_set_type( void ) {
-    Value v;
+    Value v(1.2);
 
-    v.set_type(ANY_VALUE);
-    assert_true(v.is_any());
+    v.set_type(TRUE_VALUE);
+    assert_true(v.is_true());
   }
 
   void test_to_json( void ) {
-    Value v('*');
+    Value v('T');
     std::ostringstream os(std::ostringstream::out);
     os << v;
-    assert_equal("null", os.str());
-    assert_equal("null", v.to_json());
+    assert_equal("true", os.str());
+    assert_equal("true", v.to_json());
   }
 
-  void test_any_input( void ) {
-    Value any(AnyIO("La la."));
-    assert_equal("*s", any.type_tag());
-  }
-
-  void test_json_value( void ) {
-    JsonValue v("[[1,2],\"hello\"]");
-    assert_true(v.is_list());
-    assert_equal("[ff]s", v.type_tag());
-    assert_equal("[[1, 2], \"hello\"]", v.to_json());
+  void test_from_json( void ) {
+    Value v(Json("true"));
+    assert_true(v.is_true());
   }
 
   void test_equal( void ) {
-    Value a('*');
-    Value b('*');
+    Value a('T');
+    Value b('T');
     assert_equal(a, b);
-    a.set("I'm a string");
+    a.set(3);
     assert_false(a == b);
-    a.set_nil();
-    assert_false(a == b);
+    a.set_true();
+    assert_equal(a, b);
   }
-
-  // from_json is not possible for AnyValue
 };

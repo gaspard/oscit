@@ -53,8 +53,11 @@ public:
     assert_equal(NoteOn, msg->type());
 
     assert_equal("m", v.type_tag());
-    int i = H("m");
-    assert_equal(i, v.type_id());
+    assert_equal(MIDI_MESSAGE_TYPE_TAG_ID, v.type_id());
+
+    uint type_id = H("m");
+    assert_equal(MIDI_MESSAGE_TYPE_TAG_ID, type_id);
+
   }
 
   void test_create( void ) {

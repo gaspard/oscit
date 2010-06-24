@@ -53,8 +53,11 @@ public:
     assert_equal(BAD_REQUEST_ERROR, v.error_code());
 
     assert_equal("E", v.type_tag());
-    int i = H("E");
-    assert_equal(i, v.type_id());
+    assert_equal(ERROR_TYPE_TAG_ID, v.type_id());
+
+    uint type_id = H("E");
+    assert_equal(ERROR_TYPE_TAG_ID, type_id);
+
   }
 
   void test_create_error_value( void ) {
