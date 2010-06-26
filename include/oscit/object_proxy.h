@@ -83,14 +83,15 @@ public:
   /** This method should be implemented in order to give a visual feedback to
    * users that the value has changed (GUI object notification).
    */
-  virtual void value_changed() {
+  void value_changed() {
+    on_value_change_.send(value_);
   }
 
   /** This method is called when the object proxy receives it's type information or the type
    * of the remote changed.
    */
-  virtual void type_changed() {
-
+  void type_changed() {
+    on_type_change_.send(type_);
   }
 
   /** Find the list of children by querying the remote.
@@ -142,8 +143,29 @@ public:
   TimeRef &time_ref() {
     return time_ref_;
   }
+
+  /** Connect here to receive value changes.
+   */
+  Signal &on_value_change() {
+    return on_value_change_;
+  };
+
+  /** Connect here to receive information on type "change" (usually
+   * type discovery).
+   */
+  Signal &on_type_change() {
+    return on_type_change_;
+  }
 protected:
 
+  /** Connect here to receive value changes.
+   */
+  Signal on_value_change_;
+
+  /** Connect here to receive information on type "change" (usually
+   * type discovery).
+   */
+  Signal on_type_change_;
 
   bool need_sync_;
 

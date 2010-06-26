@@ -33,6 +33,7 @@
 #include "mock/command_logger.h"
 #include "mock/proxy_factory_logger.h"
 #include "mock/object_proxy_logger.h"
+#include "mock/observer_logger.h"
 
 class ObjectProxyTest : public TestHelper
 {
@@ -52,10 +53,12 @@ public:
   void should_receive_value_changed_from_rootproxy( void ) {
     RootProxy proxy(Location("osc", "funky synth"));
     Logger logger;
-    proxy.adopt(new ObjectProxyLogger("seven", RangeIO(0.0, 2000.0, "the sky is blue"), &logger));
+    ObserverLogger observer("value_changed", &logger);
+    ObjectProxy *seven = proxy.adopt(new ObjectProxy("seven", RangeIO(0.0, 2000.0, "the sky is blue")));
+    seven->on_value_change().connect<ObserverLogger, &ObserverLogger::event>(&observer);
     logger.str("");
     proxy.handle_reply(std::string("/seven"), Value(300.0));
-    assert_equal("[seven: value_changed 300]", logger.str());
+    assert_equal("[value_changed: 300]", logger.str());
   }
 
   void test_update_remote_on_set_value( void ) {

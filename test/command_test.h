@@ -33,6 +33,7 @@
 
 #include "mock/command_logger.h"
 #include "mock/object_proxy_logger.h"
+#include "mock/observer_logger.h"
 #include "mock/dummy_object.h"
 
 #include <sstream>
@@ -165,11 +166,14 @@ public:
     CommandLogger cmd("dummy", &logger);
     assert_equal(0, cmd.observers().size());
     RootProxy *root_proxy = cmd.adopt_proxy(new RootProxy(Location("dummy", "some place")));
-    root_proxy->adopt(new ObjectProxyLogger("foo", RangeIO(1, 127, "This is a slider from 1 to 127."), &logger));
+    ObserverLogger change_logger("foo", &logger);
+    ObjectProxy *foo = root_proxy->adopt(new ObjectProxy("foo", RangeIO(1, 127, "This is a slider from 1 to 127.")));
+    foo->on_value_change().connect<ObserverLogger, &ObserverLogger::event>(&change_logger);
+
     // receive is protected, we need to be friend...
     logger.str("");
     cmd.receive(Url("dummy://\"some place\"/.reply"), Value(Json("[\"/foo\", 5]")));
-    assert_equal("[foo: value_changed 5]", logger.str());
+    assert_equal("[foo: 5]", logger.str());
   }
 
   void should_notify_observers( void ) {

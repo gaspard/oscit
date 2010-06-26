@@ -38,6 +38,22 @@
 /** Integration tests for the ProxyFactory pattern (local proxy kept in sync with remote values).
  */
 
+class PFTLogger : public ObserverLogger {
+public:
+  PFTLogger(const char *id, Logger *oss) : ObserverLogger(id, oss) {}
+
+  void foo(const Value &val) {
+    *oss_ << "[" << id_ << "#foo " << val << "]";
+  }
+
+  void bar(const Value &val) {
+    *oss_ << "[" << id_ << "#bar " << val << "]";
+  }
+
+  void dummy_view(const Value &val) {
+    *oss_ << "[" << id_ << "#dummy_view " << val << "]";
+  }
+};
 
 /* Widgets */
 
@@ -184,8 +200,9 @@ class ProxyFactoryTest : public TestHelper
     Root local;
     Root remote;
     Logger logger;
+    PFTLogger change_logger("log", &logger);
     MyProxyFactory factory;
-    build_foobar_local_and_remote(local, remote, factory, logger);
+    build_foobar_local_and_remote(local, remote, factory, change_logger);
 
     ObjectHandle bar;
     assert_true(proxy_->get_object_at("/bar", &bar));
@@ -201,8 +218,9 @@ class ProxyFactoryTest : public TestHelper
     Root local;
     Root remote;
     Logger logger;
+    PFTLogger change_logger("log", &logger);
     MyProxyFactory factory;
-    build_foobar_local_and_remote(local, remote, factory, logger);
+    build_foobar_local_and_remote(local, remote, factory, change_logger);
 
     assert_equal("", logger.str());
     Value res = proxy_->call("/bar");
@@ -213,14 +231,15 @@ class ProxyFactoryTest : public TestHelper
     Root local;
     Root remote;
     Logger logger;
+    PFTLogger change_logger("log", &logger);
     MyProxyFactory factory;
-    build_foobar_local_and_remote(local, remote, factory, logger);
+    build_foobar_local_and_remote(local, remote, factory, change_logger);
 
     Value res = proxy_->call("/bar", Value(33.0));
     assert_equal("45", res.to_json()); // receive cached value (async)
     millisleep(10);
-    assert_equal("33", remote.call("/bar").to_json());     // remote is updated
-    assert_equal("[bar: value_changed 33]", logger.str()); // local receives 'value_changed'
+    assert_equal("33", remote.call("/bar").to_json());  // remote is updated
+    assert_equal("[log#bar 33]", logger.str());         // local receives 'value_changed'
 
     assert_equal("33", proxy_->call("/bar").to_json()); // new value is in cache now
   }
@@ -229,8 +248,9 @@ class ProxyFactoryTest : public TestHelper
     Root local;
     Root remote;
     Logger logger;
+    PFTLogger change_logger("log", &logger);
     MyProxyFactory factory;
-    build_foobar_local_and_remote(local, remote, factory, logger);
+    build_foobar_local_and_remote(local, remote, factory, change_logger);
 
     ObjectHandle dummy_view;
     assert_true(proxy_->get_object_at("/dummy_view", &dummy_view));
@@ -245,8 +265,9 @@ class ProxyFactoryTest : public TestHelper
     Root local;
     Root remote;
     Logger logger;
+    PFTLogger change_logger("log", &logger);
     MyProxyFactory factory;
-    build_foobar_local_and_remote(local, remote, factory, logger);
+    build_foobar_local_and_remote(local, remote, factory, change_logger);
 
     ObjectHandle bar;
     assert_false(proxy_->get_object_at("/synth", &bar));
@@ -291,7 +312,7 @@ private:
    *
    * the local tree has an OscCommand and builds the proxies.
    */
-  void build_foobar_local_and_remote(Root &local, Root &remote, MyProxyFactory &factory,  Logger &logger) {
+  void build_foobar_local_and_remote(Root &local, Root &remote, MyProxyFactory &factory,  PFTLogger &logger) {
 
     remote.adopt_command(new OscCommand(REMOTE_PORT));
     foo_ = remote.adopt(new DummyObject("foo", "rgb", SelectIO("rgb, yuv", "This is a menu.")));
@@ -310,13 +331,13 @@ private:
     millisleep(20);
 
     ObjectProxyLogger *object_proxy = factory.find_by_name("foo");
-    object_proxy->set_stream(&logger);
+    object_proxy->on_value_change().connect<PFTLogger, &PFTLogger::foo>(&logger);
 
     object_proxy = factory.find_by_name("bar");
-    object_proxy->set_stream(&logger);
+    object_proxy->on_value_change().connect<PFTLogger, &PFTLogger::bar>(&logger);
 
     object_proxy = factory.find_by_name("dummy_view");
-    object_proxy->set_stream(&logger);
+    object_proxy->on_value_change().connect<PFTLogger, &PFTLogger::dummy_view>(&logger);
   }
 
   DummyObject *foo_;
