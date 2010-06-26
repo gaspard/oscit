@@ -32,50 +32,27 @@
 
 #include "oscit/values.h"
 #include "oscit/c_tlist.h"
+#include "oscit/observer.h"
 
 #include <list>
 
 namespace oscit {
 
-class Signal;
-
-/** The observer can connect member methods to slots in order
- * to receive notifications.
+/** A Signal is a callback slot where observers can connect in order to receive
+ * notifications. When the either end is deleted, the connection is automatically
+ * removed.
+ * Thread safe.
  */
-class ObserverBz {
-public:
-  ObserverBz() {}
-
-  ~ObserverBz() {
-    disconnect_all();
-  }
-
-
-private:
-  friend class Signal;
-
-  void disconnect_all();
-
-  void connect_signal(Signal *sig) {
-    ScopedWrite lock(observed_signals_);
-    observed_signals_.push_back(sig);
-  }
-
-  void disconnect_signal(Signal *sig) {
-    ScopedWrite lock(observed_signals_);
-    observed_signals_.remove(sig);
-  }
-  /** Signals connected.
-   */
-  CTList<Signal*> observed_signals_;
-};
-
 class Signal {
 public:
   ~Signal() {
     disconnect_all();
   }
 
+  /** Use this method to connect an observer's method to this signal.
+   * The method should have the following signature:
+   * <tt>void (const Value &val)</tt>
+   */
   template<class T, void(T::*Tmethod)(const Value&)>
   void connect(T *receiver) {
     SignalCallback *callback = new SignalCallback(receiver, &SignalCallback::cast_method<T, Tmethod>);
@@ -87,7 +64,9 @@ public:
     receiver->connect_signal(this);
   }
 
-  void emit(const Value &val) {
+  /** Send a message to all connected observers.
+   */
+  void send(const Value &val) {
     ScopedRead lock(callbacks_);
     CTList<SignalCallback*>::iterator it, end = callbacks_.end();
 
@@ -96,20 +75,22 @@ public:
     }
   }
 
-  void disconnect(ObserverBz *receiver) {
+  /** Disconnect a specific observer.
+   */
+  void disconnect(Observer *receiver) {
     disconnect_observer(receiver);
     receiver->disconnect_signal(this);
   }
 
 private:
-  friend class ObserverBz;
+  friend class Observer;
 
-  typedef void (*signal_method_t)(ObserverBz *receiver, const Value &val);
+  typedef void (*signal_method_t)(Observer *receiver, const Value &val);
 
-  /** Object instance to trigger a member method (stores a reference to the receiver). */
-  class SignalCallback {
-   public:
-    SignalCallback(ObserverBz *receiver, signal_method_t method)
+  /** Connection that stores the pointer to member and receiver.
+   */
+  struct SignalCallback {
+    SignalCallback(Observer *receiver, signal_method_t method)
       : receiver_(receiver), member_method_(method) {}
 
     void trigger(const Value &val) {
@@ -118,15 +99,18 @@ private:
 
     /** Make a pointer to a member method without return values. */
     template<class T, void(T::*Tmethod)(const Value&)>
-    static void cast_method(ObserverBz *receiver, const Value &val) {
+    static void cast_method(Observer *receiver, const Value &val) {
       (((T*)receiver)->*Tmethod)(val);
     }
 
-    ObserverBz     *receiver_;       /**< Object containing the method. */
+    Observer     *receiver_;       /**< Object containing the method. */
     signal_method_t member_method_;  /**< Pointer on a cast of the member method. */
   };
 
-  void disconnect_observer(ObserverBz *observer) {
+  /** Remove all connections to an observer.
+   * This method is only called by disconnect.
+   */
+  void disconnect_observer(Observer *observer) {
     ScopedWrite lock(callbacks_);
     CTList<SignalCallback*>::iterator it, end = callbacks_.end();
 
@@ -140,6 +124,9 @@ private:
     }
   }
 
+  /** Remove all connections.
+   * This method is called on Signal destruction.
+   */
   void disconnect_all() {
     ScopedWrite lock(callbacks_);
     CTList<SignalCallback*>::iterator it, end = callbacks_.end();
@@ -150,11 +137,13 @@ private:
     }
   }
 
+  /** List of connections through which the signal will be sent.
+   */
   CTList<SignalCallback*> callbacks_;
 };
 
 
-inline void ObserverBz::disconnect_all() {
+inline void Observer::disconnect_all() {
   ScopedWrite lock(observed_signals_);
   CTList<Signal*>::iterator it, end = observed_signals_.end();
 

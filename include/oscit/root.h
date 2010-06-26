@@ -34,6 +34,7 @@
 #include "oscit/command.h"
 #include "oscit/mutex.h"
 #include "oscit/c_thash.h"
+#include "oscit/signal.h"
 #include "oscit/c_tlist.h"
 #include "oscit/object_handle.h"
 
@@ -55,8 +56,7 @@ namespace oscit {
 #define TREE_PATH "/.tree"
 #define VIEWS_PATH "/views"
 
-class Callback;
-class CallbackList;
+class Signal;
 
 /** Root object. You can only start new trees with root objects.
 
@@ -74,61 +74,61 @@ class Root : public Object {
 
   Root(bool should_build_meta)
       : objects_(OBJECT_HASH_SIZE),
-        callbacks_on_register_(CALLBACKS_ON_REGISTER_HASH_SIZE) {
+        on_register_(CALLBACKS_ON_REGISTER_HASH_SIZE) {
     init(should_build_meta);
   }
 
   Root()
       : objects_(OBJECT_HASH_SIZE),
-        callbacks_on_register_(CALLBACKS_ON_REGISTER_HASH_SIZE) {
+        on_register_(CALLBACKS_ON_REGISTER_HASH_SIZE) {
     init();
   }
 
   Root(const char *name)
       : Object(name),
         objects_(OBJECT_HASH_SIZE),
-        callbacks_on_register_(CALLBACKS_ON_REGISTER_HASH_SIZE) {
+        on_register_(CALLBACKS_ON_REGISTER_HASH_SIZE) {
     init();
   }
 
   Root(const Value &type)
       : Object(type),
         objects_(OBJECT_HASH_SIZE),
-        callbacks_on_register_(CALLBACKS_ON_REGISTER_HASH_SIZE) {
+        on_register_(CALLBACKS_ON_REGISTER_HASH_SIZE) {
     init();
   }
 
   Root(const char *name, const Value &type)
       : Object(name, type),
         objects_(OBJECT_HASH_SIZE),
-        callbacks_on_register_(CALLBACKS_ON_REGISTER_HASH_SIZE) {
+        on_register_(CALLBACKS_ON_REGISTER_HASH_SIZE) {
     init();
   }
 
   Root(size_t hashSize)
       : objects_(hashSize),
-        callbacks_on_register_(CALLBACKS_ON_REGISTER_HASH_SIZE) {
+        on_register_(CALLBACKS_ON_REGISTER_HASH_SIZE) {
     init();
   }
 
   Root(size_t hashSize, const char *name)
       : Object(name),
         objects_(hashSize),
-        callbacks_on_register_(CALLBACKS_ON_REGISTER_HASH_SIZE) {
+        on_register_(CALLBACKS_ON_REGISTER_HASH_SIZE) {
     init();
   }
 
   Root(size_t hashSize, const Value &type)
       : Object(type),
         objects_(hashSize),
-        callbacks_on_register_(CALLBACKS_ON_REGISTER_HASH_SIZE) {
+        on_register_(CALLBACKS_ON_REGISTER_HASH_SIZE) {
     init();
   }
 
   Root(size_t hashSize, const char *name, const Value &type)
       : Object(name, type),
         objects_(hashSize),
-        callbacks_on_register_(CALLBACKS_ON_REGISTER_HASH_SIZE) {
+        on_register_(CALLBACKS_ON_REGISTER_HASH_SIZE) {
     init();
   }
 
@@ -314,20 +314,22 @@ class Root : public Object {
 
   /** Add a callback on object registration.
    * Thread safe.
+   * @todo: when connections are removed, the Signals are not
+   *        removed from the on_register_ hash, even if they are
+   *        empty: a solution would be to have some 'cleanup' code.
    */
-  void adopt_callback_on_register(const std::string &url, Callback *callback);
+  template<class T, void(T::*Tmethod)(const Value&)>
+  void on_register_connect(const std::string &url, T *receiver) {
+    ScopedWrite lock(on_register_);
 
-  /** Trigger and remove all callbacks for a specific url registration.
-   * Thread safe.
-   * TODO: make private
-   */
-  void trigger_and_clear_on_register_callbacks(const std::string &url);
+    Signal *callbacks;
 
-  /** Remove all on register callbacks.
-   * Thread safe.
-   * TODO: make private
-   */
-  void clear_on_register_callbacks();
+    if (!on_register_.get(url, &callbacks)) {
+      callbacks = new Signal;
+      on_register_.set(url, callbacks);
+    }
+    callbacks->connect<T, Tmethod>(receiver);
+  }
 
   /** Notification of name/parent change from an object. This method
    * keeps the objects dictionary in sync.
@@ -428,6 +430,17 @@ class Root : public Object {
   CTHash<std::string, Object*> objects_;
 
  private:
+
+  /** Trigger and remove all callbacks for a specific url registration.
+   * Thread safe.
+   */
+  void trigger_and_clear_on_register(const std::string &url);
+
+  /** Remove all on register callbacks.
+   * Thread safe.
+   */
+  void clear_on_register();
+
   bool do_find_or_build_object_at(const std::string &path, Value *error, ObjectHandle *handle) {
     if (get_object_at(path, handle)) {
       return true;
@@ -464,7 +477,7 @@ class Root : public Object {
 
   /** List of callbacks to trigger on object registration.
    */
-  CTHash<std::string, CallbackList*> callbacks_on_register_;
+  CTHash<std::string, Signal*> on_register_;
 
 };
 

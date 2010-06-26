@@ -36,7 +36,7 @@
 #include <string>
 
 #include "oscit/typed.h"
-#include "oscit/observable.h"
+#include "oscit/observer.h"
 #include "oscit/values.h"
 #include "oscit/thash.h"
 #include "oscit/mutex.h"
@@ -58,7 +58,7 @@ class Alias;
 class ObjectProxy;
 class ObjectHandle;
 
-class Object : public Typed, public Observable, public CReferenceCounted {
+class Object : public Typed, public Observer, public CReferenceCounted {
  public:
   /** Class signature. */
   TYPED("Object")

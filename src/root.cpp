@@ -37,7 +37,6 @@
 #include "oscit/list_with_type_meta_method.h"
 #include "oscit/tree_meta_method.h"
 
-#include "oscit/callback_list.h"
 #include "oscit/file.h"
 #include "oscit/hash_file_method.h"
 
@@ -70,43 +69,34 @@ void Root::clear() {
     }
   }
 
-  clear_on_register_callbacks();
+  clear_on_register();
 
   this->Object::clear();
 }
 
-void Root::clear_on_register_callbacks() {
-  ScopedWrite lock(callbacks_on_register_);
+void Root::clear_on_register() {
+  ScopedWrite lock(on_register_);
 
-  std::list<std::string>::iterator it, end = callbacks_on_register_.end();
-  CallbackList *callbacks;
+  std::list<std::string>::iterator it, end = on_register_.end();
+  Signal *sig;
 
-  for (it = callbacks_on_register_.begin(); it != end; ++it) {
-    if (callbacks_on_register_.get(*it, &callbacks)) {
-      delete callbacks;
+  for (it = on_register_.begin(); it != end; ++it) {
+    if (on_register_.get(*it, &sig)) {
+      delete sig;
+      on_register_.remove_element(sig);
     }
   }
 }
 
-void Root::adopt_callback_on_register(const std::string &url, Callback *callback) {
-  ScopedWrite lock(callbacks_on_register_);
 
-  CallbackList *callbacks;
-  if (!callbacks_on_register_.get(url, &callbacks)) {
-    callbacks = new CallbackList(this);
-    callbacks_on_register_.set(url, callbacks);
-  }
-  callbacks->adopt_callback(callback);
-}
+void Root::trigger_and_clear_on_register(const std::string &url) {
+  ScopedWrite lock(on_register_);
+  Signal *sig;
 
-void Root::trigger_and_clear_on_register_callbacks(const std::string &url) {
-  ScopedWrite lock(callbacks_on_register_);
-  CallbackList *callbacks;
-
-  if (callbacks_on_register_.get(url, &callbacks)) {
-    callbacks->trigger_all();
-    delete callbacks;
-    callbacks_on_register_.remove(url);
+  if (on_register_.get(url, &sig)) {
+    sig->send(Value(url));
+    delete sig;
+    on_register_.remove(url);
   }
 }
 
@@ -118,7 +108,7 @@ void Root::register_object(Object *obj) {
     objects_.set(obj->url(), obj);
   }
 
-  trigger_and_clear_on_register_callbacks(obj->url());
+  trigger_and_clear_on_register(obj->url());
 
   if (!Url::is_meta(obj->url())) {
     Value type(obj->url());

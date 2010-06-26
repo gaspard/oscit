@@ -36,26 +36,10 @@
 class SenderBT {
 public:
   void message(const char *message) {
-    some_signal_.emit(Value(message));
+    some_signal_.send(Value(message));
   }
 
   Signal some_signal_;
-};
-
-class ReceiverBT : public ObserverBz {
-public:
-  ReceiverBT(const char *id, std::ostringstream *oss) : id_(id), oss_(oss) {}
-
-  ~ReceiverBT() {
-    *oss_ << "[" << id_ << ": deleted]";
-  }
-
-  void event(const Value &message) {
-    *oss_ << "[" << id_ << ": " << message << "]";
-  }
-
-  const char *id_;
-  std::ostringstream *oss_;
 };
 
 //
@@ -71,13 +55,13 @@ public:
 
   void test_receiver_dies_first( void ) {
     SenderBT root;
-    std::ostringstream oss;
-    ReceiverBT *observer = new ReceiverBT("a", &oss);
+    Logger oss;
+    ObserverLogger *observer = new ObserverLogger("a", &oss);
 
     // nothing send (slot empty)
     root.message("message A");
 
-    root.some_signal_.connect<ReceiverBT, &ReceiverBT::event>(observer);
+    root.some_signal_.connect<ObserverLogger, &ObserverLogger::event>(observer);
 
     // message sent
     root.message("message B");
@@ -92,13 +76,13 @@ public:
 
   void test_sender_dies_first( void ) {
     SenderBT *root = new SenderBT;
-    std::ostringstream oss;
-    ReceiverBT *observer = new ReceiverBT("a", &oss);
+    Logger oss;
+    ObserverLogger *observer = new ObserverLogger("a", &oss);
 
     // nothing send (slot empty)
     root->message("message A");
 
-    root->some_signal_.connect<ReceiverBT, &ReceiverBT::event>(observer);
+    root->some_signal_.connect<ObserverLogger, &ObserverLogger::event>(observer);
 
     // message sent
     root->message("message B");

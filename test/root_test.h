@@ -340,15 +340,13 @@ public:
     Root root(false);
     Logger logger;
     ObserverLogger observer("observer", &logger);
-    root.adopt_callback_on_register(std::string("/foo/bar"),
-      new ObserverLogger::OnRegistrationCallback(&observer, "/foo/bar")
-    );
+    root.on_register_connect<ObserverLogger, &ObserverLogger::event>(std::string("/foo/bar"), &observer);
     assert_equal("", logger.str());
     Object *foo = root.adopt(new Object("foo"));
     assert_equal("", logger.str());
     foo->adopt(new Object("bar"));
     // trigger, and lock/unlock during removal 'produced callbacks'.
-    assert_equal("[observer: on_registration_callback /foo/bar][observer: lock][observer: unlock]", logger.str());
+    assert_equal("[observer: \"/foo/bar\"]", logger.str());
   }
 
   void should_expose_files_as_views( void ) {

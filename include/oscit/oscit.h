@@ -31,6 +31,7 @@
 #define OSCIT_INCLUDE_OSCIT_H_
 
 #include "oscit/values.h"
+#include "oscit/signal.h"
 #include "oscit/object.h"
 #include "oscit/root.h"
 #include "oscit/method.h"
