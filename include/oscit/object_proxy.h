@@ -140,8 +140,16 @@ public:
    */
   virtual bool build_child(const std::string &name, const Value &type, Value *error, ObjectHandle *handle);
 
-  TimeRef &time_ref() {
-    return time_ref_;
+  /** "Current" time relative to this object's creation.
+   */
+  time_t elapsed() {
+    return time_ref_.elapsed();
+  }
+
+  /** Measured network latency between action and reply.
+   */
+  time_t latency() {
+    return latency_;
   }
 
   /** Connect here to receive value changes.
@@ -155,6 +163,10 @@ public:
    */
   Signal &on_type_change() {
     return on_type_change_;
+  }
+
+  const Value &value() {
+    return value_;
   }
 protected:
 
