@@ -37,6 +37,7 @@
 
 #include "oscit/typed.h"
 #include "oscit/observer.h"
+#include "oscit/signal.h"
 #include "oscit/values.h"
 #include "oscit/thash.h"
 #include "oscit/mutex.h"
@@ -389,6 +390,12 @@ class Object : public Typed, public Observer, public CReferenceCounted {
     }
   }
 
+  /** Signal to receive notifications on object destruction.
+   */
+  Signal &on_destroy() {
+    return on_destroy_;
+  }
+
  protected:
 
   /** Set object's new root.
@@ -421,14 +428,6 @@ class Object : public Typed, public Observer, public CReferenceCounted {
       snprintf(buffer, OSC_NEXT_NAME_BUFFER_SIZE, "%i", i+1);
       name_ = baseName.append(buffer);
     }
-  }
-
-  void observer_lock() {
-    // FIXME: the need for this = bad design !
-  }
-
-  void observer_unlock() {
-    // FIXME: the need for this = bad design !
   }
 
  private:
@@ -487,6 +486,12 @@ class Object : public Typed, public Observer, public CReferenceCounted {
    * the end.
    */
   bool keep_last_;
+
+
+  /** Signal to notify destruction.
+   * Thread safe.
+   */
+  Signal on_destroy_;
 
  private:
 

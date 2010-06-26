@@ -29,6 +29,7 @@
 
 #include "test_helper.h"
 #include "mock/dummy_object.h"
+#include "mock/observer_logger.h"
 
 class ObjectTest : public TestHelper
 {
@@ -253,6 +254,20 @@ public:
     Value res = base.set(Value(Json("{width:101, height:59, @foo:\"bar\"}")));
     assert_equal(101, width->real());
     assert_equal(59, height->real());
+  }
+
+  void test_on_destroy_notification( void ) {
+    Object *base = new Object("base");
+    DummyObject *width  = base->adopt(new DummyObject("width", 100));
+
+    Logger logger;
+    ObserverLogger observer("observer", &logger);
+    width->on_destroy().connect<ObserverLogger, &ObserverLogger::event>(&observer);
+
+    assert_equal("", logger.str());
+    delete base;
+
+    assert_equal("[observer: \"base/width\"]", logger.str());
   }
 
   // set_type is not a good idea. It should be immutable (or maybe I'm wrong, so I leave the test here)
