@@ -392,8 +392,8 @@ class Object : public Typed, public Observer, public CReferenceCounted {
 
   /** Signal to receive notifications on object destruction.
    */
-  Signal &on_destroy() {
-    return on_destroy_;
+  Signal &on_delete() {
+    return on_delete_;
   }
 
  protected:
@@ -491,7 +491,7 @@ class Object : public Typed, public Observer, public CReferenceCounted {
   /** Signal to notify destruction.
    * Thread safe.
    */
-  Signal on_destroy_;
+  Signal on_delete_;
 
  private:
 

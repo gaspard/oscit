@@ -41,7 +41,7 @@ namespace oscit {
 Object::~Object() {
   /** Notify destruction.
    */
-  on_destroy_.send(Value(url_));
+  on_delete_.send(Value(url_));
 
   std::list<Alias*>::iterator it, end = aliases_.end();
   // notify parent and root

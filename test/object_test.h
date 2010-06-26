@@ -256,13 +256,13 @@ public:
     assert_equal(59, height->real());
   }
 
-  void test_on_destroy_notification( void ) {
+  void test_on_delete_notification( void ) {
     Object *base = new Object("base");
     DummyObject *width  = base->adopt(new DummyObject("width", 100));
 
     Logger logger;
     ObserverLogger observer("observer", &logger);
-    width->on_destroy().connect<ObserverLogger, &ObserverLogger::event>(&observer);
+    width->on_delete().connect<ObserverLogger, &ObserverLogger::event>(&observer);
 
     assert_equal("", logger.str());
     delete base;
