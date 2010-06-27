@@ -270,6 +270,20 @@ public:
     assert_equal("[observer: \"base/width\"]", logger.str());
   }
 
+  void test_on_delete_delete( void ) {
+    Object *base = new Object("base");
+    DummyObject *width  = base->adopt(new DummyObject("width", 100));
+
+    Logger logger;
+    ObserverLogger *observer = new ObserverLogger("observer", &logger);
+    width->on_delete().connect<ObserverLogger, &ObserverLogger::delete_this>(observer);
+
+    assert_equal("", logger.str());
+    delete base;
+
+    assert_equal("[observer: deleting][observer: deleted]", logger.str());
+  }
+
   // set_type is not a good idea. It should be immutable (or maybe I'm wrong, so I leave the test here)
   //void test_set_type( void ) {
   //  DummyObject one("one", 123.0);

@@ -75,6 +75,20 @@ public:
     }
   }
 
+  /** Send a message to all connected observers and disconnect them.
+   */
+  void send_once(const Value &val) {
+    ScopedRead lock(callbacks_);
+    CTList<SignalCallback*>::iterator it, end = callbacks_.end();
+
+    for(it = callbacks_.begin(); it != end;) {
+      (*it)->receiver_->disconnect_signal(this);
+      (*it)->trigger(val);
+      delete *it;
+      it = callbacks_.erase(it);
+    }
+  }
+
   /** Disconnect a specific observer.
    */
   void disconnect(Observer *receiver) {

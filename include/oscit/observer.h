@@ -53,6 +53,10 @@ public:
 private:
   friend class Signal;
 
+  /** This is not protected or public because the sub-class might not know
+   * all the connections that have been made and could disconnect more then
+   * it wishes.
+   */
   void disconnect_all();
 
   void connect_signal(Signal *sig) {

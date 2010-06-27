@@ -46,6 +46,11 @@ public:
     *oss_ << "[" << id_ << ": " << message << "]";
   }
 
+  void delete_this(const Value &val) {
+    *oss_ << "[" << id_ << ": deleting]";
+    delete this;
+  }
+
   const char *id_;
   Logger *oss_;
 };
