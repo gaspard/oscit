@@ -62,6 +62,8 @@ public:
 /** This class implements a read/write mutex.
  * It should be used when there are many more reads then writes, otherwize a
  * normal mutex is faster.
+ * Warning: behavior is undefined in case of double locking from the same thread: do
+ *          not always expect a deadlock.
  */
 class RWMutex {
 public:

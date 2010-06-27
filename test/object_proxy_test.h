@@ -55,7 +55,7 @@ public:
     Logger logger;
     ObserverLogger observer("value_changed", &logger);
     ObjectProxy *seven = proxy.adopt(new ObjectProxy("seven", RangeIO(0.0, 2000.0, "the sky is blue")));
-    seven->on_value_change().connect<ObserverLogger, &ObserverLogger::event>(&observer);
+    seven->on_value_change().connect(&observer, &ObserverLogger::event);
     logger.str("");
     proxy.handle_reply(std::string("/seven"), Value(300.0));
     assert_equal("[value_changed: 300]", logger.str());

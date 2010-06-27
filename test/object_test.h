@@ -262,7 +262,7 @@ public:
 
     Logger logger;
     ObserverLogger observer("observer", &logger);
-    width->on_delete().connect<ObserverLogger, &ObserverLogger::event>(&observer);
+    width->on_delete().connect(&observer, &ObserverLogger::event);
 
     assert_equal("", logger.str());
     delete base;
@@ -276,7 +276,7 @@ public:
 
     Logger logger;
     ObserverLogger *observer = new ObserverLogger("observer", &logger);
-    width->on_delete().connect<ObserverLogger, &ObserverLogger::delete_this>(observer);
+    width->on_delete().connect(observer, &ObserverLogger::delete_this);
 
     assert_equal("", logger.str());
     delete base;

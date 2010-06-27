@@ -53,9 +53,9 @@ public:
    * The method should have the following signature:
    * <tt>void (const Value &val)</tt>
    */
-  template<class T, void(T::*Tmethod)(const Value&)>
-  void connect(T *receiver) {
-    SignalCallback *callback = new SignalCallback(receiver, &SignalCallback::cast_method<T, Tmethod>);
+  template<class T>
+  void connect(T *receiver, void (T::*Tmethod)(const Value&)) {
+    SignalCallback *callback = new TSignalCallback<T>(receiver, Tmethod);
 
     { ScopedWrite lock(callbacks_);
       callbacks_.push_back(callback);
@@ -101,24 +101,32 @@ private:
 
   typedef void (*signal_method_t)(Observer *receiver, const Value &val);
 
+  struct SignalCallback {
+
+    SignalCallback(Observer *receiver) : receiver_(receiver) {}
+
+    virtual void trigger(const Value &val) = 0;
+
+    /** Object containing the method.
+     */
+    Observer *receiver_;
+
+  };
+
   /** Connection that stores the pointer to member and receiver.
    */
-  struct SignalCallback {
-    SignalCallback(Observer *receiver, signal_method_t method)
-      : receiver_(receiver), member_method_(method) {}
+  template<class T>
+  struct TSignalCallback : public SignalCallback {
+    TSignalCallback(Observer *receiver, void (T::*Tmethod)(const Value &))
+      : SignalCallback(receiver), member_method_(Tmethod) {}
 
-    void trigger(const Value &val) {
-      (*member_method_)(receiver_,val);
+    virtual void trigger(const Value &val) {
+      ((T*)receiver_->*member_method_)(val);
     }
 
-    /** Make a pointer to a member method without return values. */
-    template<class T, void(T::*Tmethod)(const Value&)>
-    static void cast_method(Observer *receiver, const Value &val) {
-      (((T*)receiver)->*Tmethod)(val);
-    }
-
-    Observer     *receiver_;       /**< Object containing the method. */
-    signal_method_t member_method_;  /**< Pointer on a cast of the member method. */
+    /** Pointer to member method.
+     */
+		void (T::*member_method_)(const Value &);
   };
 
   /** Remove all connections to an observer.

@@ -61,7 +61,7 @@ public:
     // nothing send (slot empty)
     root.message("message A");
 
-    root.some_signal_.connect<ObserverLogger, &ObserverLogger::event>(observer);
+    root.some_signal_.connect(observer, &ObserverLogger::event);
 
     // message sent
     root.message("message B");
@@ -82,7 +82,7 @@ public:
     // nothing send (slot empty)
     root->message("message A");
 
-    root->some_signal_.connect<ObserverLogger, &ObserverLogger::event>(observer);
+    root->some_signal_.connect(observer, &ObserverLogger::event);
 
     // message sent
     root->message("message B");

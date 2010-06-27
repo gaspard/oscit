@@ -340,7 +340,7 @@ public:
     Root root(false);
     Logger logger;
     ObserverLogger observer("observer", &logger);
-    root.on_register_connect<ObserverLogger, &ObserverLogger::event>(std::string("/foo/bar"), &observer);
+    root.on_register_connect(std::string("/foo/bar"), &observer, &ObserverLogger::event);
     assert_equal("", logger.str());
     Object *foo = root.adopt(new Object("foo"));
     assert_equal("", logger.str());

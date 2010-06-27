@@ -331,13 +331,13 @@ private:
     millisleep(20);
 
     ObjectProxyLogger *object_proxy = factory.find_by_name("foo");
-    object_proxy->on_value_change().connect<PFTLogger, &PFTLogger::foo>(&logger);
+    object_proxy->on_value_change().connect(&logger, &PFTLogger::foo);
 
     object_proxy = factory.find_by_name("bar");
-    object_proxy->on_value_change().connect<PFTLogger, &PFTLogger::bar>(&logger);
+    object_proxy->on_value_change().connect(&logger, &PFTLogger::bar);
 
     object_proxy = factory.find_by_name("dummy_view");
-    object_proxy->on_value_change().connect<PFTLogger, &PFTLogger::dummy_view>(&logger);
+    object_proxy->on_value_change().connect(&logger, &PFTLogger::dummy_view);
   }
 
   DummyObject *foo_;

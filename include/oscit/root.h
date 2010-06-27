@@ -318,8 +318,8 @@ class Root : public Object {
    *        removed from the on_register_ hash, even if they are
    *        empty: a solution would be to have some 'cleanup' code.
    */
-  template<class T, void(T::*Tmethod)(const Value&)>
-  void on_register_connect(const std::string &url, T *receiver) {
+  template<class T>
+  void on_register_connect(const std::string &url, T *receiver, void(T::*Tmethod)(const Value&)) {
     ScopedWrite lock(on_register_);
 
     Signal *callbacks;
@@ -328,7 +328,7 @@ class Root : public Object {
       callbacks = new Signal;
       on_register_.set(url, callbacks);
     }
-    callbacks->connect<T, Tmethod>(receiver);
+    callbacks->connect(receiver, Tmethod);
   }
 
   /** Notification of name/parent change from an object. This method
