@@ -32,6 +32,7 @@
 #include <sstream>
 
 Mutex gMutexTest_mutex;
+
 std::ostringstream gMutexTest_log(std::ostringstream::out);
 
 void start_mutex_test_thread(Thread* runner) {
@@ -71,7 +72,7 @@ public:
 //  }
 
   void test_bad_unlock( void ) {
-    Mutex mutex;
+    RWMutex mutex;
     mutex.unlock();
     // should not raise any error
     assert_true( true ); // passed !
@@ -117,6 +118,7 @@ public:
 
     assert_equal("[0:lock][1:new][0:unlock][1:lock][1:unlock][1:end][0:lock][joined]", gMutexTest_log.str());
   }
+
   //void test_two_threads_scoped_lock( void ) {
   //  Thread runner;
   //  {

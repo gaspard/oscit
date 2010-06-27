@@ -37,6 +37,30 @@
 
 int gRWMutexTest_a, gRWMutexTest_b;
 RWMutex gRWMutexTest_mutex;
+std::ostringstream gRWMutexTest_log(std::ostringstream::out);
+
+void start_rwmutex_test_thread(Thread* runner) {
+  gRWMutexTest_log << "[1:new]";
+  runner->thread_ready();
+  gRWMutexTest_mutex.lock();
+  gRWMutexTest_log << "[1:lock]";
+  runner->semaphore().release();
+  gRWMutexTest_mutex.unlock();
+  gRWMutexTest_log << "[1:unlock][1:end]";
+}
+
+static void lock_rw_method(Thread* runner) {
+  ScopedWrite lock(gRWMutexTest_mutex);
+  gRWMutexTest_log << "[1:lock]";
+  runner->semaphore().release();
+}
+
+static void start_rwmutex_test_thread_scoped_lock(Thread* runner) {
+  gRWMutexTest_log << "[1:new]";
+  runner->thread_ready();
+  lock_rw_method(runner);
+  gRWMutexTest_log << "[1:unlock][1:end]";
+}
 
 class RWMutexTest : public TestHelper
 {
@@ -85,6 +109,76 @@ public:
     }
     assert_equal(0, total_errors);
   }
+
+  void test_bad_unlock( void ) {
+    RWMutex mutex;
+    mutex.unlock();
+    // should not raise any error
+    assert_true( true ); // passed !
+  }
+
+  void test_two_threads( void ) {
+    Thread runner;
+    gRWMutexTest_mutex.lock();
+    gRWMutexTest_log << "[0:lock]";
+    // create new thread (will try to get hold of the lock)
+    runner.start_thread<start_rwmutex_test_thread>(NULL);
+    // release lock() --> other gets hold of it
+    gRWMutexTest_log << "[0:unlock]";
+    gRWMutexTest_mutex.unlock();
+    runner.semaphore().acquire();
+    gRWMutexTest_mutex.lock();
+    gRWMutexTest_log << "[0:lock]";
+    gRWMutexTest_mutex.unlock();
+    runner.join();
+    gRWMutexTest_log << "[joined]";
+
+    assert_equal("[0:lock][1:new][0:unlock][1:lock][1:unlock][1:end][0:lock][joined]", gRWMutexTest_log.str());
+  }
+
+  void test_two_threads_scoped_write_lock( void ) {
+    gRWMutexTest_log.str("");
+    Thread runner;
+    {
+      ScopedWrite lock(gRWMutexTest_mutex);
+      gRWMutexTest_log << "[0:lock]";
+      // create new thread (will try to get hold of the lock)
+      runner.start_thread(start_rwmutex_test_thread_scoped_lock, NULL);
+      // release lock() --> other gets hold of it
+      gRWMutexTest_log << "[0:unlock]";
+    }
+    runner.semaphore().acquire();
+    {
+      ScopedWrite lock(gRWMutexTest_mutex);
+      gRWMutexTest_log << "[0:lock]";
+    }
+    runner.join();
+    gRWMutexTest_log << "[joined]";
+
+    assert_equal("[0:lock][1:new][0:unlock][1:lock][1:unlock][1:end][0:lock][joined]", gRWMutexTest_log.str());
+  }
+
+  //void test_two_threads_scoped_lock( void ) {
+  //  Thread runner;
+  //  {
+  //    ScopedLock lock(gRWMutexTest_mutex);
+  //    gRWMutexTest_log << "[0:lock]";
+  //    // create new thread (will try to get hold of the lock)
+  //    runner.start_thread(start_rwmutex_test_thread_scoped_lock, NULL);
+  //    // release lock() --> other gets hold of it
+  //    gRWMutexTest_log << "[0:unlock]";
+  //  }
+  //  runner.semaphore().acquire();
+  //  {
+  //    ScopedLock lock(gRWMutexTest_mutex);
+  //    gRWMutexTest_mutex.lock();
+  //    gRWMutexTest_log << "[0:lock]";
+  //  }
+  //  runner.join();
+  //  gRWMutexTest_log << "[joined]";
+  //
+  //  assert_equal("[0:lock][1:new][0:unlock][1:lock][1:unlock][1:end][0:lock][joined]", gRWMutexTest_log.str());
+  //}
 
   static void *writer1_thread( void *data ) {
     // this thread periodically writes new values to the shared data
