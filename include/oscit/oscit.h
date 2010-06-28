@@ -30,6 +30,8 @@
 #ifndef OSCIT_INCLUDE_OSCIT_H_
 #define OSCIT_INCLUDE_OSCIT_H_
 
+#include "oscit/c_tlist.h"
+#include "oscit/c_thash.h"
 #include "oscit/values.h"
 #include "oscit/signal.h"
 #include "oscit/object.h"
