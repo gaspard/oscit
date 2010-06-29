@@ -154,6 +154,7 @@ public:
     Object object("foo", RealIO("info"));
     assert_false(object.can_receive(Value()));
     assert_true (object.can_receive(gNilValue));
+    assert_true (object.can_receive(gBangValue));
     assert_true (object.can_receive(Value(1.23)));
     assert_false(object.can_receive(Value("foo")));
     assert_false(object.can_receive(Value(BAD_REQUEST_ERROR, "foo")));

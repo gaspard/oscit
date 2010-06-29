@@ -369,11 +369,19 @@ class Object : public Typed, public Observer, public CReferenceCounted {
     return type_id_ == ANY_TYPE_TAG_ID;
   }
 
+  /** This method returns true if the current object can receive the given Value.
+   * The rule is as follows:
+   *
+   * # NoIO do not receive anything
+   * # AnyIO accept anything
+   * # BangValue and NilValues are received by all
+   * # All IO types (except NoIO) accept the Value corresponding to their type
+   */
   inline bool can_receive(const Value &val) {
     if (type_id() == NO_TYPE_TAG_ID) return false;
     if (val.type_id() == type_id() || accept_any_type()) {
       return true;
-    } else if (val.is_nil()) {
+    } else if (val.is_nil() || val.is_bang()) {
       return true;
     } else if (!val.is_list() || !type_[0].is_list()) {
       return false;

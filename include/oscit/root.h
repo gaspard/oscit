@@ -429,17 +429,17 @@ class Root : public Object {
    */
   CTHash<std::string, Object*> objects_;
 
+  /** Remove all on register callbacks.
+   * Thread safe.
+   */
+  void clear_on_register();
+
  private:
 
   /** Trigger and remove all callbacks for a specific url registration.
    * Thread safe.
    */
   void trigger_and_clear_on_register(const std::string &url);
-
-  /** Remove all on register callbacks.
-   * Thread safe.
-   */
-  void clear_on_register();
 
   bool do_find_or_build_object_at(const std::string &path, Value *error, ObjectHandle *handle) {
     if (get_object_at(path, handle)) {
