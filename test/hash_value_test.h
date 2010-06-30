@@ -287,6 +287,11 @@ public:
     assert_true(v.is_hash());
   }
 
+  void test_from_json_empty_key( void ) {
+    Value v(Json("{\"\":null}"));
+    assert_true(v.is_hash());
+  }
+
   void test_can_receive( void ) {
     Object object("foo", HashIO("bar"));
     assert_false(object.can_receive(Value()));

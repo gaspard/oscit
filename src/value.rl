@@ -325,7 +325,7 @@ Value Value::join(char c) const {
     p++;
     p += tmp_val.build_from_json(p, true);
 
-    if (str_buf.at(0) == '=') {
+    if (str_buf.size() > 0 && str_buf.at(0) == '=') {
       tmp_val.unpack(str_buf, tmp_val); // set_from_tmp will set current obj
 
       DEBUG(printf("[serialized_value \"%s\":%s]\n", str_buf.c_str(), to_json().c_str()));
