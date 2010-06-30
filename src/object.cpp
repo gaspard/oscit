@@ -68,7 +68,15 @@ void Object::from_hash(const Value &val, Value *result) {
     if ((*it).at(0) == '@') continue;
 
     if (get_child(*it, &handle) && val.get(*it, &param)) {
-      result->set(*it, root_->call(handle, param, NULL));
+      Value tmp;
+      if (param.is_hash()) {
+        // NoIO = container
+        handle->from_hash(param, &tmp);
+      } else {
+        tmp = handle->trigger(param);
+      }
+
+      result->set(*it, tmp);
     } else {
       result->set(*it, ErrorValue(NOT_FOUND_ERROR, *it));
     }
@@ -252,7 +260,7 @@ void Object::insert_in_hash(Value *result) {
     }
   }
 
-  // no children get value by sending trigger.
+  // no children: get value by sending trigger.
   *result = trigger(gNilValue);
 }
 
