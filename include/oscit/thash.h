@@ -451,6 +451,10 @@ inline uint hashId(const uint key) {
   return res;
 }
 
+inline uint hashId(const int key) {
+  return hashId((uint)key);
+}
+
 inline uint hashId(const unsigned long key) {
   uint res = key;
   res += ~(res << 15);

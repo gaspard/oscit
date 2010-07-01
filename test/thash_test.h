@@ -68,6 +68,20 @@ public:
     assert_false(hash.get("money", &res));
   }
 
+  void test_set_get_int_key( void ) {
+    THash<int, std::string> hash(10);
+    std::string res;
+
+    hash.set(23, std::string("hello"));
+    hash.set(-2, std::string("my"));
+
+    assert_true(hash.get(23, &res));
+    assert_equal("hello", res);
+    assert_true(hash.get(-2, &res));
+    assert_equal("my", res);
+    assert_false(hash.get(34, &res));
+  }
+
   void test_set_get_empty( void ) {
     THash<std::string, std::string> hash(10);
     std::string res;
