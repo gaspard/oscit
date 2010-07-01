@@ -70,6 +70,23 @@ public:
     assert_equal("H", v.type_tag());
   }
 
+  void test_create_key_value( void ) {
+    HashValue v("do", Value(261.626));
+    assert_equal("{\"do\":261.626}", v.to_json());
+  }
+
+  void test_create_nested_keys( void ) {
+    HashValue v2("do", "re", Value(293.665));
+    HashValue v3("do", "re", "mi", Value(329.628));
+    HashValue v4("do", "re", "mi", "fa", Value(349.228));
+    HashValue v5("do", "re", "mi", "fa", "sol", Value(391.995));
+
+    assert_equal("{\"do\":{\"re\":293.665}}", v2.to_json());
+    assert_equal("{\"do\":{\"re\":{\"mi\":329.628}}}", v3.to_json());
+    assert_equal("{\"do\":{\"re\":{\"mi\":{\"fa\":349.228}}}}", v4.to_json());
+    assert_equal("{\"do\":{\"re\":{\"mi\":{\"fa\":{\"sol\":391.995}}}}}", v5.to_json());
+  }
+
   void test_share( void ) {
     Value v(TypeTag("H"));
     v.set("1","one");

@@ -32,12 +32,48 @@
 #include "oscit/value.h"
 
 namespace oscit {
-  
+
 /** HashValue is just a wrapper around an immutable const char*.*/
 class HashValue : public Value
-{ 
+{
  public:
   HashValue() : Value(TypeTag("H")) {}
+
+  /** Create a new HashValue with an initial key/value pair.
+   */
+  HashValue(const char *key, const Value &value) : Value(TypeTag("H")) {
+    set(key, value);
+  }
+
+  /** Create a new HashValue with an initial key/value pair.
+   */
+  HashValue(const std::string &key, const Value &value) : Value(TypeTag("H")) {
+    set(key, value);
+  }
+
+  /** Create a new HashValue with a list of initial key/value pair.
+   */
+  HashValue(const char *key1, const char *key2, const Value &value) : Value(TypeTag("H")) {
+    set(key1, HashValue(key2, value));
+  }
+
+  /** Create a new HashValue with a list of initial key/value pair.
+   */
+  HashValue(const char *key1, const char *key2, const char *key3, const Value &value) : Value(TypeTag("H")) {
+    set(key1, HashValue(key2, HashValue(key3, value)));
+  }
+
+  /** Create a new HashValue with a list of initial key/value pair.
+   */
+  HashValue(const char *key1, const char *key2, const char *key3, const char *key4, const Value &value) : Value(TypeTag("H")) {
+    set(key1, HashValue(key2, HashValue(key3, HashValue(key4, value))));
+  }
+
+  /** Create a new HashValue with a list of initial key/value pair.
+   */
+  HashValue(const char *key1, const char *key2, const char *key3, const char *key4, const char *key5, const Value &value) : Value(TypeTag("H")) {
+    set(key1, HashValue(key2, HashValue(key3, HashValue(key4, HashValue(key5, value)))));
+  }
 };
 
 } // oscit
