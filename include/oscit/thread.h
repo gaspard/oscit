@@ -136,7 +136,9 @@ class Thread : public Mutex {
   /** Kill thread (do not make this a virtual).
    */
   void kill() {
+    should_run_ = false;
     if (!thread_id_) return;  // not running
+
     assert(!pthread_equal(thread_id_, pthread_self()));
 
     // pthread_kill(thread_id_, SIGTERM);
@@ -150,6 +152,11 @@ class Thread : public Mutex {
   void send_signal(int sig) {
     assert(!pthread_equal(thread_id_, pthread_self()));
     pthread_kill(thread_id_, sig);
+  }
+
+  void register_signal(int sig) {
+    assert(pthread_equal(thread_id_, pthread_self()));
+    signal(sig, terminate);
   }
 
   /** Wait for thread to finish. */
@@ -225,8 +232,8 @@ class Thread : public Mutex {
      // begin of new thread
     set_thread_this(thread);
 
-    signal(SIGTERM, terminate); // register a SIGTERM handler
-    signal(SIGINT,  terminate);
+    thread->register_signal(SIGTERM); // register a SIGTERM handler
+    thread->register_signal(SIGINT);
     pthread_setcancelstate(PTHREAD_CANCEL_ENABLE, NULL);
     // removing comment below = force cancelation to occur NOW, whatever the program is doing.
     // pthread_setcanceltype(PTHREAD_CANCEL_ASYNCHRONOUS, NULL);
@@ -246,8 +253,8 @@ class Thread : public Mutex {
      // begin of new thread
     set_thread_this(thread);
 
-    signal(SIGTERM, terminate); // register a SIGTERM handler
-    signal(SIGINT,  terminate);
+    thread->register_signal(SIGTERM); // register a SIGTERM handler
+    thread->register_signal(SIGINT);
     pthread_setcancelstate(PTHREAD_CANCEL_ENABLE, NULL);
     //pthread_setcanceltype(PTHREAD_CANCEL_ASYNCHRONOUS, NULL);
 
@@ -267,8 +274,8 @@ class Thread : public Mutex {
      // begin of new thread
     set_thread_this(thread);
 
-    signal(SIGTERM, terminate); // register a SIGTERM handler
-    signal(SIGINT,  terminate);
+    thread->register_signal(SIGTERM); // register a SIGTERM handler
+    thread->register_signal(SIGINT);
 
     T *owner = (T*)thread->owner_;
     thread->should_run_ = true;
