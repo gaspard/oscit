@@ -155,7 +155,8 @@ class Thread : public Mutex {
   }
 
   void register_signal(int sig) {
-    assert(pthread_equal(thread_id_, pthread_self()));
+    // we cannot use the assertion because thread_id_ might not be set yet (race condition)
+    // assert(pthread_equal(thread_id_, pthread_self()));
     signal(sig, terminate);
   }
 

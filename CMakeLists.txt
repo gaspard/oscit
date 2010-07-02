@@ -35,8 +35,20 @@ cmake_minimum_required(VERSION 2.6.2)
 option (RELEASE                  "Universal build (release) ?"               NO  )
 option (OSCIT_386_ONLY           "Compile for i386 target only (no 64bit) ?" NO  )
 option (OSCIT_MEMORY_CHECKING    "Enable checking against memory leaks ?"    NO  )
-option (OSCIT_ENABLE_TESTING     "Build and run tests ?"                     YES )
-option (OSCIT_WILL_LINK_OPENCV   "Will link to OpenCV lib ?"                 NO  )
+
+if (DEFINED OSCIT_ENABLE_TESTING)
+  # CMake bug with option
+  option (OSCIT_ENABLE_TESTING     "Build and run tests ?"                     ${OSCIT_ENABLE_TESTING} )
+else (DEFINED OSCIT_ENABLE_TESTING)
+  option (OSCIT_ENABLE_TESTING     "Build and run tests ?"                     YES )
+endif (DEFINED OSCIT_ENABLE_TESTING)
+
+if (DEFINED OSCIT_OPENCV_LINK)
+  # CMake bug with option
+  option (OSCIT_OPENCV_LINK        "Set this to NO to link opencv alloc later." ${OSCIT_OPENCV_LINK} )
+else (DEFINED OSCIT_OPENCV_LINK)
+  option (OSCIT_OPENCV_LINK        "Set this to NO to link opencv alloc later." YES )
+endif (DEFINED OSCIT_OPENCV_LINK)
 
 
 # handle memory checking option
@@ -107,12 +119,11 @@ set(EXT_SOURCES)
 # ==============================================================================
 file (GLOB OSCIT_SOURCES src/*.cpp src/${PLAT}/*.cpp)
 
-if(OSCIT_WILL_LINK_OPENCV)
-  # do not include cxalloc.cpp and cxsystem.cpp
-else(OSCIT_WILL_LINK_OPENCV)
+if(OSCIT_OPENCV_LINK)
+  # include cxalloc.cpp and cxsystem.cpp
   file (GLOB OPENCV_SOURCES vendor/opencv/*.cpp)
   list(APPEND EXT_SOURCES ${OPENCV_SOURCES})
-endif(OSCIT_WILL_LINK_OPENCV)
+endif(OSCIT_OPENCV_LINK)
 
 include_directories (${OSCIT_SOURCE_DIR}/oscpack ${OSCIT_SOURCE_DIR}/include ${OSCIT_SOURCE_DIR}/vendor)
 include_directories (AFTER ${OSCIT_SOURCE_DIR}/test)
@@ -220,7 +231,7 @@ message (STATUS "   Release                                                     
 message (STATUS "   OSCIT_386_ONLY          (no 64bit)                             = ${OSCIT_386_ONLY}")
 message (STATUS "   OSCIT_ENABLE_TESTING    (Build and run tests)                  = ${OSCIT_ENABLE_TESTING}")
 message (STATUS "   OSCIT_MEMORY_CHECKING   (Enable checking against memory leaks) = ${OSCIT_MEMORY_CHECKING}")
-message (STATUS "   OSCIT_WILL_LINK_OPENCV  (ignore opencv src files)              = ${OSCIT_WILL_LINK_OPENCV}")
+message (STATUS "   OSCIT_OPENCV_LINK       (Include opencv alloc now)             = ${OSCIT_OPENCV_LINK}")
 if(OSCIT_MEMORY_CHECKING)
 message (STATUS "       you should run test_runner with")
 message (STATUS "       > export MallocStackLogging=1;./test_runner")
