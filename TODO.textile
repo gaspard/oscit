@@ -1,42 +1,24 @@
 h1. oscit: TODO
 
-1. refactor: Couldn't we can remove "const Location *origin" from trigger ?
-              If we really need a remote location, it will probably be different from the UDP/OSC caller
-              and it's the caller's job to give us an Url (as string): "IP:port/video1" for example.
-2. refactor: const correctness (do not return const values: const reference or value)
-3. refactor: script.h should use File
+1. refactor: const correctness (do not return const values: const reference or value)
+2. refactor: script.h should use File
 
 h2. Low level stuff
 
-1. THash should resize automatically when content grows.
-2. concurrency audit
+1. Replace '#define' by constants in constants.h
+2. THash should resize automatically when content grows.
+3. concurrency audit
 
-h2. Proxy stuff
+h2. Value audit
 
-ProxyFactory
+Audit Value in regards to concurrent execution. Maybe we need to make "Value" immutable or use copy on
+write if the reference count is greater then 1. We could also use a String class (reference counted, immutable
+std::string). We could then remove the need for "const char *" and std::string and only use String.
 
 h2. TODO: later
 
-0. Fix IP resolution (ZeroConf code):
+1. Fix IP resolution (ZeroConf code):
    Understand how we can connect to the remote when we have resolved from ZeroConfBrowser
    and adapt Location to store the relative information.
-1. RefCount locations (shared objects ?).
-2. Merge 'Location *origin' with 'Mutex *caller_context' ?
-  Location can be
-  a. Remote Location ===> need lock
-  b. Local context   ===> need lock if context is different
-
-3. Choose once and for all between "const char*" or std::string !!
-
-h2. DOCUMENTATION
-
-+--------------+-------------+
-| inside oscit | command     |
-|  <- url      |  <-  path   |
-|              |    + loc    |
-+-------------+--------------+
-
-Comming in  = path
-Inside ruby = url or path
-
+2. RefCount locations (shared objects ?).
 

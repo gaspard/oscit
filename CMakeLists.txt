@@ -32,23 +32,11 @@ cmake_minimum_required(VERSION 2.6.2)
 #  Options
 #
 # ==============================================================================
-option (RELEASE                  "Universal build (release) ?"               NO  )
-option (OSCIT_386_ONLY           "Compile for i386 target only (no 64bit) ?" NO  )
-option (OSCIT_MEMORY_CHECKING    "Enable checking against memory leaks ?"    NO  )
-
-if (DEFINED OSCIT_ENABLE_TESTING)
-  # CMake bug with option
-  option (OSCIT_ENABLE_TESTING     "Build and run tests ?"                     ${OSCIT_ENABLE_TESTING} )
-else (DEFINED OSCIT_ENABLE_TESTING)
-  option (OSCIT_ENABLE_TESTING     "Build and run tests ?"                     YES )
-endif (DEFINED OSCIT_ENABLE_TESTING)
-
-if (DEFINED OSCIT_OPENCV_LINK)
-  # CMake bug with option
-  option (OSCIT_OPENCV_LINK        "Set this to NO to link opencv alloc later." ${OSCIT_OPENCV_LINK} )
-else (DEFINED OSCIT_OPENCV_LINK)
-  option (OSCIT_OPENCV_LINK        "Set this to NO to link opencv alloc later." YES )
-endif (DEFINED OSCIT_OPENCV_LINK)
+option (RELEASE                  "Universal build (release) ?"                OFF )
+option (OSCIT_386_ONLY           "Compile for i386 target only (no 64bit) ?"  OFF )
+option (OSCIT_MEMORY_CHECKING    "Enable checking against memory leaks ?"     OFF )
+option (OSCIT_ENABLE_TESTING     "Build and run tests ?"                      ON  )
+option (OSCIT_OPENCV_LINK        "Set this to NO to link opencv alloc later." ON  )
 
 
 # handle memory checking option
