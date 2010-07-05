@@ -33,7 +33,9 @@
 #include "oscit/root.h"
 
 namespace oscit {
-/** This object triggers another object's trigger when called. It's used in Group to expose functionalities. */
+
+/** This object triggers another object's trigger when called. It's used in Group to expose functionalities.
+ */
 class Alias : public Object
 {
 public:
@@ -42,34 +44,41 @@ public:
 
   Alias() : original_(NULL) {}
 
-  Alias(const char *name, Object *object) : Object(name, object->type()),
-    original_(object) {
-    original_->register_alias(this);
+  Alias(const char *name, Object *object)
+    : Object(name),
+      original_(NULL) {
+    set_original(object);
   }
 
-  Alias(const std::string &name, Object *object) : Object(name, object->type()),
-    original_(object) {
-    original_->register_alias(this);
-  }
-
-  virtual ~Alias() {
-    // We unregister to tell the object that it should not delete this alias on destruction.
-    if (original_) original_->unregister_alias(this);
+  Alias(const std::string &name, Object *object) : Object(name),
+    original_(NULL) {
+    set_original(object);
   }
 
   virtual const Value trigger(const Value &val) {
     return original_ ? original_->trigger(val) : gNilValue;
   }
 
-  /** Used by original object during destruction (avoid ~Alias calling
-   *  unregister_alias).
-   */
-  void unlink_original() {
-    original_ = NULL;
+private:
+  void set_original(Object *object) {
+    if (original_) {
+      original_->on_delete().disconnect(this);
+    }
+
+    original_ = object;
+    original_->on_delete().connect(this, &Alias::original_deleted);
+    attributes_ = HashValue(Attribute::TYPE, object->type()).set(Attribute::INFO, object->info());
+    sync_type_id();
   }
 
- protected:
-  Object *original_; /**< Original object pointed to by the alias. */
+  void original_deleted(const Value &val) {
+    delete this;
+  }
+
+protected:
+  /** Original object pointed to by the alias.
+   */
+  Object *original_;
 };
 
 } // oscit

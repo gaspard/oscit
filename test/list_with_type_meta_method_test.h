@@ -46,8 +46,8 @@ public:
 
   void test_list_with_type_on_root( void ) {
     Root root;
-    root.adopt(new DummyObject("mode", "rgb", SelectIO("rgb, yuv", "This is a menu.")));
-    root.adopt(new DummyObject("tint", 45.0, RangeIO(1, 127, "This is a slider from 1 to 127.")));
+    root.adopt(new DummyObject("mode", "rgb", Attribute::select_io("rgb, yuv", "This is a menu.")));
+    root.adopt(new DummyObject("tint", 45.0, Attribute::range_io(1, 127, "This is a slider from 1 to 127.")));
     Value res = root.list_with_type();
     // .error, .info, etc
     assert_equal("[s[*s]][s[ss]][s[ss]][s[ss]][s[ss]][s[ss]][s[sss]][s[fffs]]", res.type_tag());
@@ -58,8 +58,8 @@ public:
   void test_list_with_type( void ) {
     Root root;
     Object * tmp = root.adopt(new Object("monitor"));
-    tmp->adopt(new DummyObject("mode", "rgb", SelectIO("rgb, yuv", "This is a menu.")));
-    tmp->adopt(new DummyObject("tint", 45.0, RangeIO(1, 127, "This is a slider from 1 to 127.")));
+    tmp->adopt(new DummyObject("mode", "rgb", Attribute::select_io("rgb, yuv", "This is a menu.")));
+    tmp->adopt(new DummyObject("tint", 45.0, Attribute::range_io(1, 127, "This is a slider from 1 to 127.")));
     Value reply, res;
 
     reply = root.call(LIST_WITH_TYPE_PATH, Value(""));
@@ -98,7 +98,7 @@ public:
   }
 
   void test_list_with_type_with_nil( void ) {
-    Root root(NoIO("This is the root node."));
+    Root root(Attribute::no_io("This is the root node."));
     Value res;
 
     res = root.call(LIST_WITH_TYPE_PATH, gNilValue);

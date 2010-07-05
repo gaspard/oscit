@@ -49,6 +49,8 @@ namespace oscit {
 
 static void to_stream(osc::OutboundPacketStream &out_stream, const Value &val, bool in_array = false) {
   size_t sz;
+  HashIterator it, end;
+
   switch (val.type()) {
     case REAL_VALUE:
       out_stream << (float)val.r; // most osc applications don't understand double type tag.
@@ -81,10 +83,19 @@ static void to_stream(osc::OutboundPacketStream &out_stream, const Value &val, b
     case FALSE_VALUE:
       out_stream << false;
       break;
-    case HASH_VALUE:   /* continue */
-      out_stream << (osc::JsonHash)val.to_json().c_str();
+    case HASH_VALUE:
+      out_stream << osc::HashStart;
+      end = val.end();
+      for(it = val.begin(); it != end; ++it) {
+        out_stream << it->c_str();
+        to_stream(out_stream, val[*it], true);
+      }
+
+      out_stream << osc::HashEnd;
+      break;
     case MATRIX_VALUE: /* continue */
     case MIDI_VALUE:   /* continue */
+      // TODO
     default:
       ;// ????
   }
@@ -205,68 +216,132 @@ public:
     }
   }
 
-  static const char *parse_osc_message(Value &res, const char *start_type_tags, osc::ReceivedMessage::const_iterator &arg) {
-    ListValue tmp;
+  /** Parse a single value and advance 'arg' and type tags.
+   * A single value can be represented by a single element or enclosed in [...] (Array) or {...} (Hash).
+   */
+  static const char *parse_osc_value(const char *start_type_tags, osc::ReceivedMessage::const_iterator &arg, Value *res) {
+    const char *type_tags = start_type_tags;
+    Value tmp;
+
+    switch (*type_tags) {
+      case osc::TRUE_TYPE_TAG:
+        *res = gTrueValue;
+        break;
+      case osc::FALSE_TYPE_TAG:
+        *res = gFalseValue;
+        break;
+      case osc::NIL_TYPE_TAG:
+        *res = gNilValue;
+        break;
+      // case osc::INFINITUM_TYPE_TAG:
+      //   ??
+      case osc::ANY_TYPE_TAG:
+        *res = Value('*');
+        break;
+      case osc::ARRAY_START_TYPE_TAG:
+        tmp.set_type(LIST_VALUE); // clear
+        // eat opening '['
+        ++type_tags;
+        ++arg;
+        type_tags = parse_osc_array(type_tags, arg, &tmp);
+        *res = tmp;
+        break;
+      case osc::ARRAY_END_TYPE_TAG:
+        // return before type_tags increment
+        return type_tags;
+
+      case osc::HASH_START_TYPE_TAG:
+        tmp.set_type(HASH_VALUE); // clear
+        // eat opening '{'
+        ++type_tags;
+        ++arg;
+        type_tags = parse_osc_hash(type_tags, arg, &tmp);
+        *res = tmp;
+        break;
+      case osc::HASH_END_TYPE_TAG:
+        // return before type_tags increment
+        return type_tags;
+
+      case osc::INT32_TYPE_TAG:
+        *res = Value((Real)(arg->AsInt32Unchecked()));
+        break;
+      case osc::FLOAT_TYPE_TAG:
+        *res = Value((Real)(arg->AsFloatUnchecked()));
+        break;
+      case osc::CHAR_TYPE_TAG:
+        *res = Value((Real)(arg->AsCharUnchecked()));
+        break;
+      case osc::DOUBLE_TYPE_TAG:
+        *res = Value((Real)(arg->AsDoubleUnchecked()));
+        break;
+      case osc::STRING_TYPE_TAG:
+        *res = Value(arg->AsStringUnchecked());
+        break;
+      case osc::RGBA_COLOR_TYPE_TAG:
+      case osc::MIDI_MESSAGE_TYPE_TAG:
+      case osc::INT64_TYPE_TAG:
+      case osc::TIME_TAG_TYPE_TAG:
+      case osc::SYMBOL_TYPE_TAG:
+      case osc::BLOB_TYPE_TAG:
+      default:
+        // TODO
+        break;
+    }
+    ++type_tags;
+    ++arg;
+
+    return type_tags;
+  }
+
+  /** Build an array from all type tags until either ']' is found or no more type tags are present.
+   */
+  static const char *parse_osc_array(const char *start_type_tags, osc::ReceivedMessage::const_iterator &arg, Value *res) {
+    Value tmp;
+
     const char *type_tags = start_type_tags;
     while (*type_tags) {
-      switch (*type_tags) {
-        case osc::TRUE_TYPE_TAG:
-          res.push_back(gTrueValue);
-          break;
-        case osc::FALSE_TYPE_TAG:
-          res.push_back(gFalseValue);
-          break;
-        case osc::NIL_TYPE_TAG:
-          res.push_back(gNilValue);
-          break;
-        // case osc::INFINITUM_TYPE_TAG:
-        //   ??
-        case osc::ANY_TYPE_TAG:
-          res.push_back(Value('*'));
-          break;
-        case osc::ARRAY_START_TYPE_TAG:
-          tmp.set_type(LIST_VALUE); // clear
+      type_tags = parse_osc_value(type_tags, arg, &tmp);
+      if (*type_tags == osc::ARRAY_END_TYPE_TAG) {
+        ++type_tags;
+        ++arg;
+        return type_tags;
+      }
+      res->push_back(tmp);
+    }
+    return type_tags;
+  }
+
+  static const char *parse_osc_hash(const char *start_type_tags, osc::ReceivedMessage::const_iterator &arg, Value *res) {
+    std::string key;
+    const char *type_tags = start_type_tags;
+    while (*type_tags) {
+      // Get key
+      if (*type_tags == osc::STRING_TYPE_TAG) {
+        key = arg->AsStringUnchecked();
+        ++type_tags;
+        ++arg;
+      } else if (*type_tags == osc::HASH_END_TYPE_TAG) {
+        // finished
+        ++type_tags;
+        ++arg;
+        return type_tags;
+      } else {
+        // mal-formed message: ignore all until HASH_END
+        while (*type_tags && *type_tags != osc::HASH_END_TYPE_TAG) {
           ++type_tags;
           ++arg;
-          type_tags = parse_osc_message(tmp, type_tags, arg);
-          res.push_back(tmp);
-          break;
-        case osc::ARRAY_END_TYPE_TAG:
-          // return before type_tags increment
-          return type_tags;
+        }
 
-        // zero length
-
-        case osc::INT32_TYPE_TAG:
-          res.push_back(Value((Real)(arg->AsInt32Unchecked())));
-          break;
-        case osc::FLOAT_TYPE_TAG:
-          res.push_back(Value((Real)(arg->AsFloatUnchecked())));
-          break;
-        case osc::CHAR_TYPE_TAG:
-          res.push_back(Value((Real)(arg->AsCharUnchecked())));
-          break;
-        case osc::DOUBLE_TYPE_TAG:
-          res.push_back(Value((Real)(arg->AsDoubleUnchecked())));
-          break;
-        case osc::HASH_TYPE_TAG:
-          res.push_back(Value((Json)arg->AsStringUnchecked()));
-          break;
-        case osc::STRING_TYPE_TAG:
-          res.push_back(Value(arg->AsStringUnchecked()));
-          break;
-        case osc::RGBA_COLOR_TYPE_TAG:
-        case osc::MIDI_MESSAGE_TYPE_TAG:
-        case osc::INT64_TYPE_TAG:
-        case osc::TIME_TAG_TYPE_TAG:
-        case osc::SYMBOL_TYPE_TAG:
-        case osc::BLOB_TYPE_TAG:
-        default:
-          // TODO
-          break;
+        if (*type_tags == osc::HASH_END_TYPE_TAG) {
+          ++type_tags;
+          ++arg;
+        }
+        return type_tags;
       }
-      ++type_tags;
-      ++arg;
+
+      Value tmp;
+      type_tags = parse_osc_value(type_tags, arg, &tmp);
+      res->set(key, tmp);
     }
     return type_tags;
   }
@@ -278,7 +353,7 @@ public:
   static Value value_from_osc(const osc::ReceivedMessage &message) {
     Value res;
     osc::ReceivedMessage::const_iterator arg = message.ArgumentsBegin();
-    parse_osc_message(res, message.TypeTags(), arg);
+    parse_osc_array(message.TypeTags(), arg, &res);
     return res;
   }
 

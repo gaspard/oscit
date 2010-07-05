@@ -58,8 +58,7 @@ public:
     assert_equal("H", v.type_tag());
     assert_equal(HASH_TYPE_TAG_ID, v.type_id());
 
-    uint type_id = H("H");
-    assert_equal(HASH_TYPE_TAG_ID, type_id);
+    assert_equal(HASH_TYPE_TAG_ID, hashId("H"));
   }
 
   void test_create_set( void ) {
@@ -85,6 +84,34 @@ public:
     assert_equal("{\"do\":{\"re\":{\"mi\":329.628}}}", v3.to_json());
     assert_equal("{\"do\":{\"re\":{\"mi\":{\"fa\":349.228}}}}", v4.to_json());
     assert_equal("{\"do\":{\"re\":{\"mi\":{\"fa\":{\"sol\":391.995}}}}}", v5.to_json());
+  }
+
+  void test_create_nested_keys_real( void ) {
+    HashValue v1("do", 261.626);
+    HashValue v2("do", "re", 293.665);
+    HashValue v3("do", "re", "mi", 329.628);
+    HashValue v4("do", "re", "mi", "fa", 349.228);
+    HashValue v5("do", "re", "mi", "fa", "sol", 391.995);
+
+    assert_equal("{\"do\":261.626}", v1.to_json());
+    assert_equal("{\"do\":{\"re\":293.665}}", v2.to_json());
+    assert_equal("{\"do\":{\"re\":{\"mi\":329.628}}}", v3.to_json());
+    assert_equal("{\"do\":{\"re\":{\"mi\":{\"fa\":349.228}}}}", v4.to_json());
+    assert_equal("{\"do\":{\"re\":{\"mi\":{\"fa\":{\"sol\":391.995}}}}}", v5.to_json());
+  }
+
+  void test_create_nested_keys_string( void ) {
+    HashValue v1("do", "C");
+    HashValue v2("do", "re", "D");
+    HashValue v3("do", "re", "mi", "E");
+    HashValue v4("do", "re", "mi", "fa", "F");
+    HashValue v5("do", "re", "mi", "fa", "sol", "G");
+
+    assert_equal("{\"do\":\"C\"}", v1.to_json());
+    assert_equal("{\"do\":{\"re\":\"D\"}}", v2.to_json());
+    assert_equal("{\"do\":{\"re\":{\"mi\":\"E\"}}}", v3.to_json());
+    assert_equal("{\"do\":{\"re\":{\"mi\":{\"fa\":\"F\"}}}}", v4.to_json());
+    assert_equal("{\"do\":{\"re\":{\"mi\":{\"fa\":{\"sol\":\"G\"}}}}}", v5.to_json());
   }
 
   void test_share( void ) {
@@ -133,9 +160,10 @@ public:
   void test_set( void ) {
     Value v;
 
-    v.set("nice", "friends");
+    v.set("nice", "friends").set("feared", "enemy");
 
     assert_true(v.is_hash());
+    assert_equal("enemy", v["feared"].str());
   }
 
   void test_set_tag( void ) {
@@ -310,7 +338,7 @@ public:
   }
 
   void test_can_receive( void ) {
-    Object object("foo", HashIO("bar"));
+    Object object("foo", Attribute::hash_io("bar"));
     assert_false(object.can_receive(Value()));
     assert_true (object.can_receive(gNilValue));
     assert_true (object.can_receive(gBangValue));

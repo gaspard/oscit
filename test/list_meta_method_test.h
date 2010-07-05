@@ -100,7 +100,7 @@ public:
   }
   
   void test_list_with_nil( void ) {
-    Root root(NoIO("This is the root node."));
+    Root root(Attribute::no_io("This is the root node."));
     Value res;
     
     res = root.call(LIST_PATH, gNilValue);

@@ -191,112 +191,109 @@ public:
     assert_false(hash.get("c", &res));
   }
 
-  void test_H( void ) {
-    assert_false(H("a") == H("b"));
-    assert_false(H("one") == H("two"));
-    assert_false(H("longname_a") == H("longname_b"));
-    assert_false(H("longname_a") == H("longname_c"));
-    // this is the upper limit for H() macro
-    assert_true(H("longnamelong_a") == H("longnamelong_c"));
-    // no upper limit for hashId() function
+  void test_hashId_( void ) {
+    assert_false(hashId("a") == hashId("b"));
+    assert_false(hashId("one") == hashId("two"));
+    assert_false(hashId("longname_a") == hashId("longname_b"));
+    assert_false(hashId("longname_a") == hashId("longname_c"));
     assert_false(hashId("longnamelong_a") == hashId("longnamelong_c"));
   }
 
   void test_N_type_id( void ) {
-    assert_false(H("N") == H("T"));
-    assert_false(H("N") == H("F"));
-    assert_false(H("N") == H("f"));
-    assert_false(H("N") == H("s"));
-    assert_false(H("N") == H("H"));
-    assert_false(H("N") == H("M"));
-    assert_false(H("N") == H("m"));
-    assert_false(H("N") == H("*"));
+    assert_false(hashId("N") == hashId("T"));
+    assert_false(hashId("N") == hashId("F"));
+    assert_false(hashId("N") == hashId("f"));
+    assert_false(hashId("N") == hashId("s"));
+    assert_false(hashId("N") == hashId("H"));
+    assert_false(hashId("N") == hashId("M"));
+    assert_false(hashId("N") == hashId("m"));
+    assert_false(hashId("N") == hashId("*"));
   }
 
   void test_T_type_id( void ) {
-    assert_false(H("T") == H("N"));
-    assert_false(H("T") == H("F"));
-    assert_false(H("T") == H("f"));
-    assert_false(H("T") == H("s"));
-    assert_false(H("T") == H("H"));
-    assert_false(H("T") == H("M"));
-    assert_false(H("T") == H("m"));
-    assert_false(H("T") == H("*"));
+    assert_false(hashId("T") == hashId("N"));
+    assert_false(hashId("T") == hashId("F"));
+    assert_false(hashId("T") == hashId("f"));
+    assert_false(hashId("T") == hashId("s"));
+    assert_false(hashId("T") == hashId("H"));
+    assert_false(hashId("T") == hashId("M"));
+    assert_false(hashId("T") == hashId("m"));
+    assert_false(hashId("T") == hashId("*"));
   }
 
   void test_F_type_id( void ) {
-    assert_false(H("F") == H("N"));
-    assert_false(H("F") == H("T"));
-    assert_false(H("F") == H("f"));
-    assert_false(H("F") == H("s"));
-    assert_false(H("F") == H("H"));
-    assert_false(H("F") == H("M"));
-    assert_false(H("F") == H("m"));
-    assert_false(H("F") == H("*"));
+    assert_false(hashId("F") == hashId("N"));
+    assert_false(hashId("F") == hashId("T"));
+    assert_false(hashId("F") == hashId("f"));
+    assert_false(hashId("F") == hashId("s"));
+    assert_false(hashId("F") == hashId("H"));
+    assert_false(hashId("F") == hashId("M"));
+    assert_false(hashId("F") == hashId("m"));
+    assert_false(hashId("F") == hashId("*"));
   }
 
   void test_f_type_id( void ) {
-    assert_false(H("f") == H("N"));
-    assert_false(H("f") == H("T"));
-    assert_false(H("f") == H("F"));
-    assert_false(H("f") == H("s"));
-    assert_false(H("f") == H("H"));
-    assert_false(H("f") == H("M"));
-    assert_false(H("f") == H("m"));
-    assert_false(H("f") == H("*"));
+    assert_false(hashId("f") == hashId("N"));
+    assert_false(hashId("f") == hashId("T"));
+    assert_false(hashId("f") == hashId("F"));
+    assert_false(hashId("f") == hashId("s"));
+    assert_false(hashId("f") == hashId("H"));
+    assert_false(hashId("f") == hashId("M"));
+    assert_false(hashId("f") == hashId("m"));
+    assert_false(hashId("f") == hashId("*"));
   }
 
   void test_s_type_id( void ) {
-    assert_false(H("s") == H("N"));
-    assert_false(H("s") == H("T"));
-    assert_false(H("s") == H("F"));
-    assert_false(H("s") == H("f"));
-    assert_false(H("s") == H("H"));
-    assert_false(H("s") == H("M"));
-    assert_false(H("s") == H("m"));
-    assert_false(H("s") == H("*"));
+    assert_false(hashId("s") == hashId("N"));
+    assert_false(hashId("s") == hashId("T"));
+    assert_false(hashId("s") == hashId("F"));
+    assert_false(hashId("s") == hashId("f"));
+    assert_false(hashId("s") == hashId("H"));
+    assert_false(hashId("s") == hashId("M"));
+    assert_false(hashId("s") == hashId("m"));
+    assert_false(hashId("s") == hashId("*"));
   }
 
   void test_H_type_id( void ) {
-    assert_false(H("H") == H("N"));
-    assert_false(H("H") == H("f"));
-    assert_false(H("H") == H("s"));
-    assert_false(H("H") == H("M"));
-    assert_false(H("H") == H("m"));
-    assert_false(H("H") == H("*"));
+    assert_false(hashId("H") == hashId("N"));
+    assert_false(hashId("H") == hashId("f"));
+    assert_false(hashId("H") == hashId("s"));
+    assert_false(hashId("H") == hashId("M"));
+    assert_false(hashId("H") == hashId("m"));
+    assert_false(hashId("H") == hashId("*"));
   }
 
   void test_M_type_id( void ) {
-    assert_false(H("M") == H("N"));
-    assert_false(H("M") == H("T"));
-    assert_false(H("M") == H("F"));
-    assert_false(H("M") == H("f"));
-    assert_false(H("M") == H("s"));
-    assert_false(H("M") == H("H"));
-    assert_false(H("M") == H("m"));
-    assert_false(H("M") == H("*"));
+    assert_false(hashId("M") == hashId("N"));
+    assert_false(hashId("M") == hashId("T"));
+    assert_false(hashId("M") == hashId("F"));
+    assert_false(hashId("M") == hashId("f"));
+    assert_false(hashId("M") == hashId("s"));
+    assert_false(hashId("M") == hashId("H"));
+    assert_false(hashId("M") == hashId("m"));
+    assert_false(hashId("M") == hashId("*"));
   }
 
   void test_m_type_id( void ) {
-    assert_false(H("m") == H("N"));
-    assert_false(H("m") == H("T"));
-    assert_false(H("m") == H("F"));
-    assert_false(H("m") == H("f"));
-    assert_false(H("m") == H("s"));
-    assert_false(H("m") == H("H"));
-    assert_false(H("m") == H("M"));
-    assert_false(H("m") == H("*"));
+    assert_false(hashId("m") == hashId("N"));
+    assert_false(hashId("m") == hashId("T"));
+    assert_false(hashId("m") == hashId("F"));
+    assert_false(hashId("m") == hashId("f"));
+    assert_false(hashId("m") == hashId("s"));
+    assert_false(hashId("m") == hashId("H"));
+    assert_false(hashId("m") == hashId("M"));
+    assert_false(hashId("m") == hashId("*"));
   }
 
   void test_any_type_id( void ) {
-    assert_false(H("*") == H("N"));
-    assert_false(H("*") == H("T"));
-    assert_false(H("*") == H("F"));
-    assert_false(H("*") == H("f"));
-    assert_false(H("*") == H("s"));
-    assert_false(H("*") == H("H"));
-    assert_false(H("*") == H("m"));
-    assert_false(H("*") == H("M"));
+    assert_false(hashId("*") == hashId("N"));
+    assert_false(hashId("*") == hashId("T"));
+    assert_false(hashId("*") == hashId("F"));
+    assert_false(hashId("*") == hashId("f"));
+    assert_false(hashId("*") == hashId("s"));
+    assert_false(hashId("*") == hashId("H"));
+    assert_false(hashId("*") == hashId("m"));
+    assert_false(hashId("*") == hashId("M"));
   }
 
   void test_copy( void ) {

@@ -35,6 +35,7 @@
 #include <list>
 #include <string>
 
+#include "oscit/constants.h"
 #include "oscit/typed.h"
 #include "oscit/observer.h"
 #include "oscit/signal.h"
@@ -52,8 +53,6 @@ namespace oscit {
  */
 #define OSC_NEXT_NAME_BUFFER_SIZE 20
 
-#define DEFAULT_TYPE NoIO("No information on this node.")
-
 class Root;
 class Alias;
 class ObjectProxy;
@@ -65,7 +64,7 @@ class Object : public Typed, public Observer, public CReferenceCounted {
   TYPED("Object")
 
   explicit Object() : root_(NULL), parent_(NULL), children_(20), context_(NULL), keep_last_(false),
-    type_(DEFAULT_TYPE) {
+    attributes_(Attribute::default_io()) {
     sync_type_id();
     name_ = "";
     url_  = name_;
@@ -73,18 +72,18 @@ class Object : public Typed, public Observer, public CReferenceCounted {
 
   explicit Object(const char *name) : root_(NULL), parent_(NULL),
     children_(20), name_(name), url_(name), context_(NULL), keep_last_(false),
-    type_(DEFAULT_TYPE) {
+    attributes_(Attribute::default_io()) {
     sync_type_id();
   }
 
   explicit Object(const std::string &name) : root_(NULL), parent_(NULL),
     children_(20), name_(name), url_(name), context_(NULL), keep_last_(false),
-    type_(DEFAULT_TYPE) {
+    attributes_(Attribute::default_io()) {
     sync_type_id();
   }
 
   explicit Object(const Value &type) : root_(NULL), parent_(NULL),
-    children_(20), context_(NULL), keep_last_(false), type_(type) {
+    children_(20), context_(NULL), keep_last_(false), attributes_(type) {
     sync_type_id();
     name_ = "";
     url_  = name_;
@@ -92,33 +91,33 @@ class Object : public Typed, public Observer, public CReferenceCounted {
 
   Object(const char *name, const Value &type, bool keep_last = false) : root_(NULL), parent_(NULL),
     children_(20), name_(name), url_(name), context_(NULL), keep_last_(keep_last),
-    type_(type) {
+    attributes_(type) {
     sync_type_id();
   }
 
   Object(const std::string &name, const Value &type, bool keep_last = false) : root_(NULL),
     parent_(NULL), children_(20), name_(name), url_(name), context_(NULL),
-    keep_last_(keep_last), type_(type) {
+    keep_last_(keep_last), attributes_(type) {
     sync_type_id();
   }
 
   Object(Object *parent, const char *name) : root_(NULL), parent_(NULL),
     children_(20), name_(name), context_(NULL), keep_last_(false),
-    type_(DEFAULT_TYPE) {
+    attributes_(Attribute::default_io()) {
     sync_type_id();
     parent->adopt(this);
   }
 
   Object(Object *parent, const char *name, const Value &type) : root_(NULL),
     parent_(NULL), children_(20), name_(name), context_(NULL), keep_last_(false),
-    type_(type) {
+    attributes_(type) {
     sync_type_id();
     parent->adopt(this);
   }
 
   Object(Object *parent, const std::string &name, const Value &type) :
     root_(NULL), parent_(NULL), children_(20), name_(name), context_(NULL),
-    keep_last_(false), type_(type) {
+    keep_last_(false), attributes_(type) {
     sync_type_id();
     parent->adopt(this);
   }
@@ -156,14 +155,6 @@ class Object : public Typed, public Observer, public CReferenceCounted {
   inline void unlock() {
     if (context_) context_->unlock();
   }
-
-  /** Inform the object of an alias linked to this object (has to be deleted
-   * on destruction).
-   */
-  void register_alias(Alias *alias);
-
-  /** Inform the object that an alias no longer exists. */
-  void unregister_alias(Alias *alias);
 
   /** Return the object's unique url. */
   inline const std::string &url() const {
@@ -210,29 +201,22 @@ class Object : public Typed, public Observer, public CReferenceCounted {
    */
   const Value list() const;
 
-  /** Shortcut to call multiple methods on an object. This method simply calls from_hash.
+  /** Shortcut to call multiple methods on an object.
    * @param val Using "obj.set(tempo:45 rubato:1.5)" is equivalent to calling
    *            "obj.tempo(45)" and "obj.rubato(1.5)".
    * @return    a hash with the result for each call.
    */
-  const Value set(const Value &val) {
-    Value result;
-    from_hash(val, &result);
-    return result;
-  }
-
-  /** Update an object from a hash, inserting results for each call
-   * in the results hash. All keys in the hash that start with '@' are
-   * ignored.
-   */
-  virtual void from_hash(const Value &hash, Value *results);
+  virtual const Value set(const Value &hash);
 
   /** Shortcut to call multiple methods on an object.
    * @param val Using "obj.set(tempo:45 rubato:1.5)" is equivalent to calling
    *            "obj.tempo(45)" and "obj.rubato(1.5)".
    * @return true on success, false if any call failed.
    */
-  bool set_all_ok(const Value &val);
+  bool set_all_ok(const Value &val) {
+    Value result = set(val);
+    return !result.contains_error();
+  }
 
   /** This is the prefered way to insert new objects in the tree since it clearly
    * highlights ownership in the parent.
@@ -282,20 +266,16 @@ class Object : public Typed, public Observer, public CReferenceCounted {
   /** Human readable information method.
    *  Called as a response to "/.info '/this/url'".
    */
-  const Value &info() const {
-    return type_.last();
+  const Value info() const {
+    Value info(attributes_[Attribute::INFO]);
+    return info.is_string() ? info : Value("Container.");
   }
 
   /** Type information on node.
    */
-  const Value &type() const {
-    return type_;
+  const Value type() const {
+    return attributes_[Attribute::TYPE];
   }
-
-  /** Type information with current value (used to automatically generate the correct control).
-   * Called during response to "/.type '/this/url'".
-   */
-  const Value type_with_current_value();
 
   /** Set meta type (signature, range, units). The type should be immutable.
    *  this method is not a good idea.
@@ -378,24 +358,28 @@ class Object : public Typed, public Observer, public CReferenceCounted {
    * # All IO types (except NoIO) accept the Value corresponding to their type
    */
   inline bool can_receive(const Value &val) {
-    if (type_id() == NO_TYPE_TAG_ID) return false;
-    if (val.type_id() == type_id() || accept_any_type()) {
+    if (type_id_ == NO_TYPE_TAG_ID) return false;
+    if (val.type_id() == type_id_ || accept_any_type()) {
       return true;
     } else if (val.is_nil() || val.is_bang()) {
       return true;
-    } else if (!val.is_list() || !type_[0].is_list()) {
-      return false;
     } else {
-      // first elements should match
-      const char * c  = type_[0].type_tag();
-      const char * cl = val.type_tag();
-      while (*c) {
-        if (*c != *cl) return false;
-        ++c;
-        ++cl;
-      }
-      return true;
+      return false;
     }
+    // FIXME: list of arguments: first elements must match.
+    // } else if (!val.is_list() || !attributes_[Attribute::TYPE][0].is_list()) {
+    //   return false;
+    // } else {
+    //   // first elements should match
+    //   const char * c  = type_[0].type_tag();
+    //   const char * cl = val.type_tag();
+    //   while (*c) {
+    //     if (*c != *cl) return false;
+    //     ++c;
+    //     ++cl;
+    //   }
+    //   return true;
+    // }
   }
 
   /** Signal to receive notifications on object destruction.
@@ -440,19 +424,19 @@ class Object : public Typed, public Observer, public CReferenceCounted {
 
  private:
   friend class ObjectProxy;
+  friend class Alias;
 
   /** Keep type_id_ in sync with type_.
    */
   void sync_type_id() {
-    type_id_ = type_.size() > 0 ? type_[0].type_id() : NO_TYPE_TAG_ID;
+    Value signature = attributes_[Attribute::TYPE][Attribute::SIGNATURE];
+    if (signature.is_string()) {
+      type_id_ = hashId(signature.str());
+    } else {
+      // invalid
+      type_id_ = NO_TYPE_TAG_ID;
+    }
   }
-
-  /** List of aliases to destroy when
-   * this node disappears.
-   * FIXME: clarify usage and RW lock need.
-   */
-  std::list<Alias *>          aliases_;
-
 
  protected:
 
@@ -472,6 +456,7 @@ class Object : public Typed, public Observer, public CReferenceCounted {
   CTHash<std::string, Object *> children_;
 
   /** List of children as a vector for faster enumeration type of access.
+   * FIXME: remove, bad optimization.
    */
   CTVector<Object*> children_vector_;
 
@@ -480,7 +465,7 @@ class Object : public Typed, public Observer, public CReferenceCounted {
   std::string name_;
 
   /** Absolute path to object (cached).
-   * FIXME: clarify usage and RW lock need.
+   * FIXME: clarify usage and RW lock need. This is not very DRY with name_.
    */
   std::string url_;
 
@@ -501,20 +486,15 @@ class Object : public Typed, public Observer, public CReferenceCounted {
    */
   Signal on_delete_;
 
- private:
-
-  /** Value that holds type information on the 'trigger' method of this
+  /** Value that holds all attributes including type information on the 'trigger' method of this
    * object.
-   * If the type_ is not a list, this means the object is not callable and
-   * the type_ member only holds a string with general information on the
-   * object.
-   * If the type_ is a list, the first element is the actual type of Value
-   * the object can receive in it's 'trigger' method and the other elements
-   * are information on the range of allowed values and such.
-   * The last element of type_ is always an information string.
-   * FIXME: clarify usage and RW lock need.
+   * If the attributes does not contain a "type" key, this means that the object is not callable.
+   * This can mean that the object is either a container or a widget.
+   *
    */
-  Value type_;
+  Value attributes_;
+
+private:
 
   /** Identifier for the type of the values the element can receive.
    * The value is a hash of the type tag list (multiple osc type tags) such

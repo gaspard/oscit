@@ -39,35 +39,6 @@ typedef unsigned int uint;
 
 namespace oscit {
 
-///////////// MACRO FOR STATIC STRING HASH ////////////////
-// macro hashing function taken from http://chrissavoie.com/index.php?option=com_content&task=view&id=14&Itemid=1
-// the constant value to return at the end of the hashing
-#define HASH_CONSTANT 5381
-
-// The following is the guts of the compile-time hasher
-#define HASH_RECURSE_00(string, value) HASH_FUNCTION((*(string+1) == 0 ? HASH_CONSTANT : HASH_RECURSE_01(string+1, *(string+1))), value)
-#define HASH_RECURSE_01(string, value) HASH_FUNCTION((*(string+1) == 0 ? HASH_CONSTANT : HASH_RECURSE_02(string+1, *(string+1))), value)
-#define HASH_RECURSE_02(string, value) HASH_FUNCTION((*(string+1) == 0 ? HASH_CONSTANT : HASH_RECURSE_03(string+1, *(string+1))), value)
-#define HASH_RECURSE_03(string, value) HASH_FUNCTION((*(string+1) == 0 ? HASH_CONSTANT : HASH_RECURSE_04(string+1, *(string+1))), value)
-#define HASH_RECURSE_04(string, value) HASH_FUNCTION((*(string+1) == 0 ? HASH_CONSTANT : HASH_RECURSE_05(string+1, *(string+1))), value)
-#define HASH_RECURSE_05(string, value) HASH_FUNCTION((*(string+1) == 0 ? HASH_CONSTANT : HASH_RECURSE_06(string+1, *(string+1))), value)
-#define HASH_RECURSE_06(string, value) HASH_FUNCTION((*(string+1) == 0 ? HASH_CONSTANT : HASH_RECURSE_07(string+1, *(string+1))), value)
-#define HASH_RECURSE_07(string, value) HASH_FUNCTION((*(string+1) == 0 ? HASH_CONSTANT : HASH_RECURSE_08(string+1, *(string+1))), value)
-#define HASH_RECURSE_08(string, value) HASH_FUNCTION((*(string+1) == 0 ? HASH_CONSTANT : HASH_RECURSE_09(string+1, *(string+1))), value)
-#define HASH_RECURSE_09(string, value) HASH_FUNCTION((*(string+1) == 0 ? HASH_CONSTANT : HASH_RECURSE_10(string+1, *(string+1))), value)
-#define HASH_RECURSE_10(string, value) HASH_FUNCTION((*(string+1) == 0 ? HASH_CONSTANT : HASH_RECURSE_11(string+1, *(string+1))), value)
-#define HASH_RECURSE_11(string, value) HASH_FUNCTION((*(string+1) == 0 ? HASH_CONSTANT : HASH_RECURSE_12(string+1, *(string+1))), value)
-#define HASH_RECURSE_12(string, value) HASH_CONSTANT
-
-// The following is the function used for hashing
-// Do NOT use NEXTHASH more than once, it will cause
-// N-Squared expansion and make compilation very slow
-// If not impossible
-#define HASH_FUNCTION(NEXTHASH, VALUE) VALUE + (NEXTHASH << 2)
-
-// finally the macro used to generate the hash
-#define H(string) (uint)(*string == 0 ? 0 : HASH_RECURSE_00(string, *string))
-
 typedef std::list<std::string>::iterator StringIterator;
 typedef std::list<std::string>::const_iterator ConstStringIterator;
 
@@ -467,7 +438,10 @@ inline uint hashId(const unsigned long key) {
 }
 
 // ===== char *      =====
-// sdbm function: taken from http://www.cse.yorku.ca/~oz/hash.html
+/** Hashing function null terminated character strings.
+ * sdbm function: taken from http://www.cse.yorku.ca/~oz/hash.html
+ * This is *not* the same as the Hash macro !
+ */
 inline uint hashId(const char *str) {
   unsigned long h = 0;
   int c;
@@ -480,21 +454,13 @@ inline uint hashId(const char *str) {
 }
 
 // We use the simpler hash to avoid too long compile times in the static string hash macro.
-
 inline uint hashId(const char c) {
-  return HASH_FUNCTION(HASH_CONSTANT, c);
+  return (uint)c;
 }
 
-//template<>
-//inline uint hashId(const char * str) {
-//  return H(str);
-//}
-
 // ===== std::string& =====
-// sdbm function: taken from http://www.cse.yorku.ca/~oz/hash.html
 inline uint hashId(const std::string &key) {
-  const char *str = key.c_str();
-  return hashId(str);
+  return hashId(key.c_str());
 }
 
 

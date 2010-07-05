@@ -65,6 +65,10 @@ class List : public ReferenceCounted
     return type_tag_;
   }
 
+  /** Returns true if any of the enclosed values is an error.
+   */
+  bool contains_error();
+
   TypeTagID type_id() const {
     return type_id_;
   }
@@ -108,7 +112,7 @@ class List : public ReferenceCounted
 
   void update_type_tag() {
     type_tag_ = type_tag_storage_.c_str();
-    type_id_ = H(type_tag_); // FIXME: length limit is ~12 ...
+    type_id_ = hashId(type_tag_);
   }
 
   const char *init_with_type_tag(const char *type_tag);

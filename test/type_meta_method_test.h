@@ -47,12 +47,11 @@ public:
     res = root.call(TYPE_PATH, Value("/foo"));
     assert_equal("/foo", res[0].str());
     res = res[1];
-    assert_equal("fffs", res.type_tag());
-    assert_equal(RangeIOTypeId, res.type_id());
-    assert_equal(4.25,  res[0].r); // current
-    assert_equal(0.0,   res[1].r); // min
-    assert_equal(127.0, res[2].r); // max
-    assert_equal(DUMMY_OBJECT_INFO, res[3].str()); // info
+    assert_equal("H", res.type_tag());
+    assert_equal("range", res[Attribute::NAME].str());
+    assert_equal(0.0,   res[Attribute::MIN].r);
+    assert_equal(127.0, res[Attribute::MAX].r);
+    assert_equal(DUMMY_OBJECT_INFO, res[Attribute::INFO].str());
 
     res = root.call(TYPE_PATH, Value("/blah"));
     assert_equal("/blah", res[0].str());
@@ -77,7 +76,7 @@ public:
 
   void test_any_type( void ) {
     Root root;
-    root.adopt(new DummyObject("foo", 1.23, AnyIO("This is the info string.")));
+    root.adopt(new DummyObject("foo", 1.23, Attribute::any_io("This is the info string.")));
     Value res;
     res = root.call(TYPE_PATH, Value("/foo"));
     assert_equal("/foo", res[0].str());
@@ -89,7 +88,9 @@ public:
 
   void test_list_type( void ) {
     Root root;
-    root.adopt(new DummyObject("Haddock", Value("Haddock").push_back(42), Value(Json("[[\"\", 0.0], \"name\", \"years old\", \"Set captain with name and age.\"]"))));
+    // FIXME: replace JsonValue(...) by proper attributes
+    // Attribute::attribute(info, name, signature) ?
+    root.adopt(new DummyObject("Haddock", Value("Haddock").push_back(42), JsonValue("[[\"\", 0.0], \"name\", \"years old\", \"Set captain with name and age.\"]")));
     Value res;
     res = root.call(TYPE_PATH, Value("/Haddock"));
     assert_equal("/Haddock", res[0].str());
@@ -100,7 +101,7 @@ public:
 
   void test_hash_type( void ) {
     Root root;
-    root.adopt(new DummyObject("dog_food", Value(Json("{lazy:\"dog\", silly:\"cats and mices\"}")), HashIO("Blah blah.")));
+    root.adopt(new DummyObject("dog_food", JsonValue("{lazy:\"dog\", silly:\"cats and mices\"}"), Attribute::hash_io("Blah blah.")));
     Value res;
     res = root.call(TYPE_PATH, Value("/dog_food"));
     assert_equal("/dog_food", res[0].str());
@@ -112,7 +113,7 @@ public:
 
   void test_matrix_type( void ) {
     Root root;
-    root.adopt(new DummyObject("master_of_time", MatrixValue(1,5), MatrixIO("Stupid matrix.")));
+    root.adopt(new DummyObject("master_of_time", MatrixValue(1,5), Attribute::matrix_io("Stupid matrix.")));
     Value res;
     res = root.call(TYPE_PATH, Value("/master_of_time"));
     assert_equal("/master_of_time", res[0].str());
@@ -131,11 +132,11 @@ public:
     res = root.call(TYPE_PATH, Value("/foo"));
     assert_equal("/foo", res[0].str());
     res = res[1];
-    assert_equal("No information on this node.", res.str());
+    assert_equal("Container.", res.str());
   }
 
   void test_type_with_nil( void ) {
-    Root root(NoIO("This is the root node."));
+    Root root(Attribute::no_io("This is the root node."));
     Value res;
 
     res = root.call(TYPE_PATH, gNilValue);

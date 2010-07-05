@@ -112,7 +112,7 @@ void Root::register_object(Object *obj) {
 
   if (!Url::is_meta(obj->url())) {
     Value type(obj->url());
-    type.push_back(obj->type_with_current_value());
+    type.push_back(obj->type());
     Value reply(TYPE_PATH);
     reply.push_back(type);
     notify_observers(REPLY_PATH, reply);

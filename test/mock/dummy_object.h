@@ -39,7 +39,7 @@ public:
   /** Class signature. */
   TYPED("Object.DummyObject")
 
-  DummyObject(const char *name, Real value) : Object(name, RangeIO(0, 127, DUMMY_OBJECT_INFO)), value_(value) {}
+  DummyObject(const char *name, Real value) : Object(name, Attribute::range_io(0, 127, DUMMY_OBJECT_INFO)), value_(value) {}
   DummyObject(const char *name, Value value, const Value &type) : Object(name, type), value_(value) {}
   DummyObject(const char *name, Real value, const Value &type) : Object(name, type), value_(value) {}
   DummyObject(const char *name, const char *value, const Value &type) : Object(name, type), value_(value) {}
@@ -48,11 +48,10 @@ public:
   virtual ~DummyObject() {}
 
   virtual const Value trigger(const Value &val) {
-    Value my_type(type()[0]);
-
-    if (my_type.type() == val.type()) {
+    if (type_id() == val.type_id()) {
       value_ = val;
     }
+
     return value_;
   }
 
@@ -86,7 +85,7 @@ class DummyObject2 : public Object {
 public:
   TYPED("Object.DummyObject2")
 
-  DummyObject2(const char * name, const char *value) : Object(name, SelectIO("rgb,rgba,yuv", "Set color mode.")), value_(value) {}
+  DummyObject2(const char * name, const char *value) : Object(name, Attribute::select_io("rgb,rgba,yuv", "Set color mode.")), value_(value) {}
 
   DummyObject2(const char * name, const char *value, const Value &type) : Object(name, type), value_(value) {}
 

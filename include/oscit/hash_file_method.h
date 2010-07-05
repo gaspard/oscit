@@ -45,25 +45,25 @@ public:
   TYPED("Object.HashFileMethod")
 
   HashFileMethod(const char *name, const char *path)
-      : Object(name, HashIO("Read/write hash file content.")),
+      : Object(name, Attribute::hash_io("Read/write hash file content.")),
         file_(path) {
     create_methods();
   }
 
   HashFileMethod(const std::string &name, const std::string &path)
-      : Object(name, HashIO("Read/write hash file content.")),
+      : Object(name, Attribute::hash_io("Read/write hash file content.")),
         file_(path) {
     create_methods();
   }
 
   HashFileMethod(const char *name, const char *path, const char *info)
-      : Object(name, HashIO(info)),
+      : Object(name, Attribute::hash_io(info)),
         file_(path) {
     create_methods();
   }
 
   HashFileMethod(const std::string &name, const std::string &path, const std::string &info)
-      : Object(name, HashIO(info)),
+      : Object(name, Attribute::hash_io(info.c_str())),
         file_(path) {
     create_methods();
   }

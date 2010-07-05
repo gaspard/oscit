@@ -39,4 +39,6 @@ InfinitumType Infinitum;
 AnyType Any;               // oscit
 ArrayStartType ArrayStart; // oscit
 ArrayEndType ArrayEnd;     // oscit
+HashStartType HashStart;   // oscit
+HashEndType HashEnd;       // oscit
 } // namespace osc

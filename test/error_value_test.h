@@ -55,8 +55,7 @@ public:
     assert_equal("E", v.type_tag());
     assert_equal(ERROR_TYPE_TAG_ID, v.type_id());
 
-    uint type_id = H("E");
-    assert_equal(ERROR_TYPE_TAG_ID, type_id);
+    assert_equal(ERROR_TYPE_TAG_ID, hashId("E"));
 
   }
 
@@ -144,7 +143,7 @@ public:
   }
 
   void test_can_receive( void ) {
-    Object object("foo", Value(BAD_REQUEST_ERROR, "bar").push_back("Receives errors..."));
+    Object object("foo", HashValue(Attribute::TYPE, Attribute::SIGNATURE, "E").set(Attribute::INFO, "Receives error values."));
     assert_false(object.can_receive(Value()));
     assert_true (object.can_receive(gNilValue));
     assert_true (object.can_receive(gBangValue));
@@ -195,5 +194,18 @@ public:
   void test_create_varargs( void ) {
     FValue s(BAD_REQUEST_ERROR, "I am %i not '%s'.", 1337, "Superman");
     assert_equal("I am 1337 not 'Superman'.", s.error_message());
+  }
+
+  void test_contains_error( void ) {
+    Value e(Json("hop"));
+    assert_false(e.contains_error());
+    e = ErrorValue(BAD_REQUEST_ERROR, "some message");
+    assert_true(e.contains_error());
+    e = HashValue("some key", "deep", "inside", 45.4);
+    assert_false(e.contains_error());
+
+    e = JsonValue("[1,2,3]");
+    e.push_back(HashValue("some key", "deep", "inside", ErrorValue(BAD_REQUEST_ERROR, "some message")));
+    assert_true(e.contains_error());
   }
 };

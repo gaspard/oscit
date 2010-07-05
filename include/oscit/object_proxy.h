@@ -91,7 +91,7 @@ public:
    * of the remote changed.
    */
   void type_changed() {
-    on_type_change_.send(type_);
+    on_type_change_.send(type());
   }
 
   /** Find the list of children by querying the remote.
@@ -113,7 +113,7 @@ public:
    * have been synced with remote).
    */
   bool is_connected() const {
-    return type_.is_list();
+    return type().is_hash();
   }
 
   /** @internal.

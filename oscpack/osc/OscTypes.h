@@ -68,10 +68,11 @@ enum TypeTagValue {
     FALSE_TYPE_TAG = 'F',
     NIL_TYPE_TAG = 'N',
     INFINITUM_TYPE_TAG = 'I',
-    ANY_TYPE_TAG = '*',         // oscit,
+    ANY_TYPE_TAG = '*',         // oscit
     ARRAY_START_TYPE_TAG = '[', // oscit
     ARRAY_END_TYPE_TAG = ']',   // oscit
-    HASH_TYPE_TAG = 'H',        // oscit
+    HASH_START_TYPE_TAG = '{',  // oscit
+    HASH_END_TYPE_TAG = '}',    // oscit
     INT32_TYPE_TAG = 'i',
     FLOAT_TYPE_TAG = 'f',
     CHAR_TYPE_TAG = 'c',
@@ -148,7 +149,16 @@ struct ArrayEndType{
 
 extern ArrayEndType ArrayEnd;
 
-typedef char * JsonHash;
+
+struct HashStartType{
+};
+
+extern HashStartType HashStart;
+
+struct HashEndType{
+};
+
+extern HashEndType HashEnd;
 // ]
 
 struct RgbaColor{

@@ -88,7 +88,7 @@ public:
   }
   
   void test_tree_with_nil( void ) {
-    Root root(NoIO("This is the root node."));
+    Root root(Attribute::no_io("This is the root node."));
     Value res;
     
     res = root.call(TREE_PATH, gNilValue);

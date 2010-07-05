@@ -85,8 +85,8 @@ class OscCommandTest : public TestHelper
     // remote_ objects are cleared before each run
     remote_.adopt(new ListMetaMethod(Url(LIST_PATH).name()));
     Object * tmp = remote_.adopt(new Object("monitor"));
-    tmp->adopt(new DummyObject("mode", "rgb", SelectIO("rgb, yuv", "This is a menu.")));
-    tmp->adopt(new DummyObject("tint", 45.0, RangeIO(1, 127, "This is a slider from 1 to 127.")));
+    tmp->adopt(new DummyObject("mode", "rgb", Attribute::select_io("rgb, yuv", "This is a menu.")));
+    tmp->adopt(new DummyObject("tint", 45.0, Attribute::range_io(1, 127, "This is a slider from 1 to 127.")));
 
     send(LIST_PATH, "/monitor");
     assert_equal("[\"/.list\", [\"/monitor\", [\"mode\", \"tint\"]]]\n", reply());
@@ -105,29 +105,29 @@ class OscCommandTest : public TestHelper
     // remote_ objects are cleared before each run
     remote_.adopt(new ListWithTypeMetaMethod(Url(LIST_WITH_TYPE_PATH).name()));
     Object * tmp = remote_.adopt(new Object("monitor"));
-    tmp->adopt(new DummyObject("mode", "rgb", SelectIO("rgb, yuv", "This is a menu.")));
-    tmp->adopt(new DummyObject("tint", 45.0, RangeIO(1, 127, "This is a slider from 1 to 127.")));
+    tmp->adopt(new DummyObject("mode", "rgb", Attribute::select_io("rgb, yuv", "This is a menu.")));
+    tmp->adopt(new DummyObject("tint", 45.0, Attribute::range_io(1, 127, "This is a slider from 1 to 127.")));
 
     send(LIST_WITH_TYPE_PATH, "/monitor");
     assert_equal("[\"/.list_with_type\", [\"/monitor\", [[\"mode\", [\"rgb\", \"rgb, yuv\", \"This is a menu.\"]], [\"tint\", [45, 1, 127, \"This is a slider from 1 to 127.\"]]]]]\n", reply());
   }
 
   void test_send_receive_hash( void ) {
-    remote_.adopt(new DummyObject("foo", Value(Json("{one:1}")), HashIO("some data")));
+    remote_.adopt(new DummyObject("foo", JsonValue("{one:1}"), Attribute::hash_io("some data")));
 
-    send("/foo", Value(Json("{five:5}")));
+    send("/foo", JsonValue("{five:5}"));
     assert_equal("[\"/foo\", {\"five\":5}]\n", reply());
   }
 
   void test_send_receive_any( void ) {
-    remote_.adopt(new ObjectLogger("foo", AnyIO("some data"), &logger_));
+    remote_.adopt(new ObjectLogger("foo", Attribute::any_io("some data"), &logger_));
 
-    send("/foo", Value(Json("{five:5}")));
+    send("/foo", JsonValue("{five:5}"));
     assert_equal("[foo: trigger {\"five\":5}]", logger_.str());
   }
 
   void test_send_receive_error( void ) {
-    remote_.adopt(new ObjectLogger("foo", AnyIO("some data"), &logger_));
+    remote_.adopt(new ObjectLogger("foo", Attribute::any_io("some data"), &logger_));
     logger_.str("");
     send("/foo", ErrorValue(BAD_REQUEST_ERROR, "bad message for bad request"));
     assert_equal("[foo: trigger [400, \"bad message for bad request\"]]", logger_.str());

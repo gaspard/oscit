@@ -55,8 +55,7 @@ public:
     assert_equal("m", v.type_tag());
     assert_equal(MIDI_MESSAGE_TYPE_TAG_ID, v.type_id());
 
-    uint type_id = H("m");
-    assert_equal(MIDI_MESSAGE_TYPE_TAG_ID, type_id);
+    assert_equal(MIDI_MESSAGE_TYPE_TAG_ID, hashId("m"));
 
   }
 
@@ -162,7 +161,7 @@ public:
   }
 
   void test_can_receive( void ) {
-    Object object("foo", MidiIO("notes and stuff"));
+    Object object("foo", Attribute::midi_io("notes and stuff"));
     assert_false(object.can_receive(Value()));
     assert_true (object.can_receive(gNilValue));
     assert_true (object.can_receive(gBangValue));

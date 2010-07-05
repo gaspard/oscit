@@ -181,7 +181,7 @@ class Root : public Object {
     if (get_object_at(VIEWS_PATH, handle)) {
       return true;
     } else {
-      Object *object = adopt(new Object(Url(VIEWS_PATH).name(), NoIO("All objects under this path are views.")));
+      Object *object = adopt(new Object(Url(VIEWS_PATH).name(), Attribute::no_io("All objects under this path are views.")));
       if (object) {
         handle->hold_fast(object);
         return true;
@@ -254,7 +254,7 @@ class Root : public Object {
     } else {
       return ErrorValue(BAD_REQUEST_ERROR, std::string("'").append(
         target->url()).append("' (").append(
-        target->type().last().str()).append(")."));
+        target->info().str()).append(")."));
     }
   }
 

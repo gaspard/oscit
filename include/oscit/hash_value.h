@@ -74,6 +74,81 @@ class HashValue : public Value
   HashValue(const char *key1, const char *key2, const char *key3, const char *key4, const char *key5, const Value &value) : Value(TypeTag("H")) {
     set(key1, HashValue(key2, HashValue(key3, HashValue(key4, HashValue(key5, value)))));
   }
+
+  // FIXME: we can remove the ctors below if we remove explicit in Value ctor (after audit).
+
+
+  /** Create a new HashValue with an initial key/value pair.
+   */
+  HashValue(const char *key, const char *value) : Value(TypeTag("H")) {
+    set(key, Value(value));
+  }
+
+  /** Create a new HashValue with an initial key/value pair.
+   */
+  HashValue(const std::string &key, const char *value) : Value(TypeTag("H")) {
+    set(key, value);
+  }
+
+  /** Create a new HashValue with a list of initial key/value pair.
+   */
+  HashValue(const char *key1, const char *key2, const char *value) : Value(TypeTag("H")) {
+    set(key1, HashValue(key2, value));
+  }
+
+  /** Create a new HashValue with a list of initial key/value pair.
+   */
+  HashValue(const char *key1, const char *key2, const char *key3, const char *value) : Value(TypeTag("H")) {
+    set(key1, HashValue(key2, HashValue(key3, value)));
+  }
+
+  /** Create a new HashValue with a list of initial key/value pair.
+   */
+  HashValue(const char *key1, const char *key2, const char *key3, const char *key4, const char *value) : Value(TypeTag("H")) {
+    set(key1, HashValue(key2, HashValue(key3, HashValue(key4, value))));
+  }
+
+  /** Create a new HashValue with a list of initial key/value pair.
+   */
+  HashValue(const char *key1, const char *key2, const char *key3, const char *key4, const char *key5, const char *value) : Value(TypeTag("H")) {
+    set(key1, HashValue(key2, HashValue(key3, HashValue(key4, HashValue(key5, value)))));
+  }
+
+  /** Create a new HashValue with an initial key/value pair.
+   */
+  HashValue(const char *key, Real value) : Value(TypeTag("H")) {
+    set(key, Value(value));
+  }
+
+  /** Create a new HashValue with an initial key/value pair.
+   */
+  HashValue(const std::string &key, Real value) : Value(TypeTag("H")) {
+    set(key, value);
+  }
+
+  /** Create a new HashValue with a list of initial key/value pair.
+   */
+  HashValue(const char *key1, const char *key2, Real value) : Value(TypeTag("H")) {
+    set(key1, HashValue(key2, value));
+  }
+
+  /** Create a new HashValue with a list of initial key/value pair.
+   */
+  HashValue(const char *key1, const char *key2, const char *key3, Real value) : Value(TypeTag("H")) {
+    set(key1, HashValue(key2, HashValue(key3, value)));
+  }
+
+  /** Create a new HashValue with a list of initial key/value pair.
+   */
+  HashValue(const char *key1, const char *key2, const char *key3, const char *key4, Real value) : Value(TypeTag("H")) {
+    set(key1, HashValue(key2, HashValue(key3, HashValue(key4, value))));
+  }
+
+  /** Create a new HashValue with a list of initial key/value pair.
+   */
+  HashValue(const char *key1, const char *key2, const char *key3, const char *key4, const char *key5, Real value) : Value(TypeTag("H")) {
+    set(key1, HashValue(key2, HashValue(key3, HashValue(key4, HashValue(key5, value)))));
+  }
 };
 
 } // oscit

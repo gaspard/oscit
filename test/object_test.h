@@ -145,12 +145,11 @@ public:
 
   void test_call_set_method( void ) {
     Object base;
-    DummyObject * one = base.adopt(new DummyObject("one", 123.0));
-    DummyObject * two = base.adopt(new DummyObject("two", 123.0));
-    Value res = base.set(Value(Json("one:10.0 two:22.22")));
+    DummyObject *one = base.adopt(new DummyObject("one", 123.0));
+    DummyObject *two = base.adopt(new DummyObject("two", 123.0));
+    Value res = base.set(JsonValue("one:10.0 two:22.22"));
     assert_true(res.is_hash());
-    assert_equal(10.0, res["one"].r);
-    assert_equal(22.22, res["two"].r);
+    assert_equal("{\"one\":10, \"two\":22.22}", res.to_json());
     assert_equal(10.0, one->real());
     assert_equal(22.22, two->real());
   }
@@ -159,27 +158,29 @@ public:
     Object base;
     DummyObject * one = base.adopt(new DummyObject("one", 123.0));
     DummyObject * two = base.adopt(new DummyObject("two", 123.0));
-    assert_true(base.set_all_ok(Value(Json("one:10.0 two:22.22"))));
-    assert_false(base.set_all_ok(Value(Json("one:1.0 four:4.0"))));
+    assert_true(base.set_all_ok(JsonValue("one:10.0 two:22.22")));
+    Value res = base.set(JsonValue("one:1.0 four:4.0"));
+    std::cout << res.type_tag() << "\n";
+    assert_false(base.set_all_ok(JsonValue("one:1.0 four:4.0")));
     assert_equal(1.0,   one->real());
     assert_equal(22.22, two->real());
   }
 
   void test_hash_type_id( void ) {
-    Object hash("foo", HashIO("bar"));
-    Object matr("foo", MatrixIO("bar"));
+    Object hash("foo", Attribute::hash_io("bar"));
+    Object matr("foo", Attribute::matrix_io("bar"));
     assert_false(hash.type_id() == matr.type_id());
     assert_false(hash.type_id() == matr.type_id());
-    assert_equal("Hs", hash.type().type_tag());
-    assert_equal("Ms", matr.type().type_tag());
+    assert_equal("H", hash.type()[Attribute::SIGNATURE].str());
+    assert_equal("M", matr.type()[Attribute::SIGNATURE].str());
   }
 
   void test_list_with_type( void ) {
     Object base;
-    base.adopt(new DummyObject("mode", "rgb", SelectIO("rgb, yuv", "This is a menu.")));
-    base.adopt(new DummyObject("tint", 45.0, RangeIO(1, 127, "This is a slider from 1 to 127.")));
+    base.adopt(new DummyObject("mode", "rgb", Attribute::select_io("rgb, yuv", "This is a menu.")));
+    base.adopt(new DummyObject("tint", 45.0, Attribute::range_io(1, 127, "This is a slider from 1 to 127.")));
     Value res = base.list_with_type();
-    assert_equal(res.type_tag(), "[s[sss]][s[fffs]]"); // [name, [current, values, unit, info]], [name, [current, min, max, unit, info]]
+    assert_equal(res.type_tag(), "[sH][sH]");
     assert_equal("mode", res[0][0].str());
     assert_equal("tint", res[1][0].str());
   }
@@ -226,7 +227,7 @@ public:
     assert_equal(3, base.children_count());
     assert_equal("[\"one\", \"two\", \"last\"]", base.list().to_json());
 
-    base.adopt(new Object("last2", DEFAULT_TYPE, true));
+    base.adopt(new Object("last2", Attribute::default_io(), true));
     assert_equal(4, base.children_count());
     assert_equal("[\"one\", \"two\", \"last\", \"last2\"]", base.list().to_json());
   }
@@ -243,15 +244,15 @@ public:
     base.adopt(new DummyObject("width", 100));
     base.adopt(new DummyObject("height", 60));
     Object *patch = base.adopt(new Object("patch"));
-    patch->adopt(new DummyObject("Africa", Value("Unite!"), StringIO("Something")));
+    patch->adopt(new DummyObject("Africa", Value("Unite!"), Attribute::string_io("Something")));
     assert_equal("{\"width\":100, \"height\":60, \"patch\":{\"Africa\":\"Unite!\"}}", base.to_hash().to_json());
   }
 
-  void test_from_hash_should_ignore_at( void ) {
+  void test_set_should_ignore_at( void ) {
     Object base("base");
     DummyObject *width  = base.adopt(new DummyObject("width", 100));
     DummyObject *height = base.adopt(new DummyObject("height", 60));
-    Value res = base.set(Value(Json("{width:101, height:59, @foo:\"bar\"}")));
+    Value res = base.set(JsonValue("{width:101, height:59, @foo:\"bar\"}"));
     assert_equal(101, width->real());
     assert_equal(59, height->real());
   }

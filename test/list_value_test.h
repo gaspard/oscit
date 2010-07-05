@@ -62,8 +62,7 @@ public:
     assert_equal(0.0, v[2].r);
 
     assert_equal("fsf", v.type_tag());
-    int i = H("fsf");
-    assert_equal(i, v.type_id());
+    assert_equal(hashId("fsf"), v.type_id());
   }
 
   void test_empty_list_is_nil( void ) {
@@ -549,7 +548,7 @@ public:
   }
 
   void test_can_receive( void ) {
-    Object object("foo", JsonValue("[['',1,''], 'url', 'url', 'info']")); // list
+    Object object("foo", HashValue(Attribute::TYPE, Attribute::SIGNATURE, "sfs").set(Attribute::INFO, "info")); // list
     assert_false(object.can_receive(Value()));
     assert_true (object.can_receive(gNilValue));
     assert_true (object.can_receive(gBangValue));

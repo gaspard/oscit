@@ -29,9 +29,15 @@
 
 #ifndef OSCIT_INCLUDE_OSCIT_HASH_H_
 #define OSCIT_INCLUDE_OSCIT_HASH_H_
-#include "oscit/values.h"
+
+#include <list>
+#include <string>
+
+#include "oscit/thash.h"
+#include "oscit/reference_counted.h"
 
 namespace oscit {
+
 class Value;
 typedef std::list<std::string>::const_iterator HashIterator;
 
@@ -40,6 +46,10 @@ class Hash : public ReferenceCounted, public THash<std::string,Value> {
 public:
   typedef std::list<std::string>::const_iterator const_iterator;
   explicit Hash(size_t size) : THash<std::string,Value>(size) {}
+
+  /** Return true if any of the hash values is or contains an error.
+   */
+  bool contains_error();
 };
 
 } // oscit

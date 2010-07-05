@@ -96,7 +96,8 @@ public:
     OutboundPacketStream& operator<<( const AnyType& rhs );        // oscit
     OutboundPacketStream& operator<<( const ArrayStartType& rhs ); // oscit
     OutboundPacketStream& operator<<( const ArrayEndType& rhs );   // oscit
-    OutboundPacketStream& operator<<( const JsonHash rhs );       // oscit
+    OutboundPacketStream& operator<<( const HashStartType& rhs );  // oscit
+    OutboundPacketStream& operator<<( const HashEndType& rhs );    // oscit
     OutboundPacketStream& operator<<( int32 rhs );
 
 #ifndef x86_64

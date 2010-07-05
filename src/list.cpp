@@ -125,4 +125,20 @@ bool List::operator==(const List &other) const {
 
   return true;
 }
+
+bool List::contains_error() {
+  if (type_tag_storage_.find(ERROR_TYPE_TAG) != std::string::npos) {
+    return true;
+  } else if (type_tag_storage_.find_first_of(HASH_TYPE_TAG) != std::string::npos) {
+    // we must parse each hash
+    std::vector<Value*>::const_iterator it, end = values_.end();
+    for (it = values_.begin(); it != end; ++it) {
+      if ((*it)->is_hash()) {
+        if ((*it)->contains_error()) return true;
+      }
+    }
+  }
+  return false;
+}
+
 } // oscit

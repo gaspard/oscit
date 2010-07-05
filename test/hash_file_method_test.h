@@ -58,7 +58,7 @@ public:
   void test_write_hash( void ) {
     Root root(false);
     root.adopt(new HashFileMethod("simple_view", fixture_path(HASH_FILE_METHOD_PATH), std::string("Basic synth view.")));
-    Value res = root.call("/simple_view", Value(Json("{\"one\":1}")));
+    Value res = root.call("/simple_view", JsonValue("{\"one\":1}"));
     assert_true(res.is_hash());
     assert_equal("{\"one\":1}", res.to_json());
 
@@ -76,7 +76,7 @@ public:
   void test_write_bad_format( void ) {
     Root root(false);
     HashFileMethod *fm = root.adopt(new HashFileMethod("simple_view", fixture_path(HASH_FILE_METHOD_PATH), std::string("Basic synth view.")));
-    assert_false(fm->can_receive(Value(Json("Yoba"))));
+    assert_false(fm->can_receive(JsonValue("Yoba")));
     Value res = root.call("/simple_view", Value("Yoba"));
     assert_true(res.is_error());
     assert_equal(BAD_REQUEST_ERROR, res.error_code());
@@ -96,7 +96,7 @@ public:
   void test_update( void ) {
     Root root(false);
     root.adopt(new HashFileMethod("simple_view", fixture_path(HASH_FILE_METHOD_PATH), std::string("Basic synth view.")));
-    Value res = root.call("/simple_view/update", Value(Json("{patch:{1:{x:11}}}")));
+    Value res = root.call("/simple_view/update", JsonValue("{patch:{1:{x:11}}}"));
     assert_true(res.is_hash());
     assert_equal("{\"patch\":{\"1\":{\"x\":11}}}", res.to_json());
 

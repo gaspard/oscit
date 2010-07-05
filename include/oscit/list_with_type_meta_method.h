@@ -39,8 +39,8 @@ public:
   /** Class signature. */
   TYPED("Object.ListTypesMetaMethod")
 
-  ListWithTypeMetaMethod(const char *name)        : Object(name, StringIO("List all children under the given path with their current value and type.")) {}
-  ListWithTypeMetaMethod(const std::string &name) : Object(name, StringIO("List all children under the given path with their current value and type.")) {}
+  ListWithTypeMetaMethod(const char *name)        : Object(name, Attribute::string_io("List all children under the given path with their current value and type.")) {}
+  ListWithTypeMetaMethod(const std::string &name) : Object(name, Attribute::string_io("List all children under the given path with their current value and type.")) {}
 
   virtual const Value trigger(const Value &val) {
     if (!val.is_string()) return gNilValue;

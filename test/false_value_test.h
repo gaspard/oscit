@@ -52,8 +52,7 @@ public:
     assert_equal("F", gFalseValue.type_tag());
     assert_equal(FALSE_TYPE_TAG_ID, gFalseValue.type_id());
 
-    uint type_id = H("F");
-    assert_equal(FALSE_TYPE_TAG_ID, type_id);
+    assert_equal(FALSE_TYPE_TAG_ID, hashId("F"));
 
   }
 

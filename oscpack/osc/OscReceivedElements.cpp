@@ -463,6 +463,8 @@ void ReceivedMessageArgumentIterator::Advance()
         case ANY_TYPE_TAG:         // oscit
         case ARRAY_START_TYPE_TAG: // oscit
         case ARRAY_END_TYPE_TAG:   // oscit
+        case HASH_START_TYPE_TAG:  // oscit
+        case HASH_END_TYPE_TAG:    // oscit
 
             // zero length
             break;
@@ -484,7 +486,6 @@ void ReceivedMessageArgumentIterator::Advance()
             break;
 
         case STRING_TYPE_TAG:
-        case HASH_TYPE_TAG:     // oscit
         case SYMBOL_TYPE_TAG:
 
             // we use the unsafe function FindStr4End(char*) here because all of
@@ -625,7 +626,6 @@ void ReceivedMessage::Init( const char *message, unsigned long size )
                         break;
 
                     case STRING_TYPE_TAG:
-                    case HASH_TYPE_TAG:     // oscit
                     case SYMBOL_TYPE_TAG:
 
                         if( argument == end )

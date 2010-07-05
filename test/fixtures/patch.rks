@@ -1,0 +1,7 @@
+{
+  "width":500, "height":300,
+  "patch":{
+    "metro":{"class":"/rubyk/Metro", "tempo":120, "out":{"bang":["/singer/in/clic"]}},
+    "print":{"class":"/rubyk/Print"},
+  }
+}

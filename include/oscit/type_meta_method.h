@@ -39,8 +39,8 @@ public:
   /** Class signature. */
   TYPED("Object.TypeMetaMethod")
 
-  TypeMetaMethod(const char *name)        : Object(name, StringIO("Return type and information on the given path.")) {}
-  TypeMetaMethod(const std::string &name) : Object(name, StringIO("Return type and information on the given path.")) {}
+  TypeMetaMethod(const char *name)        : Object(name, Attribute::string_io("Return type and information on the given path.")) {}
+  TypeMetaMethod(const std::string &name) : Object(name, Attribute::string_io("Return type and information on the given path.")) {}
 
   virtual const Value trigger(const Value &val) {
     if (!val.is_string()) return gNilValue;
@@ -50,7 +50,7 @@ public:
     Value reply = val;
 
     if (root_->find_or_build_object_at(val.c_str(), &error, &object)) {
-      reply.push_back(object->type_with_current_value());
+      reply.push_back(object->type());
     } else {
       reply.push_back(error);
     }

@@ -58,21 +58,25 @@ std::ostream& operator<<( std::ostream & os,
             os << "(Infinitum)";
             break;
 
-        case ANY_TYPE_TAG:    // oscit
-            os << "(Any)";    // oscit
-            break;            // oscit
+        case ANY_TYPE_TAG:         // oscit
+            os << "(Any)";         // oscit
+            break;                 // oscit
 
         case ARRAY_START_TYPE_TAG: // oscit
-            os << "[";        // oscit
-            break;            // oscit
+            os << "[";             // oscit
+            break;                 // oscit
 
         case ARRAY_END_TYPE_TAG:   // oscit
-            os << "]";        // oscit
-            break;            // oscit
+            os << "]";             // oscit
+            break;                 // oscit
 
-        case HASH_TYPE_TAG: // oscit
-            os << "OSC-hash:`" << arg.AsStringUnchecked() << "'"; // oscit
-            break;                                                // oscit
+        case HASH_START_TYPE_TAG:  // oscit
+            os << "{";             // oscit
+            break;                 // oscit
+
+        case HASH_END_TYPE_TAG:    // oscit
+            os << "}";             // oscit
+            break;                 // oscit
 
         case INT32_TYPE_TAG:
             os << "int32:" << arg.AsInt32Unchecked();

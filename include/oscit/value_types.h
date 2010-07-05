@@ -95,16 +95,16 @@ typedef uint TypeTagID;
 // TODO: I think we should use enum here.
 enum ValueTypeTagId {
   NO_TYPE_TAG_ID           = 0,
-  ANY_TYPE_TAG_ID          = 21566,
-  ERROR_TYPE_TAG_ID        = 21593,
-  FALSE_TYPE_TAG_ID        = 21594,
-  HASH_TYPE_TAG_ID         = 21596,
-  MATRIX_TYPE_TAG_ID       = 21601,
-  NIL_TYPE_TAG_ID          = 21602,
-  TRUE_TYPE_TAG_ID         = 21608,
-  REAL_TYPE_TAG_ID         = 21626,
-  STRING_TYPE_TAG_ID       = 21639,
-  MIDI_MESSAGE_TYPE_TAG_ID = 21633,
+  ANY_TYPE_TAG_ID          = 42,
+  ERROR_TYPE_TAG_ID        = 69,
+  FALSE_TYPE_TAG_ID        = 70,
+  HASH_TYPE_TAG_ID         = 72,
+  MATRIX_TYPE_TAG_ID       = 77,
+  NIL_TYPE_TAG_ID          = 78,
+  TRUE_TYPE_TAG_ID         = 84,
+  REAL_TYPE_TAG_ID         = 102,
+  MIDI_MESSAGE_TYPE_TAG_ID = 109,
+  STRING_TYPE_TAG_ID       = 115,
 };
 
 } // oscit

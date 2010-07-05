@@ -52,8 +52,7 @@ public:
     assert_equal("", v.type_tag());
     assert_equal(NO_TYPE_TAG_ID, v.type_id());
 
-    uint type_id = H("");
-    assert_equal(NO_TYPE_TAG_ID, type_id);
+    assert_equal(NO_TYPE_TAG_ID, hashId(""));
 
   }
 

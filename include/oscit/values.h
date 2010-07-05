@@ -40,40 +40,7 @@
 #include "oscit/hash_value.h"
 #include "oscit/matrix_value.h"
 #include "oscit/midi_value.h"
-
-// FIXME: replace by enums in oscit namespace
-
-#define NoIO(info)  Value(info)
-#define NoIOTypeId STRING_TYPE_TAG_ID
-
-#define BangIO(info)  ListValue("T").push_back(info)
-#define BangIOTypeId H("Ts")
-
-#define RealIO(info) Value(0.0).push_back(info)
-#define RealIOTypeId H("fs")
-
-#define StringIO(info) Value("").push_back(info)
-#define StringIOTypeId H("ss")
-
-#define RangeIO(min, max, info) \
-  Value(0.0).push_back(min).push_back(max).push_back(info)
-#define RangeIOTypeId H("fffs")
-
-#define SelectIO(values, info) \
-  Value("").push_back(values).push_back(info)
-#define SelectIOTypeId H("sss")
-
-#define HashIO(info) Value('H').push_back(info)
-#define HashIOTypeId H("Hs")
-
-#define MatrixIO(info) MatrixValue().push_back(info)
-#define MatrixIOTypeId H("Ms")
-
-#define MidiIO(info) MidiValue().push_back(info)
-#define MidiIOTypeId H("ms")
-
-#define AnyIO(info) Value('*').push_back(info)
-#define AnyIOTypeId H("*s")
+#include "oscit/constants.h"
 
 
 #endif // OSCIT_INCLUDE_OSCIT_VALUES_H_

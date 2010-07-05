@@ -55,9 +55,9 @@ public:
     assert_equal("f", v.type_tag());
     assert_equal(REAL_TYPE_TAG_ID, v.type_id());
 
-    uint type_id = H("f");
-    assert_equal(REAL_TYPE_TAG_ID, type_id);
-
+    assert_equal(REAL_TYPE_TAG_ID, hashId("f"));
+    assert_equal(REAL_TYPE_TAG_ID, hashId('f'));
+    assert_equal((uint)'f', hashId('f'));
   }
 
   void test_create_real_value( void ) {
@@ -151,7 +151,7 @@ public:
   }
 
   void test_can_receive( void ) {
-    Object object("foo", RealIO("info"));
+    Object object("foo", Attribute::real_io("info"));
     assert_false(object.can_receive(Value()));
     assert_true (object.can_receive(gNilValue));
     assert_true (object.can_receive(gBangValue));

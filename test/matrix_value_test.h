@@ -57,8 +57,7 @@ public:
     assert_equal("M", v.type_tag());
     assert_equal(MATRIX_TYPE_TAG_ID, v.type_id());
 
-    uint type_id = H("M");
-    assert_equal(MATRIX_TYPE_TAG_ID, type_id);
+    assert_equal(MATRIX_TYPE_TAG_ID, hashId("M"));
 
   }
 
@@ -165,7 +164,7 @@ public:
   }
 
   void test_can_receive( void ) {
-    Object object("foo", MatrixIO("bar"));
+    Object object("foo", Attribute::matrix_io("bar"));
     assert_false(object.can_receive(Value()));
     assert_true (object.can_receive(gNilValue));
     assert_true (object.can_receive(gBangValue));

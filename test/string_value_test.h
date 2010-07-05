@@ -53,8 +53,7 @@ public:
     assert_equal("s", v.type_tag());
     assert_equal(STRING_TYPE_TAG_ID, v.type_id());
 
-    uint type_id = H("s");
-    assert_equal(STRING_TYPE_TAG_ID, type_id);
+    assert_equal(STRING_TYPE_TAG_ID, hashId("s"));
   }
 
   void test_create_string_value( void ) {
@@ -184,7 +183,7 @@ public:
   }
 
   void test_can_receive( void ) {
-    Object object("foo", StringIO("info"));
+    Object object("foo", Attribute::string_io("info"));
     assert_false(object.can_receive(Value()));
     assert_true (object.can_receive(gNilValue));
     assert_true (object.can_receive(gBangValue));

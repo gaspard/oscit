@@ -634,6 +634,20 @@ public:
   /** =========================================================    Error   */
   bool is_error() const  { return type_ == ERROR_VALUE; }
 
+  /** Return true if any of enclosed values contains an error.
+   */
+  bool contains_error() const {
+    if (is_error()) {
+      return true;
+    } else if (is_list()) {
+      return list_->contains_error();
+    } else if (is_hash()) {
+      return hash_->contains_error();
+    } else {
+      return false;
+    }
+  }
+
   /** Change the Value into an ErrorValue. */
   Value &set(ErrorCode code, const char *string) {
     set_type_without_default(ERROR_VALUE);
@@ -688,18 +702,21 @@ public:
   }
 
   template<class T>
-  void set(const char *key, const T &val) {
+  Value &set(const char *key, const T &val) {
     set(std::string(key), Value(val));
+    return *this;
   }
 
   template<class T>
-  void set(const std::string &key, const T &val) {
+  Value &set(const std::string &key, const T &val) {
     set(key, Value(val));
+    return *this;
   }
 
-  void set(const std::string &key, const Value &val) {
+  Value &set(const std::string &key, const Value &val) {
     if (!is_hash()) set_type(HASH_VALUE);
     hash_->set(key, val);
+    return *this;
   }
 
   bool get(const std::string &key, Value *retval) const {

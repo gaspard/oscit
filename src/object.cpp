@@ -33,7 +33,6 @@
 #include <list>
 
 #include "oscit/root.h"
-#include "oscit/alias.h"
 #include "oscit/object_handle.h"
 
 namespace oscit {
@@ -43,71 +42,40 @@ Object::~Object() {
    */
   on_delete_.send_once(Value(url_));
 
-  std::list<Alias*>::iterator it, end = aliases_.end();
   // notify parent and root
   set_parent(NULL);
   set_root(NULL);
 
-  for (it = aliases_.begin(); it != end; ++it) {
-    // to avoid notification to this dying object
-    (*it)->unlink_original();
-    delete *it;
-  }
-
   clear();
 }
 
-void Object::from_hash(const Value &val, Value *result) {
+const Value Object::set(const Value &hash) {
+  Value result;
+
   HashIterator it;
-  HashIterator end = val.end();
+  HashIterator end = hash.end();
+
   Value param;
   ObjectHandle handle;
 
-  for (it = val.begin(); it != end; ++it) {
+  for (it = hash.begin(); it != end; ++it) {
     // ignore methods that start with '@'.
     if ((*it).at(0) == '@') continue;
 
-    if (get_child(*it, &handle) && val.get(*it, &param)) {
+    if (get_child(*it, &handle) && hash.get(*it, &param)) {
       Value tmp;
       if (param.is_hash()) {
         // NoIO = container
-        handle->from_hash(param, &tmp);
+        result.set(*it, handle->set(param));
       } else {
-        tmp = handle->trigger(param);
+        result.set(*it, handle->trigger(param));
       }
-
-      result->set(*it, tmp);
     } else {
-      result->set(*it, ErrorValue(NOT_FOUND_ERROR, *it));
+      result.set(*it, ErrorValue(NOT_FOUND_ERROR, *it));
     }
   }
-}
 
-bool Object::set_all_ok(const Value &val) {
-  HashIterator it;
-  HashIterator end = val.end();
-  Value param;
-  bool all_ok = true;
-  ObjectHandle handle;
-
-  for (it = val.begin(); it != end; ++it) {
-    if (get_child(*it, &handle) && val.get(*it, &param)) {
-      all_ok = !root_->call(handle, param, NULL).is_error() && all_ok;
-    } else {
-      all_ok = false;
-    }
-  }
-  return all_ok;
-}
-
-/** Inform the object of an alias that depends on it. */
-void Object::register_alias(Alias *alias) {
-  aliases_.push_back(alias);
-}
-
-/** Inform the object that an alias no longer exists. */
-void Object::unregister_alias(Alias *alias) {
-  aliases_.remove(alias);
+  return result;
 }
 
 /** Free the child from the list of children. */
@@ -277,44 +245,11 @@ const Value Object::list_with_type() {
     } else {
       name_with_type.push_back(std::string(obj->name_).append("/"));
     }
-    name_with_type.push_back(obj->type_with_current_value());
+    name_with_type.push_back(obj->type());
     list.push_back(name_with_type);
   }
 
   return list;
-}
-
-const Value Object::type_with_current_value() {
-  Value type = type_;
-
-  if (type.is_string()) {
-    // meta type is string = just information (not callable)
-    return type;
-  }
-
-  if (!type.is_list()) {
-    // make sure type is a ListValue
-    // type can be gNilValue for object proxies when they are not yet initialized (haven't received type information).
-    return ErrorValue(INTERNAL_SERVER_ERROR, "Invalid meta type. Should be a list (found '").append(type.type_tag()).append("').");
-  }
-
-  if (!type[0].is_any() && !type[0].is_nil()) {
-    // get current value
-    Value current = trigger(gNilValue);
-
-    if (current.is_nil()) {
-      // current type cannot be queried. Leave dummy value.
-    } else if (current.type_id() != type[0].type_id()) {
-      // make sure current value type is compatible with type
-      return ErrorValue(INTERNAL_SERVER_ERROR, "Current value type not matching meta type (expected '").append(
-          type[0].type_tag()).append(
-          "' found '").append(current.type_tag()).append("').");
-    } else {
-      type.set_value_at(0, current);
-    }
-
-  }
-  return type;
 }
 
 bool Object::get_child(const std::string &name, ObjectHandle *handle) {
@@ -344,12 +279,8 @@ void Object::tree(size_t base_length, Value *tree) const {
   for (it = children_.begin(); it != end; ++it) {
     Object * obj;
     if (children_.get(*it, &obj)) {
-      // if (!obj->kind_of(Alias)) {
-        // do not list alias (Alias are used as internal helpers and
-        // do not need to be advertised) ?
-        tree->push_back(obj->url().substr(base_length));
-        obj->tree(base_length, tree);
-      //}
+      tree->push_back(obj->url().substr(base_length));
+      obj->tree(base_length, tree);
     }
   }
 }

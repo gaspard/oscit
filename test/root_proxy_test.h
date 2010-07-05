@@ -54,7 +54,7 @@ public:
     RootProxy proxy(Location("osc", "funky synth"));
     Logger logger;
     ObserverLogger observer("value_changed", &logger);
-    ObjectProxy *seven = proxy.adopt(new ObjectProxy("seven", RangeIO(0.0, 2000.0, "the sky is blue")));
+    ObjectProxy *seven = proxy.adopt(new ObjectProxy("seven", Attribute::range_io(0.0, 2000.0, "the sky is blue")));
     seven->on_value_change().connect(&observer, &ObserverLogger::event);
     logger.str("");
     proxy.handle_reply(std::string("/seven"), Value(300.0));

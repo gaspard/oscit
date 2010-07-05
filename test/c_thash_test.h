@@ -229,14 +229,11 @@ public:
     assert_false(hash.get("c", &res));
   }
 
-  void test_H( void ) {
-    assert_false(H("a") == H("b"));
-    assert_false(H("one") == H("two"));
-    assert_false(H("longname_a") == H("longname_b"));
-    assert_false(H("longname_a") == H("longname_c"));
-    // this is the upper limit for H() macro
-    assert_true(H("longnamelong_a") == H("longnamelong_c"));
-    // no upper limit for hashId() function
+  void test_hashId( void ) {
+    assert_false(hashId("a") == hashId("b"));
+    assert_false(hashId("one") == hashId("two"));
+    assert_false(hashId("longname_a") == hashId("longname_b"));
+    assert_false(hashId("longname_a") == hashId("longname_c"));
     assert_false(hashId("longnamelong_a") == hashId("longnamelong_c"));
   }
 

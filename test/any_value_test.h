@@ -54,8 +54,7 @@ public:
     assert_equal("*", v.type_tag());
     assert_equal(ANY_TYPE_TAG_ID, v.type_id());
 
-    uint type_id = H("*");
-    assert_equal(ANY_TYPE_TAG_ID, type_id);
+    assert_equal(ANY_TYPE_TAG_ID, hashId("*"));
   }
 
   void test_create_with_TypeTag( void ) {
@@ -107,8 +106,8 @@ public:
   }
 
   void test_any_input( void ) {
-    Value any(AnyIO("La la."));
-    assert_equal("*s", any.type_tag());
+    Value any(Attribute::any_io("La la."));
+    assert_equal("*", any[Attribute::TYPE][Attribute::SIGNATURE].str());
   }
 
   void test_json_value( void ) {
