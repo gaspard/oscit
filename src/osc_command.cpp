@@ -48,9 +48,6 @@ namespace oscit {
 //#define DEBUG_OSC_COMMAND
 
 static void to_stream(osc::OutboundPacketStream &out_stream, const Value &val, bool in_array = false) {
-  size_t sz;
-  HashIterator it, end;
-
   switch (val.type()) {
     case REAL_VALUE:
       out_stream << (float)val.r; // most osc applications don't understand double type tag.
@@ -66,13 +63,15 @@ static void to_stream(osc::OutboundPacketStream &out_stream, const Value &val, b
       out_stream << osc::Nil;
       break;
     case LIST_VALUE:
-      sz = val.size();
-      // do not insert array markers for level 0 type tags: "ff[fs]" not "[ff[fs]]"
-      if (in_array) out_stream << osc::ArrayStart;
-      for (size_t i = 0; i < sz; ++i) {
-        to_stream(out_stream, val[i], true);
+      {
+        size_t sz = val.size();
+        // do not insert array markers for level 0 type tags: "ff[fs]" not "[ff[fs]]"
+        if (in_array) out_stream << osc::ArrayStart;
+        for (size_t i = 0; i < sz; ++i) {
+          to_stream(out_stream, val[i], true);
+        }
+        if (in_array) out_stream << osc::ArrayEnd;
       }
-      if (in_array) out_stream << osc::ArrayEnd;
       break;
     case ANY_VALUE:
       out_stream << osc::Any;
@@ -85,16 +84,32 @@ static void to_stream(osc::OutboundPacketStream &out_stream, const Value &val, b
       break;
     case HASH_VALUE:
       out_stream << osc::HashStart;
-      end = val.end();
-      for(it = val.begin(); it != end; ++it) {
-        out_stream << it->c_str();
-        to_stream(out_stream, val[*it], true);
-      }
+      {
+        HashIterator it, end = val.end();
 
+        for(it = val.begin(); it != end; ++it) {
+          out_stream << it->c_str();
+          to_stream(out_stream, val[*it], true);
+        }
+      }
+      out_stream << osc::HashEnd;
+      break;
+    case MIDI_VALUE:
+      out_stream << osc::HashStart;
+      {
+        // Send custom types with {"=m":[data]}
+        const std::vector<unsigned char> &data = val.midi_message_->data();
+        out_stream << "=m";
+        out_stream << osc::ArrayStart;
+        out_stream << (float)data[0];
+        out_stream << (float)data[1];
+        out_stream << (float)data[2];
+        out_stream << (float)val.midi_message_->length();
+        out_stream << osc::ArrayEnd;
+      }
       out_stream << osc::HashEnd;
       break;
     case MATRIX_VALUE: /* continue */
-    case MIDI_VALUE:   /* continue */
       // TODO
     default:
       ;// ????
@@ -277,8 +292,16 @@ public:
       case osc::STRING_TYPE_TAG:
         *res = Value(arg->AsStringUnchecked());
         break;
-      case osc::RGBA_COLOR_TYPE_TAG:
       case osc::MIDI_MESSAGE_TYPE_TAG:
+        {
+          osc::uint32 m = arg->AsMidiMessageUnchecked();
+
+          // 3 byte midi message
+          MidiMessage midi((int)((m>>16) & 0xFF), (int)((m >> 8) & 0xFF), (int)(m & 0xFF), 0);
+          *res = Value(midi);
+        }
+        break;
+      case osc::RGBA_COLOR_TYPE_TAG:
       case osc::INT64_TYPE_TAG:
       case osc::TIME_TAG_TYPE_TAG:
       case osc::SYMBOL_TYPE_TAG:
@@ -289,7 +312,6 @@ public:
     }
     ++type_tags;
     ++arg;
-
     return type_tags;
   }
 
@@ -297,16 +319,20 @@ public:
    */
   static const char *parse_osc_array(const char *start_type_tags, osc::ReceivedMessage::const_iterator &arg, Value *res) {
     Value tmp;
-
+    size_t i = 0;
     const char *type_tags = start_type_tags;
+    // Why isn't oscpack sending "" instead of NULL ?
+    if (!type_tags) {
+      res->set_empty();
+      return "";
+    }
+
     while (*type_tags) {
+      ++i;
       type_tags = parse_osc_value(type_tags, arg, &tmp);
-      if (*type_tags == osc::ARRAY_END_TYPE_TAG) {
-        ++type_tags;
-        ++arg;
-        return type_tags;
-      }
       res->push_back(tmp);
+      // do not eat ending ']'
+      if (*type_tags == osc::ARRAY_END_TYPE_TAG) break;
     }
     return type_tags;
   }
@@ -314,34 +340,49 @@ public:
   static const char *parse_osc_hash(const char *start_type_tags, osc::ReceivedMessage::const_iterator &arg, Value *res) {
     std::string key;
     const char *type_tags = start_type_tags;
+    bool first_key = true;
+
     while (*type_tags) {
-      // Get key
       if (*type_tags == osc::STRING_TYPE_TAG) {
+        // Get key
         key = arg->AsStringUnchecked();
         ++type_tags;
         ++arg;
+
+        if (first_key && key.size() > 1 && key.at(0) == '=') {
+          // packed data
+          // FIXME: use a Factory
+          if (key.at(1) == 'm') {
+            // midi
+            Value tmp;
+
+#ifdef DEBUG_OSC_COMMAND
+            std::cout << "Unpack " << type_tags << "\n";
+#endif
+            type_tags = parse_osc_value(type_tags, arg, &tmp);
+#ifdef DEBUG_OSC_COMMAND
+            std::cout << "Unpacking from (" << tmp << ")\n";
+#endif
+            res->set(MidiMessage(tmp)); // unpack
+          }
+        } else {
+          // not a packed data
+          Value tmp;
+          type_tags = parse_osc_value(type_tags, arg, &tmp);
+          res->set(key, tmp);
+        }
+
       } else if (*type_tags == osc::HASH_END_TYPE_TAG) {
         // finished
-        ++type_tags;
-        ++arg;
+        // do not eat ending '}'
         return type_tags;
+
       } else {
         // mal-formed message: ignore all until HASH_END
-        while (*type_tags && *type_tags != osc::HASH_END_TYPE_TAG) {
-          ++type_tags;
-          ++arg;
-        }
-
-        if (*type_tags == osc::HASH_END_TYPE_TAG) {
-          ++type_tags;
-          ++arg;
-        }
-        return type_tags;
+        std::cerr << "Receiving mal-formed message, pruning to end of hash.\n";
+        return "";
       }
 
-      Value tmp;
-      type_tags = parse_osc_value(type_tags, arg, &tmp);
-      res->set(key, tmp);
     }
     return type_tags;
   }
@@ -397,7 +438,7 @@ void OscCommand::kill() {
 
 void OscCommand::notify_observers(const char *path, const Value &val) {
 #ifdef DEBUG_OSC_COMMAND
-      std::cout << "[" << port() << "] - notify -> " << path << "(" << val << ")\n";
+  std::cout << "[" << port() << "] - notify -> " << path << "(" << val << ")\n";
 #endif
   impl_->send_to_all(observers(), path, val);
 }

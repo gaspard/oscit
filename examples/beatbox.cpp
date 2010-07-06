@@ -1,5 +1,5 @@
 // compile with
-// g++ -I../include ../build/liboscit.a beatbox.cpp -o beatbox
+// g++ -D__macosx__ -I../include ../build/liboscit.a beatbox.cpp -o beatbox
 // in order to find 'beatbox.json' file (view), beatbox should be launched from within oscit/examples folder
 
 #include <stdio.h>

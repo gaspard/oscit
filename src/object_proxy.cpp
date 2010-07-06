@@ -39,7 +39,12 @@ void ObjectProxy::adopted() {
   root_proxy_ = TYPE_CAST(RootProxy, root_);
   if (root_proxy_ && type().is_nil()) {
     // try to find type
-    root_proxy_->send_to_remote(TYPE_PATH, Value(url()));
+    root_proxy_->send_to_remote(ATTRS_PATH, Value(url()));
+  }
+
+  if (value_.is_empty()) {
+    // get initial value
+    set_value(gNilValue);
   }
 }
 
@@ -94,21 +99,21 @@ void ObjectProxy::handle_value_change(const Value &val) {
   value_changed();
 }
 
-void ObjectProxy::set_type(const Value &new_type) {
-  if (new_type != type()) {
-    attributes_.set(Attribute::TYPE, new_type);
+void ObjectProxy::set_attrs(const Value &new_attrs) {
+  if (new_attrs != attributes_) {
+    attributes_ = new_attrs;
 
     sync_type_id();
     type_changed();
   }
 }
 
-bool ObjectProxy::build_child(const std::string &name, const Value &type, Value *error, ObjectHandle *handle) {
+bool ObjectProxy::build_child(const std::string &name, const Value &attrs, Value *error, ObjectHandle *handle) {
   if (!root_proxy_ || !root_proxy_->proxy_factory()) {
     std::cerr << "Cannot build child /" << name << " : no RootProxy or no ProxyFactory !\n";
     return false;
   }
-  Object *obj = adopt(root_proxy_->proxy_factory()->build_object_proxy(this, name, type));
+  Object *obj = adopt(root_proxy_->proxy_factory()->build_object_proxy(this, name, attrs));
   if (obj) {
     handle->hold(obj);
     return true;

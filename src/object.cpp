@@ -232,21 +232,21 @@ void Object::insert_in_hash(Value *result) {
   *result = trigger(gNilValue);
 }
 
-const Value Object::list_with_type() {
-  ScopedRead lock(children_vector_);
+const Value Object::list_with_attributes() const {
+  ScopedRead lock(children_);
+  HashIterator it, end = children_.end();
   ListValue list;
+  Object *obj;
 
-  std::vector<Object*>::iterator it, end = children_vector_.end();
-  for(it = children_vector_.begin(); it != end; ++it) {
-    ListValue name_with_type;
-    Object *obj = *it;
-    if (obj->children_.empty()) {
-      name_with_type.push_back(obj->name_);
-    } else {
-      name_with_type.push_back(std::string(obj->name_).append("/"));
+  for(it = children_.begin(); it != end; ++it) {
+    if (children_.get(*it, &obj)) {
+      if (obj->children_.empty()) {
+        list.push_back(obj->name_);
+      } else {
+        list.push_back(std::string(obj->name_).append("/"));
+      }
+      list.push_back(obj->attributes_);
     }
-    name_with_type.push_back(obj->type());
-    list.push_back(name_with_type);
   }
 
   return list;

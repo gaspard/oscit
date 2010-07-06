@@ -54,7 +54,6 @@ public:
     } else {
       reply.push_back(error);
     }
-
     return reply;
   }
 };

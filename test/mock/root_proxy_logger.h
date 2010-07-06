@@ -35,12 +35,12 @@
 
 class RootProxyLogger : public ObjectProxy, protected MockLogger {
 public:
-  ObjectProxyLogger(const char *name, const Value &type, std::ostringstream *stream) :
-                ObjectProxy(name, type),
+  ObjectProxyLogger(const char *name, const Value &attrs, std::ostringstream *stream) :
+                ObjectProxy(name, attrs),
                 MockLogger(name, stream) {}
 
-  ObjectProxyLogger(const std::string &name, const Value &type) :
-                ObjectProxy(name, type),
+  ObjectProxyLogger(const std::string &name, const Value &attrs) :
+                ObjectProxy(name, attrs),
                 MockLogger(name.c_str(), NULL) {}
 
   virtual const Value trigger(const Value &val) {

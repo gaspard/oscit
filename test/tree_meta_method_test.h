@@ -58,7 +58,7 @@ public:
     assert_equal("", res[0].str());
     res = res[1];
     assert_equal(13, res.size());
-    assert_equal("[\".error\", \".info\", \".list\", \".list_with_type\", \".type\", \".tree\", \"Nikolaus\", \"Nikolaus/Jacob\", \"Nikolaus/Nikolaus\", \"Nikolaus/Johann\", \"Nikolaus/Johann/Nicolaus\", \"Nikolaus/Johann/Daniel\", \"Nikolaus/Johann/Johann\"]", res.to_json());
+    assert_equal("[\".error\", \".info\", \".list\", \".list_att\", \".type\", \".tree\", \"Nikolaus\", \"Nikolaus/Jacob\", \"Nikolaus/Nikolaus\", \"Nikolaus/Johann\", \"Nikolaus/Johann/Nicolaus\", \"Nikolaus/Johann/Daniel\", \"Nikolaus/Johann/Johann\"]", res.to_json());
     
     res = root.call(TREE_PATH, Value("/Nikolaus"));
     assert_equal("/Nikolaus", res[0].str());

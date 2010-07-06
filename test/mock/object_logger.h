@@ -38,8 +38,8 @@ public:
   ObjectLogger(const char *name, std::ostringstream *stream) :
                 Object(name),
                 MockLogger(name, stream) {}
-  ObjectLogger(const char *name, const Value &type, std::ostringstream *stream) :
-                Object(name, type),
+  ObjectLogger(const char *name, const Value &attrs, std::ostringstream *stream) :
+                Object(name, attrs),
                 MockLogger(name, stream) {}
 
   virtual ~ObjectLogger() {

@@ -50,28 +50,20 @@ public:
   /** Class signature. */
   TYPED("Object.ObjectProxy")
 
-  ObjectProxy(const char *name, const Value &type) :
-              Object(name, type), need_sync_(true), root_proxy_(NULL), wait_until_(-1), latency_(-1) {
-    if (type.is_list()) {
-      value_ = type[0];
-      // we do not call value_changed here because this method expects the
-      // object to be fully functional (adopted).
-    }
+  ObjectProxy(const char *name, const Value &attrs) :
+              Object(name, attrs), need_sync_(true), root_proxy_(NULL), wait_until_(-1), latency_(-1) {
   }
 
-  ObjectProxy(const std::string &name, const Value &type) :
-              Object(name, type), need_sync_(true), root_proxy_(NULL), wait_until_(-1), latency_(-1) {
-    if (type.is_list()) {
-      value_ = type[0];
-    }
+  ObjectProxy(const std::string &name, const Value &attrs) :
+              Object(name, attrs), need_sync_(true), root_proxy_(NULL), wait_until_(-1), latency_(-1) {
   }
 
   virtual ~ObjectProxy() {}
 
   /** This method should be called to set a new value for the 'real' remote object. It
-   * is usually called by some GUI widget callback when the user changes a control. */
+   * is usually called by some GUI widget callback when the user changes a control.
+   */
   void set_value(const Value &val);
-
 
   virtual const Value trigger(const Value &val) {
     if (!val.is_nil()) {
@@ -98,7 +90,7 @@ public:
    */
   void sync_children(bool forced = false) {
     if (need_sync_ || forced) {
-      root_proxy_->send_to_remote(LIST_WITH_TYPE_PATH, Value(url()));
+      root_proxy_->send_to_remote(LIST_WITH_ATTRIBUTES_PATH, Value(url()));
     }
     need_sync_ = false;
   }
@@ -124,9 +116,9 @@ public:
   }
 
   /** @internal.
-   * Called when the object proxy finally receives type information.
+   * Called when the object proxy finally receives attributes information (type, info, etc).
    */
-  void set_type(const Value &type);
+  void set_attrs(const Value &attrs);
 
   /** @internal.
    * Method triggered on a value change notification. This method calls
@@ -138,7 +130,7 @@ public:
    * Dynamically build a child from the given name. If type is empty, we build dummy
    * object proxies that will try to get a "type" from the remote end.
    */
-  virtual bool build_child(const std::string &name, const Value &type, Value *error, ObjectHandle *handle);
+  virtual bool build_child(const std::string &name, const Value &attrs, Value *error, ObjectHandle *handle);
 
   /** "Current" time relative to this object's creation.
    */

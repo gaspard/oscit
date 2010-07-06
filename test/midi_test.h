@@ -43,6 +43,12 @@ public:
     assert_equal(NoteOn, m.type());
   }
 
+  void test_create_from_bytes( void ) {
+    // 3 bytes midi message (NoteOn, channel 5)
+    MidiMessage midi(0x90 + 4, 63, 71, 300);
+    assert_equal("+5:Eb3(71), 0/300", midi.to_s());
+  }
+
   void test_create_note( void ) {
     MidiMessage *m = MidiMessage::Note(63, 74, 510);
 
@@ -133,8 +139,8 @@ public:
     assert_equal(3, m.channel());
   }
 
-  void test_to_string( void ) {
+  void test_to_s( void ) {
     MidiMessage m;
-    assert_equal("+1:C3(80), 0/500", m.to_string());
+    assert_equal("+1:C3(80), 0/500", m.to_s());
   }
 };

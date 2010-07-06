@@ -597,6 +597,8 @@ void ReceivedMessage::Init( const char *message, unsigned long size )
                     case ANY_TYPE_TAG:          // oscit
                     case ARRAY_START_TYPE_TAG:  // oscit
                     case ARRAY_END_TYPE_TAG:    // oscit
+                    case HASH_START_TYPE_TAG:   // oscit
+                    case HASH_END_TYPE_TAG:     // oscit
 
                         // zero length
                         break;

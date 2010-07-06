@@ -33,14 +33,14 @@
 
 namespace oscit {
 
-class TypeMetaMethod : public Object
+class AttrsMetaMethod : public Object
 {
 public:
   /** Class signature. */
-  TYPED("Object.TypeMetaMethod")
+  TYPED("Object.AttrsMetaMethod")
 
-  TypeMetaMethod(const char *name)        : Object(name, Attribute::string_io("Return type and information on the given path.")) {}
-  TypeMetaMethod(const std::string &name) : Object(name, Attribute::string_io("Return type and information on the given path.")) {}
+  AttrsMetaMethod(const char *name)        : Object(name, Attribute::string_io("Return the attributes of the given path.")) {}
+  AttrsMetaMethod(const std::string &name) : Object(name, Attribute::string_io("Return the attributes of the given path.")) {}
 
   virtual const Value trigger(const Value &val) {
     if (!val.is_string()) return gNilValue;
@@ -50,7 +50,7 @@ public:
     Value reply = val;
 
     if (root_->find_or_build_object_at(val.c_str(), &error, &object)) {
-      reply.push_back(object->type());
+      reply.push_back(object->attributes());
     } else {
       reply.push_back(error);
     }

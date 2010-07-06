@@ -83,23 +83,23 @@ public:
     assert_true( 11 <= obj->latency() && obj->latency() <= 13 );
   }
 
-  void test_sync_should_call_list_with_type( void ) {
+  void test_sync_should_call_list_with_attributes( void ) {
     Logger logger;
     CommandLogger cmd("osc", &logger);
     RootProxy *proxy = cmd.adopt_proxy(new RootProxy(Location("osc", "funky synth")));
     ObjectProxyLogger *obj = proxy->adopt(new ObjectProxyLogger("seven", Attribute::range_io(0.0, 2000.0, "the sky is blue"), &logger));
     logger.str("");
     obj->sync_children();
-    assert_equal("[osc: send osc://\"funky synth\" /.list_with_type \"/seven\"]", logger.str());
+    assert_equal("[osc: send osc://\"funky synth\" /.list_att \"/seven\"]", logger.str());
   }
 
-  void test_new_object_without_type_should_try_to_find_type( void ) {
+  void test_new_object_without_type_should_try_to_find_type_and_initial_value( void ) {
     Logger logger;
     CommandLogger cmd("osc", &logger);
     RootProxy *proxy = cmd.adopt_proxy(new RootProxy(Location("osc", "funky synth")));
     logger.str("");
     proxy->adopt(new ObjectProxy("seven", gNilValue));
-    assert_equal("[osc: send osc://\"funky synth\" /.type \"/seven\"]", logger.str());
+    assert_equal("[osc: send osc://\"funky synth\" /.type \"/seven\"][osc: send osc://\"funky synth\" /seven null]", logger.str());
   }
 
   void test_until_type_is_set_object_proxy_should_respond_false_to_is_connected( void ) {
@@ -107,9 +107,7 @@ public:
     assert_false( o.is_connected() );
     Value res = o.trigger(gNilValue);
     assert_true( res.is_nil() );
-    o.set_type(Attribute::range_io(0.0, 200.0, "hop hop"));
+    o.set_attrs(Attribute::range_io(0.0, 200.0, "hop hop"));
     assert_true( o.is_connected() );
-    res = o.trigger(gNilValue);
-    assert_equal(Value(0.0), res);
   }
 };

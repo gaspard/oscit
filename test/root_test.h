@@ -294,15 +294,15 @@ public:
     root.call("/foo", Value(5.2));
   }
 
-  void test_list_with_type_on_root( void ) {
+  void test_list_with_attributes_on_root( void ) {
     Root root;
     root.adopt(new DummyObject("mode", "rgb", Attribute::select_io("rgb, yuv", "This is a menu.")));
     root.adopt(new DummyObject("tint", 45.0, Attribute::range_io(1, 127, "This is a slider from 1 to 127.")));
-    Value res = root.list_with_type();
+    Value res = root.list_with_attributes();
     // .error, .info, etc are ignored (current value -- type mismatch)
-    assert_equal("[s[*s]][s[ss]][s[ss]][s[ss]][s[ss]][s[ss]][s[sss]][s[fffs]]", res.type_tag());
-    assert_equal(".error", res[0][0].str());
-    assert_equal(".info", res[1][0].str());
+    assert_equal("sHsHsHsHsHsHsHsH", res.type_tag());
+    assert_equal(".error", res[0].str());
+    assert_equal(".info", res[2].str());
   }
 
   void test_create_root_without_meta( void ) {
@@ -355,7 +355,7 @@ public:
     assert_true(root.expose_views(fixture_path(FILE_TEST_LIST_FOLDER), &error));
     ObjectHandle views;
     assert_true(root.get_object_at(VIEWS_PATH, &views));
-    Value list = views->list_with_type();
+    Value list = views->list_with_attributes();
     assert_equal("[[\"file_a/\", [{\"x\":10, \"y\":10, \"width\":500, \"height\":270}, \"view\"]], [\"file_b/\", [{}, \"view\"]]]", list.to_json());
   }
 

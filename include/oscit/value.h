@@ -631,6 +631,14 @@ public:
    */
   Value join(const char *str) const;
 
+  /** Return true if the list's type tags start with the given sequence.
+   * @param str
+   */
+  // BAD idea: I do not think we need this
+  // bool starts_with_type_tags(const char *type_tags) const {
+  //   return type_ == LIST_VALUE && list_->starts_with_type_tags(type_tags);
+  // }
+
   /** =========================================================    Error   */
   bool is_error() const  { return type_ == ERROR_VALUE; }
 

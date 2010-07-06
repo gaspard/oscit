@@ -49,10 +49,10 @@ namespace oscit {
 #define ERROR_PATH "/.error"
 #define INFO_PATH "/.info"
 #define LIST_PATH "/.list"
-#define LIST_WITH_TYPE_PATH "/.list_with_type"
+#define LIST_WITH_ATTRIBUTES_PATH "/.list_att"
 #define REPLY_PATH "/.reply"
 #define REGISTER_PATH "/.register"
-#define TYPE_PATH "/.type"
+#define ATTRS_PATH "/.attrs"
 #define TREE_PATH "/.tree"
 #define VIEWS_PATH "/views"
 
@@ -91,15 +91,15 @@ class Root : public Object {
     init();
   }
 
-  Root(const Value &type)
-      : Object(type),
+  Root(const Value &attrs)
+      : Object(attrs),
         objects_(OBJECT_HASH_SIZE),
         on_register_(CALLBACKS_ON_REGISTER_HASH_SIZE) {
     init();
   }
 
-  Root(const char *name, const Value &type)
-      : Object(name, type),
+  Root(const char *name, const Value &attrs)
+      : Object(name, attrs),
         objects_(OBJECT_HASH_SIZE),
         on_register_(CALLBACKS_ON_REGISTER_HASH_SIZE) {
     init();
@@ -118,15 +118,15 @@ class Root : public Object {
     init();
   }
 
-  Root(size_t hashSize, const Value &type)
-      : Object(type),
+  Root(size_t hashSize, const Value &attrs)
+      : Object(attrs),
         objects_(hashSize),
         on_register_(CALLBACKS_ON_REGISTER_HASH_SIZE) {
     init();
   }
 
-  Root(size_t hashSize, const char *name, const Value &type)
-      : Object(name, type),
+  Root(size_t hashSize, const char *name, const Value &attrs)
+      : Object(name, attrs),
         objects_(hashSize),
         on_register_(CALLBACKS_ON_REGISTER_HASH_SIZE) {
     init();

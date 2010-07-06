@@ -49,11 +49,11 @@ public:
     return new T(end_point, this);
   }
 
-  virtual ObjectProxy *build_object_proxy(Object *parent, const std::string &name, const Value &type) {
+  virtual ObjectProxy *build_object_proxy(Object *parent, const std::string &name, const Value &attrs) {
     if (is_meta_method(name)) return NULL;
 
-    log("build_object_proxy", name, type);
-    return new U(name, type);
+    log("build_object_proxy", name, attrs);
+    return new U(name, attrs);
   }
 };
 

@@ -55,33 +55,35 @@ void RootProxy::set_proxy_factory(ProxyFactory *factory) {
 }
 
 
-void RootProxy::build_children_from_types(Object *parent, const Value &types) {
-  if (!types.is_list()) {
-    std::cerr << "Cannot handle " << LIST_WITH_TYPE_PATH << " reply: invalid argument: " << types << "\n";
-    return;
-  }
-  if (!proxy_factory_) {
-    std::cerr << "Cannot handle " << LIST_WITH_TYPE_PATH << " reply: no ProxyFactory !\n";
+void RootProxy::build_children_from_attributes(Object *parent, const Value &list) {
+  if (!list.is_list() || list.size() % 2 != 0) {
+    std::cerr << "Cannot handle " << LIST_WITH_ATTRIBUTES_PATH << " reply: invalid argument: " << list << "\n";
     return;
   }
 
-  int types_count = types.size();
+  if (!proxy_factory_) {
+    std::cerr << "Cannot handle " << LIST_WITH_ATTRIBUTES_PATH << " reply: no ProxyFactory !\n";
+    return;
+  }
+
+  int list_count = list.size() / 2;
   Value name_with_type;
   ObjectProxy *object_proxy;
   bool has_children;
 
 
-  for(int i=0; i < types_count; ++i) {
-    name_with_type = types[i];
-    if (name_with_type.size() < 2 || !name_with_type[0].is_string()) {
-      std::cerr << "Invalid type in " << LIST_WITH_TYPE_PATH << " reply argument: " << name_with_type << "\n";
+  for(int i=0; i < list_count; ++i) {
+    Value name_value = list[2 * i];
+    Value attributes = list[2 * i + 1];
+    if (!name_value.is_string() || !attributes.is_hash()) {
+      std::cerr << "Invalid argument in " << LIST_WITH_ATTRIBUTES_PATH << " reply: " << name_value << " => " << attributes << "\n";
     } else {
-      std::string name = name_with_type[0].str();
+      std::string name = name_value.str();
       ObjectHandle object;
 
-      if (name.at(name.length()-1) == '/') {
+      if (name.size() > 1 && name.at(name.length()-1) == '/') {
         has_children = true;
-        name = name.substr(0, name.length() - 1);
+        name = name.substr(0, name.size() - 1);
       } else {
         has_children = false;
       }
@@ -89,7 +91,7 @@ void RootProxy::build_children_from_types(Object *parent, const Value &types) {
       if (!parent->get_child(name, &object)) {
         // child does not exist yet, first ask parent if it can build it
         Value error;
-        if (parent->build_child(name, name_with_type[1], &error, &object)) {
+        if (parent->build_child(name, attributes, &error, &object)) {
           object_proxy = object.type_cast<ObjectProxy>();
           if (!object_proxy) {
             std::cerr << parent->url() << " has built an invalid object through 'build_child'. Should be an ObjectProxy, found a " << object->class_name() << "\n";
@@ -99,7 +101,7 @@ void RootProxy::build_children_from_types(Object *parent, const Value &types) {
         } else if (error.is_error()) {
           std::cerr << parent->url() << "Returned an error while trying to build " << name << ": " << error << "\n";
         } else {
-          object_proxy = proxy_factory_->build_object_proxy(parent, name, name_with_type[1]);
+          object_proxy = proxy_factory_->build_object_proxy(parent, name, attributes);
           if (object_proxy) {
             parent->adopt(object_proxy);
             object_proxy->set_need_sync(has_children);
@@ -110,13 +112,13 @@ void RootProxy::build_children_from_types(Object *parent, const Value &types) {
   }
 }
 
-bool RootProxy::build_child(const std::string &name, const Value &type, Value *error, ObjectHandle *handle) {
+bool RootProxy::build_child(const std::string &name, const Value &attrs, Value *error, ObjectHandle *handle) {
   if (!proxy_factory_) {
     std::cerr << "Cannot build child /" << name << " : no ProxyFactory !\n";
     return false;
   }
 
-  Object *object = proxy_factory_->build_object_proxy(this, name, type);
+  Object *object = proxy_factory_->build_object_proxy(this, name, attrs);
 
   if (object) {
     adopt(object);
@@ -128,22 +130,24 @@ bool RootProxy::build_child(const std::string &name, const Value &type, Value *e
 }
 
 void RootProxy::handle_reply(const std::string &path, const Value &val) {
-  if (path == LIST_WITH_TYPE_PATH) {
+  if (path == LIST_WITH_ATTRIBUTES_PATH) {
+    // s[sHsHsH...]
+    // "parent path", ["child name", { attributes }, "child name", { attributes }, ...]
     if (val.size() < 2 || !val[0].is_string() || !val[1].is_list()) {
-      std::cerr << "Invalid argument in " << LIST_WITH_TYPE_PATH << " reply: " << val << "\n";
+      std::cerr << "Invalid argument in " << LIST_WITH_ATTRIBUTES_PATH << " reply: " << val << "\n";
       return;
     }
 
     ObjectHandle handle;
     if (!get_object_at(val[0].str(), &handle)) {
-      std::cerr << "Invalid parent path " << val[0].str() << " in " << LIST_WITH_TYPE_PATH << " reply: unknown path.\n";
+      std::cerr << "Invalid parent path " << val[0].str() << " in " << LIST_WITH_ATTRIBUTES_PATH << " reply: unknown path.\n";
       return;
     }
 
-    build_children_from_types(handle.ptr(), val[1]);
-  } else if (path == TYPE_PATH) {
+    build_children_from_attributes(handle.ptr(), val[1]);
+  } else if (path == ATTRS_PATH) {
     if (val.size() < 2 || !val[0].is_string()) {
-      std::cerr << "Invalid argument in " << TYPE_PATH << " reply: " << val << "\n";
+      std::cerr << "Invalid argument in " << ATTRS_PATH << " reply: " << val << "\n";
       return;
     }
 
@@ -155,7 +159,7 @@ void RootProxy::handle_reply(const std::string &path, const Value &val) {
     }
 
     if (object_proxy) {
-      object_proxy->set_type(val[1]);
+      object_proxy->set_attrs(val[1]);
     }
   } else {
     // Find target

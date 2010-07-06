@@ -39,21 +39,21 @@ public:
     root.adopt(new DummyObject("foo", 4.25));
     Value res;
 
-    res = root.call(TYPE_PATH, Value(""));
+    res = root.call(ATTRS_PATH, Value(""));
     assert_equal("", res[0].str());
     res = res[1];
-    assert_equal("s", res.type_tag()); // no information ...
+    assert_equal("Container.", res[Attribute::INFO].str());
 
-    res = root.call(TYPE_PATH, Value("/foo"));
+    res = root.call(ATTRS_PATH, Value("/foo"));
     assert_equal("/foo", res[0].str());
     res = res[1];
     assert_equal("H", res.type_tag());
-    assert_equal("range", res[Attribute::NAME].str());
-    assert_equal(0.0,   res[Attribute::MIN].r);
-    assert_equal(127.0, res[Attribute::MAX].r);
+    assert_equal("range", res[Attribute::TYPE][Attribute::NAME].str());
+    assert_equal(0.0,   res[Attribute::TYPE][Attribute::MIN].r);
+    assert_equal(127.0, res[Attribute::TYPE][Attribute::MAX].r);
     assert_equal(DUMMY_OBJECT_INFO, res[Attribute::INFO].str());
 
-    res = root.call(TYPE_PATH, Value("/blah"));
+    res = root.call(ATTRS_PATH, Value("/blah"));
     assert_equal("/blah", res[0].str());
     res = res[1];
     assert_true(res.is_error());
@@ -65,63 +65,61 @@ public:
     root.adopt(new DummyObject2("foo", "yuv"));
     Value res;
 
-    res = root.call(TYPE_PATH, Value("/foo"));
+    res = root.call(ATTRS_PATH, Value("/foo"));
     assert_equal("/foo", res[0].str());
     res = res[1];
-    assert_equal("sss", res.type_tag());
-    assert_equal("yuv",  res[0].str()); // current
-    assert_equal("rgb,rgba,yuv",  res[1].str()); // current
-    assert_equal("Set color mode.", res[2].str()); // info
+    assert_equal("H", res.type_tag());
+    assert_equal("rgb,rgba,yuv",  res[Attribute::TYPE][Attribute::VALUES].str());
+    assert_equal("Set color mode.", res[Attribute::INFO].str());
   }
 
   void test_any_type( void ) {
     Root root;
     root.adopt(new DummyObject("foo", 1.23, Attribute::any_io("This is the info string.")));
     Value res;
-    res = root.call(TYPE_PATH, Value("/foo"));
+    res = root.call(ATTRS_PATH, Value("/foo"));
     assert_equal("/foo", res[0].str());
     res = res[1];
-    assert_equal("*s", res.type_tag());
-    assert_true(res[0].is_any());
-    assert_equal("This is the info string.", res[1].str()); // info
+    assert_equal("*", res[Attribute::TYPE][Attribute::SIGNATURE].str());
+    assert_equal("This is the info string.", res[Attribute::INFO].str()); // info
   }
 
   void test_list_type( void ) {
     Root root;
     // FIXME: replace JsonValue(...) by proper attributes
     // Attribute::attribute(info, name, signature) ?
-    root.adopt(new DummyObject("Haddock", Value("Haddock").push_back(42), JsonValue("[[\"\", 0.0], \"name\", \"years old\", \"Set captain with name and age.\"]")));
+    root.adopt(new DummyObject("Haddock", JsonValue("[\"\", 0.0]"), HashValue(Attribute::INFO, "Haddock").set(Attribute::TYPE, HashValue(Attribute::SIGNATURE, "sf").set(Attribute::NAME, "some list"))));
     Value res;
-    res = root.call(TYPE_PATH, Value("/Haddock"));
+    res = root.call(ATTRS_PATH, Value("/Haddock"));
     assert_equal("/Haddock", res[0].str());
     res = res[1];
-    assert_equal("[sf]sss", res.type_tag());
-    assert_equal("[\"Haddock\", 42]", res[0].to_json()); // info
+    assert_equal("sf", res[Attribute::TYPE][Attribute::SIGNATURE].str());
+    assert_equal("some list", res[Attribute::TYPE][Attribute::NAME].str());
+    assert_equal("Haddock", res[Attribute::INFO].str());
   }
 
   void test_hash_type( void ) {
     Root root;
     root.adopt(new DummyObject("dog_food", JsonValue("{lazy:\"dog\", silly:\"cats and mices\"}"), Attribute::hash_io("Blah blah.")));
     Value res;
-    res = root.call(TYPE_PATH, Value("/dog_food"));
+    res = root.call(ATTRS_PATH, Value("/dog_food"));
     assert_equal("/dog_food", res[0].str());
     res = res[1];
-    assert_equal("Hs", res.type_tag());
-    assert_equal("{\"lazy\":\"dog\", \"silly\":\"cats and mices\"}", res[0].to_json()); // hash
-    assert_equal("Blah blah.", res[1].str()); // info
+    assert_equal("H", res[Attribute::TYPE][Attribute::SIGNATURE].str());
+    assert_equal("hash", res[Attribute::TYPE][Attribute::NAME].str());
+    assert_equal("Blah blah.", res[Attribute::INFO].str());
   }
 
   void test_matrix_type( void ) {
     Root root;
     root.adopt(new DummyObject("master_of_time", MatrixValue(1,5), Attribute::matrix_io("Stupid matrix.")));
     Value res;
-    res = root.call(TYPE_PATH, Value("/master_of_time"));
+    res = root.call(ATTRS_PATH, Value("/master_of_time"));
     assert_equal("/master_of_time", res[0].str());
     res = res[1];
-    assert_true(res.is_list());
-    assert_equal("Ms", res.type_tag());
-    assert_equal("\"Matrix 1x5\"", res[0].to_json()); // matrix to json ...
-    assert_equal("Stupid matrix.", res[1].str()); // info
+    assert_equal("M", res[Attribute::TYPE][Attribute::SIGNATURE].str());
+    assert_equal("matrix", res[Attribute::TYPE][Attribute::NAME].str());
+    assert_equal("Stupid matrix.", res[Attribute::INFO].str());
   }
 
   void test_no_input( void ) {
@@ -129,17 +127,17 @@ public:
     root.adopt(new Object("foo"));
     Value res;
 
-    res = root.call(TYPE_PATH, Value("/foo"));
+    res = root.call(ATTRS_PATH, Value("/foo"));
     assert_equal("/foo", res[0].str());
     res = res[1];
-    assert_equal("Container.", res.str());
+    assert_equal("Container.", res[Attribute::INFO].str());
   }
 
   void test_type_with_nil( void ) {
     Root root(Attribute::no_io("This is the root node."));
     Value res;
 
-    res = root.call(TYPE_PATH, gNilValue);
+    res = root.call(ATTRS_PATH, gNilValue);
     assert_true(res.is_nil());
   }
 };

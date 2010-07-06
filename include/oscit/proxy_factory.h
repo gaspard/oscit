@@ -68,8 +68,8 @@ public:
   /** Object proxy factory. This method should be overwritten in subclasses in order to
    * create custom ObjectProxy objects.
    */
-  virtual ObjectProxy *build_object_proxy(Object *parent, const std::string &name, const Value &type) {
-    return new ObjectProxy(name, type);
+  virtual ObjectProxy *build_object_proxy(Object *parent, const std::string &name, const Value &attrs) {
+    return new ObjectProxy(name, attrs);
   }
 
   /** A RootProxy is using this object as factory, keep a link in case it is removed.

@@ -129,7 +129,7 @@ public:
       INFO, info).set(
       TYPE, HashValue(
         NAME,      "midi").set(
-        SIGNATURE, "m"   )
+        SIGNATURE, "m")
       );
   }
 

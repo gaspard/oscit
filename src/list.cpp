@@ -141,4 +141,8 @@ bool List::contains_error() {
   return false;
 }
 
+//bool List::starts_with_type_tags(const std::string &type_tags) {
+//  return 0 == type_tag_storage_.compare(0, type_tags.size(), type_tags);
+//}
+
 } // oscit

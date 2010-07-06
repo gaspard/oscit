@@ -82,22 +82,22 @@ class Object : public Typed, public Observer, public CReferenceCounted {
     sync_type_id();
   }
 
-  explicit Object(const Value &type) : root_(NULL), parent_(NULL),
-    children_(20), context_(NULL), keep_last_(false), attributes_(type) {
+  explicit Object(const Value &attrs) : root_(NULL), parent_(NULL),
+    children_(20), context_(NULL), keep_last_(false), attributes_(attrs) {
     sync_type_id();
     name_ = "";
     url_  = name_;
   }
 
-  Object(const char *name, const Value &type, bool keep_last = false) : root_(NULL), parent_(NULL),
+  Object(const char *name, const Value &attrs, bool keep_last = false) : root_(NULL), parent_(NULL),
     children_(20), name_(name), url_(name), context_(NULL), keep_last_(keep_last),
-    attributes_(type) {
+    attributes_(attrs) {
     sync_type_id();
   }
 
-  Object(const std::string &name, const Value &type, bool keep_last = false) : root_(NULL),
+  Object(const std::string &name, const Value &attrs, bool keep_last = false) : root_(NULL),
     parent_(NULL), children_(20), name_(name), url_(name), context_(NULL),
-    keep_last_(keep_last), attributes_(type) {
+    keep_last_(keep_last), attributes_(attrs) {
     sync_type_id();
   }
 
@@ -108,16 +108,16 @@ class Object : public Typed, public Observer, public CReferenceCounted {
     parent->adopt(this);
   }
 
-  Object(Object *parent, const char *name, const Value &type) : root_(NULL),
+  Object(Object *parent, const char *name, const Value &attrs) : root_(NULL),
     parent_(NULL), children_(20), name_(name), context_(NULL), keep_last_(false),
-    attributes_(type) {
+    attributes_(attrs) {
     sync_type_id();
     parent->adopt(this);
   }
 
-  Object(Object *parent, const std::string &name, const Value &type) :
+  Object(Object *parent, const std::string &name, const Value &attrs) :
     root_(NULL), parent_(NULL), children_(20), name_(name), context_(NULL),
-    keep_last_(false), attributes_(type) {
+    keep_last_(false), attributes_(attrs) {
     sync_type_id();
     parent->adopt(this);
   }
@@ -142,7 +142,7 @@ class Object : public Typed, public Observer, public CReferenceCounted {
    * a sub-node or branch is not found and this is the last found object along
    * the path.
    */
-  virtual bool build_child(const std::string &name, const Value &type, Value *error, ObjectHandle *handle) {
+  virtual bool build_child(const std::string &name, const Value &attrs, Value *error, ObjectHandle *handle) {
     return false;
   }
 
@@ -247,14 +247,12 @@ class Object : public Typed, public Observer, public CReferenceCounted {
     return result;
   }
 
-  /** List sub-nodes with their current value and type.
-   * This method is used as a reply to the /.list_with_type meta method.
+  /** List sub-nodes with their current attributes.
+   * This method is used as a reply to the /.list_att meta method.
    * The format of the reply is a list of names with the type:
-   * [name, current, unit, ...], [name, current, unit, ...], etc.
-   *
-   * This method is not 'const' because it triggers the object to get the current value.
+   * [name, { attributes }, name, { attributes }, etc].
    */
-  const Value list_with_type();
+  const Value list_with_attributes() const;
 
   /** List full tree under this node.
    *  @param base_length is the length of the url for the initial call
@@ -277,10 +275,16 @@ class Object : public Typed, public Observer, public CReferenceCounted {
     return attributes_[Attribute::TYPE];
   }
 
+  /** Type information on node.
+   */
+  const Value &attributes() const {
+    return attributes_;
+  }
+
   /** Set meta type (signature, range, units). The type should be immutable.
    *  this method is not a good idea.
    */
-  // bool set_type(const Value &type) {
+  // bool set_type(const Value &attrs) {
   //   if (type.type_id() != type_.type_id()) {
   //     return false;
   //   } else {
@@ -363,23 +367,13 @@ class Object : public Typed, public Observer, public CReferenceCounted {
       return true;
     } else if (val.is_nil() || val.is_bang()) {
       return true;
+    // Bad idea (do we need this ?)
+    // } else if (val.starts_with_type_tags(type_signature())) {
+    //   // first match
+    //   return true;
     } else {
       return false;
     }
-    // FIXME: list of arguments: first elements must match.
-    // } else if (!val.is_list() || !attributes_[Attribute::TYPE][0].is_list()) {
-    //   return false;
-    // } else {
-    //   // first elements should match
-    //   const char * c  = type_[0].type_tag();
-    //   const char * cl = val.type_tag();
-    //   while (*c) {
-    //     if (*c != *cl) return false;
-    //     ++c;
-    //     ++cl;
-    //   }
-    //   return true;
-    // }
   }
 
   /** Signal to receive notifications on object destruction.

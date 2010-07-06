@@ -47,7 +47,7 @@ public:
     assert_equal("[oscit: listen][oscit: .]", logger.str());
     logger.str("");
     cmd->adopt_proxy(factory.build_and_init_root_proxy(location));
-    assert_equal("[factory: build_root_proxy oscit://\"my place\"][oscit: send oscit://\"my place\" /.register null][oscit: send oscit://\"my place\" /.list_with_type \"\"]", logger.str());
+    assert_equal("[factory: build_root_proxy oscit://\"my place\"][oscit: send oscit://\"my place\" /.register null][oscit: send oscit://\"my place\" /.list_att \"\"]", logger.str());
   }
 
   void test_route_reply_messages_to_object_proxies( void ) {

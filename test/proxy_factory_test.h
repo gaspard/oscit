@@ -33,6 +33,7 @@
 #include "oscit/object_proxy.h"
 #include "oscit/proxy_factory.h"
 #include "mock/dummy_object.h"
+#include "mock/observer_logger.h"
 #include "mock/object_proxy_logger.h"
 
 /** Integration tests for the ProxyFactory pattern (local proxy kept in sync with remote values).
@@ -62,8 +63,8 @@ public:
   /** Class signature. */
   TYPED("Object.ObjectProxy.UpdateDummyView")
 
-  UpdateDummyView(const std::string &name, const Value &type)
-      : ObjectProxy(name, type) {}
+  UpdateDummyView(const std::string &name, const Value &attrs)
+      : ObjectProxy(name, attrs) {}
 };
 
 class DummyView : public ObjectProxyLogger {
@@ -71,8 +72,8 @@ public:
   /** Class signature. */
   TYPED("Object.ObjectProxy.ObjectProxyLogger.DummyView")
 
-  DummyView(const std::string &name, const Value &type)
-      : ObjectProxyLogger(name, type) {}
+  DummyView(const std::string &name, const Value &attrs)
+      : ObjectProxyLogger(name, attrs) {}
 
   virtual void adopted() {
     ObjectProxyLogger::adopted();
@@ -80,9 +81,9 @@ public:
     sync_children();
   }
 
-  virtual bool build_child(const std::string &name, const Value &type, Value *error, ObjectHandle *handle) {
+  virtual bool build_child(const std::string &name, const Value &attrs, Value *error, ObjectHandle *handle) {
     if (name == "update") {
-      Object *obj = adopt(new UpdateDummyView(name, type));
+      Object *obj = adopt(new UpdateDummyView(name, attrs));
       if (obj) {
         handle->hold(obj);
         return true;
@@ -103,7 +104,7 @@ public:
 
 class MyObjectProxy : public ObjectProxyLogger {
 public:
-  MyObjectProxy(const std::string &name, const Value &type) : ObjectProxyLogger(name, type) {}
+  MyObjectProxy(const std::string &name, const Value &attrs) : ObjectProxyLogger(name, attrs) {}
 };
 
 
@@ -111,16 +112,16 @@ class MyProxyFactory : public ProxyFactory {
 public:
   MyProxyFactory() : built_(10) {}
 
-  virtual ObjectProxy *build_object_proxy(Object *parent, const std::string &name, const Value &type) {
+  virtual ObjectProxy *build_object_proxy(Object *parent, const std::string &name, const Value &attrs) {
     if (is_meta_method(name)) return NULL;
 
     ObjectProxyLogger *object_proxy;
 
     if (name == "dummy_view") {
       // build a dummy 'view' proxy to test if it builds the 'update' method
-      object_proxy = new DummyView(name, type);
+      object_proxy = new DummyView(name, attrs);
     } else {
-      object_proxy = new MyObjectProxy(name, type);
+      object_proxy = new MyObjectProxy(name, attrs);
     }
 
     built_.set(name, object_proxy);
@@ -210,8 +211,8 @@ class ProxyFactoryTest : public TestHelper
     assert_equal("45", res.to_json());
 
     // should have same type as remote
-    assert_equal("[45, 1, 127, \"This is a slider from 1 to 127.\"]", bar->type().to_json());
-    assert_equal("[45, 1, 127, \"This is a slider from 1 to 127.\"]", bar_->type().to_json());
+    assert_equal("{\"name\":\"range\", \"signature\":\"f\", \"min\":1, \"max\":127}", bar->type().to_json());
+    assert_equal("{\"name\":\"range\", \"signature\":\"f\", \"min\":1, \"max\":127}", bar_->type().to_json());
   }
 
   void test_call_local_proxy_should_find_cached_value( void ) {

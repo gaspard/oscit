@@ -40,22 +40,25 @@ public:
   TYPED("Object.DummyObject")
 
   DummyObject(const char *name, Real value) : Object(name, Attribute::range_io(0, 127, DUMMY_OBJECT_INFO)), value_(value) {}
-  DummyObject(const char *name, Value value, const Value &type) : Object(name, type), value_(value) {}
-  DummyObject(const char *name, Real value, const Value &type) : Object(name, type), value_(value) {}
-  DummyObject(const char *name, const char *value, const Value &type) : Object(name, type), value_(value) {}
-  DummyObject(const char *name, const std::string &value, const Value &type) : Object(name, type), value_(value) {}
+  DummyObject(const char *name, Value value, const Value &attrs) : Object(name, attrs), value_(value) {}
+  DummyObject(const char *name, Real value, const Value &attrs) : Object(name, attrs), value_(value) {}
+  DummyObject(const char *name, const char *value, const Value &attrs) : Object(name, attrs), value_(value) {}
+  DummyObject(const char *name, const char *value, const char *attrs) : Object(name, JsonValue(attrs)), value_(JsonValue(value)) {}
+  DummyObject(const char *name, const std::string &value, const Value &attrs) : Object(name, attrs), value_(value) {}
 
   virtual ~DummyObject() {}
 
   virtual const Value trigger(const Value &val) {
-    if (type_id() == val.type_id()) {
+//    std::cout << "DummyObject->trigger(" << val << ")\n";
+
+    if (!val.is_nil()) {
       value_ = val;
     }
 
     return value_;
   }
 
-  virtual bool build_child(const std::string &name, const Value &type, Value *error, ObjectHandle *handle) {
+  virtual bool build_child(const std::string &name, const Value &attrs, Value *error, ObjectHandle *handle) {
     Object *obj = NULL;
     if (name == "special") {
       obj = adopt(new Object("special"));
@@ -77,7 +80,6 @@ public:
     return value_.r;
   }
 
-private:
   Value value_;
 };
 
@@ -87,7 +89,7 @@ public:
 
   DummyObject2(const char * name, const char *value) : Object(name, Attribute::select_io("rgb,rgba,yuv", "Set color mode.")), value_(value) {}
 
-  DummyObject2(const char * name, const char *value, const Value &type) : Object(name, type), value_(value) {}
+  DummyObject2(const char * name, const char *value, const Value &attrs) : Object(name, attrs), value_(value) {}
 
   virtual ~DummyObject2() {}
 

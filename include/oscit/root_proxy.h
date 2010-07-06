@@ -94,7 +94,7 @@ public:
   /** Dynamically build a child from the given name. If type is empty, we build dummy
    * object proxies that will try to get a "type" from the remote end.
    */
-  virtual bool build_child(const std::string &name, const Value &type, Value *error, ObjectHandle *handle);
+  virtual bool build_child(const std::string &name, const Value &attrs, Value *error, ObjectHandle *handle);
 
   ProxyFactory *proxy_factory() {
     return proxy_factory_;
@@ -129,10 +129,10 @@ private:
    *
    */
   void sync_children(bool forced = true) {
-    send_to_remote(LIST_WITH_TYPE_PATH, Value(url()));
+    send_to_remote(LIST_WITH_ATTRIBUTES_PATH, Value(url()));
   }
 
-  void build_children_from_types(Object *base, const Value &types);
+  void build_children_from_attributes(Object *base, const Value &attrss);
 
   /** Reference to the original tree this root proxies. When the RootProxy is adopted
    *  by a command, this is used as key to route 'reply' messages.

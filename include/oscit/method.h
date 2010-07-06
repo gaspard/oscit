@@ -47,12 +47,12 @@ class ClassMethod : public Object
   TYPED("Object.ClassMethod")
 
   /** Create a new object that will call a class method when "triggered". */
-  ClassMethod(const std::string &name, class_method_t method, const Value &type) :
-      Object(name, type), class_method_(method) {}
+  ClassMethod(const std::string &name, class_method_t method, const Value &attrs) :
+      Object(name, attrs), class_method_(method) {}
 
   /** Create a new object that will call a class method when "triggered". */
-  ClassMethod(const char *name, class_method_t method, const Value &type) :
-      Object(name, type), class_method_(method) {}
+  ClassMethod(const char *name, class_method_t method, const Value &attrs) :
+      Object(name, attrs), class_method_(method) {}
 
   /** Trigger: call the class method. */
   virtual const Value trigger(const Value &val) {
@@ -67,11 +67,11 @@ class ClassMethod : public Object
 /** Prototype constructor for Method. */
 struct MethodPrototype
 {
-  MethodPrototype(const char *name, member_method_t method, const Value &type, bool keep_last = false) :
-      name_(name), member_method_(method), type_(type), keep_last_(keep_last) {}
+  MethodPrototype(const char *name, member_method_t method, const Value &attrs, bool keep_last = false) :
+      name_(name), member_method_(method), attrs_(attrs), keep_last_(keep_last) {}
   const char *    name_;
   member_method_t member_method_;
-  Value           type_;
+  Value           attrs_;
   bool            keep_last_;
 };
 
@@ -82,15 +82,15 @@ class Method : public Object
   TYPED("Object.Method")
 
   /** Create a new object that call a member method when "triggered". */
-  Method(void *receiver, const char *name, member_method_t method, const Value &type) :
-      Object(name, type), receiver_(receiver), member_method_(method) {}
+  Method(void *receiver, const char *name, member_method_t method, const Value &attrs) :
+      Object(name, attrs), receiver_(receiver), member_method_(method) {}
 
   /** Create a new object that call a member method when "triggered". */
-  Method(void *receiver, const std::string &name, member_method_t method, const Value &type) :
-      Object(name, type), receiver_(receiver), member_method_(method) {}
+  Method(void *receiver, const std::string &name, member_method_t method, const Value &attrs) :
+      Object(name, attrs), receiver_(receiver), member_method_(method) {}
 
   /** Prototype based constructor. */
-  Method(void *receiver, const MethodPrototype &prototype) : Object(prototype.name_, prototype.type_, prototype.keep_last_),
+  Method(void *receiver, const MethodPrototype &prototype) : Object(prototype.name_, prototype.attrs_, prototype.keep_last_),
       receiver_(receiver), member_method_(prototype.member_method_) {}
 
   /** Trigger: call the member method on the receiver. */
@@ -135,12 +135,12 @@ class TMethod : public Method
   TYPED("Object.Method.TMethod")
 
   /** Create a new object that call a member method when "triggered". */
-  TMethod(void *receiver, const char *name, const Value &type) :
-      Method(receiver, name, &cast_method<T, Tmethod>, type) {}
+  TMethod(void *receiver, const char *name, const Value &attrs) :
+      Method(receiver, name, &cast_method<T, Tmethod>, attrs) {}
 
   /** Create a new object that call a member method when "triggered". */
-  TMethod(void *receiver, const std::string &name, const Value &type) :
-      Method(receiver, name, &cast_method<T, Tmethod>, type) {}
+  TMethod(void *receiver, const std::string &name, const Value &attrs) :
+      Method(receiver, name, &cast_method<T, Tmethod>, attrs) {}
 };
 
 } // oscit

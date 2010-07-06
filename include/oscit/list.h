@@ -107,6 +107,9 @@ class List : public ReferenceCounted
 
   bool operator==(const List &other) const;
 
+//  bad idea
+//  bool starts_with_type_tags(const std::string &type_tags) const;
+
  private:
   void clear();
 

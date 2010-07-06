@@ -195,8 +195,8 @@ public:
     logger.str("");
 
     // receive is protected, we need to be friend...
-    cmd->receive(Url("dummy://unknown.host:4560/.type"), Value(""));
-    assert_equal("[dummy: send dummy://unknown.host:4560 /.reply [\"/.type\", [\"\", \"Container.\"]]]", logger.str());
+    cmd->receive(Url("dummy://unknown.host:4560/.info"), Value(""));
+    assert_equal("[dummy: send dummy://unknown.host:4560 /.reply [\"/.info\", [\"\", \"Container.\"]]]", logger.str());
   }
 
   void test_receive_should_notify_observers( void ) {

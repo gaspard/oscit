@@ -33,14 +33,14 @@
 
 namespace oscit {
 
-class ListWithTypeMetaMethod : public Object
+class ListWithAttributesMetaMethod : public Object
 {
 public:
   /** Class signature. */
-  TYPED("Object.ListTypesMetaMethod")
+  TYPED("Object.ListWithAttributesMetaMethod")
 
-  ListWithTypeMetaMethod(const char *name)        : Object(name, Attribute::string_io("List all children under the given path with their current value and type.")) {}
-  ListWithTypeMetaMethod(const std::string &name) : Object(name, Attribute::string_io("List all children under the given path with their current value and type.")) {}
+  ListWithAttributesMetaMethod(const char *name)        : Object(name, Attribute::string_io("List all children under the given path with their current value and type.")) {}
+  ListWithAttributesMetaMethod(const std::string &name) : Object(name, Attribute::string_io("List all children under the given path with their current value and type.")) {}
 
   virtual const Value trigger(const Value &val) {
     if (!val.is_string()) return gNilValue;
@@ -50,7 +50,7 @@ public:
     Value reply = val;
 
     if (root_->find_or_build_object_at(val.c_str(), &error, &object)) {
-      reply.push_back(object->list_with_type());
+      reply.push_back(object->list_with_attributes());
     } else {
       reply.push_back(error);
     }

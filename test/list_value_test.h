@@ -486,6 +486,15 @@ public:
     const char * trailing = json + v.build_from_json(json);
     assert_true(v.is_list());
     assert_equal(", 4.0", trailing);
+    JsonValue v2(json);
+    assert_equal("[2, 3]", v2.to_json());
+  }
+
+  void test_from_json_hash_trailing( void ) {
+    Value v;
+    const char * json = "{a:2.0}, 4.0";
+    JsonValue v2(json);
+    assert_equal("[{\"a\":2}, 4]", v2.to_json());
   }
 
   void test_from_json_strict( void ) {
@@ -556,7 +565,7 @@ public:
     assert_false(object.can_receive(Value("foo")));
     assert_false(object.can_receive(Value(BAD_REQUEST_ERROR, "foo")));
     assert_true (object.can_receive(JsonValue("['asd',3,'']")));      // same arguments
-    assert_true (object.can_receive(JsonValue("['',5,'', 1.0]"))); // extra arguments are allowed
+    assert_false(object.can_receive(JsonValue("['',5,'', 1.0]"))); // extra arguments are not allowed
     assert_false(object.can_receive(JsonValue("['','','']")));    // wrong arguments
     assert_false(object.can_receive(JsonValue("['',2]")));    // too short
     assert_false(object.can_receive(HashValue()));

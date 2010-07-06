@@ -332,6 +332,7 @@ Value Value::join(char c) const {
       DEBUG(printf("[continue \"%s\"]\n",p));
     } else {
       set(str_buf, tmp_val);
+
       DEBUG(printf("[hash_value \"%s\":%s]\n", str_buf.c_str(), tmp_val.to_json().c_str()));
       DEBUG(printf("[continue \"%s\"]\n",p));
     }
@@ -342,7 +343,7 @@ Value Value::join(char c) const {
   }
 
   action list_value {
-    // Parse a single element of a hash (key:value)
+    // Parse a single element of a list (value)
     // Build tmp_val from string and move p forward
     p++;
     p += tmp_val.build_from_json(p, true);

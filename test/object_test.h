@@ -175,14 +175,14 @@ public:
     assert_equal("M", matr.type()[Attribute::SIGNATURE].str());
   }
 
-  void test_list_with_type( void ) {
+  void test_list_with_attributes( void ) {
     Object base;
     base.adopt(new DummyObject("mode", "rgb", Attribute::select_io("rgb, yuv", "This is a menu.")));
     base.adopt(new DummyObject("tint", 45.0, Attribute::range_io(1, 127, "This is a slider from 1 to 127.")));
-    Value res = base.list_with_type();
-    assert_equal(res.type_tag(), "[sH][sH]");
-    assert_equal("mode", res[0][0].str());
-    assert_equal("tint", res[1][0].str());
+    Value res = base.list_with_attributes();
+    assert_equal(res.type_tag(), "sHsH");
+    assert_equal("mode", res[0].str());
+    assert_equal("tint", res[2].str());
   }
 
   void should_get_child_from_position( void ) {

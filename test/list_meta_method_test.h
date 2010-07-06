@@ -63,8 +63,8 @@ public:
     assert_equal(Url(ERROR_PATH).name(), res[0].str());
     assert_equal(Url(INFO_PATH).name(), res[1].str());
     assert_equal(Url(LIST_PATH).name(), res[2].str());
-    assert_equal(Url(LIST_WITH_TYPE_PATH).name(), res[3].str());
-    assert_equal(Url(TYPE_PATH).name(), res[4].str());
+    assert_equal(Url(LIST_WITH_ATTRIBUTES_PATH).name(), res[3].str());
+    assert_equal(Url(ATTRS_PATH).name(), res[4].str());
     assert_equal(Url(TREE_PATH).name(), res[5].str());
     assert_equal("Nikolaus/", res[6].str());
     

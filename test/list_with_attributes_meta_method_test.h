@@ -31,7 +31,7 @@
 #include "oscit/root.h"
 #include "mock/dummy_object.h"
 
-class ListWithTypeMetaMethodTest : public TestHelper
+class ListWithAttributesMetaMethodTest : public TestHelper
 {
 public:
   /* Bernoulli family
@@ -44,64 +44,65 @@ public:
   /Nikolaus/Johann/Johann
    */
 
-  void test_list_with_type_on_root( void ) {
+  void test_list_with_attributes_on_root( void ) {
     Root root;
     root.adopt(new DummyObject("mode", "rgb", Attribute::select_io("rgb, yuv", "This is a menu.")));
     root.adopt(new DummyObject("tint", 45.0, Attribute::range_io(1, 127, "This is a slider from 1 to 127.")));
-    Value res = root.list_with_type();
+    Value res = root.list_with_attributes();
     // .error, .info, etc
-    assert_equal("[s[*s]][s[ss]][s[ss]][s[ss]][s[ss]][s[ss]][s[sss]][s[fffs]]", res.type_tag());
-    assert_equal(".error", res[0][0].str());
-    assert_equal(".info", res[1][0].str());
+    //
+    assert_equal("sHsHsHsHsHsHsHsH", res.type_tag());
+    assert_equal("\".error\"", res[0].to_json());
+    assert_equal("\".info\"", res[2].to_json());
   }
 
-  void test_list_with_type( void ) {
+  void test_list_with_attributes( void ) {
     Root root;
     Object * tmp = root.adopt(new Object("monitor"));
     tmp->adopt(new DummyObject("mode", "rgb", Attribute::select_io("rgb, yuv", "This is a menu.")));
     tmp->adopt(new DummyObject("tint", 45.0, Attribute::range_io(1, 127, "This is a slider from 1 to 127.")));
     Value reply, res;
 
-    reply = root.call(LIST_WITH_TYPE_PATH, Value(""));
+    reply = root.call(LIST_WITH_ATTRIBUTES_PATH, Value(""));
     assert_equal("", reply[0].str());
     res = reply[1];
     assert_true(res.is_list());
-    assert_equal(7, res.size());
+    assert_equal(2 * 7, res.size()); // 7 methods, 7 keys
 
-    assert_equal(Url(ERROR_PATH).name(), res[0][0].str());
-    assert_equal(Url(INFO_PATH).name(), res[1][0].str());
-    assert_equal(Url(LIST_PATH).name(), res[2][0].str());
-    assert_equal(Url(LIST_WITH_TYPE_PATH).name(), res[3][0].str());
-    assert_equal(Url(TYPE_PATH).name(), res[4][0].str());
-    assert_equal(Url(TREE_PATH).name(), res[5][0].str());
-    assert_equal("monitor/", res[6][0].str());
+    assert_equal(Url(ERROR_PATH).name(), res[0].str());
+    assert_equal(Url(INFO_PATH).name(), res[2].str());
+    assert_equal(Url(LIST_PATH).name(), res[4].str());
+    assert_equal(Url(LIST_WITH_ATTRIBUTES_PATH).name(), res[6].str());
+    assert_equal(Url(ATTRS_PATH).name(), res[8].str());
+    assert_equal(Url(TREE_PATH).name(), res[10].str());
+    assert_equal("monitor/", res[12].str());
 
-    reply = root.call(LIST_WITH_TYPE_PATH, Value("/monitor"));
+    reply = root.call(LIST_WITH_ATTRIBUTES_PATH, Value("/monitor"));
     assert_equal("/monitor", reply[0].str());
     res = reply[1];
     assert_true(res.is_list());
-    assert_equal(2, res.size());
-    assert_equal("mode",    res[0][0].str());
-    assert_equal("tint",    res[1][0].str());
+    assert_equal(2 * 2, res.size());
+    assert_equal("mode",    res[0].str());
+    assert_equal("tint",    res[2].str());
   }
 
-  void test_list_with_type_on_empty( void ) {
+  void test_list_with_attributes_on_empty( void ) {
     Root root;
     root.adopt(new Object("Nikolaus"));
     Value res;
 
-    res = root.call(LIST_WITH_TYPE_PATH, Value("/Nikolaus"));
+    res = root.call(LIST_WITH_ATTRIBUTES_PATH, Value("/Nikolaus"));
     assert_equal("/Nikolaus", res[0].str());
     res = res[1];
     assert_true(res.is_list());
     assert_equal(0,  res.size());
   }
 
-  void test_list_with_type_with_nil( void ) {
+  void test_list_with_attributes_with_nil( void ) {
     Root root(Attribute::no_io("This is the root node."));
     Value res;
 
-    res = root.call(LIST_WITH_TYPE_PATH, gNilValue);
+    res = root.call(LIST_WITH_ATTRIBUTES_PATH, gNilValue);
     assert_true(res.is_nil());
   }
 };

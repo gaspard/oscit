@@ -173,7 +173,7 @@ public:
     assert_false(object.can_receive(Value(BAD_REQUEST_ERROR, "foo")));
     assert_false(object.can_receive(JsonValue("['','']")));
     assert_false(object.can_receive(HashValue()));
-    assert_true (object.can_receive(MatrixValue(1,1)));
+    assert_true (object.can_receive(MatrixValue(3, 2)));
     assert_false(object.can_receive(MidiValue()));
   }
 

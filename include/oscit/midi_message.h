@@ -40,30 +40,56 @@ namespace oscit {
 
 class Value;
 
+#ifndef uint
+typedef unsigned int uint;
+#endif
+
 #define MIDI_NOTE_C0 24
 
+
+
+
+
+
+
+
 /** Midi messages types. */
-enum MidiMessageType {
-  NoteOn = 1, /**< Note on message. */
-  NoteOff,    /**< Note off message. */
-  CtrlChange,
-  ClockStart, /**< Start sequencer. */
-  ClockStop,  /**< Stop sequencer. */
-  ClockTick,  /**< Tick 24 times for every 1/4 note. */
-  ClockContinue, /**< Continue sequencer after 'pause'. */
-  RawMidi,    /**< Other midi message. */
+enum MidiMessageType {   /*   event name        data1               data2              */
+  NoteOff        = 0x80, /**< Note Off        | note number       | velocity           */
+  NoteOn         = 0x90, /**< Note On         | note number       | velocity           */
+  AfterTouch     = 0xA0, /**< Note Aftertouch | note number       | aftertouch value   */
+  CtrlChange     = 0xB0, /**< Controller      | cntrl number      | controller value   */
+  ProgramChange  = 0xC0, /**< Program Change  | program number    | not used           */
+  ChanAftertouch = 0xD0, /**< Ch. Aftertouch  | aftertouch value  | not used           */
+  PitchBend      = 0xE0, /**< Pitch Bend      | pitch value (LSB) | pitch value (MSB)  */
+
+  ClockTick      = 0xf8, /**< Tick 24 times for every 1/4 note. */
+  ClockStart     = 0xfa, /**< Start sequencer. */
+  ClockContinue  = 0xfb, /**< Continue sequencer after 'pause'. */
+  ClockStop      = 0xfc, /**< Stop sequencer.  */
+  RawMidi        = 0xff,    /**< Other midi message. */
 };
 
 /** This class encapsulates midi messages. */
 class MidiMessage : public ReferenceCounted {
  public:
-  MidiMessage() : type_(RawMidi), wait_(0), data_(3) {
+  MidiMessage() : type_(RawMidi), wait_(0), length_(0), data_(3) {
     set_as_note(60);
   }
 
-  explicit MidiMessage(unsigned int data_size) : type_(RawMidi), data_(data_size) {}
+  explicit MidiMessage(unsigned int data_size) : type_(RawMidi), wait_(0), length_(0), data_(data_size) {}
 
   explicit MidiMessage(const Value &message, time_t wait = 0);
+
+  explicit MidiMessage(char data1, char data2, char data3, float length = 0) : type_(RawMidi), wait_(0), length_(0), data_(3) {
+    std::vector<unsigned char> message(3);
+    message[0] = data1;
+    message[1] = data2;
+    message[2] = data3;
+    data_   = message;
+    length_ = length;
+    set_type_from_data();
+  }
 
   virtual ~MidiMessage () {}
 
@@ -136,6 +162,11 @@ class MidiMessage : public ReferenceCounted {
   }
 
   void set_type(MidiMessageType type) {
+    if (type > 0xf0) {
+      data_[0] = (int)type;
+    } else {
+      data_[0] = (int)type + channel() - 1;
+    }
     type_ = type;
   }
 
@@ -158,20 +189,15 @@ class MidiMessage : public ReferenceCounted {
   }
 
   inline void set_channel(int channel) {
-    if (channel > 16) {
-      channel = 16;
-    } else if (channel < 1) {
-      channel = 1;
-    }
-    --channel;
-    if (type_ == NoteOn) {
-      data_[0] = 0x90 + channel;
-    } else if (type_ == NoteOff) {
-      data_[0] = 0x80 + channel;
-    } else if (type_ == CtrlChange) {
-      data_[0] = 0xB0 + channel;
+    if (type_ > 0xf0) {
+      std::cerr << "Cannot set channel for type " << type_ << "\n";
     } else {
-      std::cerr << "Set channel for type " << type_ << " is not implemented yet.\n";
+      if (channel > 16) {
+        channel = 16;
+      } else if (channel < 1) {
+        channel = 1;
+      }
+      data_[0] = type_ + channel - 1;
     }
   }
 
@@ -197,7 +223,7 @@ class MidiMessage : public ReferenceCounted {
     }
   }
 
-  inline MidiMessageType type() const { return type_; }
+  inline int type() const { return type_; }
 
   inline unsigned int note() const { return data_[1]; }
 
@@ -206,16 +232,12 @@ class MidiMessage : public ReferenceCounted {
   inline unsigned int value() const { return data_[2]; }
 
   inline unsigned int channel() const {
-    if (type_ == NoteOn) {
-      return data_[0] - 0x90 + 1;
-    } else if (type_ == NoteOff) {
-      return data_[0] - 0x80 + 1;
-    } else if (type_ == CtrlChange) {
-      return data_[0] - 0xB0 + 1;
-    } else {
-      std::cerr << "Get channel for type " << type_ << " not implemented yet.\n";
+    if (type_ > 0xf0) {
+      std::cerr << "Cannot get channel for type " << type_ << "\n";
       return 0;
     }
+
+    return data_[0] - type_ + 1;
   }
 
   inline unsigned int velocity() const { return data_[2]; }
@@ -325,7 +347,7 @@ class MidiMessage : public ReferenceCounted {
            data_[2] == other.data_[2];
   }
 
-  std::string to_string() const {
+  std::string to_s() const {
     std::ostringstream oss;
     oss << *this;
     return oss.str();
@@ -354,40 +376,17 @@ class MidiMessage : public ReferenceCounted {
   /** Set message type from raw data.
    */
   bool set_type_from_data() {
-    switch(data_[0]) {
-      case 0xfa:
-        type_ = ClockStart;
-        break;
-      case 0xfc:
-        type_ = ClockStop;
-        break;
-      case 0xf8:
-        type_ = ClockTick;
-        break;
-      case 0xfb:
-        type_ = ClockContinue;
-        break;
-      default:
-        // FIXME: other messages not implemented yet.
-        unsigned char channel = data_[0];
-        if (channel >= 0x90) {
-          type_ = NoteOn;
-          if (velocity() == 0) type_ = NoteOff;
-        } else if (channel >= 0x80) {
-          type_ = NoteOff;
-        } else if (channel >= 0xB0) {
-          type_ = CtrlChange;
-        } else {
-          std::cerr << "unknown message type " << channel << ".\n";
-          return false;
-        }
+    if (data_[0] < 0xf0) {
+      type_ = data_[0] & 0xf0;
+    } else {
+      type_ = data_[0];
     }
     return true;
   }
 
   /** Type of midi messate (NoteOn, NoteOff, etc).
    */
-  MidiMessageType type_;
+  int type_;
 
   /** Number of milliseconds (?) to wait before sending the midi event out.
    */
