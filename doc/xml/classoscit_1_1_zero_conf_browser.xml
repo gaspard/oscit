@@ -13,10 +13,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>This value is on if the browser is running (listening for new devices). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="114" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" bodystart="114" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="116" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" bodystart="116" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classoscit_1_1_zero_conf_browser_1a7a152c93ea7ecd1014a428eaa48ad755" prot="protected" static="no" mutable="no">
         <type>std::string</type>
@@ -26,10 +26,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Protocol used in communication (usually &apos;oscit&apos;). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="115" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" bodystart="115" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="120" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" bodystart="120" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classoscit_1_1_zero_conf_browser_1a9a3691f807a3e879e73fd4d18fdd658c" prot="protected" static="no" mutable="no">
         <type>std::string</type>
@@ -39,10 +39,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Service-type to browse. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="116" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" bodystart="116" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="124" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" bodystart="124" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classoscit_1_1_zero_conf_browser_1af016b7a98be2f7b15a662c4d74f51650" prot="protected" static="no" mutable="no">
         <type><ref refid="classoscit_1_1_command" kindref="compound">Command</ref> *</type>
@@ -52,10 +52,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Pointer to a <ref refid="classoscit_1_1_command" kindref="compound">Command</ref> that can be used to build proxy objects. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="117" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" bodystart="117" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="128" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" bodystart="128" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classoscit_1_1_zero_conf_browser_1a477e6c4d06251fdb524e124368601b0c" prot="protected" static="no" mutable="no">
         <type><ref refid="classoscit_1_1_proxy_factory" kindref="compound">ProxyFactory</ref> *</type>
@@ -65,10 +65,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Factory to use to bild proxy objects. If this value is NULL, the browser does not build proxies. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="118" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" bodystart="118" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="133" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" bodystart="133" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -83,7 +83,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="124" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" bodystart="123" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="139" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" bodystart="138" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classoscit_1_1_zero_conf_browser_1a71c852c6459abd2d785a13638604a6f3" prot="private" static="no" mutable="no">
         <type><ref refid="classoscit_1_1_t_hash" kindref="compound">THash</ref>&lt; std::string, <ref refid="classoscit_1_1_location" kindref="compound">Location</ref> &gt;</type>
@@ -96,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="126" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" bodystart="126" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="141" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" bodystart="141" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -380,7 +380,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="121"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="136"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -388,412 +388,423 @@
     <detaileddescription>
 <para>This class let&apos;s you easily found applications providing a certain service. To make sure that everything works as expected, you should do all the setup work (set <ref refid="classoscit_1_1_proxy_factory" kindref="compound">ProxyFactory</ref> for example), BEFORE the browser is adopted by a command (since this operation starts the service browsing). </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="1517">
+      <node id="1503">
         <label>oscit::Mutex</label>
         <link refid="classoscit_1_1_mutex"/>
-        <childnode refid="1518" relation="public-inheritance">
+        <childnode refid="1504" relation="public-inheritance">
         </childnode>
-        <childnode refid="1519" relation="private-inheritance">
+        <childnode refid="1505" relation="private-inheritance">
         </childnode>
       </node>
-      <node id="1519">
+      <node id="1505">
         <label>oscit::NonCopyable</label>
         <link refid="classoscit_1_1_non_copyable"/>
       </node>
-      <node id="1516">
+      <node id="1502">
         <label>oscit::ZeroConfBrowser</label>
         <link refid="classoscit_1_1_zero_conf_browser"/>
-        <childnode refid="1517" relation="public-inheritance">
+        <childnode refid="1503" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1518">
+      <node id="1504">
         <label>oscit::Typed</label>
         <link refid="classoscit_1_1_typed"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="1528">
+      <node id="1524">
+        <label>oscit::CTList&lt; SignalCallback * &gt;</label>
+        <link refid="classoscit_1_1_c_t_list"/>
+        <childnode refid="1525" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1519" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1514">
         <label>oscit::Root</label>
         <link refid="classoscit_1_1_root"/>
-        <childnode refid="1529" relation="public-inheritance">
+        <childnode refid="1515" relation="public-inheritance">
         </childnode>
-        <childnode refid="1535" relation="usage">
+        <childnode refid="1521" relation="usage">
           <edgelabel>objects_</edgelabel>
         </childnode>
-        <childnode refid="1550" relation="usage">
-          <edgelabel>callbacks_on_register_</edgelabel>
-        </childnode>
-        <childnode refid="1552" relation="usage">
+        <childnode refid="1538" relation="usage">
           <edgelabel>commands_</edgelabel>
         </childnode>
+        <childnode refid="1540" relation="usage">
+          <edgelabel>on_register_</edgelabel>
+        </childnode>
       </node>
-      <node id="1544">
-        <label>Matrix</label>
-        <link refid="class_matrix"/>
-      </node>
-      <node id="1550">
-        <label>oscit::CTHash&lt; std::string, CallbackList * &gt;</label>
+      <node id="1540">
+        <label>oscit::CTHash&lt; std::string, Signal * &gt;</label>
         <link refid="classoscit_1_1_c_t_hash"/>
-        <childnode refid="1551" relation="public-inheritance">
+        <childnode refid="1541" relation="public-inheritance">
         </childnode>
-        <childnode refid="1537" relation="public-inheritance">
+        <childnode refid="1519" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1521">
+      <node id="1529">
+        <label>oscit::Matrix</label>
+        <link refid="classoscit_1_1_matrix"/>
+      </node>
+      <node id="1507">
         <label>oscit::Mutex</label>
         <link refid="classoscit_1_1_mutex"/>
-        <childnode refid="1522" relation="public-inheritance">
+        <childnode refid="1508" relation="public-inheritance">
         </childnode>
-        <childnode refid="1523" relation="private-inheritance">
+        <childnode refid="1509" relation="private-inheritance">
         </childnode>
       </node>
-      <node id="1557">
+      <node id="1545">
         <label>oscit::THash&lt; std::string, Object * &gt;</label>
         <link refid="classoscit_1_1_t_hash"/>
-        <childnode refid="1558" relation="usage">
+        <childnode refid="1546" relation="usage">
           <edgelabel>thash_table_</edgelabel>
         </childnode>
       </node>
-      <node id="1564">
+      <node id="1552">
         <label>oscit::THashElement&lt; std::string, Location &gt;</label>
         <link refid="structoscit_1_1_t_hash_element"/>
-        <childnode refid="1564" relation="usage">
+        <childnode refid="1552" relation="usage">
           <edgelabel>next</edgelabel>
         </childnode>
-        <childnode refid="1556" relation="usage">
+        <childnode refid="1544" relation="usage">
           <edgelabel>obj</edgelabel>
         </childnode>
       </node>
-      <node id="1543">
+      <node id="1532">
         <label>oscit::List</label>
         <link refid="classoscit_1_1_list"/>
-        <childnode refid="1540" relation="public-inheritance">
+        <childnode refid="1528" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1559">
+      <node id="1547">
         <label>oscit::THash&lt; Location, RootProxy * &gt;</label>
         <link refid="classoscit_1_1_t_hash"/>
-        <childnode refid="1560" relation="usage">
+        <childnode refid="1548" relation="usage">
+          <edgelabel>thash_table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1526">
+        <label>oscit::Value</label>
+        <link refid="classoscit_1_1_value"/>
+        <childnode refid="1527" relation="usage">
+          <edgelabel>midi_message_</edgelabel>
+        </childnode>
+        <childnode refid="1529" relation="usage">
+          <edgelabel>matrix_</edgelabel>
+        </childnode>
+        <childnode refid="1530" relation="usage">
+          <edgelabel>string_</edgelabel>
+        </childnode>
+        <childnode refid="1531" relation="usage">
+          <edgelabel>error_</edgelabel>
+        </childnode>
+        <childnode refid="1532" relation="usage">
+          <edgelabel>list_</edgelabel>
+        </childnode>
+        <childnode refid="1533" relation="usage">
+          <edgelabel>hash_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1522">
+        <label>oscit::THash&lt; std::string,Object * &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+      </node>
+      <node id="1512">
+        <label>oscit::Thread</label>
+        <link refid="classoscit_1_1_thread"/>
+        <childnode refid="1507" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1513" relation="usage">
+          <edgelabel>semaphore_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1548">
+        <label>oscit::THashElement&lt; Location, RootProxy * &gt;</label>
+        <link refid="structoscit_1_1_t_hash_element"/>
+        <childnode refid="1549" relation="usage">
+          <edgelabel>obj</edgelabel>
+        </childnode>
+        <childnode refid="1548" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="1544" relation="usage">
+          <edgelabel>key</edgelabel>
+        </childnode>
+      </node>
+      <node id="1527">
+        <label>oscit::MidiMessage</label>
+        <link refid="classoscit_1_1_midi_message"/>
+        <childnode refid="1528" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1535">
+        <label>oscit::THashElement&lt; std::string, Value &gt;</label>
+        <link refid="structoscit_1_1_t_hash_element"/>
+        <childnode refid="1535" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="1526" relation="usage">
+          <edgelabel>obj</edgelabel>
+        </childnode>
+      </node>
+      <node id="1517">
+        <label>oscit::CTList&lt; Signal * &gt;</label>
+        <link refid="classoscit_1_1_c_t_list"/>
+        <childnode refid="1518" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1519" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1509">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+      <node id="1550">
+        <label>oscit::ZeroConfRegistration</label>
+        <link refid="classoscit_1_1_zero_conf_registration"/>
+        <childnode refid="1507" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1546">
+        <label>oscit::THashElement&lt; std::string, Object * &gt;</label>
+        <link refid="structoscit_1_1_t_hash_element"/>
+        <childnode refid="1546" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="1515" relation="usage">
+          <edgelabel>obj</edgelabel>
+        </childnode>
+      </node>
+      <node id="1539">
+        <label>std::list&lt;Command * &gt;</label>
+        <link refid="classstd_1_1list"/>
+      </node>
+      <node id="1542">
+        <label>oscit::THash&lt; Location, unsigned int &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+        <childnode refid="1543" relation="usage">
+          <edgelabel>thash_table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1537">
+        <label>std::vector&lt;Object * &gt;</label>
+        <link refid="classstd_1_1vector"/>
+      </node>
+      <node id="1551">
+        <label>oscit::THash&lt; std::string, Location &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+        <childnode refid="1552" relation="usage">
           <edgelabel>thash_table_</edgelabel>
         </childnode>
       </node>
       <node id="1538">
-        <label>oscit::Value</label>
-        <link refid="classoscit_1_1_value"/>
-        <childnode refid="1539" relation="usage">
-          <edgelabel>midi_message_</edgelabel>
-        </childnode>
-        <childnode refid="1541" relation="usage">
-          <edgelabel>string_</edgelabel>
-        </childnode>
-        <childnode refid="1542" relation="usage">
-          <edgelabel>error_</edgelabel>
-        </childnode>
-        <childnode refid="1543" relation="usage">
-          <edgelabel>list_</edgelabel>
-        </childnode>
-        <childnode refid="1544" relation="usage">
-          <edgelabel>matrix_</edgelabel>
-        </childnode>
-        <childnode refid="1545" relation="usage">
-          <edgelabel>hash_</edgelabel>
-        </childnode>
-      </node>
-      <node id="1536">
-        <label>oscit::THash&lt; std::string,Object * &gt;</label>
-        <link refid="classoscit_1_1_t_hash"/>
-      </node>
-      <node id="1526">
-        <label>oscit::Thread</label>
-        <link refid="classoscit_1_1_thread"/>
-        <childnode refid="1521" relation="public-inheritance">
-        </childnode>
-        <childnode refid="1527" relation="usage">
-          <edgelabel>semaphore_</edgelabel>
-        </childnode>
-      </node>
-      <node id="1560">
-        <label>oscit::THashElement&lt; Location, RootProxy * &gt;</label>
-        <link refid="structoscit_1_1_t_hash_element"/>
-        <childnode refid="1561" relation="usage">
-          <edgelabel>obj</edgelabel>
-        </childnode>
-        <childnode refid="1560" relation="usage">
-          <edgelabel>next</edgelabel>
-        </childnode>
-        <childnode refid="1556" relation="usage">
-          <edgelabel>key</edgelabel>
-        </childnode>
-      </node>
-      <node id="1539">
-        <label>oscit::MidiMessage</label>
-        <link refid="classoscit_1_1_midi_message"/>
-        <childnode refid="1540" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="1547">
-        <label>oscit::THashElement&lt; std::string, Value &gt;</label>
-        <link refid="structoscit_1_1_t_hash_element"/>
-        <childnode refid="1547" relation="usage">
-          <edgelabel>next</edgelabel>
-        </childnode>
-        <childnode refid="1538" relation="usage">
-          <edgelabel>obj</edgelabel>
-        </childnode>
-      </node>
-      <node id="1523">
-        <label>oscit::NonCopyable</label>
-        <link refid="classoscit_1_1_non_copyable"/>
-      </node>
-      <node id="1562">
-        <label>oscit::ZeroConfRegistration</label>
-        <link refid="classoscit_1_1_zero_conf_registration"/>
-        <childnode refid="1521" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="1558">
-        <label>oscit::THashElement&lt; std::string, Object * &gt;</label>
-        <link refid="structoscit_1_1_t_hash_element"/>
-        <childnode refid="1558" relation="usage">
-          <edgelabel>next</edgelabel>
-        </childnode>
-        <childnode refid="1529" relation="usage">
-          <edgelabel>obj</edgelabel>
-        </childnode>
-      </node>
-      <node id="1553">
-        <label>std::list&lt;Command * &gt;</label>
-        <link refid="classstd_1_1list"/>
-      </node>
-      <node id="1554">
-        <label>oscit::THash&lt; Location, unsigned int &gt;</label>
-        <link refid="classoscit_1_1_t_hash"/>
-        <childnode refid="1555" relation="usage">
-          <edgelabel>thash_table_</edgelabel>
-        </childnode>
-      </node>
-      <node id="1549">
-        <label>std::vector&lt;Object * &gt;</label>
-        <link refid="classstd_1_1vector"/>
-      </node>
-      <node id="1563">
-        <label>oscit::THash&lt; std::string, Location &gt;</label>
-        <link refid="classoscit_1_1_t_hash"/>
-        <childnode refid="1564" relation="usage">
-          <edgelabel>thash_table_</edgelabel>
-        </childnode>
-      </node>
-      <node id="1551">
-        <label>oscit::THash&lt; std::string,CallbackList * &gt;</label>
-        <link refid="classoscit_1_1_t_hash"/>
-      </node>
-      <node id="1552">
         <label>oscit::CTList&lt; Command * &gt;</label>
         <link refid="classoscit_1_1_c_t_list"/>
-        <childnode refid="1553" relation="public-inheritance">
+        <childnode refid="1539" relation="public-inheritance">
         </childnode>
-        <childnode refid="1537" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="1561">
-        <label>oscit::RootProxy</label>
-        <link refid="classoscit_1_1_root_proxy"/>
-        <childnode refid="1528" relation="public-inheritance">
-        </childnode>
-        <childnode refid="1524" relation="usage">
-          <edgelabel>proxy_factory_</edgelabel>
-        </childnode>
-        <childnode refid="1525" relation="usage">
-          <edgelabel>command_</edgelabel>
-        </childnode>
-        <childnode refid="1556" relation="usage">
-          <edgelabel>remote_location_</edgelabel>
-        </childnode>
-      </node>
-      <node id="1530">
-        <label>oscit::Observable</label>
-        <link refid="classoscit_1_1_observable"/>
-        <childnode refid="1531" relation="public-inheritance">
-        </childnode>
-        <childnode refid="1532" relation="usage">
-          <edgelabel>destruction_notifier_</edgelabel>
-        </childnode>
-      </node>
-      <node id="1532">
-        <label>oscit::OnDestroyNotifier</label>
-        <link refid="classoscit_1_1_on_destroy_notifier"/>
-        <childnode refid="1533" relation="public-inheritance">
-        </childnode>
-        <childnode refid="1533" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="1520">
-        <label>oscit::ZeroConfBrowser</label>
-        <link refid="classoscit_1_1_zero_conf_browser"/>
-        <childnode refid="1521" relation="public-inheritance">
-        </childnode>
-        <childnode refid="1524" relation="usage">
-          <edgelabel>proxy_factory_</edgelabel>
-        </childnode>
-        <childnode refid="1525" relation="usage">
-          <edgelabel>command_</edgelabel>
-        </childnode>
-        <childnode refid="1563" relation="usage">
-          <edgelabel>found_devices_</edgelabel>
-        </childnode>
-      </node>
-      <node id="1531">
-        <label>oscit::Observer</label>
-        <link refid="classoscit_1_1_observer"/>
-      </node>
-      <node id="1527">
-        <label>oscit::Semaphore</label>
-        <link refid="classoscit_1_1_semaphore"/>
-        <childnode refid="1523" relation="private-inheritance">
-        </childnode>
-        <childnode refid="1521" relation="usage">
-          <edgelabel>acquire_mutex_</edgelabel>
-        </childnode>
-      </node>
-      <node id="1534">
-        <label>oscit::CReferenceCounted</label>
-        <link refid="classoscit_1_1_c_reference_counted"/>
-        <childnode refid="1523" relation="private-inheritance">
-        </childnode>
-      </node>
-      <node id="1529">
-        <label>oscit::Object</label>
-        <link refid="classoscit_1_1_object"/>
-        <childnode refid="1522" relation="public-inheritance">
-        </childnode>
-        <childnode refid="1530" relation="public-inheritance">
-        </childnode>
-        <childnode refid="1534" relation="public-inheritance">
-        </childnode>
-        <childnode refid="1535" relation="usage">
-          <edgelabel>children_</edgelabel>
-        </childnode>
-        <childnode refid="1528" relation="usage">
-          <edgelabel>root_</edgelabel>
-        </childnode>
-        <childnode refid="1538" relation="usage">
-          <edgelabel>type_</edgelabel>
-        </childnode>
-        <childnode refid="1548" relation="usage">
-          <edgelabel>children_vector_</edgelabel>
-        </childnode>
-        <childnode refid="1521" relation="usage">
-          <edgelabel>context_</edgelabel>
-        </childnode>
-        <childnode refid="1529" relation="usage">
-          <edgelabel>parent_</edgelabel>
-        </childnode>
-      </node>
-      <node id="1542">
-        <label>oscit::Error</label>
-        <link refid="classoscit_1_1_error"/>
-        <childnode refid="1540" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="1546">
-        <label>oscit::THash&lt; std::string, Value &gt;</label>
-        <link refid="classoscit_1_1_t_hash"/>
-        <childnode refid="1547" relation="usage">
-          <edgelabel>thash_table_</edgelabel>
-        </childnode>
-      </node>
-      <node id="1556">
-        <label>oscit::Location</label>
-        <link refid="classoscit_1_1_location"/>
-      </node>
-      <node id="1535">
-        <label>oscit::CTHash&lt; std::string, Object * &gt;</label>
-        <link refid="classoscit_1_1_c_t_hash"/>
-        <childnode refid="1536" relation="public-inheritance">
-        </childnode>
-        <childnode refid="1537" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="1522">
-        <label>oscit::Typed</label>
-        <link refid="classoscit_1_1_typed"/>
-      </node>
-      <node id="1545">
-        <label>oscit::Hash</label>
-        <link refid="classoscit_1_1_hash"/>
-        <childnode refid="1540" relation="public-inheritance">
-        </childnode>
-        <childnode refid="1546" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="1540">
-        <label>oscit::ReferenceCounted</label>
-        <link refid="classoscit_1_1_reference_counted"/>
-      </node>
-      <node id="1555">
-        <label>oscit::THashElement&lt; Location, unsigned int &gt;</label>
-        <link refid="structoscit_1_1_t_hash_element"/>
-        <childnode refid="1555" relation="usage">
-          <edgelabel>next</edgelabel>
-        </childnode>
-        <childnode refid="1556" relation="usage">
-          <edgelabel>key</edgelabel>
+        <childnode refid="1519" relation="public-inheritance">
         </childnode>
       </node>
       <node id="1525">
-        <label>oscit::Command</label>
-        <link refid="classoscit_1_1_command"/>
-        <childnode refid="1526" relation="public-inheritance">
+        <label>std::list&lt;SignalCallback * &gt;</label>
+        <link refid="classstd_1_1list"/>
+      </node>
+      <node id="1549">
+        <label>oscit::RootProxy</label>
+        <link refid="classoscit_1_1_root_proxy"/>
+        <childnode refid="1514" relation="public-inheritance">
         </childnode>
-        <childnode refid="1528" relation="usage">
+        <childnode refid="1510" relation="usage">
+          <edgelabel>proxy_factory_</edgelabel>
+        </childnode>
+        <childnode refid="1511" relation="usage">
+          <edgelabel>command_</edgelabel>
+        </childnode>
+        <childnode refid="1544" relation="usage">
+          <edgelabel>remote_location_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1506">
+        <label>oscit::ZeroConfBrowser</label>
+        <link refid="classoscit_1_1_zero_conf_browser"/>
+        <childnode refid="1507" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1510" relation="usage">
+          <edgelabel>proxy_factory_</edgelabel>
+        </childnode>
+        <childnode refid="1511" relation="usage">
+          <edgelabel>command_</edgelabel>
+        </childnode>
+        <childnode refid="1551" relation="usage">
+          <edgelabel>found_devices_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1518">
+        <label>std::list&lt;Signal * &gt;</label>
+        <link refid="classstd_1_1list"/>
+      </node>
+      <node id="1541">
+        <label>oscit::THash&lt; std::string,Signal * &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+      </node>
+      <node id="1516">
+        <label>oscit::Observer</label>
+        <link refid="classoscit_1_1_observer"/>
+        <childnode refid="1517" relation="usage">
+          <edgelabel>observed_signals_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1513">
+        <label>oscit::Semaphore</label>
+        <link refid="classoscit_1_1_semaphore"/>
+        <childnode refid="1509" relation="private-inheritance">
+        </childnode>
+        <childnode refid="1507" relation="usage">
+          <edgelabel>acquire_mutex_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1520">
+        <label>oscit::CReferenceCounted</label>
+        <link refid="classoscit_1_1_c_reference_counted"/>
+        <childnode refid="1509" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="1523">
+        <label>oscit::Signal</label>
+        <link refid="classoscit_1_1_signal"/>
+        <childnode refid="1524" relation="usage">
+          <edgelabel>callbacks_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1515">
+        <label>oscit::Object</label>
+        <link refid="classoscit_1_1_object"/>
+        <childnode refid="1508" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1516" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1520" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1521" relation="usage">
+          <edgelabel>children_</edgelabel>
+        </childnode>
+        <childnode refid="1514" relation="usage">
           <edgelabel>root_</edgelabel>
         </childnode>
-        <childnode refid="1554" relation="usage">
+        <childnode refid="1523" relation="usage">
+          <edgelabel>on_delete_</edgelabel>
+        </childnode>
+        <childnode refid="1526" relation="usage">
+          <edgelabel>attributes_</edgelabel>
+        </childnode>
+        <childnode refid="1536" relation="usage">
+          <edgelabel>children_vector_</edgelabel>
+        </childnode>
+        <childnode refid="1507" relation="usage">
+          <edgelabel>context_</edgelabel>
+        </childnode>
+        <childnode refid="1515" relation="usage">
+          <edgelabel>parent_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1531">
+        <label>oscit::Error</label>
+        <link refid="classoscit_1_1_error"/>
+        <childnode refid="1528" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1534">
+        <label>oscit::THash&lt; std::string, Value &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+        <childnode refid="1535" relation="usage">
+          <edgelabel>thash_table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1544">
+        <label>oscit::Location</label>
+        <link refid="classoscit_1_1_location"/>
+      </node>
+      <node id="1521">
+        <label>oscit::CTHash&lt; std::string, Object * &gt;</label>
+        <link refid="classoscit_1_1_c_t_hash"/>
+        <childnode refid="1522" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1519" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1508">
+        <label>oscit::Typed</label>
+        <link refid="classoscit_1_1_typed"/>
+      </node>
+      <node id="1533">
+        <label>oscit::Hash</label>
+        <link refid="classoscit_1_1_hash"/>
+        <childnode refid="1528" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1534" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1528">
+        <label>oscit::ReferenceCounted</label>
+        <link refid="classoscit_1_1_reference_counted"/>
+      </node>
+      <node id="1543">
+        <label>oscit::THashElement&lt; Location, unsigned int &gt;</label>
+        <link refid="structoscit_1_1_t_hash_element"/>
+        <childnode refid="1543" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="1544" relation="usage">
+          <edgelabel>key</edgelabel>
+        </childnode>
+      </node>
+      <node id="1511">
+        <label>oscit::Command</label>
+        <link refid="classoscit_1_1_command"/>
+        <childnode refid="1512" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1514" relation="usage">
+          <edgelabel>root_</edgelabel>
+        </childnode>
+        <childnode refid="1542" relation="usage">
           <edgelabel>observers_</edgelabel>
         </childnode>
-        <childnode refid="1557" relation="usage">
+        <childnode refid="1545" relation="usage">
           <edgelabel>remote_objects_</edgelabel>
         </childnode>
-        <childnode refid="1559" relation="usage">
+        <childnode refid="1547" relation="usage">
           <edgelabel>root_proxies_</edgelabel>
         </childnode>
-        <childnode refid="1562" relation="usage">
+        <childnode refid="1550" relation="usage">
           <edgelabel>zeroconf_registration_</edgelabel>
         </childnode>
       </node>
-      <node id="1548">
+      <node id="1536">
         <label>oscit::CTVector&lt; Object * &gt;</label>
         <link refid="classoscit_1_1_c_t_vector"/>
-        <childnode refid="1549" relation="public-inheritance">
-        </childnode>
         <childnode refid="1537" relation="public-inheritance">
         </childnode>
+        <childnode refid="1519" relation="public-inheritance">
+        </childnode>
       </node>
-      <node id="1537">
+      <node id="1519">
         <label>oscit::RWMutex</label>
         <link refid="classoscit_1_1_r_w_mutex"/>
       </node>
-      <node id="1533">
-        <label>oscit::CallbackList</label>
-        <link refid="classoscit_1_1_callback_list"/>
-        <childnode refid="1523" relation="private-inheritance">
-        </childnode>
-        <childnode refid="1531" relation="usage">
-          <edgelabel>list_owner_</edgelabel>
-        </childnode>
-      </node>
-      <node id="1524">
+      <node id="1510">
         <label>oscit::ProxyFactory</label>
         <link refid="classoscit_1_1_proxy_factory"/>
       </node>
-      <node id="1541">
+      <node id="1530">
         <label>oscit::StringData</label>
         <link refid="classoscit_1_1_string_data"/>
-        <childnode refid="1540" relation="public-inheritance">
+        <childnode refid="1528" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="51" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" bodystart="51" bodyend="127"/>
+    <location file="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" line="51" bodyfile="/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h" bodystart="51" bodyend="142"/>
     <listofallmembers>
       <member refid="classoscit_1_1_zero_conf_browser_1a69176a13ad82b2e18c38011ac1131ac5" prot="public" virt="non-virtual"><scope>oscit::ZeroConfBrowser</scope><name>add_device</name></member>
       <member refid="classoscit_1_1_zero_conf_browser_1a529adc4f9a8fc5bd3dca911289200969" prot="protected" virt="non-virtual"><scope>oscit::ZeroConfBrowser</scope><name>add_proxy</name></member>

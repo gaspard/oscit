@@ -16,7 +16,7 @@
 <para>Simple flag that is set to true when the last compilation was successful. This flag can be used to avoid using compilation results if something went wrong. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="102" bodyfile="/Users/gaspard/git/oscit/include/oscit/script.h" bodystart="102" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="103" bodyfile="/Users/gaspard/git/oscit/include/oscit/script.h" bodystart="103" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classoscit_1_1_script_1a5c0bd07b2f9903c3e613dfbdc5cd729e" prot="protected" static="no" mutable="no">
         <type><ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
@@ -29,7 +29,7 @@
 <para>Keep track of the last error to display instead of &quot;script is broken&quot;. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="106" bodyfile="/Users/gaspard/git/oscit/include/oscit/script.h" bodystart="106" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="107" bodyfile="/Users/gaspard/git/oscit/include/oscit/script.h" bodystart="107" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classoscit_1_1_script_1ab4c96e1a89a42748cf8594a4f565e41d" prot="protected" static="no" mutable="no">
         <type>std::string</type>
@@ -42,7 +42,7 @@
 <para><ref refid="classoscit_1_1_script" kindref="compound">Script</ref> text. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="110" bodyfile="/Users/gaspard/git/oscit/include/oscit/script.h" bodystart="110" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="111" bodyfile="/Users/gaspard/git/oscit/include/oscit/script.h" bodystart="111" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classoscit_1_1_script_1a93b1ceb29aef0d01608e7af4f0c14e28" prot="protected" static="no" mutable="no">
         <type>std::string</type>
@@ -55,7 +55,7 @@
 <para>Path to script file when the text is stored in a file. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="114" bodyfile="/Users/gaspard/git/oscit/include/oscit/script.h" bodystart="114" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="115" bodyfile="/Users/gaspard/git/oscit/include/oscit/script.h" bodystart="115" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classoscit_1_1_script_1a3df4ee6533fb329814ef5aebc6863a3c" prot="protected" static="no" mutable="no">
         <type>time_t</type>
@@ -68,7 +68,7 @@
 <para><ref refid="classoscit_1_1_script" kindref="compound">Script</ref> file&apos;s modification time when it was last loaded. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="118" bodyfile="/Users/gaspard/git/oscit/include/oscit/script.h" bodystart="118" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="119" bodyfile="/Users/gaspard/git/oscit/include/oscit/script.h" bodystart="119" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classoscit_1_1_script_1a542893797cbcf40e5a1e70ad4df39d5f" prot="protected" static="no" mutable="no">
         <type><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref></type>
@@ -81,7 +81,7 @@
 <para>How often we should check for a modification in the source file (in seconds). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="122" bodyfile="/Users/gaspard/git/oscit/include/oscit/script.h" bodystart="122" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="123" bodyfile="/Users/gaspard/git/oscit/include/oscit/script.h" bodystart="123" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classoscit_1_1_script_1ad383b5359cdec5a427055b294639a197" prot="protected" static="no" mutable="no">
         <type>time_t</type>
@@ -94,7 +94,7 @@
 <para>Next scheduled reload. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="126" bodyfile="/Users/gaspard/git/oscit/include/oscit/script.h" bodystart="126" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="127" bodyfile="/Users/gaspard/git/oscit/include/oscit/script.h" bodystart="127" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classoscit_1_1_script_1a8a1f71ca560be8590cfa99f2b1a16b43" prot="protected" static="no" mutable="no">
         <type>time_t</type>
@@ -107,7 +107,7 @@
 <para>Current logical time. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="130" bodyfile="/Users/gaspard/git/oscit/include/oscit/script.h" bodystart="130" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="131" bodyfile="/Users/gaspard/git/oscit/include/oscit/script.h" bodystart="131" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -205,13 +205,13 @@
 <parametername>hash</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>should be a pointer to a <ref refid="classoscit_1_1_hash_value" kindref="compound">HashValue</ref>. </para></parameterdescription>
+<para>should be a pointer to a <ref refid="classoscit_1_1_hash_value" kindref="compound">HashValue</ref>. FIXME: remove. Using to_hash instead. </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="67"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="68"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_script_1a954b692dd09d0b04fd803fe96def970f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -224,7 +224,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="69" bodyfile="/Users/gaspard/git/oscit/include/oscit/script.h" bodystart="69" bodyend="71"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="70" bodyfile="/Users/gaspard/git/oscit/include/oscit/script.h" bodystart="70" bodyend="72"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_script_1ae9e7fa70580ba3b27ce69a43ba75a505" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
@@ -237,7 +237,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="73" bodyfile="/Users/gaspard/git/oscit/include/oscit/script.h" bodystart="73" bodyend="75"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="74" bodyfile="/Users/gaspard/git/oscit/include/oscit/script.h" bodystart="74" bodyend="76"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -256,7 +256,7 @@
 <para>Ask for a script reload. If reload_every_ time has not elapsed, the call is ignored. If the file&apos;s modification time has not changed, nothing happens. If the file content changed, it is evaluated. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="84"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="85"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_script_1a376b979d2850aa6591aa227812065567" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
@@ -270,7 +270,7 @@
 <para>Evaluat the content of the script. This method must be overwritten in sub-classes. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="89"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="90"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_script_1ace6cc17204880372ecd2625754ed0476" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -287,7 +287,7 @@
 <para>Sets &apos;script_ok&apos; flag. This can be overwritten by subclasses in case they need to react on state changes. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="95"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="96"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -306,7 +306,7 @@
 <para>Load script and evaluate content. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="135"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="136"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_script_1ac35f8da8d68237e3ffc67f08c11390e2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
@@ -319,7 +319,7 @@
 <para>Save script content to file. This is done automatically when the script content changes. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="140"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="141"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_script_1aaed6f77cf93d039bd3d5df5954e04d2a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -332,7 +332,7 @@
 <para>Define next reload time. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="144"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="145"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -340,106 +340,106 @@
     <detaileddescription>
 <para>Abstract class to manage script load, reload and eval. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="1265">
+      <node id="1277">
         <label>oscit::OscMapCommand</label>
         <link refid="classoscit_1_1_osc_map_command"/>
-        <childnode refid="1264" relation="public-inheritance">
+        <childnode refid="1276" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1264">
+      <node id="1276">
         <label>oscit::Script</label>
         <link refid="classoscit_1_1_script"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="1273">
-        <label>Matrix</label>
-        <link refid="class_matrix"/>
+      <node id="1282">
+        <label>oscit::Matrix</label>
+        <link refid="classoscit_1_1_matrix"/>
       </node>
-      <node id="1272">
+      <node id="1285">
         <label>oscit::List</label>
         <link refid="classoscit_1_1_list"/>
-        <childnode refid="1269" relation="public-inheritance">
+        <childnode refid="1281" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1267">
+      <node id="1279">
         <label>oscit::Value</label>
         <link refid="classoscit_1_1_value"/>
-        <childnode refid="1268" relation="usage">
+        <childnode refid="1280" relation="usage">
           <edgelabel>midi_message_</edgelabel>
         </childnode>
-        <childnode refid="1270" relation="usage">
-          <edgelabel>string_</edgelabel>
-        </childnode>
-        <childnode refid="1271" relation="usage">
-          <edgelabel>error_</edgelabel>
-        </childnode>
-        <childnode refid="1272" relation="usage">
-          <edgelabel>list_</edgelabel>
-        </childnode>
-        <childnode refid="1273" relation="usage">
+        <childnode refid="1282" relation="usage">
           <edgelabel>matrix_</edgelabel>
         </childnode>
-        <childnode refid="1274" relation="usage">
+        <childnode refid="1283" relation="usage">
+          <edgelabel>string_</edgelabel>
+        </childnode>
+        <childnode refid="1284" relation="usage">
+          <edgelabel>error_</edgelabel>
+        </childnode>
+        <childnode refid="1285" relation="usage">
+          <edgelabel>list_</edgelabel>
+        </childnode>
+        <childnode refid="1286" relation="usage">
           <edgelabel>hash_</edgelabel>
         </childnode>
       </node>
-      <node id="1268">
+      <node id="1280">
         <label>oscit::MidiMessage</label>
         <link refid="classoscit_1_1_midi_message"/>
-        <childnode refid="1269" relation="public-inheritance">
+        <childnode refid="1281" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1276">
+      <node id="1288">
         <label>oscit::THashElement&lt; std::string, Value &gt;</label>
         <link refid="structoscit_1_1_t_hash_element"/>
-        <childnode refid="1276" relation="usage">
+        <childnode refid="1288" relation="usage">
           <edgelabel>next</edgelabel>
         </childnode>
-        <childnode refid="1267" relation="usage">
+        <childnode refid="1279" relation="usage">
           <edgelabel>obj</edgelabel>
         </childnode>
       </node>
-      <node id="1266">
+      <node id="1278">
         <label>oscit::Script</label>
         <link refid="classoscit_1_1_script"/>
-        <childnode refid="1267" relation="usage">
+        <childnode refid="1279" relation="usage">
           <edgelabel>last_error_</edgelabel>
         </childnode>
       </node>
-      <node id="1271">
+      <node id="1284">
         <label>oscit::Error</label>
         <link refid="classoscit_1_1_error"/>
-        <childnode refid="1269" relation="public-inheritance">
+        <childnode refid="1281" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1275">
+      <node id="1287">
         <label>oscit::THash&lt; std::string, Value &gt;</label>
         <link refid="classoscit_1_1_t_hash"/>
-        <childnode refid="1276" relation="usage">
+        <childnode refid="1288" relation="usage">
           <edgelabel>thash_table_</edgelabel>
         </childnode>
       </node>
-      <node id="1274">
+      <node id="1286">
         <label>oscit::Hash</label>
         <link refid="classoscit_1_1_hash"/>
-        <childnode refid="1269" relation="public-inheritance">
+        <childnode refid="1281" relation="public-inheritance">
         </childnode>
-        <childnode refid="1275" relation="public-inheritance">
+        <childnode refid="1287" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1269">
+      <node id="1281">
         <label>oscit::ReferenceCounted</label>
         <link refid="classoscit_1_1_reference_counted"/>
       </node>
-      <node id="1270">
+      <node id="1283">
         <label>oscit::StringData</label>
         <link refid="classoscit_1_1_string_data"/>
-        <childnode refid="1269" relation="public-inheritance">
+        <childnode refid="1281" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="42" bodyfile="/Users/gaspard/git/oscit/include/oscit/script.h" bodystart="42" bodyend="145"/>
+    <location file="/Users/gaspard/git/oscit/include/oscit/script.h" line="42" bodyfile="/Users/gaspard/git/oscit/include/oscit/script.h" bodystart="42" bodyend="146"/>
     <listofallmembers>
       <member refid="classoscit_1_1_script_1a8a1f71ca560be8590cfa99f2b1a16b43" prot="protected" virt="non-virtual"><scope>oscit::Script</scope><name>current_time_</name></member>
       <member refid="classoscit_1_1_script_1a376b979d2850aa6591aa227812065567" prot="protected" virt="pure-virtual"><scope>oscit::Script</scope><name>eval_script</name></member>

@@ -4,285 +4,311 @@
     <compoundname>typed.h</compoundname>
     <includes local="no">stdio.h</includes>
     <includes local="no">iostream</includes>
-    <includedby refid="mutex_8h" local="yes">include/oscit/mutex.h</includedby>
-    <includedby refid="object_8h" local="yes">include/oscit/object.h</includedby>
+    <includedby refid="mutex_8h" local="yes">/Users/gaspard/git/oscit/include/oscit/mutex.h</includedby>
+    <includedby refid="object_8h" local="yes">/Users/gaspard/git/oscit/include/oscit/object.h</includedby>
     <incdepgraph>
-      <node id="3021">
+      <node id="3015">
         <label>iostream</label>
       </node>
-      <node id="3019">
-        <label>include/oscit/typed.h</label>
+      <node id="3013">
+        <label>/Users/gaspard/git/oscit/include/oscit/typed.h</label>
         <link refid="typed.h"/>
-        <childnode refid="3020" relation="include">
+        <childnode refid="3014" relation="include">
         </childnode>
-        <childnode refid="3021" relation="include">
+        <childnode refid="3015" relation="include">
         </childnode>
       </node>
-      <node id="3020">
+      <node id="3014">
         <label>stdio.h</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="3037">
-        <label>include/oscit/list_with_type_meta_method.h</label>
-        <link refid="list__with__type__meta__method_8h"/>
-      </node>
-      <node id="3023">
-        <label>include/oscit/mutex.h</label>
+      <node id="3017">
+        <label>/Users/gaspard/git/oscit/include/oscit/mutex.h</label>
         <link refid="mutex_8h"/>
-        <childnode refid="3024" relation="include">
+        <childnode refid="3018" relation="include">
         </childnode>
-        <childnode refid="3029" relation="include">
+        <childnode refid="3023" relation="include">
         </childnode>
-        <childnode refid="3046" relation="include">
+        <childnode refid="3040" relation="include">
+        </childnode>
+        <childnode refid="3047" relation="include">
         </childnode>
         <childnode refid="3051" relation="include">
         </childnode>
-        <childnode refid="3055" relation="include">
+        <childnode refid="3037" relation="include">
         </childnode>
-        <childnode refid="3042" relation="include">
-        </childnode>
-        <childnode refid="3056" relation="include">
-        </childnode>
-      </node>
-      <node id="3052">
-        <label>include/oscit/command.h</label>
-        <link refid="command_8h"/>
-        <childnode refid="3053" relation="include">
-        </childnode>
-        <childnode refid="3027" relation="include">
-        </childnode>
-        <childnode refid="3029" relation="include">
-        </childnode>
-      </node>
-      <node id="3056">
-        <label>include/oscit/zeroconf_registration.h</label>
-        <link refid="zeroconf__registration_8h"/>
-      </node>
-      <node id="3051">
-        <label>include/oscit/thread.h</label>
-        <link refid="thread_8h"/>
         <childnode refid="3052" relation="include">
         </childnode>
-        <childnode refid="3027" relation="include">
+      </node>
+      <node id="3044">
+        <label>/Users/gaspard/git/oscit/include/oscit/observer.h</label>
+        <link refid="observer_8h"/>
+        <childnode refid="3018" relation="include">
         </childnode>
-        <childnode refid="3055" relation="include">
+        <childnode refid="3045" relation="include">
         </childnode>
       </node>
       <node id="3048">
-        <label>include/oscit/c_thash.h</label>
-        <link refid="c__thash_8h"/>
-        <childnode refid="3024" relation="include">
+        <label>/Users/gaspard/git/oscit/include/oscit/command.h</label>
+        <link refid="command_8h"/>
+        <childnode refid="3049" relation="include">
         </childnode>
-        <childnode refid="3029" relation="include">
+        <childnode refid="3021" relation="include">
+        </childnode>
+        <childnode refid="3023" relation="include">
         </childnode>
       </node>
-      <node id="3053">
-        <label>include/oscit/osc_command.h</label>
+      <node id="3052">
+        <label>/Users/gaspard/git/oscit/include/oscit/zeroconf_registration.h</label>
+        <link refid="zeroconf__registration_8h"/>
+      </node>
+      <node id="3047">
+        <label>/Users/gaspard/git/oscit/include/oscit/thread.h</label>
+        <link refid="thread_8h"/>
+        <childnode refid="3048" relation="include">
+        </childnode>
+        <childnode refid="3021" relation="include">
+        </childnode>
+        <childnode refid="3051" relation="include">
+        </childnode>
+      </node>
+      <node id="3042">
+        <label>/Users/gaspard/git/oscit/include/oscit/c_thash.h</label>
+        <link refid="c__thash_8h"/>
+        <childnode refid="3018" relation="include">
+        </childnode>
+        <childnode refid="3021" relation="include">
+        </childnode>
+        <childnode refid="3023" relation="include">
+        </childnode>
+      </node>
+      <node id="3049">
+        <label>/Users/gaspard/git/oscit/include/oscit/osc_command.h</label>
         <link refid="osc__command_8h"/>
-        <childnode refid="3054" relation="include">
+        <childnode refid="3050" relation="include">
+        </childnode>
+        <childnode refid="3021" relation="include">
+        </childnode>
+      </node>
+      <node id="3035">
+        <label>/Users/gaspard/git/oscit/include/oscit/object_proxy.h</label>
+        <link refid="object__proxy_8h"/>
+        <childnode refid="3033" relation="include">
+        </childnode>
+      </node>
+      <node id="3039">
+        <label>/Users/gaspard/git/oscit/include/oscit/osc_remote_object.h</label>
+        <link refid="osc__remote__object_8h"/>
+      </node>
+      <node id="3023">
+        <label>/Users/gaspard/git/oscit/include/oscit/root.h</label>
+        <link refid="root_8h"/>
+        <childnode refid="3024" relation="include">
+        </childnode>
+        <childnode refid="3025" relation="include">
+        </childnode>
+        <childnode refid="3026" relation="include">
         </childnode>
         <childnode refid="3027" relation="include">
         </childnode>
-      </node>
-      <node id="3040">
-        <label>include/oscit/object_proxy.h</label>
-        <link refid="object__proxy_8h"/>
-        <childnode refid="3038" relation="include">
+        <childnode refid="3028" relation="include">
         </childnode>
-      </node>
-      <node id="3045">
-        <label>include/oscit/osc_remote_object.h</label>
-        <link refid="osc__remote__object_8h"/>
-      </node>
-      <node id="3044">
-        <label>include/oscit/type_meta_method.h</label>
-        <link refid="type__meta__method_8h"/>
-      </node>
-      <node id="3029">
-        <label>include/oscit/root.h</label>
-        <link refid="root_8h"/>
         <childnode refid="3030" relation="include">
         </childnode>
         <childnode refid="3031" relation="include">
         </childnode>
         <childnode refid="3032" relation="include">
         </childnode>
+        <childnode refid="3021" relation="include">
+        </childnode>
         <childnode refid="3033" relation="include">
         </childnode>
+        <childnode refid="3034" relation="include">
+        </childnode>
+        <childnode refid="3038" relation="include">
+        </childnode>
+      </node>
+      <node id="3021">
+        <label>/Users/gaspard/git/oscit/include/oscit/oscit.h</label>
+        <link refid="oscit_8h"/>
+      </node>
+      <node id="3030">
+        <label>/Users/gaspard/git/oscit/include/oscit/info_meta_method.h</label>
+        <link refid="info__meta__method_8h"/>
+      </node>
+      <node id="3028">
+        <label>/Users/gaspard/git/oscit/include/oscit/file_method.h</label>
+        <link refid="file__method_8h"/>
+        <childnode refid="3029" relation="include">
+        </childnode>
+        <childnode refid="3021" relation="include">
+        </childnode>
+      </node>
+      <node id="3027">
+        <label>/Users/gaspard/git/oscit/include/oscit/error_meta_method.h</label>
+        <link refid="error__meta__method_8h"/>
+      </node>
+      <node id="3032">
+        <label>/Users/gaspard/git/oscit/include/oscit/list_with_attributes_meta_method.h</label>
+        <link refid="list__with__attributes__meta__method_8h"/>
+      </node>
+      <node id="3036">
+        <label>/Users/gaspard/git/oscit/include/oscit/osc_root_proxy.h</label>
+        <link refid="osc__root__proxy_8h"/>
+      </node>
+      <node id="3019">
+        <label>/Users/gaspard/git/oscit/include/oscit/log_object.h</label>
+        <link refid="log__object_8h"/>
+      </node>
+      <node id="3050">
+        <label>/Users/gaspard/git/oscit/include/oscit/osc_map_command.h</label>
+        <link refid="osc__map__command_8h"/>
+        <childnode refid="3021" relation="include">
+        </childnode>
+      </node>
+      <node id="3025">
+        <label>/Users/gaspard/git/oscit/include/oscit/attrs_meta_method.h</label>
+        <link refid="attrs__meta__method_8h"/>
+      </node>
+      <node id="3051">
+        <label>/Users/gaspard/git/oscit/include/oscit/timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="3021" relation="include">
+        </childnode>
+      </node>
+      <node id="3026">
+        <label>/Users/gaspard/git/oscit/include/oscit/call.h</label>
+        <link refid="call_8h"/>
+        <childnode refid="3021" relation="include">
+        </childnode>
+      </node>
+      <node id="3033">
+        <label>/Users/gaspard/git/oscit/include/oscit/proxy_factory.h</label>
+        <link refid="proxy__factory_8h"/>
+        <childnode refid="3021" relation="include">
+        </childnode>
+      </node>
+      <node id="3029">
+        <label>/Users/gaspard/git/oscit/include/oscit/hash_file_method.h</label>
+        <link refid="hash__file__method_8h"/>
+        <childnode refid="3021" relation="include">
+        </childnode>
+      </node>
+      <node id="3031">
+        <label>/Users/gaspard/git/oscit/include/oscit/list_meta_method.h</label>
+        <link refid="list__meta__method_8h"/>
+      </node>
+      <node id="3041">
+        <label>/Users/gaspard/git/oscit/include/oscit/rw_mutex.h</label>
+        <link refid="rw__mutex_8h"/>
+        <childnode refid="3042" relation="include">
+        </childnode>
+        <childnode refid="3043" relation="include">
+        </childnode>
+        <childnode refid="3046" relation="include">
+        </childnode>
+      </node>
+      <node id="3040">
+        <label>/Users/gaspard/git/oscit/include/oscit/semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="3041" relation="include">
+        </childnode>
+        <childnode refid="3040" relation="include">
+        </childnode>
+        <childnode refid="3047" relation="include">
+        </childnode>
+      </node>
+      <node id="3045">
+        <label>/Users/gaspard/git/oscit/include/oscit/signal.h</label>
+        <link refid="signal_8h"/>
+        <childnode refid="3018" relation="include">
+        </childnode>
+        <childnode refid="3021" relation="include">
+        </childnode>
+        <childnode refid="3023" relation="include">
+        </childnode>
+      </node>
+      <node id="3046">
+        <label>/Users/gaspard/git/oscit/include/oscit/c_tvector.h</label>
+        <link refid="c__tvector_8h"/>
+        <childnode refid="3018" relation="include">
+        </childnode>
+      </node>
+      <node id="3037">
+        <label>/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h</label>
+        <link refid="zeroconf__browser_8h"/>
+        <childnode refid="3021" relation="include">
+        </childnode>
+      </node>
+      <node id="3034">
+        <label>/Users/gaspard/git/oscit/include/oscit/root_proxy.h</label>
+        <link refid="root__proxy_8h"/>
         <childnode refid="3035" relation="include">
         </childnode>
         <childnode refid="3036" relation="include">
         </childnode>
+        <childnode refid="3033" relation="include">
+        </childnode>
         <childnode refid="3037" relation="include">
         </childnode>
-        <childnode refid="3027" relation="include">
-        </childnode>
-        <childnode refid="3038" relation="include">
-        </childnode>
-        <childnode refid="3039" relation="include">
-        </childnode>
-        <childnode refid="3043" relation="include">
-        </childnode>
-        <childnode refid="3044" relation="include">
-        </childnode>
       </node>
-      <node id="3027">
-        <label>include/oscit/oscit.h</label>
-        <link refid="oscit_8h"/>
-      </node>
-      <node id="3035">
-        <label>include/oscit/info_meta_method.h</label>
-        <link refid="info__meta__method_8h"/>
-      </node>
-      <node id="3033">
-        <label>include/oscit/file_method.h</label>
-        <link refid="file__method_8h"/>
-        <childnode refid="3034" relation="include">
-        </childnode>
-        <childnode refid="3027" relation="include">
-        </childnode>
-      </node>
-      <node id="3032">
-        <label>include/oscit/error_meta_method.h</label>
-        <link refid="error__meta__method_8h"/>
-      </node>
-      <node id="3041">
-        <label>include/oscit/osc_root_proxy.h</label>
-        <link refid="osc__root__proxy_8h"/>
-      </node>
-      <node id="3025">
-        <label>include/oscit/log_object.h</label>
-        <link refid="log__object_8h"/>
-      </node>
-      <node id="3054">
-        <label>include/oscit/osc_map_command.h</label>
-        <link refid="osc__map__command_8h"/>
-        <childnode refid="3027" relation="include">
-        </childnode>
-      </node>
-      <node id="3055">
-        <label>include/oscit/timer.h</label>
-        <link refid="timer_8h"/>
-        <childnode refid="3027" relation="include">
-        </childnode>
-      </node>
-      <node id="3031">
-        <label>include/oscit/call.h</label>
-        <link refid="call_8h"/>
-        <childnode refid="3027" relation="include">
-        </childnode>
-      </node>
-      <node id="3038">
-        <label>include/oscit/proxy_factory.h</label>
-        <link refid="proxy__factory_8h"/>
-        <childnode refid="3027" relation="include">
-        </childnode>
-      </node>
-      <node id="3034">
-        <label>include/oscit/hash_file_method.h</label>
-        <link refid="hash__file__method_8h"/>
-        <childnode refid="3027" relation="include">
-        </childnode>
-      </node>
-      <node id="3036">
-        <label>include/oscit/list_meta_method.h</label>
-        <link refid="list__meta__method_8h"/>
-      </node>
-      <node id="3047">
-        <label>include/oscit/rw_mutex.h</label>
-        <link refid="rw__mutex_8h"/>
-        <childnode refid="3048" relation="include">
-        </childnode>
-        <childnode refid="3049" relation="include">
-        </childnode>
-        <childnode refid="3050" relation="include">
-        </childnode>
-      </node>
-      <node id="3046">
-        <label>include/oscit/semaphore.h</label>
-        <link refid="semaphore_8h"/>
-        <childnode refid="3047" relation="include">
-        </childnode>
-        <childnode refid="3046" relation="include">
-        </childnode>
-        <childnode refid="3051" relation="include">
-        </childnode>
-      </node>
-      <node id="3050">
-        <label>include/oscit/c_tvector.h</label>
-        <link refid="c__tvector_8h"/>
-        <childnode refid="3024" relation="include">
-        </childnode>
-      </node>
-      <node id="3042">
-        <label>include/oscit/zeroconf_browser.h</label>
-        <link refid="zeroconf__browser_8h"/>
-        <childnode refid="3027" relation="include">
-        </childnode>
-      </node>
-      <node id="3039">
-        <label>include/oscit/root_proxy.h</label>
-        <link refid="root__proxy_8h"/>
-        <childnode refid="3040" relation="include">
-        </childnode>
-        <childnode refid="3041" relation="include">
-        </childnode>
-        <childnode refid="3038" relation="include">
-        </childnode>
-        <childnode refid="3042" relation="include">
-        </childnode>
-      </node>
-      <node id="3022">
-        <label>include/oscit/typed.h</label>
+      <node id="3016">
+        <label>/Users/gaspard/git/oscit/include/oscit/typed.h</label>
         <link refid="typed.h"/>
-        <childnode refid="3023" relation="include">
+        <childnode refid="3017" relation="include">
         </childnode>
-        <childnode refid="3024" relation="include">
-        </childnode>
-      </node>
-      <node id="3049">
-        <label>include/oscit/c_tlist.h</label>
-        <link refid="c__tlist_8h"/>
-        <childnode refid="3029" relation="include">
-        </childnode>
-      </node>
-      <node id="3024">
-        <label>include/oscit/object.h</label>
-        <link refid="object_8h"/>
-        <childnode refid="3025" relation="include">
-        </childnode>
-        <childnode refid="3026" relation="include">
-        </childnode>
-        <childnode refid="3028" relation="include">
-        </childnode>
-        <childnode refid="3040" relation="include">
-        </childnode>
-        <childnode refid="3045" relation="include">
-        </childnode>
-        <childnode refid="3027" relation="include">
-        </childnode>
-        <childnode refid="3029" relation="include">
-        </childnode>
-      </node>
-      <node id="3030">
-        <label>include/oscit/alias.h</label>
-        <link refid="alias_8h"/>
-      </node>
-      <node id="3028">
-        <label>include/oscit/object_handle.h</label>
-        <link refid="object__handle_8h"/>
-        <childnode refid="3029" relation="include">
-        </childnode>
-      </node>
-      <node id="3026">
-        <label>include/oscit/method.h</label>
-        <link refid="method_8h"/>
-        <childnode refid="3027" relation="include">
+        <childnode refid="3018" relation="include">
         </childnode>
       </node>
       <node id="3043">
-        <label>include/oscit/tree_meta_method.h</label>
+        <label>/Users/gaspard/git/oscit/include/oscit/c_tlist.h</label>
+        <link refid="c__tlist_8h"/>
+        <childnode refid="3044" relation="include">
+        </childnode>
+        <childnode refid="3021" relation="include">
+        </childnode>
+        <childnode refid="3023" relation="include">
+        </childnode>
+        <childnode refid="3045" relation="include">
+        </childnode>
+      </node>
+      <node id="3018">
+        <label>/Users/gaspard/git/oscit/include/oscit/object.h</label>
+        <link refid="object_8h"/>
+        <childnode refid="3019" relation="include">
+        </childnode>
+        <childnode refid="3020" relation="include">
+        </childnode>
+        <childnode refid="3022" relation="include">
+        </childnode>
+        <childnode refid="3035" relation="include">
+        </childnode>
+        <childnode refid="3039" relation="include">
+        </childnode>
+        <childnode refid="3021" relation="include">
+        </childnode>
+        <childnode refid="3023" relation="include">
+        </childnode>
+      </node>
+      <node id="3024">
+        <label>/Users/gaspard/git/oscit/include/oscit/alias.h</label>
+        <link refid="alias_8h"/>
+      </node>
+      <node id="3022">
+        <label>/Users/gaspard/git/oscit/include/oscit/object_handle.h</label>
+        <link refid="object__handle_8h"/>
+        <childnode refid="3023" relation="include">
+        </childnode>
+      </node>
+      <node id="3020">
+        <label>/Users/gaspard/git/oscit/include/oscit/method.h</label>
+        <link refid="method_8h"/>
+        <childnode refid="3021" relation="include">
+        </childnode>
+      </node>
+      <node id="3038">
+        <label>/Users/gaspard/git/oscit/include/oscit/tree_meta_method.h</label>
         <link refid="tree__meta__method_8h"/>
       </node>
     </invincdepgraph>
@@ -376,7 +402,7 @@
 <codeline lineno="41" refid="typed_8h_1abaf25d3e77e6e8bc3eff62b79e641f4d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TYPED(str)<sp/>\</highlight></codeline>
 <codeline lineno="42"><highlight class="preprocessor"><sp/><sp/>virtual<sp/>const<sp/>char<sp/>*class_path()<sp/>const<sp/>{<sp/>return<sp/>str;<sp/>}<sp/>\</highlight></codeline>
 <codeline lineno="43"><highlight class="preprocessor"><sp/><sp/>static<sp/><sp/>const<sp/>char<sp/>*_path()<sp/>{<sp/>return<sp/>str;<sp/>}<sp/>\</highlight></codeline>
-<codeline lineno="44"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor">//<sp/>TODO:<sp/>can<sp/>we<sp/>make<sp/>this<sp/>a<sp/>const<sp/>var<sp/>instead<sp/>?</highlight></codeline>
 <codeline lineno="45"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#ifdef<sp/>USE_RTTI_TYPE</highlight></codeline>
 <codeline lineno="46"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>kind_of(klass)<sp/>is_a&lt;klass<sp/>*&gt;()</highlight></codeline>

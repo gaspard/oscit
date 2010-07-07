@@ -169,40 +169,40 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="1278">
+      <node id="1290">
         <label>oscit::NonCopyable</label>
         <link refid="classoscit_1_1_non_copyable"/>
       </node>
-      <node id="1277">
+      <node id="1289">
         <label>oscit::Semaphore</label>
         <link refid="classoscit_1_1_semaphore"/>
-        <childnode refid="1278" relation="private-inheritance">
+        <childnode refid="1290" relation="private-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="1281">
+      <node id="1293">
         <label>oscit::Mutex</label>
         <link refid="classoscit_1_1_mutex"/>
-        <childnode refid="1282" relation="public-inheritance">
+        <childnode refid="1294" relation="public-inheritance">
         </childnode>
-        <childnode refid="1280" relation="private-inheritance">
+        <childnode refid="1292" relation="private-inheritance">
         </childnode>
       </node>
-      <node id="1280">
+      <node id="1292">
         <label>oscit::NonCopyable</label>
         <link refid="classoscit_1_1_non_copyable"/>
       </node>
-      <node id="1279">
+      <node id="1291">
         <label>oscit::Semaphore</label>
         <link refid="classoscit_1_1_semaphore"/>
-        <childnode refid="1280" relation="private-inheritance">
+        <childnode refid="1292" relation="private-inheritance">
         </childnode>
-        <childnode refid="1281" relation="usage">
+        <childnode refid="1293" relation="usage">
           <edgelabel>acquire_mutex_</edgelabel>
         </childnode>
       </node>
-      <node id="1282">
+      <node id="1294">
         <label>oscit::Typed</label>
         <link refid="classoscit_1_1_typed"/>
       </node>

@@ -79,10 +79,10 @@
         </inbodydescription>
         <location file="/Users/gaspard/git/oscit/include/oscit/proxy_factory.h" line="64" bodyfile="/Users/gaspard/git/oscit/include/oscit/proxy_factory.h" bodystart="64" bodyend="66"/>
       </memberdef>
-      <memberdef kind="function" id="classoscit_1_1_proxy_factory_1ad62ae7fda2c801ad2af38262f11784de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+      <memberdef kind="function" id="classoscit_1_1_proxy_factory_1a337935a91041bef0a02102b9d550fa82" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type><ref refid="classoscit_1_1_object_proxy" kindref="compound">ObjectProxy</ref> *</type>
         <definition>virtual ObjectProxy* oscit::ProxyFactory::build_object_proxy</definition>
-        <argsstring>(Object *parent, const std::string &amp;name, const Value &amp;type)</argsstring>
+        <argsstring>(Object *parent, const std::string &amp;name, const Value &amp;attrs)</argsstring>
         <name>build_object_proxy</name>
         <param>
           <type><ref refid="classoscit_1_1_object" kindref="compound">Object</ref> *</type>
@@ -94,7 +94,7 @@
         </param>
         <param>
           <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
-          <declname>type</declname>
+          <declname>attrs</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -165,7 +165,7 @@
     <location file="/Users/gaspard/git/oscit/include/oscit/proxy_factory.h" line="50" bodyfile="/Users/gaspard/git/oscit/include/oscit/proxy_factory.h" bodystart="49" bodyend="93"/>
     <listofallmembers>
       <member refid="classoscit_1_1_proxy_factory_1aa5fff6efc9201cd6781578725605b203" prot="public" virt="non-virtual"><scope>oscit::ProxyFactory</scope><name>build_and_init_root_proxy</name></member>
-      <member refid="classoscit_1_1_proxy_factory_1ad62ae7fda2c801ad2af38262f11784de" prot="public" virt="virtual"><scope>oscit::ProxyFactory</scope><name>build_object_proxy</name></member>
+      <member refid="classoscit_1_1_proxy_factory_1a337935a91041bef0a02102b9d550fa82" prot="public" virt="virtual"><scope>oscit::ProxyFactory</scope><name>build_object_proxy</name></member>
       <member refid="classoscit_1_1_proxy_factory_1afdb8805cc6eb9a17e2ef296cb2ee7130" prot="public" virt="virtual"><scope>oscit::ProxyFactory</scope><name>build_root_proxy</name></member>
       <member refid="classoscit_1_1_proxy_factory_1a5eefae12184ed587ac8874c357fe8af8" prot="public" virt="non-virtual"><scope>oscit::ProxyFactory</scope><name>is_meta_method</name></member>
       <member refid="classoscit_1_1_proxy_factory_1ae9cb92c76d2211c05717fbf44da64c35" prot="public" virt="non-virtual"><scope>oscit::ProxyFactory</scope><name>ProxyFactory</name></member>

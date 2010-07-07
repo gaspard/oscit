@@ -4,458 +4,462 @@
     <compoundname>info_meta_method.h</compoundname>
     <includes refid="root_8h" local="yes">oscit/root.h</includes>
     <incdepgraph>
-      <node id="915">
+      <node id="965">
         <label>list</label>
       </node>
-      <node id="935">
+      <node id="978">
         <label>oscit/value_types.h</label>
         <link refid="value__types_8h"/>
-        <childnode refid="936" relation="include">
+        <childnode refid="979" relation="include">
         </childnode>
       </node>
-      <node id="924">
+      <node id="1001">
         <label>oscit/non_copyable.h</label>
         <link refid="non__copyable_8h"/>
       </node>
-      <node id="933">
+      <node id="976">
         <label>stdarg.h</label>
       </node>
-      <node id="951">
+      <node id="1002">
         <label>oscit/mutex.h</label>
         <link refid="mutex_8h"/>
-        <childnode refid="952" relation="include">
+        <childnode refid="1003" relation="include">
         </childnode>
-        <childnode refid="934" relation="include">
+        <childnode refid="977" relation="include">
         </childnode>
-        <childnode refid="929" relation="include">
+        <childnode refid="971" relation="include">
         </childnode>
-        <childnode refid="924" relation="include">
+        <childnode refid="1001" relation="include">
         </childnode>
-        <childnode refid="917" relation="include">
+        <childnode refid="994" relation="include">
         </childnode>
       </node>
-      <node id="921">
+      <node id="996">
         <label>oscit/observer.h</label>
         <link refid="observer_8h"/>
-        <childnode refid="915" relation="include">
+        <childnode refid="965" relation="include">
         </childnode>
-        <childnode refid="919" relation="include">
+        <childnode refid="972" relation="include">
         </childnode>
-        <childnode refid="922" relation="include">
+        <childnode refid="997" relation="include">
         </childnode>
       </node>
-      <node id="930">
+      <node id="973">
         <label>oscit/value.h</label>
         <link refid="value_8h"/>
-        <childnode refid="931" relation="include">
+        <childnode refid="974" relation="include">
         </childnode>
-        <childnode refid="916" relation="include">
+        <childnode refid="966" relation="include">
         </childnode>
-        <childnode refid="932" relation="include">
+        <childnode refid="975" relation="include">
         </childnode>
-        <childnode refid="933" relation="include">
+        <childnode refid="976" relation="include">
         </childnode>
-        <childnode refid="934" relation="include">
+        <childnode refid="977" relation="include">
         </childnode>
-        <childnode refid="935" relation="include">
+        <childnode refid="978" relation="include">
         </childnode>
-        <childnode refid="928" relation="include">
+        <childnode refid="970" relation="include">
         </childnode>
-        <childnode refid="937" relation="include">
+        <childnode refid="980" relation="include">
         </childnode>
-        <childnode refid="939" relation="include">
+        <childnode refid="982" relation="include">
         </childnode>
-        <childnode refid="940" relation="include">
+        <childnode refid="983" relation="include">
         </childnode>
-        <childnode refid="942" relation="include">
+        <childnode refid="985" relation="include">
         </childnode>
-        <childnode refid="943" relation="include">
+        <childnode refid="986" relation="include">
         </childnode>
       </node>
-      <node id="934">
+      <node id="977">
         <label>assert.h</label>
       </node>
-      <node id="962">
+      <node id="967">
+        <label>oscit/constants.h</label>
+        <link refid="constants_8h"/>
+        <childnode refid="968" relation="include">
+        </childnode>
+      </node>
+      <node id="1011">
         <label>oscit/command.h</label>
         <link refid="command_8h"/>
+        <childnode refid="1012" relation="include">
+        </childnode>
+        <childnode refid="984" relation="include">
+        </childnode>
+        <childnode refid="1013" relation="include">
+        </childnode>
+        <childnode refid="1016" relation="include">
+        </childnode>
+        <childnode refid="970" relation="include">
+        </childnode>
+      </node>
+      <node id="1007">
+        <label>oscit/c_reference_counted.h</label>
+        <link refid="c__reference__counted_8h"/>
+        <childnode refid="977" relation="include">
+        </childnode>
+        <childnode refid="1008" relation="include">
+        </childnode>
+        <childnode refid="1001" relation="include">
+        </childnode>
+      </node>
+      <node id="1013">
+        <label>oscit/thread.h</label>
+        <link refid="thread_8h"/>
+        <childnode refid="1000" relation="include">
+        </childnode>
+        <childnode refid="974" relation="include">
+        </childnode>
+        <childnode refid="1014" relation="include">
+        </childnode>
+        <childnode refid="1015" relation="include">
+        </childnode>
+        <childnode refid="999" relation="include">
+        </childnode>
+        <childnode refid="977" relation="include">
+        </childnode>
+        <childnode refid="1002" relation="include">
+        </childnode>
+      </node>
+      <node id="991">
+        <label>oscit/hash_value.h</label>
+        <link refid="hash__value_8h"/>
+        <childnode refid="973" relation="include">
+        </childnode>
+      </node>
+      <node id="986">
+        <label>oscit/midi_message.h</label>
+        <link refid="midi__message_8h"/>
+        <childnode refid="984" relation="include">
+        </childnode>
+        <childnode refid="972" relation="include">
+        </childnode>
+        <childnode refid="975" relation="include">
+        </childnode>
+        <childnode refid="981" relation="include">
+        </childnode>
+      </node>
+      <node id="1012">
+        <label>stdint.h</label>
+      </node>
+      <node id="964">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1010">
+        <label>oscit/c_thash.h</label>
+        <link refid="c__thash_8h"/>
+        <childnode refid="970" relation="include">
+        </childnode>
+        <childnode refid="998" relation="include">
+        </childnode>
+      </node>
+      <node id="970">
+        <label>oscit/thash.h</label>
+        <link refid="thash_8h"/>
+        <childnode refid="971" relation="include">
+        </childnode>
+        <childnode refid="966" relation="include">
+        </childnode>
+        <childnode refid="965" relation="include">
+        </childnode>
+        <childnode refid="972" relation="include">
+        </childnode>
+      </node>
+      <node id="983">
+        <label>oscit/list.h</label>
+        <link refid="list_8h"/>
+        <childnode refid="978" relation="include">
+        </childnode>
+        <childnode refid="981" relation="include">
+        </childnode>
+        <childnode refid="984" relation="include">
+        </childnode>
+      </node>
+      <node id="987">
+        <label>oscit/list_value.h</label>
+        <link refid="list__value_8h"/>
+        <childnode refid="973" relation="include">
+        </childnode>
+      </node>
+      <node id="1000">
+        <label>errno.h</label>
+      </node>
+      <node id="1005">
+        <label>oscit/location.h</label>
+        <link refid="location_8h"/>
+        <childnode refid="966" relation="include">
+        </childnode>
+        <childnode refid="1006" relation="include">
+        </childnode>
+        <childnode refid="970" relation="include">
+        </childnode>
+      </node>
+      <node id="966">
+        <label>string</label>
+      </node>
+      <node id="962">
+        <label>oscit/root.h</label>
+        <link refid="root_8h"/>
         <childnode refid="963" relation="include">
         </childnode>
-        <childnode refid="941" relation="include">
+        <childnode refid="1011" relation="include">
         </childnode>
-        <childnode refid="964" relation="include">
+        <childnode refid="1002" relation="include">
+        </childnode>
+        <childnode refid="1010" relation="include">
+        </childnode>
+        <childnode refid="1004" relation="include">
+        </childnode>
+        <childnode refid="997" relation="include">
+        </childnode>
+        <childnode refid="1017" relation="include">
+        </childnode>
+      </node>
+      <node id="961">
+        <label>/Users/gaspard/git/oscit/include/oscit/info_meta_method.h</label>
+        <link refid="info_meta_method.h"/>
+        <childnode refid="962" relation="include">
+        </childnode>
+      </node>
+      <node id="992">
+        <label>oscit/matrix_value.h</label>
+        <link refid="matrix__value_8h"/>
+        <childnode refid="973" relation="include">
+        </childnode>
+      </node>
+      <node id="969">
+        <label>oscit/conf.h</label>
+        <link refid="conf_8h"/>
+      </node>
+      <node id="1015">
+        <label>fstream</label>
+      </node>
+      <node id="1006">
+        <label>ostream</label>
+      </node>
+      <node id="988">
+        <label>oscit/real_value.h</label>
+        <link refid="real__value_8h"/>
+        <childnode refid="973" relation="include">
+        </childnode>
+      </node>
+      <node id="968">
+        <label>oscit/values.h</label>
+        <link refid="values_8h"/>
+        <childnode refid="969" relation="include">
+        </childnode>
+        <childnode refid="970" relation="include">
+        </childnode>
+        <childnode refid="973" relation="include">
+        </childnode>
+        <childnode refid="987" relation="include">
+        </childnode>
+        <childnode refid="988" relation="include">
+        </childnode>
+        <childnode refid="989" relation="include">
+        </childnode>
+        <childnode refid="990" relation="include">
+        </childnode>
+        <childnode refid="991" relation="include">
+        </childnode>
+        <childnode refid="992" relation="include">
+        </childnode>
+        <childnode refid="993" relation="include">
         </childnode>
         <childnode refid="967" relation="include">
         </childnode>
-        <childnode refid="928" relation="include">
+      </node>
+      <node id="990">
+        <label>oscit/error_value.h</label>
+        <link refid="error__value_8h"/>
+        <childnode refid="973" relation="include">
         </childnode>
       </node>
-      <node id="955">
-        <label>oscit/c_reference_counted.h</label>
-        <link refid="c__reference__counted_8h"/>
-        <childnode refid="934" relation="include">
+      <node id="1003">
+        <label>pthread.h</label>
+      </node>
+      <node id="979">
+        <label>sys/types.h</label>
+      </node>
+      <node id="974">
+        <label>string.h</label>
+      </node>
+      <node id="971">
+        <label>cstdio</label>
+      </node>
+      <node id="984">
+        <label>vector</label>
+      </node>
+      <node id="982">
+        <label>oscit/error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="968" relation="include">
         </childnode>
-        <childnode refid="956" relation="include">
-        </childnode>
-        <childnode refid="924" relation="include">
+        <childnode refid="981" relation="include">
         </childnode>
       </node>
-      <node id="964">
-        <label>oscit/thread.h</label>
-        <link refid="thread_8h"/>
-        <childnode refid="960" relation="include">
+      <node id="975">
+        <label>sstream</label>
+      </node>
+      <node id="998">
+        <label>oscit/rw_mutex.h</label>
+        <link refid="rw__mutex_8h"/>
+        <childnode refid="999" relation="include">
         </childnode>
-        <childnode refid="931" relation="include">
+        <childnode refid="1001" relation="include">
+        </childnode>
+        <childnode refid="974" relation="include">
+        </childnode>
+      </node>
+      <node id="980">
+        <label>oscit/string_data.h</label>
+        <link refid="string__data_8h"/>
+        <childnode refid="968" relation="include">
+        </childnode>
+        <childnode refid="981" relation="include">
+        </childnode>
+      </node>
+      <node id="981">
+        <label>oscit/reference_counted.h</label>
+        <link refid="reference__counted_8h"/>
+      </node>
+      <node id="999">
+        <label>oscit/semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="977" relation="include">
+        </childnode>
+        <childnode refid="999" relation="include">
+        </childnode>
+        <childnode refid="1000" relation="include">
+        </childnode>
+        <childnode refid="974" relation="include">
+        </childnode>
+        <childnode refid="1001" relation="include">
+        </childnode>
+        <childnode refid="1002" relation="include">
+        </childnode>
+      </node>
+      <node id="1004">
+        <label>oscit/signal.h</label>
+        <link refid="signal_8h"/>
+        <childnode refid="968" relation="include">
+        </childnode>
+        <childnode refid="997" relation="include">
+        </childnode>
+        <childnode refid="996" relation="include">
+        </childnode>
+        <childnode refid="965" relation="include">
+        </childnode>
+      </node>
+      <node id="993">
+        <label>oscit/midi_value.h</label>
+        <link refid="midi__value_8h"/>
+        <childnode refid="973" relation="include">
+        </childnode>
+      </node>
+      <node id="1016">
+        <label>oscit/url.h</label>
+        <link refid="url_8h"/>
+        <childnode refid="966" relation="include">
+        </childnode>
+        <childnode refid="1006" relation="include">
+        </childnode>
+        <childnode refid="1005" relation="include">
+        </childnode>
+      </node>
+      <node id="1009">
+        <label>oscit/c_tvector.h</label>
+        <link refid="c__tvector_8h"/>
+        <childnode refid="984" relation="include">
+        </childnode>
+        <childnode refid="998" relation="include">
+        </childnode>
+      </node>
+      <node id="972">
+        <label>iostream</label>
+      </node>
+      <node id="989">
+        <label>oscit/string_value.h</label>
+        <link refid="string__value_8h"/>
+        <childnode refid="973" relation="include">
+        </childnode>
+      </node>
+      <node id="1008">
+        <label>oscit/atomic_counter.h</label>
+        <link refid="atomic__counter_8h"/>
+      </node>
+      <node id="1014">
+        <label>csignal</label>
+      </node>
+      <node id="994">
+        <label>oscit/typed.h</label>
+        <link refid="typed_8h"/>
+        <childnode refid="995" relation="include">
+        </childnode>
+        <childnode refid="972" relation="include">
+        </childnode>
+      </node>
+      <node id="985">
+        <label>oscit/hash.h</label>
+        <link refid="hash_8h"/>
+        <childnode refid="965" relation="include">
+        </childnode>
+        <childnode refid="966" relation="include">
+        </childnode>
+        <childnode refid="970" relation="include">
+        </childnode>
+        <childnode refid="981" relation="include">
+        </childnode>
+      </node>
+      <node id="997">
+        <label>oscit/c_tlist.h</label>
+        <link refid="c__tlist_8h"/>
+        <childnode refid="965" relation="include">
+        </childnode>
+        <childnode refid="998" relation="include">
+        </childnode>
+      </node>
+      <node id="963">
+        <label>oscit/object.h</label>
+        <link refid="object_8h"/>
+        <childnode refid="964" relation="include">
         </childnode>
         <childnode refid="965" relation="include">
         </childnode>
         <childnode refid="966" relation="include">
         </childnode>
-        <childnode refid="959" relation="include">
+        <childnode refid="967" relation="include">
         </childnode>
-        <childnode refid="934" relation="include">
+        <childnode refid="994" relation="include">
         </childnode>
-        <childnode refid="951" relation="include">
+        <childnode refid="996" relation="include">
         </childnode>
-      </node>
-      <node id="948">
-        <label>oscit/hash_value.h</label>
-        <link refid="hash__value_8h"/>
-        <childnode refid="930" relation="include">
-        </childnode>
-      </node>
-      <node id="943">
-        <label>oscit/midi_message.h</label>
-        <link refid="midi__message_8h"/>
-        <childnode refid="941" relation="include">
-        </childnode>
-        <childnode refid="919" relation="include">
-        </childnode>
-        <childnode refid="938" relation="include">
-        </childnode>
-      </node>
-      <node id="963">
-        <label>stdint.h</label>
-      </node>
-      <node id="914">
-        <label>stdlib.h</label>
-      </node>
-      <node id="961">
-        <label>oscit/c_thash.h</label>
-        <link refid="c__thash_8h"/>
-        <childnode refid="928" relation="include">
-        </childnode>
-        <childnode refid="958" relation="include">
-        </childnode>
-      </node>
-      <node id="928">
-        <label>oscit/thash.h</label>
-        <link refid="thash_8h"/>
-        <childnode refid="929" relation="include">
-        </childnode>
-        <childnode refid="916" relation="include">
-        </childnode>
-        <childnode refid="915" relation="include">
-        </childnode>
-        <childnode refid="919" relation="include">
-        </childnode>
-      </node>
-      <node id="940">
-        <label>oscit/list.h</label>
-        <link refid="list_8h"/>
-        <childnode refid="935" relation="include">
-        </childnode>
-        <childnode refid="938" relation="include">
-        </childnode>
-        <childnode refid="941" relation="include">
-        </childnode>
-      </node>
-      <node id="944">
-        <label>oscit/list_value.h</label>
-        <link refid="list__value_8h"/>
-        <childnode refid="930" relation="include">
-        </childnode>
-      </node>
-      <node id="960">
-        <label>errno.h</label>
-      </node>
-      <node id="922">
-        <label>oscit/callback_list.h</label>
-        <link refid="callback__list_8h"/>
-        <childnode refid="915" relation="include">
-        </childnode>
-        <childnode refid="923" relation="include">
-        </childnode>
-        <childnode refid="924" relation="include">
-        </childnode>
-      </node>
-      <node id="953">
-        <label>oscit/location.h</label>
-        <link refid="location_8h"/>
-        <childnode refid="916" relation="include">
-        </childnode>
-        <childnode refid="954" relation="include">
-        </childnode>
-        <childnode refid="928" relation="include">
-        </childnode>
-      </node>
-      <node id="916">
-        <label>string</label>
-      </node>
-      <node id="912">
-        <label>oscit/root.h</label>
-        <link refid="root_8h"/>
-        <childnode refid="913" relation="include">
-        </childnode>
-        <childnode refid="962" relation="include">
-        </childnode>
-        <childnode refid="951" relation="include">
-        </childnode>
-        <childnode refid="961" relation="include">
+        <childnode refid="1004" relation="include">
         </childnode>
         <childnode refid="968" relation="include">
         </childnode>
-        <childnode refid="969" relation="include">
+        <childnode refid="970" relation="include">
+        </childnode>
+        <childnode refid="1002" relation="include">
+        </childnode>
+        <childnode refid="1005" relation="include">
+        </childnode>
+        <childnode refid="1007" relation="include">
+        </childnode>
+        <childnode refid="1009" relation="include">
+        </childnode>
+        <childnode refid="1010" relation="include">
         </childnode>
       </node>
-      <node id="911">
-        <label>include/oscit/info_meta_method.h</label>
-        <link refid="info_meta_method.h"/>
-        <childnode refid="912" relation="include">
-        </childnode>
-      </node>
-      <node id="949">
-        <label>oscit/matrix_value.h</label>
-        <link refid="matrix__value_8h"/>
-        <childnode refid="930" relation="include">
-        </childnode>
-      </node>
-      <node id="927">
-        <label>oscit/conf.h</label>
-        <link refid="conf_8h"/>
-      </node>
-      <node id="966">
-        <label>fstream</label>
-      </node>
-      <node id="954">
-        <label>ostream</label>
-      </node>
-      <node id="945">
-        <label>oscit/real_value.h</label>
-        <link refid="real__value_8h"/>
-        <childnode refid="930" relation="include">
-        </childnode>
-      </node>
-      <node id="926">
-        <label>oscit/values.h</label>
-        <link refid="values_8h"/>
-        <childnode refid="927" relation="include">
-        </childnode>
-        <childnode refid="928" relation="include">
-        </childnode>
-        <childnode refid="930" relation="include">
-        </childnode>
-        <childnode refid="944" relation="include">
-        </childnode>
-        <childnode refid="945" relation="include">
-        </childnode>
-        <childnode refid="946" relation="include">
-        </childnode>
-        <childnode refid="947" relation="include">
-        </childnode>
-        <childnode refid="948" relation="include">
-        </childnode>
-        <childnode refid="949" relation="include">
-        </childnode>
-        <childnode refid="950" relation="include">
-        </childnode>
-      </node>
-      <node id="947">
-        <label>oscit/error_value.h</label>
-        <link refid="error__value_8h"/>
-        <childnode refid="930" relation="include">
-        </childnode>
-      </node>
-      <node id="952">
-        <label>pthread.h</label>
-      </node>
-      <node id="936">
-        <label>sys/types.h</label>
-      </node>
-      <node id="931">
-        <label>string.h</label>
-      </node>
-      <node id="929">
-        <label>cstdio</label>
-      </node>
-      <node id="941">
-        <label>vector</label>
-      </node>
-      <node id="920">
-        <label>oscit/observable.h</label>
-        <link refid="observable_8h"/>
-        <childnode refid="915" relation="include">
-        </childnode>
-        <childnode refid="921" relation="include">
-        </childnode>
-        <childnode refid="925" relation="include">
-        </childnode>
-      </node>
-      <node id="939">
-        <label>oscit/error.h</label>
-        <link refid="error_8h"/>
-        <childnode refid="926" relation="include">
-        </childnode>
-        <childnode refid="938" relation="include">
-        </childnode>
-      </node>
-      <node id="932">
-        <label>sstream</label>
-      </node>
-      <node id="923">
-        <label>oscit/callback.h</label>
-        <link refid="callback_8h"/>
-      </node>
-      <node id="958">
-        <label>oscit/rw_mutex.h</label>
-        <link refid="rw__mutex_8h"/>
-        <childnode refid="959" relation="include">
-        </childnode>
-        <childnode refid="924" relation="include">
-        </childnode>
-        <childnode refid="931" relation="include">
-        </childnode>
-      </node>
-      <node id="937">
-        <label>oscit/string_data.h</label>
-        <link refid="string__data_8h"/>
-        <childnode refid="926" relation="include">
-        </childnode>
-        <childnode refid="938" relation="include">
-        </childnode>
-      </node>
-      <node id="938">
-        <label>oscit/reference_counted.h</label>
-        <link refid="reference__counted_8h"/>
-      </node>
-      <node id="959">
-        <label>oscit/semaphore.h</label>
-        <link refid="semaphore_8h"/>
-        <childnode refid="934" relation="include">
-        </childnode>
-        <childnode refid="959" relation="include">
-        </childnode>
-        <childnode refid="960" relation="include">
-        </childnode>
-        <childnode refid="931" relation="include">
-        </childnode>
-        <childnode refid="924" relation="include">
-        </childnode>
-        <childnode refid="951" relation="include">
-        </childnode>
-      </node>
-      <node id="950">
-        <label>oscit/midi_value.h</label>
-        <link refid="midi__value_8h"/>
-        <childnode refid="930" relation="include">
-        </childnode>
-      </node>
-      <node id="967">
-        <label>oscit/url.h</label>
-        <link refid="url_8h"/>
-        <childnode refid="916" relation="include">
-        </childnode>
-        <childnode refid="954" relation="include">
-        </childnode>
-        <childnode refid="953" relation="include">
-        </childnode>
-      </node>
-      <node id="957">
-        <label>oscit/c_tvector.h</label>
-        <link refid="c__tvector_8h"/>
-        <childnode refid="941" relation="include">
-        </childnode>
-        <childnode refid="958" relation="include">
-        </childnode>
-      </node>
-      <node id="919">
-        <label>iostream</label>
-      </node>
-      <node id="946">
-        <label>oscit/string_value.h</label>
-        <link refid="string__value_8h"/>
-        <childnode refid="930" relation="include">
-        </childnode>
-      </node>
-      <node id="956">
-        <label>oscit/atomic_counter.h</label>
-        <link refid="atomic__counter_8h"/>
-      </node>
-      <node id="965">
-        <label>csignal</label>
-      </node>
-      <node id="917">
-        <label>oscit/typed.h</label>
-        <link refid="typed_8h"/>
-        <childnode refid="918" relation="include">
-        </childnode>
-        <childnode refid="919" relation="include">
-        </childnode>
-      </node>
-      <node id="942">
-        <label>oscit/hash.h</label>
-        <link refid="hash_8h"/>
-        <childnode refid="926" relation="include">
-        </childnode>
-      </node>
-      <node id="968">
-        <label>oscit/c_tlist.h</label>
-        <link refid="c__tlist_8h"/>
-        <childnode refid="915" relation="include">
-        </childnode>
-        <childnode refid="958" relation="include">
-        </childnode>
-      </node>
-      <node id="913">
-        <label>oscit/object.h</label>
-        <link refid="object_8h"/>
-        <childnode refid="914" relation="include">
-        </childnode>
-        <childnode refid="915" relation="include">
-        </childnode>
-        <childnode refid="916" relation="include">
-        </childnode>
-        <childnode refid="917" relation="include">
-        </childnode>
-        <childnode refid="920" relation="include">
-        </childnode>
-        <childnode refid="926" relation="include">
-        </childnode>
-        <childnode refid="928" relation="include">
-        </childnode>
-        <childnode refid="951" relation="include">
-        </childnode>
-        <childnode refid="953" relation="include">
-        </childnode>
-        <childnode refid="955" relation="include">
-        </childnode>
-        <childnode refid="957" relation="include">
-        </childnode>
-        <childnode refid="961" relation="include">
-        </childnode>
-      </node>
-      <node id="918">
+      <node id="995">
         <label>stdio.h</label>
       </node>
-      <node id="969">
+      <node id="1017">
         <label>oscit/object_handle.h</label>
         <link refid="object__handle_8h"/>
-        <childnode refid="913" relation="include">
-        </childnode>
-      </node>
-      <node id="925">
-        <label>oscit/on_destroy_notifier.h</label>
-        <link refid="on__destroy__notifier_8h"/>
-        <childnode refid="922" relation="include">
+        <childnode refid="963" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -506,8 +510,8 @@
 <codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"><sp/><sp/><ref refid="typed_8h_1abaf25d3e77e6e8bc3eff62b79e641f4d" kindref="member">TYPED</ref>(</highlight><highlight class="stringliteral">&quot;Object.InfoMetaMethod&quot;</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42" refid="classoscit_1_1_info_meta_method_1a9312504e799ef14a06e0aae1cf429629" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_info_meta_method" kindref="compound">InfoMetaMethod</ref>(const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classoscit_1_1_object_1ac496efa52da888ff46e2d68265da1ad1" kindref="member">name</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="classoscit_1_1_object" kindref="compound">Object</ref>(<ref refid="classoscit_1_1_object_1ac496efa52da888ff46e2d68265da1ad1" kindref="member">name</ref>,<sp/><ref refid="values_8h_1a135d9ae3957a3a0da60741daee69a4d5" kindref="member">StringIO</ref>(&quot;path&quot;,<sp/>&quot;Return<sp/>information<sp/>on<sp/>the<sp/>given<sp/>path.&quot;))<sp/>{}</highlight></codeline>
-<codeline lineno="43" refid="classoscit_1_1_info_meta_method_1abf16570936801408cfa3e6584a934ff5" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_info_meta_method_1abf16570936801408cfa3e6584a934ff5" kindref="member">InfoMetaMethod</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<ref refid="classoscit_1_1_object_1ac496efa52da888ff46e2d68265da1ad1" kindref="member">name</ref>)<sp/>:<sp/><ref refid="classoscit_1_1_object" kindref="compound">Object</ref>(name,<sp/><ref refid="values_8h_1a135d9ae3957a3a0da60741daee69a4d5" kindref="member">StringIO</ref>(</highlight><highlight class="stringliteral">&quot;path&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Return<sp/>information<sp/>on<sp/>the<sp/>given<sp/>path.&quot;</highlight><highlight class="normal">))<sp/>{}</highlight></codeline>
+<codeline lineno="42" refid="classoscit_1_1_info_meta_method_1a9312504e799ef14a06e0aae1cf429629" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_info_meta_method" kindref="compound">InfoMetaMethod</ref>(const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classoscit_1_1_object_1ac496efa52da888ff46e2d68265da1ad1" kindref="member">name</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="classoscit_1_1_object" kindref="compound">Object</ref>(<ref refid="classoscit_1_1_object_1ac496efa52da888ff46e2d68265da1ad1" kindref="member">name</ref>,<sp/><ref refid="classoscit_1_1_attribute" kindref="compound">Attribute</ref>::string_io(&quot;Return<sp/>information<sp/>on<sp/>the<sp/>given<sp/>path.&quot;))<sp/>{}</highlight></codeline>
+<codeline lineno="43" refid="classoscit_1_1_info_meta_method_1abf16570936801408cfa3e6584a934ff5" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_info_meta_method_1abf16570936801408cfa3e6584a934ff5" kindref="member">InfoMetaMethod</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<ref refid="classoscit_1_1_object_1ac496efa52da888ff46e2d68265da1ad1" kindref="member">name</ref>)<sp/>:<sp/><ref refid="classoscit_1_1_object" kindref="compound">Object</ref>(name,<sp/><ref refid="classoscit_1_1_attribute" kindref="compound">Attribute</ref>::string_io(</highlight><highlight class="stringliteral">&quot;Return<sp/>information<sp/>on<sp/>the<sp/>given<sp/>path.&quot;</highlight><highlight class="normal">))<sp/>{}</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
 <codeline lineno="45" refid="classoscit_1_1_info_meta_method_1a12e0c44c01adaa406bc711b88a32ecb5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/><ref refid="classoscit_1_1_info_meta_method_1a12e0c44c01adaa406bc711b88a32ecb5" kindref="member">trigger</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/>&amp;val)<sp/>{</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!val.<ref refid="classoscit_1_1_value_1a6e52b09be3be2ccb2114bd80f3d35b9a" kindref="member">is_string</ref>())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespaceoscit_1a4254b522502b06add34adb0bbf0cb55f" kindref="member">gNilValue</ref>;</highlight></codeline>

@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" line="77" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" bodystart="77" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" line="78" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" bodystart="78" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" line="47" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" bodystart="47" bodyend="47"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" line="48" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" bodystart="48" bodyend="48"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_c_reference_counted_1adf83fb16489f561db168e11d5c7e19c5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type></type>
@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" line="49" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" bodystart="49" bodyend="49"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" line="50" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" bodystart="50" bodyend="50"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_c_reference_counted_1a25c5b24bbd95ad923e77d4f0fa94b888" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" line="51" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" bodystart="51" bodyend="53"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" line="52" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" bodystart="52" bodyend="54"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_c_reference_counted_1af937a9fdcb7b0af90e7a99e8413a041f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" line="55" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" bodystart="55" bodyend="57"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" line="56" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" bodystart="56" bodyend="58"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_c_reference_counted_1abe49f3c60ebe0364d7590a42a4afa8b2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int32_t</type>
@@ -84,7 +84,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" line="59" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" bodystart="59" bodyend="61"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" line="60" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" bodystart="60" bodyend="62"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -108,7 +108,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" line="64" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" bodystart="64" bodyend="67"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" line="65" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" bodystart="65" bodyend="68"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_c_reference_counted_1a14432013e00b30693b89212ee244f330" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -130,152 +130,152 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" line="70" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" bodystart="70" bodyend="73"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" line="71" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" bodystart="71" bodyend="74"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para>Maintains a thread-safe reference count of an element. When the reference count reaches zero, the object is deleted. Use this class with the <ref refid="classoscit_1_1_scoped_retain" kindref="compound">ScopedRetain</ref> class. The &apos;C&apos; in the name stands for &apos;concurrent&apos;. </para>    </detaileddescription>
+<para>Maintains a thread-safe reference count of an element. When the reference count reaches zero, the object is deleted. The reference count of an object starts at 1 and is incremented on <computeroutput>retain</computeroutput> and decremented on <computeroutput>release</computeroutput>. The &apos;C&apos; in the name stands for &apos;concurrent&apos;. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="178">
+      <node id="197">
         <label>oscit::OscRemoteObject</label>
         <link refid="classoscit_1_1_osc_remote_object"/>
-        <childnode refid="165" relation="public-inheritance">
+        <childnode refid="183" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="179">
+      <node id="198">
         <label>oscit::Root</label>
         <link refid="classoscit_1_1_root"/>
-        <childnode refid="165" relation="public-inheritance">
+        <childnode refid="183" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="168">
+      <node id="187">
         <label>oscit::ErrorMetaMethod</label>
         <link refid="classoscit_1_1_error_meta_method"/>
-        <childnode refid="165" relation="public-inheritance">
+        <childnode refid="183" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="170">
+      <node id="189">
         <label>oscit::HashFileMethod</label>
         <link refid="classoscit_1_1_hash_file_method"/>
-        <childnode refid="165" relation="public-inheritance">
+        <childnode refid="183" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="166">
+      <node id="184">
         <label>oscit::Alias</label>
         <link refid="classoscit_1_1_alias"/>
-        <childnode refid="165" relation="public-inheritance">
+        <childnode refid="183" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="176">
+      <node id="195">
         <label>oscit::TMethod&lt; T, Tmethod &gt;</label>
         <link refid="classoscit_1_1_t_method"/>
-        <childnode refid="175" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="164">
-        <label>oscit::NonCopyable</label>
-        <link refid="classoscit_1_1_non_copyable"/>
-      </node>
-      <node id="175">
-        <label>oscit::Method</label>
-        <link refid="classoscit_1_1_method"/>
-        <childnode refid="165" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="183">
-        <label>oscit::TypeMetaMethod</label>
-        <link refid="classoscit_1_1_type_meta_method"/>
-        <childnode refid="165" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="172">
-        <label>oscit::ListMetaMethod</label>
-        <link refid="classoscit_1_1_list_meta_method"/>
-        <childnode refid="165" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="174">
-        <label>oscit::LogObject</label>
-        <link refid="classoscit_1_1_log_object"/>
-        <childnode refid="165" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="180">
-        <label>oscit::RootProxy</label>
-        <link refid="classoscit_1_1_root_proxy"/>
-        <childnode refid="179" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="171">
-        <label>oscit::InfoMetaMethod</label>
-        <link refid="classoscit_1_1_info_meta_method"/>
-        <childnode refid="165" relation="public-inheritance">
+        <childnode refid="194" relation="public-inheritance">
         </childnode>
       </node>
       <node id="182">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+      <node id="194">
+        <label>oscit::Method</label>
+        <link refid="classoscit_1_1_method"/>
+        <childnode refid="183" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="191">
+        <label>oscit::ListMetaMethod</label>
+        <link refid="classoscit_1_1_list_meta_method"/>
+        <childnode refid="183" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="193">
+        <label>oscit::LogObject</label>
+        <link refid="classoscit_1_1_log_object"/>
+        <childnode refid="183" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="199">
+        <label>oscit::RootProxy</label>
+        <link refid="classoscit_1_1_root_proxy"/>
+        <childnode refid="198" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="190">
+        <label>oscit::InfoMetaMethod</label>
+        <link refid="classoscit_1_1_info_meta_method"/>
+        <childnode refid="183" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="201">
         <label>oscit::TreeMetaMethod</label>
         <link refid="classoscit_1_1_tree_meta_method"/>
-        <childnode refid="165" relation="public-inheritance">
+        <childnode refid="183" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="169">
+      <node id="185">
+        <label>oscit::AttrsMetaMethod</label>
+        <link refid="classoscit_1_1_attrs_meta_method"/>
+        <childnode refid="183" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="188">
         <label>oscit::FileMethod</label>
         <link refid="classoscit_1_1_file_method"/>
-        <childnode refid="165" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="163">
-        <label>oscit::CReferenceCounted</label>
-        <link refid="classoscit_1_1_c_reference_counted"/>
-        <childnode refid="164" relation="private-inheritance">
-        </childnode>
-      </node>
-      <node id="165">
-        <label>oscit::Object</label>
-        <link refid="classoscit_1_1_object"/>
-        <childnode refid="163" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="173">
-        <label>oscit::ListWithTypeMetaMethod</label>
-        <link refid="classoscit_1_1_list_with_type_meta_method"/>
-        <childnode refid="165" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="177">
-        <label>oscit::ObjectProxy</label>
-        <link refid="classoscit_1_1_object_proxy"/>
-        <childnode refid="165" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="167">
-        <label>oscit::ClassMethod</label>
-        <link refid="classoscit_1_1_class_method"/>
-        <childnode refid="165" relation="public-inheritance">
+        <childnode refid="183" relation="public-inheritance">
         </childnode>
       </node>
       <node id="181">
+        <label>oscit::CReferenceCounted</label>
+        <link refid="classoscit_1_1_c_reference_counted"/>
+        <childnode refid="182" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="183">
+        <label>oscit::Object</label>
+        <link refid="classoscit_1_1_object"/>
+        <childnode refid="181" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="196">
+        <label>oscit::ObjectProxy</label>
+        <link refid="classoscit_1_1_object_proxy"/>
+        <childnode refid="183" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="186">
+        <label>oscit::ClassMethod</label>
+        <link refid="classoscit_1_1_class_method"/>
+        <childnode refid="183" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="200">
         <label>oscit::OscRootProxy</label>
         <link refid="classoscit_1_1_osc_root_proxy"/>
-        <childnode refid="180" relation="private-inheritance">
+        <childnode refid="199" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="192">
+        <label>oscit::ListWithAttributesMetaMethod</label>
+        <link refid="classoscit_1_1_list_with_attributes_meta_method"/>
+        <childnode refid="183" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="185">
+      <node id="203">
         <label>oscit::NonCopyable</label>
         <link refid="classoscit_1_1_non_copyable"/>
       </node>
-      <node id="184">
+      <node id="202">
         <label>oscit::CReferenceCounted</label>
         <link refid="classoscit_1_1_c_reference_counted"/>
-        <childnode refid="185" relation="private-inheritance">
+        <childnode refid="203" relation="private-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" line="45" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" bodystart="45" bodyend="78"/>
+    <location file="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" line="46" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" bodystart="46" bodyend="79"/>
     <listofallmembers>
       <member refid="classoscit_1_1_c_reference_counted_1af03ea73d1321a2cea7a0b1035696357c" prot="public" virt="non-virtual"><scope>oscit::CReferenceCounted</scope><name>acquire</name></member>
       <member refid="classoscit_1_1_c_reference_counted_1af26aaaa40dd9297f5529f38894044875" prot="public" virt="non-virtual"><scope>oscit::CReferenceCounted</scope><name>CReferenceCounted</name></member>

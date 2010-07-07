@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classoscit_1_1_signal" kind="class" prot="public">
+    <compoundname>oscit::Signal</compoundname>
+    <includes refid="signal_8h" local="no">signal.h</includes>
+    <innerclass refid="structoscit_1_1_signal_1_1_signal_callback" prot="private">oscit::Signal::SignalCallback</innerclass>
+    <innerclass refid="structoscit_1_1_signal_1_1_t_signal_callback" prot="private">oscit::Signal::TSignalCallback</innerclass>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classoscit_1_1_signal_1a30209778b9422b7aaa0f1fc7cb30638f" prot="private" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* oscit::Signal::signal_method_t)(Observer *receiver, const Value &amp;val)</definition>
+        <argsstring>)(Observer *receiver, const Value &amp;val)</argsstring>
+        <name>signal_method_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/signal.h" line="102" bodyfile="/Users/gaspard/git/oscit/include/oscit/signal.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classoscit_1_1_signal_1a1bc1613ca5d6d0e8b2fbce5ef15dd38f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class Observer</definition>
+        <argsstring></argsstring>
+        <name>Observer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/signal.h" line="100" bodyfile="/Users/gaspard/git/oscit/include/oscit/signal.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classoscit_1_1_signal_1ac12000a2de4867aae368be5f9b2ac9b4" prot="private" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_c_t_list" kindref="compound">CTList</ref>&lt; SignalCallback * &gt;</type>
+        <definition>CTList&lt;SignalCallback*&gt; oscit::Signal::callbacks_</definition>
+        <argsstring></argsstring>
+        <name>callbacks_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classoscit_1_1_list" kindref="compound">List</ref> of connections through which the signal will be sent. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/signal.h" line="164" bodyfile="/Users/gaspard/git/oscit/include/oscit/signal.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classoscit_1_1_signal_1aee0fee57fde5a73b613961da8913c289" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Signal::~Signal</definition>
+        <argsstring>()</argsstring>
+        <name>~Signal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/signal.h" line="48" bodyfile="/Users/gaspard/git/oscit/include/oscit/signal.h" bodystart="48" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_signal_1a9b87130e4b445ad261bc678b09538b5a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void oscit::Signal::connect</definition>
+        <argsstring>(T *receiver, void(T::*Tmethod)(const Value &amp;))</argsstring>
+        <name>connect</name>
+        <param>
+          <type>T *</type>
+          <declname>receiver</declname>
+        </param>
+        <param>
+          <type>void(T::*)(const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;)</type>
+          <declname>Tmethod</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Use this method to connect an observer&apos;s method to this signal. The method should have the following signature: <computeroutput>void (const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;val)</computeroutput> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/signal.h" line="57" bodyfile="/Users/gaspard/git/oscit/include/oscit/signal.h" bodystart="57" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_signal_1a7207c0654953113266d76d336958b598" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Signal::send</definition>
+        <argsstring>(const Value &amp;val)</argsstring>
+        <name>send</name>
+        <param>
+          <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Send a message to all connected observers. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/signal.h" line="69" bodyfile="/Users/gaspard/git/oscit/include/oscit/signal.h" bodystart="69" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_signal_1a7e26667ce07b0dc6923e0df2c95f7b86" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Signal::send_once</definition>
+        <argsstring>(const Value &amp;val)</argsstring>
+        <name>send_once</name>
+        <param>
+          <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Send a message to all connected observers and disconnect them. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/signal.h" line="80" bodyfile="/Users/gaspard/git/oscit/include/oscit/signal.h" bodystart="80" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_signal_1aad23b3be83f9ebf7dd09aa057642ada8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Signal::disconnect</definition>
+        <argsstring>(Observer *receiver)</argsstring>
+        <name>disconnect</name>
+        <param>
+          <type><ref refid="classoscit_1_1_observer" kindref="compound">Observer</ref> *</type>
+          <declname>receiver</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Disconnect a specific observer. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/signal.h" line="94" bodyfile="/Users/gaspard/git/oscit/include/oscit/signal.h" bodystart="94" bodyend="97"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classoscit_1_1_signal_1abd09770c101eaedfbc5477ec5be4495d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Signal::disconnect_observer</definition>
+        <argsstring>(Observer *observer)</argsstring>
+        <name>disconnect_observer</name>
+        <param>
+          <type><ref refid="classoscit_1_1_observer" kindref="compound">Observer</ref> *</type>
+          <declname>observer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove all connections to an observer. This method is only called by disconnect. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/signal.h" line="135" bodyfile="/Users/gaspard/git/oscit/include/oscit/signal.h" bodystart="135" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_signal_1ac0c2e0a3a271f1dea7adfbd872900e73" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Signal::disconnect_all</definition>
+        <argsstring>()</argsstring>
+        <name>disconnect_all</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove all connections. This method is called on <ref refid="classoscit_1_1_signal" kindref="compound">Signal</ref> destruction. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/signal.h" line="152" bodyfile="/Users/gaspard/git/oscit/include/oscit/signal.h" bodystart="152" bodyend="160"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A <ref refid="classoscit_1_1_signal" kindref="compound">Signal</ref> is a callback slot where observers can connect in order to receive notifications. When the either end is deleted, the connection is automatically removed. <ref refid="classoscit_1_1_thread" kindref="compound">Thread</ref> safe. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="1297">
+        <label>oscit::CTList&lt; SignalCallback * &gt;</label>
+        <link refid="classoscit_1_1_c_t_list"/>
+        <childnode refid="1298" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1299" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1298">
+        <label>std::list&lt;SignalCallback * &gt;</label>
+        <link refid="classstd_1_1list"/>
+      </node>
+      <node id="1296">
+        <label>oscit::Signal</label>
+        <link refid="classoscit_1_1_signal"/>
+        <childnode refid="1297" relation="usage">
+          <edgelabel>callbacks_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1299">
+        <label>oscit::RWMutex</label>
+        <link refid="classoscit_1_1_r_w_mutex"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/signal.h" line="46" bodyfile="/Users/gaspard/git/oscit/include/oscit/signal.h" bodystart="46" bodyend="165"/>
+    <listofallmembers>
+      <member refid="classoscit_1_1_signal_1ac12000a2de4867aae368be5f9b2ac9b4" prot="private" virt="non-virtual"><scope>oscit::Signal</scope><name>callbacks_</name></member>
+      <member refid="classoscit_1_1_signal_1a9b87130e4b445ad261bc678b09538b5a" prot="public" virt="non-virtual"><scope>oscit::Signal</scope><name>connect</name></member>
+      <member refid="classoscit_1_1_signal_1aad23b3be83f9ebf7dd09aa057642ada8" prot="public" virt="non-virtual"><scope>oscit::Signal</scope><name>disconnect</name></member>
+      <member refid="classoscit_1_1_signal_1ac0c2e0a3a271f1dea7adfbd872900e73" prot="private" virt="non-virtual"><scope>oscit::Signal</scope><name>disconnect_all</name></member>
+      <member refid="classoscit_1_1_signal_1abd09770c101eaedfbc5477ec5be4495d" prot="private" virt="non-virtual"><scope>oscit::Signal</scope><name>disconnect_observer</name></member>
+      <member refid="classoscit_1_1_signal_1a1bc1613ca5d6d0e8b2fbce5ef15dd38f" prot="private" virt="non-virtual"><scope>oscit::Signal</scope><name>Observer</name></member>
+      <member refid="classoscit_1_1_signal_1a7207c0654953113266d76d336958b598" prot="public" virt="non-virtual"><scope>oscit::Signal</scope><name>send</name></member>
+      <member refid="classoscit_1_1_signal_1a7e26667ce07b0dc6923e0df2c95f7b86" prot="public" virt="non-virtual"><scope>oscit::Signal</scope><name>send_once</name></member>
+      <member refid="classoscit_1_1_signal_1a30209778b9422b7aaa0f1fc7cb30638f" prot="private" virt="non-virtual"><scope>oscit::Signal</scope><name>signal_method_t</name></member>
+      <member refid="classoscit_1_1_signal_1aee0fee57fde5a73b613961da8913c289" prot="public" virt="non-virtual"><scope>oscit::Signal</scope><name>~Signal</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

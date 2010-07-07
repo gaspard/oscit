@@ -3,19 +3,33 @@
   <compounddef id="classstd_1_1list" kind="class" prot="public">
     <compoundname>std::list</compoundname>
     <derivedcompoundref refid="classoscit_1_1_c_t_list" prot="public" virt="non-virtual">oscit::CTList&lt; Command * &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_c_t_list" prot="public" virt="non-virtual">oscit::CTList&lt; Signal * &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_c_t_list" prot="public" virt="non-virtual">oscit::CTList&lt; SignalCallback * &gt;</derivedcompoundref>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="437">
+      <node id="459">
         <label>list</label>
         <link refid="classstd_1_1list"/>
       </node>
-      <node id="438">
+      <node id="462">
+        <label>CTList&lt; SignalCallback * &gt;</label>
+        <link refid="classoscit_1_1_c_t_list"/>
+        <childnode refid="459" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="460">
         <label>CTList&lt; Command * &gt;</label>
         <link refid="classoscit_1_1_c_t_list"/>
-        <childnode refid="437" relation="public-inheritance">
+        <childnode refid="459" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="461">
+        <label>CTList&lt; Signal * &gt;</label>
+        <link refid="classoscit_1_1_c_t_list"/>
+        <childnode refid="459" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

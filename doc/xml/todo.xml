@@ -12,6 +12,14 @@
 <varlistentry><term>Member <ref refid="classoscit_1_1_midi_message_1a33696e264eea5de6b69c9c5b7e6952a9" kindref="member">oscit::MidiMessage::set_as_note</ref> (int note, int velocity=80, int length=500, int channel=1, time_t wait=0) </term></varlistentry>
 <listitem><para>optimize object creation with a pool ? </para></listitem>
 </variablelist>
+</para><para><anchor id="todo_1_todo000003"/> <variablelist>
+<varlistentry><term>Member <ref refid="classoscit_1_1_object_1a0a73489bc24b72f31c3865e8eb8fc113" kindref="member">oscit::Object::trigger</ref> (const Value &amp;val) </term></varlistentry>
+<listitem><para>why is the return value const ? </para></listitem>
+</variablelist>
+</para><para><anchor id="todo_1_todo000004"/> <variablelist>
+<varlistentry><term>Member <ref refid="classoscit_1_1_root_1a6fbae78f8ca3d59a5565e48ff1aa2f00" kindref="member">oscit::Root::on_register_connect</ref> (const std::string &amp;url, T *receiver, void(T::*Tmethod)(const Value &amp;)) </term></varlistentry>
+<listitem><para>: when connections are removed, the Signals are not removed from the on_register_ hash, even if they are empty: a solution would be to have some &apos;cleanup&apos; code. </para></listitem>
+</variablelist>
 </para>    </detaileddescription>
   </compounddef>
 </doxygen>

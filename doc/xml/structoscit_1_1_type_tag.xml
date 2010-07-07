@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/value_types.h" line="81" bodyfile="/Users/gaspard/git/oscit/include/oscit/value_types.h" bodystart="81" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/value_types.h" line="89" bodyfile="/Users/gaspard/git/oscit/include/oscit/value_types.h" bodystart="89" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -34,14 +34,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/value_types.h" line="80" bodyfile="/Users/gaspard/git/oscit/include/oscit/value_types.h" bodystart="80" bodyend="80"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/value_types.h" line="88" bodyfile="/Users/gaspard/git/oscit/include/oscit/value_types.h" bodystart="88" bodyend="88"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
 <para>Wrapper around a string identifying an osc type list. </para>    </detaileddescription>
-    <location file="/Users/gaspard/git/oscit/include/oscit/value_types.h" line="79" bodyfile="/Users/gaspard/git/oscit/include/oscit/value_types.h" bodystart="78" bodyend="82"/>
+    <location file="/Users/gaspard/git/oscit/include/oscit/value_types.h" line="87" bodyfile="/Users/gaspard/git/oscit/include/oscit/value_types.h" bodystart="86" bodyend="90"/>
     <listofallmembers>
       <member refid="structoscit_1_1_type_tag_1af1a567bd9e05c44166e480c518322037" prot="public" virt="non-virtual"><scope>oscit::TypeTag</scope><name>str_</name></member>
       <member refid="structoscit_1_1_type_tag_1a18a984f1d2d81446ba59a00aa1e02dc9" prot="public" virt="non-virtual"><scope>oscit::TypeTag</scope><name>TypeTag</name></member>

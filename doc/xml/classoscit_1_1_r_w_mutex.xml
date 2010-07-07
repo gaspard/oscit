@@ -2,9 +2,11 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
   <compounddef id="classoscit_1_1_r_w_mutex" kind="class" prot="public">
     <compoundname>oscit::RWMutex</compoundname>
-    <derivedcompoundref refid="classoscit_1_1_c_t_hash" prot="public" virt="non-virtual">oscit::CTHash&lt; std::string, CallbackList * &gt;</derivedcompoundref>
     <derivedcompoundref refid="classoscit_1_1_c_t_hash" prot="public" virt="non-virtual">oscit::CTHash&lt; std::string, Object * &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_c_t_hash" prot="public" virt="non-virtual">oscit::CTHash&lt; std::string, Signal * &gt;</derivedcompoundref>
     <derivedcompoundref refid="classoscit_1_1_c_t_list" prot="public" virt="non-virtual">oscit::CTList&lt; Command * &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_c_t_list" prot="public" virt="non-virtual">oscit::CTList&lt; Signal * &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_c_t_list" prot="public" virt="non-virtual">oscit::CTList&lt; SignalCallback * &gt;</derivedcompoundref>
     <derivedcompoundref refid="classoscit_1_1_c_t_vector" prot="public" virt="non-virtual">oscit::CTVector&lt; Object * &gt;</derivedcompoundref>
     <derivedcompoundref refid="classoscit_1_1_c_t_hash" prot="public" virt="non-virtual">oscit::CTHash&lt; K, T &gt;</derivedcompoundref>
     <derivedcompoundref refid="classoscit_1_1_c_t_list" prot="public" virt="non-virtual">oscit::CTList&lt; T &gt;</derivedcompoundref>
@@ -22,7 +24,7 @@
 <para>Pthread readers-writer lock. We need to make it mutable so that we can access it from const &apos;read_unlock&apos;. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="110" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="110" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="112" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="112" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -37,7 +39,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="68" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="68" bodyend="73"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="70" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="70" bodyend="75"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_r_w_mutex_1a1fbdf80ace36018183196f92a2193ceb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -50,7 +52,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="75" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="75" bodyend="80"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="77" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="77" bodyend="82"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_r_w_mutex_1ac549bb3340bac6726bce2863f80a240e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -63,7 +65,7 @@
 <para>Gain exclusive access to resource (write). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="84" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="84" bodyend="86"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="86" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="86" bodyend="88"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_r_w_mutex_1ae74be65c4bbcc16313b5ca56d17db947" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -76,7 +78,7 @@
 <para>Release exclusive access to resource. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="90" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="90" bodyend="92"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="92" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="92" bodyend="94"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_r_w_mutex_1a672d9bfefbc1839d9e196e90a1963f39" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -89,7 +91,7 @@
 <para>Gain read-only access to resource. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="96" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="96" bodyend="98"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="98" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="98" bodyend="100"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_r_w_mutex_1a97010c1b513da70f8c1c9e671529abb0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -102,62 +104,74 @@
 <para>Release read-only access to resource. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="102" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="102" bodyend="105"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="104" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="104" bodyend="107"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para>This class implements a read/write mutex. It should be used when there are many more reads then writes, otherwize a normal mutex is faster. </para>    </detaileddescription>
+<para>This class implements a read/write mutex. It should be used when there are many more reads then writes, otherwize a normal mutex is faster. Warning: behavior is undefined in case of double locking from the same thread: do not always expect a deadlock. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="1226">
-        <label>oscit::CTHash&lt; std::string, CallbackList * &gt;</label>
-        <link refid="classoscit_1_1_c_t_hash"/>
-        <childnode refid="1225" relation="public-inheritance">
+      <node id="1240">
+        <label>oscit::CTList&lt; SignalCallback * &gt;</label>
+        <link refid="classoscit_1_1_c_t_list"/>
+        <childnode refid="1235" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1232">
+      <node id="1237">
+        <label>oscit::CTHash&lt; std::string, Signal * &gt;</label>
+        <link refid="classoscit_1_1_c_t_hash"/>
+        <childnode refid="1235" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1244">
         <label>oscit::CTVector&lt; T &gt;</label>
         <link refid="classoscit_1_1_c_t_vector"/>
-        <childnode refid="1225" relation="public-inheritance">
+        <childnode refid="1235" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1231">
+      <node id="1243">
         <label>oscit::CTList&lt; T &gt;</label>
         <link refid="classoscit_1_1_c_t_list"/>
-        <childnode refid="1225" relation="public-inheritance">
+        <childnode refid="1235" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1228">
+      <node id="1239">
+        <label>oscit::CTList&lt; Signal * &gt;</label>
+        <link refid="classoscit_1_1_c_t_list"/>
+        <childnode refid="1235" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1238">
         <label>oscit::CTList&lt; Command * &gt;</label>
         <link refid="classoscit_1_1_c_t_list"/>
-        <childnode refid="1225" relation="public-inheritance">
+        <childnode refid="1235" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1227">
+      <node id="1236">
         <label>oscit::CTHash&lt; std::string, Object * &gt;</label>
         <link refid="classoscit_1_1_c_t_hash"/>
-        <childnode refid="1225" relation="public-inheritance">
+        <childnode refid="1235" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1230">
+      <node id="1242">
         <label>oscit::CTHash&lt; K, T &gt;</label>
         <link refid="classoscit_1_1_c_t_hash"/>
-        <childnode refid="1225" relation="public-inheritance">
+        <childnode refid="1235" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1229">
+      <node id="1241">
         <label>oscit::CTVector&lt; Object * &gt;</label>
         <link refid="classoscit_1_1_c_t_vector"/>
-        <childnode refid="1225" relation="public-inheritance">
+        <childnode refid="1235" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1225">
+      <node id="1235">
         <label>oscit::RWMutex</label>
         <link refid="classoscit_1_1_r_w_mutex"/>
       </node>
     </inheritancegraph>
-    <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="66" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="66" bodyend="111"/>
+    <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="68" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="68" bodyend="113"/>
     <listofallmembers>
       <member refid="classoscit_1_1_r_w_mutex_1ac549bb3340bac6726bce2863f80a240e" prot="public" virt="non-virtual"><scope>oscit::RWMutex</scope><name>lock</name></member>
       <member refid="classoscit_1_1_r_w_mutex_1a672d9bfefbc1839d9e196e90a1963f39" prot="public" virt="non-virtual"><scope>oscit::RWMutex</scope><name>read_lock</name></member>

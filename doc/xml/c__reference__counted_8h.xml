@@ -5,187 +5,187 @@
     <includes local="no">assert.h</includes>
     <includes refid="atomic__counter_8h" local="yes">oscit/atomic_counter.h</includes>
     <includes refid="non__copyable_8h" local="yes">oscit/non_copyable.h</includes>
-    <includedby refid="object_8h" local="yes">include/oscit/object.h</includedby>
+    <includedby refid="object_8h" local="yes">/Users/gaspard/git/oscit/include/oscit/object.h</includedby>
     <incdepgraph>
-      <node id="88">
+      <node id="144">
         <label>oscit/non_copyable.h</label>
         <link refid="non__copyable_8h"/>
       </node>
-      <node id="86">
+      <node id="142">
         <label>assert.h</label>
       </node>
-      <node id="85">
-        <label>include/oscit/c_reference_counted.h</label>
+      <node id="141">
+        <label>/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h</label>
         <link refid="c_reference_counted.h"/>
-        <childnode refid="86" relation="include">
+        <childnode refid="142" relation="include">
         </childnode>
-        <childnode refid="87" relation="include">
+        <childnode refid="143" relation="include">
         </childnode>
-        <childnode refid="88" relation="include">
+        <childnode refid="144" relation="include">
         </childnode>
       </node>
-      <node id="87">
+      <node id="143">
         <label>oscit/atomic_counter.h</label>
         <link refid="atomic__counter_8h"/>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="103">
-        <label>include/oscit/list_with_type_meta_method.h</label>
-        <link refid="list__with__type__meta__method_8h"/>
-      </node>
-      <node id="89">
-        <label>include/oscit/c_reference_counted.h</label>
+      <node id="145">
+        <label>/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h</label>
         <link refid="c_reference_counted.h"/>
-        <childnode refid="90" relation="include">
+        <childnode refid="146" relation="include">
         </childnode>
       </node>
-      <node id="106">
-        <label>include/oscit/object_proxy.h</label>
+      <node id="163">
+        <label>/Users/gaspard/git/oscit/include/oscit/object_proxy.h</label>
         <link refid="object__proxy_8h"/>
-        <childnode refid="104" relation="include">
+        <childnode refid="161" relation="include">
         </childnode>
       </node>
-      <node id="111">
-        <label>include/oscit/osc_remote_object.h</label>
+      <node id="167">
+        <label>/Users/gaspard/git/oscit/include/oscit/osc_remote_object.h</label>
         <link refid="osc__remote__object_8h"/>
       </node>
-      <node id="110">
-        <label>include/oscit/type_meta_method.h</label>
-        <link refid="type__meta__method_8h"/>
-      </node>
-      <node id="95">
-        <label>include/oscit/root.h</label>
+      <node id="151">
+        <label>/Users/gaspard/git/oscit/include/oscit/root.h</label>
         <link refid="root_8h"/>
-        <childnode refid="96" relation="include">
+        <childnode refid="152" relation="include">
         </childnode>
-        <childnode refid="97" relation="include">
+        <childnode refid="153" relation="include">
         </childnode>
-        <childnode refid="98" relation="include">
+        <childnode refid="154" relation="include">
         </childnode>
-        <childnode refid="99" relation="include">
+        <childnode refid="155" relation="include">
         </childnode>
-        <childnode refid="101" relation="include">
+        <childnode refid="156" relation="include">
         </childnode>
-        <childnode refid="102" relation="include">
+        <childnode refid="158" relation="include">
         </childnode>
-        <childnode refid="103" relation="include">
+        <childnode refid="159" relation="include">
         </childnode>
-        <childnode refid="93" relation="include">
+        <childnode refid="160" relation="include">
         </childnode>
-        <childnode refid="104" relation="include">
+        <childnode refid="149" relation="include">
         </childnode>
-        <childnode refid="105" relation="include">
+        <childnode refid="161" relation="include">
         </childnode>
-        <childnode refid="109" relation="include">
+        <childnode refid="162" relation="include">
         </childnode>
-        <childnode refid="110" relation="include">
+        <childnode refid="166" relation="include">
         </childnode>
       </node>
-      <node id="93">
-        <label>include/oscit/oscit.h</label>
+      <node id="149">
+        <label>/Users/gaspard/git/oscit/include/oscit/oscit.h</label>
         <link refid="oscit_8h"/>
       </node>
-      <node id="101">
-        <label>include/oscit/info_meta_method.h</label>
+      <node id="158">
+        <label>/Users/gaspard/git/oscit/include/oscit/info_meta_method.h</label>
         <link refid="info__meta__method_8h"/>
       </node>
-      <node id="99">
-        <label>include/oscit/file_method.h</label>
+      <node id="156">
+        <label>/Users/gaspard/git/oscit/include/oscit/file_method.h</label>
         <link refid="file__method_8h"/>
-        <childnode refid="100" relation="include">
+        <childnode refid="157" relation="include">
         </childnode>
-        <childnode refid="93" relation="include">
+        <childnode refid="149" relation="include">
         </childnode>
       </node>
-      <node id="98">
-        <label>include/oscit/error_meta_method.h</label>
+      <node id="155">
+        <label>/Users/gaspard/git/oscit/include/oscit/error_meta_method.h</label>
         <link refid="error__meta__method_8h"/>
       </node>
-      <node id="107">
-        <label>include/oscit/osc_root_proxy.h</label>
+      <node id="160">
+        <label>/Users/gaspard/git/oscit/include/oscit/list_with_attributes_meta_method.h</label>
+        <link refid="list__with__attributes__meta__method_8h"/>
+      </node>
+      <node id="164">
+        <label>/Users/gaspard/git/oscit/include/oscit/osc_root_proxy.h</label>
         <link refid="osc__root__proxy_8h"/>
       </node>
-      <node id="91">
-        <label>include/oscit/log_object.h</label>
+      <node id="147">
+        <label>/Users/gaspard/git/oscit/include/oscit/log_object.h</label>
         <link refid="log__object_8h"/>
       </node>
-      <node id="97">
-        <label>include/oscit/call.h</label>
+      <node id="153">
+        <label>/Users/gaspard/git/oscit/include/oscit/attrs_meta_method.h</label>
+        <link refid="attrs__meta__method_8h"/>
+      </node>
+      <node id="154">
+        <label>/Users/gaspard/git/oscit/include/oscit/call.h</label>
         <link refid="call_8h"/>
-        <childnode refid="93" relation="include">
+        <childnode refid="149" relation="include">
         </childnode>
       </node>
-      <node id="104">
-        <label>include/oscit/proxy_factory.h</label>
+      <node id="161">
+        <label>/Users/gaspard/git/oscit/include/oscit/proxy_factory.h</label>
         <link refid="proxy__factory_8h"/>
-        <childnode refid="93" relation="include">
+        <childnode refid="149" relation="include">
         </childnode>
       </node>
-      <node id="100">
-        <label>include/oscit/hash_file_method.h</label>
+      <node id="157">
+        <label>/Users/gaspard/git/oscit/include/oscit/hash_file_method.h</label>
         <link refid="hash__file__method_8h"/>
-        <childnode refid="93" relation="include">
+        <childnode refid="149" relation="include">
         </childnode>
       </node>
-      <node id="102">
-        <label>include/oscit/list_meta_method.h</label>
+      <node id="159">
+        <label>/Users/gaspard/git/oscit/include/oscit/list_meta_method.h</label>
         <link refid="list__meta__method_8h"/>
       </node>
-      <node id="108">
-        <label>include/oscit/zeroconf_browser.h</label>
+      <node id="165">
+        <label>/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h</label>
         <link refid="zeroconf__browser_8h"/>
-        <childnode refid="93" relation="include">
+        <childnode refid="149" relation="include">
         </childnode>
       </node>
-      <node id="105">
-        <label>include/oscit/root_proxy.h</label>
+      <node id="162">
+        <label>/Users/gaspard/git/oscit/include/oscit/root_proxy.h</label>
         <link refid="root__proxy_8h"/>
-        <childnode refid="106" relation="include">
+        <childnode refid="163" relation="include">
         </childnode>
-        <childnode refid="107" relation="include">
+        <childnode refid="164" relation="include">
         </childnode>
-        <childnode refid="104" relation="include">
+        <childnode refid="161" relation="include">
         </childnode>
-        <childnode refid="108" relation="include">
+        <childnode refid="165" relation="include">
         </childnode>
       </node>
-      <node id="90">
-        <label>include/oscit/object.h</label>
+      <node id="146">
+        <label>/Users/gaspard/git/oscit/include/oscit/object.h</label>
         <link refid="object_8h"/>
-        <childnode refid="91" relation="include">
+        <childnode refid="147" relation="include">
         </childnode>
-        <childnode refid="92" relation="include">
+        <childnode refid="148" relation="include">
         </childnode>
-        <childnode refid="94" relation="include">
+        <childnode refid="150" relation="include">
         </childnode>
-        <childnode refid="106" relation="include">
+        <childnode refid="163" relation="include">
         </childnode>
-        <childnode refid="111" relation="include">
+        <childnode refid="167" relation="include">
         </childnode>
-        <childnode refid="93" relation="include">
+        <childnode refid="149" relation="include">
         </childnode>
-        <childnode refid="95" relation="include">
+        <childnode refid="151" relation="include">
         </childnode>
       </node>
-      <node id="96">
-        <label>include/oscit/alias.h</label>
+      <node id="152">
+        <label>/Users/gaspard/git/oscit/include/oscit/alias.h</label>
         <link refid="alias_8h"/>
       </node>
-      <node id="94">
-        <label>include/oscit/object_handle.h</label>
+      <node id="150">
+        <label>/Users/gaspard/git/oscit/include/oscit/object_handle.h</label>
         <link refid="object__handle_8h"/>
-        <childnode refid="95" relation="include">
+        <childnode refid="151" relation="include">
         </childnode>
       </node>
-      <node id="92">
-        <label>include/oscit/method.h</label>
+      <node id="148">
+        <label>/Users/gaspard/git/oscit/include/oscit/method.h</label>
         <link refid="method_8h"/>
-        <childnode refid="93" relation="include">
+        <childnode refid="149" relation="include">
         </childnode>
       </node>
-      <node id="109">
-        <label>include/oscit/tree_meta_method.h</label>
+      <node id="166">
+        <label>/Users/gaspard/git/oscit/include/oscit/tree_meta_method.h</label>
         <link refid="tree__meta__method_8h"/>
       </node>
     </invincdepgraph>
@@ -236,74 +236,74 @@
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">oscit<sp/>{</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45" refid="classoscit_1_1_c_reference_counted" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classoscit_1_1_c_reference_counted" kindref="compound">CReferenceCounted</ref><sp/>:<sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_non_copyable" kindref="compound">NonCopyable</ref><sp/>{</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="47" refid="classoscit_1_1_c_reference_counted_1af26aaaa40dd9297f5529f38894044875" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_c_reference_counted_1af26aaaa40dd9297f5529f38894044875" kindref="member">CReferenceCounted</ref>()<sp/>:<sp/>ref_count_(1)<sp/>{}</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49" refid="classoscit_1_1_c_reference_counted_1adf83fb16489f561db168e11d5c7e19c5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_c_reference_counted_1adf83fb16489f561db168e11d5c7e19c5" kindref="member">~CReferenceCounted</ref>()<sp/>{}</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51" refid="classoscit_1_1_c_reference_counted_1a25c5b24bbd95ad923e77d4f0fa94b888" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_c_reference_counted_1a25c5b24bbd95ad923e77d4f0fa94b888" kindref="member">retain</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>ref_count_.increment();</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55" refid="classoscit_1_1_c_reference_counted_1af937a9fdcb7b0af90e7a99e8413a041f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_c_reference_counted_1af937a9fdcb7b0af90e7a99e8413a041f" kindref="member">release</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ref_count_.decrement()<sp/>==<sp/>0)<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59" refid="classoscit_1_1_c_reference_counted_1abe49f3c60ebe0364d7590a42a4afa8b2" refkind="member"><highlight class="normal"><sp/><sp/>int32_t<sp/><ref refid="classoscit_1_1_c_reference_counted_1abe49f3c60ebe0364d7590a42a4afa8b2" kindref="member">ref_count</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ref_count_.count();</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
-<codeline lineno="64" refid="classoscit_1_1_c_reference_counted_1af03ea73d1321a2cea7a0b1035696357c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>T*<sp/><ref refid="classoscit_1_1_c_reference_counted_1af03ea73d1321a2cea7a0b1035696357c" kindref="member">acquire</ref>(T<sp/>*elem)<sp/>{</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>elem-&gt;retain();</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>elem;</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
-<codeline lineno="70" refid="classoscit_1_1_c_reference_counted_1a14432013e00b30693b89212ee244f330" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>T*<sp/><ref refid="classoscit_1_1_c_reference_counted_1a14432013e00b30693b89212ee244f330" kindref="member">release</ref>(T<sp/>*elem)<sp/>{</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>elem-&gt;release();</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="classoscit_1_1_c_reference_counted" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classoscit_1_1_c_reference_counted" kindref="compound">CReferenceCounted</ref><sp/>:<sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_non_copyable" kindref="compound">NonCopyable</ref><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="48" refid="classoscit_1_1_c_reference_counted_1af26aaaa40dd9297f5529f38894044875" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_c_reference_counted_1af26aaaa40dd9297f5529f38894044875" kindref="member">CReferenceCounted</ref>()<sp/>:<sp/>ref_count_(1)<sp/>{}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="classoscit_1_1_c_reference_counted_1adf83fb16489f561db168e11d5c7e19c5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_c_reference_counted_1adf83fb16489f561db168e11d5c7e19c5" kindref="member">~CReferenceCounted</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="classoscit_1_1_c_reference_counted_1a25c5b24bbd95ad923e77d4f0fa94b888" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_c_reference_counted_1a25c5b24bbd95ad923e77d4f0fa94b888" kindref="member">retain</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>ref_count_.increment();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="classoscit_1_1_c_reference_counted_1af937a9fdcb7b0af90e7a99e8413a041f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_c_reference_counted_1af937a9fdcb7b0af90e7a99e8413a041f" kindref="member">release</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ref_count_.decrement()<sp/>==<sp/>0)<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="classoscit_1_1_c_reference_counted_1abe49f3c60ebe0364d7590a42a4afa8b2" refkind="member"><highlight class="normal"><sp/><sp/>int32_t<sp/><ref refid="classoscit_1_1_c_reference_counted_1abe49f3c60ebe0364d7590a42a4afa8b2" kindref="member">ref_count</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ref_count_.count();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="65" refid="classoscit_1_1_c_reference_counted_1af03ea73d1321a2cea7a0b1035696357c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>T*<sp/><ref refid="classoscit_1_1_c_reference_counted_1af03ea73d1321a2cea7a0b1035696357c" kindref="member">acquire</ref>(T<sp/>*elem)<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>elem-&gt;retain();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>elem;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="71" refid="classoscit_1_1_c_reference_counted_1a14432013e00b30693b89212ee244f330" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>T*<sp/><ref refid="classoscit_1_1_c_reference_counted_1a14432013e00b30693b89212ee244f330" kindref="member">release</ref>(T<sp/>*elem)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>elem-&gt;release();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/>AtomicCounter<sp/>ref_count_;</highlight></codeline>
-<codeline lineno="78"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight></codeline>
-<codeline lineno="80" refid="classoscit_1_1_scoped_retain" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classoscit_1_1_scoped_retain" kindref="compound">ScopedRetain</ref><sp/>:<sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_non_copyable" kindref="compound">NonCopyable</ref><sp/>{</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="82" refid="classoscit_1_1_scoped_retain_1af428f4d90d5e10ba36d1647ccdd68e5b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_scoped_retain_1af428f4d90d5e10ba36d1647ccdd68e5b" kindref="member">ScopedRetain</ref>(<ref refid="classoscit_1_1_c_reference_counted" kindref="compound">CReferenceCounted</ref><sp/>*</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">)<sp/>:<sp/>object_(object)<sp/>{</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>retain();</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"></highlight></codeline>
-<codeline lineno="86" refid="classoscit_1_1_scoped_retain_1aa0e47c18ceb4a41109e470fb2310835f" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_scoped_retain_1aa0e47c18ceb4a41109e470fb2310835f" kindref="member">ScopedRetain</ref>()<sp/>:<sp/>object_(NULL)<sp/>{}</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"></highlight></codeline>
-<codeline lineno="88" refid="classoscit_1_1_scoped_retain_1a78fff498ff1685f2d8e19f4177928ef3" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_scoped_retain_1a78fff498ff1685f2d8e19f4177928ef3" kindref="member">~ScopedRetain</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>release();</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"></highlight></codeline>
-<codeline lineno="92" refid="classoscit_1_1_scoped_retain_1aa247235acc7818568884289a5bcdcca6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_scoped_retain_1aa247235acc7818568884289a5bcdcca6" kindref="member">hold</ref>(<ref refid="classoscit_1_1_c_reference_counted" kindref="compound">CReferenceCounted</ref><sp/>*</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(!object_);</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>object_<sp/>=<sp/>object;</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>retain();</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"></highlight></codeline>
-<codeline lineno="98"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_c_reference_counted" kindref="compound">CReferenceCounted</ref><sp/>*object_;</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"></highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>release()<sp/>{</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(object_)<sp/>object_-&gt;<ref refid="classoscit_1_1_c_reference_counted_1af937a9fdcb7b0af90e7a99e8413a041f" kindref="member">release</ref>();</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"></highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>retain()<sp/>{</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>object_-&gt;retain();</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="108"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"></highlight></codeline>
-<codeline lineno="110"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>oscit</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="111"><highlight class="normal"></highlight></codeline>
-<codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>OSCIT_INCLUDE_OSCIT_C_REFERENCE_COUNTED_H_</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>AtomicCounter<sp/>ref_count_;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="classoscit_1_1_scoped_retain" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classoscit_1_1_scoped_retain" kindref="compound">ScopedRetain</ref><sp/>:<sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_non_copyable" kindref="compound">NonCopyable</ref><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="83" refid="classoscit_1_1_scoped_retain_1af428f4d90d5e10ba36d1647ccdd68e5b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_scoped_retain_1af428f4d90d5e10ba36d1647ccdd68e5b" kindref="member">ScopedRetain</ref>(<ref refid="classoscit_1_1_c_reference_counted" kindref="compound">CReferenceCounted</ref><sp/>*</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">)<sp/>:<sp/>object_(object)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>retain();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="classoscit_1_1_scoped_retain_1aa0e47c18ceb4a41109e470fb2310835f" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_scoped_retain_1aa0e47c18ceb4a41109e470fb2310835f" kindref="member">ScopedRetain</ref>()<sp/>:<sp/>object_(NULL)<sp/>{}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="classoscit_1_1_scoped_retain_1a78fff498ff1685f2d8e19f4177928ef3" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_scoped_retain_1a78fff498ff1685f2d8e19f4177928ef3" kindref="member">~ScopedRetain</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>release();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="classoscit_1_1_scoped_retain_1aa247235acc7818568884289a5bcdcca6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_scoped_retain_1aa247235acc7818568884289a5bcdcca6" kindref="member">hold</ref>(<ref refid="classoscit_1_1_c_reference_counted" kindref="compound">CReferenceCounted</ref><sp/>*</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(!object_);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>object_<sp/>=<sp/>object;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>retain();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_c_reference_counted" kindref="compound">CReferenceCounted</ref><sp/>*object_;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>release()<sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(object_)<sp/>object_-&gt;<ref refid="classoscit_1_1_c_reference_counted_1af937a9fdcb7b0af90e7a99e8413a041f" kindref="member">release</ref>();</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>retain()<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>object_-&gt;retain();</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>oscit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>OSCIT_INCLUDE_OSCIT_C_REFERENCE_COUNTED_H_</highlight></codeline>
     </programlisting>
     <location file="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h"/>
   </compounddef>

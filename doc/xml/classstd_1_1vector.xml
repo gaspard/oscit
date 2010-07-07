@@ -8,14 +8,14 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="1513">
+      <node id="1499">
         <label>vector</label>
         <link refid="classstd_1_1vector"/>
       </node>
-      <node id="1514">
+      <node id="1500">
         <label>CTVector&lt; Object * &gt;</label>
         <link refid="classoscit_1_1_c_t_vector"/>
-        <childnode refid="1513" relation="public-inheritance">
+        <childnode refid="1499" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

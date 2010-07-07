@@ -111,13 +111,13 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="1234">
+      <node id="1246">
         <label>oscit::ScaleReal</label>
         <link refid="classoscit_1_1_scale_real"/>
       </node>
-      <node id="1235">
+      <node id="1247">
         <label>oscit::Mapper::MapElement</label>
-        <childnode refid="1234" relation="public-inheritance">
+        <childnode refid="1246" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

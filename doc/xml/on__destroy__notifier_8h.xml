@@ -2,203 +2,18 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
   <compounddef id="on__destroy__notifier_8h" kind="file">
     <compoundname>on_destroy_notifier.h</compoundname>
-    <includes refid="callback__list_8h" local="yes">oscit/callback_list.h</includes>
-    <includedby refid="observable_8h" local="yes">include/oscit/observable.h</includedby>
+    <includes local="yes">oscit/callback_list.h</includes>
     <incdepgraph>
-      <node id="1911">
-        <label>list</label>
-      </node>
-      <node id="1913">
-        <label>oscit/non_copyable.h</label>
-        <link refid="non__copyable_8h"/>
-      </node>
-      <node id="1910">
+      <node id="1934">
         <label>oscit/callback_list.h</label>
-        <link refid="callback__list_8h"/>
-        <childnode refid="1911" relation="include">
-        </childnode>
-        <childnode refid="1912" relation="include">
-        </childnode>
-        <childnode refid="1913" relation="include">
-        </childnode>
-      </node>
-      <node id="1912">
-        <label>oscit/callback.h</label>
-        <link refid="callback_8h"/>
-      </node>
-      <node id="1909">
-        <label>include/oscit/on_destroy_notifier.h</label>
-        <link refid="on_destroy_notifier.h"/>
-        <childnode refid="1910" relation="include">
-        </childnode>
-      </node>
-    </incdepgraph>
-    <invincdepgraph>
-      <node id="1929">
-        <label>include/oscit/list_with_type_meta_method.h</label>
-        <link refid="list__with__type__meta__method_8h"/>
-      </node>
-      <node id="1932">
-        <label>include/oscit/object_proxy.h</label>
-        <link refid="object__proxy_8h"/>
-        <childnode refid="1930" relation="include">
-        </childnode>
-      </node>
-      <node id="1937">
-        <label>include/oscit/osc_remote_object.h</label>
-        <link refid="osc__remote__object_8h"/>
-      </node>
-      <node id="1936">
-        <label>include/oscit/type_meta_method.h</label>
-        <link refid="type__meta__method_8h"/>
-      </node>
-      <node id="1921">
-        <label>include/oscit/root.h</label>
-        <link refid="root_8h"/>
-        <childnode refid="1922" relation="include">
-        </childnode>
-        <childnode refid="1923" relation="include">
-        </childnode>
-        <childnode refid="1924" relation="include">
-        </childnode>
-        <childnode refid="1925" relation="include">
-        </childnode>
-        <childnode refid="1927" relation="include">
-        </childnode>
-        <childnode refid="1928" relation="include">
-        </childnode>
-        <childnode refid="1929" relation="include">
-        </childnode>
-        <childnode refid="1919" relation="include">
-        </childnode>
-        <childnode refid="1930" relation="include">
-        </childnode>
-        <childnode refid="1931" relation="include">
-        </childnode>
-        <childnode refid="1935" relation="include">
-        </childnode>
-        <childnode refid="1936" relation="include">
-        </childnode>
-      </node>
-      <node id="1919">
-        <label>include/oscit/oscit.h</label>
-        <link refid="oscit_8h"/>
-      </node>
-      <node id="1927">
-        <label>include/oscit/info_meta_method.h</label>
-        <link refid="info__meta__method_8h"/>
-      </node>
-      <node id="1925">
-        <label>include/oscit/file_method.h</label>
-        <link refid="file__method_8h"/>
-        <childnode refid="1926" relation="include">
-        </childnode>
-        <childnode refid="1919" relation="include">
-        </childnode>
-      </node>
-      <node id="1924">
-        <label>include/oscit/error_meta_method.h</label>
-        <link refid="error__meta__method_8h"/>
       </node>
       <node id="1933">
-        <label>include/oscit/osc_root_proxy.h</label>
-        <link refid="osc__root__proxy_8h"/>
-      </node>
-      <node id="1917">
-        <label>include/oscit/log_object.h</label>
-        <link refid="log__object_8h"/>
-      </node>
-      <node id="1923">
-        <label>include/oscit/call.h</label>
-        <link refid="call_8h"/>
-        <childnode refid="1919" relation="include">
-        </childnode>
-      </node>
-      <node id="1915">
-        <label>include/oscit/observable.h</label>
-        <link refid="observable_8h"/>
-        <childnode refid="1916" relation="include">
-        </childnode>
-      </node>
-      <node id="1930">
-        <label>include/oscit/proxy_factory.h</label>
-        <link refid="proxy__factory_8h"/>
-        <childnode refid="1919" relation="include">
-        </childnode>
-      </node>
-      <node id="1926">
-        <label>include/oscit/hash_file_method.h</label>
-        <link refid="hash__file__method_8h"/>
-        <childnode refid="1919" relation="include">
-        </childnode>
-      </node>
-      <node id="1928">
-        <label>include/oscit/list_meta_method.h</label>
-        <link refid="list__meta__method_8h"/>
-      </node>
-      <node id="1934">
-        <label>include/oscit/zeroconf_browser.h</label>
-        <link refid="zeroconf__browser_8h"/>
-        <childnode refid="1919" relation="include">
-        </childnode>
-      </node>
-      <node id="1931">
-        <label>include/oscit/root_proxy.h</label>
-        <link refid="root__proxy_8h"/>
-        <childnode refid="1932" relation="include">
-        </childnode>
-        <childnode refid="1933" relation="include">
-        </childnode>
-        <childnode refid="1930" relation="include">
-        </childnode>
+        <label>/Users/gaspard/git/oscit/include/oscit/on_destroy_notifier.h</label>
+        <link refid="on_destroy_notifier.h"/>
         <childnode refid="1934" relation="include">
         </childnode>
       </node>
-      <node id="1916">
-        <label>include/oscit/object.h</label>
-        <link refid="object_8h"/>
-        <childnode refid="1917" relation="include">
-        </childnode>
-        <childnode refid="1918" relation="include">
-        </childnode>
-        <childnode refid="1920" relation="include">
-        </childnode>
-        <childnode refid="1932" relation="include">
-        </childnode>
-        <childnode refid="1937" relation="include">
-        </childnode>
-        <childnode refid="1919" relation="include">
-        </childnode>
-        <childnode refid="1921" relation="include">
-        </childnode>
-      </node>
-      <node id="1922">
-        <label>include/oscit/alias.h</label>
-        <link refid="alias_8h"/>
-      </node>
-      <node id="1920">
-        <label>include/oscit/object_handle.h</label>
-        <link refid="object__handle_8h"/>
-        <childnode refid="1921" relation="include">
-        </childnode>
-      </node>
-      <node id="1918">
-        <label>include/oscit/method.h</label>
-        <link refid="method_8h"/>
-        <childnode refid="1919" relation="include">
-        </childnode>
-      </node>
-      <node id="1935">
-        <label>include/oscit/tree_meta_method.h</label>
-        <link refid="tree__meta__method_8h"/>
-      </node>
-      <node id="1914">
-        <label>include/oscit/on_destroy_notifier.h</label>
-        <link refid="on_destroy_notifier.h"/>
-        <childnode refid="1915" relation="include">
-        </childnode>
-      </node>
-    </invincdepgraph>
+    </incdepgraph>
     <innerclass refid="classoscit_1_1_on_destroy_notifier" prot="public">oscit::OnDestroyNotifier</innerclass>
     <innernamespace refid="namespaceoscit">oscit</innernamespace>
     <briefdescription>
@@ -238,16 +53,16 @@
 <codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>OSCIT_INCLUDE_OSCIT_ON_DESTROY_NOTIFIER_H_</highlight></codeline>
 <codeline lineno="31"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>OSCIT_INCLUDE_OSCIT_ON_DESTROY_NOTIFIER_H_</highlight></codeline>
 <codeline lineno="32"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="callback__list_8h" kindref="compound">oscit/callback_list.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;oscit/callback_list.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">oscit<sp/>{</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
 <codeline lineno="41"><highlight class="keyword">class<sp/></highlight><highlight class="normal">OnDestroyNotifier<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>CallbackList<sp/>{</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="43" refid="classoscit_1_1_on_destroy_notifier_1a77980389bea422263834d10f8925018f" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_on_destroy_notifier_1a77980389bea422263834d10f8925018f" kindref="member">OnDestroyNotifier</ref>(<ref refid="classoscit_1_1_observer" kindref="compound">Observer</ref><sp/>*owner)<sp/>:<sp/><ref refid="classoscit_1_1_callback_list" kindref="compound">CallbackList</ref>(owner)<sp/>{}</highlight></codeline>
+<codeline lineno="43" refid="classoscit_1_1_on_destroy_notifier_1a77980389bea422263834d10f8925018f" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_on_destroy_notifier_1a77980389bea422263834d10f8925018f" kindref="member">OnDestroyNotifier</ref>(<ref refid="classoscit_1_1_observer" kindref="compound">Observer</ref><sp/>*owner)<sp/>:<sp/>CallbackList(owner)<sp/>{}</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
 <codeline lineno="47" refid="classoscit_1_1_on_destroy_notifier_1ac3544c10fbdcd108322b7faa65f41412" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_on_destroy_notifier_1ac3544c10fbdcd108322b7faa65f41412" kindref="member">~OnDestroyNotifier</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classoscit_1_1_callback_list_1ad1f4e1eaf9c6bb6ef8316de723afb73c" kindref="member">Iterator</ref><sp/>it<sp/>=<sp/>callbacks_.begin(),<sp/>end<sp/>=<sp/>callbacks_.end();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>Iterator<sp/>it<sp/>=<sp/>callbacks_.begin(),<sp/>end<sp/>=<sp/>callbacks_.end();</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(it<sp/>!=<sp/>end)<sp/>{</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>(*it)-&gt;trigger();</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>*it;</highlight></codeline>

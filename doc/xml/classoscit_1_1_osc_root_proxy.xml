@@ -95,421 +95,426 @@
     <detaileddescription>
 <para>This is a root proxy that is used to communicate using an <ref refid="classoscit_1_1_osc_command" kindref="compound">OscCommand</ref>. It manages a link to a remote tree using OSC. In order to avoid dangling pointers, the <ref refid="classoscit_1_1_osc_command" kindref="compound">OscCommand</ref> should be deleted after all the associated <ref refid="classoscit_1_1_osc_root_proxy" kindref="compound">OscRootProxy</ref> objects. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="1061">
+      <node id="1068">
         <label>oscit::Root</label>
         <link refid="classoscit_1_1_root"/>
-        <childnode refid="1062" relation="public-inheritance">
+        <childnode refid="1069" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1067">
+      <node id="1073">
         <label>oscit::NonCopyable</label>
         <link refid="classoscit_1_1_non_copyable"/>
       </node>
-      <node id="1060">
+      <node id="1067">
         <label>oscit::RootProxy</label>
         <link refid="classoscit_1_1_root_proxy"/>
-        <childnode refid="1061" relation="public-inheritance">
+        <childnode refid="1068" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1064">
-        <label>oscit::Observable</label>
-        <link refid="classoscit_1_1_observable"/>
-        <childnode refid="1065" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="1065">
+      <node id="1071">
         <label>oscit::Observer</label>
         <link refid="classoscit_1_1_observer"/>
       </node>
-      <node id="1066">
+      <node id="1072">
         <label>oscit::CReferenceCounted</label>
         <link refid="classoscit_1_1_c_reference_counted"/>
+        <childnode refid="1073" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="1069">
+        <label>oscit::Object</label>
+        <link refid="classoscit_1_1_object"/>
+        <childnode refid="1070" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1071" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1072" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1066">
+        <label>oscit::OscRootProxy</label>
+        <link refid="classoscit_1_1_osc_root_proxy"/>
         <childnode refid="1067" relation="private-inheritance">
         </childnode>
       </node>
-      <node id="1062">
-        <label>oscit::Object</label>
-        <link refid="classoscit_1_1_object"/>
-        <childnode refid="1063" relation="public-inheritance">
-        </childnode>
-        <childnode refid="1064" relation="public-inheritance">
-        </childnode>
-        <childnode refid="1066" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="1059">
-        <label>oscit::OscRootProxy</label>
-        <link refid="classoscit_1_1_osc_root_proxy"/>
-        <childnode refid="1060" relation="private-inheritance">
-        </childnode>
-      </node>
-      <node id="1063">
+      <node id="1070">
         <label>oscit::Typed</label>
         <link refid="classoscit_1_1_typed"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="1070">
+      <node id="1088">
+        <label>oscit::CTList&lt; SignalCallback * &gt;</label>
+        <link refid="classoscit_1_1_c_t_list"/>
+        <childnode refid="1089" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1082" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1076">
         <label>oscit::Root</label>
         <link refid="classoscit_1_1_root"/>
-        <childnode refid="1071" relation="public-inheritance">
-        </childnode>
-        <childnode refid="1079" relation="usage">
-          <edgelabel>objects_</edgelabel>
-        </childnode>
-        <childnode refid="1095" relation="usage">
-          <edgelabel>callbacks_on_register_</edgelabel>
-        </childnode>
-        <childnode refid="1097" relation="usage">
-          <edgelabel>commands_</edgelabel>
-        </childnode>
-      </node>
-      <node id="1088">
-        <label>Matrix</label>
-        <link refid="class_matrix"/>
-      </node>
-      <node id="1095">
-        <label>oscit::CTHash&lt; std::string, CallbackList * &gt;</label>
-        <link refid="classoscit_1_1_c_t_hash"/>
-        <childnode refid="1096" relation="public-inheritance">
-        </childnode>
-        <childnode refid="1081" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="1094">
-        <label>oscit::Mutex</label>
-        <link refid="classoscit_1_1_mutex"/>
-        <childnode refid="1072" relation="public-inheritance">
-        </childnode>
-        <childnode refid="1077" relation="private-inheritance">
-        </childnode>
-      </node>
-      <node id="1106">
-        <label>oscit::THash&lt; std::string, Object * &gt;</label>
-        <link refid="classoscit_1_1_t_hash"/>
-        <childnode refid="1107" relation="usage">
-          <edgelabel>thash_table_</edgelabel>
-        </childnode>
-      </node>
-      <node id="1087">
-        <label>oscit::List</label>
-        <link refid="classoscit_1_1_list"/>
-        <childnode refid="1084" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="1108">
-        <label>oscit::THash&lt; Location, RootProxy * &gt;</label>
-        <link refid="classoscit_1_1_t_hash"/>
-        <childnode refid="1109" relation="usage">
-          <edgelabel>thash_table_</edgelabel>
-        </childnode>
-      </node>
-      <node id="1082">
-        <label>oscit::Value</label>
-        <link refid="classoscit_1_1_value"/>
-        <childnode refid="1083" relation="usage">
-          <edgelabel>midi_message_</edgelabel>
+        <childnode refid="1077" relation="public-inheritance">
         </childnode>
         <childnode refid="1085" relation="usage">
-          <edgelabel>string_</edgelabel>
+          <edgelabel>objects_</edgelabel>
         </childnode>
-        <childnode refid="1086" relation="usage">
-          <edgelabel>error_</edgelabel>
-        </childnode>
-        <childnode refid="1087" relation="usage">
-          <edgelabel>list_</edgelabel>
-        </childnode>
-        <childnode refid="1088" relation="usage">
-          <edgelabel>matrix_</edgelabel>
-        </childnode>
-        <childnode refid="1089" relation="usage">
-          <edgelabel>hash_</edgelabel>
-        </childnode>
-      </node>
-      <node id="1080">
-        <label>oscit::THash&lt; std::string,Object * &gt;</label>
-        <link refid="classoscit_1_1_t_hash"/>
-      </node>
-      <node id="1101">
-        <label>oscit::Thread</label>
-        <link refid="classoscit_1_1_thread"/>
-        <childnode refid="1094" relation="public-inheritance">
-        </childnode>
-        <childnode refid="1102" relation="usage">
-          <edgelabel>semaphore_</edgelabel>
-        </childnode>
-      </node>
-      <node id="1109">
-        <label>oscit::THashElement&lt; Location, RootProxy * &gt;</label>
-        <link refid="structoscit_1_1_t_hash_element"/>
-        <childnode refid="1069" relation="usage">
-          <edgelabel>obj</edgelabel>
-        </childnode>
-        <childnode refid="1109" relation="usage">
-          <edgelabel>next</edgelabel>
+        <childnode refid="1103" relation="usage">
+          <edgelabel>commands_</edgelabel>
         </childnode>
         <childnode refid="1105" relation="usage">
-          <edgelabel>key</edgelabel>
-        </childnode>
-      </node>
-      <node id="1083">
-        <label>oscit::MidiMessage</label>
-        <link refid="classoscit_1_1_midi_message"/>
-        <childnode refid="1084" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="1091">
-        <label>oscit::THashElement&lt; std::string, Value &gt;</label>
-        <link refid="structoscit_1_1_t_hash_element"/>
-        <childnode refid="1091" relation="usage">
-          <edgelabel>next</edgelabel>
-        </childnode>
-        <childnode refid="1082" relation="usage">
-          <edgelabel>obj</edgelabel>
-        </childnode>
-      </node>
-      <node id="1077">
-        <label>oscit::NonCopyable</label>
-        <link refid="classoscit_1_1_non_copyable"/>
-      </node>
-      <node id="1110">
-        <label>oscit::ZeroConfRegistration</label>
-        <link refid="classoscit_1_1_zero_conf_registration"/>
-        <childnode refid="1094" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="1107">
-        <label>oscit::THashElement&lt; std::string, Object * &gt;</label>
-        <link refid="structoscit_1_1_t_hash_element"/>
-        <childnode refid="1107" relation="usage">
-          <edgelabel>next</edgelabel>
-        </childnode>
-        <childnode refid="1071" relation="usage">
-          <edgelabel>obj</edgelabel>
-        </childnode>
-      </node>
-      <node id="1098">
-        <label>std::list&lt;Command * &gt;</label>
-        <link refid="classstd_1_1list"/>
-      </node>
-      <node id="1103">
-        <label>oscit::THash&lt; Location, unsigned int &gt;</label>
-        <link refid="classoscit_1_1_t_hash"/>
-        <childnode refid="1104" relation="usage">
-          <edgelabel>thash_table_</edgelabel>
-        </childnode>
-      </node>
-      <node id="1093">
-        <label>std::vector&lt;Object * &gt;</label>
-        <link refid="classstd_1_1vector"/>
-      </node>
-      <node id="1096">
-        <label>oscit::THash&lt; std::string,CallbackList * &gt;</label>
-        <link refid="classoscit_1_1_t_hash"/>
-      </node>
-      <node id="1097">
-        <label>oscit::CTList&lt; Command * &gt;</label>
-        <link refid="classoscit_1_1_c_t_list"/>
-        <childnode refid="1098" relation="public-inheritance">
-        </childnode>
-        <childnode refid="1081" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="1069">
-        <label>oscit::RootProxy</label>
-        <link refid="classoscit_1_1_root_proxy"/>
-        <childnode refid="1070" relation="public-inheritance">
-        </childnode>
-        <childnode refid="1099" relation="usage">
-          <edgelabel>proxy_factory_</edgelabel>
-        </childnode>
-        <childnode refid="1100" relation="usage">
-          <edgelabel>command_</edgelabel>
-        </childnode>
-        <childnode refid="1105" relation="usage">
-          <edgelabel>remote_location_</edgelabel>
-        </childnode>
-      </node>
-      <node id="1073">
-        <label>oscit::Observable</label>
-        <link refid="classoscit_1_1_observable"/>
-        <childnode refid="1074" relation="public-inheritance">
-        </childnode>
-        <childnode refid="1075" relation="usage">
-          <edgelabel>destruction_notifier_</edgelabel>
-        </childnode>
-      </node>
-      <node id="1075">
-        <label>oscit::OnDestroyNotifier</label>
-        <link refid="classoscit_1_1_on_destroy_notifier"/>
-        <childnode refid="1076" relation="public-inheritance">
-        </childnode>
-        <childnode refid="1076" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="1074">
-        <label>oscit::Observer</label>
-        <link refid="classoscit_1_1_observer"/>
-      </node>
-      <node id="1102">
-        <label>oscit::Semaphore</label>
-        <link refid="classoscit_1_1_semaphore"/>
-        <childnode refid="1077" relation="private-inheritance">
-        </childnode>
-        <childnode refid="1094" relation="usage">
-          <edgelabel>acquire_mutex_</edgelabel>
-        </childnode>
-      </node>
-      <node id="1078">
-        <label>oscit::CReferenceCounted</label>
-        <link refid="classoscit_1_1_c_reference_counted"/>
-        <childnode refid="1077" relation="private-inheritance">
-        </childnode>
-      </node>
-      <node id="1111">
-        <label>oscit::OscCommand</label>
-        <link refid="classoscit_1_1_osc_command"/>
-        <childnode refid="1100" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="1071">
-        <label>oscit::Object</label>
-        <link refid="classoscit_1_1_object"/>
-        <childnode refid="1072" relation="public-inheritance">
-        </childnode>
-        <childnode refid="1073" relation="public-inheritance">
-        </childnode>
-        <childnode refid="1078" relation="public-inheritance">
-        </childnode>
-        <childnode refid="1079" relation="usage">
-          <edgelabel>children_</edgelabel>
-        </childnode>
-        <childnode refid="1070" relation="usage">
-          <edgelabel>root_</edgelabel>
-        </childnode>
-        <childnode refid="1082" relation="usage">
-          <edgelabel>type_</edgelabel>
-        </childnode>
-        <childnode refid="1092" relation="usage">
-          <edgelabel>children_vector_</edgelabel>
-        </childnode>
-        <childnode refid="1094" relation="usage">
-          <edgelabel>context_</edgelabel>
-        </childnode>
-        <childnode refid="1071" relation="usage">
-          <edgelabel>parent_</edgelabel>
-        </childnode>
-      </node>
-      <node id="1086">
-        <label>oscit::Error</label>
-        <link refid="classoscit_1_1_error"/>
-        <childnode refid="1084" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="1090">
-        <label>oscit::THash&lt; std::string, Value &gt;</label>
-        <link refid="classoscit_1_1_t_hash"/>
-        <childnode refid="1091" relation="usage">
-          <edgelabel>thash_table_</edgelabel>
+          <edgelabel>on_register_</edgelabel>
         </childnode>
       </node>
       <node id="1105">
-        <label>oscit::Location</label>
-        <link refid="classoscit_1_1_location"/>
-      </node>
-      <node id="1079">
-        <label>oscit::CTHash&lt; std::string, Object * &gt;</label>
+        <label>oscit::CTHash&lt; std::string, Signal * &gt;</label>
         <link refid="classoscit_1_1_c_t_hash"/>
-        <childnode refid="1080" relation="public-inheritance">
+        <childnode refid="1106" relation="public-inheritance">
         </childnode>
-        <childnode refid="1081" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="1068">
-        <label>oscit::OscRootProxy</label>
-        <link refid="classoscit_1_1_osc_root_proxy"/>
-        <childnode refid="1069" relation="private-inheritance">
-        </childnode>
-        <childnode refid="1111" relation="usage">
-          <edgelabel>command_</edgelabel>
+        <childnode refid="1082" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1072">
-        <label>oscit::Typed</label>
-        <link refid="classoscit_1_1_typed"/>
+      <node id="1093">
+        <label>oscit::Matrix</label>
+        <link refid="classoscit_1_1_matrix"/>
       </node>
-      <node id="1089">
-        <label>oscit::Hash</label>
-        <link refid="classoscit_1_1_hash"/>
-        <childnode refid="1084" relation="public-inheritance">
+      <node id="1102">
+        <label>oscit::Mutex</label>
+        <link refid="classoscit_1_1_mutex"/>
+        <childnode refid="1078" relation="public-inheritance">
         </childnode>
-        <childnode refid="1090" relation="public-inheritance">
+        <childnode refid="1084" relation="private-inheritance">
         </childnode>
       </node>
-      <node id="1084">
-        <label>oscit::ReferenceCounted</label>
-        <link refid="classoscit_1_1_reference_counted"/>
+      <node id="1114">
+        <label>oscit::THash&lt; std::string, Object * &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+        <childnode refid="1115" relation="usage">
+          <edgelabel>thash_table_</edgelabel>
+        </childnode>
       </node>
-      <node id="1104">
-        <label>oscit::THashElement&lt; Location, unsigned int &gt;</label>
+      <node id="1096">
+        <label>oscit::List</label>
+        <link refid="classoscit_1_1_list"/>
+        <childnode refid="1092" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1116">
+        <label>oscit::THash&lt; Location, RootProxy * &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+        <childnode refid="1117" relation="usage">
+          <edgelabel>thash_table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1090">
+        <label>oscit::Value</label>
+        <link refid="classoscit_1_1_value"/>
+        <childnode refid="1091" relation="usage">
+          <edgelabel>midi_message_</edgelabel>
+        </childnode>
+        <childnode refid="1093" relation="usage">
+          <edgelabel>matrix_</edgelabel>
+        </childnode>
+        <childnode refid="1094" relation="usage">
+          <edgelabel>string_</edgelabel>
+        </childnode>
+        <childnode refid="1095" relation="usage">
+          <edgelabel>error_</edgelabel>
+        </childnode>
+        <childnode refid="1096" relation="usage">
+          <edgelabel>list_</edgelabel>
+        </childnode>
+        <childnode refid="1097" relation="usage">
+          <edgelabel>hash_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1086">
+        <label>oscit::THash&lt; std::string,Object * &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+      </node>
+      <node id="1109">
+        <label>oscit::Thread</label>
+        <link refid="classoscit_1_1_thread"/>
+        <childnode refid="1102" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1110" relation="usage">
+          <edgelabel>semaphore_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1117">
+        <label>oscit::THashElement&lt; Location, RootProxy * &gt;</label>
         <link refid="structoscit_1_1_t_hash_element"/>
-        <childnode refid="1104" relation="usage">
+        <childnode refid="1075" relation="usage">
+          <edgelabel>obj</edgelabel>
+        </childnode>
+        <childnode refid="1117" relation="usage">
           <edgelabel>next</edgelabel>
         </childnode>
-        <childnode refid="1105" relation="usage">
+        <childnode refid="1113" relation="usage">
           <edgelabel>key</edgelabel>
         </childnode>
       </node>
-      <node id="1100">
-        <label>oscit::Command</label>
-        <link refid="classoscit_1_1_command"/>
-        <childnode refid="1101" relation="public-inheritance">
-        </childnode>
-        <childnode refid="1070" relation="usage">
-          <edgelabel>root_</edgelabel>
-        </childnode>
-        <childnode refid="1103" relation="usage">
-          <edgelabel>observers_</edgelabel>
-        </childnode>
-        <childnode refid="1106" relation="usage">
-          <edgelabel>remote_objects_</edgelabel>
-        </childnode>
-        <childnode refid="1108" relation="usage">
-          <edgelabel>root_proxies_</edgelabel>
-        </childnode>
-        <childnode refid="1110" relation="usage">
-          <edgelabel>zeroconf_registration_</edgelabel>
-        </childnode>
-      </node>
-      <node id="1092">
-        <label>oscit::CTVector&lt; Object * &gt;</label>
-        <link refid="classoscit_1_1_c_t_vector"/>
-        <childnode refid="1093" relation="public-inheritance">
-        </childnode>
-        <childnode refid="1081" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="1081">
-        <label>oscit::RWMutex</label>
-        <link refid="classoscit_1_1_r_w_mutex"/>
-      </node>
-      <node id="1076">
-        <label>oscit::CallbackList</label>
-        <link refid="classoscit_1_1_callback_list"/>
-        <childnode refid="1077" relation="private-inheritance">
-        </childnode>
-        <childnode refid="1074" relation="usage">
-          <edgelabel>list_owner_</edgelabel>
+      <node id="1091">
+        <label>oscit::MidiMessage</label>
+        <link refid="classoscit_1_1_midi_message"/>
+        <childnode refid="1092" relation="public-inheritance">
         </childnode>
       </node>
       <node id="1099">
+        <label>oscit::THashElement&lt; std::string, Value &gt;</label>
+        <link refid="structoscit_1_1_t_hash_element"/>
+        <childnode refid="1099" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="1090" relation="usage">
+          <edgelabel>obj</edgelabel>
+        </childnode>
+      </node>
+      <node id="1080">
+        <label>oscit::CTList&lt; Signal * &gt;</label>
+        <link refid="classoscit_1_1_c_t_list"/>
+        <childnode refid="1081" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1082" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1084">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+      <node id="1118">
+        <label>oscit::ZeroConfRegistration</label>
+        <link refid="classoscit_1_1_zero_conf_registration"/>
+        <childnode refid="1102" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1115">
+        <label>oscit::THashElement&lt; std::string, Object * &gt;</label>
+        <link refid="structoscit_1_1_t_hash_element"/>
+        <childnode refid="1115" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="1077" relation="usage">
+          <edgelabel>obj</edgelabel>
+        </childnode>
+      </node>
+      <node id="1104">
+        <label>std::list&lt;Command * &gt;</label>
+        <link refid="classstd_1_1list"/>
+      </node>
+      <node id="1111">
+        <label>oscit::THash&lt; Location, unsigned int &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+        <childnode refid="1112" relation="usage">
+          <edgelabel>thash_table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1101">
+        <label>std::vector&lt;Object * &gt;</label>
+        <link refid="classstd_1_1vector"/>
+      </node>
+      <node id="1103">
+        <label>oscit::CTList&lt; Command * &gt;</label>
+        <link refid="classoscit_1_1_c_t_list"/>
+        <childnode refid="1104" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1082" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1089">
+        <label>std::list&lt;SignalCallback * &gt;</label>
+        <link refid="classstd_1_1list"/>
+      </node>
+      <node id="1075">
+        <label>oscit::RootProxy</label>
+        <link refid="classoscit_1_1_root_proxy"/>
+        <childnode refid="1076" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1107" relation="usage">
+          <edgelabel>proxy_factory_</edgelabel>
+        </childnode>
+        <childnode refid="1108" relation="usage">
+          <edgelabel>command_</edgelabel>
+        </childnode>
+        <childnode refid="1113" relation="usage">
+          <edgelabel>remote_location_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1081">
+        <label>std::list&lt;Signal * &gt;</label>
+        <link refid="classstd_1_1list"/>
+      </node>
+      <node id="1106">
+        <label>oscit::THash&lt; std::string,Signal * &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+      </node>
+      <node id="1079">
+        <label>oscit::Observer</label>
+        <link refid="classoscit_1_1_observer"/>
+        <childnode refid="1080" relation="usage">
+          <edgelabel>observed_signals_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1110">
+        <label>oscit::Semaphore</label>
+        <link refid="classoscit_1_1_semaphore"/>
+        <childnode refid="1084" relation="private-inheritance">
+        </childnode>
+        <childnode refid="1102" relation="usage">
+          <edgelabel>acquire_mutex_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1083">
+        <label>oscit::CReferenceCounted</label>
+        <link refid="classoscit_1_1_c_reference_counted"/>
+        <childnode refid="1084" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="1119">
+        <label>oscit::OscCommand</label>
+        <link refid="classoscit_1_1_osc_command"/>
+        <childnode refid="1108" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1087">
+        <label>oscit::Signal</label>
+        <link refid="classoscit_1_1_signal"/>
+        <childnode refid="1088" relation="usage">
+          <edgelabel>callbacks_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1077">
+        <label>oscit::Object</label>
+        <link refid="classoscit_1_1_object"/>
+        <childnode refid="1078" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1079" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1083" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1085" relation="usage">
+          <edgelabel>children_</edgelabel>
+        </childnode>
+        <childnode refid="1076" relation="usage">
+          <edgelabel>root_</edgelabel>
+        </childnode>
+        <childnode refid="1087" relation="usage">
+          <edgelabel>on_delete_</edgelabel>
+        </childnode>
+        <childnode refid="1090" relation="usage">
+          <edgelabel>attributes_</edgelabel>
+        </childnode>
+        <childnode refid="1100" relation="usage">
+          <edgelabel>children_vector_</edgelabel>
+        </childnode>
+        <childnode refid="1102" relation="usage">
+          <edgelabel>context_</edgelabel>
+        </childnode>
+        <childnode refid="1077" relation="usage">
+          <edgelabel>parent_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1095">
+        <label>oscit::Error</label>
+        <link refid="classoscit_1_1_error"/>
+        <childnode refid="1092" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1098">
+        <label>oscit::THash&lt; std::string, Value &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+        <childnode refid="1099" relation="usage">
+          <edgelabel>thash_table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1113">
+        <label>oscit::Location</label>
+        <link refid="classoscit_1_1_location"/>
+      </node>
+      <node id="1085">
+        <label>oscit::CTHash&lt; std::string, Object * &gt;</label>
+        <link refid="classoscit_1_1_c_t_hash"/>
+        <childnode refid="1086" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1082" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1074">
+        <label>oscit::OscRootProxy</label>
+        <link refid="classoscit_1_1_osc_root_proxy"/>
+        <childnode refid="1075" relation="private-inheritance">
+        </childnode>
+        <childnode refid="1119" relation="usage">
+          <edgelabel>command_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1078">
+        <label>oscit::Typed</label>
+        <link refid="classoscit_1_1_typed"/>
+      </node>
+      <node id="1097">
+        <label>oscit::Hash</label>
+        <link refid="classoscit_1_1_hash"/>
+        <childnode refid="1092" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1098" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1092">
+        <label>oscit::ReferenceCounted</label>
+        <link refid="classoscit_1_1_reference_counted"/>
+      </node>
+      <node id="1112">
+        <label>oscit::THashElement&lt; Location, unsigned int &gt;</label>
+        <link refid="structoscit_1_1_t_hash_element"/>
+        <childnode refid="1112" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="1113" relation="usage">
+          <edgelabel>key</edgelabel>
+        </childnode>
+      </node>
+      <node id="1108">
+        <label>oscit::Command</label>
+        <link refid="classoscit_1_1_command"/>
+        <childnode refid="1109" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1076" relation="usage">
+          <edgelabel>root_</edgelabel>
+        </childnode>
+        <childnode refid="1111" relation="usage">
+          <edgelabel>observers_</edgelabel>
+        </childnode>
+        <childnode refid="1114" relation="usage">
+          <edgelabel>remote_objects_</edgelabel>
+        </childnode>
+        <childnode refid="1116" relation="usage">
+          <edgelabel>root_proxies_</edgelabel>
+        </childnode>
+        <childnode refid="1118" relation="usage">
+          <edgelabel>zeroconf_registration_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1100">
+        <label>oscit::CTVector&lt; Object * &gt;</label>
+        <link refid="classoscit_1_1_c_t_vector"/>
+        <childnode refid="1101" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1082" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1082">
+        <label>oscit::RWMutex</label>
+        <link refid="classoscit_1_1_r_w_mutex"/>
+      </node>
+      <node id="1107">
         <label>oscit::ProxyFactory</label>
         <link refid="classoscit_1_1_proxy_factory"/>
       </node>
-      <node id="1085">
+      <node id="1094">
         <label>oscit::StringData</label>
         <link refid="classoscit_1_1_string_data"/>
-        <childnode refid="1084" relation="public-inheritance">
+        <childnode refid="1092" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
@@ -518,11 +523,12 @@
       <member refid="classoscit_1_1_object_1a6962c57c4f1887a48ad702854425e8b7" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>accept_any_type</name></member>
       <member refid="classoscit_1_1_c_reference_counted_1af03ea73d1321a2cea7a0b1035696357c" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>acquire</name></member>
       <member refid="classoscit_1_1_object_1a5f8efaea98d7db104b5d93fd4f4b48c7" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>adopt</name></member>
-      <member refid="classoscit_1_1_observable_1af26c400580303db64255411c8378a5fc" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>adopt_callback_on_destroy</name></member>
-      <member refid="classoscit_1_1_root_1a043768a4b5bb79f44625d56663ca6129" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>adopt_callback_on_register</name></member>
       <member refid="classoscit_1_1_root_1a473b2156324da9520fd7815ec521019a" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>adopt_command</name></member>
       <member refid="classoscit_1_1_object_1a3773c011a07411b64ec2f317cbe29ce7" prot="private" virt="virtual"><scope>oscit::OscRootProxy</scope><name>adopted</name></member>
-      <member refid="classoscit_1_1_root_proxy_1aa73170fda9a5711872ffcfa053587c31" prot="private" virt="virtual"><scope>oscit::OscRootProxy</scope><name>build_child</name></member>
+      <member refid="classoscit_1_1_object_1a695d36ccc883354bc68c795738733bd4" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>attributes</name></member>
+      <member refid="classoscit_1_1_object_1af5b336a74a806c9e96db7d3f26d4ed14" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>attributes</name></member>
+      <member refid="classoscit_1_1_object_1ab78f03c55f5d44947e1d2797db397220" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>attributes_</name></member>
+      <member refid="classoscit_1_1_root_proxy_1a541bb52582f02482c6bdaa4bf31534a1" prot="private" virt="virtual"><scope>oscit::OscRootProxy</scope><name>build_child</name></member>
       <member refid="classoscit_1_1_root_1a7816d03a2e48fd8e3f1c69e9e71f6c50" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>call</name></member>
       <member refid="classoscit_1_1_root_1a2d98b08d16e1d1722df79c171170c83d" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>call</name></member>
       <member refid="classoscit_1_1_root_1a01b086b658a862b8fe1ef211a39a3458" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>call</name></member>
@@ -536,14 +542,13 @@
       <member refid="classoscit_1_1_object_1a3c3ccd6c862acb8a1890eb51056f97bd" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>children_vector_</name></member>
       <member refid="classoscit_1_1_typed_1a9d91142c1ff172635833f4b2a06d5d3b" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>class_name</name></member>
       <member refid="classoscit_1_1_root_1a0b5086f53e60982e30c5abc2c84ffaf0" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>clear</name></member>
-      <member refid="classoscit_1_1_root_1a05d8861a167752eb2ea64a69c748b5ff" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>clear_on_register_callbacks</name></member>
+      <member refid="classoscit_1_1_root_1af5883604e0085b725449424a88060bdf" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>clear_on_register</name></member>
       <member refid="classoscit_1_1_osc_root_proxy_1a376f3da0ec8162ca3f12e8310922d90d" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>command_</name></member>
       <member refid="classoscit_1_1_root_1a976c2a766661d71413ffad5b03e0d101" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>command_for_protocol</name></member>
       <member refid="classoscit_1_1_object_1a5da077bd2474029c931f49d92c291181" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>context_</name></member>
       <member refid="classoscit_1_1_c_reference_counted_1af26aaaa40dd9297f5529f38894044875" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>CReferenceCounted</name></member>
-      <member refid="classoscit_1_1_observer_1a0460e53a6d44a9388dec23ff76ba83f2" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>delete_produced_callbacks_with_data</name></member>
       <member refid="classoscit_1_1_root_proxy_1a136593d19f425152a1f943f6936c6033" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>detach</name></member>
-      <member refid="classoscit_1_1_root_1a8eb5f1b3bf10790cd19e1f5265ef132f" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>expose_views</name></member>
+      <member refid="classoscit_1_1_root_1a78f3d0f9ff0e46b06c63c50d6eada36c" prot="private" virt="virtual"><scope>oscit::OscRootProxy</scope><name>expose_views</name></member>
       <member refid="classoscit_1_1_root_1a453177f2bcd56e3d9f9e82354c9323b3" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>expose_views</name></member>
       <member refid="classoscit_1_1_object_1a2ae7faf5c357c1c78d7f08c302b32d5f" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>find_next_name</name></member>
       <member refid="classoscit_1_1_root_1a7ceb937e31e5b8f41f3a2e0b85102a2f" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>find_or_build_object_at</name></member>
@@ -556,10 +561,11 @@
       <member refid="classoscit_1_1_root_1ac453bc131f329f1c6355e069550713e0" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>get_object_at</name></member>
       <member refid="classoscit_1_1_root_1a1fd420a69f51375fa7c671760c99687e" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>get_views_path</name></member>
       <member refid="classoscit_1_1_root_proxy_1a5c629c0e8b8cea2feffd2fef63e9ab98" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>handle_reply</name></member>
-      <member refid="classoscit_1_1_object_1a00b462f53a9a3a554469665893eed395" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>info</name></member>
+      <member refid="classoscit_1_1_object_1ae348587e8a84ff6510e094920feba582" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>info</name></member>
       <member refid="classoscit_1_1_typed_1a4aba9ae57b258b6d678c685d190ec281" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>is_a</name></member>
+      <member refid="classoscit_1_1_object_1a5849b1a227d7f09a051c5544c715072b" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>keep_last_</name></member>
       <member refid="classoscit_1_1_object_1ab3d7e09f1f76c23b93b9219fbfb49b7c" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>list</name></member>
-      <member refid="classoscit_1_1_object_1a414e24a6cd6b0efa384664992de36907" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>list_with_type</name></member>
+      <member refid="classoscit_1_1_object_1aa2b34c6d8eb438cf1967c8dab92ec674" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>list_with_attributes</name></member>
       <member refid="classoscit_1_1_object_1ad9104e48c683463d6fa6b11ef0f48015" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>lock</name></member>
       <member refid="classoscit_1_1_object_1ad2d56eb93ab7656aadab92ed2d3ce34a" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>moved</name></member>
       <member refid="classoscit_1_1_object_1ac496efa52da888ff46e2d68265da1ad1" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>name</name></member>
@@ -568,22 +574,22 @@
       <member refid="classoscit_1_1_object_1afc7c68fa73ccc93c3f021b68c52d02fd" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>Object</name></member>
       <member refid="classoscit_1_1_object_1a57e051f3a81fe55e09e9abbfcad5411b" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>Object</name></member>
       <member refid="classoscit_1_1_object_1a3fe8ac33a99f99c6e9ce50fde76c0452" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>Object</name></member>
-      <member refid="classoscit_1_1_object_1a02b9d095f61c48b2c4d762b20c033797" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>Object</name></member>
-      <member refid="classoscit_1_1_object_1afd5a334f27a5b8196e69165efb553a30" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>Object</name></member>
-      <member refid="classoscit_1_1_object_1a8f7e0cdc1ae5578b0829c0e427f2f676" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>Object</name></member>
+      <member refid="classoscit_1_1_object_1a1dd076857cfebc398d350252ad657fe3" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>Object</name></member>
+      <member refid="classoscit_1_1_object_1acce26a1a45ceaec41c403de2933b0d9a" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>Object</name></member>
+      <member refid="classoscit_1_1_object_1a0a6593f8e7c8818f8b689d757350aaba" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>Object</name></member>
       <member refid="classoscit_1_1_object_1a48d9081741075e668c1dfb7357e196f7" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>Object</name></member>
-      <member refid="classoscit_1_1_object_1aa314d577f92e7bb042f35b3c87af86cb" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>Object</name></member>
-      <member refid="classoscit_1_1_object_1ae875b68c72ba87f1d6d3a09d4df22938" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>Object</name></member>
+      <member refid="classoscit_1_1_object_1a8371dfb6feae1681c1d8995b30a5d5df" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>Object</name></member>
+      <member refid="classoscit_1_1_object_1a825071efec0cc4ec6bad9ead9025ac4b" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>Object</name></member>
       <member refid="classoscit_1_1_root_1a3a0e192427b3efeefe8c0cf77a2f8df6" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>objects_</name></member>
-      <member refid="classoscit_1_1_observable_1add7ad7a51860b63b558685c950f2df63" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>Observable</name></member>
-      <member refid="classoscit_1_1_object_1a0765b2288555f19ca5dfc12075117f0a" prot="private" virt="virtual"><scope>oscit::OscRootProxy</scope><name>observer_lock</name></member>
-      <member refid="classoscit_1_1_object_1a48cca8b50208000365a76bc03ef836b2" prot="private" virt="virtual"><scope>oscit::OscRootProxy</scope><name>observer_unlock</name></member>
+      <member refid="classoscit_1_1_observer_1ab2b7446f50f2d5c6c9fdbe77ae72ed33" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>Observer</name></member>
+      <member refid="classoscit_1_1_object_1a5f971abf0919f436914b740831d069d8" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>on_delete</name></member>
+      <member refid="classoscit_1_1_object_1ad74c823a1003188238e48c214b7e9d6b" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>on_delete_</name></member>
+      <member refid="classoscit_1_1_root_1a6fbae78f8ca3d59a5565e48ff1aa2f00" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>on_register_connect</name></member>
       <member refid="classoscit_1_1_osc_root_proxy_1afaf615303ec8dfd95104bafd87bae216" prot="public" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>OscRootProxy</name></member>
       <member refid="classoscit_1_1_object_1ae673c75d02da068beac4316f9a7c4429" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>parent</name></member>
       <member refid="classoscit_1_1_object_1a30078b27dfeb7591e7cae7ff9516ae4f" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>parent_</name></member>
       <member refid="classoscit_1_1_root_proxy_1ab59a223aac9bcaf1d0c0c4a9e413aed4" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>proxy_factory</name></member>
       <member refid="classoscit_1_1_c_reference_counted_1abe49f3c60ebe0364d7590a42a4afa8b2" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>ref_count</name></member>
-      <member refid="classoscit_1_1_object_1a5c993e705821e5d03190ef58568719a0" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>register_alias</name></member>
       <member refid="classoscit_1_1_object_1a43f259903782a874ab9d210eb386b3d3" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>register_child</name></member>
       <member refid="classoscit_1_1_root_1ab35f3917132c21e25b5d224b080fe5e6" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>register_object</name></member>
       <member refid="classoscit_1_1_c_reference_counted_1af937a9fdcb7b0af90e7a99e8413a041f" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>release</name></member>
@@ -594,12 +600,12 @@
       <member refid="classoscit_1_1_root_1acc8fadc84f66e02c95202f8c95b9adba" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>Root</name></member>
       <member refid="classoscit_1_1_root_1a4ccaafcf5e59e4faced9f2f203259f0f" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>Root</name></member>
       <member refid="classoscit_1_1_root_1ab5d671be2d3b4fec243c62e0c2fa7827" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>Root</name></member>
-      <member refid="classoscit_1_1_root_1a9765bcdf784decbadf90304f12f13a74" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>Root</name></member>
-      <member refid="classoscit_1_1_root_1aaec03639a9eab7c975c519fd2fa3fcf3" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>Root</name></member>
+      <member refid="classoscit_1_1_root_1abeb295c73e57bc27e446c966367f388f" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>Root</name></member>
+      <member refid="classoscit_1_1_root_1afa47906005f66d3a45cd03c81b22d712" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>Root</name></member>
       <member refid="classoscit_1_1_root_1a96f49b2b82e2634742e971cbd37d5d89" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>Root</name></member>
       <member refid="classoscit_1_1_root_1aa1e932967adbbb31a42b15b49a9e7ed6" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>Root</name></member>
-      <member refid="classoscit_1_1_root_1ac8acf787740abb16267a9647e21ce6c9" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>Root</name></member>
-      <member refid="classoscit_1_1_root_1a34bbee9d8953a6df1611a66dab8f5343" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>Root</name></member>
+      <member refid="classoscit_1_1_root_1a3ec48e5bc9847903850a4eb05b6cbdd2" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>Root</name></member>
+      <member refid="classoscit_1_1_root_1afac2ebfe570af47f022e7fef82a4ad98" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>Root</name></member>
       <member refid="classoscit_1_1_object_1a79b51de62975104798324567ab68566c" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>root_</name></member>
       <member refid="classoscit_1_1_root_proxy_1ad9de7e42d30409e8490c5e3f2246309b" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>RootProxy</name></member>
       <member refid="classoscit_1_1_root_proxy_1afc5f925e67258ad55af363a3372bee83" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>RootProxy</name></member>
@@ -607,24 +613,22 @@
       <member refid="classoscit_1_1_root_1a535135b4de71cb277700f31ac43880a1" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>send</name></member>
       <member refid="classoscit_1_1_osc_root_proxy_1ac04e3de538282aab529d2f6bbcbaaa07" prot="public" virt="virtual"><scope>oscit::OscRootProxy</scope><name>send_to_remote</name></member>
       <member refid="classoscit_1_1_root_proxy_1aa99801124e6b29be08c2628fd783fad7" prot="private" virt="non-virtual" ambiguityscope="oscit::RootProxy::"><scope>oscit::OscRootProxy</scope><name>send_to_remote</name></member>
-      <member refid="classoscit_1_1_object_1a62434e83343a3446e5112f8de13a0272" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>set</name></member>
+      <member refid="classoscit_1_1_object_1a7c4b3fab4a14ab4ff571a23bc59cae60" prot="private" virt="virtual"><scope>oscit::OscRootProxy</scope><name>set</name></member>
       <member refid="classoscit_1_1_object_1a72a0145db445cb50f93ab57ab611ef0d" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>set_all_ok</name></member>
-      <member refid="classoscit_1_1_observer_1ab856c4b8fac03abcb75fe3884a363a6b" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>set_and_hold</name></member>
       <member refid="classoscit_1_1_object_1af83dd0bb922d3cbc3fac0f61a765dc87" prot="private" virt="virtual"><scope>oscit::OscRootProxy</scope><name>set_context</name></member>
+      <member refid="classoscit_1_1_object_1a10957e58f3360971ecd15c75357a98ad" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>set_keep_last</name></member>
       <member refid="classoscit_1_1_object_1a9bb6955e387325190835361c1d1e72da" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>set_name</name></member>
       <member refid="classoscit_1_1_object_1ae491927434513000db13fcf8f10dafc3" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>set_name</name></member>
       <member refid="classoscit_1_1_object_1aacc22da11d84919f001a3732123a9968" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>set_parent</name></member>
       <member refid="classoscit_1_1_root_proxy_1a64e25c5127f275eae6cc6c1a3cad2518" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>set_proxy_factory</name></member>
       <member refid="classoscit_1_1_object_1a0a0d3496199e134d568c87f8122b4c4e" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>set_root</name></member>
+      <member refid="classoscit_1_1_object_1a7f88175bd65749b9b9c00177703b7916" prot="private" virt="virtual"><scope>oscit::OscRootProxy</scope><name>to_hash</name></member>
       <member refid="classoscit_1_1_object_1a3efa5720f9817fb5d1ea84afbea927ca" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>tree</name></member>
       <member refid="classoscit_1_1_object_1a0a73489bc24b72f31c3865e8eb8fc113" prot="private" virt="virtual"><scope>oscit::OscRootProxy</scope><name>trigger</name></member>
-      <member refid="classoscit_1_1_root_1a8382873faf9a8a0bf2f867725d78a8ae" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>trigger_and_clear_on_register_callbacks</name></member>
-      <member refid="classoscit_1_1_object_1ace8d4494f5940334d6353b2a9889c4c2" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>type</name></member>
+      <member refid="classoscit_1_1_object_1a2d2e181035b4d0265a231f85f71b8cb0" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>type</name></member>
       <member refid="classoscit_1_1_typed_1a72ecaff553f3b9028dd57afee597dc44" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>type_cast</name></member>
       <member refid="classoscit_1_1_object_1a34c0a7e5786a1bddbe54529abafe522d" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>type_id</name></member>
-      <member refid="classoscit_1_1_object_1ab95b455fe0ab73da1f15399704e744de" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>type_with_current_value</name></member>
       <member refid="classoscit_1_1_object_1a8d5e13941e410b6d86a3492cb16cb9f8" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>unlock</name></member>
-      <member refid="classoscit_1_1_object_1a3780d31ff03fc7c2736b87d9277f19a6" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>unregister_alias</name></member>
       <member refid="classoscit_1_1_object_1ad4981ad22e3e1fa7bf6d0f64d152e845" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>unregister_child</name></member>
       <member refid="classoscit_1_1_root_1a5177bec20b86b1c8d975ca57218d19e5" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>unregister_command</name></member>
       <member refid="classoscit_1_1_root_1aa7779ac2056c76f3a3d8f04280270ce2" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>unregister_object</name></member>
@@ -632,7 +636,7 @@
       <member refid="classoscit_1_1_object_1aff1923f15589c4f01216270292b439ae" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>url_</name></member>
       <member refid="classoscit_1_1_c_reference_counted_1adf83fb16489f561db168e11d5c7e19c5" prot="private" virt="virtual"><scope>oscit::OscRootProxy</scope><name>~CReferenceCounted</name></member>
       <member refid="classoscit_1_1_object_1a7804faf5ddca82c30fee98e9d10b9734" prot="private" virt="virtual"><scope>oscit::OscRootProxy</scope><name>~Object</name></member>
-      <member refid="classoscit_1_1_observer_1ac42ab921bb3a679a9abaf483f1559c00" prot="private" virt="virtual"><scope>oscit::OscRootProxy</scope><name>~Observer</name></member>
+      <member refid="classoscit_1_1_observer_1a640ae374906b11455d4496f113b10547" prot="private" virt="non-virtual"><scope>oscit::OscRootProxy</scope><name>~Observer</name></member>
       <member refid="classoscit_1_1_osc_root_proxy_1ae2f75b5b338343eb79f21b3753643957" prot="public" virt="virtual"><scope>oscit::OscRootProxy</scope><name>~OscRootProxy</name></member>
       <member refid="classoscit_1_1_root_1ab03d7fbc7469fb2cef3a96399a36a95d" prot="private" virt="virtual"><scope>oscit::OscRootProxy</scope><name>~Root</name></member>
       <member refid="classoscit_1_1_root_proxy_1a8f0108c3d8aacd711418b057f4abec2f" prot="private" virt="virtual"><scope>oscit::OscRootProxy</scope><name>~RootProxy</name></member>

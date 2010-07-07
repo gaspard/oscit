@@ -85,37 +85,37 @@
 <codeline><highlight class="normal"><sp/>target-&gt;release();</highlight></codeline>
 </programlisting> K is the key class, T is the object class </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="187">
+      <node id="205">
         <label>oscit::THash&lt; K, T &gt;</label>
         <link refid="classoscit_1_1_t_hash"/>
       </node>
-      <node id="186">
+      <node id="204">
         <label>oscit::CTHash&lt; K, T &gt;</label>
         <link refid="classoscit_1_1_c_t_hash"/>
-        <childnode refid="187" relation="public-inheritance">
+        <childnode refid="205" relation="public-inheritance">
         </childnode>
-        <childnode refid="188" relation="public-inheritance">
+        <childnode refid="206" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="188">
+      <node id="206">
         <label>oscit::RWMutex</label>
         <link refid="classoscit_1_1_r_w_mutex"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="190">
+      <node id="208">
         <label>oscit::THash&lt; K, T &gt;</label>
         <link refid="classoscit_1_1_t_hash"/>
       </node>
-      <node id="189">
+      <node id="207">
         <label>oscit::CTHash&lt; K, T &gt;</label>
         <link refid="classoscit_1_1_c_t_hash"/>
-        <childnode refid="190" relation="public-inheritance">
+        <childnode refid="208" relation="public-inheritance">
         </childnode>
-        <childnode refid="191" relation="public-inheritance">
+        <childnode refid="209" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="191">
+      <node id="209">
         <label>oscit::RWMutex</label>
         <link refid="classoscit_1_1_r_w_mutex"/>
       </node>
@@ -134,6 +134,7 @@
       <member refid="classoscit_1_1_t_hash_1a96f695b486d20ee7da5b02dbc7a7c2fe" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>end</name></member>
       <member refid="classoscit_1_1_t_hash_1ae8128283b5bffa0ef82d300219e3c52d" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>get</name></member>
       <member refid="classoscit_1_1_t_hash_1a4f1444233f752e04f564355829e5773e" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>get</name></member>
+      <member refid="classoscit_1_1_t_hash_1ac4010343a59c4a79eafc9abc8bae437d" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>get</name></member>
       <member refid="classoscit_1_1_t_hash_1af23e4ebcba12ac4d6b0565ac7a8c745b" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>get</name></member>
       <member refid="classoscit_1_1_t_hash_1a271f9e1c624dadf1882be9003db67bd7" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>get_key</name></member>
       <member refid="classoscit_1_1_t_hash_1a13bd22ce3920712bf37f92a49f5d97cf" prot="public" virt="non-virtual"><scope>oscit::CTHash</scope><name>has_key</name></member>

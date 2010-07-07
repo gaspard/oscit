@@ -171,14 +171,14 @@
     <detaileddescription>
 <para>The <ref refid="class_t_smart_ptr" kindref="compound">TSmartPtr</ref> class implements a simple Smart Pointer with reference counting. </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="1421">
+      <node id="1444">
         <label>TSmartPtr&lt; T &gt;</label>
         <link refid="class_t_smart_ptr"/>
-        <childnode refid="1422" relation="usage">
+        <childnode refid="1445" relation="usage">
           <edgelabel>ptr_</edgelabel>
         </childnode>
       </node>
-      <node id="1422">
+      <node id="1445">
         <label>TSmartPtr&lt; T &gt;::Ptr</label>
         <link refid="struct_t_smart_ptr_1_1_ptr"/>
       </node>

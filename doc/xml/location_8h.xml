@@ -5,249 +5,249 @@
     <includes local="no">string</includes>
     <includes local="no">ostream</includes>
     <includes refid="thash_8h" local="yes">oscit/thash.h</includes>
-    <includedby refid="object_8h" local="yes">include/oscit/object.h</includedby>
-    <includedby refid="root__proxy_8h" local="yes">include/oscit/root_proxy.h</includedby>
-    <includedby refid="url_8h" local="yes">include/oscit/url.h</includedby>
-    <includedby refid="zeroconf__browser_8h" local="yes">include/oscit/zeroconf_browser.h</includedby>
-    <includedby refid="zeroconf__registration_8h" local="yes">include/oscit/zeroconf_registration.h</includedby>
+    <includedby refid="object_8h" local="yes">/Users/gaspard/git/oscit/include/oscit/object.h</includedby>
+    <includedby refid="root__proxy_8h" local="yes">/Users/gaspard/git/oscit/include/oscit/root_proxy.h</includedby>
+    <includedby refid="url_8h" local="yes">/Users/gaspard/git/oscit/include/oscit/url.h</includedby>
+    <includedby refid="zeroconf__browser_8h" local="yes">/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h</includedby>
+    <includedby refid="zeroconf__registration_8h" local="yes">/Users/gaspard/git/oscit/include/oscit/zeroconf_registration.h</includedby>
     <incdepgraph>
-      <node id="1206">
+      <node id="1253">
         <label>list</label>
       </node>
-      <node id="1204">
+      <node id="1251">
         <label>oscit/thash.h</label>
         <link refid="thash_8h"/>
-        <childnode refid="1205" relation="include">
+        <childnode refid="1252" relation="include">
         </childnode>
-        <childnode refid="1202" relation="include">
+        <childnode refid="1249" relation="include">
         </childnode>
-        <childnode refid="1206" relation="include">
+        <childnode refid="1253" relation="include">
         </childnode>
-        <childnode refid="1207" relation="include">
+        <childnode refid="1254" relation="include">
         </childnode>
       </node>
-      <node id="1201">
-        <label>include/oscit/location.h</label>
+      <node id="1248">
+        <label>/Users/gaspard/git/oscit/include/oscit/location.h</label>
         <link refid="location.h"/>
-        <childnode refid="1202" relation="include">
+        <childnode refid="1249" relation="include">
         </childnode>
-        <childnode refid="1203" relation="include">
+        <childnode refid="1250" relation="include">
         </childnode>
-        <childnode refid="1204" relation="include">
+        <childnode refid="1251" relation="include">
         </childnode>
       </node>
-      <node id="1202">
+      <node id="1249">
         <label>string</label>
       </node>
-      <node id="1203">
+      <node id="1250">
         <label>ostream</label>
       </node>
-      <node id="1205">
+      <node id="1252">
         <label>cstdio</label>
       </node>
-      <node id="1207">
+      <node id="1254">
         <label>iostream</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="1222">
-        <label>include/oscit/list_with_type_meta_method.h</label>
-        <link refid="list__with__type__meta__method_8h"/>
-      </node>
-      <node id="1232">
-        <label>include/oscit/command.h</label>
+      <node id="1279">
+        <label>/Users/gaspard/git/oscit/include/oscit/command.h</label>
         <link refid="command_8h"/>
-        <childnode refid="1233" relation="include">
+        <childnode refid="1280" relation="include">
         </childnode>
-        <childnode refid="1212" relation="include">
+        <childnode refid="1259" relation="include">
         </childnode>
-        <childnode refid="1214" relation="include">
+        <childnode refid="1261" relation="include">
         </childnode>
       </node>
-      <node id="1235">
-        <label>include/oscit/zeroconf_registration.h</label>
+      <node id="1282">
+        <label>/Users/gaspard/git/oscit/include/oscit/zeroconf_registration.h</label>
         <link refid="zeroconf__registration_8h"/>
       </node>
-      <node id="1233">
-        <label>include/oscit/osc_command.h</label>
+      <node id="1280">
+        <label>/Users/gaspard/git/oscit/include/oscit/osc_command.h</label>
         <link refid="osc__command_8h"/>
-        <childnode refid="1234" relation="include">
+        <childnode refid="1281" relation="include">
         </childnode>
-        <childnode refid="1212" relation="include">
+        <childnode refid="1259" relation="include">
         </childnode>
       </node>
-      <node id="1225">
-        <label>include/oscit/object_proxy.h</label>
+      <node id="1273">
+        <label>/Users/gaspard/git/oscit/include/oscit/object_proxy.h</label>
         <link refid="object__proxy_8h"/>
-        <childnode refid="1223" relation="include">
+        <childnode refid="1271" relation="include">
         </childnode>
       </node>
-      <node id="1208">
-        <label>include/oscit/location.h</label>
+      <node id="1255">
+        <label>/Users/gaspard/git/oscit/include/oscit/location.h</label>
         <link refid="location.h"/>
-        <childnode refid="1209" relation="include">
+        <childnode refid="1256" relation="include">
         </childnode>
-        <childnode refid="1224" relation="include">
+        <childnode refid="1272" relation="include">
         </childnode>
-        <childnode refid="1231" relation="include">
+        <childnode refid="1278" relation="include">
         </childnode>
-        <childnode refid="1227" relation="include">
+        <childnode refid="1275" relation="include">
         </childnode>
-        <childnode refid="1235" relation="include">
+        <childnode refid="1282" relation="include">
         </childnode>
       </node>
-      <node id="1230">
-        <label>include/oscit/osc_remote_object.h</label>
+      <node id="1277">
+        <label>/Users/gaspard/git/oscit/include/oscit/osc_remote_object.h</label>
         <link refid="osc__remote__object_8h"/>
       </node>
-      <node id="1229">
-        <label>include/oscit/type_meta_method.h</label>
-        <link refid="type__meta__method_8h"/>
-      </node>
-      <node id="1214">
-        <label>include/oscit/root.h</label>
+      <node id="1261">
+        <label>/Users/gaspard/git/oscit/include/oscit/root.h</label>
         <link refid="root_8h"/>
-        <childnode refid="1215" relation="include">
+        <childnode refid="1262" relation="include">
         </childnode>
-        <childnode refid="1216" relation="include">
+        <childnode refid="1263" relation="include">
         </childnode>
-        <childnode refid="1217" relation="include">
+        <childnode refid="1264" relation="include">
         </childnode>
-        <childnode refid="1218" relation="include">
+        <childnode refid="1265" relation="include">
         </childnode>
-        <childnode refid="1220" relation="include">
+        <childnode refid="1266" relation="include">
         </childnode>
-        <childnode refid="1221" relation="include">
+        <childnode refid="1268" relation="include">
         </childnode>
-        <childnode refid="1222" relation="include">
+        <childnode refid="1269" relation="include">
         </childnode>
-        <childnode refid="1212" relation="include">
+        <childnode refid="1270" relation="include">
         </childnode>
-        <childnode refid="1223" relation="include">
+        <childnode refid="1259" relation="include">
         </childnode>
-        <childnode refid="1224" relation="include">
+        <childnode refid="1271" relation="include">
         </childnode>
-        <childnode refid="1228" relation="include">
+        <childnode refid="1272" relation="include">
         </childnode>
-        <childnode refid="1229" relation="include">
+        <childnode refid="1276" relation="include">
         </childnode>
       </node>
-      <node id="1212">
-        <label>include/oscit/oscit.h</label>
+      <node id="1259">
+        <label>/Users/gaspard/git/oscit/include/oscit/oscit.h</label>
         <link refid="oscit_8h"/>
       </node>
-      <node id="1220">
-        <label>include/oscit/info_meta_method.h</label>
+      <node id="1268">
+        <label>/Users/gaspard/git/oscit/include/oscit/info_meta_method.h</label>
         <link refid="info__meta__method_8h"/>
       </node>
-      <node id="1218">
-        <label>include/oscit/file_method.h</label>
+      <node id="1266">
+        <label>/Users/gaspard/git/oscit/include/oscit/file_method.h</label>
         <link refid="file__method_8h"/>
-        <childnode refid="1219" relation="include">
+        <childnode refid="1267" relation="include">
         </childnode>
-        <childnode refid="1212" relation="include">
+        <childnode refid="1259" relation="include">
         </childnode>
       </node>
-      <node id="1217">
-        <label>include/oscit/error_meta_method.h</label>
+      <node id="1265">
+        <label>/Users/gaspard/git/oscit/include/oscit/error_meta_method.h</label>
         <link refid="error__meta__method_8h"/>
       </node>
-      <node id="1226">
-        <label>include/oscit/osc_root_proxy.h</label>
+      <node id="1270">
+        <label>/Users/gaspard/git/oscit/include/oscit/list_with_attributes_meta_method.h</label>
+        <link refid="list__with__attributes__meta__method_8h"/>
+      </node>
+      <node id="1274">
+        <label>/Users/gaspard/git/oscit/include/oscit/osc_root_proxy.h</label>
         <link refid="osc__root__proxy_8h"/>
       </node>
-      <node id="1210">
-        <label>include/oscit/log_object.h</label>
+      <node id="1257">
+        <label>/Users/gaspard/git/oscit/include/oscit/log_object.h</label>
         <link refid="log__object_8h"/>
       </node>
-      <node id="1234">
-        <label>include/oscit/osc_map_command.h</label>
+      <node id="1281">
+        <label>/Users/gaspard/git/oscit/include/oscit/osc_map_command.h</label>
         <link refid="osc__map__command_8h"/>
-        <childnode refid="1212" relation="include">
+        <childnode refid="1259" relation="include">
         </childnode>
       </node>
-      <node id="1216">
-        <label>include/oscit/call.h</label>
+      <node id="1263">
+        <label>/Users/gaspard/git/oscit/include/oscit/attrs_meta_method.h</label>
+        <link refid="attrs__meta__method_8h"/>
+      </node>
+      <node id="1264">
+        <label>/Users/gaspard/git/oscit/include/oscit/call.h</label>
         <link refid="call_8h"/>
-        <childnode refid="1212" relation="include">
+        <childnode refid="1259" relation="include">
         </childnode>
       </node>
-      <node id="1223">
-        <label>include/oscit/proxy_factory.h</label>
+      <node id="1271">
+        <label>/Users/gaspard/git/oscit/include/oscit/proxy_factory.h</label>
         <link refid="proxy__factory_8h"/>
-        <childnode refid="1212" relation="include">
+        <childnode refid="1259" relation="include">
         </childnode>
       </node>
-      <node id="1219">
-        <label>include/oscit/hash_file_method.h</label>
+      <node id="1267">
+        <label>/Users/gaspard/git/oscit/include/oscit/hash_file_method.h</label>
         <link refid="hash__file__method_8h"/>
-        <childnode refid="1212" relation="include">
+        <childnode refid="1259" relation="include">
         </childnode>
       </node>
-      <node id="1221">
-        <label>include/oscit/list_meta_method.h</label>
+      <node id="1269">
+        <label>/Users/gaspard/git/oscit/include/oscit/list_meta_method.h</label>
         <link refid="list__meta__method_8h"/>
       </node>
-      <node id="1231">
-        <label>include/oscit/url.h</label>
+      <node id="1278">
+        <label>/Users/gaspard/git/oscit/include/oscit/url.h</label>
         <link refid="url_8h"/>
-        <childnode refid="1232" relation="include">
+        <childnode refid="1279" relation="include">
         </childnode>
       </node>
-      <node id="1227">
-        <label>include/oscit/zeroconf_browser.h</label>
+      <node id="1275">
+        <label>/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h</label>
         <link refid="zeroconf__browser_8h"/>
-        <childnode refid="1212" relation="include">
+        <childnode refid="1259" relation="include">
         </childnode>
       </node>
-      <node id="1224">
-        <label>include/oscit/root_proxy.h</label>
+      <node id="1272">
+        <label>/Users/gaspard/git/oscit/include/oscit/root_proxy.h</label>
         <link refid="root__proxy_8h"/>
-        <childnode refid="1225" relation="include">
+        <childnode refid="1273" relation="include">
         </childnode>
-        <childnode refid="1226" relation="include">
+        <childnode refid="1274" relation="include">
         </childnode>
-        <childnode refid="1223" relation="include">
+        <childnode refid="1271" relation="include">
         </childnode>
-        <childnode refid="1227" relation="include">
+        <childnode refid="1275" relation="include">
         </childnode>
       </node>
-      <node id="1209">
-        <label>include/oscit/object.h</label>
+      <node id="1256">
+        <label>/Users/gaspard/git/oscit/include/oscit/object.h</label>
         <link refid="object_8h"/>
-        <childnode refid="1210" relation="include">
+        <childnode refid="1257" relation="include">
         </childnode>
-        <childnode refid="1211" relation="include">
+        <childnode refid="1258" relation="include">
         </childnode>
-        <childnode refid="1213" relation="include">
+        <childnode refid="1260" relation="include">
         </childnode>
-        <childnode refid="1225" relation="include">
+        <childnode refid="1273" relation="include">
         </childnode>
-        <childnode refid="1230" relation="include">
+        <childnode refid="1277" relation="include">
         </childnode>
-        <childnode refid="1212" relation="include">
+        <childnode refid="1259" relation="include">
         </childnode>
-        <childnode refid="1214" relation="include">
+        <childnode refid="1261" relation="include">
         </childnode>
       </node>
-      <node id="1215">
-        <label>include/oscit/alias.h</label>
+      <node id="1262">
+        <label>/Users/gaspard/git/oscit/include/oscit/alias.h</label>
         <link refid="alias_8h"/>
       </node>
-      <node id="1213">
-        <label>include/oscit/object_handle.h</label>
+      <node id="1260">
+        <label>/Users/gaspard/git/oscit/include/oscit/object_handle.h</label>
         <link refid="object__handle_8h"/>
-        <childnode refid="1214" relation="include">
+        <childnode refid="1261" relation="include">
         </childnode>
       </node>
-      <node id="1211">
-        <label>include/oscit/method.h</label>
+      <node id="1258">
+        <label>/Users/gaspard/git/oscit/include/oscit/method.h</label>
         <link refid="method_8h"/>
-        <childnode refid="1212" relation="include">
+        <childnode refid="1259" relation="include">
         </childnode>
       </node>
-      <node id="1228">
-        <label>include/oscit/tree_meta_method.h</label>
+      <node id="1276">
+        <label>/Users/gaspard/git/oscit/include/oscit/tree_meta_method.h</label>
         <link refid="tree__meta__method_8h"/>
       </node>
     </invincdepgraph>
@@ -319,21 +319,21 @@
 <codeline lineno="48" refid="classoscit_1_1_location_1a47ca1c41680c3db52a45125412564fae" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_location_1a47ca1c41680c3db52a45125412564fae" kindref="member">NO_IP</ref><sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="51" refid="classoscit_1_1_location_1a5841afad1ee79c92ac172fe1c7f92c8d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_location_1a5841afad1ee79c92ac172fe1c7f92c8d" kindref="member">ANY_IP</ref><sp/>=<sp/>0xFFFFFFFF;</highlight></codeline>
 <codeline lineno="52" refid="classoscit_1_1_location_1ac357484f2c5d45be56444872ce29cad7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_location_1ac357484f2c5d45be56444872ce29cad7" kindref="member">LOOPBACK</ref><sp/>=<sp/>(127&lt;&lt;24)<sp/>+<sp/>1;<sp/></highlight><highlight class="comment">//<sp/>127.0.0.1</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="53" refid="classoscit_1_1_location_1a52dc55bc72edd85e3284095f8955889a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref><sp/><ref refid="classoscit_1_1_location_1a52dc55bc72edd85e3284095f8955889a" kindref="member">NO_PORT</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="53" refid="classoscit_1_1_location_1a52dc55bc72edd85e3284095f8955889a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceoscit_1a1e8ff49c02065f535ffb0547cb221bbf" kindref="member">uint</ref><sp/><ref refid="classoscit_1_1_location_1a52dc55bc72edd85e3284095f8955889a" kindref="member">NO_PORT</ref><sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"></highlight></codeline>
 <codeline lineno="55" refid="classoscit_1_1_location_1aa328cb7355a74deb0fd563cabf4fe1b8" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_location_1aa328cb7355a74deb0fd563cabf4fe1b8" kindref="member">Location</ref>()<sp/>:<sp/>reference_by_hostname_(false),<sp/>ip_(<ref refid="classoscit_1_1_location_1a47ca1c41680c3db52a45125412564fae" kindref="member">NO_IP</ref>),<sp/>port_(<ref refid="classoscit_1_1_location_1a52dc55bc72edd85e3284095f8955889a" kindref="member">NO_PORT</ref>)<sp/>{}</highlight></codeline>
 <codeline lineno="56" refid="classoscit_1_1_location_1a59b1aa16119bdadce3779b0276f0507f" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_location_1aa328cb7355a74deb0fd563cabf4fe1b8" kindref="member">Location</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classoscit_1_1_location_1a3f237fd412bbb0944eb22724691af242" kindref="member">protocol</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*service_name)<sp/>:</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>protocol_(protocol),<sp/>name_(service_name),</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reference_by_hostname_(false),<sp/>ip_(<ref refid="classoscit_1_1_location_1a47ca1c41680c3db52a45125412564fae" kindref="member">NO_IP</ref>),<sp/>port_(<ref refid="classoscit_1_1_location_1a52dc55bc72edd85e3284095f8955889a" kindref="member">NO_PORT</ref>)<sp/>{}</highlight></codeline>
-<codeline lineno="59" refid="classoscit_1_1_location_1af2c24e47bbf4f9f3646d4a76862fd253" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_location_1aa328cb7355a74deb0fd563cabf4fe1b8" kindref="member">Location</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classoscit_1_1_location_1a3f237fd412bbb0944eb22724691af242" kindref="member">protocol</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*service_name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*hostname,<sp/><ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref><sp/><ref refid="classoscit_1_1_location_1accfa20d96193ac73d4fbde93c535a2ea" kindref="member">port</ref>)<sp/>:</highlight></codeline>
+<codeline lineno="59" refid="classoscit_1_1_location_1af2c24e47bbf4f9f3646d4a76862fd253" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_location_1aa328cb7355a74deb0fd563cabf4fe1b8" kindref="member">Location</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classoscit_1_1_location_1a3f237fd412bbb0944eb22724691af242" kindref="member">protocol</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*service_name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*hostname,<sp/><ref refid="namespaceoscit_1a1e8ff49c02065f535ffb0547cb221bbf" kindref="member">uint</ref><sp/><ref refid="classoscit_1_1_location_1accfa20d96193ac73d4fbde93c535a2ea" kindref="member">port</ref>)<sp/>:</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>protocol_(protocol),<sp/>name_(service_name),</highlight></codeline>
 <codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reference_by_hostname_(false),<sp/>ip_(<ref refid="classoscit_1_1_location_1a47ca1c41680c3db52a45125412564fae" kindref="member">NO_IP</ref>),<sp/>port_(port){</highlight></codeline>
 <codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>ip_<sp/>=<sp/><ref refid="classoscit_1_1_location_1a4cd800ea81f2c05eba3a3ceb5a66e26b" kindref="member">ip_from_hostname</ref>(hostname);</highlight></codeline>
 <codeline lineno="63"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="64" refid="classoscit_1_1_location_1a30fa9ff5d809ccf732b8075594b79290" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_location_1aa328cb7355a74deb0fd563cabf4fe1b8" kindref="member">Location</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classoscit_1_1_location_1a3f237fd412bbb0944eb22724691af242" kindref="member">protocol</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*hostname,<sp/><ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref><sp/><ref refid="classoscit_1_1_location_1accfa20d96193ac73d4fbde93c535a2ea" kindref="member">port</ref>)<sp/>:</highlight></codeline>
+<codeline lineno="64" refid="classoscit_1_1_location_1a30fa9ff5d809ccf732b8075594b79290" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_location_1aa328cb7355a74deb0fd563cabf4fe1b8" kindref="member">Location</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classoscit_1_1_location_1a3f237fd412bbb0944eb22724691af242" kindref="member">protocol</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*hostname,<sp/><ref refid="namespaceoscit_1a1e8ff49c02065f535ffb0547cb221bbf" kindref="member">uint</ref><sp/><ref refid="classoscit_1_1_location_1accfa20d96193ac73d4fbde93c535a2ea" kindref="member">port</ref>)<sp/>:</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>protocol_(protocol),<sp/>name_(hostname),</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reference_by_hostname_(true),<sp/>ip_(<ref refid="classoscit_1_1_location_1a47ca1c41680c3db52a45125412564fae" kindref="member">NO_IP</ref>),<sp/>port_(port)<sp/>{}</highlight></codeline>
-<codeline lineno="67" refid="classoscit_1_1_location_1a594032dce5bc9727196d9e8c842aff74" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_location_1aa328cb7355a74deb0fd563cabf4fe1b8" kindref="member">Location</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classoscit_1_1_location_1a3f237fd412bbb0944eb22724691af242" kindref="member">protocol</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_location_1ab83c3a100d4876a468f0e2f684ab7980" kindref="member">ip</ref>,<sp/><ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref><sp/><ref refid="classoscit_1_1_location_1accfa20d96193ac73d4fbde93c535a2ea" kindref="member">port</ref>)<sp/>:</highlight></codeline>
+<codeline lineno="67" refid="classoscit_1_1_location_1a594032dce5bc9727196d9e8c842aff74" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_location_1aa328cb7355a74deb0fd563cabf4fe1b8" kindref="member">Location</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classoscit_1_1_location_1a3f237fd412bbb0944eb22724691af242" kindref="member">protocol</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_location_1ab83c3a100d4876a468f0e2f684ab7980" kindref="member">ip</ref>,<sp/><ref refid="namespaceoscit_1a1e8ff49c02065f535ffb0547cb221bbf" kindref="member">uint</ref><sp/><ref refid="classoscit_1_1_location_1accfa20d96193ac73d4fbde93c535a2ea" kindref="member">port</ref>)<sp/>:</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>protocol_(protocol),</highlight></codeline>
 <codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reference_by_hostname_(true),<sp/>ip_(ip),<sp/>port_(port)<sp/>{</highlight></codeline>
 <codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>name_<sp/>=<sp/><ref refid="classoscit_1_1_location_1ad45ea455be0e29925c30a4411ae9bef1" kindref="member">name_from_ip</ref>(ip_);</highlight></codeline>
@@ -341,10 +341,10 @@
 <codeline lineno="72" refid="classoscit_1_1_location_1a58e122a469e571d33c4bc3d014d15b8f" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_location_1aa328cb7355a74deb0fd563cabf4fe1b8" kindref="member">Location</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*service_name)<sp/>:</highlight></codeline>
 <codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>protocol_(<ref refid="location_8h_1a63206d24a4d41cf5443f3b0731238da6" kindref="member">DEFAULT_PROTOCOL</ref>),<sp/>name_(service_name),</highlight></codeline>
 <codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reference_by_hostname_(false),<sp/>ip_(<ref refid="classoscit_1_1_location_1a47ca1c41680c3db52a45125412564fae" kindref="member">NO_IP</ref>),<sp/>port_(<ref refid="classoscit_1_1_location_1a52dc55bc72edd85e3284095f8955889a" kindref="member">NO_PORT</ref>)<sp/>{}</highlight></codeline>
-<codeline lineno="75" refid="classoscit_1_1_location_1ad0f4f11e77546eca83e119ca2ebefdd0" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_location_1aa328cb7355a74deb0fd563cabf4fe1b8" kindref="member">Location</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*hostname,<sp/><ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref><sp/><ref refid="classoscit_1_1_location_1accfa20d96193ac73d4fbde93c535a2ea" kindref="member">port</ref>)<sp/>:</highlight></codeline>
+<codeline lineno="75" refid="classoscit_1_1_location_1ad0f4f11e77546eca83e119ca2ebefdd0" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_location_1aa328cb7355a74deb0fd563cabf4fe1b8" kindref="member">Location</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*hostname,<sp/><ref refid="namespaceoscit_1a1e8ff49c02065f535ffb0547cb221bbf" kindref="member">uint</ref><sp/><ref refid="classoscit_1_1_location_1accfa20d96193ac73d4fbde93c535a2ea" kindref="member">port</ref>)<sp/>:</highlight></codeline>
 <codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>protocol_(<ref refid="location_8h_1a63206d24a4d41cf5443f3b0731238da6" kindref="member">DEFAULT_PROTOCOL</ref>),<sp/>name_(hostname),</highlight></codeline>
 <codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reference_by_hostname_(true),<sp/>ip_(<ref refid="classoscit_1_1_location_1a47ca1c41680c3db52a45125412564fae" kindref="member">NO_IP</ref>),<sp/>port_(port)<sp/>{}</highlight></codeline>
-<codeline lineno="78" refid="classoscit_1_1_location_1a468704fb846262cb7a95aec2b1bd4cfb" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_location_1aa328cb7355a74deb0fd563cabf4fe1b8" kindref="member">Location</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_location_1ab83c3a100d4876a468f0e2f684ab7980" kindref="member">ip</ref>,<sp/><ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref><sp/><ref refid="classoscit_1_1_location_1accfa20d96193ac73d4fbde93c535a2ea" kindref="member">port</ref>)<sp/>:</highlight></codeline>
+<codeline lineno="78" refid="classoscit_1_1_location_1a468704fb846262cb7a95aec2b1bd4cfb" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_location_1aa328cb7355a74deb0fd563cabf4fe1b8" kindref="member">Location</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_location_1ab83c3a100d4876a468f0e2f684ab7980" kindref="member">ip</ref>,<sp/><ref refid="namespaceoscit_1a1e8ff49c02065f535ffb0547cb221bbf" kindref="member">uint</ref><sp/><ref refid="classoscit_1_1_location_1accfa20d96193ac73d4fbde93c535a2ea" kindref="member">port</ref>)<sp/>:</highlight></codeline>
 <codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>protocol_(<ref refid="location_8h_1a63206d24a4d41cf5443f3b0731238da6" kindref="member">DEFAULT_PROTOCOL</ref>),</highlight></codeline>
 <codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reference_by_hostname_(true),<sp/>ip_(ip),<sp/>port_(port)<sp/>{</highlight></codeline>
 <codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>name_<sp/>=<sp/><ref refid="classoscit_1_1_location_1ad45ea455be0e29925c30a4411ae9bef1" kindref="member">name_from_ip</ref>(ip_);</highlight></codeline>
@@ -382,11 +382,11 @@
 <codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ip_;</highlight></codeline>
 <codeline lineno="114"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="115"><highlight class="normal"></highlight></codeline>
-<codeline lineno="116" refid="classoscit_1_1_location_1accfa20d96193ac73d4fbde93c535a2ea" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref><sp/>&amp;<ref refid="classoscit_1_1_location_1accfa20d96193ac73d4fbde93c535a2ea" kindref="member">port</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="116" refid="classoscit_1_1_location_1accfa20d96193ac73d4fbde93c535a2ea" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceoscit_1a1e8ff49c02065f535ffb0547cb221bbf" kindref="member">uint</ref><sp/>&amp;<ref refid="classoscit_1_1_location_1accfa20d96193ac73d4fbde93c535a2ea" kindref="member">port</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>port_;</highlight></codeline>
 <codeline lineno="118"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="119"><highlight class="normal"></highlight></codeline>
-<codeline lineno="120" refid="classoscit_1_1_location_1a604f4d0118ff079a2062cd9462d833f7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_location_1a604f4d0118ff079a2062cd9462d833f7" kindref="member">set_port</ref>(<ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref><sp/><ref refid="classoscit_1_1_location_1accfa20d96193ac73d4fbde93c535a2ea" kindref="member">port</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="120" refid="classoscit_1_1_location_1a604f4d0118ff079a2062cd9462d833f7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_location_1a604f4d0118ff079a2062cd9462d833f7" kindref="member">set_port</ref>(<ref refid="namespaceoscit_1a1e8ff49c02065f535ffb0547cb221bbf" kindref="member">uint</ref><sp/><ref refid="classoscit_1_1_location_1accfa20d96193ac73d4fbde93c535a2ea" kindref="member">port</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>port_<sp/>=<sp/>port;</highlight></codeline>
 <codeline lineno="122"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="123"><highlight class="normal"></highlight></codeline>
@@ -400,7 +400,7 @@
 <codeline lineno="133"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>std::ostream<sp/>&amp;<ref refid="classoscit_1_1_location_1ad60c58b8a647ab11b76d001bb77b7029" kindref="member">operator&lt;&lt;</ref>(std::ostream<sp/>&amp;out_stream,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_location" kindref="compound">Location</ref><sp/>&amp;location);</highlight></codeline>
 <codeline lineno="135" refid="classoscit_1_1_location_1ac5eb062bf71ebf4ef114d256c79601f9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classoscit_1_1_url" kindref="compound">Url</ref>;</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref><sp/><ref refid="classoscit_1_1_location_1a60e7d1a2673cbdcceb610bf20ad55a47" kindref="member">hashId</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_location" kindref="compound">Location</ref><sp/>&amp;location);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="namespaceoscit_1a1e8ff49c02065f535ffb0547cb221bbf" kindref="member">uint</ref><sp/><ref refid="classoscit_1_1_location_1a60e7d1a2673cbdcceb610bf20ad55a47" kindref="member">hashId</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_location" kindref="compound">Location</ref><sp/>&amp;location);</highlight></codeline>
 <codeline lineno="137"><highlight class="normal"></highlight></codeline>
 <codeline lineno="138"><highlight class="normal"></highlight></codeline>
 <codeline lineno="141"><highlight class="normal"><sp/><sp/>std::string<sp/>protocol_;</highlight></codeline>
@@ -411,10 +411,10 @@
 <codeline lineno="152"><highlight class="normal"></highlight></codeline>
 <codeline lineno="155"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>ip_;</highlight></codeline>
 <codeline lineno="156"><highlight class="normal"></highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/><ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref><sp/>port_;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><ref refid="namespaceoscit_1a1e8ff49c02065f535ffb0547cb221bbf" kindref="member">uint</ref><sp/>port_;</highlight></codeline>
 <codeline lineno="160"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="161"><highlight class="normal"></highlight></codeline>
-<codeline lineno="162" refid="namespaceoscit_1a3e04adc1de36dae20f9d99d55579bab8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref><sp/><ref refid="namespaceoscit_1a3e04adc1de36dae20f9d99d55579bab8" kindref="member">hashId</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_location" kindref="compound">Location</ref><sp/>&amp;location)<sp/>{</highlight></codeline>
+<codeline lineno="162" refid="namespaceoscit_1a3e04adc1de36dae20f9d99d55579bab8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="namespaceoscit_1a1e8ff49c02065f535ffb0547cb221bbf" kindref="member">uint</ref><sp/><ref refid="namespaceoscit_1a3e04adc1de36dae20f9d99d55579bab8" kindref="member">hashId</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_location" kindref="compound">Location</ref><sp/>&amp;location)<sp/>{</highlight></codeline>
 <codeline lineno="163"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(location.ip_<sp/>!=<sp/><ref refid="classoscit_1_1_location_1a47ca1c41680c3db52a45125412564fae" kindref="member">Location::NO_IP</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespaceoscit_1a3e04adc1de36dae20f9d99d55579bab8" kindref="member">hashId</ref>(location.ip_)<sp/>+<sp/><ref refid="namespaceoscit_1a3e04adc1de36dae20f9d99d55579bab8" kindref="member">hashId</ref>(location.port_);</highlight></codeline>
 <codeline lineno="165"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>

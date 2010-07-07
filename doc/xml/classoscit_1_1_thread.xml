@@ -17,7 +17,7 @@
 <para>Key to retrieve &apos;this&apos; value from a running thread. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="201" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="201" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="215" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="215" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-attrib">
@@ -32,7 +32,7 @@
 <para>Any parameter that the started method could use. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="203" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="203" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="217" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="217" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -47,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="278" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="278" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="295" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="295" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classoscit_1_1_thread_1a312d3a167f5d6d1530a6a0f49ca87daa" prot="private" static="no" mutable="no">
         <type>void(*</type>
@@ -60,7 +60,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="279" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="279" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="296" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="296" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classoscit_1_1_thread_1afae79a01ed9ff2ad4b34ed3da6db6859" prot="private" static="no" mutable="no">
         <type>pthread_t</type>
@@ -73,7 +73,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="281" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="281" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="298" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="298" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classoscit_1_1_thread_1a28ff69ee21834102aad9260354ab57bb" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -86,7 +86,7 @@
 <para>Thread&apos;s original scheduling policy (normal_priority). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="282" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="282" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="299" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="299" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classoscit_1_1_thread_1a334f6e59f554d64f504cc13d594e2325" prot="private" static="no" mutable="no">
         <type>struct sched_param</type>
@@ -99,7 +99,7 @@
 <para>Scheduling parameters for commands (lower). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="283" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="283" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="300" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="300" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classoscit_1_1_thread_1a546ca822c4d3374524628fcb4cca87c1" prot="private" static="no" mutable="no">
         <type><ref refid="classoscit_1_1_semaphore" kindref="compound">Semaphore</ref></type>
@@ -112,7 +112,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="289" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="289" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="306" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="306" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-attrib">
@@ -127,7 +127,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="286" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="286" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="303" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="303" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -294,7 +294,7 @@
 <para>Kill thread (do not make this a virtual). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="138" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="138" bodyend="146"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="138" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="138" bodyend="148"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_thread_1a3b5b22e665dc684be5c6a98c9b404968" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -311,7 +311,24 @@
 <para>Send a signal to the running thread. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="150" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="150" bodyend="153"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="152" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="152" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_thread_1ac7f0735901dfcc334cbe8b71b8b246f6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void oscit::Thread::register_signal</definition>
+        <argsstring>(int sig)</argsstring>
+        <name>register_signal</name>
+        <param>
+          <type>int</type>
+          <declname>sig</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="157" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="157" bodyend="161"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_thread_1aee8748532b84f6c7468b143322883597" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -324,7 +341,7 @@
 <para>Wait for thread to finish. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="156" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="156" bodyend="162"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="164" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="164" bodyend="170"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_thread_1ada993f1c96a4f1cc51b5b69f6cb5d6b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -337,7 +354,20 @@
 <para>Tell thread to quit (called from within own thread or when we can wait for next loop). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="166" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="166" bodyend="168"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="174" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="174" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_thread_1ad2b5b8aa03d15f8ef97c5347fd01698a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool oscit::Thread::is_running</definition>
+        <argsstring>()</argsstring>
+        <name>is_running</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return true if the thread is running. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="180" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="180" bodyend="182"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_thread_1aaad5213036214bf55dbcaf532d0b528e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -350,7 +380,7 @@
 <para>Set thread priority to high. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="171"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="185"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_thread_1a0c51ff3a71ef65bfbef2da36528a9508" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -363,7 +393,7 @@
 <para>Set thread priority to normal. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="174"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="188"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_thread_1a0e8495bb727bccd28d1bc0fdc4f332f1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -376,7 +406,7 @@
 <para>This method should be called by started thread when it has properly started an it is ready. The creating thread locks until this method is called. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="184" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="184" bodyend="187"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="198" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="198" bodyend="201"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_thread_1ab82f6e51badc2bee9b2693d984add161" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classoscit_1_1_semaphore" kindref="compound">Semaphore</ref> &amp;</type>
@@ -389,7 +419,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="189" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="189" bodyend="191"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="203" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="203" bodyend="205"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -408,7 +438,7 @@
 <para>Sleep for a given number of milliseconds. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="178"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="192"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_thread_1af9e624afe0741e2376366518f53a827e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classoscit_1_1_thread" kindref="compound">Thread</ref> *</type>
@@ -421,7 +451,7 @@
 <para>Get &quot;this&quot; (used in static callbacks). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="195" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="195" bodyend="197"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="209" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="209" bodyend="211"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-static-func">
@@ -440,7 +470,7 @@
 <para>Set &apos;this&apos; value for the current thread so we can find our object back. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="210" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="210" bodyend="212"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="224" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="224" bodyend="226"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_thread_1a18011daf52a9c4b7e838755234a2a085" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void *</type>
@@ -457,7 +487,7 @@
 <para>Static function to start a new thread from a class method or static function. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="217" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="217" bodyend="233"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="231" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="231" bodyend="248"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_thread_1acbb7200def8a3cb691becede3f83d9d6" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -484,7 +514,7 @@
 <para>Static function to start a new thread. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="237" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="237" bodyend="253"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="252" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="252" bodyend="269"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_thread_1acbb7200def8a3cb691becede3f83d9d6" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -511,7 +541,7 @@
 <para>Static function to start a new thread. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="257" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="257" bodyend="271"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="273" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="273" bodyend="288"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_thread_1ae836ab2953b0ceb1eb4d57bef8d05dee" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -528,7 +558,7 @@
 <para><ref refid="classoscit_1_1_thread" kindref="compound">Thread</ref> should stop. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="274" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="274" bodyend="276"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="291" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="291" bodyend="293"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -536,88 +566,89 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="1322">
+      <node id="1339">
         <label>oscit::OscMapCommand</label>
         <link refid="classoscit_1_1_osc_map_command"/>
-        <childnode refid="1321" relation="public-inheritance">
+        <childnode refid="1338" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1317">
+      <node id="1334">
         <label>oscit::Mutex</label>
         <link refid="classoscit_1_1_mutex"/>
-        <childnode refid="1318" relation="public-inheritance">
+        <childnode refid="1335" relation="public-inheritance">
         </childnode>
-        <childnode refid="1319" relation="private-inheritance">
+        <childnode refid="1336" relation="private-inheritance">
         </childnode>
       </node>
-      <node id="1316">
+      <node id="1333">
         <label>oscit::Thread</label>
         <link refid="classoscit_1_1_thread"/>
-        <childnode refid="1317" relation="public-inheritance">
+        <childnode refid="1334" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1319">
+      <node id="1336">
         <label>oscit::NonCopyable</label>
         <link refid="classoscit_1_1_non_copyable"/>
       </node>
-      <node id="1321">
+      <node id="1338">
         <label>oscit::OscCommand</label>
         <link refid="classoscit_1_1_osc_command"/>
-        <childnode refid="1320" relation="public-inheritance">
+        <childnode refid="1337" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1318">
+      <node id="1335">
         <label>oscit::Typed</label>
         <link refid="classoscit_1_1_typed"/>
       </node>
-      <node id="1320">
+      <node id="1337">
         <label>oscit::Command</label>
         <link refid="classoscit_1_1_command"/>
-        <childnode refid="1316" relation="public-inheritance">
+        <childnode refid="1333" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="1324">
+      <node id="1341">
         <label>oscit::Mutex</label>
         <link refid="classoscit_1_1_mutex"/>
-        <childnode refid="1325" relation="public-inheritance">
+        <childnode refid="1342" relation="public-inheritance">
         </childnode>
-        <childnode refid="1326" relation="private-inheritance">
+        <childnode refid="1343" relation="private-inheritance">
         </childnode>
       </node>
-      <node id="1323">
+      <node id="1340">
         <label>oscit::Thread</label>
         <link refid="classoscit_1_1_thread"/>
-        <childnode refid="1324" relation="public-inheritance">
+        <childnode refid="1341" relation="public-inheritance">
         </childnode>
-        <childnode refid="1327" relation="usage">
+        <childnode refid="1344" relation="usage">
           <edgelabel>semaphore_</edgelabel>
         </childnode>
       </node>
-      <node id="1326">
+      <node id="1343">
         <label>oscit::NonCopyable</label>
         <link refid="classoscit_1_1_non_copyable"/>
       </node>
-      <node id="1327">
+      <node id="1344">
         <label>oscit::Semaphore</label>
         <link refid="classoscit_1_1_semaphore"/>
-        <childnode refid="1326" relation="private-inheritance">
+        <childnode refid="1343" relation="private-inheritance">
         </childnode>
-        <childnode refid="1324" relation="usage">
+        <childnode refid="1341" relation="usage">
           <edgelabel>acquire_mutex_</edgelabel>
         </childnode>
       </node>
-      <node id="1325">
+      <node id="1342">
         <label>oscit::Typed</label>
         <link refid="classoscit_1_1_typed"/>
       </node>
     </collaborationgraph>
-    <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="47" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="47" bodyend="291"/>
+    <location file="/Users/gaspard/git/oscit/include/oscit/thread.h" line="47" bodyfile="/Users/gaspard/git/oscit/include/oscit/thread.h" bodystart="47" bodyend="308"/>
     <listofallmembers>
       <member refid="classoscit_1_1_typed_1a9d91142c1ff172635833f4b2a06d5d3b" prot="public" virt="non-virtual"><scope>oscit::Thread</scope><name>class_name</name></member>
       <member refid="classoscit_1_1_thread_1aaad5213036214bf55dbcaf532d0b528e" prot="public" virt="non-virtual"><scope>oscit::Thread</scope><name>high_priority</name></member>
       <member refid="classoscit_1_1_typed_1a4aba9ae57b258b6d678c685d190ec281" prot="public" virt="non-virtual"><scope>oscit::Thread</scope><name>is_a</name></member>
+      <member refid="classoscit_1_1_thread_1ad2b5b8aa03d15f8ef97c5347fd01698a" prot="public" virt="non-virtual"><scope>oscit::Thread</scope><name>is_running</name></member>
       <member refid="classoscit_1_1_thread_1aee8748532b84f6c7468b143322883597" prot="public" virt="non-virtual"><scope>oscit::Thread</scope><name>join</name></member>
       <member refid="classoscit_1_1_thread_1ac14ace1b47f8e36b6105d38c4069d2de" prot="public" virt="non-virtual"><scope>oscit::Thread</scope><name>kill</name></member>
       <member refid="classoscit_1_1_mutex_1a016dda2b6b467aa8e3a866be3bd0f86e" prot="public" virt="non-virtual"><scope>oscit::Thread</scope><name>lock</name></member>
@@ -629,6 +660,7 @@
       <member refid="classoscit_1_1_thread_1ada95fe5b3f9d3992b3611001a3ccddb4" prot="private" virt="non-virtual"><scope>oscit::Thread</scope><name>owner_</name></member>
       <member refid="classoscit_1_1_thread_1a668701b16f7e18eef3d324401877be66" prot="public" virt="non-virtual"><scope>oscit::Thread</scope><name>parameter_</name></member>
       <member refid="classoscit_1_1_thread_1ada993f1c96a4f1cc51b5b69f6cb5d6b0" prot="public" virt="non-virtual"><scope>oscit::Thread</scope><name>quit</name></member>
+      <member refid="classoscit_1_1_thread_1ac7f0735901dfcc334cbe8b71b8b246f6" prot="public" virt="non-virtual"><scope>oscit::Thread</scope><name>register_signal</name></member>
       <member refid="classoscit_1_1_thread_1a18011daf52a9c4b7e838755234a2a085" prot="private" virt="non-virtual"><scope>oscit::Thread</scope><name>s_start_static_thread</name></member>
       <member refid="classoscit_1_1_thread_1acbb7200def8a3cb691becede3f83d9d6" prot="private" virt="non-virtual"><scope>oscit::Thread</scope><name>s_start_thread</name></member>
       <member refid="classoscit_1_1_thread_1acbb7200def8a3cb691becede3f83d9d6" prot="private" virt="non-virtual"><scope>oscit::Thread</scope><name>s_start_thread</name></member>

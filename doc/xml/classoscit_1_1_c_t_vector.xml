@@ -48,25 +48,25 @@
     <detaileddescription>
 <para>The Concurrent Vector template is a <ref refid="classstd_1_1vector" kindref="compound">std::vector</ref> with a read-write mutex. The class does not lock/unlock the mutex, this is the responsability of the class using the vector. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="196">
+      <node id="214">
         <label>oscit::CTVector&lt; T &gt;</label>
         <link refid="classoscit_1_1_c_t_vector"/>
-        <childnode refid="197" relation="public-inheritance">
+        <childnode refid="215" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="197">
+      <node id="215">
         <label>oscit::RWMutex</label>
         <link refid="classoscit_1_1_r_w_mutex"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="198">
+      <node id="216">
         <label>oscit::CTVector&lt; T &gt;</label>
         <link refid="classoscit_1_1_c_t_vector"/>
-        <childnode refid="199" relation="public-inheritance">
+        <childnode refid="217" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="199">
+      <node id="217">
         <label>oscit::RWMutex</label>
         <link refid="classoscit_1_1_r_w_mutex"/>
       </node>

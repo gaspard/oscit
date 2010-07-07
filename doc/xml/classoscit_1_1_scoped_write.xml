@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="175" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="175" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="177" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="177" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -35,7 +35,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="162" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="162" bodyend="164"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="164" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="164" bodyend="166"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_scoped_write_1adb0be76704f1612526aa47decd86decf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -52,7 +52,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="166" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="166" bodyend="168"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="168" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="168" bodyend="170"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_scoped_write_1af206668d7987b5e01ffe9fbe25889f6b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -65,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="170" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="170" bodyend="172"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="172" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="172" bodyend="174"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -73,37 +73,37 @@
     <detaileddescription>
 <para>Scoped <ref refid="classoscit_1_1_r_w_mutex" kindref="compound">RWMutex</ref> Lock for exclusive access to a resource. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="1260">
+      <node id="1272">
         <label>oscit::NonCopyable</label>
         <link refid="classoscit_1_1_non_copyable"/>
       </node>
-      <node id="1259">
+      <node id="1271">
         <label>oscit::ScopedWrite</label>
         <link refid="classoscit_1_1_scoped_write"/>
-        <childnode refid="1260" relation="private-inheritance">
+        <childnode refid="1272" relation="private-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="1262">
+      <node id="1274">
         <label>oscit::NonCopyable</label>
         <link refid="classoscit_1_1_non_copyable"/>
       </node>
-      <node id="1261">
+      <node id="1273">
         <label>oscit::ScopedWrite</label>
         <link refid="classoscit_1_1_scoped_write"/>
-        <childnode refid="1262" relation="private-inheritance">
+        <childnode refid="1274" relation="private-inheritance">
         </childnode>
-        <childnode refid="1263" relation="usage">
+        <childnode refid="1275" relation="usage">
           <edgelabel>mutex_ptr_</edgelabel>
         </childnode>
       </node>
-      <node id="1263">
+      <node id="1275">
         <label>oscit::RWMutex</label>
         <link refid="classoscit_1_1_r_w_mutex"/>
       </node>
     </collaborationgraph>
-    <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="160" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="160" bodyend="176"/>
+    <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" line="162" bodyfile="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h" bodystart="162" bodyend="178"/>
     <listofallmembers>
       <member refid="classoscit_1_1_scoped_write_1a7d3105731e07f38f5224e5749cf48104" prot="private" virt="non-virtual"><scope>oscit::ScopedWrite</scope><name>mutex_ptr_</name></member>
       <member refid="classoscit_1_1_non_copyable_1a1f0c0fedea54b6e20aeefbeefdce67f7" prot="private" virt="non-virtual"><scope>oscit::ScopedWrite</scope><name>NonCopyable</name></member>

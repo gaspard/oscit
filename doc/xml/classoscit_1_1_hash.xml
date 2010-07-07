@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/hash.h" line="41" bodyfile="/Users/gaspard/git/oscit/include/oscit/hash.h" bodystart="41" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/hash.h" line="49" bodyfile="/Users/gaspard/git/oscit/include/oscit/hash.h" bodystart="49" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -36,113 +36,139 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/hash.h" line="42" bodyfile="/Users/gaspard/git/oscit/include/oscit/hash.h" bodystart="42" bodyend="42"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/hash.h" line="50" bodyfile="/Users/gaspard/git/oscit/include/oscit/hash.h" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_hash_1a6c835e98add88dd0fbeb0ed9107801ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classoscit_1_1_hash" kindref="compound">Hash</ref> *</type>
+        <definition>Hash* oscit::Hash::detach</definition>
+        <argsstring>()</argsstring>
+        <name>detach</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Make a private copy to be modified in case the <ref refid="classoscit_1_1_hash" kindref="compound">Hash</ref> is shared. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/hash.h" line="54" bodyfile="/Users/gaspard/git/oscit/include/oscit/hash.h" bodystart="54" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_hash_1a0496ba08e3d26b2b5684baea0bd0446f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool oscit::Hash::contains_error</definition>
+        <argsstring>()</argsstring>
+        <name>contains_error</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return true if any of the hash values is or contains an error. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/hash.h" line="67"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para>A <ref refid="classoscit_1_1_hash" kindref="compound">Hash</ref> is just a reference counted <ref refid="classoscit_1_1_t_hash" kindref="compound">THash&lt;std::string,Value&gt;</ref>. </para>    </detaileddescription>
+<para>A <ref refid="classoscit_1_1_hash" kindref="compound">Hash</ref> is just a reference counted <ref refid="classoscit_1_1_t_hash" kindref="compound">THash&lt;std::string,Value&gt;</ref>. This class also has a copy-on-write method called &apos;detach&apos;. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="319">
+      <node id="339">
         <label>oscit::THash&lt; std::string, Value &gt;</label>
         <link refid="classoscit_1_1_t_hash"/>
       </node>
-      <node id="317">
+      <node id="337">
         <label>oscit::Hash</label>
         <link refid="classoscit_1_1_hash"/>
-        <childnode refid="318" relation="public-inheritance">
+        <childnode refid="338" relation="public-inheritance">
         </childnode>
-        <childnode refid="319" relation="public-inheritance">
+        <childnode refid="339" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="318">
+      <node id="338">
         <label>oscit::ReferenceCounted</label>
         <link refid="classoscit_1_1_reference_counted"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="329">
-        <label>Matrix</label>
-        <link refid="class_matrix"/>
+      <node id="346">
+        <label>oscit::Matrix</label>
+        <link refid="classoscit_1_1_matrix"/>
       </node>
-      <node id="328">
+      <node id="349">
         <label>oscit::List</label>
         <link refid="classoscit_1_1_list"/>
-        <childnode refid="321" relation="public-inheritance">
+        <childnode refid="341" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="324">
+      <node id="344">
         <label>oscit::Value</label>
         <link refid="classoscit_1_1_value"/>
-        <childnode refid="325" relation="usage">
+        <childnode refid="345" relation="usage">
           <edgelabel>midi_message_</edgelabel>
         </childnode>
-        <childnode refid="326" relation="usage">
-          <edgelabel>string_</edgelabel>
-        </childnode>
-        <childnode refid="327" relation="usage">
-          <edgelabel>error_</edgelabel>
-        </childnode>
-        <childnode refid="328" relation="usage">
-          <edgelabel>list_</edgelabel>
-        </childnode>
-        <childnode refid="329" relation="usage">
+        <childnode refid="346" relation="usage">
           <edgelabel>matrix_</edgelabel>
         </childnode>
-        <childnode refid="320" relation="usage">
+        <childnode refid="347" relation="usage">
+          <edgelabel>string_</edgelabel>
+        </childnode>
+        <childnode refid="348" relation="usage">
+          <edgelabel>error_</edgelabel>
+        </childnode>
+        <childnode refid="349" relation="usage">
+          <edgelabel>list_</edgelabel>
+        </childnode>
+        <childnode refid="340" relation="usage">
           <edgelabel>hash_</edgelabel>
         </childnode>
       </node>
-      <node id="325">
+      <node id="345">
         <label>oscit::MidiMessage</label>
         <link refid="classoscit_1_1_midi_message"/>
-        <childnode refid="321" relation="public-inheritance">
+        <childnode refid="341" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="323">
+      <node id="343">
         <label>oscit::THashElement&lt; std::string, Value &gt;</label>
         <link refid="structoscit_1_1_t_hash_element"/>
-        <childnode refid="323" relation="usage">
+        <childnode refid="343" relation="usage">
           <edgelabel>next</edgelabel>
         </childnode>
-        <childnode refid="324" relation="usage">
+        <childnode refid="344" relation="usage">
           <edgelabel>obj</edgelabel>
         </childnode>
       </node>
-      <node id="327">
+      <node id="348">
         <label>oscit::Error</label>
         <link refid="classoscit_1_1_error"/>
-        <childnode refid="321" relation="public-inheritance">
+        <childnode refid="341" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="322">
+      <node id="342">
         <label>oscit::THash&lt; std::string, Value &gt;</label>
         <link refid="classoscit_1_1_t_hash"/>
-        <childnode refid="323" relation="usage">
+        <childnode refid="343" relation="usage">
           <edgelabel>thash_table_</edgelabel>
         </childnode>
       </node>
-      <node id="320">
+      <node id="340">
         <label>oscit::Hash</label>
         <link refid="classoscit_1_1_hash"/>
-        <childnode refid="321" relation="public-inheritance">
+        <childnode refid="341" relation="public-inheritance">
         </childnode>
-        <childnode refid="322" relation="public-inheritance">
+        <childnode refid="342" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="321">
+      <node id="341">
         <label>oscit::ReferenceCounted</label>
         <link refid="classoscit_1_1_reference_counted"/>
       </node>
-      <node id="326">
+      <node id="347">
         <label>oscit::StringData</label>
         <link refid="classoscit_1_1_string_data"/>
-        <childnode refid="321" relation="public-inheritance">
+        <childnode refid="341" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/Users/gaspard/git/oscit/include/oscit/hash.h" line="39" bodyfile="/Users/gaspard/git/oscit/include/oscit/hash.h" bodystart="39" bodyend="43"/>
+    <location file="/Users/gaspard/git/oscit/include/oscit/hash.h" line="47" bodyfile="/Users/gaspard/git/oscit/include/oscit/hash.h" bodystart="47" bodyend="68"/>
     <listofallmembers>
       <member refid="classoscit_1_1_reference_counted_1af382a537a3969b11530020715863e75c" prot="public" virt="non-virtual"><scope>oscit::Hash</scope><name>acquire</name></member>
       <member refid="classoscit_1_1_t_hash_1af9e1afc048b95e0313be311f0e309876" prot="public" virt="non-virtual"><scope>oscit::Hash</scope><name>begin</name></member>
@@ -150,12 +176,15 @@
       <member refid="classoscit_1_1_t_hash_1a26cdaed40618b5a78e16241d9731fdef" prot="public" virt="non-virtual"><scope>oscit::Hash</scope><name>clear</name></member>
       <member refid="classoscit_1_1_hash_1a1d989bd8417a0ada85b9a430c09139b1" prot="public" virt="non-virtual"><scope>oscit::Hash</scope><name>const_iterator</name></member>
       <member refid="classoscit_1_1_t_hash_1a4a365a0afc80f4d9f2ffb2abc6a9abae" prot="public" virt="non-virtual"><scope>oscit::Hash</scope><name>ConstIterator</name></member>
+      <member refid="classoscit_1_1_hash_1a0496ba08e3d26b2b5684baea0bd0446f" prot="public" virt="non-virtual"><scope>oscit::Hash</scope><name>contains_error</name></member>
       <member refid="classoscit_1_1_t_hash_1a0209bd9dcc512d40137e7ab196aea0ec" prot="public" virt="non-virtual"><scope>oscit::Hash</scope><name>copy</name></member>
+      <member refid="classoscit_1_1_hash_1a6c835e98add88dd0fbeb0ed9107801ce" prot="public" virt="non-virtual"><scope>oscit::Hash</scope><name>detach</name></member>
       <member refid="classoscit_1_1_t_hash_1adda538d62e50833e43c2cfeeb0539f53" prot="public" virt="non-virtual"><scope>oscit::Hash</scope><name>empty</name></member>
       <member refid="classoscit_1_1_t_hash_1a07e1605003ccb55fc46916987f67f1a2" prot="public" virt="non-virtual"><scope>oscit::Hash</scope><name>end</name></member>
       <member refid="classoscit_1_1_t_hash_1a96f695b486d20ee7da5b02dbc7a7c2fe" prot="public" virt="non-virtual"><scope>oscit::Hash</scope><name>end</name></member>
       <member refid="classoscit_1_1_t_hash_1ae8128283b5bffa0ef82d300219e3c52d" prot="public" virt="non-virtual"><scope>oscit::Hash</scope><name>get</name></member>
       <member refid="classoscit_1_1_t_hash_1a4f1444233f752e04f564355829e5773e" prot="public" virt="non-virtual"><scope>oscit::Hash</scope><name>get</name></member>
+      <member refid="classoscit_1_1_t_hash_1ac4010343a59c4a79eafc9abc8bae437d" prot="public" virt="non-virtual"><scope>oscit::Hash</scope><name>get</name></member>
       <member refid="classoscit_1_1_t_hash_1af23e4ebcba12ac4d6b0565ac7a8c745b" prot="public" virt="non-virtual"><scope>oscit::Hash</scope><name>get</name></member>
       <member refid="classoscit_1_1_t_hash_1a271f9e1c624dadf1882be9003db67bd7" prot="public" virt="non-virtual"><scope>oscit::Hash</scope><name>get_key</name></member>
       <member refid="classoscit_1_1_t_hash_1a13bd22ce3920712bf37f92a49f5d97cf" prot="public" virt="non-virtual"><scope>oscit::Hash</scope><name>has_key</name></member>

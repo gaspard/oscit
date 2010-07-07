@@ -12,34 +12,38 @@
     <includes refid="hash__value_8h" local="yes">oscit/hash_value.h</includes>
     <includes refid="matrix__value_8h" local="yes">oscit/matrix_value.h</includes>
     <includes refid="midi__value_8h" local="yes">oscit/midi_value.h</includes>
-    <includedby refid="error_8h" local="yes">include/oscit/error.h</includedby>
-    <includedby refid="file_8h" local="yes">include/oscit/file.h</includedby>
-    <includedby refid="hash_8h" local="yes">include/oscit/hash.h</includedby>
-    <includedby refid="matrix_8h" local="yes">include/oscit/matrix.h</includedby>
-    <includedby refid="object_8h" local="yes">include/oscit/object.h</includedby>
-    <includedby refid="osc__map__command_8h" local="yes">include/oscit/osc_map_command.h</includedby>
-    <includedby refid="oscit_8h" local="yes">include/oscit/oscit.h</includedby>
-    <includedby refid="script_8h" local="yes">include/oscit/script.h</includedby>
-    <includedby refid="string__data_8h" local="yes">include/oscit/string_data.h</includedby>
+    <includes refid="constants_8h" local="yes">oscit/constants.h</includes>
+    <includedby refid="constants_8h" local="yes">/Users/gaspard/git/oscit/include/oscit/constants.h</includedby>
+    <includedby refid="error_8h" local="yes">/Users/gaspard/git/oscit/include/oscit/error.h</includedby>
+    <includedby refid="file_8h" local="yes">/Users/gaspard/git/oscit/include/oscit/file.h</includedby>
+    <includedby refid="matrix_8h" local="yes">/Users/gaspard/git/oscit/include/oscit/matrix.h</includedby>
+    <includedby refid="object_8h" local="yes">/Users/gaspard/git/oscit/include/oscit/object.h</includedby>
+    <includedby refid="osc__map__command_8h" local="yes">/Users/gaspard/git/oscit/include/oscit/osc_map_command.h</includedby>
+    <includedby refid="oscit_8h" local="yes">/Users/gaspard/git/oscit/include/oscit/oscit.h</includedby>
+    <includedby refid="script_8h" local="yes">/Users/gaspard/git/oscit/include/oscit/script.h</includedby>
+    <includedby refid="signal_8h" local="yes">/Users/gaspard/git/oscit/include/oscit/signal.h</includedby>
+    <includedby refid="string__data_8h" local="yes">/Users/gaspard/git/oscit/include/oscit/string_data.h</includedby>
     <incdepgraph>
-      <node id="3199">
+      <node id="3198">
         <label>list</label>
       </node>
-      <node id="3206">
+      <node id="3205">
         <label>oscit/value_types.h</label>
         <link refid="value__types_8h"/>
-        <childnode refid="3207" relation="include">
+        <childnode refid="3206" relation="include">
         </childnode>
       </node>
-      <node id="3204">
+      <node id="3203">
         <label>stdarg.h</label>
       </node>
-      <node id="3201">
+      <node id="3200">
         <label>oscit/value.h</label>
         <link refid="value_8h"/>
-        <childnode refid="3202" relation="include">
+        <childnode refid="3201" relation="include">
         </childnode>
-        <childnode refid="3198" relation="include">
+        <childnode refid="3197" relation="include">
+        </childnode>
+        <childnode refid="3202" relation="include">
         </childnode>
         <childnode refid="3203" relation="include">
         </childnode>
@@ -47,95 +51,103 @@
         </childnode>
         <childnode refid="3205" relation="include">
         </childnode>
-        <childnode refid="3206" relation="include">
+        <childnode refid="3195" relation="include">
         </childnode>
-        <childnode refid="3196" relation="include">
-        </childnode>
-        <childnode refid="3208" relation="include">
-        </childnode>
-        <childnode refid="3210" relation="include">
-        </childnode>
-        <childnode refid="3211" relation="include">
-        </childnode>
-        <childnode refid="3213" relation="include">
-        </childnode>
-        <childnode refid="3214" relation="include">
-        </childnode>
-      </node>
-      <node id="3205">
-        <label>assert.h</label>
-      </node>
-      <node id="3219">
-        <label>oscit/hash_value.h</label>
-        <link refid="hash__value_8h"/>
-        <childnode refid="3201" relation="include">
-        </childnode>
-      </node>
-      <node id="3214">
-        <label>oscit/midi_message.h</label>
-        <link refid="midi__message_8h"/>
-        <childnode refid="3212" relation="include">
-        </childnode>
-        <childnode refid="3200" relation="include">
+        <childnode refid="3207" relation="include">
         </childnode>
         <childnode refid="3209" relation="include">
         </childnode>
+        <childnode refid="3210" relation="include">
+        </childnode>
+        <childnode refid="3212" relation="include">
+        </childnode>
+        <childnode refid="3213" relation="include">
+        </childnode>
       </node>
-      <node id="3196">
+      <node id="3221">
+        <label>oscit/constants.h</label>
+        <link refid="constants_8h"/>
+        <childnode refid="3193" relation="include">
+        </childnode>
+      </node>
+      <node id="3204">
+        <label>assert.h</label>
+      </node>
+      <node id="3218">
+        <label>oscit/hash_value.h</label>
+        <link refid="hash__value_8h"/>
+        <childnode refid="3200" relation="include">
+        </childnode>
+      </node>
+      <node id="3213">
+        <label>oscit/midi_message.h</label>
+        <link refid="midi__message_8h"/>
+        <childnode refid="3211" relation="include">
+        </childnode>
+        <childnode refid="3199" relation="include">
+        </childnode>
+        <childnode refid="3202" relation="include">
+        </childnode>
+        <childnode refid="3208" relation="include">
+        </childnode>
+      </node>
+      <node id="3195">
         <label>oscit/thash.h</label>
         <link refid="thash_8h"/>
+        <childnode refid="3196" relation="include">
+        </childnode>
         <childnode refid="3197" relation="include">
         </childnode>
         <childnode refid="3198" relation="include">
         </childnode>
         <childnode refid="3199" relation="include">
         </childnode>
+      </node>
+      <node id="3210">
+        <label>oscit/list.h</label>
+        <link refid="list_8h"/>
+        <childnode refid="3205" relation="include">
+        </childnode>
+        <childnode refid="3208" relation="include">
+        </childnode>
+        <childnode refid="3211" relation="include">
+        </childnode>
+      </node>
+      <node id="3214">
+        <label>oscit/list_value.h</label>
+        <link refid="list__value_8h"/>
         <childnode refid="3200" relation="include">
         </childnode>
       </node>
-      <node id="3211">
-        <label>oscit/list.h</label>
-        <link refid="list_8h"/>
-        <childnode refid="3206" relation="include">
-        </childnode>
-        <childnode refid="3209" relation="include">
-        </childnode>
-        <childnode refid="3212" relation="include">
-        </childnode>
-      </node>
-      <node id="3215">
-        <label>oscit/list_value.h</label>
-        <link refid="list__value_8h"/>
-        <childnode refid="3201" relation="include">
-        </childnode>
-      </node>
-      <node id="3198">
+      <node id="3197">
         <label>string</label>
       </node>
-      <node id="3220">
+      <node id="3219">
         <label>oscit/matrix_value.h</label>
         <link refid="matrix__value_8h"/>
-        <childnode refid="3201" relation="include">
-        </childnode>
-      </node>
-      <node id="3195">
-        <label>oscit/conf.h</label>
-        <link refid="conf_8h"/>
-      </node>
-      <node id="3216">
-        <label>oscit/real_value.h</label>
-        <link refid="real__value_8h"/>
-        <childnode refid="3201" relation="include">
+        <childnode refid="3200" relation="include">
         </childnode>
       </node>
       <node id="3194">
-        <label>include/oscit/values.h</label>
+        <label>oscit/conf.h</label>
+        <link refid="conf_8h"/>
+      </node>
+      <node id="3215">
+        <label>oscit/real_value.h</label>
+        <link refid="real__value_8h"/>
+        <childnode refid="3200" relation="include">
+        </childnode>
+      </node>
+      <node id="3193">
+        <label>/Users/gaspard/git/oscit/include/oscit/values.h</label>
         <link refid="values.h"/>
+        <childnode refid="3194" relation="include">
+        </childnode>
         <childnode refid="3195" relation="include">
         </childnode>
-        <childnode refid="3196" relation="include">
+        <childnode refid="3200" relation="include">
         </childnode>
-        <childnode refid="3201" relation="include">
+        <childnode refid="3214" relation="include">
         </childnode>
         <childnode refid="3215" relation="include">
         </childnode>
@@ -152,196 +164,138 @@
         <childnode refid="3221" relation="include">
         </childnode>
       </node>
-      <node id="3218">
+      <node id="3217">
         <label>oscit/error_value.h</label>
         <link refid="error__value_8h"/>
-        <childnode refid="3201" relation="include">
+        <childnode refid="3200" relation="include">
         </childnode>
       </node>
-      <node id="3207">
+      <node id="3206">
         <label>sys/types.h</label>
       </node>
-      <node id="3202">
+      <node id="3201">
         <label>string.h</label>
       </node>
-      <node id="3197">
+      <node id="3196">
         <label>cstdio</label>
       </node>
-      <node id="3212">
+      <node id="3211">
         <label>vector</label>
       </node>
-      <node id="3210">
+      <node id="3209">
         <label>oscit/error.h</label>
         <link refid="error_8h"/>
-        <childnode refid="3194" relation="include">
+        <childnode refid="3193" relation="include">
         </childnode>
-        <childnode refid="3209" relation="include">
+        <childnode refid="3208" relation="include">
         </childnode>
       </node>
-      <node id="3203">
+      <node id="3202">
         <label>sstream</label>
       </node>
-      <node id="3208">
+      <node id="3207">
         <label>oscit/string_data.h</label>
         <link refid="string__data_8h"/>
-        <childnode refid="3194" relation="include">
+        <childnode refid="3193" relation="include">
         </childnode>
-        <childnode refid="3209" relation="include">
+        <childnode refid="3208" relation="include">
         </childnode>
       </node>
-      <node id="3209">
+      <node id="3208">
         <label>oscit/reference_counted.h</label>
         <link refid="reference__counted_8h"/>
       </node>
-      <node id="3221">
+      <node id="3220">
         <label>oscit/midi_value.h</label>
         <link refid="midi__value_8h"/>
-        <childnode refid="3201" relation="include">
+        <childnode refid="3200" relation="include">
         </childnode>
       </node>
-      <node id="3200">
+      <node id="3199">
         <label>iostream</label>
       </node>
-      <node id="3217">
+      <node id="3216">
         <label>oscit/string_value.h</label>
         <link refid="string__value_8h"/>
-        <childnode refid="3201" relation="include">
+        <childnode refid="3200" relation="include">
         </childnode>
       </node>
-      <node id="3213">
+      <node id="3212">
         <label>oscit/hash.h</label>
         <link refid="hash_8h"/>
-        <childnode refid="3194" relation="include">
+        <childnode refid="3198" relation="include">
+        </childnode>
+        <childnode refid="3197" relation="include">
+        </childnode>
+        <childnode refid="3195" relation="include">
+        </childnode>
+        <childnode refid="3208" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="3248">
-        <label>include/oscit/list_with_type_meta_method.h</label>
-        <link refid="list__with__type__meta__method_8h"/>
-      </node>
-      <node id="3224">
-        <label>include/oscit/value.h</label>
+      <node id="3247">
+        <label>/Users/gaspard/git/oscit/include/oscit/value.h</label>
         <link refid="value_8h"/>
-        <childnode refid="3225" relation="include">
-        </childnode>
-        <childnode refid="3226" relation="include">
-        </childnode>
-        <childnode refid="3227" relation="include">
-        </childnode>
-        <childnode refid="3228" relation="include">
-        </childnode>
-        <childnode refid="3229" relation="include">
-        </childnode>
-        <childnode refid="3230" relation="include">
-        </childnode>
-        <childnode refid="3231" relation="include">
-        </childnode>
-        <childnode refid="3222" relation="include">
-        </childnode>
-      </node>
-      <node id="3226">
-        <label>include/oscit/hash_value.h</label>
-        <link refid="hash__value_8h"/>
-        <childnode refid="3222" relation="include">
-        </childnode>
-      </node>
-      <node id="3227">
-        <label>include/oscit/list_value.h</label>
-        <link refid="list__value_8h"/>
-        <childnode refid="3222" relation="include">
-        </childnode>
-      </node>
-      <node id="3251">
-        <label>include/oscit/object_proxy.h</label>
-        <link refid="object__proxy_8h"/>
-        <childnode refid="3249" relation="include">
-        </childnode>
-      </node>
-      <node id="3256">
-        <label>include/oscit/osc_remote_object.h</label>
-        <link refid="osc__remote__object_8h"/>
-      </node>
-      <node id="3255">
-        <label>include/oscit/type_meta_method.h</label>
-        <link refid="type__meta__method_8h"/>
-      </node>
-      <node id="3242">
-        <label>include/oscit/root.h</label>
-        <link refid="root_8h"/>
-        <childnode refid="3243" relation="include">
-        </childnode>
-        <childnode refid="3244" relation="include">
-        </childnode>
-        <childnode refid="3245" relation="include">
-        </childnode>
-        <childnode refid="3233" relation="include">
-        </childnode>
-        <childnode refid="3246" relation="include">
-        </childnode>
-        <childnode refid="3247" relation="include">
-        </childnode>
         <childnode refid="3248" relation="include">
-        </childnode>
-        <childnode refid="3235" relation="include">
         </childnode>
         <childnode refid="3249" relation="include">
         </childnode>
         <childnode refid="3250" relation="include">
         </childnode>
+        <childnode refid="3251" relation="include">
+        </childnode>
+        <childnode refid="3252" relation="include">
+        </childnode>
+        <childnode refid="3253" relation="include">
+        </childnode>
         <childnode refid="3254" relation="include">
         </childnode>
-        <childnode refid="3255" relation="include">
-        </childnode>
-      </node>
-      <node id="3235">
-        <label>include/oscit/oscit.h</label>
-        <link refid="oscit_8h"/>
-      </node>
-      <node id="3237">
-        <label>include/oscit/matrix.h</label>
-        <link refid="matrix_8h"/>
-      </node>
-      <node id="3246">
-        <label>include/oscit/info_meta_method.h</label>
-        <link refid="info__meta__method_8h"/>
-      </node>
-      <node id="3232">
-        <label>include/oscit/file.h</label>
-        <link refid="file_8h"/>
-        <childnode refid="3233" relation="include">
-        </childnode>
-      </node>
-      <node id="3233">
-        <label>include/oscit/file_method.h</label>
-        <link refid="file__method_8h"/>
-        <childnode refid="3234" relation="include">
-        </childnode>
-        <childnode refid="3235" relation="include">
-        </childnode>
-      </node>
-      <node id="3228">
-        <label>include/oscit/matrix_value.h</label>
-        <link refid="matrix__value_8h"/>
         <childnode refid="3222" relation="include">
+        </childnode>
+      </node>
+      <node id="3223">
+        <label>/Users/gaspard/git/oscit/include/oscit/constants.h</label>
+        <link refid="constants_8h"/>
+        <childnode refid="3224" relation="include">
+        </childnode>
+        <childnode refid="3222" relation="include">
+        </childnode>
+      </node>
+      <node id="3249">
+        <label>/Users/gaspard/git/oscit/include/oscit/hash_value.h</label>
+        <link refid="hash__value_8h"/>
+        <childnode refid="3222" relation="include">
+        </childnode>
+      </node>
+      <node id="3250">
+        <label>/Users/gaspard/git/oscit/include/oscit/list_value.h</label>
+        <link refid="list__value_8h"/>
+        <childnode refid="3222" relation="include">
+        </childnode>
+      </node>
+      <node id="3241">
+        <label>/Users/gaspard/git/oscit/include/oscit/object_proxy.h</label>
+        <link refid="object__proxy_8h"/>
+        <childnode refid="3239" relation="include">
         </childnode>
       </node>
       <node id="3245">
-        <label>include/oscit/error_meta_method.h</label>
-        <link refid="error__meta__method_8h"/>
+        <label>/Users/gaspard/git/oscit/include/oscit/osc_remote_object.h</label>
+        <link refid="osc__remote__object_8h"/>
       </node>
-      <node id="3230">
-        <label>include/oscit/real_value.h</label>
-        <link refid="real__value_8h"/>
-        <childnode refid="3222" relation="include">
+      <node id="3229">
+        <label>/Users/gaspard/git/oscit/include/oscit/root.h</label>
+        <link refid="root_8h"/>
+        <childnode refid="3230" relation="include">
         </childnode>
-      </node>
-      <node id="3222">
-        <label>include/oscit/values.h</label>
-        <link refid="values.h"/>
-        <childnode refid="3223" relation="include">
+        <childnode refid="3231" relation="include">
         </childnode>
         <childnode refid="3232" relation="include">
+        </childnode>
+        <childnode refid="3233" relation="include">
+        </childnode>
+        <childnode refid="3234" relation="include">
         </childnode>
         <childnode refid="3236" relation="include">
         </childnode>
@@ -349,391 +303,228 @@
         </childnode>
         <childnode refid="3238" relation="include">
         </childnode>
+        <childnode refid="3227" relation="include">
+        </childnode>
+        <childnode refid="3239" relation="include">
+        </childnode>
+        <childnode refid="3240" relation="include">
+        </childnode>
+        <childnode refid="3244" relation="include">
+        </childnode>
+      </node>
+      <node id="3227">
+        <label>/Users/gaspard/git/oscit/include/oscit/oscit.h</label>
+        <link refid="oscit_8h"/>
+      </node>
+      <node id="3256">
+        <label>/Users/gaspard/git/oscit/include/oscit/matrix.h</label>
+        <link refid="matrix_8h"/>
+      </node>
+      <node id="3236">
+        <label>/Users/gaspard/git/oscit/include/oscit/info_meta_method.h</label>
+        <link refid="info__meta__method_8h"/>
+      </node>
+      <node id="3255">
+        <label>/Users/gaspard/git/oscit/include/oscit/file.h</label>
+        <link refid="file_8h"/>
+        <childnode refid="3234" relation="include">
+        </childnode>
+      </node>
+      <node id="3234">
+        <label>/Users/gaspard/git/oscit/include/oscit/file_method.h</label>
+        <link refid="file__method_8h"/>
+        <childnode refid="3235" relation="include">
+        </childnode>
+        <childnode refid="3227" relation="include">
+        </childnode>
+      </node>
+      <node id="3251">
+        <label>/Users/gaspard/git/oscit/include/oscit/matrix_value.h</label>
+        <link refid="matrix__value_8h"/>
+        <childnode refid="3222" relation="include">
+        </childnode>
+      </node>
+      <node id="3233">
+        <label>/Users/gaspard/git/oscit/include/oscit/error_meta_method.h</label>
+        <link refid="error__meta__method_8h"/>
+      </node>
+      <node id="3253">
+        <label>/Users/gaspard/git/oscit/include/oscit/real_value.h</label>
+        <link refid="real__value_8h"/>
+        <childnode refid="3222" relation="include">
+        </childnode>
+      </node>
+      <node id="3222">
+        <label>/Users/gaspard/git/oscit/include/oscit/values.h</label>
+        <link refid="values.h"/>
+        <childnode refid="3223" relation="include">
+        </childnode>
+        <childnode refid="3246" relation="include">
+        </childnode>
+        <childnode refid="3255" relation="include">
+        </childnode>
+        <childnode refid="3256" relation="include">
+        </childnode>
+        <childnode refid="3224" relation="include">
+        </childnode>
         <childnode refid="3257" relation="include">
         </childnode>
-        <childnode refid="3235" relation="include">
+        <childnode refid="3227" relation="include">
         </childnode>
         <childnode refid="3258" relation="include">
         </childnode>
         <childnode refid="3259" relation="include">
         </childnode>
+        <childnode refid="3260" relation="include">
+        </childnode>
       </node>
-      <node id="3225">
-        <label>include/oscit/error_value.h</label>
+      <node id="3248">
+        <label>/Users/gaspard/git/oscit/include/oscit/error_value.h</label>
         <link refid="error__value_8h"/>
         <childnode refid="3222" relation="include">
         </childnode>
       </node>
       <node id="3258">
-        <label>include/oscit/script.h</label>
+        <label>/Users/gaspard/git/oscit/include/oscit/script.h</label>
         <link refid="script_8h"/>
         <childnode refid="3257" relation="include">
         </childnode>
       </node>
-      <node id="3252">
-        <label>include/oscit/osc_root_proxy.h</label>
+      <node id="3238">
+        <label>/Users/gaspard/git/oscit/include/oscit/list_with_attributes_meta_method.h</label>
+        <link refid="list__with__attributes__meta__method_8h"/>
+      </node>
+      <node id="3242">
+        <label>/Users/gaspard/git/oscit/include/oscit/osc_root_proxy.h</label>
         <link refid="osc__root__proxy_8h"/>
       </node>
-      <node id="3239">
-        <label>include/oscit/log_object.h</label>
+      <node id="3225">
+        <label>/Users/gaspard/git/oscit/include/oscit/log_object.h</label>
         <link refid="log__object_8h"/>
       </node>
       <node id="3257">
-        <label>include/oscit/osc_map_command.h</label>
+        <label>/Users/gaspard/git/oscit/include/oscit/osc_map_command.h</label>
         <link refid="osc__map__command_8h"/>
-        <childnode refid="3235" relation="include">
+        <childnode refid="3227" relation="include">
         </childnode>
       </node>
-      <node id="3244">
-        <label>include/oscit/call.h</label>
+      <node id="3231">
+        <label>/Users/gaspard/git/oscit/include/oscit/attrs_meta_method.h</label>
+        <link refid="attrs__meta__method_8h"/>
+      </node>
+      <node id="3232">
+        <label>/Users/gaspard/git/oscit/include/oscit/call.h</label>
         <link refid="call_8h"/>
-        <childnode refid="3235" relation="include">
+        <childnode refid="3227" relation="include">
         </childnode>
       </node>
-      <node id="3223">
-        <label>include/oscit/error.h</label>
+      <node id="3246">
+        <label>/Users/gaspard/git/oscit/include/oscit/error.h</label>
         <link refid="error_8h"/>
-        <childnode refid="3224" relation="include">
+        <childnode refid="3247" relation="include">
         </childnode>
       </node>
-      <node id="3249">
-        <label>include/oscit/proxy_factory.h</label>
+      <node id="3239">
+        <label>/Users/gaspard/git/oscit/include/oscit/proxy_factory.h</label>
         <link refid="proxy__factory_8h"/>
-        <childnode refid="3235" relation="include">
+        <childnode refid="3227" relation="include">
         </childnode>
       </node>
-      <node id="3234">
-        <label>include/oscit/hash_file_method.h</label>
+      <node id="3235">
+        <label>/Users/gaspard/git/oscit/include/oscit/hash_file_method.h</label>
         <link refid="hash__file__method_8h"/>
-        <childnode refid="3235" relation="include">
+        <childnode refid="3227" relation="include">
         </childnode>
       </node>
-      <node id="3247">
-        <label>include/oscit/list_meta_method.h</label>
+      <node id="3237">
+        <label>/Users/gaspard/git/oscit/include/oscit/list_meta_method.h</label>
         <link refid="list__meta__method_8h"/>
       </node>
-      <node id="3259">
-        <label>include/oscit/string_data.h</label>
+      <node id="3260">
+        <label>/Users/gaspard/git/oscit/include/oscit/string_data.h</label>
         <link refid="string__data_8h"/>
-        <childnode refid="3224" relation="include">
+        <childnode refid="3247" relation="include">
         </childnode>
       </node>
-      <node id="3229">
-        <label>include/oscit/midi_value.h</label>
+      <node id="3259">
+        <label>/Users/gaspard/git/oscit/include/oscit/signal.h</label>
+        <link refid="signal_8h"/>
+        <childnode refid="3224" relation="include">
+        </childnode>
+        <childnode refid="3227" relation="include">
+        </childnode>
+        <childnode refid="3229" relation="include">
+        </childnode>
+      </node>
+      <node id="3252">
+        <label>/Users/gaspard/git/oscit/include/oscit/midi_value.h</label>
         <link refid="midi__value_8h"/>
         <childnode refid="3222" relation="include">
         </childnode>
       </node>
-      <node id="3253">
-        <label>include/oscit/zeroconf_browser.h</label>
+      <node id="3243">
+        <label>/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h</label>
         <link refid="zeroconf__browser_8h"/>
-        <childnode refid="3235" relation="include">
+        <childnode refid="3227" relation="include">
         </childnode>
       </node>
-      <node id="3231">
-        <label>include/oscit/string_value.h</label>
+      <node id="3254">
+        <label>/Users/gaspard/git/oscit/include/oscit/string_value.h</label>
         <link refid="string__value_8h"/>
         <childnode refid="3222" relation="include">
         </childnode>
       </node>
-      <node id="3250">
-        <label>include/oscit/root_proxy.h</label>
+      <node id="3240">
+        <label>/Users/gaspard/git/oscit/include/oscit/root_proxy.h</label>
         <link refid="root__proxy_8h"/>
-        <childnode refid="3251" relation="include">
+        <childnode refid="3241" relation="include">
         </childnode>
-        <childnode refid="3252" relation="include">
+        <childnode refid="3242" relation="include">
         </childnode>
-        <childnode refid="3249" relation="include">
-        </childnode>
-        <childnode refid="3253" relation="include">
-        </childnode>
-      </node>
-      <node id="3236">
-        <label>include/oscit/hash.h</label>
-        <link refid="hash_8h"/>
-        <childnode refid="3224" relation="include">
-        </childnode>
-      </node>
-      <node id="3238">
-        <label>include/oscit/object.h</label>
-        <link refid="object_8h"/>
         <childnode refid="3239" relation="include">
         </childnode>
-        <childnode refid="3240" relation="include">
+        <childnode refid="3243" relation="include">
+        </childnode>
+      </node>
+      <node id="3224">
+        <label>/Users/gaspard/git/oscit/include/oscit/object.h</label>
+        <link refid="object_8h"/>
+        <childnode refid="3225" relation="include">
+        </childnode>
+        <childnode refid="3226" relation="include">
+        </childnode>
+        <childnode refid="3228" relation="include">
         </childnode>
         <childnode refid="3241" relation="include">
         </childnode>
-        <childnode refid="3251" relation="include">
+        <childnode refid="3245" relation="include">
         </childnode>
-        <childnode refid="3256" relation="include">
+        <childnode refid="3227" relation="include">
         </childnode>
-        <childnode refid="3235" relation="include">
-        </childnode>
-        <childnode refid="3242" relation="include">
+        <childnode refid="3229" relation="include">
         </childnode>
       </node>
-      <node id="3243">
-        <label>include/oscit/alias.h</label>
+      <node id="3230">
+        <label>/Users/gaspard/git/oscit/include/oscit/alias.h</label>
         <link refid="alias_8h"/>
       </node>
-      <node id="3241">
-        <label>include/oscit/object_handle.h</label>
+      <node id="3228">
+        <label>/Users/gaspard/git/oscit/include/oscit/object_handle.h</label>
         <link refid="object__handle_8h"/>
-        <childnode refid="3242" relation="include">
+        <childnode refid="3229" relation="include">
         </childnode>
       </node>
-      <node id="3240">
-        <label>include/oscit/method.h</label>
+      <node id="3226">
+        <label>/Users/gaspard/git/oscit/include/oscit/method.h</label>
         <link refid="method_8h"/>
-        <childnode refid="3235" relation="include">
+        <childnode refid="3227" relation="include">
         </childnode>
       </node>
-      <node id="3254">
-        <label>include/oscit/tree_meta_method.h</label>
+      <node id="3244">
+        <label>/Users/gaspard/git/oscit/include/oscit/tree_meta_method.h</label>
         <link refid="tree__meta__method_8h"/>
       </node>
     </invincdepgraph>
-      <sectiondef kind="define">
-      <memberdef kind="define" id="values_8h_1a9dda4f9603075f3b525f6b0a11f6c6a4" prot="public" static="no">
-        <name>NoIO</name>
-        <param><defname>info</defname></param>
-        <initializer>Value(info)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/values.h" line="46" bodyfile="/Users/gaspard/git/oscit/include/oscit/values.h" bodystart="46" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="values_8h_1a0aa6fbe3afd593a926ee0a784e145f21" prot="public" static="no">
-        <name>NoIOTypeId</name>
-        <initializer>H(&quot;s&quot;)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/values.h" line="47" bodyfile="/Users/gaspard/git/oscit/include/oscit/values.h" bodystart="47" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="values_8h_1a8bc9db945fd15e9879b2849cd51c5223" prot="public" static="no">
-        <name>NilIO</name>
-        <param><defname>info</defname></param>
-        <initializer>ListValue(&quot;N&quot;).push_back(info)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/values.h" line="49" bodyfile="/Users/gaspard/git/oscit/include/oscit/values.h" bodystart="49" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="values_8h_1a3a946a154ebc36af5bf4579a22d16770" prot="public" static="no">
-        <name>NilIOTypeId</name>
-        <initializer>H(&quot;Ns&quot;)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/values.h" line="50" bodyfile="/Users/gaspard/git/oscit/include/oscit/values.h" bodystart="50" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="values_8h_1aaafbc21cb8cffdbaa82afd92ec5786c9" prot="public" static="no">
-        <name>RealIO</name>
-        <param><defname>units</defname></param>
-        <param><defname>info</defname></param>
-        <initializer>Value(0.0).push_back(units).push_back(info)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/values.h" line="52" bodyfile="/Users/gaspard/git/oscit/include/oscit/values.h" bodystart="52" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="values_8h_1a4538fff52cd112838fdb06dbb8dca8d6" prot="public" static="no">
-        <name>RealIOTypeId</name>
-        <initializer>H(&quot;fss&quot;)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/values.h" line="53" bodyfile="/Users/gaspard/git/oscit/include/oscit/values.h" bodystart="53" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="values_8h_1a135d9ae3957a3a0da60741daee69a4d5" prot="public" static="no">
-        <name>StringIO</name>
-        <param><defname>units</defname></param>
-        <param><defname>info</defname></param>
-        <initializer>Value(&quot;&quot;).push_back(units).push_back(info)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/values.h" line="56" bodyfile="/Users/gaspard/git/oscit/include/oscit/values.h" bodystart="56" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="values_8h_1a738539d2691005d051cf265a9c349edd" prot="public" static="no">
-        <name>StringIOTypeId</name>
-        <initializer>H(&quot;sss&quot;)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/values.h" line="57" bodyfile="/Users/gaspard/git/oscit/include/oscit/values.h" bodystart="57" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="values_8h_1abc5ef9833662019fd418129b34437561" prot="public" static="no">
-        <name>RangeIO</name>
-        <param><defname>min</defname></param>
-        <param><defname>max</defname></param>
-        <param><defname>units</defname></param>
-        <param><defname>info</defname></param>
-        <initializer>Value(0.0).push_back(min).push_back(max).push_back(units).push_back(info)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/values.h" line="60" bodyfile="/Users/gaspard/git/oscit/include/oscit/values.h" bodystart="59" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="values_8h_1a4a8267812e28b805b792ff270093249c" prot="public" static="no">
-        <name>RangeIOTypeId</name>
-        <initializer>H(&quot;fffss&quot;)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/values.h" line="61" bodyfile="/Users/gaspard/git/oscit/include/oscit/values.h" bodystart="61" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="values_8h_1a77236b822db143c74958e708d066cf7d" prot="public" static="no">
-        <name>SelectIO</name>
-        <param><defname>values</defname></param>
-        <param><defname>units</defname></param>
-        <param><defname>info</defname></param>
-        <initializer>Value(&quot;&quot;).push_back(values).push_back(units).push_back(info)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/values.h" line="64" bodyfile="/Users/gaspard/git/oscit/include/oscit/values.h" bodystart="63" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="values_8h_1ab9c09124e60838cd2cd06f768dc8289f" prot="public" static="no">
-        <name>SelectIOTypeId</name>
-        <initializer>H(&quot;ssss&quot;)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/values.h" line="65" bodyfile="/Users/gaspard/git/oscit/include/oscit/values.h" bodystart="65" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="values_8h_1a6b27b6f594c93e886caf3406fe552ad5" prot="public" static="no">
-        <name>HashIO</name>
-        <param><defname>info</defname></param>
-        <initializer>Value(&apos;H&apos;).push_back(info)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/values.h" line="67" bodyfile="/Users/gaspard/git/oscit/include/oscit/values.h" bodystart="67" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="values_8h_1af5fe12139fac1dd3d45dae370e321853" prot="public" static="no">
-        <name>HashIOTypeId</name>
-        <initializer>H(&quot;Hs&quot;)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/values.h" line="68" bodyfile="/Users/gaspard/git/oscit/include/oscit/values.h" bodystart="68" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="values_8h_1adc7627415f3896ebd1fd9172e22b4f15" prot="public" static="no">
-        <name>MatrixIO</name>
-        <param><defname>rows</defname></param>
-        <param><defname>cols</defname></param>
-        <param><defname>info</defname></param>
-        <initializer>MatrixValue(rows, cols).push_back(info)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/values.h" line="70" bodyfile="/Users/gaspard/git/oscit/include/oscit/values.h" bodystart="70" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="values_8h_1a0c0dfa78cd4f9644c534d662df9cdf4e" prot="public" static="no">
-        <name>MatrixIOTypeId</name>
-        <initializer>H(&quot;Ms&quot;)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/values.h" line="71" bodyfile="/Users/gaspard/git/oscit/include/oscit/values.h" bodystart="71" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="values_8h_1ac65a00523224ce8b8be1225801a14672" prot="public" static="no">
-        <name>MidiIO</name>
-        <param><defname>info</defname></param>
-        <initializer>MidiValue().push_back(info)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/values.h" line="73" bodyfile="/Users/gaspard/git/oscit/include/oscit/values.h" bodystart="73" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="values_8h_1a1a3e3f242a7db976ca7e70d0c73bbe7c" prot="public" static="no">
-        <name>MidiIOTypeId</name>
-        <initializer>H(&quot;ms&quot;)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/values.h" line="74" bodyfile="/Users/gaspard/git/oscit/include/oscit/values.h" bodystart="74" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="values_8h_1aa73cf2c7360f7b51356a5b1db16db70b" prot="public" static="no">
-        <name>AnyIO</name>
-        <param><defname>info</defname></param>
-        <initializer>Value(&apos;*&apos;).push_back(info)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/values.h" line="76" bodyfile="/Users/gaspard/git/oscit/include/oscit/values.h" bodystart="76" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="values_8h_1abfe5531c9589e79c0fae3d9ec8e61d4c" prot="public" static="no">
-        <name>AnyIOTypeId</name>
-        <initializer>H(&quot;*s&quot;)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/values.h" line="77" bodyfile="/Users/gaspard/git/oscit/include/oscit/values.h" bodystart="77" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -781,44 +572,10 @@
 <codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hash__value_8h" kindref="compound">oscit/hash_value.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="matrix__value_8h" kindref="compound">oscit/matrix_value.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="midi__value_8h" kindref="compound">oscit/midi_value.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">//<sp/>FIXME:<sp/>remove<sp/>units<sp/>(info<sp/>is<sp/>enough)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="constants_8h" kindref="compound">oscit/constants.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46" refid="values_8h_1a9dda4f9603075f3b525f6b0a11f6c6a4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NoIO(info)<sp/><sp/>Value(info)</highlight></codeline>
-<codeline lineno="47" refid="values_8h_1a0aa6fbe3afd593a926ee0a784e145f21" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>NoIOTypeId<sp/>H(&quot;s&quot;)</highlight></codeline>
-<codeline lineno="48"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="49" refid="values_8h_1a8bc9db945fd15e9879b2849cd51c5223" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NilIO(info)<sp/><sp/>ListValue(&quot;N&quot;).push_back(info)</highlight></codeline>
-<codeline lineno="50" refid="values_8h_1a3a946a154ebc36af5bf4579a22d16770" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>NilIOTypeId<sp/>H(&quot;Ns&quot;)</highlight></codeline>
-<codeline lineno="51"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="52" refid="values_8h_1aaafbc21cb8cffdbaa82afd92ec5786c9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RealIO(units,<sp/>info)<sp/>Value(0.0).push_back(units).push_back(info)</highlight></codeline>
-<codeline lineno="53" refid="values_8h_1a4538fff52cd112838fdb06dbb8dca8d6" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>RealIOTypeId<sp/>H(&quot;fss&quot;)</highlight></codeline>
-<codeline lineno="54"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">//<sp/>FIXME:<sp/>units<sp/>for<sp/>string<sp/>IO<sp/>does<sp/>not<sp/>make<sp/>sense</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="56" refid="values_8h_1a135d9ae3957a3a0da60741daee69a4d5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>StringIO(units,<sp/>info)<sp/>Value(&quot;&quot;).push_back(units).push_back(info)</highlight></codeline>
-<codeline lineno="57" refid="values_8h_1a738539d2691005d051cf265a9c349edd" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>StringIOTypeId<sp/>H(&quot;sss&quot;)</highlight></codeline>
-<codeline lineno="58"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="59" refid="values_8h_1abc5ef9833662019fd418129b34437561" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RangeIO(min,<sp/>max,<sp/>units,<sp/>info)<sp/>\</highlight></codeline>
-<codeline lineno="60"><highlight class="preprocessor"><sp/><sp/>Value(0.0).push_back(min).push_back(max).push_back(units).push_back(info)</highlight></codeline>
-<codeline lineno="61" refid="values_8h_1a4a8267812e28b805b792ff270093249c" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>RangeIOTypeId<sp/>H(&quot;fffss&quot;)</highlight></codeline>
-<codeline lineno="62"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="63" refid="values_8h_1a77236b822db143c74958e708d066cf7d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SelectIO(values,<sp/>units,<sp/>info)<sp/>\</highlight></codeline>
-<codeline lineno="64"><highlight class="preprocessor"><sp/><sp/>Value(&quot;&quot;).push_back(values).push_back(units).push_back(info)</highlight></codeline>
-<codeline lineno="65" refid="values_8h_1ab9c09124e60838cd2cd06f768dc8289f" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SelectIOTypeId<sp/>H(&quot;ssss&quot;)</highlight></codeline>
-<codeline lineno="66"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="67" refid="values_8h_1a6b27b6f594c93e886caf3406fe552ad5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HashIO(info)<sp/>Value(&apos;H&apos;).push_back(info)</highlight></codeline>
-<codeline lineno="68" refid="values_8h_1af5fe12139fac1dd3d45dae370e321853" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>HashIOTypeId<sp/>H(&quot;Hs&quot;)</highlight></codeline>
-<codeline lineno="69"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="70" refid="values_8h_1adc7627415f3896ebd1fd9172e22b4f15" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MatrixIO(rows,<sp/>cols,<sp/>info)<sp/>MatrixValue(rows,<sp/>cols).push_back(info)</highlight></codeline>
-<codeline lineno="71" refid="values_8h_1a0c0dfa78cd4f9644c534d662df9cdf4e" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MatrixIOTypeId<sp/>H(&quot;Ms&quot;)</highlight></codeline>
-<codeline lineno="72"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="73" refid="values_8h_1ac65a00523224ce8b8be1225801a14672" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MidiIO(info)<sp/>MidiValue().push_back(info)</highlight></codeline>
-<codeline lineno="74" refid="values_8h_1a1a3e3f242a7db976ca7e70d0c73bbe7c" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MidiIOTypeId<sp/>H(&quot;ms&quot;)</highlight></codeline>
-<codeline lineno="75"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="76" refid="values_8h_1aa73cf2c7360f7b51356a5b1db16db70b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AnyIO(info)<sp/>Value(&apos;*&apos;).push_back(info)</highlight></codeline>
-<codeline lineno="77" refid="values_8h_1abfe5531c9589e79c0fae3d9ec8e61d4c" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>AnyIOTypeId<sp/>H(&quot;*s&quot;)</highlight></codeline>
-<codeline lineno="78"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>OSCIT_INCLUDE_OSCIT_VALUES_H_</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>OSCIT_INCLUDE_OSCIT_VALUES_H_</highlight></codeline>
     </programlisting>
     <location file="/Users/gaspard/git/oscit/include/oscit/values.h"/>
   </compounddef>

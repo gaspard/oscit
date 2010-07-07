@@ -2,16 +2,13 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
   <compounddef id="classoscit_1_1_on_destroy_notifier" kind="class" prot="public">
     <compoundname>oscit::OnDestroyNotifier</compoundname>
-    <basecompoundref refid="classoscit_1_1_callback_list" prot="public" virt="non-virtual">oscit::CallbackList</basecompoundref>
-    <basecompoundref refid="classoscit_1_1_callback_list" prot="public" virt="non-virtual">oscit::CallbackList</basecompoundref>
     <includes refid="on__destroy__callback_8h" local="no">on_destroy_callback.h</includes>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classoscit_1_1_on_destroy_notifier_1ad49c8a1430ff57ce83011e8f4f90f759" prot="private" static="no" mutable="no">
-        <type>std::list&lt; <ref refid="classoscit_1_1_callback" kindref="compound">Callback</ref> * &gt;</type>
+        <type>std::list&lt; Callback * &gt;</type>
         <definition>std::list&lt;Callback*&gt; oscit::OnDestroyNotifier::callbacks_</definition>
         <argsstring></argsstring>
         <name>callbacks_</name>
-        <reimplements refid="classoscit_1_1_callback_list_1a28c5bfe78592a4a1c5944102026c3c6d">callbacks_</reimplements>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -40,9 +37,8 @@
         <definition>void oscit::OnDestroyNotifier::adopt_callback</definition>
         <argsstring>(Callback *callback)</argsstring>
         <name>adopt_callback</name>
-        <reimplements refid="classoscit_1_1_callback_list_1aeb689fb49a0200a9bd024387d8afd52f">adopt_callback</reimplements>
         <param>
-          <type><ref refid="classoscit_1_1_callback" kindref="compound">Callback</ref> *</type>
+          <type>Callback *</type>
           <declname>callback</declname>
         </param>
         <briefdescription>
@@ -130,68 +126,13 @@
     </briefdescription>
     <detaileddescription>
 <para>Holds a list of callbacks that will be triggered on destruction. This is used as instance variable to make sure the callbacks are triggered when the object containing the <ref refid="classoscit_1_1_on_destroy_notifier" kindref="compound">OnDestroyNotifier</ref> is destroyed. </para>    </detaileddescription>
-    <inheritancegraph>
-      <node id="894">
-        <label>oscit::NonCopyable</label>
-        <link refid="classoscit_1_1_non_copyable"/>
-      </node>
-      <node id="892">
-        <label>oscit::OnDestroyNotifier</label>
-        <link refid="classoscit_1_1_on_destroy_notifier"/>
-        <childnode refid="893" relation="public-inheritance">
-        </childnode>
-        <childnode refid="893" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="893">
-        <label>oscit::CallbackList</label>
-        <link refid="classoscit_1_1_callback_list"/>
-        <childnode refid="894" relation="private-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="897">
-        <label>oscit::NonCopyable</label>
-        <link refid="classoscit_1_1_non_copyable"/>
-      </node>
-      <node id="895">
-        <label>oscit::OnDestroyNotifier</label>
-        <link refid="classoscit_1_1_on_destroy_notifier"/>
-        <childnode refid="896" relation="public-inheritance">
-        </childnode>
-        <childnode refid="896" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="898">
-        <label>oscit::Observer</label>
-        <link refid="classoscit_1_1_observer"/>
-      </node>
-      <node id="896">
-        <label>oscit::CallbackList</label>
-        <link refid="classoscit_1_1_callback_list"/>
-        <childnode refid="897" relation="private-inheritance">
-        </childnode>
-        <childnode refid="898" relation="usage">
-          <edgelabel>list_owner_</edgelabel>
-        </childnode>
-      </node>
-    </collaborationgraph>
     <location file="/Users/gaspard/git/oscit/include/oscit/on_destroy_callback.h" line="39" bodyfile="/Users/gaspard/git/oscit/include/oscit/on_destroy_callback.h" bodystart="39" bodyend="89"/>
     <listofallmembers>
       <member refid="classoscit_1_1_on_destroy_notifier_1a03b02dd15f2141479dd7dfe68498b262" prot="public" virt="non-virtual"><scope>oscit::OnDestroyNotifier</scope><name>adopt_callback</name></member>
-      <member refid="classoscit_1_1_callback_list_1a4e9141a7c879e309f7f60f1dfea9c182" prot="public" virt="non-virtual"><scope>oscit::OnDestroyNotifier</scope><name>CallbackList</name></member>
       <member refid="classoscit_1_1_on_destroy_notifier_1ad49c8a1430ff57ce83011e8f4f90f759" prot="private" virt="non-virtual"><scope>oscit::OnDestroyNotifier</scope><name>callbacks_</name></member>
-      <member refid="classoscit_1_1_callback_list_1a4e5c9a243986c93a07277424a34d728b" prot="public" virt="non-virtual"><scope>oscit::OnDestroyNotifier</scope><name>delete_callback</name></member>
-      <member refid="classoscit_1_1_callback_list_1ad1f4e1eaf9c6bb6ef8316de723afb73c" prot="public" virt="non-virtual"><scope>oscit::OnDestroyNotifier</scope><name>Iterator</name></member>
-      <member refid="classoscit_1_1_callback_list_1af139ca58db2d8124425255e6ffcf4cf3" prot="protected" virt="non-virtual"><scope>oscit::OnDestroyNotifier</scope><name>list_owner_</name></member>
-      <member refid="classoscit_1_1_non_copyable_1a1f0c0fedea54b6e20aeefbeefdce67f7" prot="protected" virt="non-virtual"><scope>oscit::OnDestroyNotifier</scope><name>NonCopyable</name></member>
       <member refid="classoscit_1_1_on_destroy_notifier_1a77980389bea422263834d10f8925018f" prot="public" virt="non-virtual"><scope>oscit::OnDestroyNotifier</scope><name>OnDestroyNotifier</name></member>
       <member refid="classoscit_1_1_on_destroy_notifier_1ab9a70dd1d1d9f46a4f2235471834f409" prot="public" virt="non-virtual"><scope>oscit::OnDestroyNotifier</scope><name>remove_callback</name></member>
-      <member refid="classoscit_1_1_callback_list_1aa67dd302fe3da5622b4efccfc987c0c0" prot="public" virt="non-virtual"><scope>oscit::OnDestroyNotifier</scope><name>trigger_all</name></member>
       <member refid="classoscit_1_1_on_destroy_notifier_1a232758cf2bbfa3a751a4bc8a58536042" prot="public" virt="non-virtual"><scope>oscit::OnDestroyNotifier</scope><name>trigger_and_remove</name></member>
-      <member refid="classoscit_1_1_callback_list_1ad9167566a1150d8d9616a39c7711f385" prot="public" virt="virtual"><scope>oscit::OnDestroyNotifier</scope><name>~CallbackList</name></member>
-      <member refid="classoscit_1_1_non_copyable_1ad21ed15dea6d4700732a2cbc7f98e20a" prot="protected" virt="non-virtual"><scope>oscit::OnDestroyNotifier</scope><name>~NonCopyable</name></member>
       <member refid="classoscit_1_1_on_destroy_notifier_1ac3544c10fbdcd108322b7faa65f41412" prot="public" virt="non-virtual"><scope>oscit::OnDestroyNotifier</scope><name>~OnDestroyNotifier</name></member>
       <member refid="classoscit_1_1_on_destroy_notifier_1ac3544c10fbdcd108322b7faa65f41412" prot="public" virt="non-virtual"><scope>oscit::OnDestroyNotifier</scope><name>~OnDestroyNotifier</name></member>
     </listofallmembers>

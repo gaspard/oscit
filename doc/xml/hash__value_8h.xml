@@ -3,262 +3,26 @@
   <compounddef id="hash__value_8h" kind="file">
     <compoundname>hash_value.h</compoundname>
     <includes refid="value_8h" local="yes">oscit/value.h</includes>
-    <includedby refid="values_8h" local="yes">include/oscit/values.h</includedby>
+    <includedby refid="values_8h" local="yes">/Users/gaspard/git/oscit/include/oscit/values.h</includedby>
     <incdepgraph>
-      <node id="856">
+      <node id="904">
         <label>list</label>
       </node>
-      <node id="852">
+      <node id="900">
         <label>oscit/value_types.h</label>
         <link refid="value__types_8h"/>
-        <childnode refid="853" relation="include">
+        <childnode refid="901" relation="include">
         </childnode>
       </node>
-      <node id="850">
+      <node id="898">
         <label>stdarg.h</label>
       </node>
-      <node id="846">
+      <node id="894">
         <label>oscit/value.h</label>
         <link refid="value_8h"/>
-        <childnode refid="847" relation="include">
-        </childnode>
-        <childnode refid="848" relation="include">
-        </childnode>
-        <childnode refid="849" relation="include">
-        </childnode>
-        <childnode refid="850" relation="include">
-        </childnode>
-        <childnode refid="851" relation="include">
-        </childnode>
-        <childnode refid="852" relation="include">
-        </childnode>
-        <childnode refid="854" relation="include">
-        </childnode>
-        <childnode refid="858" relation="include">
-        </childnode>
-        <childnode refid="868" relation="include">
-        </childnode>
-        <childnode refid="869" relation="include">
-        </childnode>
-        <childnode refid="871" relation="include">
-        </childnode>
-        <childnode refid="872" relation="include">
-        </childnode>
-      </node>
-      <node id="851">
-        <label>assert.h</label>
-      </node>
-      <node id="845">
-        <label>include/oscit/hash_value.h</label>
-        <link refid="hash_value.h"/>
-        <childnode refid="846" relation="include">
-        </childnode>
-      </node>
-      <node id="872">
-        <label>oscit/midi_message.h</label>
-        <link refid="midi__message_8h"/>
-        <childnode refid="870" relation="include">
-        </childnode>
-        <childnode refid="857" relation="include">
-        </childnode>
-        <childnode refid="867" relation="include">
-        </childnode>
-      </node>
-      <node id="854">
-        <label>oscit/thash.h</label>
-        <link refid="thash_8h"/>
-        <childnode refid="855" relation="include">
-        </childnode>
-        <childnode refid="848" relation="include">
-        </childnode>
-        <childnode refid="856" relation="include">
-        </childnode>
-        <childnode refid="857" relation="include">
-        </childnode>
-      </node>
-      <node id="869">
-        <label>oscit/list.h</label>
-        <link refid="list_8h"/>
-        <childnode refid="852" relation="include">
-        </childnode>
-        <childnode refid="867" relation="include">
-        </childnode>
-        <childnode refid="870" relation="include">
-        </childnode>
-      </node>
-      <node id="861">
-        <label>oscit/list_value.h</label>
-        <link refid="list__value_8h"/>
-        <childnode refid="846" relation="include">
-        </childnode>
-      </node>
-      <node id="848">
-        <label>string</label>
-      </node>
-      <node id="865">
-        <label>oscit/matrix_value.h</label>
-        <link refid="matrix__value_8h"/>
-        <childnode refid="846" relation="include">
-        </childnode>
-      </node>
-      <node id="860">
-        <label>oscit/conf.h</label>
-        <link refid="conf_8h"/>
-      </node>
-      <node id="862">
-        <label>oscit/real_value.h</label>
-        <link refid="real__value_8h"/>
-        <childnode refid="846" relation="include">
-        </childnode>
-      </node>
-      <node id="859">
-        <label>oscit/values.h</label>
-        <link refid="values_8h"/>
-        <childnode refid="860" relation="include">
-        </childnode>
-        <childnode refid="854" relation="include">
-        </childnode>
-        <childnode refid="846" relation="include">
-        </childnode>
-        <childnode refid="861" relation="include">
-        </childnode>
-        <childnode refid="862" relation="include">
-        </childnode>
-        <childnode refid="863" relation="include">
-        </childnode>
-        <childnode refid="864" relation="include">
-        </childnode>
-        <childnode refid="845" relation="include">
-        </childnode>
-        <childnode refid="865" relation="include">
-        </childnode>
-        <childnode refid="866" relation="include">
-        </childnode>
-      </node>
-      <node id="864">
-        <label>oscit/error_value.h</label>
-        <link refid="error__value_8h"/>
-        <childnode refid="846" relation="include">
-        </childnode>
-      </node>
-      <node id="853">
-        <label>sys/types.h</label>
-      </node>
-      <node id="847">
-        <label>string.h</label>
-      </node>
-      <node id="855">
-        <label>cstdio</label>
-      </node>
-      <node id="870">
-        <label>vector</label>
-      </node>
-      <node id="868">
-        <label>oscit/error.h</label>
-        <link refid="error_8h"/>
-        <childnode refid="859" relation="include">
-        </childnode>
-        <childnode refid="867" relation="include">
-        </childnode>
-      </node>
-      <node id="849">
-        <label>sstream</label>
-      </node>
-      <node id="858">
-        <label>oscit/string_data.h</label>
-        <link refid="string__data_8h"/>
-        <childnode refid="859" relation="include">
-        </childnode>
-        <childnode refid="867" relation="include">
-        </childnode>
-      </node>
-      <node id="867">
-        <label>oscit/reference_counted.h</label>
-        <link refid="reference__counted_8h"/>
-      </node>
-      <node id="866">
-        <label>oscit/midi_value.h</label>
-        <link refid="midi__value_8h"/>
-        <childnode refid="846" relation="include">
-        </childnode>
-      </node>
-      <node id="857">
-        <label>iostream</label>
-      </node>
-      <node id="863">
-        <label>oscit/string_value.h</label>
-        <link refid="string__value_8h"/>
-        <childnode refid="846" relation="include">
-        </childnode>
-      </node>
-      <node id="871">
-        <label>oscit/hash.h</label>
-        <link refid="hash_8h"/>
-        <childnode refid="859" relation="include">
-        </childnode>
-      </node>
-    </incdepgraph>
-    <invincdepgraph>
-      <node id="899">
-        <label>include/oscit/list_with_type_meta_method.h</label>
-        <link refid="list__with__type__meta__method_8h"/>
-      </node>
-      <node id="876">
-        <label>include/oscit/value.h</label>
-        <link refid="value_8h"/>
-        <childnode refid="877" relation="include">
-        </childnode>
-        <childnode refid="873" relation="include">
-        </childnode>
-        <childnode refid="878" relation="include">
-        </childnode>
-        <childnode refid="879" relation="include">
-        </childnode>
-        <childnode refid="880" relation="include">
-        </childnode>
-        <childnode refid="881" relation="include">
-        </childnode>
-        <childnode refid="882" relation="include">
-        </childnode>
-        <childnode refid="874" relation="include">
-        </childnode>
-      </node>
-      <node id="873">
-        <label>include/oscit/hash_value.h</label>
-        <link refid="hash_value.h"/>
-        <childnode refid="874" relation="include">
-        </childnode>
-      </node>
-      <node id="878">
-        <label>include/oscit/list_value.h</label>
-        <link refid="list__value_8h"/>
-        <childnode refid="874" relation="include">
-        </childnode>
-      </node>
-      <node id="902">
-        <label>include/oscit/object_proxy.h</label>
-        <link refid="object__proxy_8h"/>
-        <childnode refid="900" relation="include">
-        </childnode>
-      </node>
-      <node id="907">
-        <label>include/oscit/osc_remote_object.h</label>
-        <link refid="osc__remote__object_8h"/>
-      </node>
-      <node id="906">
-        <label>include/oscit/type_meta_method.h</label>
-        <link refid="type__meta__method_8h"/>
-      </node>
-      <node id="893">
-        <label>include/oscit/root.h</label>
-        <link refid="root_8h"/>
-        <childnode refid="894" relation="include">
-        </childnode>
         <childnode refid="895" relation="include">
         </childnode>
         <childnode refid="896" relation="include">
-        </childnode>
-        <childnode refid="884" relation="include">
         </childnode>
         <childnode refid="897" relation="include">
         </childnode>
@@ -266,213 +30,479 @@
         </childnode>
         <childnode refid="899" relation="include">
         </childnode>
-        <childnode refid="886" relation="include">
-        </childnode>
         <childnode refid="900" relation="include">
         </childnode>
-        <childnode refid="901" relation="include">
-        </childnode>
-        <childnode refid="905" relation="include">
+        <childnode refid="902" relation="include">
         </childnode>
         <childnode refid="906" relation="include">
         </childnode>
-      </node>
-      <node id="886">
-        <label>include/oscit/oscit.h</label>
-        <link refid="oscit_8h"/>
-      </node>
-      <node id="888">
-        <label>include/oscit/matrix.h</label>
-        <link refid="matrix_8h"/>
-      </node>
-      <node id="897">
-        <label>include/oscit/info_meta_method.h</label>
-        <link refid="info__meta__method_8h"/>
-      </node>
-      <node id="883">
-        <label>include/oscit/file.h</label>
-        <link refid="file_8h"/>
-        <childnode refid="884" relation="include">
+        <childnode refid="917" relation="include">
+        </childnode>
+        <childnode refid="918" relation="include">
+        </childnode>
+        <childnode refid="920" relation="include">
+        </childnode>
+        <childnode refid="921" relation="include">
         </childnode>
       </node>
-      <node id="884">
-        <label>include/oscit/file_method.h</label>
-        <link refid="file__method_8h"/>
-        <childnode refid="885" relation="include">
-        </childnode>
-        <childnode refid="886" relation="include">
+      <node id="915">
+        <label>oscit/constants.h</label>
+        <link refid="constants_8h"/>
+        <childnode refid="907" relation="include">
         </childnode>
       </node>
-      <node id="879">
-        <label>include/oscit/matrix_value.h</label>
-        <link refid="matrix__value_8h"/>
-        <childnode refid="874" relation="include">
+      <node id="899">
+        <label>assert.h</label>
+      </node>
+      <node id="893">
+        <label>/Users/gaspard/git/oscit/include/oscit/hash_value.h</label>
+        <link refid="hash_value.h"/>
+        <childnode refid="894" relation="include">
+        </childnode>
+      </node>
+      <node id="921">
+        <label>oscit/midi_message.h</label>
+        <link refid="midi__message_8h"/>
+        <childnode refid="919" relation="include">
+        </childnode>
+        <childnode refid="905" relation="include">
+        </childnode>
+        <childnode refid="897" relation="include">
+        </childnode>
+        <childnode refid="916" relation="include">
+        </childnode>
+      </node>
+      <node id="902">
+        <label>oscit/thash.h</label>
+        <link refid="thash_8h"/>
+        <childnode refid="903" relation="include">
+        </childnode>
+        <childnode refid="896" relation="include">
+        </childnode>
+        <childnode refid="904" relation="include">
+        </childnode>
+        <childnode refid="905" relation="include">
+        </childnode>
+      </node>
+      <node id="918">
+        <label>oscit/list.h</label>
+        <link refid="list_8h"/>
+        <childnode refid="900" relation="include">
+        </childnode>
+        <childnode refid="916" relation="include">
+        </childnode>
+        <childnode refid="919" relation="include">
+        </childnode>
+      </node>
+      <node id="909">
+        <label>oscit/list_value.h</label>
+        <link refid="list__value_8h"/>
+        <childnode refid="894" relation="include">
         </childnode>
       </node>
       <node id="896">
-        <label>include/oscit/error_meta_method.h</label>
-        <link refid="error__meta__method_8h"/>
+        <label>string</label>
       </node>
-      <node id="881">
-        <label>include/oscit/real_value.h</label>
+      <node id="913">
+        <label>oscit/matrix_value.h</label>
+        <link refid="matrix__value_8h"/>
+        <childnode refid="894" relation="include">
+        </childnode>
+      </node>
+      <node id="908">
+        <label>oscit/conf.h</label>
+        <link refid="conf_8h"/>
+      </node>
+      <node id="910">
+        <label>oscit/real_value.h</label>
         <link refid="real__value_8h"/>
-        <childnode refid="874" relation="include">
+        <childnode refid="894" relation="include">
         </childnode>
       </node>
-      <node id="874">
-        <label>include/oscit/values.h</label>
+      <node id="907">
+        <label>oscit/values.h</label>
         <link refid="values_8h"/>
-        <childnode refid="875" relation="include">
-        </childnode>
-        <childnode refid="883" relation="include">
-        </childnode>
-        <childnode refid="887" relation="include">
-        </childnode>
-        <childnode refid="888" relation="include">
-        </childnode>
-        <childnode refid="889" relation="include">
-        </childnode>
         <childnode refid="908" relation="include">
         </childnode>
-        <childnode refid="886" relation="include">
+        <childnode refid="902" relation="include">
+        </childnode>
+        <childnode refid="894" relation="include">
         </childnode>
         <childnode refid="909" relation="include">
         </childnode>
         <childnode refid="910" relation="include">
         </childnode>
+        <childnode refid="911" relation="include">
+        </childnode>
+        <childnode refid="912" relation="include">
+        </childnode>
+        <childnode refid="893" relation="include">
+        </childnode>
+        <childnode refid="913" relation="include">
+        </childnode>
+        <childnode refid="914" relation="include">
+        </childnode>
+        <childnode refid="915" relation="include">
+        </childnode>
       </node>
-      <node id="877">
-        <label>include/oscit/error_value.h</label>
+      <node id="912">
+        <label>oscit/error_value.h</label>
         <link refid="error__value_8h"/>
-        <childnode refid="874" relation="include">
-        </childnode>
-      </node>
-      <node id="909">
-        <label>include/oscit/script.h</label>
-        <link refid="script_8h"/>
-        <childnode refid="908" relation="include">
-        </childnode>
-      </node>
-      <node id="903">
-        <label>include/oscit/osc_root_proxy.h</label>
-        <link refid="osc__root__proxy_8h"/>
-      </node>
-      <node id="890">
-        <label>include/oscit/log_object.h</label>
-        <link refid="log__object_8h"/>
-      </node>
-      <node id="908">
-        <label>include/oscit/osc_map_command.h</label>
-        <link refid="osc__map__command_8h"/>
-        <childnode refid="886" relation="include">
-        </childnode>
-      </node>
-      <node id="895">
-        <label>include/oscit/call.h</label>
-        <link refid="call_8h"/>
-        <childnode refid="886" relation="include">
-        </childnode>
-      </node>
-      <node id="875">
-        <label>include/oscit/error.h</label>
-        <link refid="error_8h"/>
-        <childnode refid="876" relation="include">
-        </childnode>
-      </node>
-      <node id="900">
-        <label>include/oscit/proxy_factory.h</label>
-        <link refid="proxy__factory_8h"/>
-        <childnode refid="886" relation="include">
-        </childnode>
-      </node>
-      <node id="885">
-        <label>include/oscit/hash_file_method.h</label>
-        <link refid="hash__file__method_8h"/>
-        <childnode refid="886" relation="include">
-        </childnode>
-      </node>
-      <node id="898">
-        <label>include/oscit/list_meta_method.h</label>
-        <link refid="list__meta__method_8h"/>
-      </node>
-      <node id="910">
-        <label>include/oscit/string_data.h</label>
-        <link refid="string__data_8h"/>
-        <childnode refid="876" relation="include">
-        </childnode>
-      </node>
-      <node id="880">
-        <label>include/oscit/midi_value.h</label>
-        <link refid="midi__value_8h"/>
-        <childnode refid="874" relation="include">
-        </childnode>
-      </node>
-      <node id="904">
-        <label>include/oscit/zeroconf_browser.h</label>
-        <link refid="zeroconf__browser_8h"/>
-        <childnode refid="886" relation="include">
-        </childnode>
-      </node>
-      <node id="882">
-        <label>include/oscit/string_value.h</label>
-        <link refid="string__value_8h"/>
-        <childnode refid="874" relation="include">
+        <childnode refid="894" relation="include">
         </childnode>
       </node>
       <node id="901">
-        <label>include/oscit/root_proxy.h</label>
-        <link refid="root__proxy_8h"/>
-        <childnode refid="902" relation="include">
-        </childnode>
-        <childnode refid="903" relation="include">
-        </childnode>
-        <childnode refid="900" relation="include">
-        </childnode>
-        <childnode refid="904" relation="include">
-        </childnode>
+        <label>sys/types.h</label>
       </node>
-      <node id="887">
-        <label>include/oscit/hash.h</label>
-        <link refid="hash_8h"/>
-        <childnode refid="876" relation="include">
-        </childnode>
+      <node id="895">
+        <label>string.h</label>
       </node>
-      <node id="889">
-        <label>include/oscit/object.h</label>
-        <link refid="object_8h"/>
-        <childnode refid="890" relation="include">
-        </childnode>
-        <childnode refid="891" relation="include">
-        </childnode>
-        <childnode refid="892" relation="include">
-        </childnode>
-        <childnode refid="902" relation="include">
-        </childnode>
+      <node id="903">
+        <label>cstdio</label>
+      </node>
+      <node id="919">
+        <label>vector</label>
+      </node>
+      <node id="917">
+        <label>oscit/error.h</label>
+        <link refid="error_8h"/>
         <childnode refid="907" relation="include">
         </childnode>
-        <childnode refid="886" relation="include">
-        </childnode>
-        <childnode refid="893" relation="include">
+        <childnode refid="916" relation="include">
         </childnode>
       </node>
-      <node id="894">
-        <label>include/oscit/alias.h</label>
-        <link refid="alias_8h"/>
+      <node id="897">
+        <label>sstream</label>
       </node>
-      <node id="892">
-        <label>include/oscit/object_handle.h</label>
-        <link refid="object__handle_8h"/>
-        <childnode refid="893" relation="include">
+      <node id="906">
+        <label>oscit/string_data.h</label>
+        <link refid="string__data_8h"/>
+        <childnode refid="907" relation="include">
+        </childnode>
+        <childnode refid="916" relation="include">
         </childnode>
       </node>
-      <node id="891">
-        <label>include/oscit/method.h</label>
-        <link refid="method_8h"/>
-        <childnode refid="886" relation="include">
+      <node id="916">
+        <label>oscit/reference_counted.h</label>
+        <link refid="reference__counted_8h"/>
+      </node>
+      <node id="914">
+        <label>oscit/midi_value.h</label>
+        <link refid="midi__value_8h"/>
+        <childnode refid="894" relation="include">
         </childnode>
       </node>
       <node id="905">
-        <label>include/oscit/tree_meta_method.h</label>
+        <label>iostream</label>
+      </node>
+      <node id="911">
+        <label>oscit/string_value.h</label>
+        <link refid="string__value_8h"/>
+        <childnode refid="894" relation="include">
+        </childnode>
+      </node>
+      <node id="920">
+        <label>oscit/hash.h</label>
+        <link refid="hash_8h"/>
+        <childnode refid="904" relation="include">
+        </childnode>
+        <childnode refid="896" relation="include">
+        </childnode>
+        <childnode refid="902" relation="include">
+        </childnode>
+        <childnode refid="916" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="948">
+        <label>/Users/gaspard/git/oscit/include/oscit/value.h</label>
+        <link refid="value_8h"/>
+        <childnode refid="949" relation="include">
+        </childnode>
+        <childnode refid="922" relation="include">
+        </childnode>
+        <childnode refid="950" relation="include">
+        </childnode>
+        <childnode refid="951" relation="include">
+        </childnode>
+        <childnode refid="952" relation="include">
+        </childnode>
+        <childnode refid="953" relation="include">
+        </childnode>
+        <childnode refid="954" relation="include">
+        </childnode>
+        <childnode refid="923" relation="include">
+        </childnode>
+      </node>
+      <node id="924">
+        <label>/Users/gaspard/git/oscit/include/oscit/constants.h</label>
+        <link refid="constants_8h"/>
+        <childnode refid="925" relation="include">
+        </childnode>
+        <childnode refid="923" relation="include">
+        </childnode>
+      </node>
+      <node id="922">
+        <label>/Users/gaspard/git/oscit/include/oscit/hash_value.h</label>
+        <link refid="hash_value.h"/>
+        <childnode refid="923" relation="include">
+        </childnode>
+      </node>
+      <node id="950">
+        <label>/Users/gaspard/git/oscit/include/oscit/list_value.h</label>
+        <link refid="list__value_8h"/>
+        <childnode refid="923" relation="include">
+        </childnode>
+      </node>
+      <node id="942">
+        <label>/Users/gaspard/git/oscit/include/oscit/object_proxy.h</label>
+        <link refid="object__proxy_8h"/>
+        <childnode refid="940" relation="include">
+        </childnode>
+      </node>
+      <node id="946">
+        <label>/Users/gaspard/git/oscit/include/oscit/osc_remote_object.h</label>
+        <link refid="osc__remote__object_8h"/>
+      </node>
+      <node id="930">
+        <label>/Users/gaspard/git/oscit/include/oscit/root.h</label>
+        <link refid="root_8h"/>
+        <childnode refid="931" relation="include">
+        </childnode>
+        <childnode refid="932" relation="include">
+        </childnode>
+        <childnode refid="933" relation="include">
+        </childnode>
+        <childnode refid="934" relation="include">
+        </childnode>
+        <childnode refid="935" relation="include">
+        </childnode>
+        <childnode refid="937" relation="include">
+        </childnode>
+        <childnode refid="938" relation="include">
+        </childnode>
+        <childnode refid="939" relation="include">
+        </childnode>
+        <childnode refid="928" relation="include">
+        </childnode>
+        <childnode refid="940" relation="include">
+        </childnode>
+        <childnode refid="941" relation="include">
+        </childnode>
+        <childnode refid="945" relation="include">
+        </childnode>
+      </node>
+      <node id="928">
+        <label>/Users/gaspard/git/oscit/include/oscit/oscit.h</label>
+        <link refid="oscit_8h"/>
+      </node>
+      <node id="956">
+        <label>/Users/gaspard/git/oscit/include/oscit/matrix.h</label>
+        <link refid="matrix_8h"/>
+      </node>
+      <node id="937">
+        <label>/Users/gaspard/git/oscit/include/oscit/info_meta_method.h</label>
+        <link refid="info__meta__method_8h"/>
+      </node>
+      <node id="955">
+        <label>/Users/gaspard/git/oscit/include/oscit/file.h</label>
+        <link refid="file_8h"/>
+        <childnode refid="935" relation="include">
+        </childnode>
+      </node>
+      <node id="935">
+        <label>/Users/gaspard/git/oscit/include/oscit/file_method.h</label>
+        <link refid="file__method_8h"/>
+        <childnode refid="936" relation="include">
+        </childnode>
+        <childnode refid="928" relation="include">
+        </childnode>
+      </node>
+      <node id="951">
+        <label>/Users/gaspard/git/oscit/include/oscit/matrix_value.h</label>
+        <link refid="matrix__value_8h"/>
+        <childnode refid="923" relation="include">
+        </childnode>
+      </node>
+      <node id="934">
+        <label>/Users/gaspard/git/oscit/include/oscit/error_meta_method.h</label>
+        <link refid="error__meta__method_8h"/>
+      </node>
+      <node id="953">
+        <label>/Users/gaspard/git/oscit/include/oscit/real_value.h</label>
+        <link refid="real__value_8h"/>
+        <childnode refid="923" relation="include">
+        </childnode>
+      </node>
+      <node id="923">
+        <label>/Users/gaspard/git/oscit/include/oscit/values.h</label>
+        <link refid="values_8h"/>
+        <childnode refid="924" relation="include">
+        </childnode>
+        <childnode refid="947" relation="include">
+        </childnode>
+        <childnode refid="955" relation="include">
+        </childnode>
+        <childnode refid="956" relation="include">
+        </childnode>
+        <childnode refid="925" relation="include">
+        </childnode>
+        <childnode refid="957" relation="include">
+        </childnode>
+        <childnode refid="928" relation="include">
+        </childnode>
+        <childnode refid="958" relation="include">
+        </childnode>
+        <childnode refid="959" relation="include">
+        </childnode>
+        <childnode refid="960" relation="include">
+        </childnode>
+      </node>
+      <node id="949">
+        <label>/Users/gaspard/git/oscit/include/oscit/error_value.h</label>
+        <link refid="error__value_8h"/>
+        <childnode refid="923" relation="include">
+        </childnode>
+      </node>
+      <node id="958">
+        <label>/Users/gaspard/git/oscit/include/oscit/script.h</label>
+        <link refid="script_8h"/>
+        <childnode refid="957" relation="include">
+        </childnode>
+      </node>
+      <node id="939">
+        <label>/Users/gaspard/git/oscit/include/oscit/list_with_attributes_meta_method.h</label>
+        <link refid="list__with__attributes__meta__method_8h"/>
+      </node>
+      <node id="943">
+        <label>/Users/gaspard/git/oscit/include/oscit/osc_root_proxy.h</label>
+        <link refid="osc__root__proxy_8h"/>
+      </node>
+      <node id="926">
+        <label>/Users/gaspard/git/oscit/include/oscit/log_object.h</label>
+        <link refid="log__object_8h"/>
+      </node>
+      <node id="957">
+        <label>/Users/gaspard/git/oscit/include/oscit/osc_map_command.h</label>
+        <link refid="osc__map__command_8h"/>
+        <childnode refid="928" relation="include">
+        </childnode>
+      </node>
+      <node id="932">
+        <label>/Users/gaspard/git/oscit/include/oscit/attrs_meta_method.h</label>
+        <link refid="attrs__meta__method_8h"/>
+      </node>
+      <node id="933">
+        <label>/Users/gaspard/git/oscit/include/oscit/call.h</label>
+        <link refid="call_8h"/>
+        <childnode refid="928" relation="include">
+        </childnode>
+      </node>
+      <node id="947">
+        <label>/Users/gaspard/git/oscit/include/oscit/error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="948" relation="include">
+        </childnode>
+      </node>
+      <node id="940">
+        <label>/Users/gaspard/git/oscit/include/oscit/proxy_factory.h</label>
+        <link refid="proxy__factory_8h"/>
+        <childnode refid="928" relation="include">
+        </childnode>
+      </node>
+      <node id="936">
+        <label>/Users/gaspard/git/oscit/include/oscit/hash_file_method.h</label>
+        <link refid="hash__file__method_8h"/>
+        <childnode refid="928" relation="include">
+        </childnode>
+      </node>
+      <node id="938">
+        <label>/Users/gaspard/git/oscit/include/oscit/list_meta_method.h</label>
+        <link refid="list__meta__method_8h"/>
+      </node>
+      <node id="960">
+        <label>/Users/gaspard/git/oscit/include/oscit/string_data.h</label>
+        <link refid="string__data_8h"/>
+        <childnode refid="948" relation="include">
+        </childnode>
+      </node>
+      <node id="959">
+        <label>/Users/gaspard/git/oscit/include/oscit/signal.h</label>
+        <link refid="signal_8h"/>
+        <childnode refid="925" relation="include">
+        </childnode>
+        <childnode refid="928" relation="include">
+        </childnode>
+        <childnode refid="930" relation="include">
+        </childnode>
+      </node>
+      <node id="952">
+        <label>/Users/gaspard/git/oscit/include/oscit/midi_value.h</label>
+        <link refid="midi__value_8h"/>
+        <childnode refid="923" relation="include">
+        </childnode>
+      </node>
+      <node id="944">
+        <label>/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h</label>
+        <link refid="zeroconf__browser_8h"/>
+        <childnode refid="928" relation="include">
+        </childnode>
+      </node>
+      <node id="954">
+        <label>/Users/gaspard/git/oscit/include/oscit/string_value.h</label>
+        <link refid="string__value_8h"/>
+        <childnode refid="923" relation="include">
+        </childnode>
+      </node>
+      <node id="941">
+        <label>/Users/gaspard/git/oscit/include/oscit/root_proxy.h</label>
+        <link refid="root__proxy_8h"/>
+        <childnode refid="942" relation="include">
+        </childnode>
+        <childnode refid="943" relation="include">
+        </childnode>
+        <childnode refid="940" relation="include">
+        </childnode>
+        <childnode refid="944" relation="include">
+        </childnode>
+      </node>
+      <node id="925">
+        <label>/Users/gaspard/git/oscit/include/oscit/object.h</label>
+        <link refid="object_8h"/>
+        <childnode refid="926" relation="include">
+        </childnode>
+        <childnode refid="927" relation="include">
+        </childnode>
+        <childnode refid="929" relation="include">
+        </childnode>
+        <childnode refid="942" relation="include">
+        </childnode>
+        <childnode refid="946" relation="include">
+        </childnode>
+        <childnode refid="928" relation="include">
+        </childnode>
+        <childnode refid="930" relation="include">
+        </childnode>
+      </node>
+      <node id="931">
+        <label>/Users/gaspard/git/oscit/include/oscit/alias.h</label>
+        <link refid="alias_8h"/>
+      </node>
+      <node id="929">
+        <label>/Users/gaspard/git/oscit/include/oscit/object_handle.h</label>
+        <link refid="object__handle_8h"/>
+        <childnode refid="930" relation="include">
+        </childnode>
+      </node>
+      <node id="927">
+        <label>/Users/gaspard/git/oscit/include/oscit/method.h</label>
+        <link refid="method_8h"/>
+        <childnode refid="928" relation="include">
+        </childnode>
+      </node>
+      <node id="945">
+        <label>/Users/gaspard/git/oscit/include/oscit/tree_meta_method.h</label>
         <link refid="tree__meta__method_8h"/>
       </node>
     </invincdepgraph>
@@ -517,16 +547,91 @@
 <codeline lineno="32"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="value_8h" kindref="compound">oscit/value.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">oscit<sp/>{</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
 <codeline lineno="37" refid="classoscit_1_1_hash_value" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classoscit_1_1_hash_value" kindref="compound">HashValue</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref></highlight></codeline>
-<codeline lineno="38"><highlight class="normal">{<sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="40" refid="classoscit_1_1_hash_value_1aff8a4fd3bf13364efaf2e35b86429646" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_hash_value_1aff8a4fd3bf13364efaf2e35b86429646" kindref="member">HashValue</ref>()<sp/>:<sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref>(<ref refid="structoscit_1_1_type_tag" kindref="compound">TypeTag</ref>(</highlight><highlight class="stringliteral">&quot;H&quot;</highlight><highlight class="normal">))<sp/>{}</highlight></codeline>
-<codeline lineno="41"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>oscit</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>OSCIT_INCLUDE_OSCIT_HASH_VALUE_H_</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="classoscit_1_1_hash_value_1a8d8c47f12cbc8069046268ec5cc16ff1" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_hash_value_1a8d8c47f12cbc8069046268ec5cc16ff1" kindref="member">HashValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/>&amp;value)<sp/>:<sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref>(<ref refid="structoscit_1_1_type_tag" kindref="compound">TypeTag</ref>(</highlight><highlight class="stringliteral">&quot;H&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">(key,<sp/>value);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="classoscit_1_1_hash_value_1aa9f1c2bbfec0f78609cdf47da8bc69d1" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_hash_value_1aa9f1c2bbfec0f78609cdf47da8bc69d1" kindref="member">HashValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;key,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/>&amp;value)<sp/>:<sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref>(<ref refid="structoscit_1_1_type_tag" kindref="compound">TypeTag</ref>(</highlight><highlight class="stringliteral">&quot;H&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">(key,<sp/>value);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="classoscit_1_1_hash_value_1a60926f762031406a6f82a19fb16ff5e2" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_hash_value_1a60926f762031406a6f82a19fb16ff5e2" kindref="member">HashValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key2,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/>&amp;value)<sp/>:<sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref>(<ref refid="structoscit_1_1_type_tag" kindref="compound">TypeTag</ref>(</highlight><highlight class="stringliteral">&quot;H&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">(key1,<sp/><ref refid="classoscit_1_1_hash_value_1aff8a4fd3bf13364efaf2e35b86429646" kindref="member">HashValue</ref>(key2,<sp/>value));</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="classoscit_1_1_hash_value_1ad258d1c66e50955239dfbdb8cfc2bc4c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_hash_value_1ad258d1c66e50955239dfbdb8cfc2bc4c" kindref="member">HashValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key2,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key3,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/>&amp;value)<sp/>:<sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref>(<ref refid="structoscit_1_1_type_tag" kindref="compound">TypeTag</ref>(</highlight><highlight class="stringliteral">&quot;H&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">(key1,<sp/><ref refid="classoscit_1_1_hash_value_1aff8a4fd3bf13364efaf2e35b86429646" kindref="member">HashValue</ref>(key2,<sp/><ref refid="classoscit_1_1_hash_value_1aff8a4fd3bf13364efaf2e35b86429646" kindref="member">HashValue</ref>(key3,<sp/>value)));</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="classoscit_1_1_hash_value_1a257b2b696c44896aae5d92363ed2edd7" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_hash_value_1a257b2b696c44896aae5d92363ed2edd7" kindref="member">HashValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key2,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key3,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key4,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/>&amp;value)<sp/>:<sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref>(<ref refid="structoscit_1_1_type_tag" kindref="compound">TypeTag</ref>(</highlight><highlight class="stringliteral">&quot;H&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">(key1,<sp/><ref refid="classoscit_1_1_hash_value_1aff8a4fd3bf13364efaf2e35b86429646" kindref="member">HashValue</ref>(key2,<sp/><ref refid="classoscit_1_1_hash_value_1aff8a4fd3bf13364efaf2e35b86429646" kindref="member">HashValue</ref>(key3,<sp/><ref refid="classoscit_1_1_hash_value_1aff8a4fd3bf13364efaf2e35b86429646" kindref="member">HashValue</ref>(key4,<sp/>value))));</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="classoscit_1_1_hash_value_1ae5c7879b883dca39ed1165b083785bd4" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_hash_value_1ae5c7879b883dca39ed1165b083785bd4" kindref="member">HashValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key2,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key3,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key4,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key5,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/>&amp;value)<sp/>:<sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref>(<ref refid="structoscit_1_1_type_tag" kindref="compound">TypeTag</ref>(</highlight><highlight class="stringliteral">&quot;H&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">(key1,<sp/><ref refid="classoscit_1_1_hash_value_1aff8a4fd3bf13364efaf2e35b86429646" kindref="member">HashValue</ref>(key2,<sp/><ref refid="classoscit_1_1_hash_value_1aff8a4fd3bf13364efaf2e35b86429646" kindref="member">HashValue</ref>(key3,<sp/><ref refid="classoscit_1_1_hash_value_1aff8a4fd3bf13364efaf2e35b86429646" kindref="member">HashValue</ref>(key4,<sp/><ref refid="classoscit_1_1_hash_value_1aff8a4fd3bf13364efaf2e35b86429646" kindref="member">HashValue</ref>(key5,<sp/>value)))));</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>FIXME:<sp/>we<sp/>can<sp/>remove<sp/>the<sp/>ctors<sp/>below<sp/>if<sp/>we<sp/>remove<sp/>explicit<sp/>in<sp/>Value<sp/>ctor<sp/>(after<sp/>audit).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="classoscit_1_1_hash_value_1a2e5f435d0ecdf4e06b336011fd9032e1" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_hash_value_1a2e5f435d0ecdf4e06b336011fd9032e1" kindref="member">HashValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*value)<sp/>:<sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref>(<ref refid="structoscit_1_1_type_tag" kindref="compound">TypeTag</ref>(</highlight><highlight class="stringliteral">&quot;H&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">(key,<sp/><ref refid="classoscit_1_1_value_1ab156d3cac4d24872dd02d546a3cc7e22" kindref="member">Value</ref>(value));</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="classoscit_1_1_hash_value_1aea03394c473aaf59d1b31083f9aec4dc" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_hash_value_1aea03394c473aaf59d1b31083f9aec4dc" kindref="member">HashValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;key,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*value)<sp/>:<sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref>(<ref refid="structoscit_1_1_type_tag" kindref="compound">TypeTag</ref>(</highlight><highlight class="stringliteral">&quot;H&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">(key,<sp/>value);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="classoscit_1_1_hash_value_1a91e245df6584b76e21eeacc056b8fc21" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_hash_value_1a91e245df6584b76e21eeacc056b8fc21" kindref="member">HashValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key2,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*value)<sp/>:<sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref>(<ref refid="structoscit_1_1_type_tag" kindref="compound">TypeTag</ref>(</highlight><highlight class="stringliteral">&quot;H&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">(key1,<sp/><ref refid="classoscit_1_1_hash_value_1aff8a4fd3bf13364efaf2e35b86429646" kindref="member">HashValue</ref>(key2,<sp/>value));</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="classoscit_1_1_hash_value_1aedf093a9d3e4ed38259dd4ad28c118c9" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_hash_value_1aedf093a9d3e4ed38259dd4ad28c118c9" kindref="member">HashValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key2,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key3,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*value)<sp/>:<sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref>(<ref refid="structoscit_1_1_type_tag" kindref="compound">TypeTag</ref>(</highlight><highlight class="stringliteral">&quot;H&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">(key1,<sp/><ref refid="classoscit_1_1_hash_value_1aff8a4fd3bf13364efaf2e35b86429646" kindref="member">HashValue</ref>(key2,<sp/><ref refid="classoscit_1_1_hash_value_1aff8a4fd3bf13364efaf2e35b86429646" kindref="member">HashValue</ref>(key3,<sp/>value)));</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="classoscit_1_1_hash_value_1acdb67baa072d96a62eb38f958d73ca05" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_hash_value_1acdb67baa072d96a62eb38f958d73ca05" kindref="member">HashValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key2,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key3,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key4,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*value)<sp/>:<sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref>(<ref refid="structoscit_1_1_type_tag" kindref="compound">TypeTag</ref>(</highlight><highlight class="stringliteral">&quot;H&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">(key1,<sp/><ref refid="classoscit_1_1_hash_value_1aff8a4fd3bf13364efaf2e35b86429646" kindref="member">HashValue</ref>(key2,<sp/><ref refid="classoscit_1_1_hash_value_1aff8a4fd3bf13364efaf2e35b86429646" kindref="member">HashValue</ref>(key3,<sp/><ref refid="classoscit_1_1_hash_value_1aff8a4fd3bf13364efaf2e35b86429646" kindref="member">HashValue</ref>(key4,<sp/>value))));</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="classoscit_1_1_hash_value_1ac06fa47a522a93b8d6b3b3b7a692dad8" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_hash_value_1ac06fa47a522a93b8d6b3b3b7a692dad8" kindref="member">HashValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key2,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key3,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key4,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key5,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*value)<sp/>:<sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref>(<ref refid="structoscit_1_1_type_tag" kindref="compound">TypeTag</ref>(</highlight><highlight class="stringliteral">&quot;H&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">(key1,<sp/><ref refid="classoscit_1_1_hash_value_1aff8a4fd3bf13364efaf2e35b86429646" kindref="member">HashValue</ref>(key2,<sp/><ref refid="classoscit_1_1_hash_value_1aff8a4fd3bf13364efaf2e35b86429646" kindref="member">HashValue</ref>(key3,<sp/><ref refid="classoscit_1_1_hash_value_1aff8a4fd3bf13364efaf2e35b86429646" kindref="member">HashValue</ref>(key4,<sp/><ref refid="classoscit_1_1_hash_value_1aff8a4fd3bf13364efaf2e35b86429646" kindref="member">HashValue</ref>(key5,<sp/>value)))));</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="classoscit_1_1_hash_value_1a3341476a37e74bdd47bec26fce734f36" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_hash_value_1a3341476a37e74bdd47bec26fce734f36" kindref="member">HashValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,<sp/><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref><sp/>value)<sp/>:<sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref>(<ref refid="structoscit_1_1_type_tag" kindref="compound">TypeTag</ref>(</highlight><highlight class="stringliteral">&quot;H&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">(key,<sp/><ref refid="classoscit_1_1_value_1ab156d3cac4d24872dd02d546a3cc7e22" kindref="member">Value</ref>(value));</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="classoscit_1_1_hash_value_1a0832ef9ed7efb0f5374fcdae3883a9ad" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_hash_value_1a0832ef9ed7efb0f5374fcdae3883a9ad" kindref="member">HashValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;key,<sp/><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref><sp/>value)<sp/>:<sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref>(<ref refid="structoscit_1_1_type_tag" kindref="compound">TypeTag</ref>(</highlight><highlight class="stringliteral">&quot;H&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">(key,<sp/>value);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="classoscit_1_1_hash_value_1a7cf8f75aede30d4864682cfca052e2ad" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_hash_value_1a7cf8f75aede30d4864682cfca052e2ad" kindref="member">HashValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key2,<sp/><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref><sp/>value)<sp/>:<sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref>(<ref refid="structoscit_1_1_type_tag" kindref="compound">TypeTag</ref>(</highlight><highlight class="stringliteral">&quot;H&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">(key1,<sp/><ref refid="classoscit_1_1_hash_value_1aff8a4fd3bf13364efaf2e35b86429646" kindref="member">HashValue</ref>(key2,<sp/>value));</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="classoscit_1_1_hash_value_1aebd3ad8cbf6740de2ed917114cb1e184" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_hash_value_1aebd3ad8cbf6740de2ed917114cb1e184" kindref="member">HashValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key2,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key3,<sp/><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref><sp/>value)<sp/>:<sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref>(<ref refid="structoscit_1_1_type_tag" kindref="compound">TypeTag</ref>(</highlight><highlight class="stringliteral">&quot;H&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">(key1,<sp/><ref refid="classoscit_1_1_hash_value_1aff8a4fd3bf13364efaf2e35b86429646" kindref="member">HashValue</ref>(key2,<sp/><ref refid="classoscit_1_1_hash_value_1aff8a4fd3bf13364efaf2e35b86429646" kindref="member">HashValue</ref>(key3,<sp/>value)));</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143" refid="classoscit_1_1_hash_value_1a05103833d694e8108a46d6a1ae815880" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_hash_value_1a05103833d694e8108a46d6a1ae815880" kindref="member">HashValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key2,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key3,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key4,<sp/><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref><sp/>value)<sp/>:<sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref>(<ref refid="structoscit_1_1_type_tag" kindref="compound">TypeTag</ref>(</highlight><highlight class="stringliteral">&quot;H&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">(key1,<sp/><ref refid="classoscit_1_1_hash_value_1aff8a4fd3bf13364efaf2e35b86429646" kindref="member">HashValue</ref>(key2,<sp/><ref refid="classoscit_1_1_hash_value_1aff8a4fd3bf13364efaf2e35b86429646" kindref="member">HashValue</ref>(key3,<sp/><ref refid="classoscit_1_1_hash_value_1aff8a4fd3bf13364efaf2e35b86429646" kindref="member">HashValue</ref>(key4,<sp/>value))));</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="classoscit_1_1_hash_value_1ac9029a73408ff49b216a3b5378a16b12" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_hash_value_1ac9029a73408ff49b216a3b5378a16b12" kindref="member">HashValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key2,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key3,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key4,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key5,<sp/><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref><sp/>value)<sp/>:<sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref>(<ref refid="structoscit_1_1_type_tag" kindref="compound">TypeTag</ref>(</highlight><highlight class="stringliteral">&quot;H&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">(key1,<sp/><ref refid="classoscit_1_1_hash_value_1aff8a4fd3bf13364efaf2e35b86429646" kindref="member">HashValue</ref>(key2,<sp/><ref refid="classoscit_1_1_hash_value_1aff8a4fd3bf13364efaf2e35b86429646" kindref="member">HashValue</ref>(key3,<sp/><ref refid="classoscit_1_1_hash_value_1aff8a4fd3bf13364efaf2e35b86429646" kindref="member">HashValue</ref>(key4,<sp/><ref refid="classoscit_1_1_hash_value_1aff8a4fd3bf13364efaf2e35b86429646" kindref="member">HashValue</ref>(key5,<sp/>value)))));</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>oscit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>OSCIT_INCLUDE_OSCIT_HASH_VALUE_H_</highlight></codeline>
     </programlisting>
     <location file="/Users/gaspard/git/oscit/include/oscit/hash_value.h"/>
   </compounddef>

@@ -5,126 +5,126 @@
     <includes refid="thread_8h" local="yes">oscit/thread.h</includes>
     <includes refid="mutex_8h" local="yes">oscit/mutex.h</includes>
     <includes refid="time__ref_8h" local="yes">oscit/time_ref.h</includes>
-    <includedby refid="oscit_8h" local="yes">include/oscit/oscit.h</includedby>
+    <includedby refid="oscit_8h" local="yes">/Users/gaspard/git/oscit/include/oscit/oscit.h</includedby>
     <incdepgraph>
-      <node id="2877">
+      <node id="2941">
         <label>oscit/non_copyable.h</label>
         <link refid="non__copyable_8h"/>
       </node>
-      <node id="2878">
+      <node id="2942">
         <label>oscit/mutex.h</label>
         <link refid="mutex_8h"/>
-        <childnode refid="2879" relation="include">
+        <childnode refid="2943" relation="include">
         </childnode>
-        <childnode refid="2876" relation="include">
+        <childnode refid="2940" relation="include">
         </childnode>
-        <childnode refid="2880" relation="include">
+        <childnode refid="2944" relation="include">
         </childnode>
-        <childnode refid="2877" relation="include">
+        <childnode refid="2941" relation="include">
         </childnode>
-        <childnode refid="2881" relation="include">
+        <childnode refid="2945" relation="include">
         </childnode>
       </node>
-      <node id="2876">
+      <node id="2940">
         <label>assert.h</label>
       </node>
-      <node id="2870">
+      <node id="2934">
         <label>oscit/thread.h</label>
         <link refid="thread_8h"/>
-        <childnode refid="2871" relation="include">
+        <childnode refid="2935" relation="include">
         </childnode>
-        <childnode refid="2872" relation="include">
+        <childnode refid="2936" relation="include">
         </childnode>
-        <childnode refid="2873" relation="include">
+        <childnode refid="2937" relation="include">
         </childnode>
-        <childnode refid="2874" relation="include">
+        <childnode refid="2938" relation="include">
         </childnode>
-        <childnode refid="2875" relation="include">
+        <childnode refid="2939" relation="include">
         </childnode>
-        <childnode refid="2876" relation="include">
+        <childnode refid="2940" relation="include">
         </childnode>
-        <childnode refid="2878" relation="include">
+        <childnode refid="2942" relation="include">
         </childnode>
       </node>
-      <node id="2871">
+      <node id="2935">
         <label>errno.h</label>
       </node>
-      <node id="2874">
+      <node id="2938">
         <label>fstream</label>
       </node>
-      <node id="2879">
+      <node id="2943">
         <label>pthread.h</label>
       </node>
-      <node id="2885">
+      <node id="2949">
         <label>sys/types.h</label>
       </node>
-      <node id="2872">
+      <node id="2936">
         <label>string.h</label>
       </node>
-      <node id="2880">
+      <node id="2944">
         <label>cstdio</label>
       </node>
-      <node id="2869">
-        <label>include/oscit/timer.h</label>
+      <node id="2933">
+        <label>/Users/gaspard/git/oscit/include/oscit/timer.h</label>
         <link refid="timer.h"/>
-        <childnode refid="2870" relation="include">
+        <childnode refid="2934" relation="include">
         </childnode>
-        <childnode refid="2878" relation="include">
+        <childnode refid="2942" relation="include">
         </childnode>
-        <childnode refid="2884" relation="include">
+        <childnode refid="2948" relation="include">
         </childnode>
       </node>
-      <node id="2884">
+      <node id="2948">
         <label>oscit/time_ref.h</label>
         <link refid="time__ref_8h"/>
-        <childnode refid="2885" relation="include">
+        <childnode refid="2949" relation="include">
         </childnode>
-        <childnode refid="2877" relation="include">
+        <childnode refid="2941" relation="include">
         </childnode>
       </node>
-      <node id="2875">
+      <node id="2939">
         <label>semaphore.h</label>
         <link refid="semaphore_8h"/>
-        <childnode refid="2876" relation="include">
+        <childnode refid="2940" relation="include">
         </childnode>
-        <childnode refid="2875" relation="include">
+        <childnode refid="2939" relation="include">
         </childnode>
-        <childnode refid="2871" relation="include">
+        <childnode refid="2935" relation="include">
         </childnode>
-        <childnode refid="2872" relation="include">
+        <childnode refid="2936" relation="include">
         </childnode>
-        <childnode refid="2877" relation="include">
+        <childnode refid="2941" relation="include">
         </childnode>
-        <childnode refid="2878" relation="include">
+        <childnode refid="2942" relation="include">
         </childnode>
       </node>
-      <node id="2883">
+      <node id="2947">
         <label>iostream</label>
       </node>
-      <node id="2873">
+      <node id="2937">
         <label>csignal</label>
       </node>
-      <node id="2881">
+      <node id="2945">
         <label>oscit/typed.h</label>
         <link refid="typed_8h"/>
-        <childnode refid="2882" relation="include">
+        <childnode refid="2946" relation="include">
         </childnode>
-        <childnode refid="2883" relation="include">
+        <childnode refid="2947" relation="include">
         </childnode>
       </node>
-      <node id="2882">
+      <node id="2946">
         <label>stdio.h</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="2887">
-        <label>include/oscit/oscit.h</label>
+      <node id="2951">
+        <label>/Users/gaspard/git/oscit/include/oscit/oscit.h</label>
         <link refid="oscit_8h"/>
       </node>
-      <node id="2886">
-        <label>include/oscit/timer.h</label>
+      <node id="2950">
+        <label>/Users/gaspard/git/oscit/include/oscit/timer.h</label>
         <link refid="timer.h"/>
-        <childnode refid="2887" relation="include">
+        <childnode refid="2951" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -190,24 +190,24 @@
 <codeline lineno="53"><highlight class="normal"></highlight></codeline>
 <codeline lineno="54" refid="classoscit_1_1_timer_1abfffa5df3590ce615282d3a59e972dfb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_timer_1abfffa5df3590ce615282d3a59e972dfb" kindref="member">start</ref>(time_t<sp/>interval)<sp/>{</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classoscit_1_1_scoped_lock" kindref="compound">ScopedLock</ref><sp/>lock(mutex_);</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>should_run_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>last_interval_<sp/>=<sp/>interval_;</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>interval_<sp/>=<sp/>interval;</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(running_)<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>last_interval_<sp/>=<sp/>interval_;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>interval_<sp/>=<sp/>interval;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(running_)<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>should_run_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>interrupt();</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>thread_.<ref refid="classoscit_1_1_thread_1a8ff725bd92baa91a1af56f2220402687" kindref="member">start_thread</ref>&lt;<ref refid="classoscit_1_1_timer" kindref="compound">Timer</ref>,<sp/>&amp;Timer::start_thread&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>thread_.<ref refid="classoscit_1_1_thread_1aee8748532b84f6c7468b143322883597" kindref="member">join</ref>();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>thread_.<ref refid="classoscit_1_1_thread_1a8ff725bd92baa91a1af56f2220402687" kindref="member">start_thread</ref>&lt;<ref refid="classoscit_1_1_timer" kindref="compound">Timer</ref>,<sp/>&amp;Timer::start_thread&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"></highlight></codeline>
 <codeline lineno="66" refid="classoscit_1_1_timer_1a5eb16401dd38582ce30676d1847aaeae" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_timer_1a5eb16401dd38582ce30676d1847aaeae" kindref="member">start</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classoscit_1_1_scoped_lock" kindref="compound">ScopedLock</ref><sp/>lock(mutex_);</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>should_run_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(running_)<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(running_)<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>should_run_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>interrupt();</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>thread_.<ref refid="classoscit_1_1_thread_1a8ff725bd92baa91a1af56f2220402687" kindref="member">start_thread</ref>&lt;<ref refid="classoscit_1_1_timer" kindref="compound">Timer</ref>,<sp/>&amp;Timer::start_thread&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>thread_.<ref refid="classoscit_1_1_thread_1aee8748532b84f6c7468b143322883597" kindref="member">join</ref>();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>thread_.<ref refid="classoscit_1_1_thread_1a8ff725bd92baa91a1af56f2220402687" kindref="member">start_thread</ref>&lt;<ref refid="classoscit_1_1_timer" kindref="compound">Timer</ref>,<sp/>&amp;Timer::start_thread&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
 <codeline lineno="74"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="75"><highlight class="normal"></highlight></codeline>
 <codeline lineno="76" refid="classoscit_1_1_timer_1a05dc9bfdb1e904fe00894d0c5cda2df2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_timer_1a05dc9bfdb1e904fe00894d0c5cda2df2" kindref="member">stop</ref>()<sp/>{</highlight></codeline>
@@ -215,115 +215,117 @@
 <codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(running_)<sp/>{</highlight></codeline>
 <codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>should_run_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>interrupt();</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84" refid="classoscit_1_1_timer_1a0b9211e9b04be8c3386f361e2e2f38fc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_timer_1a0b9211e9b04be8c3386f361e2e2f38fc" kindref="member">set_interval</ref>(time_t<sp/>interval)<sp/>{</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classoscit_1_1_scoped_lock" kindref="compound">ScopedLock</ref><sp/>lock(mutex_);</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>last_interval_<sp/>=<sp/>interval_;</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>interval_<sp/>=<sp/>interval;</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(running_)<sp/>{</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>interrupt();</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"></highlight></codeline>
-<codeline lineno="93" refid="classoscit_1_1_timer_1a1b1119e9be7d0742f0f24ed2c4f3d36d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_timer_1a1b1119e9be7d0742f0f24ed2c4f3d36d" kindref="member">running</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>running_;</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>run()<sp/>{</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>time_t<sp/>wait_duration;</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>time_t<sp/>now;</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>time_t<sp/>next_fire<sp/>=<sp/>time_ref_.<ref refid="classoscit_1_1_time_ref_1a112a2dd03f51b912df9596035abbe851" kindref="member">elapsed</ref>();<sp/></highlight><highlight class="comment">//<sp/>this<sp/>is<sp/>our<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timespec<sp/>sleeper;</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"></highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(should_run_)<sp/>{</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><ref refid="classoscit_1_1_scoped_lock" kindref="compound">ScopedLock</ref><sp/>lock(mutex_);</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>trigger<sp/>at<sp/>time<sp/>t<sp/>=<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(owner_-&gt;*Tmethod)();</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"></highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>now<sp/>=<sp/>time_ref_.<ref refid="classoscit_1_1_time_ref_1a112a2dd03f51b912df9596035abbe851" kindref="member">elapsed</ref>();</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"></highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>can<sp/>be<sp/>used<sp/>to<sp/>ensure<sp/>test...</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>printf(&quot;logical:<sp/>%li<sp/>real:<sp/>%li<sp/>wait:<sp/>%li\n&quot;,<sp/>next_fire,<sp/>now,<sp/>wait_duration);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="113"><highlight class="normal"></highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(next_fire<sp/>&gt;<sp/>now<sp/>+<sp/>interval_)<sp/>{</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>interval_<sp/>got<sp/>smaller</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>thread_.<ref refid="classoscit_1_1_thread_1aee8748532b84f6c7468b143322883597" kindref="member">join</ref>();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="classoscit_1_1_timer_1a0b9211e9b04be8c3386f361e2e2f38fc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_timer_1a0b9211e9b04be8c3386f361e2e2f38fc" kindref="member">set_interval</ref>(time_t<sp/>interval)<sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classoscit_1_1_scoped_lock" kindref="compound">ScopedLock</ref><sp/>lock(mutex_);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>last_interval_<sp/>=<sp/>interval_;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>interval_<sp/>=<sp/>interval;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(running_)<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>interrupt();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="classoscit_1_1_timer_1a1b1119e9be7d0742f0f24ed2c4f3d36d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_timer_1a1b1119e9be7d0742f0f24ed2c4f3d36d" kindref="member">running</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>running_;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>run()<sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>time_t<sp/>wait_duration;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>time_t<sp/>now;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>time_t<sp/>next_fire<sp/>=<sp/>time_ref_.<ref refid="classoscit_1_1_time_ref_1a112a2dd03f51b912df9596035abbe851" kindref="member">elapsed</ref>();<sp/></highlight><highlight class="comment">//<sp/>this<sp/>is<sp/>our<sp/>anchor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timespec<sp/>sleeper;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(should_run_)<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><ref refid="classoscit_1_1_scoped_lock" kindref="compound">ScopedLock</ref><sp/>lock(mutex_);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>now<sp/>=<sp/>time_ref_.<ref refid="classoscit_1_1_time_ref_1a112a2dd03f51b912df9596035abbe851" kindref="member">elapsed</ref>();</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>can<sp/>be<sp/>used<sp/>to<sp/>ensure<sp/>test...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>printf(&quot;logical:<sp/>%li<sp/>real:<sp/>%li<sp/>wait:<sp/>%li\n&quot;,<sp/>next_fire,<sp/>now,<sp/>wait_duration);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(next_fire<sp/>&gt;<sp/>now)<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>interrupted</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>do<sp/>not<sp/>fire<sp/>on<sp/>interval<sp/>change</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>next_fire<sp/>-=<sp/>last_interval_;</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"></highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Timer<sp/>sync<sp/>issues:</highlight></codeline>
-<codeline lineno="120"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>We<sp/>compute<sp/>the<sp/>new<sp/>logical<sp/>fire<sp/>and<sp/>sleep<sp/>to<sp/>sync<sp/>real<sp/>trigger<sp/>as<sp/>close<sp/>as<sp/>we<sp/>can.</highlight></codeline>
-<codeline lineno="121"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>next_fire<sp/>+=<sp/>interval_;</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"></highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wait_duration<sp/>=<sp/>next_fire<sp/>-<sp/>now;</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(wait_duration<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(interval_<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>can<sp/>happen<sp/>if<sp/>we<sp/>changed<sp/>interval_<sp/>during<sp/>sleep</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>next_fire<sp/>+<sp/>k<sp/>*<sp/>interval_<sp/>&gt;<sp/>now</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>((now<sp/>-<sp/>next_fire)<sp/>/<sp/>interval_)<sp/>+<sp/>1;<sp/></highlight><highlight class="comment">//<sp/>+1<sp/>because<sp/>we<sp/>need<sp/>to<sp/>respect<sp/>&apos;&gt;&apos;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>skip<sp/>&apos;k&apos;<sp/>occurences</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>next_fire<sp/>+=<sp/>k<sp/>*<sp/>interval_;</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wait_duration<sp/>=<sp/>next_fire<sp/>-<sp/>now;</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>run<sp/>as<sp/>fast<sp/>as<sp/>we<sp/>can</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>could<sp/>limit<sp/>this<sp/>to<sp/>1ms...</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wait_duration<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"></highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sleeper.tv_sec<sp/><sp/>=<sp/>wait_duration<sp/>/<sp/>1000;</highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sleeper.tv_nsec<sp/>=<sp/>(wait_duration<sp/>%<sp/>1000)<sp/>*<sp/>1000000;<sp/></highlight><highlight class="comment">//<sp/>1&apos;000&apos;000</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"></highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nanosleep(&amp;sleeper,<sp/>NULL);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(owner_-&gt;*Tmethod)();</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Timer<sp/>sync<sp/>issues:</highlight></codeline>
+<codeline lineno="122"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>We<sp/>compute<sp/>the<sp/>new<sp/>logical<sp/>fire<sp/>and<sp/>sleep<sp/>to<sp/>sync<sp/>real<sp/>trigger<sp/>as<sp/>close<sp/>as<sp/>we<sp/>can.</highlight></codeline>
+<codeline lineno="123"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>next_fire<sp/>+=<sp/>interval_;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wait_duration<sp/>=<sp/>next_fire<sp/>-<sp/>now;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(wait_duration<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(interval_<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>can<sp/>happen<sp/>if<sp/>we<sp/>changed<sp/>interval_<sp/>during<sp/>sleep</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>next_fire<sp/>+<sp/>k<sp/>*<sp/>interval_<sp/>&gt;<sp/>now</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>((now<sp/>-<sp/>next_fire)<sp/>/<sp/>interval_)<sp/>+<sp/>1;<sp/></highlight><highlight class="comment">//<sp/>+1<sp/>because<sp/>we<sp/>need<sp/>to<sp/>respect<sp/>&apos;&gt;&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>skip<sp/>&apos;k&apos;<sp/>occurences</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>next_fire<sp/>+=<sp/>k<sp/>*<sp/>interval_;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wait_duration<sp/>=<sp/>next_fire<sp/>-<sp/>now;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>run<sp/>as<sp/>fast<sp/>as<sp/>we<sp/>can</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>could<sp/>limit<sp/>this<sp/>to<sp/>1ms...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wait_duration<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sleeper.tv_sec<sp/><sp/>=<sp/>wait_duration<sp/>/<sp/>1000;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sleeper.tv_nsec<sp/>=<sp/>(wait_duration<sp/>%<sp/>1000)<sp/>*<sp/>1000000;<sp/></highlight><highlight class="comment">//<sp/>1&apos;000&apos;000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="145"><highlight class="normal"></highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"></highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>running_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"></highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>interrupt_sleep(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sig)<sp/>{</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>need<sp/>to<sp/>reregister<sp/>signal</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>signal(SIGUSR1,<sp/>Timer::interrupt_sleep);</highlight></codeline>
-<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>just<sp/>interrupted<sp/>sleep,<sp/>let<sp/>the<sp/>loop<sp/>continue</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="157"><highlight class="normal"></highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>interrupt()<sp/>{</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>thread_.send_signal(SIGUSR1);</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="163"><highlight class="normal"></highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>start_thread(Thread<sp/>*runner)<sp/>{</highlight></codeline>
-<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>signal(SIGUSR1,<sp/>Timer::interrupt_sleep);</highlight></codeline>
-<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>running_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>runner-&gt;high_priority();</highlight></codeline>
-<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>runner-&gt;thread_ready();</highlight></codeline>
-<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>run();</highlight></codeline>
-<codeline lineno="170"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="171"><highlight class="normal"></highlight></codeline>
-<codeline lineno="174"><highlight class="normal"><sp/><sp/>T<sp/>*owner_;</highlight></codeline>
-<codeline lineno="175"><highlight class="normal"></highlight></codeline>
-<codeline lineno="178"><highlight class="normal"><sp/><sp/>time_t<sp/>interval_;</highlight></codeline>
-<codeline lineno="179"><highlight class="normal"></highlight></codeline>
-<codeline lineno="183"><highlight class="normal"><sp/><sp/>time_t<sp/>last_interval_;</highlight></codeline>
-<codeline lineno="184"><highlight class="normal"></highlight></codeline>
-<codeline lineno="187"><highlight class="normal"><sp/><sp/>TimeRef<sp/>time_ref_;</highlight></codeline>
-<codeline lineno="188"><highlight class="normal"></highlight></codeline>
-<codeline lineno="191"><highlight class="normal"><sp/><sp/>Mutex<sp/>mutex_;</highlight></codeline>
-<codeline lineno="192"><highlight class="normal"></highlight></codeline>
-<codeline lineno="195"><highlight class="normal"><sp/><sp/>Thread<sp/>thread_;</highlight></codeline>
-<codeline lineno="196"><highlight class="normal"></highlight></codeline>
-<codeline lineno="199"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>running_;</highlight></codeline>
-<codeline lineno="200"><highlight class="normal"></highlight></codeline>
-<codeline lineno="203"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>should_run_;</highlight></codeline>
-<codeline lineno="204"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="205"><highlight class="normal"></highlight></codeline>
-<codeline lineno="206"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>oscit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nanosleep(&amp;sleeper,<sp/>NULL);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>running_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>interrupt_sleep(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sig)<sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>need<sp/>to<sp/>reregister<sp/>signal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>signal(SIGUSR1,<sp/>Timer::interrupt_sleep);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>just<sp/>interrupted<sp/>sleep,<sp/>let<sp/>the<sp/>loop<sp/>continue</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>interrupt()<sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>thread_.send_signal(SIGUSR1);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>start_thread(Thread<sp/>*runner)<sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>signal(SIGUSR1,<sp/>Timer::interrupt_sleep);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>should_run_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>running_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>runner-&gt;high_priority();</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>runner-&gt;thread_ready();</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>run();</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/>T<sp/>*owner_;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/>time_t<sp/>interval_;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/>time_t<sp/>last_interval_;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/>TimeRef<sp/>time_ref_;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/>Mutex<sp/>mutex_;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/>Thread<sp/>thread_;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>running_;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>should_run_;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="207"><highlight class="normal"></highlight></codeline>
-<codeline lineno="208"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>OSCIT_INCLUDE_OSCIT_TIMER_H_</highlight></codeline>
+<codeline lineno="208"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>oscit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>OSCIT_INCLUDE_OSCIT_TIMER_H_</highlight></codeline>
     </programlisting>
     <location file="/Users/gaspard/git/oscit/include/oscit/timer.h"/>
   </compounddef>

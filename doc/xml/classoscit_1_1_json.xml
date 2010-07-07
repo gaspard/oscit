@@ -19,7 +19,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/value.h" line="61" bodyfile="/Users/gaspard/git/oscit/include/oscit/value.h" bodystart="61" bodyend="61"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/value.h" line="57" bodyfile="/Users/gaspard/git/oscit/include/oscit/value.h" bodystart="57" bodyend="57"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_json_1aee58a4b90733cd32c30004ff5d1b7924" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
         <type></type>
@@ -36,14 +36,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/value.h" line="62" bodyfile="/Users/gaspard/git/oscit/include/oscit/value.h" bodystart="62" bodyend="62"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/value.h" line="58" bodyfile="/Users/gaspard/git/oscit/include/oscit/value.h" bodystart="58" bodyend="58"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
 <para>This is just a different typedef for std::string. </para>    </detaileddescription>
-    <location file="/Users/gaspard/git/oscit/include/oscit/value.h" line="59" bodyfile="/Users/gaspard/git/oscit/include/oscit/value.h" bodystart="58" bodyend="63"/>
+    <location file="/Users/gaspard/git/oscit/include/oscit/value.h" line="55" bodyfile="/Users/gaspard/git/oscit/include/oscit/value.h" bodystart="54" bodyend="59"/>
     <listofallmembers>
       <member refid="classoscit_1_1_json_1a4df4a0197927c0f6d4c4a9489f2315ba" prot="public" virt="non-virtual"><scope>oscit::Json</scope><name>Json</name></member>
       <member refid="classoscit_1_1_json_1aee58a4b90733cd32c30004ff5d1b7924" prot="public" virt="non-virtual"><scope>oscit::Json</scope><name>Json</name></member>

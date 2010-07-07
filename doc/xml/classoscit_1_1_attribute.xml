@@ -1,0 +1,460 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classoscit_1_1_attribute" kind="class" prot="public">
+    <compoundname>oscit::Attribute</compoundname>
+    <includes refid="constants_8h" local="no">constants.h</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classoscit_1_1_attribute_1a902954a79de543deea411cfe48631a7a" prot="public" static="yes" mutable="no">
+        <type>const char *const</type>
+        <definition>const char* const oscit::Attribute::INFO</definition>
+        <argsstring></argsstring>
+        <name>INFO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classoscit_1_1_root" kindref="compound">Root</ref> attribute key for a human readable string describing the object. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/constants.h" line="44" bodyfile="/Users/gaspard/git/oscit/include/oscit/constants.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_attribute_1ae5dd4815ccbad178765c723b556ce5a5" prot="public" static="yes" mutable="no">
+        <type>const char *const</type>
+        <definition>const char* const oscit::Attribute::TYPE</definition>
+        <argsstring></argsstring>
+        <name>TYPE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classoscit_1_1_root" kindref="compound">Root</ref> attribute key for type information on the object. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/constants.h" line="48" bodyfile="/Users/gaspard/git/oscit/include/oscit/constants.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_attribute_1a286d2edf812d699062728f7537366a80" prot="public" static="yes" mutable="no">
+        <type>const char *const</type>
+        <definition>const char* const oscit::Attribute::SIGNATURE</definition>
+        <argsstring></argsstring>
+        <name>SIGNATURE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/constants.h" line="49" bodyfile="/Users/gaspard/git/oscit/include/oscit/constants.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_attribute_1ac59d96f12c623359e6403ccc602c36fb" prot="public" static="yes" mutable="no">
+        <type>const char *const</type>
+        <definition>const char* const oscit::Attribute::VALUES</definition>
+        <argsstring></argsstring>
+        <name>VALUES</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/constants.h" line="50" bodyfile="/Users/gaspard/git/oscit/include/oscit/constants.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_attribute_1ab53cb799dd5a3211cb5695c9f7d2867b" prot="public" static="yes" mutable="no">
+        <type>const char *const</type>
+        <definition>const char* const oscit::Attribute::NAME</definition>
+        <argsstring></argsstring>
+        <name>NAME</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/constants.h" line="51" bodyfile="/Users/gaspard/git/oscit/include/oscit/constants.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_attribute_1a96df2808c77b4e0a348fcafaaf0a753e" prot="public" static="yes" mutable="no">
+        <type>const char *const</type>
+        <definition>const char* const oscit::Attribute::MIN</definition>
+        <argsstring></argsstring>
+        <name>MIN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/constants.h" line="52" bodyfile="/Users/gaspard/git/oscit/include/oscit/constants.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_attribute_1aacbf2213b7b7da549470e3b5c1a06a5c" prot="public" static="yes" mutable="no">
+        <type>const char *const</type>
+        <definition>const char* const oscit::Attribute::MAX</definition>
+        <argsstring></argsstring>
+        <name>MAX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/constants.h" line="53" bodyfile="/Users/gaspard/git/oscit/include/oscit/constants.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_attribute_1a3e013a9cdeffc6a79df450a6eee4fe4d" prot="public" static="yes" mutable="no">
+        <type>const char *const</type>
+        <definition>const char* const oscit::Attribute::VIEW</definition>
+        <argsstring></argsstring>
+        <name>VIEW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classoscit_1_1_root" kindref="compound">Root</ref> attribute key for view attributes (representation of object in a view). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/constants.h" line="57" bodyfile="/Users/gaspard/git/oscit/include/oscit/constants.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_attribute_1a7da441628fb9c7fff80263f227db7f64" prot="public" static="yes" mutable="no">
+        <type>const char *const</type>
+        <definition>const char* const oscit::Attribute::WIDGET</definition>
+        <argsstring></argsstring>
+        <name>WIDGET</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/constants.h" line="58" bodyfile="/Users/gaspard/git/oscit/include/oscit/constants.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_attribute_1a962272b5db1b71275ad21ce6f2c66392" prot="public" static="yes" mutable="no">
+        <type>const char *const</type>
+        <definition>const char* const oscit::Attribute::HUE</definition>
+        <argsstring></argsstring>
+        <name>HUE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/constants.h" line="59" bodyfile="/Users/gaspard/git/oscit/include/oscit/constants.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_attribute_1a788eefed477b0dbf957b8a68bcd4d069" prot="public" static="yes" mutable="no">
+        <type>const char *const</type>
+        <definition>const char* const oscit::Attribute::POS_X</definition>
+        <argsstring></argsstring>
+        <name>POS_X</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/constants.h" line="60" bodyfile="/Users/gaspard/git/oscit/include/oscit/constants.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_attribute_1a2d6016142ca681a0ae74120e7914499b" prot="public" static="yes" mutable="no">
+        <type>const char *const</type>
+        <definition>const char* const oscit::Attribute::POS_Y</definition>
+        <argsstring></argsstring>
+        <name>POS_Y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/constants.h" line="61" bodyfile="/Users/gaspard/git/oscit/include/oscit/constants.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_attribute_1ad56df1b561dc899b49c694d97a83854a" prot="public" static="yes" mutable="no">
+        <type>const char *const</type>
+        <definition>const char* const oscit::Attribute::WIDTH</definition>
+        <argsstring></argsstring>
+        <name>WIDTH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/constants.h" line="62" bodyfile="/Users/gaspard/git/oscit/include/oscit/constants.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_attribute_1ad1d82157b0f208a6c78a803388168bf9" prot="public" static="yes" mutable="no">
+        <type>const char *const</type>
+        <definition>const char* const oscit::Attribute::HEIGHT</definition>
+        <argsstring></argsstring>
+        <name>HEIGHT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/constants.h" line="63" bodyfile="/Users/gaspard/git/oscit/include/oscit/constants.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoscit_1_1_attribute_1ab5a90cc457ec29dce4aebfb1e7c334e3" prot="public" static="yes" mutable="no">
+        <type>const char *const</type>
+        <definition>const char* const oscit::Attribute::CLASS</definition>
+        <argsstring></argsstring>
+        <name>CLASS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classoscit_1_1_root" kindref="compound">Root</ref> attribute key for object&apos;s class url. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/constants.h" line="67" bodyfile="/Users/gaspard/git/oscit/include/oscit/constants.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classoscit_1_1_attribute_1aa934579462acc84b86f6a9eb5a90d5d3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>static Value oscit::Attribute::default_io</definition>
+        <argsstring>()</argsstring>
+        <name>default_io</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/constants.h" line="69" bodyfile="/Users/gaspard/git/oscit/include/oscit/constants.h" bodystart="69" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_attribute_1a62b5336436710a71d8d830aebed058fe" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>static Value oscit::Attribute::no_io</definition>
+        <argsstring>(const char *info)</argsstring>
+        <name>no_io</name>
+        <param>
+          <type>const char *</type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/constants.h" line="73" bodyfile="/Users/gaspard/git/oscit/include/oscit/constants.h" bodystart="73" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_attribute_1a2fdbe7e45e6ad574b10697d18b193e02" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>static Value oscit::Attribute::io</definition>
+        <argsstring>(const char *info, const char *name, const char *signature)</argsstring>
+        <name>io</name>
+        <param>
+          <type>const char *</type>
+          <declname>info</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>signature</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/constants.h" line="79" bodyfile="/Users/gaspard/git/oscit/include/oscit/constants.h" bodystart="79" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_attribute_1a51101d9930a2d71dc07c26c368a868aa" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>static Value oscit::Attribute::bang_io</definition>
+        <argsstring>(const char *info)</argsstring>
+        <name>bang_io</name>
+        <param>
+          <type>const char *</type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/constants.h" line="88" bodyfile="/Users/gaspard/git/oscit/include/oscit/constants.h" bodystart="88" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_attribute_1aa072b5ad62171af87b469d44c18b7921" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>static Value oscit::Attribute::real_io</definition>
+        <argsstring>(const char *info)</argsstring>
+        <name>real_io</name>
+        <param>
+          <type>const char *</type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/constants.h" line="92" bodyfile="/Users/gaspard/git/oscit/include/oscit/constants.h" bodystart="92" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_attribute_1abfb90b01b9c816fe4918b67943cf5d5e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>static Value oscit::Attribute::string_io</definition>
+        <argsstring>(const char *info)</argsstring>
+        <name>string_io</name>
+        <param>
+          <type>const char *</type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/constants.h" line="96" bodyfile="/Users/gaspard/git/oscit/include/oscit/constants.h" bodystart="96" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_attribute_1a4e56b4506de726dd7da70659703abeee" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>static Value oscit::Attribute::range_io</definition>
+        <argsstring>(const char *info, Real min, Real max)</argsstring>
+        <name>range_io</name>
+        <param>
+          <type>const char *</type>
+          <declname>info</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref></type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref></type>
+          <declname>max</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/constants.h" line="100" bodyfile="/Users/gaspard/git/oscit/include/oscit/constants.h" bodystart="100" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_attribute_1aad313d01baccdb0d4b00bb49c2595ea0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>static Value oscit::Attribute::select_io</definition>
+        <argsstring>(const char *info, const char *values)</argsstring>
+        <name>select_io</name>
+        <param>
+          <type>const char *</type>
+          <declname>info</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/constants.h" line="111" bodyfile="/Users/gaspard/git/oscit/include/oscit/constants.h" bodystart="111" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_attribute_1a94afeb353a98216e942811c5cc258563" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>static Value oscit::Attribute::hash_io</definition>
+        <argsstring>(const char *info)</argsstring>
+        <name>hash_io</name>
+        <param>
+          <type>const char *</type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/constants.h" line="121" bodyfile="/Users/gaspard/git/oscit/include/oscit/constants.h" bodystart="121" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_attribute_1a69ac982fc0ddf05bed8baeef549c61a1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>static Value oscit::Attribute::matrix_io</definition>
+        <argsstring>(const char *info)</argsstring>
+        <name>matrix_io</name>
+        <param>
+          <type>const char *</type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/constants.h" line="125" bodyfile="/Users/gaspard/git/oscit/include/oscit/constants.h" bodystart="125" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_attribute_1a31cc773559fd0980df73e4022213ae66" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>static Value oscit::Attribute::midi_io</definition>
+        <argsstring>(const char *info)</argsstring>
+        <name>midi_io</name>
+        <param>
+          <type>const char *</type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/constants.h" line="129" bodyfile="/Users/gaspard/git/oscit/include/oscit/constants.h" bodystart="129" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_attribute_1a5f196b58e7230a2cdcd82df912411b76" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>static Value oscit::Attribute::any_io</definition>
+        <argsstring>(const char *info)</argsstring>
+        <name>any_io</name>
+        <param>
+          <type>const char *</type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/constants.h" line="133" bodyfile="/Users/gaspard/git/oscit/include/oscit/constants.h" bodystart="133" bodyend="135"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This is a dummy class to hold attribute globals. </para>    </detaileddescription>
+    <location file="/Users/gaspard/git/oscit/include/oscit/constants.h" line="40" bodyfile="/Users/gaspard/git/oscit/include/oscit/constants.h" bodystart="40" bodyend="136"/>
+    <listofallmembers>
+      <member refid="classoscit_1_1_attribute_1a5f196b58e7230a2cdcd82df912411b76" prot="public" virt="non-virtual"><scope>oscit::Attribute</scope><name>any_io</name></member>
+      <member refid="classoscit_1_1_attribute_1a51101d9930a2d71dc07c26c368a868aa" prot="public" virt="non-virtual"><scope>oscit::Attribute</scope><name>bang_io</name></member>
+      <member refid="classoscit_1_1_attribute_1ab5a90cc457ec29dce4aebfb1e7c334e3" prot="public" virt="non-virtual"><scope>oscit::Attribute</scope><name>CLASS</name></member>
+      <member refid="classoscit_1_1_attribute_1aa934579462acc84b86f6a9eb5a90d5d3" prot="public" virt="non-virtual"><scope>oscit::Attribute</scope><name>default_io</name></member>
+      <member refid="classoscit_1_1_attribute_1a94afeb353a98216e942811c5cc258563" prot="public" virt="non-virtual"><scope>oscit::Attribute</scope><name>hash_io</name></member>
+      <member refid="classoscit_1_1_attribute_1ad1d82157b0f208a6c78a803388168bf9" prot="public" virt="non-virtual"><scope>oscit::Attribute</scope><name>HEIGHT</name></member>
+      <member refid="classoscit_1_1_attribute_1a962272b5db1b71275ad21ce6f2c66392" prot="public" virt="non-virtual"><scope>oscit::Attribute</scope><name>HUE</name></member>
+      <member refid="classoscit_1_1_attribute_1a902954a79de543deea411cfe48631a7a" prot="public" virt="non-virtual"><scope>oscit::Attribute</scope><name>INFO</name></member>
+      <member refid="classoscit_1_1_attribute_1a2fdbe7e45e6ad574b10697d18b193e02" prot="public" virt="non-virtual"><scope>oscit::Attribute</scope><name>io</name></member>
+      <member refid="classoscit_1_1_attribute_1a69ac982fc0ddf05bed8baeef549c61a1" prot="public" virt="non-virtual"><scope>oscit::Attribute</scope><name>matrix_io</name></member>
+      <member refid="classoscit_1_1_attribute_1aacbf2213b7b7da549470e3b5c1a06a5c" prot="public" virt="non-virtual"><scope>oscit::Attribute</scope><name>MAX</name></member>
+      <member refid="classoscit_1_1_attribute_1a31cc773559fd0980df73e4022213ae66" prot="public" virt="non-virtual"><scope>oscit::Attribute</scope><name>midi_io</name></member>
+      <member refid="classoscit_1_1_attribute_1a96df2808c77b4e0a348fcafaaf0a753e" prot="public" virt="non-virtual"><scope>oscit::Attribute</scope><name>MIN</name></member>
+      <member refid="classoscit_1_1_attribute_1ab53cb799dd5a3211cb5695c9f7d2867b" prot="public" virt="non-virtual"><scope>oscit::Attribute</scope><name>NAME</name></member>
+      <member refid="classoscit_1_1_attribute_1a62b5336436710a71d8d830aebed058fe" prot="public" virt="non-virtual"><scope>oscit::Attribute</scope><name>no_io</name></member>
+      <member refid="classoscit_1_1_attribute_1a788eefed477b0dbf957b8a68bcd4d069" prot="public" virt="non-virtual"><scope>oscit::Attribute</scope><name>POS_X</name></member>
+      <member refid="classoscit_1_1_attribute_1a2d6016142ca681a0ae74120e7914499b" prot="public" virt="non-virtual"><scope>oscit::Attribute</scope><name>POS_Y</name></member>
+      <member refid="classoscit_1_1_attribute_1a4e56b4506de726dd7da70659703abeee" prot="public" virt="non-virtual"><scope>oscit::Attribute</scope><name>range_io</name></member>
+      <member refid="classoscit_1_1_attribute_1aa072b5ad62171af87b469d44c18b7921" prot="public" virt="non-virtual"><scope>oscit::Attribute</scope><name>real_io</name></member>
+      <member refid="classoscit_1_1_attribute_1aad313d01baccdb0d4b00bb49c2595ea0" prot="public" virt="non-virtual"><scope>oscit::Attribute</scope><name>select_io</name></member>
+      <member refid="classoscit_1_1_attribute_1a286d2edf812d699062728f7537366a80" prot="public" virt="non-virtual"><scope>oscit::Attribute</scope><name>SIGNATURE</name></member>
+      <member refid="classoscit_1_1_attribute_1abfb90b01b9c816fe4918b67943cf5d5e" prot="public" virt="non-virtual"><scope>oscit::Attribute</scope><name>string_io</name></member>
+      <member refid="classoscit_1_1_attribute_1ae5dd4815ccbad178765c723b556ce5a5" prot="public" virt="non-virtual"><scope>oscit::Attribute</scope><name>TYPE</name></member>
+      <member refid="classoscit_1_1_attribute_1ac59d96f12c623359e6403ccc602c36fb" prot="public" virt="non-virtual"><scope>oscit::Attribute</scope><name>VALUES</name></member>
+      <member refid="classoscit_1_1_attribute_1a3e013a9cdeffc6a79df450a6eee4fe4d" prot="public" virt="non-virtual"><scope>oscit::Attribute</scope><name>VIEW</name></member>
+      <member refid="classoscit_1_1_attribute_1a7da441628fb9c7fff80263f227db7f64" prot="public" virt="non-virtual"><scope>oscit::Attribute</scope><name>WIDGET</name></member>
+      <member refid="classoscit_1_1_attribute_1ad56df1b561dc899b49c694d97a83854a" prot="public" virt="non-virtual"><scope>oscit::Attribute</scope><name>WIDTH</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

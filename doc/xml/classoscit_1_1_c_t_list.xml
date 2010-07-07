@@ -48,25 +48,25 @@
     <detaileddescription>
 <para>The Concurrent <ref refid="classoscit_1_1_list" kindref="compound">List</ref> template is a <ref refid="classstd_1_1list" kindref="compound">std::list</ref> with a read-write mutex. The class does not lock/unlock the mutex, this is the responsability of the class using the list. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="192">
+      <node id="210">
         <label>oscit::CTList&lt; T &gt;</label>
         <link refid="classoscit_1_1_c_t_list"/>
-        <childnode refid="193" relation="public-inheritance">
+        <childnode refid="211" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="193">
+      <node id="211">
         <label>oscit::RWMutex</label>
         <link refid="classoscit_1_1_r_w_mutex"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="194">
+      <node id="212">
         <label>oscit::CTList&lt; T &gt;</label>
         <link refid="classoscit_1_1_c_t_list"/>
-        <childnode refid="195" relation="public-inheritance">
+        <childnode refid="213" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="195">
+      <node id="213">
         <label>oscit::RWMutex</label>
         <link refid="classoscit_1_1_r_w_mutex"/>
       </node>

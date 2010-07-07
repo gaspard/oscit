@@ -4,219 +4,278 @@
     <compoundname>observer.h</compoundname>
     <includes local="no">list</includes>
     <includes local="no">iostream</includes>
-    <includes refid="callback__list_8h" local="yes">oscit/callback_list.h</includes>
-    <includedby refid="observable_8h" local="yes">include/oscit/observable.h</includedby>
-    <includedby refid="tobservable__list_8h" local="yes">include/oscit/tobservable_list.h</includedby>
+    <includes refid="c__tlist_8h" local="yes">oscit/c_tlist.h</includes>
+    <includedby refid="object_8h" local="yes">/Users/gaspard/git/oscit/include/oscit/object.h</includedby>
+    <includedby refid="signal_8h" local="yes">/Users/gaspard/git/oscit/include/oscit/signal.h</includedby>
     <incdepgraph>
-      <node id="1877">
+      <node id="1893">
         <label>list</label>
       </node>
-      <node id="1881">
+      <node id="1901">
         <label>oscit/non_copyable.h</label>
         <link refid="non__copyable_8h"/>
       </node>
-      <node id="1876">
-        <label>include/oscit/observer.h</label>
-        <link refid="observer.h"/>
-        <childnode refid="1877" relation="include">
-        </childnode>
-        <childnode refid="1878" relation="include">
-        </childnode>
-        <childnode refid="1879" relation="include">
-        </childnode>
-      </node>
-      <node id="1879">
-        <label>oscit/callback_list.h</label>
-        <link refid="callback__list_8h"/>
-        <childnode refid="1877" relation="include">
-        </childnode>
-        <childnode refid="1880" relation="include">
-        </childnode>
-        <childnode refid="1881" relation="include">
-        </childnode>
-      </node>
-      <node id="1880">
-        <label>oscit/callback.h</label>
-        <link refid="callback_8h"/>
-      </node>
-      <node id="1878">
-        <label>iostream</label>
-      </node>
-    </incdepgraph>
-    <invincdepgraph>
-      <node id="1897">
-        <label>include/oscit/list_with_type_meta_method.h</label>
-        <link refid="list__with__type__meta__method_8h"/>
-      </node>
-      <node id="1882">
-        <label>include/oscit/observer.h</label>
-        <link refid="observer.h"/>
-        <childnode refid="1883" relation="include">
-        </childnode>
-        <childnode refid="1906" relation="include">
-        </childnode>
-      </node>
-      <node id="1900">
-        <label>include/oscit/object_proxy.h</label>
-        <link refid="object__proxy_8h"/>
-        <childnode refid="1898" relation="include">
-        </childnode>
-      </node>
-      <node id="1905">
-        <label>include/oscit/osc_remote_object.h</label>
-        <link refid="osc__remote__object_8h"/>
-      </node>
-      <node id="1904">
-        <label>include/oscit/type_meta_method.h</label>
-        <link refid="type__meta__method_8h"/>
-      </node>
-      <node id="1889">
-        <label>include/oscit/root.h</label>
-        <link refid="root_8h"/>
-        <childnode refid="1890" relation="include">
-        </childnode>
-        <childnode refid="1891" relation="include">
-        </childnode>
-        <childnode refid="1892" relation="include">
-        </childnode>
-        <childnode refid="1893" relation="include">
-        </childnode>
-        <childnode refid="1895" relation="include">
-        </childnode>
-        <childnode refid="1896" relation="include">
-        </childnode>
-        <childnode refid="1897" relation="include">
-        </childnode>
-        <childnode refid="1887" relation="include">
-        </childnode>
-        <childnode refid="1898" relation="include">
-        </childnode>
-        <childnode refid="1899" relation="include">
-        </childnode>
+      <node id="1902">
+        <label>oscit/mutex.h</label>
+        <link refid="mutex_8h"/>
         <childnode refid="1903" relation="include">
+        </childnode>
+        <childnode refid="1898" relation="include">
         </childnode>
         <childnode refid="1904" relation="include">
         </childnode>
-      </node>
-      <node id="1887">
-        <label>include/oscit/oscit.h</label>
-        <link refid="oscit_8h"/>
-      </node>
-      <node id="1895">
-        <label>include/oscit/info_meta_method.h</label>
-        <link refid="info__meta__method_8h"/>
-      </node>
-      <node id="1893">
-        <label>include/oscit/file_method.h</label>
-        <link refid="file__method_8h"/>
-        <childnode refid="1894" relation="include">
+        <childnode refid="1901" relation="include">
         </childnode>
-        <childnode refid="1887" relation="include">
+        <childnode refid="1905" relation="include">
         </childnode>
       </node>
       <node id="1892">
-        <label>include/oscit/error_meta_method.h</label>
-        <link refid="error__meta__method_8h"/>
-      </node>
-      <node id="1906">
-        <label>include/oscit/tobservable_list.h</label>
-        <link refid="tobservable__list_8h"/>
-      </node>
-      <node id="1901">
-        <label>include/oscit/osc_root_proxy.h</label>
-        <link refid="osc__root__proxy_8h"/>
-      </node>
-      <node id="1885">
-        <label>include/oscit/log_object.h</label>
-        <link refid="log__object_8h"/>
-      </node>
-      <node id="1891">
-        <label>include/oscit/call.h</label>
-        <link refid="call_8h"/>
-        <childnode refid="1887" relation="include">
+        <label>/Users/gaspard/git/oscit/include/oscit/observer.h</label>
+        <link refid="observer.h"/>
+        <childnode refid="1893" relation="include">
         </childnode>
-      </node>
-      <node id="1883">
-        <label>include/oscit/observable.h</label>
-        <link refid="observable_8h"/>
-        <childnode refid="1884" relation="include">
+        <childnode refid="1894" relation="include">
+        </childnode>
+        <childnode refid="1895" relation="include">
         </childnode>
       </node>
       <node id="1898">
-        <label>include/oscit/proxy_factory.h</label>
-        <link refid="proxy__factory_8h"/>
-        <childnode refid="1887" relation="include">
-        </childnode>
-      </node>
-      <node id="1894">
-        <label>include/oscit/hash_file_method.h</label>
-        <link refid="hash__file__method_8h"/>
-        <childnode refid="1887" relation="include">
-        </childnode>
-      </node>
-      <node id="1896">
-        <label>include/oscit/list_meta_method.h</label>
-        <link refid="list__meta__method_8h"/>
-      </node>
-      <node id="1902">
-        <label>include/oscit/zeroconf_browser.h</label>
-        <link refid="zeroconf__browser_8h"/>
-        <childnode refid="1887" relation="include">
-        </childnode>
+        <label>assert.h</label>
       </node>
       <node id="1899">
-        <label>include/oscit/root_proxy.h</label>
-        <link refid="root__proxy_8h"/>
+        <label>errno.h</label>
+      </node>
+      <node id="1903">
+        <label>pthread.h</label>
+      </node>
+      <node id="1900">
+        <label>string.h</label>
+      </node>
+      <node id="1904">
+        <label>cstdio</label>
+      </node>
+      <node id="1896">
+        <label>oscit/rw_mutex.h</label>
+        <link refid="rw__mutex_8h"/>
+        <childnode refid="1897" relation="include">
+        </childnode>
+        <childnode refid="1901" relation="include">
+        </childnode>
+        <childnode refid="1900" relation="include">
+        </childnode>
+      </node>
+      <node id="1897">
+        <label>oscit/semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="1898" relation="include">
+        </childnode>
+        <childnode refid="1897" relation="include">
+        </childnode>
+        <childnode refid="1899" relation="include">
+        </childnode>
         <childnode refid="1900" relation="include">
         </childnode>
         <childnode refid="1901" relation="include">
         </childnode>
-        <childnode refid="1898" relation="include">
-        </childnode>
         <childnode refid="1902" relation="include">
         </childnode>
       </node>
-      <node id="1884">
-        <label>include/oscit/object.h</label>
-        <link refid="object_8h"/>
-        <childnode refid="1885" relation="include">
+      <node id="1894">
+        <label>iostream</label>
+      </node>
+      <node id="1905">
+        <label>oscit/typed.h</label>
+        <link refid="typed_8h"/>
+        <childnode refid="1906" relation="include">
         </childnode>
-        <childnode refid="1886" relation="include">
-        </childnode>
-        <childnode refid="1888" relation="include">
-        </childnode>
-        <childnode refid="1900" relation="include">
-        </childnode>
-        <childnode refid="1905" relation="include">
-        </childnode>
-        <childnode refid="1887" relation="include">
-        </childnode>
-        <childnode refid="1889" relation="include">
+        <childnode refid="1894" relation="include">
         </childnode>
       </node>
-      <node id="1890">
-        <label>include/oscit/alias.h</label>
+      <node id="1895">
+        <label>oscit/c_tlist.h</label>
+        <link refid="c__tlist_8h"/>
+        <childnode refid="1893" relation="include">
+        </childnode>
+        <childnode refid="1896" relation="include">
+        </childnode>
+      </node>
+      <node id="1906">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1907">
+        <label>/Users/gaspard/git/oscit/include/oscit/observer.h</label>
+        <link refid="observer.h"/>
+        <childnode refid="1908" relation="include">
+        </childnode>
+        <childnode refid="1930" relation="include">
+        </childnode>
+      </node>
+      <node id="1925">
+        <label>/Users/gaspard/git/oscit/include/oscit/object_proxy.h</label>
+        <link refid="object__proxy_8h"/>
+        <childnode refid="1923" relation="include">
+        </childnode>
+      </node>
+      <node id="1929">
+        <label>/Users/gaspard/git/oscit/include/oscit/osc_remote_object.h</label>
+        <link refid="osc__remote__object_8h"/>
+      </node>
+      <node id="1913">
+        <label>/Users/gaspard/git/oscit/include/oscit/root.h</label>
+        <link refid="root_8h"/>
+        <childnode refid="1914" relation="include">
+        </childnode>
+        <childnode refid="1915" relation="include">
+        </childnode>
+        <childnode refid="1916" relation="include">
+        </childnode>
+        <childnode refid="1917" relation="include">
+        </childnode>
+        <childnode refid="1918" relation="include">
+        </childnode>
+        <childnode refid="1920" relation="include">
+        </childnode>
+        <childnode refid="1921" relation="include">
+        </childnode>
+        <childnode refid="1922" relation="include">
+        </childnode>
+        <childnode refid="1911" relation="include">
+        </childnode>
+        <childnode refid="1923" relation="include">
+        </childnode>
+        <childnode refid="1924" relation="include">
+        </childnode>
+        <childnode refid="1928" relation="include">
+        </childnode>
+      </node>
+      <node id="1911">
+        <label>/Users/gaspard/git/oscit/include/oscit/oscit.h</label>
+        <link refid="oscit_8h"/>
+      </node>
+      <node id="1920">
+        <label>/Users/gaspard/git/oscit/include/oscit/info_meta_method.h</label>
+        <link refid="info__meta__method_8h"/>
+      </node>
+      <node id="1918">
+        <label>/Users/gaspard/git/oscit/include/oscit/file_method.h</label>
+        <link refid="file__method_8h"/>
+        <childnode refid="1919" relation="include">
+        </childnode>
+        <childnode refid="1911" relation="include">
+        </childnode>
+      </node>
+      <node id="1917">
+        <label>/Users/gaspard/git/oscit/include/oscit/error_meta_method.h</label>
+        <link refid="error__meta__method_8h"/>
+      </node>
+      <node id="1922">
+        <label>/Users/gaspard/git/oscit/include/oscit/list_with_attributes_meta_method.h</label>
+        <link refid="list__with__attributes__meta__method_8h"/>
+      </node>
+      <node id="1926">
+        <label>/Users/gaspard/git/oscit/include/oscit/osc_root_proxy.h</label>
+        <link refid="osc__root__proxy_8h"/>
+      </node>
+      <node id="1909">
+        <label>/Users/gaspard/git/oscit/include/oscit/log_object.h</label>
+        <link refid="log__object_8h"/>
+      </node>
+      <node id="1915">
+        <label>/Users/gaspard/git/oscit/include/oscit/attrs_meta_method.h</label>
+        <link refid="attrs__meta__method_8h"/>
+      </node>
+      <node id="1916">
+        <label>/Users/gaspard/git/oscit/include/oscit/call.h</label>
+        <link refid="call_8h"/>
+        <childnode refid="1911" relation="include">
+        </childnode>
+      </node>
+      <node id="1923">
+        <label>/Users/gaspard/git/oscit/include/oscit/proxy_factory.h</label>
+        <link refid="proxy__factory_8h"/>
+        <childnode refid="1911" relation="include">
+        </childnode>
+      </node>
+      <node id="1919">
+        <label>/Users/gaspard/git/oscit/include/oscit/hash_file_method.h</label>
+        <link refid="hash__file__method_8h"/>
+        <childnode refid="1911" relation="include">
+        </childnode>
+      </node>
+      <node id="1921">
+        <label>/Users/gaspard/git/oscit/include/oscit/list_meta_method.h</label>
+        <link refid="list__meta__method_8h"/>
+      </node>
+      <node id="1930">
+        <label>/Users/gaspard/git/oscit/include/oscit/signal.h</label>
+        <link refid="signal_8h"/>
+        <childnode refid="1908" relation="include">
+        </childnode>
+        <childnode refid="1911" relation="include">
+        </childnode>
+        <childnode refid="1913" relation="include">
+        </childnode>
+      </node>
+      <node id="1927">
+        <label>/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h</label>
+        <link refid="zeroconf__browser_8h"/>
+        <childnode refid="1911" relation="include">
+        </childnode>
+      </node>
+      <node id="1924">
+        <label>/Users/gaspard/git/oscit/include/oscit/root_proxy.h</label>
+        <link refid="root__proxy_8h"/>
+        <childnode refid="1925" relation="include">
+        </childnode>
+        <childnode refid="1926" relation="include">
+        </childnode>
+        <childnode refid="1923" relation="include">
+        </childnode>
+        <childnode refid="1927" relation="include">
+        </childnode>
+      </node>
+      <node id="1908">
+        <label>/Users/gaspard/git/oscit/include/oscit/object.h</label>
+        <link refid="object_8h"/>
+        <childnode refid="1909" relation="include">
+        </childnode>
+        <childnode refid="1910" relation="include">
+        </childnode>
+        <childnode refid="1912" relation="include">
+        </childnode>
+        <childnode refid="1925" relation="include">
+        </childnode>
+        <childnode refid="1929" relation="include">
+        </childnode>
+        <childnode refid="1911" relation="include">
+        </childnode>
+        <childnode refid="1913" relation="include">
+        </childnode>
+      </node>
+      <node id="1914">
+        <label>/Users/gaspard/git/oscit/include/oscit/alias.h</label>
         <link refid="alias_8h"/>
       </node>
-      <node id="1888">
-        <label>include/oscit/object_handle.h</label>
+      <node id="1912">
+        <label>/Users/gaspard/git/oscit/include/oscit/object_handle.h</label>
         <link refid="object__handle_8h"/>
-        <childnode refid="1889" relation="include">
+        <childnode refid="1913" relation="include">
         </childnode>
       </node>
-      <node id="1886">
-        <label>include/oscit/method.h</label>
+      <node id="1910">
+        <label>/Users/gaspard/git/oscit/include/oscit/method.h</label>
         <link refid="method_8h"/>
-        <childnode refid="1887" relation="include">
+        <childnode refid="1911" relation="include">
         </childnode>
       </node>
-      <node id="1903">
-        <label>include/oscit/tree_meta_method.h</label>
+      <node id="1928">
+        <label>/Users/gaspard/git/oscit/include/oscit/tree_meta_method.h</label>
         <link refid="tree__meta__method_8h"/>
       </node>
     </invincdepgraph>
     <innerclass refid="classoscit_1_1_observer" prot="public">oscit::Observer</innerclass>
-    <innerclass refid="structoscit_1_1_observer_1_1_callback_with_list" prot="private">oscit::Observer::CallbackWithList</innerclass>
     <innernamespace refid="namespaceoscit">oscit</innernamespace>
     <briefdescription>
     </briefdescription>
@@ -258,103 +317,39 @@
 <codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;list&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="callback__list_8h" kindref="compound">oscit/callback_list.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="c__tlist_8h" kindref="compound">oscit/c_tlist.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">oscit<sp/>{</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Callback;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Signal;</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
 <codeline lineno="45" refid="classoscit_1_1_observer" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classoscit_1_1_observer" kindref="compound">Observer</ref><sp/>{</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48" refid="classoscit_1_1_observer_1ac42ab921bb3a679a9abaf483f1559c00" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_observer_1ac42ab921bb3a679a9abaf483f1559c00" kindref="member">~Observer</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>std::list&lt;CallbackWithList*&gt;::iterator<sp/>it,<sp/>end<sp/>=<sp/>produced_callbacks_.end();</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(it<sp/>=<sp/>produced_callbacks_.begin();<sp/>it<sp/>!=<sp/>end;<sp/>++it)<sp/>{</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>CallbackWithList<sp/>*cl<sp/>=<sp/>*it;</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>are<sp/>dying,<sp/>remove<sp/>all<sp/>callbacks<sp/>that<sp/>we<sp/>have<sp/>registered</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cl-&gt;callback_-&gt;observer_<sp/>=<sp/>NULL;</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cl-&gt;list_-&gt;delete_callback(cl-&gt;callback_);</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>cl;</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
-<codeline lineno="64" refid="classoscit_1_1_observer_1ab856c4b8fac03abcb75fe3884a363a6b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_observer_1ab856c4b8fac03abcb75fe3884a363a6b" kindref="member">set_and_hold</ref>(T<sp/>**ivar_ptr,<sp/>T<sp/>*target)<sp/>{</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*ivar_ptr)<sp/>{</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>stop<sp/>observing<sp/>previous<sp/>value</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classoscit_1_1_observer_1a0460e53a6d44a9388dec23ff76ba83f2" kindref="member">delete_produced_callbacks_with_data</ref>(ivar_ptr);</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"></highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>*ivar_ptr<sp/>=<sp/>target;</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>register<sp/>notification<sp/>if<sp/>address<sp/>becomes<sp/>invalid</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>target-&gt;adopt_callback_on_destroy(</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_t_callback" kindref="compound">TCallback&lt;Observer, &amp;Observer::clear_ivar&gt;</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>ivar_ptr)</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_observer_1a35b3c99a9cdaa3826aafae6a1d9f21fb" kindref="member">observer_lock</ref>()<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_observer_1a0c3ab3c1660ff92f0c9a26122718f2c8" kindref="member">observer_unlock</ref>()<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"></highlight></codeline>
-<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="90" refid="classoscit_1_1_observer_1a0460e53a6d44a9388dec23ff76ba83f2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_observer_1a0460e53a6d44a9388dec23ff76ba83f2" kindref="member">delete_produced_callbacks_with_data</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>std::list&lt;CallbackWithList*&gt;::iterator<sp/>it<sp/>=<sp/>produced_callbacks_.begin(),<sp/>end<sp/>=<sp/>produced_callbacks_.end();</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(it<sp/>!=<sp/>end)<sp/>{</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>CallbackWithList<sp/>*cl<sp/>=<sp/>*it;</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cl-&gt;callback_-&gt;match_data(data))<sp/>{</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>found<sp/>matching<sp/>callback:<sp/>remove</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cl-&gt;callback_-&gt;observer_<sp/>=<sp/>NULL;<sp/></highlight><highlight class="comment">//<sp/>avoid<sp/>call<sp/>to<sp/>callback_destroyed</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cl-&gt;list_-&gt;delete_callback(cl-&gt;callback_);</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>cl;</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>it<sp/>=<sp/>produced_callbacks_.erase(it);</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++it;</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"></highlight></codeline>
-<codeline lineno="106"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="107" refid="classoscit_1_1_observer_1a8365dbfb71b5c0498cbce512ec14e59e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classoscit_1_1_callback" kindref="compound">Callback</ref>;</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"></highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">CallbackWithList<sp/>{</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>CallbackWithList(<ref refid="classoscit_1_1_callback_list" kindref="compound">CallbackList</ref><sp/>*<ref refid="classstd_1_1list" kindref="compound">list</ref>,<sp/><ref refid="classoscit_1_1_callback" kindref="compound">Callback</ref><sp/>*callback)<sp/>:<sp/>list_(list),<sp/>callback_(callback)<sp/>{}</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classoscit_1_1_callback_list" kindref="compound">CallbackList</ref><sp/>*list_;</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classoscit_1_1_callback" kindref="compound">Callback</ref><sp/>*callback_;</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"></highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>clear_ivar(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ivar_ptr)<sp/>{</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**ivar<sp/>=<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**)ivar_ptr;</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classoscit_1_1_observer_1a35b3c99a9cdaa3826aafae6a1d9f21fb" kindref="member">observer_lock</ref>();</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>*ivar<sp/>=<sp/>NULL;</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classoscit_1_1_observer_1a0c3ab3c1660ff92f0c9a26122718f2c8" kindref="member">observer_unlock</ref>();</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"></highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>callback_produced(CallbackList<sp/>*<ref refid="classstd_1_1list" kindref="compound">list</ref>,<sp/><ref refid="classoscit_1_1_observer_1a8365dbfb71b5c0498cbce512ec14e59e" kindref="member">Callback</ref><sp/>*callback)<sp/>{</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>produced_callbacks_.push_back(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>CallbackWithList(list,<sp/>callback));</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"></highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>callback_destroyed(CallbackList<sp/>*list,<sp/><ref refid="classoscit_1_1_observer_1a8365dbfb71b5c0498cbce512ec14e59e" kindref="member">Callback</ref><sp/>*callback)<sp/>{</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classoscit_1_1_observer_1a35b3c99a9cdaa3826aafae6a1d9f21fb" kindref="member">observer_lock</ref>();</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::list&lt;CallbackWithList*&gt;::iterator<sp/>it<sp/>=<sp/>produced_callbacks_.begin(),<sp/>end<sp/>=<sp/>produced_callbacks_.end();</highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(it<sp/>!=<sp/>end)<sp/>{</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CallbackWithList<sp/>*cl<sp/>=<sp/>*it;</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cl-&gt;list_<sp/>==<sp/>list<sp/>&amp;&amp;<sp/>cl-&gt;callback_<sp/>==<sp/>callback)<sp/>{</highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>cl;</highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>it<sp/>=<sp/>produced_callbacks_.erase(it);</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++it;</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classoscit_1_1_observer_1a0c3ab3c1660ff92f0c9a26122718f2c8" kindref="member">observer_unlock</ref>();</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"></highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/>std::list&lt;CallbackWithList*&gt;<sp/>produced_callbacks_;</highlight></codeline>
-<codeline lineno="154"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="155"><highlight class="normal"></highlight></codeline>
-<codeline lineno="156"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>oscit</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="157"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>OSCIT_INCLUDE_OSCIT_OBSERVER_H_</highlight></codeline>
+<codeline lineno="47" refid="classoscit_1_1_observer_1ab2b7446f50f2d5c6c9fdbe77ae72ed33" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_observer_1ab2b7446f50f2d5c6c9fdbe77ae72ed33" kindref="member">Observer</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="classoscit_1_1_observer_1a640ae374906b11455d4496f113b10547" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_observer_1a640ae374906b11455d4496f113b10547" kindref="member">~Observer</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>disconnect_all();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="54" refid="classoscit_1_1_observer_1ac5526429c5a50ac492f6e8113c59b18a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classoscit_1_1_signal" kindref="compound">Signal</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>disconnect_all();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>connect_signal(<ref refid="classoscit_1_1_signal" kindref="compound">Signal</ref><sp/>*sig)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classoscit_1_1_scoped_write" kindref="compound">ScopedWrite</ref><sp/>lock(observed_signals_);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>observed_signals_.push_back(sig);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>disconnect_signal(<ref refid="classoscit_1_1_signal" kindref="compound">Signal</ref><sp/>*sig)<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classoscit_1_1_scoped_write" kindref="compound">ScopedWrite</ref><sp/>lock(observed_signals_);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>observed_signals_.remove(sig);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>CTList&lt;Signal*&gt;<sp/>observed_signals_;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>oscit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>OSCIT_INCLUDE_OSCIT_OBSERVER_H_</highlight></codeline>
     </programlisting>
     <location file="/Users/gaspard/git/oscit/include/oscit/observer.h"/>
   </compounddef>

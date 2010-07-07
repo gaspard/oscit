@@ -5,316 +5,330 @@
     <includes refid="value__types_8h" local="yes">oscit/value_types.h</includes>
     <includes refid="reference__counted_8h" local="yes">oscit/reference_counted.h</includes>
     <includes local="no">vector</includes>
-    <includedby refid="value_8h" local="yes">include/oscit/value.h</includedby>
+    <includedby refid="value_8h" local="yes">/Users/gaspard/git/oscit/include/oscit/value.h</includedby>
     <incdepgraph>
-      <node id="972">
+      <node id="1020">
         <label>oscit/value_types.h</label>
         <link refid="value__types_8h"/>
-        <childnode refid="973" relation="include">
+        <childnode refid="1021" relation="include">
         </childnode>
       </node>
-      <node id="971">
-        <label>include/oscit/list.h</label>
+      <node id="1019">
+        <label>/Users/gaspard/git/oscit/include/oscit/list.h</label>
         <link refid="list.h"/>
-        <childnode refid="972" relation="include">
+        <childnode refid="1020" relation="include">
         </childnode>
-        <childnode refid="974" relation="include">
+        <childnode refid="1022" relation="include">
         </childnode>
-        <childnode refid="975" relation="include">
+        <childnode refid="1023" relation="include">
         </childnode>
       </node>
-      <node id="973">
+      <node id="1021">
         <label>sys/types.h</label>
       </node>
-      <node id="975">
+      <node id="1023">
         <label>vector</label>
       </node>
-      <node id="974">
+      <node id="1022">
         <label>oscit/reference_counted.h</label>
         <link refid="reference__counted_8h"/>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="997">
-        <label>include/oscit/list_with_type_meta_method.h</label>
-        <link refid="list__with__type__meta__method_8h"/>
-      </node>
-      <node id="977">
-        <label>include/oscit/value.h</label>
+      <node id="1025">
+        <label>/Users/gaspard/git/oscit/include/oscit/value.h</label>
         <link refid="value_8h"/>
-        <childnode refid="978" relation="include">
+        <childnode refid="1026" relation="include">
         </childnode>
-        <childnode refid="1009" relation="include">
+        <childnode refid="1058" relation="include">
         </childnode>
-        <childnode refid="1010" relation="include">
+        <childnode refid="1059" relation="include">
         </childnode>
-        <childnode refid="1011" relation="include">
+        <childnode refid="1060" relation="include">
         </childnode>
-        <childnode refid="1012" relation="include">
+        <childnode refid="1061" relation="include">
         </childnode>
-        <childnode refid="1013" relation="include">
+        <childnode refid="1062" relation="include">
         </childnode>
-        <childnode refid="1014" relation="include">
+        <childnode refid="1063" relation="include">
         </childnode>
-        <childnode refid="979" relation="include">
+        <childnode refid="1027" relation="include">
         </childnode>
       </node>
-      <node id="1009">
-        <label>include/oscit/hash_value.h</label>
+      <node id="1028">
+        <label>/Users/gaspard/git/oscit/include/oscit/constants.h</label>
+        <link refid="constants_8h"/>
+        <childnode refid="1029" relation="include">
+        </childnode>
+        <childnode refid="1027" relation="include">
+        </childnode>
+      </node>
+      <node id="1058">
+        <label>/Users/gaspard/git/oscit/include/oscit/hash_value.h</label>
         <link refid="hash__value_8h"/>
-        <childnode refid="979" relation="include">
+        <childnode refid="1027" relation="include">
         </childnode>
       </node>
-      <node id="976">
-        <label>include/oscit/list.h</label>
+      <node id="1024">
+        <label>/Users/gaspard/git/oscit/include/oscit/list.h</label>
         <link refid="list.h"/>
-        <childnode refid="977" relation="include">
+        <childnode refid="1025" relation="include">
         </childnode>
       </node>
-      <node id="1010">
-        <label>include/oscit/list_value.h</label>
+      <node id="1059">
+        <label>/Users/gaspard/git/oscit/include/oscit/list_value.h</label>
         <link refid="list__value_8h"/>
-        <childnode refid="979" relation="include">
+        <childnode refid="1027" relation="include">
         </childnode>
       </node>
-      <node id="1000">
-        <label>include/oscit/object_proxy.h</label>
+      <node id="1046">
+        <label>/Users/gaspard/git/oscit/include/oscit/object_proxy.h</label>
         <link refid="object__proxy_8h"/>
-        <childnode refid="998" relation="include">
+        <childnode refid="1044" relation="include">
         </childnode>
       </node>
-      <node id="1005">
-        <label>include/oscit/osc_remote_object.h</label>
+      <node id="1050">
+        <label>/Users/gaspard/git/oscit/include/oscit/osc_remote_object.h</label>
         <link refid="osc__remote__object_8h"/>
       </node>
-      <node id="1004">
-        <label>include/oscit/type_meta_method.h</label>
-        <link refid="type__meta__method_8h"/>
-      </node>
-      <node id="991">
-        <label>include/oscit/root.h</label>
+      <node id="1034">
+        <label>/Users/gaspard/git/oscit/include/oscit/root.h</label>
         <link refid="root_8h"/>
-        <childnode refid="992" relation="include">
+        <childnode refid="1035" relation="include">
         </childnode>
-        <childnode refid="993" relation="include">
+        <childnode refid="1036" relation="include">
         </childnode>
-        <childnode refid="994" relation="include">
+        <childnode refid="1037" relation="include">
         </childnode>
-        <childnode refid="982" relation="include">
+        <childnode refid="1038" relation="include">
         </childnode>
-        <childnode refid="995" relation="include">
+        <childnode refid="1039" relation="include">
         </childnode>
-        <childnode refid="996" relation="include">
+        <childnode refid="1041" relation="include">
         </childnode>
-        <childnode refid="997" relation="include">
+        <childnode refid="1042" relation="include">
         </childnode>
-        <childnode refid="984" relation="include">
+        <childnode refid="1043" relation="include">
         </childnode>
-        <childnode refid="998" relation="include">
+        <childnode refid="1032" relation="include">
         </childnode>
-        <childnode refid="999" relation="include">
+        <childnode refid="1044" relation="include">
         </childnode>
-        <childnode refid="1003" relation="include">
+        <childnode refid="1045" relation="include">
         </childnode>
-        <childnode refid="1004" relation="include">
+        <childnode refid="1049" relation="include">
         </childnode>
       </node>
-      <node id="984">
-        <label>include/oscit/oscit.h</label>
+      <node id="1032">
+        <label>/Users/gaspard/git/oscit/include/oscit/oscit.h</label>
         <link refid="oscit_8h"/>
       </node>
-      <node id="986">
-        <label>include/oscit/matrix.h</label>
+      <node id="1053">
+        <label>/Users/gaspard/git/oscit/include/oscit/matrix.h</label>
         <link refid="matrix_8h"/>
       </node>
-      <node id="995">
-        <label>include/oscit/info_meta_method.h</label>
+      <node id="1041">
+        <label>/Users/gaspard/git/oscit/include/oscit/info_meta_method.h</label>
         <link refid="info__meta__method_8h"/>
       </node>
-      <node id="981">
-        <label>include/oscit/file.h</label>
+      <node id="1052">
+        <label>/Users/gaspard/git/oscit/include/oscit/file.h</label>
         <link refid="file_8h"/>
-        <childnode refid="982" relation="include">
+        <childnode refid="1039" relation="include">
         </childnode>
       </node>
-      <node id="982">
-        <label>include/oscit/file_method.h</label>
+      <node id="1039">
+        <label>/Users/gaspard/git/oscit/include/oscit/file_method.h</label>
         <link refid="file__method_8h"/>
-        <childnode refid="983" relation="include">
+        <childnode refid="1040" relation="include">
         </childnode>
-        <childnode refid="984" relation="include">
+        <childnode refid="1032" relation="include">
         </childnode>
       </node>
-      <node id="1011">
-        <label>include/oscit/matrix_value.h</label>
+      <node id="1060">
+        <label>/Users/gaspard/git/oscit/include/oscit/matrix_value.h</label>
         <link refid="matrix__value_8h"/>
-        <childnode refid="979" relation="include">
+        <childnode refid="1027" relation="include">
         </childnode>
       </node>
-      <node id="994">
-        <label>include/oscit/error_meta_method.h</label>
+      <node id="1038">
+        <label>/Users/gaspard/git/oscit/include/oscit/error_meta_method.h</label>
         <link refid="error__meta__method_8h"/>
       </node>
-      <node id="1013">
-        <label>include/oscit/real_value.h</label>
+      <node id="1062">
+        <label>/Users/gaspard/git/oscit/include/oscit/real_value.h</label>
         <link refid="real__value_8h"/>
-        <childnode refid="979" relation="include">
+        <childnode refid="1027" relation="include">
         </childnode>
       </node>
-      <node id="979">
-        <label>include/oscit/values.h</label>
+      <node id="1027">
+        <label>/Users/gaspard/git/oscit/include/oscit/values.h</label>
         <link refid="values_8h"/>
-        <childnode refid="980" relation="include">
+        <childnode refid="1028" relation="include">
         </childnode>
-        <childnode refid="981" relation="include">
+        <childnode refid="1051" relation="include">
         </childnode>
-        <childnode refid="985" relation="include">
+        <childnode refid="1052" relation="include">
         </childnode>
-        <childnode refid="986" relation="include">
+        <childnode refid="1053" relation="include">
         </childnode>
-        <childnode refid="987" relation="include">
+        <childnode refid="1029" relation="include">
         </childnode>
-        <childnode refid="1006" relation="include">
+        <childnode refid="1054" relation="include">
         </childnode>
-        <childnode refid="984" relation="include">
+        <childnode refid="1032" relation="include">
         </childnode>
-        <childnode refid="1007" relation="include">
+        <childnode refid="1055" relation="include">
         </childnode>
-        <childnode refid="1008" relation="include">
+        <childnode refid="1056" relation="include">
+        </childnode>
+        <childnode refid="1057" relation="include">
         </childnode>
       </node>
-      <node id="978">
-        <label>include/oscit/error_value.h</label>
+      <node id="1026">
+        <label>/Users/gaspard/git/oscit/include/oscit/error_value.h</label>
         <link refid="error__value_8h"/>
-        <childnode refid="979" relation="include">
+        <childnode refid="1027" relation="include">
         </childnode>
       </node>
-      <node id="1007">
-        <label>include/oscit/script.h</label>
+      <node id="1055">
+        <label>/Users/gaspard/git/oscit/include/oscit/script.h</label>
         <link refid="script_8h"/>
-        <childnode refid="1006" relation="include">
+        <childnode refid="1054" relation="include">
         </childnode>
       </node>
-      <node id="1001">
-        <label>include/oscit/osc_root_proxy.h</label>
+      <node id="1043">
+        <label>/Users/gaspard/git/oscit/include/oscit/list_with_attributes_meta_method.h</label>
+        <link refid="list__with__attributes__meta__method_8h"/>
+      </node>
+      <node id="1047">
+        <label>/Users/gaspard/git/oscit/include/oscit/osc_root_proxy.h</label>
         <link refid="osc__root__proxy_8h"/>
       </node>
-      <node id="988">
-        <label>include/oscit/log_object.h</label>
+      <node id="1030">
+        <label>/Users/gaspard/git/oscit/include/oscit/log_object.h</label>
         <link refid="log__object_8h"/>
       </node>
-      <node id="1006">
-        <label>include/oscit/osc_map_command.h</label>
+      <node id="1054">
+        <label>/Users/gaspard/git/oscit/include/oscit/osc_map_command.h</label>
         <link refid="osc__map__command_8h"/>
-        <childnode refid="984" relation="include">
+        <childnode refid="1032" relation="include">
         </childnode>
       </node>
-      <node id="993">
-        <label>include/oscit/call.h</label>
+      <node id="1036">
+        <label>/Users/gaspard/git/oscit/include/oscit/attrs_meta_method.h</label>
+        <link refid="attrs__meta__method_8h"/>
+      </node>
+      <node id="1037">
+        <label>/Users/gaspard/git/oscit/include/oscit/call.h</label>
         <link refid="call_8h"/>
-        <childnode refid="984" relation="include">
+        <childnode refid="1032" relation="include">
         </childnode>
       </node>
-      <node id="980">
-        <label>include/oscit/error.h</label>
+      <node id="1051">
+        <label>/Users/gaspard/git/oscit/include/oscit/error.h</label>
         <link refid="error_8h"/>
-        <childnode refid="977" relation="include">
+        <childnode refid="1025" relation="include">
         </childnode>
       </node>
-      <node id="998">
-        <label>include/oscit/proxy_factory.h</label>
+      <node id="1044">
+        <label>/Users/gaspard/git/oscit/include/oscit/proxy_factory.h</label>
         <link refid="proxy__factory_8h"/>
-        <childnode refid="984" relation="include">
+        <childnode refid="1032" relation="include">
         </childnode>
       </node>
-      <node id="983">
-        <label>include/oscit/hash_file_method.h</label>
+      <node id="1040">
+        <label>/Users/gaspard/git/oscit/include/oscit/hash_file_method.h</label>
         <link refid="hash__file__method_8h"/>
-        <childnode refid="984" relation="include">
+        <childnode refid="1032" relation="include">
         </childnode>
       </node>
-      <node id="996">
-        <label>include/oscit/list_meta_method.h</label>
+      <node id="1042">
+        <label>/Users/gaspard/git/oscit/include/oscit/list_meta_method.h</label>
         <link refid="list__meta__method_8h"/>
       </node>
-      <node id="1008">
-        <label>include/oscit/string_data.h</label>
+      <node id="1057">
+        <label>/Users/gaspard/git/oscit/include/oscit/string_data.h</label>
         <link refid="string__data_8h"/>
-        <childnode refid="977" relation="include">
+        <childnode refid="1025" relation="include">
         </childnode>
       </node>
-      <node id="1012">
-        <label>include/oscit/midi_value.h</label>
+      <node id="1056">
+        <label>/Users/gaspard/git/oscit/include/oscit/signal.h</label>
+        <link refid="signal_8h"/>
+        <childnode refid="1029" relation="include">
+        </childnode>
+        <childnode refid="1032" relation="include">
+        </childnode>
+        <childnode refid="1034" relation="include">
+        </childnode>
+      </node>
+      <node id="1061">
+        <label>/Users/gaspard/git/oscit/include/oscit/midi_value.h</label>
         <link refid="midi__value_8h"/>
-        <childnode refid="979" relation="include">
+        <childnode refid="1027" relation="include">
         </childnode>
       </node>
-      <node id="1002">
-        <label>include/oscit/zeroconf_browser.h</label>
+      <node id="1048">
+        <label>/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h</label>
         <link refid="zeroconf__browser_8h"/>
-        <childnode refid="984" relation="include">
+        <childnode refid="1032" relation="include">
         </childnode>
       </node>
-      <node id="1014">
-        <label>include/oscit/string_value.h</label>
+      <node id="1063">
+        <label>/Users/gaspard/git/oscit/include/oscit/string_value.h</label>
         <link refid="string__value_8h"/>
-        <childnode refid="979" relation="include">
+        <childnode refid="1027" relation="include">
         </childnode>
       </node>
-      <node id="999">
-        <label>include/oscit/root_proxy.h</label>
+      <node id="1045">
+        <label>/Users/gaspard/git/oscit/include/oscit/root_proxy.h</label>
         <link refid="root__proxy_8h"/>
-        <childnode refid="1000" relation="include">
+        <childnode refid="1046" relation="include">
         </childnode>
-        <childnode refid="1001" relation="include">
+        <childnode refid="1047" relation="include">
         </childnode>
-        <childnode refid="998" relation="include">
+        <childnode refid="1044" relation="include">
         </childnode>
-        <childnode refid="1002" relation="include">
-        </childnode>
-      </node>
-      <node id="985">
-        <label>include/oscit/hash.h</label>
-        <link refid="hash_8h"/>
-        <childnode refid="977" relation="include">
+        <childnode refid="1048" relation="include">
         </childnode>
       </node>
-      <node id="987">
-        <label>include/oscit/object.h</label>
+      <node id="1029">
+        <label>/Users/gaspard/git/oscit/include/oscit/object.h</label>
         <link refid="object_8h"/>
-        <childnode refid="988" relation="include">
+        <childnode refid="1030" relation="include">
         </childnode>
-        <childnode refid="989" relation="include">
+        <childnode refid="1031" relation="include">
         </childnode>
-        <childnode refid="990" relation="include">
+        <childnode refid="1033" relation="include">
         </childnode>
-        <childnode refid="1000" relation="include">
+        <childnode refid="1046" relation="include">
         </childnode>
-        <childnode refid="1005" relation="include">
+        <childnode refid="1050" relation="include">
         </childnode>
-        <childnode refid="984" relation="include">
+        <childnode refid="1032" relation="include">
         </childnode>
-        <childnode refid="991" relation="include">
+        <childnode refid="1034" relation="include">
         </childnode>
       </node>
-      <node id="992">
-        <label>include/oscit/alias.h</label>
+      <node id="1035">
+        <label>/Users/gaspard/git/oscit/include/oscit/alias.h</label>
         <link refid="alias_8h"/>
       </node>
-      <node id="990">
-        <label>include/oscit/object_handle.h</label>
+      <node id="1033">
+        <label>/Users/gaspard/git/oscit/include/oscit/object_handle.h</label>
         <link refid="object__handle_8h"/>
-        <childnode refid="991" relation="include">
+        <childnode refid="1034" relation="include">
         </childnode>
       </node>
-      <node id="989">
-        <label>include/oscit/method.h</label>
+      <node id="1031">
+        <label>/Users/gaspard/git/oscit/include/oscit/method.h</label>
         <link refid="method_8h"/>
-        <childnode refid="984" relation="include">
+        <childnode refid="1032" relation="include">
         </childnode>
       </node>
-      <node id="1003">
-        <label>include/oscit/tree_meta_method.h</label>
+      <node id="1049">
+        <label>/Users/gaspard/git/oscit/include/oscit/tree_meta_method.h</label>
         <link refid="tree__meta__method_8h"/>
       </node>
     </invincdepgraph>
@@ -391,61 +405,66 @@
 <codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>type_tag_;</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="67"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68" refid="classoscit_1_1_list_1a26bb73642ed31dad4d1fc8762cf150b0" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespaceoscit_1acdd0211767952c9d583a6206c38dbd5f" kindref="member">TypeTagID</ref><sp/><ref refid="classoscit_1_1_list_1a26bb73642ed31dad4d1fc8762cf150b0" kindref="member">type_id</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>type_id_;</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_list_1a3d5cb9ad147be770f645ebf403772719" kindref="member">contains_error</ref>();</highlight></codeline>
 <codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="72" refid="classoscit_1_1_list_1af5dfc173286fab093b2fe67ccc7fb88f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/>*<ref refid="classoscit_1_1_list_1af5dfc173286fab093b2fe67ccc7fb88f" kindref="member">operator[]</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>pos)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>values_[pos];</highlight></codeline>
+<codeline lineno="72" refid="classoscit_1_1_list_1a26bb73642ed31dad4d1fc8762cf150b0" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespaceoscit_1acdd0211767952c9d583a6206c38dbd5f" kindref="member">TypeTagID</ref><sp/><ref refid="classoscit_1_1_list_1a26bb73642ed31dad4d1fc8762cf150b0" kindref="member">type_id</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>type_id_;</highlight></codeline>
 <codeline lineno="74"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76" refid="classoscit_1_1_list_1aa0212c5a0269fb5a484f41c37b16d192" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/>*<ref refid="classoscit_1_1_list_1aa0212c5a0269fb5a484f41c37b16d192" kindref="member">operator[]</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>pos)<sp/>{</highlight></codeline>
+<codeline lineno="76" refid="classoscit_1_1_list_1af5dfc173286fab093b2fe67ccc7fb88f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/>*<ref refid="classoscit_1_1_list_1af5dfc173286fab093b2fe67ccc7fb88f" kindref="member">operator[]</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>pos)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>values_[pos];</highlight></codeline>
 <codeline lineno="78"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="79"><highlight class="normal"></highlight></codeline>
-<codeline lineno="80" refid="classoscit_1_1_list_1a95076177f35e1670310fe65c7a3e1aab" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/>*<ref refid="classoscit_1_1_list_1a95076177f35e1670310fe65c7a3e1aab" kindref="member">last</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>values_.size()<sp/>&gt;<sp/>0<sp/>?<sp/>values_[values_.size()<sp/>-<sp/>1]<sp/>:<sp/>NULL;</highlight></codeline>
+<codeline lineno="80" refid="classoscit_1_1_list_1aa0212c5a0269fb5a484f41c37b16d192" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/>*<ref refid="classoscit_1_1_list_1aa0212c5a0269fb5a484f41c37b16d192" kindref="member">operator[]</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>pos)<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>values_[pos];</highlight></codeline>
 <codeline lineno="82"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="83"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84" refid="classoscit_1_1_list_1a402c823a3707e793440cd06b4734338a" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/>*<ref refid="classoscit_1_1_list_1a402c823a3707e793440cd06b4734338a" kindref="member">first</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>values_.size()<sp/>&gt;<sp/>0<sp/>?<sp/>values_[0]<sp/>:<sp/>NULL;</highlight></codeline>
+<codeline lineno="84" refid="classoscit_1_1_list_1a95076177f35e1670310fe65c7a3e1aab" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/>*<ref refid="classoscit_1_1_list_1a95076177f35e1670310fe65c7a3e1aab" kindref="member">last</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>values_.size()<sp/>&gt;<sp/>0<sp/>?<sp/>values_[values_.size()<sp/>-<sp/>1]<sp/>:<sp/>NULL;</highlight></codeline>
 <codeline lineno="86"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_list_1ac6b4459a691d9977e9c27c2c6e6dd648" kindref="member">set_value_at</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>pos,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/>&amp;val);</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"></highlight></codeline>
-<codeline lineno="91" refid="classoscit_1_1_list_1ae149193bed4efc1430d07205e3b1ddf0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_list_1ae149193bed4efc1430d07205e3b1ddf0" kindref="member">size</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>values_.size();</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="classoscit_1_1_list_1a402c823a3707e793440cd06b4734338a" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/>*<ref refid="classoscit_1_1_list_1a402c823a3707e793440cd06b4734338a" kindref="member">first</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>values_.size()<sp/>&gt;<sp/>0<sp/>?<sp/>values_[0]<sp/>:<sp/>NULL;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_list_1ac6b4459a691d9977e9c27c2c6e6dd648" kindref="member">set_value_at</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>pos,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/>&amp;val);</highlight></codeline>
 <codeline lineno="94"><highlight class="normal"></highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_list_1a51ae625f6e46498af03e416e3fd507ec" kindref="member">push_back</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/>&amp;val);</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_list_1a0eca70315ef71bdfacec52986fe89a7e" kindref="member">push_front</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/>&amp;val);</highlight></codeline>
+<codeline lineno="95" refid="classoscit_1_1_list_1ae149193bed4efc1430d07205e3b1ddf0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_list_1ae149193bed4efc1430d07205e3b1ddf0" kindref="member">size</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>values_.size();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="98"><highlight class="normal"></highlight></codeline>
-<codeline lineno="99" refid="classoscit_1_1_list_1a0cda11b3909525ff8228049a40c58d71" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classoscit_1_1_list_1a0cda11b3909525ff8228049a40c58d71" kindref="member">set_type_tag</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classoscit_1_1_list_1ac7cbdf747c58a6e8bc769d4d36d28975" kindref="member">type_tag</ref>)<sp/>{</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>clear();</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>init_with_type_tag(type_tag);</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"></highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_list_1a30abbb0ee5fc024304ad9d49182311c9" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_list" kindref="compound">List</ref><sp/>&amp;other)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"></highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>clear();</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"></highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>update_type_tag()<sp/>{</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>type_tag_<sp/>=<sp/>type_tag_storage_.c_str();</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>type_id_<sp/>=<sp/><ref refid="thash_8h_1aa25de298426957dde26c176aaed7b873" kindref="member">H</ref>(type_tag_);<sp/></highlight><highlight class="comment">//<sp/>FIXME:<sp/>length<sp/>limit<sp/>is<sp/>~12<sp/>...</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"></highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*init_with_type_tag(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classoscit_1_1_list_1ac7cbdf747c58a6e8bc769d4d36d28975" kindref="member">type_tag</ref>);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_list_1a51ae625f6e46498af03e416e3fd507ec" kindref="member">push_back</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/>&amp;val);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_list_1a0eca70315ef71bdfacec52986fe89a7e" kindref="member">push_front</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_value" kindref="compound">Value</ref><sp/>&amp;val);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="classoscit_1_1_list_1a0cda11b3909525ff8228049a40c58d71" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classoscit_1_1_list_1a0cda11b3909525ff8228049a40c58d71" kindref="member">set_type_tag</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classoscit_1_1_list_1ac7cbdf747c58a6e8bc769d4d36d28975" kindref="member">type_tag</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>clear();</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>init_with_type_tag(type_tag);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_list_1a30abbb0ee5fc024304ad9d49182311c9" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_list" kindref="compound">List</ref><sp/>&amp;other)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>bad<sp/>idea</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>bool<sp/>starts_with_type_tags(const<sp/>std::string<sp/>&amp;type_tags)<sp/>const;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>clear();</highlight></codeline>
 <codeline lineno="115"><highlight class="normal"></highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/>std::string<sp/>type_tag_storage_;</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*type_tag_;</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><ref refid="namespaceoscit_1acdd0211767952c9d583a6206c38dbd5f" kindref="member">TypeTagID</ref><sp/><sp/><sp/>type_id_;</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/>std::vector&lt;Value*&gt;<sp/>values_;</highlight></codeline>
-<codeline lineno="120"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"></highlight></codeline>
-<codeline lineno="122"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>oscit</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="123"><highlight class="normal"></highlight></codeline>
-<codeline lineno="124"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>OSCIT_INCLUDE_OSCIT_LIST_H_</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>update_type_tag()<sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>type_tag_<sp/>=<sp/>type_tag_storage_.c_str();</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>type_id_<sp/>=<sp/><ref refid="namespaceoscit_1a3e04adc1de36dae20f9d99d55579bab8" kindref="member">hashId</ref>(type_tag_);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*init_with_type_tag(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classoscit_1_1_list_1ac7cbdf747c58a6e8bc769d4d36d28975" kindref="member">type_tag</ref>);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/>std::string<sp/>type_tag_storage_;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*type_tag_;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><ref refid="namespaceoscit_1acdd0211767952c9d583a6206c38dbd5f" kindref="member">TypeTagID</ref><sp/><sp/><sp/>type_id_;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/>std::vector&lt;Value*&gt;<sp/>values_;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>oscit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>OSCIT_INCLUDE_OSCIT_LIST_H_</highlight></codeline>
     </programlisting>
     <location file="/Users/gaspard/git/oscit/include/oscit/list.h"/>
   </compounddef>

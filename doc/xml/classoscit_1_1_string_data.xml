@@ -45,26 +45,26 @@
     <detaileddescription>
 <para>A String is just a reference counted std::string. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="1284">
+      <node id="1308">
         <label>oscit::ReferenceCounted</label>
         <link refid="classoscit_1_1_reference_counted"/>
       </node>
-      <node id="1283">
+      <node id="1307">
         <label>oscit::StringData</label>
         <link refid="classoscit_1_1_string_data"/>
-        <childnode refid="1284" relation="public-inheritance">
+        <childnode refid="1308" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="1286">
+      <node id="1310">
         <label>oscit::ReferenceCounted</label>
         <link refid="classoscit_1_1_reference_counted"/>
       </node>
-      <node id="1285">
+      <node id="1309">
         <label>oscit::StringData</label>
         <link refid="classoscit_1_1_string_data"/>
-        <childnode refid="1286" relation="public-inheritance">
+        <childnode refid="1310" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

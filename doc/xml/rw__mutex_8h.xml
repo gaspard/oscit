@@ -5,265 +5,291 @@
     <includes refid="semaphore_8h" local="yes">oscit/semaphore.h</includes>
     <includes refid="non__copyable_8h" local="yes">oscit/non_copyable.h</includes>
     <includes local="no">string.h</includes>
-    <includedby refid="c__thash_8h" local="yes">include/oscit/c_thash.h</includedby>
-    <includedby refid="c__tlist_8h" local="yes">include/oscit/c_tlist.h</includedby>
-    <includedby refid="c__tvector_8h" local="yes">include/oscit/c_tvector.h</includedby>
+    <includedby refid="c__thash_8h" local="yes">/Users/gaspard/git/oscit/include/oscit/c_thash.h</includedby>
+    <includedby refid="c__tlist_8h" local="yes">/Users/gaspard/git/oscit/include/oscit/c_tlist.h</includedby>
+    <includedby refid="c__tvector_8h" local="yes">/Users/gaspard/git/oscit/include/oscit/c_tvector.h</includedby>
     <incdepgraph>
-      <node id="2525">
+      <node id="2515">
         <label>oscit/non_copyable.h</label>
         <link refid="non__copyable_8h"/>
       </node>
-      <node id="2526">
+      <node id="2516">
         <label>oscit/mutex.h</label>
         <link refid="mutex_8h"/>
-        <childnode refid="2527" relation="include">
+        <childnode refid="2517" relation="include">
         </childnode>
-        <childnode refid="2522" relation="include">
+        <childnode refid="2512" relation="include">
         </childnode>
-        <childnode refid="2528" relation="include">
+        <childnode refid="2518" relation="include">
         </childnode>
-        <childnode refid="2525" relation="include">
+        <childnode refid="2515" relation="include">
         </childnode>
-        <childnode refid="2529" relation="include">
+        <childnode refid="2519" relation="include">
         </childnode>
       </node>
-      <node id="2522">
+      <node id="2512">
         <label>assert.h</label>
       </node>
-      <node id="2523">
+      <node id="2513">
         <label>errno.h</label>
       </node>
-      <node id="2527">
+      <node id="2517">
         <label>pthread.h</label>
       </node>
-      <node id="2524">
+      <node id="2514">
         <label>string.h</label>
       </node>
-      <node id="2528">
+      <node id="2518">
         <label>cstdio</label>
       </node>
-      <node id="2520">
-        <label>include/oscit/rw_mutex.h</label>
+      <node id="2510">
+        <label>/Users/gaspard/git/oscit/include/oscit/rw_mutex.h</label>
         <link refid="rw_mutex.h"/>
-        <childnode refid="2521" relation="include">
+        <childnode refid="2511" relation="include">
         </childnode>
-        <childnode refid="2525" relation="include">
+        <childnode refid="2515" relation="include">
         </childnode>
-        <childnode refid="2524" relation="include">
+        <childnode refid="2514" relation="include">
+        </childnode>
+      </node>
+      <node id="2511">
+        <label>oscit/semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="2512" relation="include">
+        </childnode>
+        <childnode refid="2511" relation="include">
+        </childnode>
+        <childnode refid="2513" relation="include">
+        </childnode>
+        <childnode refid="2514" relation="include">
+        </childnode>
+        <childnode refid="2515" relation="include">
+        </childnode>
+        <childnode refid="2516" relation="include">
         </childnode>
       </node>
       <node id="2521">
-        <label>oscit/semaphore.h</label>
-        <link refid="semaphore_8h"/>
-        <childnode refid="2522" relation="include">
+        <label>iostream</label>
+      </node>
+      <node id="2519">
+        <label>oscit/typed.h</label>
+        <link refid="typed_8h"/>
+        <childnode refid="2520" relation="include">
         </childnode>
         <childnode refid="2521" relation="include">
         </childnode>
-        <childnode refid="2523" relation="include">
-        </childnode>
-        <childnode refid="2524" relation="include">
-        </childnode>
-        <childnode refid="2525" relation="include">
-        </childnode>
-        <childnode refid="2526" relation="include">
-        </childnode>
       </node>
-      <node id="2531">
-        <label>iostream</label>
-      </node>
-      <node id="2529">
-        <label>oscit/typed.h</label>
-        <link refid="typed_8h"/>
-        <childnode refid="2530" relation="include">
-        </childnode>
-        <childnode refid="2531" relation="include">
-        </childnode>
-      </node>
-      <node id="2530">
+      <node id="2520">
         <label>stdio.h</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
       <node id="2547">
-        <label>include/oscit/list_with_type_meta_method.h</label>
-        <link refid="list__with__type__meta__method_8h"/>
-      </node>
-      <node id="2533">
-        <label>include/oscit/c_thash.h</label>
-        <link refid="c__thash_8h"/>
-        <childnode refid="2534" relation="include">
+        <label>/Users/gaspard/git/oscit/include/oscit/observer.h</label>
+        <link refid="observer_8h"/>
+        <childnode refid="2524" relation="include">
         </childnode>
-        <childnode refid="2539" relation="include">
-        </childnode>
-      </node>
-      <node id="2550">
-        <label>include/oscit/object_proxy.h</label>
-        <link refid="object__proxy_8h"/>
         <childnode refid="2548" relation="include">
         </childnode>
       </node>
-      <node id="2555">
-        <label>include/oscit/osc_remote_object.h</label>
+      <node id="2523">
+        <label>/Users/gaspard/git/oscit/include/oscit/c_thash.h</label>
+        <link refid="c__thash_8h"/>
+        <childnode refid="2524" relation="include">
+        </childnode>
+        <childnode refid="2527" relation="include">
+        </childnode>
+        <childnode refid="2529" relation="include">
+        </childnode>
+      </node>
+      <node id="2541">
+        <label>/Users/gaspard/git/oscit/include/oscit/object_proxy.h</label>
+        <link refid="object__proxy_8h"/>
+        <childnode refid="2539" relation="include">
+        </childnode>
+      </node>
+      <node id="2545">
+        <label>/Users/gaspard/git/oscit/include/oscit/osc_remote_object.h</label>
         <link refid="osc__remote__object_8h"/>
       </node>
-      <node id="2554">
-        <label>include/oscit/type_meta_method.h</label>
-        <link refid="type__meta__method_8h"/>
-      </node>
-      <node id="2539">
-        <label>include/oscit/root.h</label>
+      <node id="2529">
+        <label>/Users/gaspard/git/oscit/include/oscit/root.h</label>
         <link refid="root_8h"/>
+        <childnode refid="2530" relation="include">
+        </childnode>
+        <childnode refid="2531" relation="include">
+        </childnode>
+        <childnode refid="2532" relation="include">
+        </childnode>
+        <childnode refid="2533" relation="include">
+        </childnode>
+        <childnode refid="2534" relation="include">
+        </childnode>
+        <childnode refid="2536" relation="include">
+        </childnode>
+        <childnode refid="2537" relation="include">
+        </childnode>
+        <childnode refid="2538" relation="include">
+        </childnode>
+        <childnode refid="2527" relation="include">
+        </childnode>
+        <childnode refid="2539" relation="include">
+        </childnode>
         <childnode refid="2540" relation="include">
         </childnode>
+        <childnode refid="2544" relation="include">
+        </childnode>
+      </node>
+      <node id="2527">
+        <label>/Users/gaspard/git/oscit/include/oscit/oscit.h</label>
+        <link refid="oscit_8h"/>
+      </node>
+      <node id="2536">
+        <label>/Users/gaspard/git/oscit/include/oscit/info_meta_method.h</label>
+        <link refid="info__meta__method_8h"/>
+      </node>
+      <node id="2534">
+        <label>/Users/gaspard/git/oscit/include/oscit/file_method.h</label>
+        <link refid="file__method_8h"/>
+        <childnode refid="2535" relation="include">
+        </childnode>
+        <childnode refid="2527" relation="include">
+        </childnode>
+      </node>
+      <node id="2533">
+        <label>/Users/gaspard/git/oscit/include/oscit/error_meta_method.h</label>
+        <link refid="error__meta__method_8h"/>
+      </node>
+      <node id="2538">
+        <label>/Users/gaspard/git/oscit/include/oscit/list_with_attributes_meta_method.h</label>
+        <link refid="list__with__attributes__meta__method_8h"/>
+      </node>
+      <node id="2542">
+        <label>/Users/gaspard/git/oscit/include/oscit/osc_root_proxy.h</label>
+        <link refid="osc__root__proxy_8h"/>
+      </node>
+      <node id="2525">
+        <label>/Users/gaspard/git/oscit/include/oscit/log_object.h</label>
+        <link refid="log__object_8h"/>
+      </node>
+      <node id="2531">
+        <label>/Users/gaspard/git/oscit/include/oscit/attrs_meta_method.h</label>
+        <link refid="attrs__meta__method_8h"/>
+      </node>
+      <node id="2532">
+        <label>/Users/gaspard/git/oscit/include/oscit/call.h</label>
+        <link refid="call_8h"/>
+        <childnode refid="2527" relation="include">
+        </childnode>
+      </node>
+      <node id="2539">
+        <label>/Users/gaspard/git/oscit/include/oscit/proxy_factory.h</label>
+        <link refid="proxy__factory_8h"/>
+        <childnode refid="2527" relation="include">
+        </childnode>
+      </node>
+      <node id="2535">
+        <label>/Users/gaspard/git/oscit/include/oscit/hash_file_method.h</label>
+        <link refid="hash__file__method_8h"/>
+        <childnode refid="2527" relation="include">
+        </childnode>
+      </node>
+      <node id="2537">
+        <label>/Users/gaspard/git/oscit/include/oscit/list_meta_method.h</label>
+        <link refid="list__meta__method_8h"/>
+      </node>
+      <node id="2522">
+        <label>/Users/gaspard/git/oscit/include/oscit/rw_mutex.h</label>
+        <link refid="rw_mutex.h"/>
+        <childnode refid="2523" relation="include">
+        </childnode>
+        <childnode refid="2546" relation="include">
+        </childnode>
+        <childnode refid="2549" relation="include">
+        </childnode>
+      </node>
+      <node id="2548">
+        <label>/Users/gaspard/git/oscit/include/oscit/signal.h</label>
+        <link refid="signal_8h"/>
+        <childnode refid="2524" relation="include">
+        </childnode>
+        <childnode refid="2527" relation="include">
+        </childnode>
+        <childnode refid="2529" relation="include">
+        </childnode>
+      </node>
+      <node id="2549">
+        <label>/Users/gaspard/git/oscit/include/oscit/c_tvector.h</label>
+        <link refid="c__tvector_8h"/>
+        <childnode refid="2524" relation="include">
+        </childnode>
+      </node>
+      <node id="2543">
+        <label>/Users/gaspard/git/oscit/include/oscit/zeroconf_browser.h</label>
+        <link refid="zeroconf__browser_8h"/>
+        <childnode refid="2527" relation="include">
+        </childnode>
+      </node>
+      <node id="2540">
+        <label>/Users/gaspard/git/oscit/include/oscit/root_proxy.h</label>
+        <link refid="root__proxy_8h"/>
         <childnode refid="2541" relation="include">
         </childnode>
         <childnode refid="2542" relation="include">
         </childnode>
+        <childnode refid="2539" relation="include">
+        </childnode>
         <childnode refid="2543" relation="include">
-        </childnode>
-        <childnode refid="2545" relation="include">
-        </childnode>
-        <childnode refid="2546" relation="include">
-        </childnode>
-        <childnode refid="2547" relation="include">
-        </childnode>
-        <childnode refid="2537" relation="include">
-        </childnode>
-        <childnode refid="2548" relation="include">
-        </childnode>
-        <childnode refid="2549" relation="include">
-        </childnode>
-        <childnode refid="2553" relation="include">
-        </childnode>
-        <childnode refid="2554" relation="include">
-        </childnode>
-      </node>
-      <node id="2537">
-        <label>include/oscit/oscit.h</label>
-        <link refid="oscit_8h"/>
-      </node>
-      <node id="2545">
-        <label>include/oscit/info_meta_method.h</label>
-        <link refid="info__meta__method_8h"/>
-      </node>
-      <node id="2543">
-        <label>include/oscit/file_method.h</label>
-        <link refid="file__method_8h"/>
-        <childnode refid="2544" relation="include">
-        </childnode>
-        <childnode refid="2537" relation="include">
-        </childnode>
-      </node>
-      <node id="2542">
-        <label>include/oscit/error_meta_method.h</label>
-        <link refid="error__meta__method_8h"/>
-      </node>
-      <node id="2551">
-        <label>include/oscit/osc_root_proxy.h</label>
-        <link refid="osc__root__proxy_8h"/>
-      </node>
-      <node id="2535">
-        <label>include/oscit/log_object.h</label>
-        <link refid="log__object_8h"/>
-      </node>
-      <node id="2541">
-        <label>include/oscit/call.h</label>
-        <link refid="call_8h"/>
-        <childnode refid="2537" relation="include">
-        </childnode>
-      </node>
-      <node id="2548">
-        <label>include/oscit/proxy_factory.h</label>
-        <link refid="proxy__factory_8h"/>
-        <childnode refid="2537" relation="include">
-        </childnode>
-      </node>
-      <node id="2544">
-        <label>include/oscit/hash_file_method.h</label>
-        <link refid="hash__file__method_8h"/>
-        <childnode refid="2537" relation="include">
         </childnode>
       </node>
       <node id="2546">
-        <label>include/oscit/list_meta_method.h</label>
-        <link refid="list__meta__method_8h"/>
-      </node>
-      <node id="2532">
-        <label>include/oscit/rw_mutex.h</label>
-        <link refid="rw_mutex.h"/>
-        <childnode refid="2533" relation="include">
+        <label>/Users/gaspard/git/oscit/include/oscit/c_tlist.h</label>
+        <link refid="c__tlist_8h"/>
+        <childnode refid="2547" relation="include">
         </childnode>
-        <childnode refid="2556" relation="include">
+        <childnode refid="2527" relation="include">
         </childnode>
-        <childnode refid="2557" relation="include">
-        </childnode>
-      </node>
-      <node id="2557">
-        <label>include/oscit/c_tvector.h</label>
-        <link refid="c__tvector_8h"/>
-        <childnode refid="2534" relation="include">
-        </childnode>
-      </node>
-      <node id="2552">
-        <label>include/oscit/zeroconf_browser.h</label>
-        <link refid="zeroconf__browser_8h"/>
-        <childnode refid="2537" relation="include">
-        </childnode>
-      </node>
-      <node id="2549">
-        <label>include/oscit/root_proxy.h</label>
-        <link refid="root__proxy_8h"/>
-        <childnode refid="2550" relation="include">
-        </childnode>
-        <childnode refid="2551" relation="include">
+        <childnode refid="2529" relation="include">
         </childnode>
         <childnode refid="2548" relation="include">
         </childnode>
-        <childnode refid="2552" relation="include">
-        </childnode>
       </node>
-      <node id="2556">
-        <label>include/oscit/c_tlist.h</label>
-        <link refid="c__tlist_8h"/>
-        <childnode refid="2539" relation="include">
-        </childnode>
-      </node>
-      <node id="2534">
-        <label>include/oscit/object.h</label>
+      <node id="2524">
+        <label>/Users/gaspard/git/oscit/include/oscit/object.h</label>
         <link refid="object_8h"/>
-        <childnode refid="2535" relation="include">
+        <childnode refid="2525" relation="include">
         </childnode>
-        <childnode refid="2536" relation="include">
+        <childnode refid="2526" relation="include">
         </childnode>
-        <childnode refid="2538" relation="include">
+        <childnode refid="2528" relation="include">
         </childnode>
-        <childnode refid="2550" relation="include">
+        <childnode refid="2541" relation="include">
         </childnode>
-        <childnode refid="2555" relation="include">
+        <childnode refid="2545" relation="include">
         </childnode>
-        <childnode refid="2537" relation="include">
+        <childnode refid="2527" relation="include">
         </childnode>
-        <childnode refid="2539" relation="include">
+        <childnode refid="2529" relation="include">
         </childnode>
       </node>
-      <node id="2540">
-        <label>include/oscit/alias.h</label>
+      <node id="2530">
+        <label>/Users/gaspard/git/oscit/include/oscit/alias.h</label>
         <link refid="alias_8h"/>
       </node>
-      <node id="2538">
-        <label>include/oscit/object_handle.h</label>
+      <node id="2528">
+        <label>/Users/gaspard/git/oscit/include/oscit/object_handle.h</label>
         <link refid="object__handle_8h"/>
-        <childnode refid="2539" relation="include">
+        <childnode refid="2529" relation="include">
         </childnode>
       </node>
-      <node id="2536">
-        <label>include/oscit/method.h</label>
+      <node id="2526">
+        <label>/Users/gaspard/git/oscit/include/oscit/method.h</label>
         <link refid="method_8h"/>
-        <childnode refid="2537" relation="include">
+        <childnode refid="2527" relation="include">
         </childnode>
       </node>
-      <node id="2553">
-        <label>include/oscit/tree_meta_method.h</label>
+      <node id="2544">
+        <label>/Users/gaspard/git/oscit/include/oscit/tree_meta_method.h</label>
         <link refid="tree__meta__method_8h"/>
       </node>
     </invincdepgraph>
@@ -335,114 +361,114 @@
 <codeline lineno="59"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#if<sp/>1</highlight></codeline>
 <codeline lineno="60"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">//<sp/>POSIX<sp/>pthread_rwlock</highlight></codeline>
-<codeline lineno="66" refid="classoscit_1_1_r_w_mutex" refkind="compound"><highlight class="comment"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classoscit_1_1_r_w_mutex" kindref="compound">RWMutex</ref><sp/>{</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="68" refid="classoscit_1_1_r_w_mutex_1aa1110a616ea1cdee191912e2e136e45a" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_r_w_mutex_1aa1110a616ea1cdee191912e2e136e45a" kindref="member">RWMutex</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>status<sp/>=<sp/>pthread_rwlock_init(&amp;rwlock_,<sp/>NULL);</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Could<sp/>not<sp/>initialize<sp/>rwlock<sp/>(%s)\n&quot;</highlight><highlight class="normal">,<sp/>strerror(status));</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight></codeline>
-<codeline lineno="75" refid="classoscit_1_1_r_w_mutex_1a1fbdf80ace36018183196f92a2193ceb" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_r_w_mutex_1a1fbdf80ace36018183196f92a2193ceb" kindref="member">~RWMutex</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>status<sp/>=<sp/>pthread_rwlock_destroy(&amp;rwlock_);</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Could<sp/>not<sp/>destroy<sp/>rwlock<sp/>(%s)\n&quot;</highlight><highlight class="normal">,<sp/>strerror(status));</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84" refid="classoscit_1_1_r_w_mutex_1ac549bb3340bac6726bce2863f80a240e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_r_w_mutex_1ac549bb3340bac6726bce2863f80a240e" kindref="member">lock</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>pthread_rwlock_wrlock(&amp;rwlock_);</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"></highlight></codeline>
-<codeline lineno="90" refid="classoscit_1_1_r_w_mutex_1ae74be65c4bbcc16313b5ca56d17db947" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_r_w_mutex_1ae74be65c4bbcc16313b5ca56d17db947" kindref="member">unlock</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>pthread_rwlock_unlock(&amp;rwlock_);</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"></highlight></codeline>
-<codeline lineno="96" refid="classoscit_1_1_r_w_mutex_1a672d9bfefbc1839d9e196e90a1963f39" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_r_w_mutex_1a672d9bfefbc1839d9e196e90a1963f39" kindref="member">read_lock</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>pthread_rwlock_rdlock(&amp;rwlock_);</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"></highlight></codeline>
-<codeline lineno="102" refid="classoscit_1_1_r_w_mutex_1a97010c1b513da70f8c1c9e671529abb0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_r_w_mutex_1a97010c1b513da70f8c1c9e671529abb0" kindref="member">read_unlock</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>YES,<sp/>this<sp/>const_cast<sp/>is<sp/>ugly,<sp/>but<sp/>that&apos;s<sp/>the<sp/>only<sp/>way<sp/>to<sp/>allow<sp/>READ<sp/>lock<sp/>on<sp/>const.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>pthread_rwlock_unlock(&amp;rwlock_);</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/>pthread_rwlock_t<sp/>rwlock_;</highlight></codeline>
-<codeline lineno="111"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"></highlight></codeline>
-<codeline lineno="113"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
-<codeline lineno="114"><highlight class="preprocessor"></highlight><highlight class="comment">//<sp/>Homebrewed<sp/>RWMutex<sp/>using<sp/>a<sp/>semaphore</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="115"><highlight class="normal"></highlight><highlight class="comment">//<sp/>On<sp/>Windows,<sp/>we<sp/>can<sp/>use<sp/>ReaderWriterLock.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="116"><highlight class="normal"></highlight><highlight class="comment">//<sp/>If<sp/>we<sp/>still<sp/>need<sp/>to<sp/>build<sp/>our<sp/>own,<sp/>we<sp/>could<sp/>use<sp/>conditional<sp/>variable<sp/>with<sp/>atomic</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="117"><highlight class="normal"></highlight><highlight class="comment">//<sp/>reader<sp/>count.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="118"><highlight class="normal"></highlight></codeline>
-<codeline lineno="119"><highlight class="normal"></highlight></codeline>
-<codeline lineno="124"><highlight class="keyword">class<sp/></highlight><highlight class="normal">RWMutex<sp/>:<sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>Semaphore<sp/>{</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_r_w_mutex_1aa1110a616ea1cdee191912e2e136e45a" kindref="member">RWMutex</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>max_reader_count<sp/>=<sp/>16)<sp/>:<sp/>Semaphore(max_reader_count)<sp/>{}</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"></highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_r_w_mutex_1ac549bb3340bac6726bce2863f80a240e" kindref="member">lock</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>acquire_all();</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"></highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_r_w_mutex_1ae74be65c4bbcc16313b5ca56d17db947" kindref="member">unlock</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>release_all();</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"></highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_r_w_mutex_1a672d9bfefbc1839d9e196e90a1963f39" kindref="member">read_lock</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>acquire();</highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="145"><highlight class="normal"></highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_r_w_mutex_1a97010c1b513da70f8c1c9e671529abb0" kindref="member">read_unlock</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>release();</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"></highlight></codeline>
-<codeline lineno="152"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="68" refid="classoscit_1_1_r_w_mutex" refkind="compound"><highlight class="comment"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classoscit_1_1_r_w_mutex" kindref="compound">RWMutex</ref><sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="70" refid="classoscit_1_1_r_w_mutex_1aa1110a616ea1cdee191912e2e136e45a" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_r_w_mutex_1aa1110a616ea1cdee191912e2e136e45a" kindref="member">RWMutex</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>status<sp/>=<sp/>pthread_rwlock_init(&amp;rwlock_,<sp/>NULL);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Could<sp/>not<sp/>initialize<sp/>rwlock<sp/>(%s)\n&quot;</highlight><highlight class="normal">,<sp/>strerror(status));</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="classoscit_1_1_r_w_mutex_1a1fbdf80ace36018183196f92a2193ceb" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_r_w_mutex_1a1fbdf80ace36018183196f92a2193ceb" kindref="member">~RWMutex</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>status<sp/>=<sp/>pthread_rwlock_destroy(&amp;rwlock_);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Could<sp/>not<sp/>destroy<sp/>rwlock<sp/>(%s)\n&quot;</highlight><highlight class="normal">,<sp/>strerror(status));</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="classoscit_1_1_r_w_mutex_1ac549bb3340bac6726bce2863f80a240e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_r_w_mutex_1ac549bb3340bac6726bce2863f80a240e" kindref="member">lock</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>pthread_rwlock_wrlock(&amp;rwlock_);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="classoscit_1_1_r_w_mutex_1ae74be65c4bbcc16313b5ca56d17db947" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_r_w_mutex_1ae74be65c4bbcc16313b5ca56d17db947" kindref="member">unlock</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>pthread_rwlock_unlock(&amp;rwlock_);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="classoscit_1_1_r_w_mutex_1a672d9bfefbc1839d9e196e90a1963f39" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_r_w_mutex_1a672d9bfefbc1839d9e196e90a1963f39" kindref="member">read_lock</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>pthread_rwlock_rdlock(&amp;rwlock_);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="classoscit_1_1_r_w_mutex_1a97010c1b513da70f8c1c9e671529abb0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_r_w_mutex_1a97010c1b513da70f8c1c9e671529abb0" kindref="member">read_unlock</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>YES,<sp/>this<sp/>const_cast<sp/>is<sp/>ugly,<sp/>but<sp/>that&apos;s<sp/>the<sp/>only<sp/>way<sp/>to<sp/>allow<sp/>READ<sp/>lock<sp/>on<sp/>const.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>pthread_rwlock_unlock(&amp;rwlock_);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/>pthread_rwlock_t<sp/>rwlock_;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="116"><highlight class="preprocessor"></highlight><highlight class="comment">//<sp/>Homebrewed<sp/>RWMutex<sp/>using<sp/>a<sp/>semaphore</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="comment">//<sp/>On<sp/>Windows,<sp/>we<sp/>can<sp/>use<sp/>ReaderWriterLock.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="comment">//<sp/>If<sp/>we<sp/>still<sp/>need<sp/>to<sp/>build<sp/>our<sp/>own,<sp/>we<sp/>could<sp/>use<sp/>conditional<sp/>variable<sp/>with<sp/>atomic</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="comment">//<sp/>reader<sp/>count.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="keyword">class<sp/></highlight><highlight class="normal">RWMutex<sp/>:<sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>Semaphore<sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_r_w_mutex_1aa1110a616ea1cdee191912e2e136e45a" kindref="member">RWMutex</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>max_reader_count<sp/>=<sp/>16)<sp/>:<sp/>Semaphore(max_reader_count)<sp/>{}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_r_w_mutex_1ac549bb3340bac6726bce2863f80a240e" kindref="member">lock</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>acquire_all();</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_r_w_mutex_1ae74be65c4bbcc16313b5ca56d17db947" kindref="member">unlock</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>release_all();</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_r_w_mutex_1a672d9bfefbc1839d9e196e90a1963f39" kindref="member">read_lock</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>acquire();</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_r_w_mutex_1a97010c1b513da70f8c1c9e671529abb0" kindref="member">read_unlock</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>release();</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="153"><highlight class="normal"></highlight></codeline>
-<codeline lineno="154"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
-<codeline lineno="155"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="156"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>dummy</highlight></codeline>
-<codeline lineno="157"><highlight class="preprocessor"></highlight></codeline>
-<codeline lineno="160" refid="classoscit_1_1_scoped_write" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classoscit_1_1_scoped_write" kindref="compound">ScopedWrite</ref><sp/>:<sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_non_copyable" kindref="compound">NonCopyable</ref><sp/>{</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="162" refid="classoscit_1_1_scoped_write_1ac9c9ee62680aaa4ee0a18d26a4dd6825" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_scoped_write_1ac9c9ee62680aaa4ee0a18d26a4dd6825" kindref="member">ScopedWrite</ref>(<ref refid="classoscit_1_1_r_w_mutex" kindref="compound">RWMutex</ref><sp/>*mutex)<sp/>:<sp/>mutex_ptr_(mutex)<sp/>{</highlight></codeline>
-<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>mutex_ptr_-&gt;<ref refid="classoscit_1_1_r_w_mutex_1ac549bb3340bac6726bce2863f80a240e" kindref="member">lock</ref>();</highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="165"><highlight class="normal"></highlight></codeline>
-<codeline lineno="166" refid="classoscit_1_1_scoped_write_1adb0be76704f1612526aa47decd86decf" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_scoped_write_1adb0be76704f1612526aa47decd86decf" kindref="member">ScopedWrite</ref>(<ref refid="classoscit_1_1_r_w_mutex" kindref="compound">RWMutex</ref><sp/>&amp;mutex)<sp/>:<sp/>mutex_ptr_(&amp;mutex)<sp/>{</highlight></codeline>
-<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>mutex_ptr_-&gt;<ref refid="classoscit_1_1_r_w_mutex_1ac549bb3340bac6726bce2863f80a240e" kindref="member">lock</ref>();</highlight></codeline>
-<codeline lineno="168"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="169"><highlight class="normal"></highlight></codeline>
-<codeline lineno="170" refid="classoscit_1_1_scoped_write_1af206668d7987b5e01ffe9fbe25889f6b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_scoped_write_1af206668d7987b5e01ffe9fbe25889f6b" kindref="member">~ScopedWrite</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>mutex_ptr_-&gt;<ref refid="classoscit_1_1_r_w_mutex_1ae74be65c4bbcc16313b5ca56d17db947" kindref="member">unlock</ref>();</highlight></codeline>
-<codeline lineno="172"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="173"><highlight class="normal"></highlight></codeline>
-<codeline lineno="174"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="175"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_r_w_mutex" kindref="compound">RWMutex</ref><sp/>*mutex_ptr_;</highlight></codeline>
-<codeline lineno="176"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="177"><highlight class="normal"></highlight></codeline>
-<codeline lineno="180" refid="classoscit_1_1_scoped_read" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classoscit_1_1_scoped_read" kindref="compound">ScopedRead</ref><sp/>:<sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_non_copyable" kindref="compound">NonCopyable</ref><sp/>{</highlight></codeline>
-<codeline lineno="181"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="182" refid="classoscit_1_1_scoped_read_1aa13e290b4c74db4e6f2b1ea64bc68a51" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_scoped_read_1aa13e290b4c74db4e6f2b1ea64bc68a51" kindref="member">ScopedRead</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_r_w_mutex" kindref="compound">RWMutex</ref><sp/>*mutex)<sp/>:<sp/>mutex_ptr_(mutex)<sp/>{</highlight></codeline>
-<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>mutex_ptr_-&gt;<ref refid="classoscit_1_1_r_w_mutex_1a672d9bfefbc1839d9e196e90a1963f39" kindref="member">read_lock</ref>();</highlight></codeline>
-<codeline lineno="184"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="185"><highlight class="normal"></highlight></codeline>
-<codeline lineno="186" refid="classoscit_1_1_scoped_read_1a419837b64261345efaa219439a96469b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_scoped_read_1a419837b64261345efaa219439a96469b" kindref="member">ScopedRead</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_r_w_mutex" kindref="compound">RWMutex</ref><sp/>&amp;mutex)<sp/>:<sp/>mutex_ptr_(&amp;mutex)<sp/>{</highlight></codeline>
-<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>mutex_ptr_-&gt;<ref refid="classoscit_1_1_r_w_mutex_1a672d9bfefbc1839d9e196e90a1963f39" kindref="member">read_lock</ref>();</highlight></codeline>
-<codeline lineno="188"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="189"><highlight class="normal"></highlight></codeline>
-<codeline lineno="190" refid="classoscit_1_1_scoped_read_1a35a24a6ae347366adddf659927d0b3fe" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_scoped_read_1a35a24a6ae347366adddf659927d0b3fe" kindref="member">~ScopedRead</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>mutex_ptr_-&gt;<ref refid="classoscit_1_1_r_w_mutex_1a97010c1b513da70f8c1c9e671529abb0" kindref="member">read_unlock</ref>();</highlight></codeline>
-<codeline lineno="192"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="193"><highlight class="normal"></highlight></codeline>
-<codeline lineno="194"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="195"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_r_w_mutex" kindref="compound">RWMutex</ref><sp/>*mutex_ptr_;</highlight></codeline>
-<codeline lineno="196"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="197"><highlight class="normal"></highlight></codeline>
-<codeline lineno="198"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>oscit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="157"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>dummy</highlight></codeline>
+<codeline lineno="159"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="162" refid="classoscit_1_1_scoped_write" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classoscit_1_1_scoped_write" kindref="compound">ScopedWrite</ref><sp/>:<sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_non_copyable" kindref="compound">NonCopyable</ref><sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="164" refid="classoscit_1_1_scoped_write_1ac9c9ee62680aaa4ee0a18d26a4dd6825" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_scoped_write_1ac9c9ee62680aaa4ee0a18d26a4dd6825" kindref="member">ScopedWrite</ref>(<ref refid="classoscit_1_1_r_w_mutex" kindref="compound">RWMutex</ref><sp/>*mutex)<sp/>:<sp/>mutex_ptr_(mutex)<sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>mutex_ptr_-&gt;<ref refid="classoscit_1_1_r_w_mutex_1ac549bb3340bac6726bce2863f80a240e" kindref="member">lock</ref>();</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="classoscit_1_1_scoped_write_1adb0be76704f1612526aa47decd86decf" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_scoped_write_1adb0be76704f1612526aa47decd86decf" kindref="member">ScopedWrite</ref>(<ref refid="classoscit_1_1_r_w_mutex" kindref="compound">RWMutex</ref><sp/>&amp;mutex)<sp/>:<sp/>mutex_ptr_(&amp;mutex)<sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>mutex_ptr_-&gt;<ref refid="classoscit_1_1_r_w_mutex_1ac549bb3340bac6726bce2863f80a240e" kindref="member">lock</ref>();</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172" refid="classoscit_1_1_scoped_write_1af206668d7987b5e01ffe9fbe25889f6b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_scoped_write_1af206668d7987b5e01ffe9fbe25889f6b" kindref="member">~ScopedWrite</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>mutex_ptr_-&gt;<ref refid="classoscit_1_1_r_w_mutex_1ae74be65c4bbcc16313b5ca56d17db947" kindref="member">unlock</ref>();</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_r_w_mutex" kindref="compound">RWMutex</ref><sp/>*mutex_ptr_;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182" refid="classoscit_1_1_scoped_read" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classoscit_1_1_scoped_read" kindref="compound">ScopedRead</ref><sp/>:<sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_non_copyable" kindref="compound">NonCopyable</ref><sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="184" refid="classoscit_1_1_scoped_read_1aa13e290b4c74db4e6f2b1ea64bc68a51" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_scoped_read_1aa13e290b4c74db4e6f2b1ea64bc68a51" kindref="member">ScopedRead</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_r_w_mutex" kindref="compound">RWMutex</ref><sp/>*mutex)<sp/>:<sp/>mutex_ptr_(mutex)<sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>mutex_ptr_-&gt;<ref refid="classoscit_1_1_r_w_mutex_1a672d9bfefbc1839d9e196e90a1963f39" kindref="member">read_lock</ref>();</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188" refid="classoscit_1_1_scoped_read_1a419837b64261345efaa219439a96469b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_scoped_read_1a419837b64261345efaa219439a96469b" kindref="member">ScopedRead</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_r_w_mutex" kindref="compound">RWMutex</ref><sp/>&amp;mutex)<sp/>:<sp/>mutex_ptr_(&amp;mutex)<sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>mutex_ptr_-&gt;<ref refid="classoscit_1_1_r_w_mutex_1a672d9bfefbc1839d9e196e90a1963f39" kindref="member">read_lock</ref>();</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192" refid="classoscit_1_1_scoped_read_1a35a24a6ae347366adddf659927d0b3fe" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_scoped_read_1a35a24a6ae347366adddf659927d0b3fe" kindref="member">~ScopedRead</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>mutex_ptr_-&gt;<ref refid="classoscit_1_1_r_w_mutex_1a97010c1b513da70f8c1c9e671529abb0" kindref="member">read_unlock</ref>();</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_r_w_mutex" kindref="compound">RWMutex</ref><sp/>*mutex_ptr_;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="199"><highlight class="normal"></highlight></codeline>
-<codeline lineno="200"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>OSCIT_INCLUDE_OSCIT_RW_MUTEX_H_</highlight></codeline>
+<codeline lineno="200"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>oscit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>OSCIT_INCLUDE_OSCIT_RW_MUTEX_H_</highlight></codeline>
     </programlisting>
     <location file="/Users/gaspard/git/oscit/include/oscit/rw_mutex.h"/>
   </compounddef>

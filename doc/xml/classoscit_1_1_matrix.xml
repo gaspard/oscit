@@ -1,0 +1,376 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classoscit_1_1_matrix" kind="class" prot="public">
+    <compoundname>oscit::Matrix</compoundname>
+    <includes refid="matrix_8h" local="no">matrix.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classoscit_1_1_matrix_1a705d68226b39fc76be2cea94bfec43d1" prot="public" static="no">
+        <name>@0</name>
+        <enumvalue id="classoscit_1_1_matrix_1a705d68226b39fc76be2cea94bfec43d1af4f2963e7f4133de6dfa8cb6b59694b6" prot="public">
+          <name>DefaultType</name>
+          <initializer>CV_64FC1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/matrix.h" line="48" bodyfile="/Users/gaspard/git/oscit/include/oscit/matrix.h" bodystart="48" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classoscit_1_1_matrix_1a2f4870f960cc8c99169d8ffbfc8f1348" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Matrix::Matrix</definition>
+        <argsstring>()</argsstring>
+        <name>Matrix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/matrix.h" line="52" bodyfile="/Users/gaspard/git/oscit/include/oscit/matrix.h" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_matrix_1af467feb105685da1edda2a4cd92f839e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Matrix::Matrix</definition>
+        <argsstring>(int _rows, int _cols, int _type=DefaultType)</argsstring>
+        <name>Matrix</name>
+        <param>
+          <type>int</type>
+          <declname>_rows</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_cols</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_type</declname>
+          <defval>DefaultType</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/matrix.h" line="54" bodyfile="/Users/gaspard/git/oscit/include/oscit/matrix.h" bodystart="54" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_matrix_1a727ad3e37e87368d34afbaf0ad46e41b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Matrix::Matrix</definition>
+        <argsstring>(cv::Size size, int _type=DefaultType)</argsstring>
+        <name>Matrix</name>
+        <param>
+          <type>cv::Size</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_type</declname>
+          <defval>DefaultType</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/matrix.h" line="56" bodyfile="/Users/gaspard/git/oscit/include/oscit/matrix.h" bodystart="56" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_matrix_1a4d93a213b5f9918ee393a42af9c87ccf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Matrix::Matrix</definition>
+        <argsstring>(int _rows, int _cols, int _type, const cv::Scalar &amp;_s)</argsstring>
+        <name>Matrix</name>
+        <param>
+          <type>int</type>
+          <declname>_rows</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_cols</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_type</declname>
+        </param>
+        <param>
+          <type>const cv::Scalar &amp;</type>
+          <declname>_s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/matrix.h" line="58" bodyfile="/Users/gaspard/git/oscit/include/oscit/matrix.h" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_matrix_1aa1195a6c2cfc14764df7ad0cfeacc690" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Matrix::Matrix</definition>
+        <argsstring>(int _rows, int _cols, Real r)</argsstring>
+        <name>Matrix</name>
+        <param>
+          <type>int</type>
+          <declname>_rows</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_cols</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref></type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct a default _type matrix and fill it with value r. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/matrix.h" line="62" bodyfile="/Users/gaspard/git/oscit/include/oscit/matrix.h" bodystart="62" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_matrix_1a0a846fee109f1f8116688833224c4c98" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Matrix::Matrix</definition>
+        <argsstring>(cv::Size size, int _type, const cv::Scalar &amp;_s)</argsstring>
+        <name>Matrix</name>
+        <param>
+          <type>cv::Size</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_type</declname>
+        </param>
+        <param>
+          <type>const cv::Scalar &amp;</type>
+          <declname>_s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/matrix.h" line="64" bodyfile="/Users/gaspard/git/oscit/include/oscit/matrix.h" bodystart="64" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_matrix_1aef07fb73c585f5db4e946c91dc0d14d1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Matrix::Matrix</definition>
+        <argsstring>(const Matrix &amp;m)</argsstring>
+        <name>Matrix</name>
+        <param>
+          <type>const <ref refid="classoscit_1_1_matrix" kindref="compound">Matrix</ref> &amp;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/matrix.h" line="67" bodyfile="/Users/gaspard/git/oscit/include/oscit/matrix.h" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_matrix_1ab41c910db06c5151aa7ac3c7dbf653a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Matrix::Matrix</definition>
+        <argsstring>(int _rows, int _cols, int _type, void *_data, size_t _step=cv::Mat::AUTO_STEP)</argsstring>
+        <name>Matrix</name>
+        <param>
+          <type>int</type>
+          <declname>_rows</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_cols</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_type</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>_data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>_step</declname>
+          <defval>cv::Mat::AUTO_STEP</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/matrix.h" line="70" bodyfile="/Users/gaspard/git/oscit/include/oscit/matrix.h" bodystart="69" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_matrix_1a9a3dd6ee4901ee5ea0eb36c2d3067681" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Matrix::Matrix</definition>
+        <argsstring>(cv::Size _size, int _type, void *_data, size_t _step=cv::Mat::AUTO_STEP)</argsstring>
+        <name>Matrix</name>
+        <param>
+          <type>cv::Size</type>
+          <declname>_size</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_type</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>_data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>_step</declname>
+          <defval>cv::Mat::AUTO_STEP</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/matrix.h" line="71" bodyfile="/Users/gaspard/git/oscit/include/oscit/matrix.h" bodystart="71" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_matrix_1a3c2de1a6ece0212f924881bd49ba4235" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Matrix::Matrix</definition>
+        <argsstring>(const cv::Mat &amp;m, const cv::Range &amp;rowRange, const cv::Range &amp;colRange)</argsstring>
+        <name>Matrix</name>
+        <param>
+          <type>const cv::Mat &amp;</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>const cv::Range &amp;</type>
+          <declname>rowRange</declname>
+        </param>
+        <param>
+          <type>const cv::Range &amp;</type>
+          <declname>colRange</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/matrix.h" line="73" bodyfile="/Users/gaspard/git/oscit/include/oscit/matrix.h" bodystart="73" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_matrix_1a5f2cf02bcb0c5d37e7611371a9c411c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Matrix::Matrix</definition>
+        <argsstring>(const cv::Mat &amp;m, const cv::Rect &amp;roi)</argsstring>
+        <name>Matrix</name>
+        <param>
+          <type>const cv::Mat &amp;</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>const cv::Rect &amp;</type>
+          <declname>roi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a sub-matrix from a bigger matrix</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the original matrix </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>roi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the region of interest </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/matrix.h" line="80" bodyfile="/Users/gaspard/git/oscit/include/oscit/matrix.h" bodystart="80" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_matrix_1aeb6f38f432b0cc92a5806aff42f43830" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _Tp</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>oscit::Matrix::Matrix</definition>
+        <argsstring>(const std::vector&lt; _Tp &gt; &amp;vec, bool copyData=false)</argsstring>
+        <name>Matrix</name>
+        <param>
+          <type>const std::vector&lt; _Tp &gt; &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>copyData</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/matrix.h" line="83" bodyfile="/Users/gaspard/git/oscit/include/oscit/matrix.h" bodystart="83" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_matrix_1aaaa692ff6b996db575b100d010af4cf3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Matrix::Matrix</definition>
+        <argsstring>(const cv::MatExpr_Base &amp;expr)</argsstring>
+        <name>Matrix</name>
+        <param>
+          <type>const cv::MatExpr_Base &amp;</type>
+          <declname>expr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/matrix.h" line="85" bodyfile="/Users/gaspard/git/oscit/include/oscit/matrix.h" bodystart="85" bodyend="85"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classoscit_1_1_matrix" kindref="compound">Matrix</ref> class is a cv::Mat with a default type of CV_64FC1 / CV_32FC1 depending on what Real represents. </para>    </detaileddescription>
+    <location file="/Users/gaspard/git/oscit/include/oscit/matrix.h" line="45" bodyfile="/Users/gaspard/git/oscit/include/oscit/matrix.h" bodystart="45" bodyend="86"/>
+    <listofallmembers>
+      <member refid="classoscit_1_1_matrix_1a705d68226b39fc76be2cea94bfec43d1af4f2963e7f4133de6dfa8cb6b59694b6" prot="public" virt="non-virtual"><scope>oscit::Matrix</scope><name>DefaultType</name></member>
+      <member refid="classoscit_1_1_matrix_1a2f4870f960cc8c99169d8ffbfc8f1348" prot="public" virt="non-virtual"><scope>oscit::Matrix</scope><name>Matrix</name></member>
+      <member refid="classoscit_1_1_matrix_1af467feb105685da1edda2a4cd92f839e" prot="public" virt="non-virtual"><scope>oscit::Matrix</scope><name>Matrix</name></member>
+      <member refid="classoscit_1_1_matrix_1a727ad3e37e87368d34afbaf0ad46e41b" prot="public" virt="non-virtual"><scope>oscit::Matrix</scope><name>Matrix</name></member>
+      <member refid="classoscit_1_1_matrix_1a4d93a213b5f9918ee393a42af9c87ccf" prot="public" virt="non-virtual"><scope>oscit::Matrix</scope><name>Matrix</name></member>
+      <member refid="classoscit_1_1_matrix_1aa1195a6c2cfc14764df7ad0cfeacc690" prot="public" virt="non-virtual"><scope>oscit::Matrix</scope><name>Matrix</name></member>
+      <member refid="classoscit_1_1_matrix_1a0a846fee109f1f8116688833224c4c98" prot="public" virt="non-virtual"><scope>oscit::Matrix</scope><name>Matrix</name></member>
+      <member refid="classoscit_1_1_matrix_1aef07fb73c585f5db4e946c91dc0d14d1" prot="public" virt="non-virtual"><scope>oscit::Matrix</scope><name>Matrix</name></member>
+      <member refid="classoscit_1_1_matrix_1ab41c910db06c5151aa7ac3c7dbf653a4" prot="public" virt="non-virtual"><scope>oscit::Matrix</scope><name>Matrix</name></member>
+      <member refid="classoscit_1_1_matrix_1a9a3dd6ee4901ee5ea0eb36c2d3067681" prot="public" virt="non-virtual"><scope>oscit::Matrix</scope><name>Matrix</name></member>
+      <member refid="classoscit_1_1_matrix_1a3c2de1a6ece0212f924881bd49ba4235" prot="public" virt="non-virtual"><scope>oscit::Matrix</scope><name>Matrix</name></member>
+      <member refid="classoscit_1_1_matrix_1a5f2cf02bcb0c5d37e7611371a9c411c6" prot="public" virt="non-virtual"><scope>oscit::Matrix</scope><name>Matrix</name></member>
+      <member refid="classoscit_1_1_matrix_1aeb6f38f432b0cc92a5806aff42f43830" prot="public" virt="non-virtual"><scope>oscit::Matrix</scope><name>Matrix</name></member>
+      <member refid="classoscit_1_1_matrix_1aaaa692ff6b996db575b100d010af4cf3" prot="public" virt="non-virtual"><scope>oscit::Matrix</scope><name>Matrix</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

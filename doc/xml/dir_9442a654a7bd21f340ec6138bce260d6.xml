@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
   <compounddef id="dir_9442a654a7bd21f340ec6138bce260d6" kind="dir">
-    <compoundname>include/</compoundname>
-    <innerdir refid="dir_27f9435622e791d30fcb027ddbe71cdc">include/oscit/</innerdir>
+    <compoundname>/Users/gaspard/git/oscit/include/</compoundname>
+    <innerdir refid="dir_27f9435622e791d30fcb027ddbe71cdc">/Users/gaspard/git/oscit/include/oscit/</innerdir>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

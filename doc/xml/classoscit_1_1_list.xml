@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="116" bodyfile="/Users/gaspard/git/oscit/include/oscit/list.h" bodystart="116" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="123" bodyfile="/Users/gaspard/git/oscit/include/oscit/list.h" bodystart="123" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classoscit_1_1_list_1a0e6bdf8214ecf4304780d40bcd774e9d" prot="private" static="no" mutable="no">
         <type>const char *</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="117" bodyfile="/Users/gaspard/git/oscit/include/oscit/list.h" bodystart="117" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="124" bodyfile="/Users/gaspard/git/oscit/include/oscit/list.h" bodystart="124" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classoscit_1_1_list_1a2eb7f654a37eb9ff01fd098f01be653d" prot="private" static="no" mutable="no">
         <type><ref refid="namespaceoscit_1acdd0211767952c9d583a6206c38dbd5f" kindref="member">TypeTagID</ref></type>
@@ -42,7 +42,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="118" bodyfile="/Users/gaspard/git/oscit/include/oscit/list.h" bodystart="118" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="125" bodyfile="/Users/gaspard/git/oscit/include/oscit/list.h" bodystart="125" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classoscit_1_1_list_1add5fd32ed595d21133853f28c8c43051" prot="private" static="no" mutable="no">
         <type>std::vector&lt; <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> * &gt;</type>
@@ -55,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="119" bodyfile="/Users/gaspard/git/oscit/include/oscit/list.h" bodystart="119" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="126" bodyfile="/Users/gaspard/git/oscit/include/oscit/list.h" bodystart="126" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -149,6 +149,19 @@
         </inbodydescription>
         <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="64" bodyfile="/Users/gaspard/git/oscit/include/oscit/list.h" bodystart="64" bodyend="66"/>
       </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_list_1a3d5cb9ad147be770f645ebf403772719" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool oscit::List::contains_error</definition>
+        <argsstring>()</argsstring>
+        <name>contains_error</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns true if any of the enclosed values is an error. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="70"/>
+      </memberdef>
       <memberdef kind="function" id="classoscit_1_1_list_1a26bb73642ed31dad4d1fc8762cf150b0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="namespaceoscit_1acdd0211767952c9d583a6206c38dbd5f" kindref="member">TypeTagID</ref></type>
         <definition>TypeTagID oscit::List::type_id</definition>
@@ -160,7 +173,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="68" bodyfile="/Users/gaspard/git/oscit/include/oscit/list.h" bodystart="68" bodyend="70"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="72" bodyfile="/Users/gaspard/git/oscit/include/oscit/list.h" bodystart="72" bodyend="74"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_list_1af5dfc173286fab093b2fe67ccc7fb88f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> *</type>
@@ -177,7 +190,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="72" bodyfile="/Users/gaspard/git/oscit/include/oscit/list.h" bodystart="72" bodyend="74"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="76" bodyfile="/Users/gaspard/git/oscit/include/oscit/list.h" bodystart="76" bodyend="78"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_list_1aa0212c5a0269fb5a484f41c37b16d192" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classoscit_1_1_value" kindref="compound">Value</ref> *</type>
@@ -194,7 +207,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="76" bodyfile="/Users/gaspard/git/oscit/include/oscit/list.h" bodystart="76" bodyend="78"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="80" bodyfile="/Users/gaspard/git/oscit/include/oscit/list.h" bodystart="80" bodyend="82"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_list_1a95076177f35e1670310fe65c7a3e1aab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classoscit_1_1_value" kindref="compound">Value</ref> *</type>
@@ -207,7 +220,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="80" bodyfile="/Users/gaspard/git/oscit/include/oscit/list.h" bodystart="80" bodyend="82"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="84" bodyfile="/Users/gaspard/git/oscit/include/oscit/list.h" bodystart="84" bodyend="86"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_list_1a402c823a3707e793440cd06b4734338a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classoscit_1_1_value" kindref="compound">Value</ref> *</type>
@@ -220,7 +233,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="84" bodyfile="/Users/gaspard/git/oscit/include/oscit/list.h" bodystart="84" bodyend="86"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="88" bodyfile="/Users/gaspard/git/oscit/include/oscit/list.h" bodystart="88" bodyend="90"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_list_1ac6b4459a691d9977e9c27c2c6e6dd648" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -241,7 +254,7 @@
 <para>Replace a value at a given position, checking for range and making sure the type_tag of the list remains in sync. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="89"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="93"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_list_1ae149193bed4efc1430d07205e3b1ddf0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>size_t</type>
@@ -254,7 +267,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="91" bodyfile="/Users/gaspard/git/oscit/include/oscit/list.h" bodystart="91" bodyend="93"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="95" bodyfile="/Users/gaspard/git/oscit/include/oscit/list.h" bodystart="95" bodyend="97"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_list_1a51ae625f6e46498af03e416e3fd507ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -271,7 +284,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="95"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="99"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_list_1a0eca70315ef71bdfacec52986fe89a7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -288,7 +301,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="97"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="101"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_list_1a0cda11b3909525ff8228049a40c58d71" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>const char *</type>
@@ -305,7 +318,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="99" bodyfile="/Users/gaspard/git/oscit/include/oscit/list.h" bodystart="99" bodyend="102"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="103" bodyfile="/Users/gaspard/git/oscit/include/oscit/list.h" bodystart="103" bodyend="106"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_list_1a30abbb0ee5fc024304ad9d49182311c9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -322,7 +335,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="104"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="108"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -337,7 +350,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="107"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="114"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_list_1a856fccdcc9db929120701e34c6399ffe" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -350,7 +363,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="109" bodyfile="/Users/gaspard/git/oscit/include/oscit/list.h" bodystart="109" bodyend="112"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="116" bodyfile="/Users/gaspard/git/oscit/include/oscit/list.h" bodystart="116" bodyend="119"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_list_1a19aec80e22ccb74817209a4f22a9aec1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const char *</type>
@@ -367,7 +380,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="114"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="121"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -375,33 +388,34 @@
     <detaileddescription>
 <para>A <ref refid="classoscit_1_1_list" kindref="compound">List</ref> stores an array of Values. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="433">
+      <node id="455">
         <label>oscit::List</label>
         <link refid="classoscit_1_1_list"/>
-        <childnode refid="434" relation="public-inheritance">
+        <childnode refid="456" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="434">
+      <node id="456">
         <label>oscit::ReferenceCounted</label>
         <link refid="classoscit_1_1_reference_counted"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="435">
+      <node id="457">
         <label>oscit::List</label>
         <link refid="classoscit_1_1_list"/>
-        <childnode refid="436" relation="public-inheritance">
+        <childnode refid="458" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="436">
+      <node id="458">
         <label>oscit::ReferenceCounted</label>
         <link refid="classoscit_1_1_reference_counted"/>
       </node>
     </collaborationgraph>
-    <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="43" bodyfile="/Users/gaspard/git/oscit/include/oscit/list.h" bodystart="42" bodyend="120"/>
+    <location file="/Users/gaspard/git/oscit/include/oscit/list.h" line="43" bodyfile="/Users/gaspard/git/oscit/include/oscit/list.h" bodystart="42" bodyend="127"/>
     <listofallmembers>
       <member refid="classoscit_1_1_reference_counted_1af382a537a3969b11530020715863e75c" prot="public" virt="non-virtual"><scope>oscit::List</scope><name>acquire</name></member>
       <member refid="classoscit_1_1_list_1acc58a8a967bffd6ec68aba04b6a11ae5" prot="private" virt="non-virtual"><scope>oscit::List</scope><name>clear</name></member>
+      <member refid="classoscit_1_1_list_1a3d5cb9ad147be770f645ebf403772719" prot="public" virt="non-virtual"><scope>oscit::List</scope><name>contains_error</name></member>
       <member refid="classoscit_1_1_list_1a402c823a3707e793440cd06b4734338a" prot="public" virt="non-virtual"><scope>oscit::List</scope><name>first</name></member>
       <member refid="classoscit_1_1_list_1a19aec80e22ccb74817209a4f22a9aec1" prot="private" virt="non-virtual"><scope>oscit::List</scope><name>init_with_type_tag</name></member>
       <member refid="classoscit_1_1_list_1a95076177f35e1670310fe65c7a3e1aab" prot="public" virt="non-virtual"><scope>oscit::List</scope><name>last</name></member>

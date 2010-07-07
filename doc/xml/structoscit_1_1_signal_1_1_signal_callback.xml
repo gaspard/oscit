@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="structoscit_1_1_signal_1_1_signal_callback" kind="struct" prot="private">
+    <compoundname>oscit::Signal::SignalCallback</compoundname>
+    <derivedcompoundref refid="structoscit_1_1_signal_1_1_t_signal_callback" prot="public" virt="non-virtual">oscit::Signal::TSignalCallback&lt; T &gt;</derivedcompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structoscit_1_1_signal_1_1_signal_callback_1a4d824281dce275989b5f560033c99c48" prot="public" static="no" mutable="no">
+        <type><ref refid="classoscit_1_1_observer" kindref="compound">Observer</ref> *</type>
+        <definition>Observer* oscit::Signal::SignalCallback::receiver_</definition>
+        <argsstring></argsstring>
+        <name>receiver_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classoscit_1_1_object" kindref="compound">Object</ref> containing the method. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/signal.h" line="112" bodyfile="/Users/gaspard/git/oscit/include/oscit/signal.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structoscit_1_1_signal_1_1_signal_callback_1a2b38d3e2942813f834cf6d9cb214d9a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::Signal::SignalCallback::SignalCallback</definition>
+        <argsstring>(Observer *receiver)</argsstring>
+        <name>SignalCallback</name>
+        <param>
+          <type><ref refid="classoscit_1_1_observer" kindref="compound">Observer</ref> *</type>
+          <declname>receiver</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/signal.h" line="106" bodyfile="/Users/gaspard/git/oscit/include/oscit/signal.h" bodystart="106" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="structoscit_1_1_signal_1_1_signal_callback_1a56de172077d7ee546931b25740296d38" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void oscit::Signal::SignalCallback::trigger</definition>
+        <argsstring>(const Value &amp;val)=0</argsstring>
+        <name>trigger</name>
+        <param>
+          <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/signal.h" line="108"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1300">
+        <label>oscit::Signal::SignalCallback</label>
+      </node>
+      <node id="1301">
+        <label>oscit::Signal::TSignalCallback&lt; T &gt;</label>
+        <childnode refid="1300" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1302">
+        <label>oscit::Signal::SignalCallback</label>
+        <childnode refid="1303" relation="usage">
+          <edgelabel>receiver_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1304">
+        <label>oscit::CTList&lt; Signal * &gt;</label>
+        <link refid="classoscit_1_1_c_t_list"/>
+        <childnode refid="1305" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1306" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1305">
+        <label>std::list&lt;Signal * &gt;</label>
+        <link refid="classstd_1_1list"/>
+      </node>
+      <node id="1303">
+        <label>oscit::Observer</label>
+        <link refid="classoscit_1_1_observer"/>
+        <childnode refid="1304" relation="usage">
+          <edgelabel>observed_signals_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1306">
+        <label>oscit::RWMutex</label>
+        <link refid="classoscit_1_1_r_w_mutex"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/signal.h" line="104" bodyfile="/Users/gaspard/git/oscit/include/oscit/signal.h" bodystart="104" bodyend="114"/>
+    <listofallmembers>
+      <member refid="structoscit_1_1_signal_1_1_signal_callback_1a4d824281dce275989b5f560033c99c48" prot="public" virt="non-virtual"><scope>oscit::Signal::SignalCallback</scope><name>receiver_</name></member>
+      <member refid="structoscit_1_1_signal_1_1_signal_callback_1a2b38d3e2942813f834cf6d9cb214d9a4" prot="public" virt="non-virtual"><scope>oscit::Signal::SignalCallback</scope><name>SignalCallback</name></member>
+      <member refid="structoscit_1_1_signal_1_1_signal_callback_1a56de172077d7ee546931b25740296d38" prot="public" virt="pure-virtual"><scope>oscit::Signal::SignalCallback</scope><name>trigger</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

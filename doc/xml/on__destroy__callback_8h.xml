@@ -55,10 +55,10 @@
 <codeline lineno="32"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">oscit<sp/>{</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39" refid="classoscit_1_1_on_destroy_notifier" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classoscit_1_1_on_destroy_notifier" kindref="compound">OnDestroyNotifier</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_callback_list" kindref="compound">CallbackList</ref><sp/>{</highlight></codeline>
+<codeline lineno="39" refid="classoscit_1_1_on_destroy_notifier" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classoscit_1_1_on_destroy_notifier" kindref="compound">OnDestroyNotifier</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>CallbackList<sp/>{</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="43" refid="classoscit_1_1_on_destroy_notifier_1ac3544c10fbdcd108322b7faa65f41412" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classoscit_1_1_on_destroy_notifier_1ac3544c10fbdcd108322b7faa65f41412" kindref="member">~OnDestroyNotifier</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classoscit_1_1_callback_list_1ad1f4e1eaf9c6bb6ef8316de723afb73c" kindref="member">Iterator</ref><sp/>it,<sp/>end;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>Iterator<sp/>it,<sp/>end;</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>end<sp/>=<sp/>callbacks_.end();</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(it<sp/>=<sp/>callbacks_.begin();<sp/>it<sp/>!=<sp/>end;<sp/>++it)<sp/>{</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>(*it)-&gt;trigger();</highlight></codeline>
@@ -66,7 +66,7 @@
 <codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55" refid="classoscit_1_1_on_destroy_notifier_1a03b02dd15f2141479dd7dfe68498b262" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_on_destroy_notifier_1a03b02dd15f2141479dd7dfe68498b262" kindref="member">adopt_callback</ref>(<ref refid="classoscit_1_1_callback" kindref="compound">Callback</ref><sp/>*callback)<sp/>{</highlight></codeline>
+<codeline lineno="55" refid="classoscit_1_1_on_destroy_notifier_1a03b02dd15f2141479dd7dfe68498b262" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classoscit_1_1_on_destroy_notifier_1a03b02dd15f2141479dd7dfe68498b262" kindref="member">adopt_callback</ref>(Callback<sp/>*callback)<sp/>{</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>callbacks_.push_back(callback);</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"></highlight></codeline>

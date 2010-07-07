@@ -9,86 +9,96 @@
     <includes refid="mapper_8h" local="yes">oscit/mapper.h</includes>
     <includes refid="values_8h" local="yes">oscit/values.h</includes>
     <includes refid="time__ref_8h" local="yes">oscit/time_ref.h</includes>
-    <includedby refid="oscit_8h" local="yes">include/oscit/oscit.h</includedby>
+    <includedby refid="oscit_8h" local="yes">/Users/gaspard/git/oscit/include/oscit/oscit.h</includedby>
     <incdepgraph>
-      <node id="1966">
+      <node id="1964">
         <label>list</label>
       </node>
-      <node id="1997">
+      <node id="1995">
         <label>oscit/value_types.h</label>
         <link refid="value__types_8h"/>
-        <childnode refid="1998" relation="include">
+        <childnode refid="1996" relation="include">
         </childnode>
       </node>
-      <node id="1979">
+      <node id="1977">
         <label>oscit/non_copyable.h</label>
         <link refid="non__copyable_8h"/>
       </node>
-      <node id="1996">
+      <node id="1994">
         <label>stdarg.h</label>
       </node>
-      <node id="1980">
+      <node id="1978">
         <label>oscit/mutex.h</label>
         <link refid="mutex_8h"/>
-        <childnode refid="1981" relation="include">
-        </childnode>
-        <childnode refid="1978" relation="include">
-        </childnode>
-        <childnode refid="1982" relation="include">
-        </childnode>
         <childnode refid="1979" relation="include">
         </childnode>
-        <childnode refid="1983" relation="include">
+        <childnode refid="1976" relation="include">
+        </childnode>
+        <childnode refid="1980" relation="include">
+        </childnode>
+        <childnode refid="1977" relation="include">
+        </childnode>
+        <childnode refid="1981" relation="include">
         </childnode>
       </node>
-      <node id="1994">
+      <node id="1992">
         <label>oscit/value.h</label>
         <link refid="value_8h"/>
-        <childnode refid="1974" relation="include">
+        <childnode refid="1972" relation="include">
         </childnode>
-        <childnode refid="1987" relation="include">
+        <childnode refid="1985" relation="include">
+        </childnode>
+        <childnode refid="1993" relation="include">
+        </childnode>
+        <childnode refid="1994" relation="include">
+        </childnode>
+        <childnode refid="1976" relation="include">
         </childnode>
         <childnode refid="1995" relation="include">
         </childnode>
-        <childnode refid="1996" relation="include">
-        </childnode>
-        <childnode refid="1978" relation="include">
+        <childnode refid="1988" relation="include">
         </childnode>
         <childnode refid="1997" relation="include">
         </childnode>
-        <childnode refid="1990" relation="include">
-        </childnode>
         <childnode refid="1999" relation="include">
+        </childnode>
+        <childnode refid="2000" relation="include">
         </childnode>
         <childnode refid="2001" relation="include">
         </childnode>
         <childnode refid="2002" relation="include">
         </childnode>
-        <childnode refid="2003" relation="include">
-        </childnode>
-        <childnode refid="2004" relation="include">
+      </node>
+      <node id="2010">
+        <label>oscit/constants.h</label>
+        <link refid="constants_8h"/>
+        <childnode refid="1991" relation="include">
         </childnode>
       </node>
-      <node id="1978">
+      <node id="1976">
         <label>assert.h</label>
       </node>
-      <node id="1969">
+      <node id="1967">
         <label>oscit/command.h</label>
         <link refid="command_8h"/>
+        <childnode refid="1968" relation="include">
+        </childnode>
+        <childnode refid="1969" relation="include">
+        </childnode>
         <childnode refid="1970" relation="include">
         </childnode>
+        <childnode refid="1984" relation="include">
+        </childnode>
+        <childnode refid="1988" relation="include">
+        </childnode>
+      </node>
+      <node id="1970">
+        <label>oscit/thread.h</label>
+        <link refid="thread_8h"/>
         <childnode refid="1971" relation="include">
         </childnode>
         <childnode refid="1972" relation="include">
         </childnode>
-        <childnode refid="1986" relation="include">
-        </childnode>
-        <childnode refid="1990" relation="include">
-        </childnode>
-      </node>
-      <node id="1972">
-        <label>oscit/thread.h</label>
-        <link refid="thread_8h"/>
         <childnode refid="1973" relation="include">
         </childnode>
         <childnode refid="1974" relation="include">
@@ -97,127 +107,129 @@
         </childnode>
         <childnode refid="1976" relation="include">
         </childnode>
-        <childnode refid="1977" relation="include">
-        </childnode>
         <childnode refid="1978" relation="include">
         </childnode>
-        <childnode refid="1980" relation="include">
-        </childnode>
       </node>
-      <node id="2009">
+      <node id="2007">
         <label>oscit/hash_value.h</label>
         <link refid="hash__value_8h"/>
-        <childnode refid="1994" relation="include">
+        <childnode refid="1992" relation="include">
         </childnode>
       </node>
-      <node id="2004">
+      <node id="2002">
         <label>oscit/midi_message.h</label>
         <link refid="midi__message_8h"/>
-        <childnode refid="1971" relation="include">
+        <childnode refid="1969" relation="include">
         </childnode>
-        <childnode refid="1985" relation="include">
+        <childnode refid="1983" relation="include">
         </childnode>
-        <childnode refid="2000" relation="include">
+        <childnode refid="1993" relation="include">
         </childnode>
-      </node>
-      <node id="1970">
-        <label>stdint.h</label>
-      </node>
-      <node id="1990">
-        <label>oscit/thash.h</label>
-        <link refid="thash_8h"/>
-        <childnode refid="1982" relation="include">
-        </childnode>
-        <childnode refid="1987" relation="include">
-        </childnode>
-        <childnode refid="1966" relation="include">
-        </childnode>
-        <childnode refid="1985" relation="include">
+        <childnode refid="1998" relation="include">
         </childnode>
       </node>
       <node id="1968">
+        <label>stdint.h</label>
+      </node>
+      <node id="1988">
+        <label>oscit/thash.h</label>
+        <link refid="thash_8h"/>
+        <childnode refid="1980" relation="include">
+        </childnode>
+        <childnode refid="1985" relation="include">
+        </childnode>
+        <childnode refid="1964" relation="include">
+        </childnode>
+        <childnode refid="1983" relation="include">
+        </childnode>
+      </node>
+      <node id="1966">
         <label>oscit/osc_command.h</label>
         <link refid="osc__command_8h"/>
-        <childnode refid="1966" relation="include">
+        <childnode refid="1964" relation="include">
+        </childnode>
+        <childnode refid="1967" relation="include">
+        </childnode>
+      </node>
+      <node id="2000">
+        <label>oscit/list.h</label>
+        <link refid="list_8h"/>
+        <childnode refid="1995" relation="include">
+        </childnode>
+        <childnode refid="1998" relation="include">
         </childnode>
         <childnode refid="1969" relation="include">
         </childnode>
       </node>
-      <node id="2002">
-        <label>oscit/list.h</label>
-        <link refid="list_8h"/>
-        <childnode refid="1997" relation="include">
-        </childnode>
-        <childnode refid="2000" relation="include">
-        </childnode>
-        <childnode refid="1971" relation="include">
-        </childnode>
-      </node>
-      <node id="2005">
+      <node id="2003">
         <label>oscit/list_value.h</label>
         <link refid="list__value_8h"/>
-        <childnode refid="1994" relation="include">
+        <childnode refid="1992" relation="include">
         </childnode>
       </node>
-      <node id="1973">
+      <node id="1971">
         <label>errno.h</label>
       </node>
-      <node id="1967">
+      <node id="1965">
         <label>stdexcept</label>
       </node>
-      <node id="1989">
+      <node id="1987">
         <label>oscit/location.h</label>
         <link refid="location_8h"/>
-        <childnode refid="1987" relation="include">
+        <childnode refid="1985" relation="include">
+        </childnode>
+        <childnode refid="1986" relation="include">
         </childnode>
         <childnode refid="1988" relation="include">
         </childnode>
+      </node>
+      <node id="1985">
+        <label>string</label>
+      </node>
+      <node id="2012">
+        <label>oscit/scale_real.h</label>
+        <link refid="scale__real_8h"/>
+        <childnode refid="1976" relation="include">
+        </childnode>
+        <childnode refid="1985" relation="include">
+        </childnode>
         <childnode refid="1990" relation="include">
         </childnode>
       </node>
-      <node id="1987">
-        <label>string</label>
-      </node>
-      <node id="2013">
-        <label>oscit/scale_real.h</label>
-        <link refid="scale__real_8h"/>
-        <childnode refid="1978" relation="include">
-        </childnode>
-        <childnode refid="1987" relation="include">
-        </childnode>
+      <node id="2008">
+        <label>oscit/matrix_value.h</label>
+        <link refid="matrix__value_8h"/>
         <childnode refid="1992" relation="include">
         </childnode>
       </node>
-      <node id="2010">
-        <label>oscit/matrix_value.h</label>
-        <link refid="matrix__value_8h"/>
-        <childnode refid="1994" relation="include">
-        </childnode>
-      </node>
-      <node id="1992">
+      <node id="1990">
         <label>oscit/conf.h</label>
         <link refid="conf_8h"/>
       </node>
-      <node id="1976">
+      <node id="1974">
         <label>fstream</label>
       </node>
-      <node id="1988">
+      <node id="1986">
         <label>ostream</label>
       </node>
-      <node id="2006">
+      <node id="2004">
         <label>oscit/real_value.h</label>
         <link refid="real__value_8h"/>
-        <childnode refid="1994" relation="include">
-        </childnode>
-      </node>
-      <node id="1993">
-        <label>oscit/values.h</label>
-        <link refid="values_8h"/>
         <childnode refid="1992" relation="include">
         </childnode>
+      </node>
+      <node id="1991">
+        <label>oscit/values.h</label>
+        <link refid="values_8h"/>
         <childnode refid="1990" relation="include">
         </childnode>
-        <childnode refid="1994" relation="include">
+        <childnode refid="1988" relation="include">
+        </childnode>
+        <childnode refid="1992" relation="include">
+        </childnode>
+        <childnode refid="2003" relation="include">
+        </childnode>
+        <childnode refid="2004" relation="include">
         </childnode>
         <childnode refid="2005" relation="include">
         </childnode>
@@ -231,168 +243,172 @@
         </childnode>
         <childnode refid="2010" relation="include">
         </childnode>
-        <childnode refid="2011" relation="include">
-        </childnode>
       </node>
-      <node id="2008">
+      <node id="2006">
         <label>oscit/error_value.h</label>
         <link refid="error__value_8h"/>
-        <childnode refid="1994" relation="include">
-        </childnode>
-      </node>
-      <node id="1991">
-        <label>oscit/script.h</label>
-        <link refid="script_8h"/>
-        <childnode refid="1987" relation="include">
-        </childnode>
         <childnode refid="1992" relation="include">
         </childnode>
-        <childnode refid="1993" relation="include">
-        </childnode>
       </node>
-      <node id="1981">
-        <label>pthread.h</label>
-      </node>
-      <node id="1998">
-        <label>sys/types.h</label>
-      </node>
-      <node id="1974">
-        <label>string.h</label>
-      </node>
-      <node id="1965">
-        <label>include/oscit/osc_map_command.h</label>
-        <link refid="osc_map_command.h"/>
-        <childnode refid="1966" relation="include">
-        </childnode>
-        <childnode refid="1967" relation="include">
-        </childnode>
-        <childnode refid="1968" relation="include">
-        </childnode>
-        <childnode refid="1991" relation="include">
-        </childnode>
-        <childnode refid="2012" relation="include">
-        </childnode>
-        <childnode refid="1993" relation="include">
-        </childnode>
-        <childnode refid="2014" relation="include">
-        </childnode>
-      </node>
-      <node id="1982">
-        <label>cstdio</label>
-      </node>
-      <node id="1971">
-        <label>vector</label>
-      </node>
-      <node id="2014">
-        <label>oscit/time_ref.h</label>
-        <link refid="time__ref_8h"/>
-        <childnode refid="1998" relation="include">
-        </childnode>
-        <childnode refid="1979" relation="include">
-        </childnode>
-      </node>
-      <node id="2001">
-        <label>oscit/error.h</label>
-        <link refid="error_8h"/>
-        <childnode refid="1993" relation="include">
-        </childnode>
-        <childnode refid="2000" relation="include">
-        </childnode>
-      </node>
-      <node id="1995">
-        <label>sstream</label>
-      </node>
-      <node id="1999">
-        <label>oscit/string_data.h</label>
-        <link refid="string__data_8h"/>
-        <childnode refid="1993" relation="include">
-        </childnode>
-        <childnode refid="2000" relation="include">
-        </childnode>
-      </node>
-      <node id="2000">
-        <label>oscit/reference_counted.h</label>
-        <link refid="reference__counted_8h"/>
-      </node>
-      <node id="1977">
-        <label>semaphore.h</label>
-        <link refid="semaphore_8h"/>
-        <childnode refid="1978" relation="include">
-        </childnode>
-        <childnode refid="1977" relation="include">
-        </childnode>
-        <childnode refid="1973" relation="include">
-        </childnode>
-        <childnode refid="1974" relation="include">
-        </childnode>
-        <childnode refid="1979" relation="include">
-        </childnode>
-        <childnode refid="1980" relation="include">
-        </childnode>
-      </node>
-      <node id="2011">
-        <label>oscit/midi_value.h</label>
-        <link refid="midi__value_8h"/>
-        <childnode refid="1994" relation="include">
-        </childnode>
-      </node>
-      <node id="1986">
-        <label>oscit/url.h</label>
-        <link refid="url_8h"/>
-        <childnode refid="1987" relation="include">
-        </childnode>
-        <childnode refid="1988" relation="include">
-        </childnode>
-        <childnode refid="1989" relation="include">
-        </childnode>
-      </node>
-      <node id="1985">
-        <label>iostream</label>
-      </node>
-      <node id="2007">
-        <label>oscit/string_value.h</label>
-        <link refid="string__value_8h"/>
-        <childnode refid="1994" relation="include">
-        </childnode>
-      </node>
-      <node id="1975">
-        <label>csignal</label>
-      </node>
-      <node id="1983">
-        <label>oscit/typed.h</label>
-        <link refid="typed_8h"/>
-        <childnode refid="1984" relation="include">
-        </childnode>
+      <node id="1989">
+        <label>oscit/script.h</label>
+        <link refid="script_8h"/>
         <childnode refid="1985" relation="include">
-        </childnode>
-      </node>
-      <node id="2003">
-        <label>oscit/hash.h</label>
-        <link refid="hash_8h"/>
-        <childnode refid="1993" relation="include">
-        </childnode>
-      </node>
-      <node id="2012">
-        <label>oscit/mapper.h</label>
-        <link refid="mapper_8h"/>
-        <childnode refid="2013" relation="include">
         </childnode>
         <childnode refid="1990" relation="include">
         </childnode>
+        <childnode refid="1991" relation="include">
+        </childnode>
+      </node>
+      <node id="1979">
+        <label>pthread.h</label>
+      </node>
+      <node id="1996">
+        <label>sys/types.h</label>
+      </node>
+      <node id="1972">
+        <label>string.h</label>
+      </node>
+      <node id="1963">
+        <label>/Users/gaspard/git/oscit/include/oscit/osc_map_command.h</label>
+        <link refid="osc_map_command.h"/>
+        <childnode refid="1964" relation="include">
+        </childnode>
+        <childnode refid="1965" relation="include">
+        </childnode>
+        <childnode refid="1966" relation="include">
+        </childnode>
+        <childnode refid="1989" relation="include">
+        </childnode>
+        <childnode refid="2011" relation="include">
+        </childnode>
+        <childnode refid="1991" relation="include">
+        </childnode>
+        <childnode refid="2013" relation="include">
+        </childnode>
+      </node>
+      <node id="1980">
+        <label>cstdio</label>
+      </node>
+      <node id="1969">
+        <label>vector</label>
+      </node>
+      <node id="2013">
+        <label>oscit/time_ref.h</label>
+        <link refid="time__ref_8h"/>
+        <childnode refid="1996" relation="include">
+        </childnode>
+        <childnode refid="1977" relation="include">
+        </childnode>
+      </node>
+      <node id="1999">
+        <label>oscit/error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="1991" relation="include">
+        </childnode>
+        <childnode refid="1998" relation="include">
+        </childnode>
+      </node>
+      <node id="1993">
+        <label>sstream</label>
+      </node>
+      <node id="1997">
+        <label>oscit/string_data.h</label>
+        <link refid="string__data_8h"/>
+        <childnode refid="1991" relation="include">
+        </childnode>
+        <childnode refid="1998" relation="include">
+        </childnode>
+      </node>
+      <node id="1998">
+        <label>oscit/reference_counted.h</label>
+        <link refid="reference__counted_8h"/>
+      </node>
+      <node id="1975">
+        <label>semaphore.h</label>
+        <link refid="semaphore_8h"/>
+        <childnode refid="1976" relation="include">
+        </childnode>
+        <childnode refid="1975" relation="include">
+        </childnode>
+        <childnode refid="1971" relation="include">
+        </childnode>
+        <childnode refid="1972" relation="include">
+        </childnode>
+        <childnode refid="1977" relation="include">
+        </childnode>
+        <childnode refid="1978" relation="include">
+        </childnode>
+      </node>
+      <node id="2009">
+        <label>oscit/midi_value.h</label>
+        <link refid="midi__value_8h"/>
+        <childnode refid="1992" relation="include">
+        </childnode>
       </node>
       <node id="1984">
+        <label>oscit/url.h</label>
+        <link refid="url_8h"/>
+        <childnode refid="1985" relation="include">
+        </childnode>
+        <childnode refid="1986" relation="include">
+        </childnode>
+        <childnode refid="1987" relation="include">
+        </childnode>
+      </node>
+      <node id="1983">
+        <label>iostream</label>
+      </node>
+      <node id="2005">
+        <label>oscit/string_value.h</label>
+        <link refid="string__value_8h"/>
+        <childnode refid="1992" relation="include">
+        </childnode>
+      </node>
+      <node id="1973">
+        <label>csignal</label>
+      </node>
+      <node id="1981">
+        <label>oscit/typed.h</label>
+        <link refid="typed_8h"/>
+        <childnode refid="1982" relation="include">
+        </childnode>
+        <childnode refid="1983" relation="include">
+        </childnode>
+      </node>
+      <node id="2001">
+        <label>oscit/hash.h</label>
+        <link refid="hash_8h"/>
+        <childnode refid="1964" relation="include">
+        </childnode>
+        <childnode refid="1985" relation="include">
+        </childnode>
+        <childnode refid="1988" relation="include">
+        </childnode>
+        <childnode refid="1998" relation="include">
+        </childnode>
+      </node>
+      <node id="2011">
+        <label>oscit/mapper.h</label>
+        <link refid="mapper_8h"/>
+        <childnode refid="2012" relation="include">
+        </childnode>
+        <childnode refid="1988" relation="include">
+        </childnode>
+      </node>
+      <node id="1982">
         <label>stdio.h</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="2016">
-        <label>include/oscit/oscit.h</label>
+      <node id="2015">
+        <label>/Users/gaspard/git/oscit/include/oscit/oscit.h</label>
         <link refid="oscit_8h"/>
       </node>
-      <node id="2015">
-        <label>include/oscit/osc_map_command.h</label>
+      <node id="2014">
+        <label>/Users/gaspard/git/oscit/include/oscit/osc_map_command.h</label>
         <link refid="osc_map_command.h"/>
-        <childnode refid="2016" relation="include">
+        <childnode refid="2015" relation="include">
         </childnode>
       </node>
     </invincdepgraph>

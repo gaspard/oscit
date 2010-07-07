@@ -47,7 +47,7 @@
         <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="52" bodyfile="/Users/gaspard/git/oscit/include/oscit/location.h" bodystart="52" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classoscit_1_1_location_1a52dc55bc72edd85e3284095f8955889a" prot="public" static="yes" mutable="no">
-        <type>const <ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref></type>
+        <type>const <ref refid="namespaceoscit_1a1e8ff49c02065f535ffb0547cb221bbf" kindref="member">uint</ref></type>
         <definition>const uint oscit::Location::NO_PORT</definition>
         <argsstring></argsstring>
         <name>NO_PORT</name>
@@ -97,7 +97,7 @@
         <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="134"/>
       </memberdef>
       <memberdef kind="friend" id="classoscit_1_1_location_1a60e7d1a2673cbdcceb610bf20ad55a47" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>friend <ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref></type>
+        <type>friend <ref refid="namespaceoscit_1a1e8ff49c02065f535ffb0547cb221bbf" kindref="member">uint</ref></type>
         <definition>uint hashId</definition>
         <argsstring>(const Location &amp;location)</argsstring>
         <name>hashId</name>
@@ -168,7 +168,7 @@
         <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="155" bodyfile="/Users/gaspard/git/oscit/include/oscit/location.h" bodystart="155" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classoscit_1_1_location_1a27040408dfa9c2c8ea3052153d8376f7" prot="private" static="no" mutable="no">
-        <type><ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref></type>
+        <type><ref refid="namespaceoscit_1a1e8ff49c02065f535ffb0547cb221bbf" kindref="member">uint</ref></type>
         <definition>uint oscit::Location::port_</definition>
         <argsstring></argsstring>
         <name>port_</name>
@@ -234,7 +234,7 @@
           <declname>hostname</declname>
         </param>
         <param>
-          <type><ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref></type>
+          <type><ref refid="namespaceoscit_1a1e8ff49c02065f535ffb0547cb221bbf" kindref="member">uint</ref></type>
           <declname>port</declname>
         </param>
         <briefdescription>
@@ -259,7 +259,7 @@
           <declname>hostname</declname>
         </param>
         <param>
-          <type><ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref></type>
+          <type><ref refid="namespaceoscit_1a1e8ff49c02065f535ffb0547cb221bbf" kindref="member">uint</ref></type>
           <declname>port</declname>
         </param>
         <briefdescription>
@@ -284,7 +284,7 @@
           <declname>ip</declname>
         </param>
         <param>
-          <type><ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref></type>
+          <type><ref refid="namespaceoscit_1a1e8ff49c02065f535ffb0547cb221bbf" kindref="member">uint</ref></type>
           <declname>port</declname>
         </param>
         <briefdescription>
@@ -322,7 +322,7 @@
           <declname>hostname</declname>
         </param>
         <param>
-          <type><ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref></type>
+          <type><ref refid="namespaceoscit_1a1e8ff49c02065f535ffb0547cb221bbf" kindref="member">uint</ref></type>
           <declname>port</declname>
         </param>
         <briefdescription>
@@ -343,7 +343,7 @@
           <declname>ip</declname>
         </param>
         <param>
-          <type><ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref></type>
+          <type><ref refid="namespaceoscit_1a1e8ff49c02065f535ffb0547cb221bbf" kindref="member">uint</ref></type>
           <declname>port</declname>
         </param>
         <briefdescription>
@@ -441,7 +441,7 @@
         <location file="/Users/gaspard/git/oscit/include/oscit/location.h" line="112" bodyfile="/Users/gaspard/git/oscit/include/oscit/location.h" bodystart="112" bodyend="114"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_location_1accfa20d96193ac73d4fbde93c535a2ea" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>const <ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref> &amp;</type>
+        <type>const <ref refid="namespaceoscit_1a1e8ff49c02065f535ffb0547cb221bbf" kindref="member">uint</ref> &amp;</type>
         <definition>const uint&amp; oscit::Location::port</definition>
         <argsstring>() const </argsstring>
         <name>port</name>
@@ -459,7 +459,7 @@
         <argsstring>(uint port)</argsstring>
         <name>set_port</name>
         <param>
-          <type><ref refid="thash_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14" kindref="member">uint</ref></type>
+          <type><ref refid="namespaceoscit_1a1e8ff49c02065f535ffb0547cb221bbf" kindref="member">uint</ref></type>
           <declname>port</declname>
         </param>
         <briefdescription>

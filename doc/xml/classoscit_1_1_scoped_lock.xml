@@ -73,40 +73,40 @@
     <detaileddescription>
 <para>Scoped <ref refid="classoscit_1_1_mutex" kindref="compound">Mutex</ref> Lock for exclusive access to a resource. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="1238">
+      <node id="1250">
         <label>oscit::NonCopyable</label>
         <link refid="classoscit_1_1_non_copyable"/>
       </node>
-      <node id="1237">
+      <node id="1249">
         <label>oscit::ScopedLock</label>
         <link refid="classoscit_1_1_scoped_lock"/>
-        <childnode refid="1238" relation="private-inheritance">
+        <childnode refid="1250" relation="private-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="1241">
+      <node id="1253">
         <label>oscit::Mutex</label>
         <link refid="classoscit_1_1_mutex"/>
-        <childnode refid="1242" relation="public-inheritance">
+        <childnode refid="1254" relation="public-inheritance">
         </childnode>
-        <childnode refid="1240" relation="private-inheritance">
+        <childnode refid="1252" relation="private-inheritance">
         </childnode>
       </node>
-      <node id="1240">
+      <node id="1252">
         <label>oscit::NonCopyable</label>
         <link refid="classoscit_1_1_non_copyable"/>
       </node>
-      <node id="1239">
+      <node id="1251">
         <label>oscit::ScopedLock</label>
         <link refid="classoscit_1_1_scoped_lock"/>
-        <childnode refid="1240" relation="private-inheritance">
+        <childnode refid="1252" relation="private-inheritance">
         </childnode>
-        <childnode refid="1241" relation="usage">
+        <childnode refid="1253" relation="usage">
           <edgelabel>mutex_ptr_</edgelabel>
         </childnode>
       </node>
-      <node id="1242">
+      <node id="1254">
         <label>oscit::Typed</label>
         <link refid="classoscit_1_1_typed"/>
       </node>

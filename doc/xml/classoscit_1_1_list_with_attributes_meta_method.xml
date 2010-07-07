@@ -1,0 +1,424 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classoscit_1_1_list_with_attributes_meta_method" kind="class" prot="public">
+    <compoundname>oscit::ListWithAttributesMetaMethod</compoundname>
+    <basecompoundref refid="classoscit_1_1_object" prot="public" virt="non-virtual">oscit::Object</basecompoundref>
+    <includes refid="list__with__attributes__meta__method_8h" local="no">list_with_attributes_meta_method.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classoscit_1_1_list_with_attributes_meta_method_1af450ab5ecbaee2d0bc6dd35be399501e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::ListWithAttributesMetaMethod::ListWithAttributesMetaMethod</definition>
+        <argsstring>(const char *name)</argsstring>
+        <name>ListWithAttributesMetaMethod</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Class signature. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/list_with_attributes_meta_method.h" line="42" bodyfile="/Users/gaspard/git/oscit/include/oscit/list_with_attributes_meta_method.h" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_list_with_attributes_meta_method_1af2aa3995b38f3a82744c101bfbfb93b4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::ListWithAttributesMetaMethod::ListWithAttributesMetaMethod</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>ListWithAttributesMetaMethod</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/list_with_attributes_meta_method.h" line="43" bodyfile="/Users/gaspard/git/oscit/include/oscit/list_with_attributes_meta_method.h" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_list_with_attributes_meta_method_1ac3980dc5dd435ba4b686d18f81095d83" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref></type>
+        <definition>virtual const Value oscit::ListWithAttributesMetaMethod::trigger</definition>
+        <argsstring>(const Value &amp;val)</argsstring>
+        <name>trigger</name>
+        <reimplements refid="classoscit_1_1_object_1a0a73489bc24b72f31c3865e8eb8fc113">trigger</reimplements>
+        <param>
+          <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is the operation executed when the object is called. In order to benefit from return value optimization and avoid too many copy you have to use <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> v = xxx.trigger(val). <xrefsect id="todo_1_todo000003"><xreftitle>Todo</xreftitle><xrefdescription><para>why is the return value const ? </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/list_with_attributes_meta_method.h" line="45" bodyfile="/Users/gaspard/git/oscit/include/oscit/list_with_attributes_meta_method.h" bodystart="45" bodyend="59"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="520">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+      <node id="518">
+        <label>oscit::Observer</label>
+        <link refid="classoscit_1_1_observer"/>
+      </node>
+      <node id="519">
+        <label>oscit::CReferenceCounted</label>
+        <link refid="classoscit_1_1_c_reference_counted"/>
+        <childnode refid="520" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="516">
+        <label>oscit::Object</label>
+        <link refid="classoscit_1_1_object"/>
+        <childnode refid="517" relation="public-inheritance">
+        </childnode>
+        <childnode refid="518" relation="public-inheritance">
+        </childnode>
+        <childnode refid="519" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="517">
+        <label>oscit::Typed</label>
+        <link refid="classoscit_1_1_typed"/>
+      </node>
+      <node id="515">
+        <label>oscit::ListWithAttributesMetaMethod</label>
+        <link refid="classoscit_1_1_list_with_attributes_meta_method"/>
+        <childnode refid="516" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="538">
+        <label>oscit::CTList&lt; SignalCallback * &gt;</label>
+        <link refid="classoscit_1_1_c_t_list"/>
+        <childnode refid="539" relation="public-inheritance">
+        </childnode>
+        <childnode refid="527" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="532">
+        <label>oscit::Root</label>
+        <link refid="classoscit_1_1_root"/>
+        <childnode refid="522" relation="public-inheritance">
+        </childnode>
+        <childnode refid="530" relation="usage">
+          <edgelabel>objects_</edgelabel>
+        </childnode>
+        <childnode refid="533" relation="usage">
+          <edgelabel>commands_</edgelabel>
+        </childnode>
+        <childnode refid="535" relation="usage">
+          <edgelabel>on_register_</edgelabel>
+        </childnode>
+      </node>
+      <node id="535">
+        <label>oscit::CTHash&lt; std::string, Signal * &gt;</label>
+        <link refid="classoscit_1_1_c_t_hash"/>
+        <childnode refid="536" relation="public-inheritance">
+        </childnode>
+        <childnode refid="527" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="543">
+        <label>oscit::Matrix</label>
+        <link refid="classoscit_1_1_matrix"/>
+      </node>
+      <node id="552">
+        <label>oscit::Mutex</label>
+        <link refid="classoscit_1_1_mutex"/>
+        <childnode refid="523" relation="public-inheritance">
+        </childnode>
+        <childnode refid="529" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="546">
+        <label>oscit::List</label>
+        <link refid="classoscit_1_1_list"/>
+        <childnode refid="542" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="540">
+        <label>oscit::Value</label>
+        <link refid="classoscit_1_1_value"/>
+        <childnode refid="541" relation="usage">
+          <edgelabel>midi_message_</edgelabel>
+        </childnode>
+        <childnode refid="543" relation="usage">
+          <edgelabel>matrix_</edgelabel>
+        </childnode>
+        <childnode refid="544" relation="usage">
+          <edgelabel>string_</edgelabel>
+        </childnode>
+        <childnode refid="545" relation="usage">
+          <edgelabel>error_</edgelabel>
+        </childnode>
+        <childnode refid="546" relation="usage">
+          <edgelabel>list_</edgelabel>
+        </childnode>
+        <childnode refid="547" relation="usage">
+          <edgelabel>hash_</edgelabel>
+        </childnode>
+      </node>
+      <node id="531">
+        <label>oscit::THash&lt; std::string,Object * &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+      </node>
+      <node id="541">
+        <label>oscit::MidiMessage</label>
+        <link refid="classoscit_1_1_midi_message"/>
+        <childnode refid="542" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="549">
+        <label>oscit::THashElement&lt; std::string, Value &gt;</label>
+        <link refid="structoscit_1_1_t_hash_element"/>
+        <childnode refid="549" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="540" relation="usage">
+          <edgelabel>obj</edgelabel>
+        </childnode>
+      </node>
+      <node id="525">
+        <label>oscit::CTList&lt; Signal * &gt;</label>
+        <link refid="classoscit_1_1_c_t_list"/>
+        <childnode refid="526" relation="public-inheritance">
+        </childnode>
+        <childnode refid="527" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="529">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+      <node id="534">
+        <label>std::list&lt;Command * &gt;</label>
+        <link refid="classstd_1_1list"/>
+      </node>
+      <node id="551">
+        <label>std::vector&lt;Object * &gt;</label>
+        <link refid="classstd_1_1vector"/>
+      </node>
+      <node id="533">
+        <label>oscit::CTList&lt; Command * &gt;</label>
+        <link refid="classoscit_1_1_c_t_list"/>
+        <childnode refid="534" relation="public-inheritance">
+        </childnode>
+        <childnode refid="527" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="539">
+        <label>std::list&lt;SignalCallback * &gt;</label>
+        <link refid="classstd_1_1list"/>
+      </node>
+      <node id="526">
+        <label>std::list&lt;Signal * &gt;</label>
+        <link refid="classstd_1_1list"/>
+      </node>
+      <node id="536">
+        <label>oscit::THash&lt; std::string,Signal * &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+      </node>
+      <node id="524">
+        <label>oscit::Observer</label>
+        <link refid="classoscit_1_1_observer"/>
+        <childnode refid="525" relation="usage">
+          <edgelabel>observed_signals_</edgelabel>
+        </childnode>
+      </node>
+      <node id="528">
+        <label>oscit::CReferenceCounted</label>
+        <link refid="classoscit_1_1_c_reference_counted"/>
+        <childnode refid="529" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="537">
+        <label>oscit::Signal</label>
+        <link refid="classoscit_1_1_signal"/>
+        <childnode refid="538" relation="usage">
+          <edgelabel>callbacks_</edgelabel>
+        </childnode>
+      </node>
+      <node id="522">
+        <label>oscit::Object</label>
+        <link refid="classoscit_1_1_object"/>
+        <childnode refid="523" relation="public-inheritance">
+        </childnode>
+        <childnode refid="524" relation="public-inheritance">
+        </childnode>
+        <childnode refid="528" relation="public-inheritance">
+        </childnode>
+        <childnode refid="530" relation="usage">
+          <edgelabel>children_</edgelabel>
+        </childnode>
+        <childnode refid="532" relation="usage">
+          <edgelabel>root_</edgelabel>
+        </childnode>
+        <childnode refid="537" relation="usage">
+          <edgelabel>on_delete_</edgelabel>
+        </childnode>
+        <childnode refid="540" relation="usage">
+          <edgelabel>attributes_</edgelabel>
+        </childnode>
+        <childnode refid="550" relation="usage">
+          <edgelabel>children_vector_</edgelabel>
+        </childnode>
+        <childnode refid="552" relation="usage">
+          <edgelabel>context_</edgelabel>
+        </childnode>
+        <childnode refid="522" relation="usage">
+          <edgelabel>parent_</edgelabel>
+        </childnode>
+      </node>
+      <node id="545">
+        <label>oscit::Error</label>
+        <link refid="classoscit_1_1_error"/>
+        <childnode refid="542" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="548">
+        <label>oscit::THash&lt; std::string, Value &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+        <childnode refid="549" relation="usage">
+          <edgelabel>thash_table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="530">
+        <label>oscit::CTHash&lt; std::string, Object * &gt;</label>
+        <link refid="classoscit_1_1_c_t_hash"/>
+        <childnode refid="531" relation="public-inheritance">
+        </childnode>
+        <childnode refid="527" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="523">
+        <label>oscit::Typed</label>
+        <link refid="classoscit_1_1_typed"/>
+      </node>
+      <node id="547">
+        <label>oscit::Hash</label>
+        <link refid="classoscit_1_1_hash"/>
+        <childnode refid="542" relation="public-inheritance">
+        </childnode>
+        <childnode refid="548" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="542">
+        <label>oscit::ReferenceCounted</label>
+        <link refid="classoscit_1_1_reference_counted"/>
+      </node>
+      <node id="550">
+        <label>oscit::CTVector&lt; Object * &gt;</label>
+        <link refid="classoscit_1_1_c_t_vector"/>
+        <childnode refid="551" relation="public-inheritance">
+        </childnode>
+        <childnode refid="527" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="527">
+        <label>oscit::RWMutex</label>
+        <link refid="classoscit_1_1_r_w_mutex"/>
+      </node>
+      <node id="521">
+        <label>oscit::ListWithAttributesMetaMethod</label>
+        <link refid="classoscit_1_1_list_with_attributes_meta_method"/>
+        <childnode refid="522" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="544">
+        <label>oscit::StringData</label>
+        <link refid="classoscit_1_1_string_data"/>
+        <childnode refid="542" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/gaspard/git/oscit/include/oscit/list_with_attributes_meta_method.h" line="37" bodyfile="/Users/gaspard/git/oscit/include/oscit/list_with_attributes_meta_method.h" bodystart="36" bodyend="60"/>
+    <listofallmembers>
+      <member refid="classoscit_1_1_object_1a6962c57c4f1887a48ad702854425e8b7" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>accept_any_type</name></member>
+      <member refid="classoscit_1_1_c_reference_counted_1af03ea73d1321a2cea7a0b1035696357c" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>acquire</name></member>
+      <member refid="classoscit_1_1_object_1a5f8efaea98d7db104b5d93fd4f4b48c7" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>adopt</name></member>
+      <member refid="classoscit_1_1_object_1a3773c011a07411b64ec2f317cbe29ce7" prot="public" virt="virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>adopted</name></member>
+      <member refid="classoscit_1_1_object_1a695d36ccc883354bc68c795738733bd4" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>attributes</name></member>
+      <member refid="classoscit_1_1_object_1af5b336a74a806c9e96db7d3f26d4ed14" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>attributes</name></member>
+      <member refid="classoscit_1_1_object_1ab78f03c55f5d44947e1d2797db397220" prot="protected" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>attributes_</name></member>
+      <member refid="classoscit_1_1_object_1ac6cd5597ebadb10f34edbeacd80e9fc0" prot="public" virt="virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>build_child</name></member>
+      <member refid="classoscit_1_1_object_1ad624d0994776be24718f18563ad02050" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>can_receive</name></member>
+      <member refid="classoscit_1_1_object_1a43ec5d9a5fbd8de5b2355f8910a07e3f" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>children</name></member>
+      <member refid="classoscit_1_1_object_1acbd1ef524ef4ca1a7793a40e8ad3c9a6" prot="protected" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>children_</name></member>
+      <member refid="classoscit_1_1_object_1a1c6bcda9390b68f93ed6287cf46a22ab" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>children_count</name></member>
+      <member refid="classoscit_1_1_object_1a3c3ccd6c862acb8a1890eb51056f97bd" prot="protected" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>children_vector_</name></member>
+      <member refid="classoscit_1_1_typed_1a9d91142c1ff172635833f4b2a06d5d3b" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>class_name</name></member>
+      <member refid="classoscit_1_1_object_1a7586ea404946ee1519d86d8bf732854e" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>clear</name></member>
+      <member refid="classoscit_1_1_object_1a5da077bd2474029c931f49d92c291181" prot="protected" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>context_</name></member>
+      <member refid="classoscit_1_1_c_reference_counted_1af26aaaa40dd9297f5529f38894044875" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>CReferenceCounted</name></member>
+      <member refid="classoscit_1_1_object_1a2ae7faf5c357c1c78d7f08c302b32d5f" prot="protected" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>find_next_name</name></member>
+      <member refid="classoscit_1_1_object_1a835f295e18da70529107509f6da92f14" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>first_child</name></member>
+      <member refid="classoscit_1_1_object_1a6a71331c5dbe0d0b6579410c2f1b13b0" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>get_child</name></member>
+      <member refid="classoscit_1_1_object_1a8f41ba458a3967d1e188b10909835613" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>get_child</name></member>
+      <member refid="classoscit_1_1_object_1ae348587e8a84ff6510e094920feba582" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>info</name></member>
+      <member refid="classoscit_1_1_typed_1a4aba9ae57b258b6d678c685d190ec281" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>is_a</name></member>
+      <member refid="classoscit_1_1_object_1a5849b1a227d7f09a051c5544c715072b" prot="protected" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>keep_last_</name></member>
+      <member refid="classoscit_1_1_object_1ab3d7e09f1f76c23b93b9219fbfb49b7c" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>list</name></member>
+      <member refid="classoscit_1_1_object_1aa2b34c6d8eb438cf1967c8dab92ec674" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>list_with_attributes</name></member>
+      <member refid="classoscit_1_1_list_with_attributes_meta_method_1af450ab5ecbaee2d0bc6dd35be399501e" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>ListWithAttributesMetaMethod</name></member>
+      <member refid="classoscit_1_1_list_with_attributes_meta_method_1af2aa3995b38f3a82744c101bfbfb93b4" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>ListWithAttributesMetaMethod</name></member>
+      <member refid="classoscit_1_1_object_1ad9104e48c683463d6fa6b11ef0f48015" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>lock</name></member>
+      <member refid="classoscit_1_1_object_1ad2d56eb93ab7656aadab92ed2d3ce34a" prot="protected" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>moved</name></member>
+      <member refid="classoscit_1_1_object_1ac496efa52da888ff46e2d68265da1ad1" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>name</name></member>
+      <member refid="classoscit_1_1_object_1a28adb2acc229aaf0210e07520addafdf" prot="protected" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>name_</name></member>
+      <member refid="classoscit_1_1_object_1afc7c68fa73ccc93c3f021b68c52d02fd" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>Object</name></member>
+      <member refid="classoscit_1_1_object_1a57e051f3a81fe55e09e9abbfcad5411b" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>Object</name></member>
+      <member refid="classoscit_1_1_object_1a3fe8ac33a99f99c6e9ce50fde76c0452" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>Object</name></member>
+      <member refid="classoscit_1_1_object_1a1dd076857cfebc398d350252ad657fe3" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>Object</name></member>
+      <member refid="classoscit_1_1_object_1acce26a1a45ceaec41c403de2933b0d9a" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>Object</name></member>
+      <member refid="classoscit_1_1_object_1a0a6593f8e7c8818f8b689d757350aaba" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>Object</name></member>
+      <member refid="classoscit_1_1_object_1a48d9081741075e668c1dfb7357e196f7" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>Object</name></member>
+      <member refid="classoscit_1_1_object_1a8371dfb6feae1681c1d8995b30a5d5df" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>Object</name></member>
+      <member refid="classoscit_1_1_object_1a825071efec0cc4ec6bad9ead9025ac4b" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>Object</name></member>
+      <member refid="classoscit_1_1_observer_1ab2b7446f50f2d5c6c9fdbe77ae72ed33" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>Observer</name></member>
+      <member refid="classoscit_1_1_object_1a5f971abf0919f436914b740831d069d8" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>on_delete</name></member>
+      <member refid="classoscit_1_1_object_1ad74c823a1003188238e48c214b7e9d6b" prot="protected" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>on_delete_</name></member>
+      <member refid="classoscit_1_1_object_1ae673c75d02da068beac4316f9a7c4429" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>parent</name></member>
+      <member refid="classoscit_1_1_object_1a30078b27dfeb7591e7cae7ff9516ae4f" prot="protected" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>parent_</name></member>
+      <member refid="classoscit_1_1_c_reference_counted_1abe49f3c60ebe0364d7590a42a4afa8b2" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>ref_count</name></member>
+      <member refid="classoscit_1_1_object_1a43f259903782a874ab9d210eb386b3d3" prot="protected" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>register_child</name></member>
+      <member refid="classoscit_1_1_c_reference_counted_1af937a9fdcb7b0af90e7a99e8413a041f" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>release</name></member>
+      <member refid="classoscit_1_1_c_reference_counted_1a14432013e00b30693b89212ee244f330" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>release</name></member>
+      <member refid="classoscit_1_1_c_reference_counted_1a25c5b24bbd95ad923e77d4f0fa94b888" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>retain</name></member>
+      <member refid="classoscit_1_1_object_1a79b51de62975104798324567ab68566c" prot="protected" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>root_</name></member>
+      <member refid="classoscit_1_1_object_1a7c4b3fab4a14ab4ff571a23bc59cae60" prot="public" virt="virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>set</name></member>
+      <member refid="classoscit_1_1_object_1a72a0145db445cb50f93ab57ab611ef0d" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>set_all_ok</name></member>
+      <member refid="classoscit_1_1_object_1af83dd0bb922d3cbc3fac0f61a765dc87" prot="public" virt="virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>set_context</name></member>
+      <member refid="classoscit_1_1_object_1a10957e58f3360971ecd15c75357a98ad" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>set_keep_last</name></member>
+      <member refid="classoscit_1_1_object_1a9bb6955e387325190835361c1d1e72da" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>set_name</name></member>
+      <member refid="classoscit_1_1_object_1ae491927434513000db13fcf8f10dafc3" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>set_name</name></member>
+      <member refid="classoscit_1_1_object_1aacc22da11d84919f001a3732123a9968" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>set_parent</name></member>
+      <member refid="classoscit_1_1_object_1a0a0d3496199e134d568c87f8122b4c4e" prot="protected" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>set_root</name></member>
+      <member refid="classoscit_1_1_object_1a7f88175bd65749b9b9c00177703b7916" prot="public" virt="virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>to_hash</name></member>
+      <member refid="classoscit_1_1_object_1a3efa5720f9817fb5d1ea84afbea927ca" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>tree</name></member>
+      <member refid="classoscit_1_1_list_with_attributes_meta_method_1ac3980dc5dd435ba4b686d18f81095d83" prot="public" virt="virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>trigger</name></member>
+      <member refid="classoscit_1_1_object_1a2d2e181035b4d0265a231f85f71b8cb0" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>type</name></member>
+      <member refid="classoscit_1_1_typed_1a72ecaff553f3b9028dd57afee597dc44" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>type_cast</name></member>
+      <member refid="classoscit_1_1_object_1a34c0a7e5786a1bddbe54529abafe522d" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>type_id</name></member>
+      <member refid="classoscit_1_1_object_1a8d5e13941e410b6d86a3492cb16cb9f8" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>unlock</name></member>
+      <member refid="classoscit_1_1_object_1ad4981ad22e3e1fa7bf6d0f64d152e845" prot="protected" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>unregister_child</name></member>
+      <member refid="classoscit_1_1_object_1a7e34fb8368986560d6ca120e679b4a4e" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>url</name></member>
+      <member refid="classoscit_1_1_object_1aff1923f15589c4f01216270292b439ae" prot="protected" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>url_</name></member>
+      <member refid="classoscit_1_1_c_reference_counted_1adf83fb16489f561db168e11d5c7e19c5" prot="public" virt="virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>~CReferenceCounted</name></member>
+      <member refid="classoscit_1_1_object_1a7804faf5ddca82c30fee98e9d10b9734" prot="public" virt="virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>~Object</name></member>
+      <member refid="classoscit_1_1_observer_1a640ae374906b11455d4496f113b10547" prot="public" virt="non-virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>~Observer</name></member>
+      <member refid="classoscit_1_1_typed_1ab92fb67d52050227718772b14f74b1b6" prot="public" virt="virtual"><scope>oscit::ListWithAttributesMetaMethod</scope><name>~Typed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

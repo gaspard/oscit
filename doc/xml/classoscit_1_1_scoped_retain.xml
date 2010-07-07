@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" line="99" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" bodystart="99" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" line="100" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" bodystart="100" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -35,7 +35,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" line="82" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" bodystart="82" bodyend="84"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" line="83" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" bodystart="83" bodyend="85"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_scoped_retain_1aa0e47c18ceb4a41109e470fb2310835f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -48,7 +48,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" line="86" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" bodystart="86" bodyend="86"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" line="87" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" bodystart="87" bodyend="87"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_scoped_retain_1a78fff498ff1685f2d8e19f4177928ef3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -61,7 +61,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" line="88" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" bodystart="88" bodyend="90"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" line="89" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" bodystart="89" bodyend="91"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_scoped_retain_1aa247235acc7818568884289a5bcdcca6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -78,7 +78,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" line="92" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" bodystart="92" bodyend="96"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" line="93" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" bodystart="93" bodyend="97"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -93,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" line="101" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" bodystart="101" bodyend="103"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" line="102" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" bodystart="102" bodyend="104"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_scoped_retain_1a9a70c61d720ef250e93516a20201d7b6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -106,7 +106,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" line="105" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" bodystart="105" bodyend="107"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" line="106" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" bodystart="106" bodyend="108"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -114,39 +114,39 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="1249">
+      <node id="1261">
         <label>oscit::NonCopyable</label>
         <link refid="classoscit_1_1_non_copyable"/>
       </node>
-      <node id="1248">
+      <node id="1260">
         <label>oscit::ScopedRetain</label>
         <link refid="classoscit_1_1_scoped_retain"/>
-        <childnode refid="1249" relation="private-inheritance">
+        <childnode refid="1261" relation="private-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="1251">
+      <node id="1263">
         <label>oscit::NonCopyable</label>
         <link refid="classoscit_1_1_non_copyable"/>
       </node>
-      <node id="1252">
+      <node id="1264">
         <label>oscit::CReferenceCounted</label>
         <link refid="classoscit_1_1_c_reference_counted"/>
-        <childnode refid="1251" relation="private-inheritance">
+        <childnode refid="1263" relation="private-inheritance">
         </childnode>
       </node>
-      <node id="1250">
+      <node id="1262">
         <label>oscit::ScopedRetain</label>
         <link refid="classoscit_1_1_scoped_retain"/>
-        <childnode refid="1251" relation="private-inheritance">
+        <childnode refid="1263" relation="private-inheritance">
         </childnode>
-        <childnode refid="1252" relation="usage">
+        <childnode refid="1264" relation="usage">
           <edgelabel>object_</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" line="80" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" bodystart="80" bodyend="108"/>
+    <location file="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" line="81" bodyfile="/Users/gaspard/git/oscit/include/oscit/c_reference_counted.h" bodystart="81" bodyend="109"/>
     <listofallmembers>
       <member refid="classoscit_1_1_scoped_retain_1aa247235acc7818568884289a5bcdcca6" prot="public" virt="non-virtual"><scope>oscit::ScopedRetain</scope><name>hold</name></member>
       <member refid="classoscit_1_1_non_copyable_1a1f0c0fedea54b6e20aeefbeefdce67f7" prot="private" virt="non-virtual"><scope>oscit::ScopedRetain</scope><name>NonCopyable</name></member>

@@ -18,121 +18,620 @@
         </inbodydescription>
         <location file="/Users/gaspard/git/oscit/include/oscit/hash_value.h" line="40" bodyfile="/Users/gaspard/git/oscit/include/oscit/hash_value.h" bodystart="40" bodyend="40"/>
       </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_hash_value_1a8d8c47f12cbc8069046268ec5cc16ff1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::HashValue::HashValue</definition>
+        <argsstring>(const char *key, const Value &amp;value)</argsstring>
+        <name>HashValue</name>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new <ref refid="classoscit_1_1_hash_value" kindref="compound">HashValue</ref> with an initial key/value pair. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/hash_value.h" line="44" bodyfile="/Users/gaspard/git/oscit/include/oscit/hash_value.h" bodystart="44" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_hash_value_1aa9f1c2bbfec0f78609cdf47da8bc69d1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::HashValue::HashValue</definition>
+        <argsstring>(const std::string &amp;key, const Value &amp;value)</argsstring>
+        <name>HashValue</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new <ref refid="classoscit_1_1_hash_value" kindref="compound">HashValue</ref> with an initial key/value pair. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/hash_value.h" line="50" bodyfile="/Users/gaspard/git/oscit/include/oscit/hash_value.h" bodystart="50" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_hash_value_1a60926f762031406a6f82a19fb16ff5e2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::HashValue::HashValue</definition>
+        <argsstring>(const char *key1, const char *key2, const Value &amp;value)</argsstring>
+        <name>HashValue</name>
+        <param>
+          <type>const char *</type>
+          <declname>key1</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key2</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new <ref refid="classoscit_1_1_hash_value" kindref="compound">HashValue</ref> with a list of initial key/value pair. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/hash_value.h" line="56" bodyfile="/Users/gaspard/git/oscit/include/oscit/hash_value.h" bodystart="56" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_hash_value_1ad258d1c66e50955239dfbdb8cfc2bc4c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::HashValue::HashValue</definition>
+        <argsstring>(const char *key1, const char *key2, const char *key3, const Value &amp;value)</argsstring>
+        <name>HashValue</name>
+        <param>
+          <type>const char *</type>
+          <declname>key1</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key2</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key3</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new <ref refid="classoscit_1_1_hash_value" kindref="compound">HashValue</ref> with a list of initial key/value pair. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/hash_value.h" line="62" bodyfile="/Users/gaspard/git/oscit/include/oscit/hash_value.h" bodystart="62" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_hash_value_1a257b2b696c44896aae5d92363ed2edd7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::HashValue::HashValue</definition>
+        <argsstring>(const char *key1, const char *key2, const char *key3, const char *key4, const Value &amp;value)</argsstring>
+        <name>HashValue</name>
+        <param>
+          <type>const char *</type>
+          <declname>key1</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key2</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key3</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key4</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new <ref refid="classoscit_1_1_hash_value" kindref="compound">HashValue</ref> with a list of initial key/value pair. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/hash_value.h" line="68" bodyfile="/Users/gaspard/git/oscit/include/oscit/hash_value.h" bodystart="68" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_hash_value_1ae5c7879b883dca39ed1165b083785bd4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::HashValue::HashValue</definition>
+        <argsstring>(const char *key1, const char *key2, const char *key3, const char *key4, const char *key5, const Value &amp;value)</argsstring>
+        <name>HashValue</name>
+        <param>
+          <type>const char *</type>
+          <declname>key1</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key2</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key3</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key4</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key5</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new <ref refid="classoscit_1_1_hash_value" kindref="compound">HashValue</ref> with a list of initial key/value pair. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/hash_value.h" line="74" bodyfile="/Users/gaspard/git/oscit/include/oscit/hash_value.h" bodystart="74" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_hash_value_1a2e5f435d0ecdf4e06b336011fd9032e1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::HashValue::HashValue</definition>
+        <argsstring>(const char *key, const char *value)</argsstring>
+        <name>HashValue</name>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new <ref refid="classoscit_1_1_hash_value" kindref="compound">HashValue</ref> with an initial key/value pair. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/hash_value.h" line="83" bodyfile="/Users/gaspard/git/oscit/include/oscit/hash_value.h" bodystart="83" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_hash_value_1aea03394c473aaf59d1b31083f9aec4dc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::HashValue::HashValue</definition>
+        <argsstring>(const std::string &amp;key, const char *value)</argsstring>
+        <name>HashValue</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new <ref refid="classoscit_1_1_hash_value" kindref="compound">HashValue</ref> with an initial key/value pair. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/hash_value.h" line="89" bodyfile="/Users/gaspard/git/oscit/include/oscit/hash_value.h" bodystart="89" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_hash_value_1a91e245df6584b76e21eeacc056b8fc21" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::HashValue::HashValue</definition>
+        <argsstring>(const char *key1, const char *key2, const char *value)</argsstring>
+        <name>HashValue</name>
+        <param>
+          <type>const char *</type>
+          <declname>key1</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key2</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new <ref refid="classoscit_1_1_hash_value" kindref="compound">HashValue</ref> with a list of initial key/value pair. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/hash_value.h" line="95" bodyfile="/Users/gaspard/git/oscit/include/oscit/hash_value.h" bodystart="95" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_hash_value_1aedf093a9d3e4ed38259dd4ad28c118c9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::HashValue::HashValue</definition>
+        <argsstring>(const char *key1, const char *key2, const char *key3, const char *value)</argsstring>
+        <name>HashValue</name>
+        <param>
+          <type>const char *</type>
+          <declname>key1</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key2</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key3</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new <ref refid="classoscit_1_1_hash_value" kindref="compound">HashValue</ref> with a list of initial key/value pair. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/hash_value.h" line="101" bodyfile="/Users/gaspard/git/oscit/include/oscit/hash_value.h" bodystart="101" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_hash_value_1acdb67baa072d96a62eb38f958d73ca05" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::HashValue::HashValue</definition>
+        <argsstring>(const char *key1, const char *key2, const char *key3, const char *key4, const char *value)</argsstring>
+        <name>HashValue</name>
+        <param>
+          <type>const char *</type>
+          <declname>key1</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key2</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key3</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key4</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new <ref refid="classoscit_1_1_hash_value" kindref="compound">HashValue</ref> with a list of initial key/value pair. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/hash_value.h" line="107" bodyfile="/Users/gaspard/git/oscit/include/oscit/hash_value.h" bodystart="107" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_hash_value_1ac06fa47a522a93b8d6b3b3b7a692dad8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::HashValue::HashValue</definition>
+        <argsstring>(const char *key1, const char *key2, const char *key3, const char *key4, const char *key5, const char *value)</argsstring>
+        <name>HashValue</name>
+        <param>
+          <type>const char *</type>
+          <declname>key1</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key2</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key3</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key4</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key5</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new <ref refid="classoscit_1_1_hash_value" kindref="compound">HashValue</ref> with a list of initial key/value pair. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/hash_value.h" line="113" bodyfile="/Users/gaspard/git/oscit/include/oscit/hash_value.h" bodystart="113" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_hash_value_1a3341476a37e74bdd47bec26fce734f36" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::HashValue::HashValue</definition>
+        <argsstring>(const char *key, Real value)</argsstring>
+        <name>HashValue</name>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new <ref refid="classoscit_1_1_hash_value" kindref="compound">HashValue</ref> with an initial key/value pair. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/hash_value.h" line="119" bodyfile="/Users/gaspard/git/oscit/include/oscit/hash_value.h" bodystart="119" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_hash_value_1a0832ef9ed7efb0f5374fcdae3883a9ad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::HashValue::HashValue</definition>
+        <argsstring>(const std::string &amp;key, Real value)</argsstring>
+        <name>HashValue</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new <ref refid="classoscit_1_1_hash_value" kindref="compound">HashValue</ref> with an initial key/value pair. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/hash_value.h" line="125" bodyfile="/Users/gaspard/git/oscit/include/oscit/hash_value.h" bodystart="125" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_hash_value_1a7cf8f75aede30d4864682cfca052e2ad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::HashValue::HashValue</definition>
+        <argsstring>(const char *key1, const char *key2, Real value)</argsstring>
+        <name>HashValue</name>
+        <param>
+          <type>const char *</type>
+          <declname>key1</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key2</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new <ref refid="classoscit_1_1_hash_value" kindref="compound">HashValue</ref> with a list of initial key/value pair. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/hash_value.h" line="131" bodyfile="/Users/gaspard/git/oscit/include/oscit/hash_value.h" bodystart="131" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_hash_value_1aebd3ad8cbf6740de2ed917114cb1e184" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::HashValue::HashValue</definition>
+        <argsstring>(const char *key1, const char *key2, const char *key3, Real value)</argsstring>
+        <name>HashValue</name>
+        <param>
+          <type>const char *</type>
+          <declname>key1</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key2</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key3</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new <ref refid="classoscit_1_1_hash_value" kindref="compound">HashValue</ref> with a list of initial key/value pair. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/hash_value.h" line="137" bodyfile="/Users/gaspard/git/oscit/include/oscit/hash_value.h" bodystart="137" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_hash_value_1a05103833d694e8108a46d6a1ae815880" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::HashValue::HashValue</definition>
+        <argsstring>(const char *key1, const char *key2, const char *key3, const char *key4, Real value)</argsstring>
+        <name>HashValue</name>
+        <param>
+          <type>const char *</type>
+          <declname>key1</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key2</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key3</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key4</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new <ref refid="classoscit_1_1_hash_value" kindref="compound">HashValue</ref> with a list of initial key/value pair. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/hash_value.h" line="143" bodyfile="/Users/gaspard/git/oscit/include/oscit/hash_value.h" bodystart="143" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_hash_value_1ac9029a73408ff49b216a3b5378a16b12" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::HashValue::HashValue</definition>
+        <argsstring>(const char *key1, const char *key2, const char *key3, const char *key4, const char *key5, Real value)</argsstring>
+        <name>HashValue</name>
+        <param>
+          <type>const char *</type>
+          <declname>key1</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key2</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key3</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key4</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key5</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceoscit_1aec5e82657ca46d39345c88f07ca2f07e" kindref="member">Real</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new <ref refid="classoscit_1_1_hash_value" kindref="compound">HashValue</ref> with a list of initial key/value pair. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/hash_value.h" line="149" bodyfile="/Users/gaspard/git/oscit/include/oscit/hash_value.h" bodystart="149" bodyend="151"/>
+      </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
 <para><ref refid="classoscit_1_1_hash_value" kindref="compound">HashValue</ref> is just a wrapper around an immutable const char*. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="368">
+      <node id="389">
         <label>oscit::HashValue</label>
         <link refid="classoscit_1_1_hash_value"/>
-        <childnode refid="369" relation="public-inheritance">
+        <childnode refid="390" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="369">
+      <node id="390">
         <label>oscit::Value</label>
         <link refid="classoscit_1_1_value"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="377">
-        <label>Matrix</label>
-        <link refid="class_matrix"/>
+      <node id="395">
+        <label>oscit::Matrix</label>
+        <link refid="classoscit_1_1_matrix"/>
       </node>
-      <node id="370">
+      <node id="391">
         <label>oscit::HashValue</label>
         <link refid="classoscit_1_1_hash_value"/>
-        <childnode refid="371" relation="public-inheritance">
+        <childnode refid="392" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="376">
+      <node id="398">
         <label>oscit::List</label>
         <link refid="classoscit_1_1_list"/>
-        <childnode refid="373" relation="public-inheritance">
+        <childnode refid="394" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="371">
+      <node id="392">
         <label>oscit::Value</label>
         <link refid="classoscit_1_1_value"/>
-        <childnode refid="372" relation="usage">
+        <childnode refid="393" relation="usage">
           <edgelabel>midi_message_</edgelabel>
         </childnode>
-        <childnode refid="374" relation="usage">
-          <edgelabel>string_</edgelabel>
-        </childnode>
-        <childnode refid="375" relation="usage">
-          <edgelabel>error_</edgelabel>
-        </childnode>
-        <childnode refid="376" relation="usage">
-          <edgelabel>list_</edgelabel>
-        </childnode>
-        <childnode refid="377" relation="usage">
+        <childnode refid="395" relation="usage">
           <edgelabel>matrix_</edgelabel>
         </childnode>
-        <childnode refid="378" relation="usage">
+        <childnode refid="396" relation="usage">
+          <edgelabel>string_</edgelabel>
+        </childnode>
+        <childnode refid="397" relation="usage">
+          <edgelabel>error_</edgelabel>
+        </childnode>
+        <childnode refid="398" relation="usage">
+          <edgelabel>list_</edgelabel>
+        </childnode>
+        <childnode refid="399" relation="usage">
           <edgelabel>hash_</edgelabel>
         </childnode>
       </node>
-      <node id="372">
+      <node id="393">
         <label>oscit::MidiMessage</label>
         <link refid="classoscit_1_1_midi_message"/>
-        <childnode refid="373" relation="public-inheritance">
+        <childnode refid="394" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="380">
+      <node id="401">
         <label>oscit::THashElement&lt; std::string, Value &gt;</label>
         <link refid="structoscit_1_1_t_hash_element"/>
-        <childnode refid="380" relation="usage">
+        <childnode refid="401" relation="usage">
           <edgelabel>next</edgelabel>
         </childnode>
-        <childnode refid="371" relation="usage">
+        <childnode refid="392" relation="usage">
           <edgelabel>obj</edgelabel>
         </childnode>
       </node>
-      <node id="375">
+      <node id="397">
         <label>oscit::Error</label>
         <link refid="classoscit_1_1_error"/>
-        <childnode refid="373" relation="public-inheritance">
+        <childnode refid="394" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="379">
+      <node id="400">
         <label>oscit::THash&lt; std::string, Value &gt;</label>
         <link refid="classoscit_1_1_t_hash"/>
-        <childnode refid="380" relation="usage">
+        <childnode refid="401" relation="usage">
           <edgelabel>thash_table_</edgelabel>
         </childnode>
       </node>
-      <node id="378">
+      <node id="399">
         <label>oscit::Hash</label>
         <link refid="classoscit_1_1_hash"/>
-        <childnode refid="373" relation="public-inheritance">
+        <childnode refid="394" relation="public-inheritance">
         </childnode>
-        <childnode refid="379" relation="public-inheritance">
+        <childnode refid="400" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="373">
+      <node id="394">
         <label>oscit::ReferenceCounted</label>
         <link refid="classoscit_1_1_reference_counted"/>
       </node>
-      <node id="374">
+      <node id="396">
         <label>oscit::StringData</label>
         <link refid="classoscit_1_1_string_data"/>
-        <childnode refid="373" relation="public-inheritance">
+        <childnode refid="394" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/Users/gaspard/git/oscit/include/oscit/hash_value.h" line="38" bodyfile="/Users/gaspard/git/oscit/include/oscit/hash_value.h" bodystart="37" bodyend="41"/>
+    <location file="/Users/gaspard/git/oscit/include/oscit/hash_value.h" line="38" bodyfile="/Users/gaspard/git/oscit/include/oscit/hash_value.h" bodystart="37" bodyend="152"/>
     <listofallmembers>
       <member refid="classoscit_1_1_value_1a94154ca6958af85d1993062f4002fbe4" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>adopt</name></member>
       <member refid="classoscit_1_1_value_1a0e4a89cb5f8a0155f6a1fbd760a8346f" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>append</name></member>
       <member refid="classoscit_1_1_value_1a761e6d5cc05e09d9e07df09b640ebef4" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>append</name></member>
-      <member refid="classoscit_1_1_value_1a4dca1b0a4887e9156202f30978d91a99acca672a09826973dcba73a923d468e1b" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>AUTO_STEP</name></member>
+      <member refid="classoscit_1_1_value_1adc570812318d718466dfe76e6fb4edd8acca672a09826973dcba73a923d468e1b" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>AUTO_STEP</name></member>
       <member refid="classoscit_1_1_value_1a76b26adae531cedec3fb52cafa0d65db" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>begin</name></member>
       <member refid="classoscit_1_1_value_1a2cf8ebd5c1bc4768969efc2cf3bc6468" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>build_from_json</name></member>
       <member refid="classoscit_1_1_value_1ab8ff836f027eb57ac4da1dab7a660316" prot="protected" virt="non-virtual"><scope>oscit::HashValue</scope><name>build_matrix</name></member>
       <member refid="classoscit_1_1_value_1a278b2a5b5d9bdb5e42985abd22222a93" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>c_str</name></member>
       <member refid="classoscit_1_1_value_1a1f5e00cbf404ff5086042c1ada5b7415" prot="protected" virt="non-virtual"><scope>oscit::HashValue</scope><name>clear</name></member>
+      <member refid="classoscit_1_1_value_1a32dea682781603ca73e40587f01f24a5" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>contains_error</name></member>
       <member refid="classoscit_1_1_value_1a6f172d8c752304c21ebf0bcd6e10ba74" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>copy</name></member>
       <member refid="classoscit_1_1_value_1a4ae80b5354552dd3849ddfed556c5bbe" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>deep_merge</name></member>
       <member refid="classoscit_1_1_value_1aa8164540a84859038e3f41a0ff0eba7d" prot="protected" virt="non-virtual"><scope>oscit::HashValue</scope><name>delete_matrix</name></member>
@@ -147,7 +646,26 @@
       <member refid="classoscit_1_1_value_1ae940e5ad977876da5837d23cfabe0b9c" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>has_key</name></member>
       <member refid="classoscit_1_1_value_1ae8c6cb40416e48f1e3e9afb2e00195f9" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>hash_</name></member>
       <member refid="classoscit_1_1_hash_value_1aff8a4fd3bf13364efaf2e35b86429646" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>HashValue</name></member>
+      <member refid="classoscit_1_1_hash_value_1a8d8c47f12cbc8069046268ec5cc16ff1" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>HashValue</name></member>
+      <member refid="classoscit_1_1_hash_value_1aa9f1c2bbfec0f78609cdf47da8bc69d1" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>HashValue</name></member>
+      <member refid="classoscit_1_1_hash_value_1a60926f762031406a6f82a19fb16ff5e2" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>HashValue</name></member>
+      <member refid="classoscit_1_1_hash_value_1ad258d1c66e50955239dfbdb8cfc2bc4c" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>HashValue</name></member>
+      <member refid="classoscit_1_1_hash_value_1a257b2b696c44896aae5d92363ed2edd7" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>HashValue</name></member>
+      <member refid="classoscit_1_1_hash_value_1ae5c7879b883dca39ed1165b083785bd4" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>HashValue</name></member>
+      <member refid="classoscit_1_1_hash_value_1a2e5f435d0ecdf4e06b336011fd9032e1" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>HashValue</name></member>
+      <member refid="classoscit_1_1_hash_value_1aea03394c473aaf59d1b31083f9aec4dc" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>HashValue</name></member>
+      <member refid="classoscit_1_1_hash_value_1a91e245df6584b76e21eeacc056b8fc21" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>HashValue</name></member>
+      <member refid="classoscit_1_1_hash_value_1aedf093a9d3e4ed38259dd4ad28c118c9" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>HashValue</name></member>
+      <member refid="classoscit_1_1_hash_value_1acdb67baa072d96a62eb38f958d73ca05" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>HashValue</name></member>
+      <member refid="classoscit_1_1_hash_value_1ac06fa47a522a93b8d6b3b3b7a692dad8" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>HashValue</name></member>
+      <member refid="classoscit_1_1_hash_value_1a3341476a37e74bdd47bec26fce734f36" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>HashValue</name></member>
+      <member refid="classoscit_1_1_hash_value_1a0832ef9ed7efb0f5374fcdae3883a9ad" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>HashValue</name></member>
+      <member refid="classoscit_1_1_hash_value_1a7cf8f75aede30d4864682cfca052e2ad" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>HashValue</name></member>
+      <member refid="classoscit_1_1_hash_value_1aebd3ad8cbf6740de2ed917114cb1e184" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>HashValue</name></member>
+      <member refid="classoscit_1_1_hash_value_1a05103833d694e8108a46d6a1ae815880" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>HashValue</name></member>
+      <member refid="classoscit_1_1_hash_value_1ac9029a73408ff49b216a3b5378a16b12" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>HashValue</name></member>
       <member refid="classoscit_1_1_value_1a00ead4243bd111301fde1cb58a17af33" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>is_any</name></member>
+      <member refid="classoscit_1_1_value_1a65a04bb9f97bb891afd13cb1b5570c23" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>is_bang</name></member>
       <member refid="classoscit_1_1_value_1aefaddce7594e50044d9f779e579e9a3c" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>is_empty</name></member>
       <member refid="classoscit_1_1_value_1a49aefc14ebd88febb6ba6712f870f159" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>is_error</name></member>
       <member refid="classoscit_1_1_value_1a55fdbfbf3012a4be38d644678205ed8b" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>is_false</name></member>
@@ -159,6 +677,8 @@
       <member refid="classoscit_1_1_value_1a2ecb230a2c852cfbaa3be4578fd83768" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>is_real</name></member>
       <member refid="classoscit_1_1_value_1a6e52b09be3be2ccb2114bd80f3d35b9a" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>is_string</name></member>
       <member refid="classoscit_1_1_value_1af7bb9ff018a4814963a5bfc7ca632bf9" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>is_true</name></member>
+      <member refid="classoscit_1_1_value_1af8f456d979c8b7bf05ebc006c60872c8" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>join</name></member>
+      <member refid="classoscit_1_1_value_1a67da80b90745754fc579469d111e96e9" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>join</name></member>
       <member refid="classoscit_1_1_value_1aeec9663152b7d4f554cccf6871ede08a" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>last</name></member>
       <member refid="classoscit_1_1_value_1a55e268056f33bc50174934446bee0f04" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>lazy_json</name></member>
       <member refid="classoscit_1_1_value_1a88731fb79a70d2761809fc7daf110928" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>list_</name></member>
@@ -185,6 +705,8 @@
       <member refid="classoscit_1_1_value_1a00f5f261fca5f0a37edab7e2f16b495b" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>push_front</name></member>
       <member refid="classoscit_1_1_value_1a37f12fb892a43f1597e0e63f29a2a796" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>push_front</name></member>
       <member refid="classoscit_1_1_value_1a32817b564b91700888d7b5975a195a53" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>r</name></member>
+      <member refid="classoscit_1_1_value_1a8675f9c023a72ce44d27c1ad52c65811" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>remove</name></member>
+      <member refid="classoscit_1_1_value_1a19693ba439a3007a9508ff756b16b9f4" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>remove</name></member>
       <member refid="classoscit_1_1_value_1a987981f06ba8310d0e646a91a3f75f95" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>set</name></member>
       <member refid="classoscit_1_1_value_1a5adff5a7390282249c0082dacdaaf708" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>set</name></member>
       <member refid="classoscit_1_1_value_1a9a5fdfa0c73b8b4e1b43556ab007b637" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>set</name></member>
@@ -197,9 +719,12 @@
       <member refid="classoscit_1_1_value_1a6d623bd605229c7e2aee1e34175a2dcc" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>set</name></member>
       <member refid="classoscit_1_1_value_1af40da1fb22ac53165b38ec48fc3adac9" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>set</name></member>
       <member refid="classoscit_1_1_value_1a9079fb2911c8703d6ce7f1b37e91d41c" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>set</name></member>
-      <member refid="classoscit_1_1_value_1a85ee7e34d1fbb111d065c26edbd69eff" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>set</name></member>
-      <member refid="classoscit_1_1_value_1a4afb66ed8b50c03de98e65938ffdb69f" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>set</name></member>
-      <member refid="classoscit_1_1_value_1abfbb5fc636a1a374bb3c3ae6cec1d226" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>set</name></member>
+      <member refid="classoscit_1_1_value_1a7c30a8a47ce3a2ede19a28d2faeeec9e" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>set</name></member>
+      <member refid="classoscit_1_1_value_1a730b25eee3ac426d7a4175e5e723b1f0" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>set</name></member>
+      <member refid="classoscit_1_1_value_1a4fcf0a497700902ad69a10a875d8a557" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>set</name></member>
+      <member refid="classoscit_1_1_value_1a891044e1b9c3a6a7a86b9ef404bc01f0" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>set</name></member>
+      <member refid="classoscit_1_1_value_1a0f47a09c73aaad7a351a0f4cf1189d84" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>set</name></member>
+      <member refid="classoscit_1_1_value_1a58f52a1ac3be4e5201cd8c03ce0cece4" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>set</name></member>
       <member refid="classoscit_1_1_value_1ac1445baead9030269a03ae0cb43cc645" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>set</name></member>
       <member refid="classoscit_1_1_value_1af55871204a79bfe2f23c434dcd1d36d0" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>set</name></member>
       <member refid="classoscit_1_1_value_1abdb6e77326fc6b089c4366b3f5265cee" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>set</name></member>
@@ -212,6 +737,7 @@
       <member refid="classoscit_1_1_value_1a6541f1c156bd150637b5f1d524c2b841" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>set_empty</name></member>
       <member refid="classoscit_1_1_value_1a96c8701742e4fbc218dfad7b01f259a6" prot="protected" virt="non-virtual"><scope>oscit::HashValue</scope><name>set_error</name></member>
       <member refid="classoscit_1_1_value_1a12a623118268488fcb3cf3abf54737a9" prot="protected" virt="non-virtual"><scope>oscit::HashValue</scope><name>set_error</name></member>
+      <member refid="classoscit_1_1_value_1a0e802c571897b74614b3266bd0aa9e4d" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>set_false</name></member>
       <member refid="classoscit_1_1_value_1a31759544a8ad15f0d17ad7731dda8ff7" prot="protected" virt="non-virtual"><scope>oscit::HashValue</scope><name>set_hash</name></member>
       <member refid="classoscit_1_1_value_1aa147997bba69cedc37a4d9d1a1e475c3" prot="protected" virt="non-virtual"><scope>oscit::HashValue</scope><name>set_list</name></member>
       <member refid="classoscit_1_1_value_1aa3af9b41a49dcd52a1f7bfaf5070267e" prot="protected" virt="non-virtual"><scope>oscit::HashValue</scope><name>set_matrix</name></member>
@@ -219,6 +745,7 @@
       <member refid="classoscit_1_1_value_1ac88dcf2d5afb22f439eb43c858d967e9" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>set_nil</name></member>
       <member refid="classoscit_1_1_value_1a40cee28c06cf9e33b0bbf40682813021" prot="protected" virt="non-virtual"><scope>oscit::HashValue</scope><name>set_string</name></member>
       <member refid="classoscit_1_1_value_1aae280462173bbdf983db8948ce7a686d" prot="protected" virt="non-virtual"><scope>oscit::HashValue</scope><name>set_string</name></member>
+      <member refid="classoscit_1_1_value_1a638051707e3acddc085f0ae7dd918500" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>set_true</name></member>
       <member refid="classoscit_1_1_value_1aa6edfaed10be09bcc603cdc111a708f1" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>set_type</name></member>
       <member refid="classoscit_1_1_value_1a9eb434cf4cf68c0ba0b7de48c059b067" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>set_type_tag</name></member>
       <member refid="classoscit_1_1_value_1afb99323ea7123e85607dc61c897572ef" prot="protected" virt="non-virtual"><scope>oscit::HashValue</scope><name>set_type_without_default</name></member>
@@ -229,6 +756,8 @@
       <member refid="classoscit_1_1_value_1a7ccf1895735fca3bc741f48edf4a401d" prot="protected" virt="non-virtual"><scope>oscit::HashValue</scope><name>share</name></member>
       <member refid="classoscit_1_1_value_1af36050305544e81359658387c832a3dd" prot="protected" virt="non-virtual"><scope>oscit::HashValue</scope><name>share</name></member>
       <member refid="classoscit_1_1_value_1a70a898041b70b6de022a93e87810c1e1" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>size</name></member>
+      <member refid="classoscit_1_1_value_1af1b65e86f0a3bc9df2da1d09fcba4284" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>split</name></member>
+      <member refid="classoscit_1_1_value_1a5e14205f79d4e48073371d1e264dbc21" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>split</name></member>
       <member refid="classoscit_1_1_value_1a8ce62f1cacddc9760a5424b20008ca8b" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>str</name></member>
       <member refid="classoscit_1_1_value_1afb8da07c1ca88d63af054be5a53bf2f8" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>str</name></member>
       <member refid="classoscit_1_1_value_1a3ecdffba82bc93192589c125ffaf3882" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>string_</name></member>
@@ -239,6 +768,7 @@
       <member refid="classoscit_1_1_value_1a99972ee09df805ce12fed826e9ff70ea" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>type_from_char</name></member>
       <member refid="classoscit_1_1_value_1a542f39cd139aa63919a300f1b230dc1c" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>type_id</name></member>
       <member refid="classoscit_1_1_value_1ab7d211f552dfcddab03b682072da6bde" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>type_tag</name></member>
+      <member refid="classoscit_1_1_value_1ae3d5767bace8d213e1fc4403205c5d79" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>unpack</name></member>
       <member refid="classoscit_1_1_value_1ab156d3cac4d24872dd02d546a3cc7e22" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>Value</name></member>
       <member refid="classoscit_1_1_value_1a5c7877c342caa1fd5b97757f459b6586" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>Value</name></member>
       <member refid="classoscit_1_1_value_1ab99a95ff3023995997927f2fcf195ee0" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>Value</name></member>
@@ -250,7 +780,7 @@
       <member refid="classoscit_1_1_value_1a7c89efcd3da602708deb422517a3ece2" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>Value</name></member>
       <member refid="classoscit_1_1_value_1ae357e6191cec0662080b452952d6abbc" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>Value</name></member>
       <member refid="classoscit_1_1_value_1a5b81e48657cdd159f72e8903091dec80" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>Value</name></member>
-      <member refid="classoscit_1_1_value_1a9383e97ec8f2349a0484b29a99f4729a" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>Value</name></member>
+      <member refid="classoscit_1_1_value_1acad9eeb3edf05842f7c5fd2e6c4ee996" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>Value</name></member>
       <member refid="classoscit_1_1_value_1a36d3554275144ee88ebdf838e06770e3" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>Value</name></member>
       <member refid="classoscit_1_1_value_1ac6afc2ce0db7a55879dd4baaff78ac37" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>Value</name></member>
       <member refid="classoscit_1_1_value_1ad7ff2b475f978c8745386a154c621a86" prot="public" virt="non-virtual"><scope>oscit::HashValue</scope><name>Value</name></member>

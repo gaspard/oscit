@@ -141,38 +141,38 @@
     <detaileddescription>
 <para>Maintains a reference count of an element. When the reference count reaches zero, the object is deleted. Note that this class *is not thread-safe*. You should use <ref refid="classoscit_1_1_c_reference_counted" kindref="compound">CReferenceCounted</ref> for a thread-safe version. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="1132">
+      <node id="1140">
         <label>oscit::List</label>
         <link refid="classoscit_1_1_list"/>
-        <childnode refid="1129" relation="public-inheritance">
+        <childnode refid="1137" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1133">
+      <node id="1141">
         <label>oscit::MidiMessage</label>
         <link refid="classoscit_1_1_midi_message"/>
-        <childnode refid="1129" relation="public-inheritance">
+        <childnode refid="1137" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1130">
+      <node id="1138">
         <label>oscit::Error</label>
         <link refid="classoscit_1_1_error"/>
-        <childnode refid="1129" relation="public-inheritance">
+        <childnode refid="1137" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1131">
+      <node id="1139">
         <label>oscit::Hash</label>
         <link refid="classoscit_1_1_hash"/>
-        <childnode refid="1129" relation="public-inheritance">
+        <childnode refid="1137" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1129">
+      <node id="1137">
         <label>oscit::ReferenceCounted</label>
         <link refid="classoscit_1_1_reference_counted"/>
       </node>
-      <node id="1134">
+      <node id="1142">
         <label>oscit::StringData</label>
         <link refid="classoscit_1_1_string_data"/>
-        <childnode refid="1129" relation="public-inheritance">
+        <childnode refid="1137" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

@@ -5,9 +5,9 @@
     <basecompoundref refid="classoscit_1_1_reference_counted" prot="public" virt="non-virtual">oscit::ReferenceCounted</basecompoundref>
     <includes refid="midi__message_8h" local="no">midi_message.h</includes>
       <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="classoscit_1_1_midi_message_1a09fc55b845e83f546a8edba3a82ff9df" prot="private" static="no" mutable="no">
-        <type><ref refid="namespaceoscit_1a451028d8d1fc9978967dc1d51d28aeee" kindref="member">MidiMessageType</ref></type>
-        <definition>MidiMessageType oscit::MidiMessage::type_</definition>
+      <memberdef kind="variable" id="classoscit_1_1_midi_message_1a18e54b0bf782e035d9a9e0b02e6c10f2" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int oscit::MidiMessage::type_</definition>
         <argsstring></argsstring>
         <name>type_</name>
         <briefdescription>
@@ -16,7 +16,7 @@
 <para>Type of midi messate (NoteOn, NoteOff, etc). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="355" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="355" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="389" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="389" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classoscit_1_1_midi_message_1a0d3113fbd5a2bc0e0834b0872519da97" prot="private" static="no" mutable="no">
         <type>time_t</type>
@@ -29,7 +29,7 @@
 <para>Number of milliseconds (?) to wait before sending the midi event out. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="359" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="359" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="393" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="393" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classoscit_1_1_midi_message_1a7bc522f63c011482b1855af19d664685" prot="private" static="no" mutable="no">
         <type>time_t</type>
@@ -42,7 +42,7 @@
 <para>Duration of note in milliseconds. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="363" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="363" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="397" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="397" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classoscit_1_1_midi_message_1a4bf61b195bc5e5772739f21e199f681e" prot="private" static="no" mutable="no">
         <type>std::vector&lt; unsigned char &gt;</type>
@@ -55,7 +55,7 @@
 <para>Raw midi message as a vector of unsigned char (compatible with RtMidi). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="367" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="367" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="401" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="401" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -70,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="57" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="57" bodyend="59"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="76" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="76" bodyend="78"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_midi_message_1afb604b7258d6c3445d25babc314820a7" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
         <type></type>
@@ -87,7 +87,59 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="61" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="61" bodyend="61"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="80" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="80" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_midi_message_1ab1349ac9c9c32bd6e7d7bcf3f09f6a0e" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>oscit::MidiMessage::MidiMessage</definition>
+        <argsstring>(const Value &amp;message, time_t wait=0)</argsstring>
+        <name>MidiMessage</name>
+        <param>
+          <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>time_t</type>
+          <declname>wait</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_midi_message_1abe85a75fc97900491f10ae8280e47b59" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::MidiMessage::MidiMessage</definition>
+        <argsstring>(char data1, char data2, char data3, float length=0)</argsstring>
+        <name>MidiMessage</name>
+        <param>
+          <type>char</type>
+          <declname>data1</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>data2</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>data3</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>length</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="84" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="84" bodyend="92"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_midi_message_1a983dba815f9f95603409f1ce6141f7f1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type></type>
@@ -100,7 +152,29 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="63" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="63" bodyend="63"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="94" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="94" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_midi_message_1a269de3b1c3d0d27010b8d357766ffb6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool oscit::MidiMessage::unpack</definition>
+        <argsstring>(const Value &amp;message, time_t wait=0)</argsstring>
+        <name>unpack</name>
+        <param>
+          <type>const <ref refid="classoscit_1_1_value" kindref="compound">Value</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>time_t</type>
+          <declname>wait</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set message from raw midi data. Return false if message could not be set. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="98"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_midi_message_1a98f5911ec82fab74c7f50219eeea7125" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -122,7 +196,7 @@
 <para>Set message from raw midi data. Return false if message could not be set. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="67" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="67" bodyend="104"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="102" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="102" bodyend="109"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_midi_message_1a33696e264eea5de6b69c9c5b7e6952a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -196,7 +270,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="130" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="130" bodyend="141"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="135" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="135" bodyend="146"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_midi_message_1ad2ebaa5805ac5650a5ea29510b93ffb4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -227,7 +301,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="144" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="143" bodyend="150"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="149" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="148" bodyend="155"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_midi_message_1ac35f1ad754d1307dbd8e66f1ba08ec7d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -240,7 +314,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="152" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="152" bodyend="157"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="157" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="157" bodyend="162"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_midi_message_1acabaf4e67bd9078e75b87c70de146d88" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -257,7 +331,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="159" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="159" bodyend="161"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="164" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="164" bodyend="171"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_midi_message_1a6b32a4074e20e11fe877b600ab758545" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -274,7 +348,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="163" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="163" bodyend="165"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="173" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="173" bodyend="175"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_midi_message_1ab1906dca58498223a568d6f80a1fc725" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -291,7 +365,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="167" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="167" bodyend="169"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="177" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="177" bodyend="179"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_midi_message_1a735632762ccf681342a3da0f1ceea094" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -308,7 +382,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="171" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="171" bodyend="179"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="181" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="181" bodyend="189"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_midi_message_1a1069615bfaa1801216dbedb6331dd49a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -325,7 +399,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="181" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="181" bodyend="197"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="191" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="191" bodyend="202"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_midi_message_1ac247688baaacd7dcae01960e2627daf4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -342,7 +416,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="199" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="199" bodyend="201"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="204" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="204" bodyend="206"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_midi_message_1acf834ead48f4ac3601b2b1bf6540d35a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -359,7 +433,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="203" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="203" bodyend="209"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="208" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="208" bodyend="214"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_midi_message_1a391d24a74df43ae5a41c069bdd276ccd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -376,11 +450,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="211" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="211" bodyend="219"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="216" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="216" bodyend="224"/>
       </memberdef>
-      <memberdef kind="function" id="classoscit_1_1_midi_message_1a2fa776602cfffaf4149f1f1b991e36bc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type><ref refid="namespaceoscit_1a451028d8d1fc9978967dc1d51d28aeee" kindref="member">MidiMessageType</ref></type>
-        <definition>MidiMessageType oscit::MidiMessage::type</definition>
+      <memberdef kind="function" id="classoscit_1_1_midi_message_1add74af497dd93cafc8c43e892c23d59e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int oscit::MidiMessage::type</definition>
         <argsstring>() const </argsstring>
         <name>type</name>
         <briefdescription>
@@ -389,7 +463,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="221" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="221" bodyend="221"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="226" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="226" bodyend="226"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_midi_message_1a5cf4ec4c42b36b9bd2f928c7ab64297c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>unsigned int</type>
@@ -402,7 +476,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="223" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="223" bodyend="223"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="228" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="228" bodyend="228"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_midi_message_1a7f03c20d70a1354d41122eeabf683084" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>unsigned int</type>
@@ -415,7 +489,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="225" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="225" bodyend="225"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="230" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="230" bodyend="230"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_midi_message_1abf67f4e423e28a33d415ee4f230eb7cd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>unsigned int</type>
@@ -428,7 +502,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="227" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="227" bodyend="227"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="232" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="232" bodyend="232"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_midi_message_1a4f6fae8e4bc3c88cad6d85418e6f8aa8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>unsigned int</type>
@@ -441,7 +515,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="229" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="229" bodyend="240"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="234" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="234" bodyend="241"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_midi_message_1abd2b5ab8087353e999859b2abad9f274" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>unsigned int</type>
@@ -454,7 +528,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="242" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="242" bodyend="242"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="243" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="243" bodyend="243"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_midi_message_1aee5a111030e8032e21fe1918ffb2a121" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>time_t</type>
@@ -467,7 +541,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="244" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="244" bodyend="244"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="245" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="245" bodyend="245"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_midi_message_1a6381a39df2da8be8b4038c15cabd142b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>time_t</type>
@@ -480,7 +554,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="246" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="246" bodyend="246"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="247" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="247" bodyend="247"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_midi_message_1a618b48fbc083b97b582fa5b2efb44446" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const std::vector&lt; unsigned char &gt; &amp;</type>
@@ -493,7 +567,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="248" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="248" bodyend="248"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="249" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="249" bodyend="249"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_midi_message_1a60c353c3818711362984e1afcc635ea5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -511,7 +585,7 @@
 <para>Write the note name (as C2#, D-1, E3) into the buffer. The buffer must be min 5 chars large (C-3#). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="251" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="251" bodyend="315"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="252" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="252" bodyend="316"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_midi_message_1a429259c03f171922ee3ec5fd6e36df9e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const char *</type>
@@ -524,7 +598,7 @@
 <para>Return midi message type as a const char. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="318" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="318" bodyend="338"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="319" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="319" bodyend="339"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_midi_message_1af6ea4bd9034a8d99d10d269f61bcacf4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -541,7 +615,33 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="340" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="340" bodyend="347"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="341" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="341" bodyend="348"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_midi_message_1aa9f881c7f0051fa4e746ceb9c13b88c9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string oscit::MidiMessage::to_s</definition>
+        <argsstring>() const </argsstring>
+        <name>to_s</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="350" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="350" bodyend="354"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_midi_message_1a32fd830550860cb1abc5565fb73e34f3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string oscit::MidiMessage::to_json</definition>
+        <argsstring>() const </argsstring>
+        <name>to_json</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="356" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="356" bodyend="370"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -617,7 +717,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="115" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="115" bodyend="119"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="120" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="120" bodyend="124"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -640,7 +740,22 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="351"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="374"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classoscit_1_1_midi_message_1a8703c7a174e0ae626a3e8f2e22b33966" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool oscit::MidiMessage::set_type_from_data</definition>
+        <argsstring>()</argsstring>
+        <name>set_type_from_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set message type from raw data. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="378" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="378" bodyend="385"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -648,30 +763,30 @@
     <detaileddescription>
 <para>This class encapsulates midi messages. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="641">
+      <node id="671">
         <label>oscit::MidiMessage</label>
         <link refid="classoscit_1_1_midi_message"/>
-        <childnode refid="642" relation="public-inheritance">
+        <childnode refid="672" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="642">
+      <node id="672">
         <label>oscit::ReferenceCounted</label>
         <link refid="classoscit_1_1_reference_counted"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="643">
+      <node id="673">
         <label>oscit::MidiMessage</label>
         <link refid="classoscit_1_1_midi_message"/>
-        <childnode refid="644" relation="public-inheritance">
+        <childnode refid="674" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="644">
+      <node id="674">
         <label>oscit::ReferenceCounted</label>
         <link refid="classoscit_1_1_reference_counted"/>
       </node>
     </collaborationgraph>
-    <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="55" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="55" bodyend="368"/>
+    <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="74" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="74" bodyend="402"/>
     <listofallmembers>
       <member refid="classoscit_1_1_reference_counted_1af382a537a3969b11530020715863e75c" prot="public" virt="non-virtual"><scope>oscit::MidiMessage</scope><name>acquire</name></member>
       <member refid="classoscit_1_1_midi_message_1a4f6fae8e4bc3c88cad6d85418e6f8aa8" prot="public" virt="non-virtual"><scope>oscit::MidiMessage</scope><name>channel</name></member>
@@ -683,6 +798,8 @@
       <member refid="classoscit_1_1_midi_message_1a7bc522f63c011482b1855af19d664685" prot="private" virt="non-virtual"><scope>oscit::MidiMessage</scope><name>length_</name></member>
       <member refid="classoscit_1_1_midi_message_1ab9bef63ccd29f6aa04e1d255f1b2bed8" prot="public" virt="non-virtual"><scope>oscit::MidiMessage</scope><name>MidiMessage</name></member>
       <member refid="classoscit_1_1_midi_message_1afb604b7258d6c3445d25babc314820a7" prot="public" virt="non-virtual"><scope>oscit::MidiMessage</scope><name>MidiMessage</name></member>
+      <member refid="classoscit_1_1_midi_message_1ab1349ac9c9c32bd6e7d7bcf3f09f6a0e" prot="public" virt="non-virtual"><scope>oscit::MidiMessage</scope><name>MidiMessage</name></member>
+      <member refid="classoscit_1_1_midi_message_1abe85a75fc97900491f10ae8280e47b59" prot="public" virt="non-virtual"><scope>oscit::MidiMessage</scope><name>MidiMessage</name></member>
       <member refid="classoscit_1_1_midi_message_1a2438adcd7c7bd2fc95ecd03b4a265410" prot="public" virt="non-virtual"><scope>oscit::MidiMessage</scope><name>Note</name></member>
       <member refid="classoscit_1_1_midi_message_1a5cf4ec4c42b36b9bd2f928c7ab64297c" prot="public" virt="non-virtual"><scope>oscit::MidiMessage</scope><name>note</name></member>
       <member refid="classoscit_1_1_midi_message_1ac35f1ad754d1307dbd8e66f1ba08ec7d" prot="public" virt="non-virtual"><scope>oscit::MidiMessage</scope><name>note_on_to_off</name></member>
@@ -703,11 +820,15 @@
       <member refid="classoscit_1_1_midi_message_1acf834ead48f4ac3601b2b1bf6540d35a" prot="public" virt="non-virtual"><scope>oscit::MidiMessage</scope><name>set_length</name></member>
       <member refid="classoscit_1_1_midi_message_1a6b32a4074e20e11fe877b600ab758545" prot="public" virt="non-virtual"><scope>oscit::MidiMessage</scope><name>set_note</name></member>
       <member refid="classoscit_1_1_midi_message_1acabaf4e67bd9078e75b87c70de146d88" prot="public" virt="non-virtual"><scope>oscit::MidiMessage</scope><name>set_type</name></member>
+      <member refid="classoscit_1_1_midi_message_1a8703c7a174e0ae626a3e8f2e22b33966" prot="private" virt="non-virtual"><scope>oscit::MidiMessage</scope><name>set_type_from_data</name></member>
       <member refid="classoscit_1_1_midi_message_1a391d24a74df43ae5a41c069bdd276ccd" prot="public" virt="non-virtual"><scope>oscit::MidiMessage</scope><name>set_value</name></member>
       <member refid="classoscit_1_1_midi_message_1ac247688baaacd7dcae01960e2627daf4" prot="public" virt="non-virtual"><scope>oscit::MidiMessage</scope><name>set_velocity</name></member>
-      <member refid="classoscit_1_1_midi_message_1a2fa776602cfffaf4149f1f1b991e36bc" prot="public" virt="non-virtual"><scope>oscit::MidiMessage</scope><name>type</name></member>
-      <member refid="classoscit_1_1_midi_message_1a09fc55b845e83f546a8edba3a82ff9df" prot="private" virt="non-virtual"><scope>oscit::MidiMessage</scope><name>type_</name></member>
+      <member refid="classoscit_1_1_midi_message_1a32fd830550860cb1abc5565fb73e34f3" prot="public" virt="non-virtual"><scope>oscit::MidiMessage</scope><name>to_json</name></member>
+      <member refid="classoscit_1_1_midi_message_1aa9f881c7f0051fa4e746ceb9c13b88c9" prot="public" virt="non-virtual"><scope>oscit::MidiMessage</scope><name>to_s</name></member>
+      <member refid="classoscit_1_1_midi_message_1add74af497dd93cafc8c43e892c23d59e" prot="public" virt="non-virtual"><scope>oscit::MidiMessage</scope><name>type</name></member>
+      <member refid="classoscit_1_1_midi_message_1a18e54b0bf782e035d9a9e0b02e6c10f2" prot="private" virt="non-virtual"><scope>oscit::MidiMessage</scope><name>type_</name></member>
       <member refid="classoscit_1_1_midi_message_1a429259c03f171922ee3ec5fd6e36df9e" prot="public" virt="non-virtual"><scope>oscit::MidiMessage</scope><name>type_name</name></member>
+      <member refid="classoscit_1_1_midi_message_1a269de3b1c3d0d27010b8d357766ffb6f" prot="public" virt="non-virtual"><scope>oscit::MidiMessage</scope><name>unpack</name></member>
       <member refid="classoscit_1_1_midi_message_1abf67f4e423e28a33d415ee4f230eb7cd" prot="public" virt="non-virtual"><scope>oscit::MidiMessage</scope><name>value</name></member>
       <member refid="classoscit_1_1_midi_message_1abd2b5ab8087353e999859b2abad9f274" prot="public" virt="non-virtual"><scope>oscit::MidiMessage</scope><name>velocity</name></member>
       <member refid="classoscit_1_1_midi_message_1a6381a39df2da8be8b4038c15cabd142b" prot="public" virt="non-virtual"><scope>oscit::MidiMessage</scope><name>wait</name></member>

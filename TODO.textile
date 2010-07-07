@@ -8,6 +8,7 @@ h2. Low level stuff
 1. Replace '#define' by constants in constants.h
 2. THash should resize automatically when content grows.
 3. concurrency audit
+4. regenerate, compile and test MidiMessage Lua bindings ?
 
 h2. Value audit
 

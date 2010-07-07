@@ -6,16 +6,18 @@
     <includes refid="mutex_8h" local="yes">oscit/mutex.h</includes>
     <includes refid="location_8h" local="yes">oscit/location.h</includes>
     <incdepgraph>
-      <node id="3335">
+      <node id="3334">
         <label>list</label>
       </node>
-      <node id="3328">
+      <node id="3327">
         <label>oscit/non_copyable.h</label>
         <link refid="non__copyable_8h"/>
       </node>
-      <node id="3324">
+      <node id="3323">
         <label>oscit/mutex.h</label>
         <link refid="mutex_8h"/>
+        <childnode refid="3324" relation="include">
+        </childnode>
         <childnode refid="3325" relation="include">
         </childnode>
         <childnode refid="3326" relation="include">
@@ -24,68 +26,66 @@
         </childnode>
         <childnode refid="3328" relation="include">
         </childnode>
-        <childnode refid="3329" relation="include">
-        </childnode>
       </node>
-      <node id="3326">
+      <node id="3325">
         <label>assert.h</label>
       </node>
-      <node id="3322">
-        <label>include/oscit/zeroconf_registration.h</label>
+      <node id="3321">
+        <label>/Users/gaspard/git/oscit/include/oscit/zeroconf_registration.h</label>
         <link refid="zeroconf_registration.h"/>
-        <childnode refid="3323" relation="include">
-        </childnode>
-        <childnode refid="3324" relation="include">
-        </childnode>
-        <childnode refid="3332" relation="include">
-        </childnode>
-      </node>
-      <node id="3334">
-        <label>oscit/thash.h</label>
-        <link refid="thash_8h"/>
-        <childnode refid="3327" relation="include">
+        <childnode refid="3322" relation="include">
         </childnode>
         <childnode refid="3323" relation="include">
-        </childnode>
-        <childnode refid="3335" relation="include">
         </childnode>
         <childnode refid="3331" relation="include">
         </childnode>
       </node>
-      <node id="3332">
-        <label>oscit/location.h</label>
-        <link refid="location_8h"/>
-        <childnode refid="3323" relation="include">
+      <node id="3333">
+        <label>oscit/thash.h</label>
+        <link refid="thash_8h"/>
+        <childnode refid="3326" relation="include">
         </childnode>
-        <childnode refid="3333" relation="include">
+        <childnode refid="3322" relation="include">
         </childnode>
         <childnode refid="3334" relation="include">
         </childnode>
-      </node>
-      <node id="3323">
-        <label>string</label>
-      </node>
-      <node id="3333">
-        <label>ostream</label>
-      </node>
-      <node id="3325">
-        <label>pthread.h</label>
-      </node>
-      <node id="3327">
-        <label>cstdio</label>
-      </node>
-      <node id="3331">
-        <label>iostream</label>
-      </node>
-      <node id="3329">
-        <label>oscit/typed.h</label>
-        <link refid="typed_8h"/>
         <childnode refid="3330" relation="include">
         </childnode>
-        <childnode refid="3331" relation="include">
+      </node>
+      <node id="3331">
+        <label>oscit/location.h</label>
+        <link refid="location_8h"/>
+        <childnode refid="3322" relation="include">
+        </childnode>
+        <childnode refid="3332" relation="include">
+        </childnode>
+        <childnode refid="3333" relation="include">
         </childnode>
       </node>
+      <node id="3322">
+        <label>string</label>
+      </node>
+      <node id="3332">
+        <label>ostream</label>
+      </node>
+      <node id="3324">
+        <label>pthread.h</label>
+      </node>
+      <node id="3326">
+        <label>cstdio</label>
+      </node>
       <node id="3330">
+        <label>iostream</label>
+      </node>
+      <node id="3328">
+        <label>oscit/typed.h</label>
+        <link refid="typed_8h"/>
+        <childnode refid="3329" relation="include">
+        </childnode>
+        <childnode refid="3330" relation="include">
+        </childnode>
+      </node>
+      <node id="3329">
         <label>stdio.h</label>
       </node>
     </incdepgraph>

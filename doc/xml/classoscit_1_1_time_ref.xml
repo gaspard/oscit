@@ -65,25 +65,25 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="1336">
+      <node id="1353">
         <label>oscit::TimeRef</label>
         <link refid="classoscit_1_1_time_ref"/>
-        <childnode refid="1337" relation="private-inheritance">
+        <childnode refid="1354" relation="private-inheritance">
         </childnode>
       </node>
-      <node id="1337">
+      <node id="1354">
         <label>oscit::NonCopyable</label>
         <link refid="classoscit_1_1_non_copyable"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="1338">
+      <node id="1355">
         <label>oscit::TimeRef</label>
         <link refid="classoscit_1_1_time_ref"/>
-        <childnode refid="1339" relation="private-inheritance">
+        <childnode refid="1356" relation="private-inheritance">
         </childnode>
       </node>
-      <node id="1339">
+      <node id="1356">
         <label>oscit::NonCopyable</label>
         <link refid="classoscit_1_1_non_copyable"/>
       </node>

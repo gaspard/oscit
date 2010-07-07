@@ -82,73 +82,73 @@
     <detaileddescription>
 <para>Simple wrapper class for a fast mutex. FIXME: Can we remove &apos;Typed&apos; ? </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="664">
+      <node id="694">
         <label>oscit::OscMapCommand</label>
         <link refid="classoscit_1_1_osc_map_command"/>
-        <childnode refid="663" relation="public-inheritance">
+        <childnode refid="693" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="658">
+      <node id="688">
         <label>oscit::Mutex</label>
         <link refid="classoscit_1_1_mutex"/>
-        <childnode refid="659" relation="public-inheritance">
+        <childnode refid="689" relation="public-inheritance">
         </childnode>
-        <childnode refid="660" relation="private-inheritance">
+        <childnode refid="690" relation="private-inheritance">
         </childnode>
       </node>
-      <node id="661">
+      <node id="691">
         <label>oscit::Thread</label>
         <link refid="classoscit_1_1_thread"/>
-        <childnode refid="658" relation="public-inheritance">
+        <childnode refid="688" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="660">
+      <node id="690">
         <label>oscit::NonCopyable</label>
         <link refid="classoscit_1_1_non_copyable"/>
       </node>
-      <node id="666">
+      <node id="696">
         <label>oscit::ZeroConfRegistration</label>
         <link refid="classoscit_1_1_zero_conf_registration"/>
-        <childnode refid="658" relation="public-inheritance">
+        <childnode refid="688" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="665">
+      <node id="695">
         <label>oscit::ZeroConfBrowser</label>
         <link refid="classoscit_1_1_zero_conf_browser"/>
-        <childnode refid="658" relation="public-inheritance">
+        <childnode refid="688" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="663">
+      <node id="693">
         <label>oscit::OscCommand</label>
         <link refid="classoscit_1_1_osc_command"/>
-        <childnode refid="662" relation="public-inheritance">
+        <childnode refid="692" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="659">
+      <node id="689">
         <label>oscit::Typed</label>
         <link refid="classoscit_1_1_typed"/>
       </node>
-      <node id="662">
+      <node id="692">
         <label>oscit::Command</label>
         <link refid="classoscit_1_1_command"/>
-        <childnode refid="661" relation="public-inheritance">
+        <childnode refid="691" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="667">
+      <node id="697">
         <label>oscit::Mutex</label>
         <link refid="classoscit_1_1_mutex"/>
-        <childnode refid="668" relation="public-inheritance">
+        <childnode refid="698" relation="public-inheritance">
         </childnode>
-        <childnode refid="669" relation="private-inheritance">
+        <childnode refid="699" relation="private-inheritance">
         </childnode>
       </node>
-      <node id="669">
+      <node id="699">
         <label>oscit::NonCopyable</label>
         <link refid="classoscit_1_1_non_copyable"/>
       </node>
-      <node id="668">
+      <node id="698">
         <label>oscit::Typed</label>
         <link refid="classoscit_1_1_typed"/>
       </node>

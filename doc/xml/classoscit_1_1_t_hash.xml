@@ -2,8 +2,8 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
   <compounddef id="classoscit_1_1_t_hash" kind="class" prot="public">
     <compoundname>oscit::THash</compoundname>
-    <derivedcompoundref refid="classoscit_1_1_c_t_hash" prot="public" virt="non-virtual">oscit::CTHash&lt; std::string, CallbackList * &gt;</derivedcompoundref>
     <derivedcompoundref refid="classoscit_1_1_c_t_hash" prot="public" virt="non-virtual">oscit::CTHash&lt; std::string, Object * &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classoscit_1_1_c_t_hash" prot="public" virt="non-virtual">oscit::CTHash&lt; std::string, Signal * &gt;</derivedcompoundref>
     <derivedcompoundref refid="classoscit_1_1_c_t_hash" prot="public" virt="non-virtual">oscit::CTHash&lt; K, T &gt;</derivedcompoundref>
     <includes refid="thash_8h" local="no">thash.h</includes>
     <templateparamlist>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="92" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="92" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="63" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="63" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classoscit_1_1_t_hash_1a452fb54a3a3275228b57d7c4d354e215" prot="public" static="no">
         <type>std::list&lt; K &gt;::iterator</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="93" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="93" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="64" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="64" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-attrib">
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="233" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="233" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="211" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="211" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classoscit_1_1_t_hash_1a920bb7454f04af182c3664ab5779f79e" prot="protected" static="no" mutable="no">
         <type>std::list&lt; K &gt;</type>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="234" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="234" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="212" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="212" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classoscit_1_1_t_hash_1ab7bfb1b5425ce4b4adff54fb5428ab70" prot="protected" static="no" mutable="no">
         <type>unsigned int</type>
@@ -84,7 +84,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="236" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="236" bodyend="-1"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="214" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="214" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -103,7 +103,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="95" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="95" bodyend="97"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="66" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="66" bodyend="68"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_t_hash_1a0521cf97cb9efdf80ff8297ecc0d42e8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -120,7 +120,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="100" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="100" bodyend="102"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="71" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="71" bodyend="73"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_t_hash_1ad4c6fa3e6189d10cf45619a724d10c7f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type></type>
@@ -133,7 +133,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="104" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="104" bodyend="117"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="75" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="75" bodyend="88"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_t_hash_1a789de8a3d30af33159282c42b0f89f5c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classoscit_1_1_t_hash" kindref="compound">THash</ref> &amp;</type>
@@ -150,7 +150,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="119" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="119" bodyend="122"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="90" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="90" bodyend="93"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_t_hash_1a0209bd9dcc512d40137e7ab196aea0ec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -167,7 +167,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="124" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="124" bodyend="137"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="95" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="95" bodyend="108"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_t_hash_1a089378b838f685efba0a9bfd4c5d272f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -188,7 +188,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="139" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="240" bodyend="272"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="110" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="218" bodyend="250"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_t_hash_1ae8128283b5bffa0ef82d300219e3c52d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -209,7 +209,7 @@
 <para>Get an element of the dictionary and set the retval to this element. Returns false if no element found. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="143" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="275" bodyend="289"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="115" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="253" bodyend="267"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_t_hash_1a13bd22ce3920712bf37f92a49f5d97cf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -226,7 +226,7 @@
 <para>Return true if the dictionary contains an element at the given key. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="147" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="292" bodyend="305"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="119" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="270" bodyend="283"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_t_hash_1a4f1444233f752e04f564355829e5773e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -247,7 +247,28 @@
 <para>Get a pointer to an element in the dictionary. The value of this pointer should not be kept (it may change as the hash is updated). Returns false if no element found. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="153" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="308" bodyend="322"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="125" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="286" bodyend="300"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_t_hash_1ac4010343a59c4a79eafc9abc8bae437d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool oscit::THash&lt; K, T &gt;::get</definition>
+        <argsstring>(const K &amp;key, T **retval)</argsstring>
+        <name>get</name>
+        <param>
+          <type>const K &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>T **</type>
+          <declname>retval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a pointer to an element in the dictionary (non-const version). The value of this pointer should not be kept (it may change as the hash is updated). Returns false if no element found. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="131" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="303" bodyend="317"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_t_hash_1a271f9e1c624dadf1882be9003db67bd7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -268,7 +289,7 @@
 <para>Get an element&apos;s key. Returns false if the element could not be found. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="156" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="325" bodyend="338"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="134" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="320" bodyend="333"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_t_hash_1af23e4ebcba12ac4d6b0565ac7a8c745b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -285,7 +306,7 @@
 <para>Get the default value (last value). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="159"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="137"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_t_hash_1adbe83080707f499c5d1fb1e996de324f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -302,7 +323,7 @@
 <para>Remove object with the given key. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="162" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="162" bodyend="174"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="140" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="140" bodyend="152"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_t_hash_1a9d7eef150485b61668bae3cd48c257d0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -319,7 +340,7 @@
 <para>Remove the given element. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="177" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="384" bodyend="389"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="155" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="379" bodyend="384"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_t_hash_1a26cdaed40618b5a78e16241d9731fdef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -332,7 +353,7 @@
 <para>Remove all objects. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="180" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="180" bodyend="187"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="158" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="158" bodyend="165"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_t_hash_1adda538d62e50833e43c2cfeeb0539f53" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -345,7 +366,7 @@
 <para>Return true if the dictionary is empty. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="190" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="190" bodyend="190"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="168" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="168" bodyend="168"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_t_hash_1a64178a4381db789034c646e88007c102" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>size_t</type>
@@ -358,7 +379,7 @@
 <para>Return number of elements (distinct keys). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="193" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="193" bodyend="193"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="171" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="171" bodyend="171"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_t_hash_1a90064ec1a0d5aebf5e0a50005cc0bebd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -375,7 +396,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="195" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="195" bodyend="208"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="173" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="173" bodyend="186"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_t_hash_1a25f4538f31acbab210afc42d9fdf4df9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>unsigned int</type>
@@ -388,7 +409,7 @@
 <para>Return size of storage (main hash table). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="211" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="211" bodyend="211"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="189" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="189" bodyend="189"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_t_hash_1aa8c34375f9f5e55601c628cbea02aa70" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -410,7 +431,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="213" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="415" bodyend="437"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="191" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="410" bodyend="432"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_t_hash_1a589e30efb2dba4d0637935be5e81e474" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const std::list&lt; K &gt; &amp;</type>
@@ -423,7 +444,7 @@
 <para><ref refid="classoscit_1_1_list" kindref="compound">List</ref> of keys. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="216" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="216" bodyend="216"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="194" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="194" bodyend="194"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_t_hash_1af9e1afc048b95e0313be311f0e309876" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classoscit_1_1_t_hash_1a4a365a0afc80f4d9f2ffb2abc6a9abae" kindref="member">ConstIterator</ref></type>
@@ -436,7 +457,7 @@
 <para>Begin iterator over the keys of the dictionary (read-only). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="219" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="219" bodyend="219"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="197" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="197" bodyend="197"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_t_hash_1a07e1605003ccb55fc46916987f67f1a2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classoscit_1_1_t_hash_1a4a365a0afc80f4d9f2ffb2abc6a9abae" kindref="member">ConstIterator</ref></type>
@@ -449,7 +470,7 @@
 <para>Past end iterator over the keys of the dictionary (read-only). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="222" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="222" bodyend="222"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="200" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="200" bodyend="200"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_t_hash_1a6718c393533092065b774b11681ee225" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classoscit_1_1_t_hash_1a452fb54a3a3275228b57d7c4d354e215" kindref="member">Iterator</ref></type>
@@ -462,7 +483,7 @@
 <para>Begin iterator over the keys of the dictionary. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="225" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="225" bodyend="225"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="203" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="203" bodyend="203"/>
       </memberdef>
       <memberdef kind="function" id="classoscit_1_1_t_hash_1a96f695b486d20ee7da5b02dbc7a7c2fe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classoscit_1_1_t_hash_1a452fb54a3a3275228b57d7c4d354e215" kindref="member">Iterator</ref></type>
@@ -475,7 +496,7 @@
 <para>Begin iterator over the keys of the dictionary. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="228" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="228" bodyend="228"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="206" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="206" bodyend="206"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -494,7 +515,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="230" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="342" bodyend="380"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="208" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="337" bodyend="375"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -502,30 +523,30 @@
     <detaileddescription>
 <para>Dictionary. The dictionary stores a copy of the data. Pointers to the copy are returned. We return pointers so that we can return NULL if the value is not found. K is the key class, T is the object class </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="1307">
+      <node id="1324">
         <label>oscit::THash&lt; K, T &gt;</label>
         <link refid="classoscit_1_1_t_hash"/>
       </node>
-      <node id="1309">
+      <node id="1325">
         <label>CTHash&lt; std::string, Object * &gt;</label>
         <link refid="classoscit_1_1_c_t_hash"/>
-        <childnode refid="1307" relation="public-inheritance">
+        <childnode refid="1324" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1308">
-        <label>CTHash&lt; std::string, CallbackList * &gt;</label>
+      <node id="1326">
+        <label>CTHash&lt; std::string, Signal * &gt;</label>
         <link refid="classoscit_1_1_c_t_hash"/>
-        <childnode refid="1307" relation="public-inheritance">
+        <childnode refid="1324" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1310">
+      <node id="1327">
         <label>oscit::CTHash&lt; K, T &gt;</label>
         <link refid="classoscit_1_1_c_t_hash"/>
-        <childnode refid="1307" relation="public-inheritance">
+        <childnode refid="1324" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="90" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="90" bodyend="237"/>
+    <location file="/Users/gaspard/git/oscit/include/oscit/thash.h" line="61" bodyfile="/Users/gaspard/git/oscit/include/oscit/thash.h" bodystart="61" bodyend="215"/>
     <listofallmembers>
       <member refid="classoscit_1_1_t_hash_1af9e1afc048b95e0313be311f0e309876" prot="public" virt="non-virtual"><scope>oscit::THash</scope><name>begin</name></member>
       <member refid="classoscit_1_1_t_hash_1a6718c393533092065b774b11681ee225" prot="public" virt="non-virtual"><scope>oscit::THash</scope><name>begin</name></member>
@@ -537,6 +558,7 @@
       <member refid="classoscit_1_1_t_hash_1a96f695b486d20ee7da5b02dbc7a7c2fe" prot="public" virt="non-virtual"><scope>oscit::THash</scope><name>end</name></member>
       <member refid="classoscit_1_1_t_hash_1ae8128283b5bffa0ef82d300219e3c52d" prot="public" virt="non-virtual"><scope>oscit::THash</scope><name>get</name></member>
       <member refid="classoscit_1_1_t_hash_1a4f1444233f752e04f564355829e5773e" prot="public" virt="non-virtual"><scope>oscit::THash</scope><name>get</name></member>
+      <member refid="classoscit_1_1_t_hash_1ac4010343a59c4a79eafc9abc8bae437d" prot="public" virt="non-virtual"><scope>oscit::THash</scope><name>get</name></member>
       <member refid="classoscit_1_1_t_hash_1af23e4ebcba12ac4d6b0565ac7a8c745b" prot="public" virt="non-virtual"><scope>oscit::THash</scope><name>get</name></member>
       <member refid="classoscit_1_1_t_hash_1a271f9e1c624dadf1882be9003db67bd7" prot="public" virt="non-virtual"><scope>oscit::THash</scope><name>get_key</name></member>
       <member refid="classoscit_1_1_t_hash_1a13bd22ce3920712bf37f92a49f5d97cf" prot="public" virt="non-virtual"><scope>oscit::THash</scope><name>has_key</name></member>

@@ -146,49 +146,49 @@
     <detaileddescription>
 <para>This class let&apos;s you easily register an application as providing a certain type of service. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="1566">
+      <node id="1554">
         <label>oscit::Mutex</label>
         <link refid="classoscit_1_1_mutex"/>
-        <childnode refid="1567" relation="public-inheritance">
+        <childnode refid="1555" relation="public-inheritance">
         </childnode>
-        <childnode refid="1568" relation="private-inheritance">
+        <childnode refid="1556" relation="private-inheritance">
         </childnode>
       </node>
-      <node id="1568">
+      <node id="1556">
         <label>oscit::NonCopyable</label>
         <link refid="classoscit_1_1_non_copyable"/>
       </node>
-      <node id="1565">
+      <node id="1553">
         <label>oscit::ZeroConfRegistration</label>
         <link refid="classoscit_1_1_zero_conf_registration"/>
-        <childnode refid="1566" relation="public-inheritance">
+        <childnode refid="1554" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1567">
+      <node id="1555">
         <label>oscit::Typed</label>
         <link refid="classoscit_1_1_typed"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="1570">
+      <node id="1558">
         <label>oscit::Mutex</label>
         <link refid="classoscit_1_1_mutex"/>
-        <childnode refid="1571" relation="public-inheritance">
+        <childnode refid="1559" relation="public-inheritance">
         </childnode>
-        <childnode refid="1572" relation="private-inheritance">
+        <childnode refid="1560" relation="private-inheritance">
         </childnode>
       </node>
-      <node id="1572">
+      <node id="1560">
         <label>oscit::NonCopyable</label>
         <link refid="classoscit_1_1_non_copyable"/>
       </node>
-      <node id="1569">
+      <node id="1557">
         <label>oscit::ZeroConfRegistration</label>
         <link refid="classoscit_1_1_zero_conf_registration"/>
-        <childnode refid="1570" relation="public-inheritance">
+        <childnode refid="1558" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1571">
+      <node id="1559">
         <label>oscit::Typed</label>
         <link refid="classoscit_1_1_typed"/>
       </node>
