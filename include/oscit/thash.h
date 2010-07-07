@@ -109,7 +109,8 @@ public:
 
   void set(const K &key, const T &pElement);
 
-  /** Get an element of the dictionary and set the retval to this element. Returns false if no element found. */
+  /** Get an element of the dictionary and set the retval to this element. Returns false if no element found.
+   */
   // FIXME: const T* ?
   bool get(const K &key, T *retval) const;
 
@@ -122,6 +123,12 @@ public:
    * Returns false if no element found.
    */
   bool get(const K &key, const T **retval) const;
+
+  /** Get a pointer to an element in the dictionary (non-const version).
+   * The value of this pointer should not be kept (it may change as the hash is updated).
+   * Returns false if no element found.
+   */
+  bool get(const K &key, T **retval);
 
   /** Get an element's key. Returns false if the element could not be found. */
   bool get_key(const T &pElement, K *retval) const;
@@ -277,6 +284,23 @@ bool THash<K,T>::has_key(const K &key) const {
 
 template <class K, class T>
 bool THash<K,T>::get(const K &key, const T **retval) const {
+  THashElement<K,T> *found;
+  uint id = hashId(key) % size_;
+
+  found = &(thash_table_[id]);
+  while (found && found->obj && found->key != key)
+    found = found->next;
+
+  if (found && found->obj && found->key == key) {
+    *retval = found->obj;
+    return true;
+  } else {
+    return false;
+  }
+}
+
+template <class K, class T>
+bool THash<K,T>::get(const K &key, T **retval) {
   THashElement<K,T> *found;
   uint id = hashId(key) % size_;
 

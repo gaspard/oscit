@@ -712,16 +712,15 @@ public:
     return *this;
   }
 
+  // ------------------- Single key depth set ---------------------
   template<class T>
   Value &set(const char *key, const T &val) {
-    set(std::string(key), Value(val));
-    return *this;
+    return set(std::string(key), Value(val));
   }
 
   template<class T>
   Value &set(const std::string &key, const T &val) {
-    set(key, Value(val));
-    return *this;
+    return set(key, Value(val));
   }
 
   Value &set(const std::string &key, const Value &val) {
@@ -735,9 +734,38 @@ public:
     return *this;
   }
 
+  // ------------------- Two key depth set ---------------------
+  template<class T>
+  Value &set(const char *key1, const char *key2, const T &val) {
+    return set(std::string(key1), std::string(key2), Value(val));
+  }
+
+  template<class T>
+  Value &set(const std::string &key1, const std::string &key2, const T &val) {
+    return set(key1, key2, Value(val));
+  }
+
+  /** In-place set a hash value two-levels deep ({key1:{key2:new_value}}).
+   */
+  Value &set(const std::string &key1, const std::string &key2, const Value &val) {
+    if (!is_hash()) {
+      set_type(HASH_VALUE);
+    } else {
+      hash_ = hash_->detach();
+    }
+    // get reference to first key (avoid increasing ref count)
+    Value *res;
+    if (hash_->get(key1, &res)) {
+      // get a pointer to the element
+      res->set(key2, val);
+    } else {
+      hash_->set(key1, Value().set(key2, val));
+    }
+    return *this;
+  }
+
   bool get(const std::string &key, Value *retval) const {
     if (!is_hash()) return false;
-    // TODO: how to make sure the retval is not changed ?
     return hash_->get(key, retval);
   }
 

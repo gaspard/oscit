@@ -379,6 +379,16 @@ public:
     assert_equal(original["nested"].hash_, copy["nested"].hash_);
   }
 
+  void test_write_deeply_nested( void ) {
+    JsonValue original("{one:1 two:2 nested:{a:1 b:2}}");
+    Value copy(original);
+
+    // this should force "original" to have a new version of 'nested' hash
+    original.set("nested", "b", Value(3));
+
+    assert_equal("{\"one\":1, \"two\":2, \"nested\":{\"a\":1, \"b\":3}}", original.to_json());
+    assert_equal("{\"one\":1, \"two\":2, \"nested\":{\"a\":1, \"b\":2}}", copy.to_json());
+  }
 
   void test_integer_key( void ) {
     Value a(Json("1:\"one\" two: 2"));
