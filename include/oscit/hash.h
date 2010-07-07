@@ -42,12 +42,25 @@ class Value;
 typedef std::list<std::string>::const_iterator HashIterator;
 
 /** A Hash is just a reference counted THash<std::string,Value>.
- * TODO: implement copy on write (could be done in Value). Same for List and String.
+ * This class also has a copy-on-write method called 'detach'.
  */
 class Hash : public ReferenceCounted, public THash<std::string,Value> {
 public:
   typedef std::list<std::string>::const_iterator const_iterator;
   explicit Hash(size_t size) : THash<std::string,Value>(size) {}
+
+  /** Make a private copy to be modified in case the Hash is shared.
+   */
+  Hash *detach() {
+    if (ref_count() > 1) {
+      // copy on write
+      Hash *new_hash = new Hash(*this);
+      ReferenceCounted::release(this);
+      return new_hash;
+    } else {
+      return this;
+    }
+  }
 
   /** Return true if any of the hash values is or contains an error.
    */

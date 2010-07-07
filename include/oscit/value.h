@@ -725,7 +725,12 @@ public:
   }
 
   Value &set(const std::string &key, const Value &val) {
-    if (!is_hash()) set_type(HASH_VALUE);
+    if (!is_hash()) {
+      set_type(HASH_VALUE);
+    } else {
+      hash_ = hash_->detach();
+    }
+
     hash_->set(key, val);
     return *this;
   }

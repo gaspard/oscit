@@ -114,49 +114,6 @@ public:
     assert_equal("{\"do\":{\"re\":{\"mi\":{\"fa\":{\"sol\":\"G\"}}}}}", v5.to_json());
   }
 
-  void test_share( void ) {
-    Value v(TypeTag("H"));
-    v.set("1","one");
-    v.set("2","two");
-
-    Value v2(v);
-    Value v3;
-
-    Value res;
-
-    assert_true(v2.is_hash());
-    assert_true(v2.get("1", &res));
-    assert_true(res.is_string());
-    assert_equal("one", res.str());
-
-    v.set("1","un");
-    v.set("2","deux");
-    assert_true(v.get("1", &res));
-    assert_equal("un", res.str());
-
-    // change in v changes v2
-    assert_true(v2.get("1", &res));
-    assert_equal("un", res.str());
-
-    assert_true(v3.is_empty());
-
-    v3 = v;
-
-    assert_true(v3.is_hash());
-
-    assert_true(v3.get("1", &res));
-    assert_equal("un", res.str());
-    assert_true(v3.get("2", &res));
-    assert_equal("deux", res.str());
-
-    v.set("1", "uno");
-
-    // change in v changes v3
-    assert_true(v3.get("1", &res));
-    assert_equal("uno", res.str());
-
-  }
-
   void test_set( void ) {
     Value v;
 
@@ -376,6 +333,52 @@ public:
     assert_equal("{\"one\":{\"x\":4, \"y\":10}, \"two\":{\"x\":5, \"y\":8}}", a.to_json());
     assert_equal("{\"one\":{\"x\":7, \"y\":10}}", c.to_json());
   }
+
+  void test_copy_on_write( void ) {
+    JsonValue original("{one:1 two:2 nested:{a:1 b:2}}");
+    Hash *hash_ptr = original.hash_;
+
+    Value copy(original);
+
+    // the hash is shared
+    assert_equal(hash_ptr, copy.hash_);
+    assert_equal(hash_ptr, original.hash_);
+
+    // this should force "original" to have a new version
+    original.set("one", Value(3));
+    assert_true(hash_ptr != original.hash_);
+
+    assert_equal(hash_ptr, copy.hash_);
+
+    assert_equal("{\"one\":3, \"two\":2, \"nested\":{\"a\":1, \"b\":2}}", original.to_json());
+    assert_equal("{\"one\":1, \"two\":2, \"nested\":{\"a\":1, \"b\":2}}", copy.to_json());
+
+    assert_equal(original["nested"].hash_, copy["nested"].hash_);
+  }
+
+  void test_copy_from_operator_equal( void ) {
+    JsonValue original("{one:1 two:2 nested:{a:1 b:2}}");
+    Hash *hash_ptr = original.hash_;
+
+    Value copy;
+    copy = original;
+
+    // the hash is shared
+    assert_equal(hash_ptr, copy.hash_);
+    assert_equal(hash_ptr, original.hash_);
+
+    // this should force "copy" to have a new version
+    copy.set("one", Value(3));
+    assert_true(hash_ptr != copy.hash_);
+
+    assert_equal(hash_ptr, original.hash_);
+
+    assert_equal("{\"one\":1, \"two\":2, \"nested\":{\"a\":1, \"b\":2}}", original.to_json());
+    assert_equal("{\"one\":3, \"two\":2, \"nested\":{\"a\":1, \"b\":2}}", copy.to_json());
+
+    assert_equal(original["nested"].hash_, copy["nested"].hash_);
+  }
+
 
   void test_integer_key( void ) {
     Value a(Json("1:\"one\" two: 2"));
