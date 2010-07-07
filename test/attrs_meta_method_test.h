@@ -88,7 +88,7 @@ public:
     Root root;
     // FIXME: replace JsonValue(...) by proper attributes
     // Attribute::attribute(info, name, signature) ?
-    root.adopt(new DummyObject("Haddock", JsonValue("[\"\", 0.0]"), HashValue(Attribute::INFO, "Haddock").set(Attribute::TYPE, HashValue(Attribute::SIGNATURE, "sf").set(Attribute::NAME, "some list"))));
+    root.adopt(new DummyObject("Haddock", JsonValue("[\"\", 0.0]"), Attribute::io("Haddock", "some list", "sf")));
     Value res;
     res = root.call(ATTRS_PATH, Value("/Haddock"));
     assert_equal("/Haddock", res[0].str());

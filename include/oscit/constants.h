@@ -69,31 +69,25 @@ public:
       // No name, no signature
   }
 
-  static Value bang_io(const char *info) {
+  static Value io(const char *info, const char *name, const char *signature) {
     return HashValue(
       INFO, info).set(
       TYPE, HashValue(
-        NAME,      "bang").set(
-        SIGNATURE, "T"   )
+        NAME,      name).set(
+        SIGNATURE, signature)
       );
+  }
+
+  static Value bang_io(const char *info) {
+    return io(info, "bang", "T");
   }
 
   static Value real_io(const char *info) {
-    return HashValue(
-      INFO, info).set(
-      TYPE, HashValue(
-        NAME,      "real").set(
-        SIGNATURE, "f"   )
-      );
+    return io(info, "real", "f");
   }
 
   static Value string_io(const char *info) {
-    return HashValue(
-      INFO, info).set(
-      TYPE, HashValue(
-        NAME,      "string").set(
-        SIGNATURE, "s"     )
-      );
+    return io(info, "string", "s");
   }
 
   static Value range_io(Real min, Real max, const char *info) {
@@ -118,39 +112,19 @@ public:
   }
 
   static Value hash_io(const char *info) {
-    return HashValue(
-      INFO, info).set(
-      TYPE, HashValue(
-        NAME,      "hash").set(
-        SIGNATURE, "H"   )
-      );
+    return io(info, "hash", "H");
   }
 
   static Value matrix_io(const char *info) {
-    return HashValue(
-      INFO, info).set(
-      TYPE, HashValue(
-        NAME,      "matrix").set(
-        SIGNATURE, "M"     )
-      );
+    return io(info, "matrix", "M");
   }
 
   static Value midi_io(const char *info) {
-    return HashValue(
-      INFO, info).set(
-      TYPE, HashValue(
-        NAME,      "midi").set(
-        SIGNATURE, "m")
-      );
+    return io(info, "midi", "m");
   }
 
   static Value any_io(const char *info) {
-    return HashValue(
-      INFO, info).set(
-      TYPE, HashValue(
-        NAME,      "any").set(
-        SIGNATURE, "*"  )
-      );
+    return io(info, "any", "*");
   }
 };
 
