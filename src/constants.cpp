@@ -31,16 +31,16 @@
 
 namespace oscit {
 
-const char * const Attribute::INFO      = "info";
+const char * const Attribute::INFO      = "@info";
 
-const char * const Attribute::TYPE      = "type";
+const char * const Attribute::TYPE      = "@type";
 const char * const Attribute::SIGNATURE = "signature";
 const char * const Attribute::VALUES    = "values";
 const char * const Attribute::NAME      = "name";
 const char * const Attribute::MIN       = "min";
 const char * const Attribute::MAX       = "max";
 
-const char * const Attribute::VIEW      = "view";
+const char * const Attribute::VIEW      = "@view";
 const char * const Attribute::WIDGET    = "widget";
 const char * const Attribute::HUE       = "hue";
 const char * const Attribute::POS_X     = "x";
@@ -48,7 +48,7 @@ const char * const Attribute::POS_Y     = "y";
 const char * const Attribute::WIDTH     = "width";
 const char * const Attribute::HEIGHT    = "height";
 
-const char * const Attribute::CLASS     = "class";
+const char * const Attribute::CLASS     = "@class";
 
 } // oscit
 

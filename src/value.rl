@@ -414,7 +414,7 @@ Value Value::join(char c) const {
   end       = ws  | '\0' | '}' | ',' | ']';  # we need '}' and ']' to finish value when embedded in hash: {one:1.34}
   dquote_content = ([^"\\] | '\n') $str_a | ('\\' (any | '\n') $str_a);
   squote_content = ([^'\\] | '\n') $str_a | ('\\' (any | '\n') $str_a);
-  word      = ws* (alpha [^ \t\n:]*) $str_a;
+  word      = ws* ([a-zA-Z@_]+ [^ \t\n:]*) $str_a;
   real      = ws* ([\-+]? $str_a ('0'..'9' digit* '.' digit+) $str_a );
   integer   = ws* ([\-+]? $str_a ('0'..'9' digit*) $str_a );
   nil       = 'null';

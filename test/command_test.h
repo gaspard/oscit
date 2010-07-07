@@ -167,7 +167,7 @@ public:
     assert_equal(0, cmd.observers().size());
     RootProxy *root_proxy = cmd.adopt_proxy(new RootProxy(Location("dummy", "some place")));
     ObserverLogger change_logger("foo", &logger);
-    ObjectProxy *foo = root_proxy->adopt(new ObjectProxy("foo", Attribute::range_io(1, 127, "This is a slider from 1 to 127.")));
+    ObjectProxy *foo = root_proxy->adopt(new ObjectProxy("foo", Attribute::range_io("This is a slider from 1 to 127.", 1, 127)));
     foo->on_value_change().connect(&change_logger, &ObserverLogger::event);
 
     // receive is protected, we need to be friend...

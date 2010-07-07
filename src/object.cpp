@@ -59,19 +59,25 @@ const Value Object::set(const Value &hash) {
   ObjectHandle handle;
 
   for (it = hash.begin(); it != end; ++it) {
-    // ignore methods that start with '@'.
-    if ((*it).at(0) == '@') continue;
+    Value param;
+    if (!hash.get(*it, &param)) continue; // this should never happen
 
-    if (get_child(*it, &handle) && hash.get(*it, &param)) {
-      Value tmp;
-      if (param.is_hash()) {
-        // NoIO = container
-        result.set(*it, handle->set(param));
-      } else {
-        result.set(*it, handle->trigger(param));
-      }
+    if (it->size() > 0 && it->at(0) == '@') {
+      // deep merge keys that start with '@' into attributes hash.
+      attributes_.deep_merge(HashValue(*it, param));
+      result.set(*it, param);
     } else {
-      result.set(*it, ErrorValue(NOT_FOUND_ERROR, *it));
+      if (get_child(*it, &handle)) {
+        Value tmp;
+        if (param.is_hash()) {
+          // NoIO = container
+          result.set(*it, handle->set(param));
+        } else {
+          result.set(*it, handle->trigger(param));
+        }
+      } else {
+        result.set(*it, ErrorValue(NOT_FOUND_ERROR, *it));
+      }
     }
   }
 

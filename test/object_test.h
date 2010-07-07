@@ -143,7 +143,7 @@ public:
     assert_equal("/dummy/special", handle->url());
   }
 
-  void test_call_set_method( void ) {
+  void test_set_should_call_sub_objects( void ) {
     Object base;
     DummyObject *one = base.adopt(new DummyObject("one", 123.0));
     DummyObject *two = base.adopt(new DummyObject("two", 123.0));
@@ -152,6 +152,19 @@ public:
     assert_equal("{\"one\":10, \"two\":22.22}", res.to_json());
     assert_equal(10.0, one->real());
     assert_equal(22.22, two->real());
+  }
+
+  void test_set_should_merge_at_keys_in_attributes( void ) {
+    Object base("", Attribute::range_io("Some info", -1, 1));
+    base.adopt(new DummyObject("one", 123.0));
+    base.adopt(new DummyObject("two", 123.0));
+    Value res = base.set(JsonValue("one:10.0 two:22.22 @type:{min:3, max:10}"));
+    assert_true(res.is_hash());
+    assert_equal("{\"one\":10, \"two\":22.22, \"@type\":{\"min\":3, \"max\":10}}", res.to_json());
+    assert_equal("3",  base.attributes()[Attribute::TYPE][Attribute::MIN].to_json());
+    assert_equal("10", base.attributes()[Attribute::TYPE][Attribute::MAX].to_json());
+    // make sure we execute a deep merge, not a replace on the type hash
+    assert_equal("\"f\"", base.attributes()[Attribute::TYPE][Attribute::SIGNATURE].to_json());
   }
 
   void test_call_set_method_return_bool( void ) {
@@ -176,8 +189,8 @@ public:
 
   void test_list_with_attributes( void ) {
     Object base;
-    base.adopt(new DummyObject("mode", "rgb", Attribute::select_io("rgb, yuv", "This is a menu.")));
-    base.adopt(new DummyObject("tint", 45.0, Attribute::range_io(1, 127, "This is a slider from 1 to 127.")));
+    base.adopt(new DummyObject("mode", "rgb", Attribute::select_io("This is a menu.", "rgb, yuv")));
+    base.adopt(new DummyObject("tint", 45.0, Attribute::range_io("This is a slider from 1 to 127.", 1, 127)));
     Value res = base.list_with_attributes();
     assert_equal(res.type_tag(), "sHsH");
     assert_equal("mode", res[0].str());
@@ -245,15 +258,6 @@ public:
     Object *patch = base.adopt(new Object("patch"));
     patch->adopt(new DummyObject("Africa", Value("Unite!"), Attribute::string_io("Something")));
     assert_equal("{\"width\":100, \"height\":60, \"patch\":{\"Africa\":\"Unite!\"}}", base.to_hash().to_json());
-  }
-
-  void test_set_should_ignore_at( void ) {
-    Object base("base");
-    DummyObject *width  = base.adopt(new DummyObject("width", 100));
-    DummyObject *height = base.adopt(new DummyObject("height", 60));
-    Value res = base.set(JsonValue("{width:101, height:59, @foo:\"bar\"}"));
-    assert_equal(101, width->real());
-    assert_equal(59, height->real());
   }
 
   void test_on_delete_notification( void ) {

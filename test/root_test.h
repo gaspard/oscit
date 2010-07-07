@@ -296,8 +296,8 @@ public:
 
   void test_list_with_attributes_on_root( void ) {
     Root root;
-    root.adopt(new DummyObject("mode", "rgb", Attribute::select_io("rgb, yuv", "This is a menu.")));
-    root.adopt(new DummyObject("tint", 45.0, Attribute::range_io(1, 127, "This is a slider from 1 to 127.")));
+    root.adopt(new DummyObject("mode", "rgb", Attribute::select_io("This is a menu.", "rgb, yuv")));
+    root.adopt(new DummyObject("tint", 45.0, Attribute::range_io("This is a slider from 1 to 127.", 1, 127)));
     Value res = root.list_with_attributes();
     // .error, .info, etc are ignored (current value -- type mismatch)
     assert_equal("sHsHsHsHsHsHsHsH", res.type_tag());

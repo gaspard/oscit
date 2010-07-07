@@ -39,8 +39,12 @@ namespace oscit {
  */
 class Attribute {
 public:
+  /** Root attribute key for a human readable string describing the object.
+   */
   static const char * const INFO;
 
+  /** Root attribute key for type information on the object.
+   */
   static const char * const TYPE;
   static const char * const SIGNATURE;
   static const char * const VALUES;
@@ -48,6 +52,8 @@ public:
   static const char * const MIN;
   static const char * const MAX;
 
+  /** Root attribute key for view attributes (representation of object in a view).
+   */
   static const char * const VIEW;
   static const char * const WIDGET;
   static const char * const HUE;
@@ -56,6 +62,8 @@ public:
   static const char * const WIDTH;
   static const char * const HEIGHT;
 
+  /** Root attribute key for object's class url.
+   */
   static const char * const CLASS;
 
   static Value &default_io() {
@@ -90,7 +98,7 @@ public:
     return io(info, "string", "s");
   }
 
-  static Value range_io(Real min, Real max, const char *info) {
+  static Value range_io(const char *info, Real min, Real max) {
     return HashValue(
       INFO, info).set(
       TYPE, HashValue(
@@ -101,7 +109,7 @@ public:
       );
   }
 
-  static Value select_io(const char *values, const char *info) {
+  static Value select_io(const char *info, const char *values) {
     return HashValue(
       INFO, info).set(
       TYPE, HashValue(
