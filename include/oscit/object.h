@@ -229,23 +229,15 @@ class Object : public Typed, public Observer, public CReferenceCounted {
     return object;
   }
 
-  /** Return a hash representing the current object. The
-   * default behavior is to build a hash by sending 'insert_in_hash'
-   * on the children objects. This method is not const because
-   * the objects might need to trigger to get their current value.
+  /** Return a hash representing the current object. If the current object is a container
+   * (no_io type), the default behavior is to build a hash by sending 'to_hash'
+   * on the children objects and merge the current attributes. If the object is a method
+   * this is an alias for 'trigger'.
+   *
+   * This method is not const because the objects might need to trigger to get their
+   * current value.
    */
-  virtual void insert_in_hash(Value *result);
-
-  /** Return a hash representing the current object. The
-   * default behavior is to build a hash by sending 'to_hash'
-   * on the children objects. This method is just a convenient method
-   * that calls insert_in_hash.
-   */
-  const Value to_hash() {
-    Value result;
-    insert_in_hash(&result);
-    return result;
-  }
+  virtual const Value to_hash();
 
   /** List sub-nodes with their current attributes.
    * This method is used as a reply to the /.list_att meta method.

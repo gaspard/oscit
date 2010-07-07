@@ -214,28 +214,23 @@ const Value Object::list() const {
 }
 
 
-void Object::insert_in_hash(Value *result) {
-
-  { ScopedRead lock(children_vector_);
-    if (children_vector_.size() > 0) {
+const Value Object::to_hash() {
+  if (type_id_ == NO_TYPE_TAG_ID) {
+    // container
+    { ScopedRead lock(children_vector_);
+      Value result(attributes_); // make a copy (no need for a deep copy)
       std::vector<Object*>::iterator it, end = children_vector_.end();
 
       for(it = children_vector_.begin(); it != end; ++it) {
         Object *obj = *it;
-
-        Value obj_hash;
-        obj->insert_in_hash(&obj_hash);
-
-        if (!obj_hash.is_nil()) {
-          result->set(obj->name(), obj_hash);
-        }
+        result.set(obj->name(), obj->to_hash());
       }
-      return;
+      return result;
     }
+  } else {
+    // method
+    return trigger(gNilValue);
   }
-
-  // no children: get value by sending trigger.
-  *result = trigger(gNilValue);
 }
 
 const Value Object::list_with_attributes() const {

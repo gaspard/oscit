@@ -246,18 +246,18 @@ public:
 
   void test_to_hash_should_list_children( void ) {
     Object base("base");
-    base.adopt(new DummyObject("width", 100));
-    base.adopt(new DummyObject("height", 60));
-    assert_equal("{\"width\":100, \"height\":60}", base.to_hash().to_json());
+    base.adopt(new DummyObject("legs", 100));
+    base.adopt(new DummyObject("arms", 60));
+    assert_equal("{\"@info\":\"Container.\", \"legs\":100, \"arms\":60}", base.to_hash().to_json());
   }
 
   void test_nested_to_hash_should_list_children( void ) {
     Object base("base");
-    base.adopt(new DummyObject("width", 100));
-    base.adopt(new DummyObject("height", 60));
-    Object *patch = base.adopt(new Object("patch"));
+    base.adopt(new DummyObject("legs", 100));
+    base.adopt(new DummyObject("arms", 60));
+    Object *patch = base.adopt(new Object("group"));
     patch->adopt(new DummyObject("Africa", Value("Unite!"), Attribute::string_io("Something")));
-    assert_equal("{\"width\":100, \"height\":60, \"patch\":{\"Africa\":\"Unite!\"}}", base.to_hash().to_json());
+    assert_equal("{\"@info\":\"Container.\", \"legs\":100, \"arms\":60, \"group\":{\"@info\":\"Container.\", \"Africa\":\"Unite!\"}}", base.to_hash().to_json());
   }
 
   void test_on_delete_notification( void ) {

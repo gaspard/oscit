@@ -66,9 +66,8 @@ public:
    */
   static const char * const CLASS;
 
-  static Value &default_io() {
-    static Value default_attrs(no_io("Container."));
-    return default_attrs;
+  static Value default_io() {
+    return no_io("Container.");
   }
 
   static Value no_io(const char *info) {

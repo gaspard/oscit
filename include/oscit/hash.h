@@ -41,7 +41,9 @@ namespace oscit {
 class Value;
 typedef std::list<std::string>::const_iterator HashIterator;
 
-/** A Hash is just a reference counted THash<std::string,Value>. */
+/** A Hash is just a reference counted THash<std::string,Value>.
+ * TODO: implement copy on write (could be done in Value). Same for List and String.
+ */
 class Hash : public ReferenceCounted, public THash<std::string,Value> {
 public:
   typedef std::list<std::string>::const_iterator const_iterator;

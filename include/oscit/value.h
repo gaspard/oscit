@@ -188,9 +188,12 @@ public:
     set_type(type_from_char(type_char));
   }
 
-  /** Copy constructor (needed since many methods return a Value). */
+  /** Copy constructor (needed since many methods return a Value).
+   * FIXME: !!! This is making a copy, not sharing the other content. Once we have good
+   * copy-on-write semantics, replace with 'share'.
+   */
   Value(const Value &value) : type_(EMPTY_VALUE) {
-    *this = value;
+    set(value);
   }
 
   ~Value() {
@@ -263,7 +266,7 @@ public:
     return *this;
   }
 
-  /** Share the content of another Value. */
+  /** Copy the content of another Value. */
   Value &copy(const Value &other) {
     switch (other.type_) {
       case REAL_VALUE:
