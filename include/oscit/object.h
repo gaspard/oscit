@@ -360,10 +360,17 @@ class Object : public Typed, public Observer, public CReferenceCounted {
    * # All IO types (except NoIO) accept the Value corresponding to their type
    */
   inline bool can_receive(const Value &val) {
+    return can_receive(val.type_id());
+  }
+
+  /** This method returns true if the current object can receive the given TypeId.
+   * The rules are the same for can_receive(const Value &val).
+   */
+  inline bool can_receive(uint type_id) {
     if (type_id_ == NO_TYPE_TAG_ID) return false;
-    if (val.type_id() == type_id_ || accept_any_type()) {
+    if (type_id == type_id_ || accept_any_type()) {
       return true;
-    } else if (val.is_nil() || val.is_bang()) {
+    } else if (type_id == NIL_TYPE_TAG_ID || type_id == TRUE_TYPE_TAG_ID) { // nil or Bang
       return true;
     // Bad idea (do we need this ?)
     // } else if (val.starts_with_type_tags(type_signature())) {
@@ -373,7 +380,6 @@ class Object : public Typed, public Observer, public CReferenceCounted {
       return false;
     }
   }
-
   /** Signal to receive notifications on object destruction.
    */
   Signal &on_delete() {

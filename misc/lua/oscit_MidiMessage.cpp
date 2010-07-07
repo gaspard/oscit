@@ -888,5 +888,5 @@ extern "C" int luaopen_oscit_MidiMessage(lua_State *L) {
   // register class methods in a global namespace table
   luaL_register(L, "oscit", MidiMessage_namespace_methods);
 
-
+  return 1;
 }
