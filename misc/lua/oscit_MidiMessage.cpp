@@ -588,32 +588,6 @@ static int MidiMessage_set_type(lua_State *L) {
 }
 
 
-/** bool oscit::MidiMessage::set_type_from_data()
- * include/oscit/midi_message.h:378
- */
-static int MidiMessage_set_type_from_data(lua_State *L) {
-  try {
-    MidiMessage *self__ = *((MidiMessage**)luaL_checkudata(L, 1, "oscit.MidiMessage"));
-    lua_remove(L, 1);
-    bool  retval__ = self__->set_type_from_data();
-    lua_pushnumber(L, retval__);
-    return 1;
-  } catch (std::exception &e) {
-    std::string *s = new std::string("oscit.MidiMessage.set_type_from_data: ");
-    s->append(e.what());
-    lua_pushstring(L, s->c_str());
-    delete s;
-    lua_error(L);
-    // never reached
-    return 0;
-  } catch (...) {
-    lua_pushstring(L, "oscit.MidiMessage.set_type_from_data: Unknown exception");
-    lua_error(L);
-    return 0;
-  }
-}
-
-
 /** void oscit::MidiMessage::set_value(int value)
  * include/oscit/midi_message.h:216
  */
@@ -874,7 +848,6 @@ static const struct luaL_Reg MidiMessage_member_methods[] = {
   {"set_length"        , MidiMessage_set_length},
   {"set_note"          , MidiMessage_set_note},
   {"set_type"          , MidiMessage_set_type},
-  {"set_type_from_data", MidiMessage_set_type_from_data},
   {"set_value"         , MidiMessage_set_value},
   {"set_velocity"      , MidiMessage_set_velocity},
   {"to_json"           , MidiMessage_to_json},
