@@ -275,12 +275,18 @@ class Object : public Typed, public Observer, public CReferenceCounted {
     return attributes_[Attribute::TYPE];
   }
 
-  /** Type information on node.
+  /** Object attributes hash.
    */
   const Value &attributes() const {
     return attributes_;
   }
 
+  /** Object attributes hash.
+   * Changing any attribute but TYPE is ok. Changing TYPE will generate problems (at least for now).
+   */
+  Value &attributes() {
+    return attributes_;
+  }
   /** Set meta type (signature, range, units). The type should be immutable.
    *  this method is not a good idea.
    */

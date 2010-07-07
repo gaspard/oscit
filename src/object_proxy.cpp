@@ -40,21 +40,23 @@ void ObjectProxy::adopted() {
   if (root_proxy_ && type().is_nil()) {
     // try to find type
     root_proxy_->send_to_remote(ATTRS_PATH, Value(url()));
-  }
-
-  if (value_.is_empty()) {
-    // get initial value
+  } else if (value_.is_empty()) {
+    // only get initial value if type is already there (or we won't receive the value).
     set_value(gNilValue);
   }
 }
 
 void ObjectProxy::set_value(const Value &val) {
+  assert(root_proxy_);
+
+  // std::cout << url() << ": set_value(" << val << ")\n";
   if (can_receive(val)) {
     time_t now = time_ref_.elapsed();
     // only send if value type is correct
     if (latency_ < 0) {
       if (wait_until_ >= 0) {
         // waiting for first call reply: wait
+        // std::cout << url() << ": waiting for first call reply: wait\n";
       } else {
         // first call
         root_proxy_->send_to_remote(url().c_str(), val);
@@ -62,6 +64,7 @@ void ObjectProxy::set_value(const Value &val) {
       }
     } else if (now < wait_until_) {
       // do not send
+      // std::cout << url() << ": to send\n";
       to_send_ = val;
     } else {
       root_proxy_->send_to_remote(url().c_str(), val);
@@ -101,10 +104,17 @@ void ObjectProxy::handle_value_change(const Value &val) {
 
 void ObjectProxy::set_attrs(const Value &new_attrs) {
   if (new_attrs != attributes_) {
+    bool need_initial_value = !attributes_.is_hash();
     attributes_ = new_attrs;
 
     sync_type_id();
     type_changed();
+
+    if (need_initial_value && root_proxy_) {
+      // We check for root_proxy_ because our object might have attrs set before being adopted.
+      // get initial value
+      set_value(gNilValue);
+    }
   }
 }
 

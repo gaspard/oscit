@@ -58,14 +58,14 @@ public:
     assert_equal("", res[0].str());
     res = res[1];
     assert_equal(13, res.size());
-    assert_equal("[\".error\", \".info\", \".list\", \".list_att\", \".type\", \".tree\", \"Nikolaus\", \"Nikolaus/Jacob\", \"Nikolaus/Nikolaus\", \"Nikolaus/Johann\", \"Nikolaus/Johann/Nicolaus\", \"Nikolaus/Johann/Daniel\", \"Nikolaus/Johann/Johann\"]", res.to_json());
-    
+    assert_equal("[\".error\", \".info\", \".list\", \".list_att\", \".attr\", \".tree\", \"Nikolaus\", \"Nikolaus/Jacob\", \"Nikolaus/Nikolaus\", \"Nikolaus/Johann\", \"Nikolaus/Johann/Nicolaus\", \"Nikolaus/Johann/Daniel\", \"Nikolaus/Johann/Johann\"]", res.to_json());
+
     res = root.call(TREE_PATH, Value("/Nikolaus"));
     assert_equal("/Nikolaus", res[0].str());
     res = res[1];
     assert_equal(6, res.size());
     assert_equal("[\"Jacob\", \"Nikolaus\", \"Johann\", \"Johann/Nicolaus\", \"Johann/Daniel\", \"Johann/Johann\"]", res.to_json());
-    
+
     res = root.call(TREE_PATH, Value("/Nikolaus/Johann"));
     assert_equal("/Nikolaus/Johann", res[0].str());
     res = res[1];
@@ -75,7 +75,7 @@ public:
     res2 = res2[1];
     assert_equal(res2.to_json(), res.to_json()); // should be the same as list if there are no children
   }
-  
+
   void test_tree_on_empty( void ) {
     Root root;
     root.adopt(new Object("Zorglub"));
@@ -86,11 +86,11 @@ public:
     res = res[1];
     assert_equal(0, res.size());
   }
-  
+
   void test_tree_with_nil( void ) {
     Root root(Attribute::no_io("This is the root node."));
     Value res;
-    
+
     res = root.call(TREE_PATH, gNilValue);
     assert_true(res.is_nil());
   }

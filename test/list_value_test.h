@@ -503,21 +503,21 @@ public:
     assert_equal(2.0, v[0].r);
     assert_equal(3.0, v[1].r);
   }
-
+  
   void test_from_json_mixed_strict( void ) {
     Value v(Json("[1.0, \"two\"]"));
     assert_true(v.is_list());
     assert_equal(1.0, v[0].r);
     assert_equal("two", v[1].str());
   }
-
+  
   void test_from_json_lazy( void ) {
     Value v(Json("1.0, \"two\""));
     assert_true(v.is_list());
     assert_equal(1.0, v[0].r);
     assert_equal("two", v[1].str());
   }
-
+  
   void test_from_json_list_in_list_lazy( void ) {
     Value v(Json("1.0, [2.0, 3.0], [\"four\",\"five\"]"));
     assert_true(v.is_list());
@@ -527,7 +527,7 @@ public:
     assert_equal("four", v[2][0].str());
     assert_equal("five", v[2][1].str());
   }
-
+  
   void test_from_json_list_in_list_bracket( void ) {
     Value v(Json("[[1.0, 2.0], 3.0, [\"four\",\"five\"]]"));
     assert_true(v.is_list());
@@ -538,7 +538,7 @@ public:
     assert_equal("four", v[2][0].str());
     assert_equal("five", v[2][1].str());
   }
-
+  
   void test_from_json_hash_in_list( void ) {
     Value v(Json("[{one:\"one\" two:2.0}, 3.0]"));
     assert_true(v.is_list());
@@ -547,7 +547,7 @@ public:
     assert_equal("one", v[0]["one"].str());
     assert_equal(3.0, v[1].r);
   }
-
+  
   void test_from_json_newline_in_list( void ) {
     Value v(Json("one:\"one\"\ntwo:2.0"));
     assert_true(v.is_hash());
@@ -555,7 +555,7 @@ public:
     assert_equal("one", v["one"].str());
     assert_equal(2.0, v["two"].r);
   }
-
+  
   void test_can_receive( void ) {
     Object object("foo", HashValue(Attribute::TYPE, Attribute::SIGNATURE, "sfs").set(Attribute::INFO, "info")); // list
     assert_false(object.can_receive(Value()));
@@ -572,13 +572,13 @@ public:
     assert_false(object.can_receive(MatrixValue(1,1)));
     assert_false(object.can_receive(MidiValue()));
   }
-
+  
   void test_auto_set( void ) {
     Value list(Json("1,[2,3]"));
     list = list[1];
     assert_equal("[2, 3]", list.to_json());
   }
-
+  
   void test_equal( void ) {
     Value a(Json("[1, 2, 'hello']"));
     Value b(Json("[1, 2, 'hello']"));
@@ -588,19 +588,19 @@ public:
     a.set_nil();
     assert_false(a == b);
   }
-
+  
   void test_join_const_char( void ) {
     Value l(Json("[\"one\", \".\", \"/user/local/lib/rubyk\", \"~/rubyk/lib\"]"));
     Value s = l.join(":");
     assert_equal("one:.:/user/local/lib/rubyk:~/rubyk/lib", s.str());
   }
-
+  
   void test_join_char( void ) {
     Value l(Json("[\"one\", \".\", \"/user/local/lib/rubyk\", \"~/rubyk/lib\"]"));
     Value s = l.join(':');
     assert_equal("one:.:/user/local/lib/rubyk:~/rubyk/lib", s.str());
   }
-
+  
   void test_join_ignore_non_string_values( void ) {
     Value l(Json("[\"one\", \".\", 45, [1,2], \"/user/local/lib/rubyk\", \"~/rubyk/lib\"]"));
     Value s = l.join(":");

@@ -140,6 +140,8 @@ bool Root::expose_views(const std::string &path, Value *error) {
   bool all_ok = true;
   for(size_t i = 0; i < view_list.size(); ++i) {
     view = views->adopt(new HashFileMethod(view_list[i].str().substr(0, view_list[i].str().length() - 5), File::join(path, view_list[i].str()), "view"));
+    view->attributes().set(Attribute::VIEW, HashValue(Attribute::WIDGET, "View"));
+
     test = view->trigger(gNilValue);
     if (test.is_error()) {
       errors.push_back(test);

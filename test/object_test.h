@@ -160,7 +160,6 @@ public:
     DummyObject * two = base.adopt(new DummyObject("two", 123.0));
     assert_true(base.set_all_ok(JsonValue("one:10.0 two:22.22")));
     Value res = base.set(JsonValue("one:1.0 four:4.0"));
-    std::cout << res.type_tag() << "\n";
     assert_false(base.set_all_ok(JsonValue("one:1.0 four:4.0")));
     assert_equal(1.0,   one->real());
     assert_equal(22.22, two->real());

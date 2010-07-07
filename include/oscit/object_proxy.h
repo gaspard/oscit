@@ -160,6 +160,14 @@ public:
   const Value &value() {
     return value_;
   }
+
+  /** If the first message (get current value) was lost, the proxy won't send any new messages.
+   * This command resets the state of the connection.
+   */
+  void reset_connection() {
+    wait_until_ = -1;
+    latency_    = -1;
+  }
 protected:
 
   /** Connect here to receive value changes.

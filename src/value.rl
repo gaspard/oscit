@@ -334,6 +334,7 @@ Value Value::join(char c) const {
       set(str_buf, tmp_val);
 
       DEBUG(printf("[hash_value \"%s\":%s]\n", str_buf.c_str(), tmp_val.to_json().c_str()));
+      DEBUG(printf("[self %s]\n", to_json().c_str()));
       DEBUG(printf("[continue \"%s\"]\n",p));
     }
 
@@ -347,23 +348,33 @@ Value Value::join(char c) const {
     // Build tmp_val from string and move p forward
     p++;
     p += tmp_val.build_from_json(p, true);
+    DEBUG(printf("[before push_back %s]\n", to_json().c_str()));
+
     push_back(tmp_val);
     if (*(p-1) == ',') fhold; // hold the ',' separator
 
-    DEBUG(printf("[%p:list_value %s ==> %s/%s]\n", this, tmp_val.to_json().c_str(), to_json().c_str(), p));
+    DEBUG(printf("[list_value %s ==> %s/%s]\n", tmp_val.to_json().c_str(), to_json().c_str(), p));
     fhold; // eaten by >list_value sub-action
   }
 
   action lazy_list {
+    if (is_hash()) {
+      // transform initial hash into list: {...}, foo, bar ===> [{...}, foo, bar]
+      tmp_val = *this;
+    }
+
     // we have a value in tmp that should be changed into a list [tmp]
-    DEBUG(printf("[%p:lazy_list %s]\n", this, tmp_val.to_json().c_str()));
+    DEBUG(printf("[self %s]\n", to_json().c_str()));
+    DEBUG(printf("[lazy_list %s]\n", tmp_val.to_json().c_str()));
+    set_type(LIST_VALUE);
     push_back(tmp_val);
+    DEBUG(printf("[self %s]\n", to_json().c_str()));
   }
 
   action empty_hash {
     DEBUG(printf("[%p:empty_hash %s]\n", this, tmp_val.to_json().c_str()));
-    // become an empty HashValue
     if (is_empty()) {
+      // become an empty HashValue
       set_type(HASH_VALUE);
     }
   }

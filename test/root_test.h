@@ -356,7 +356,13 @@ public:
     ObjectHandle views;
     assert_true(root.get_object_at(VIEWS_PATH, &views));
     Value list = views->list_with_attributes();
-    assert_equal("[[\"file_a/\", [{\"x\":10, \"y\":10, \"width\":500, \"height\":270}, \"view\"]], [\"file_b/\", [{}, \"view\"]]]", list.to_json());
+    assert_equal("file_a/", list[0].str());
+    assert_equal("\"view\"", list[1][Attribute::INFO].to_json());
+    assert_equal("\"View\"", list[1][Attribute::VIEW][Attribute::WIDGET].to_json());
+
+    assert_equal("file_b/", list[2].str());
+    assert_equal("\"view\"", list[3][Attribute::INFO].to_json());
+    assert_equal("\"View\"", list[3][Attribute::VIEW][Attribute::WIDGET].to_json());
   }
 
   // remote objects and 'send' testing is done in command_test.h

@@ -39,13 +39,24 @@ namespace oscit {
  */
 class Attribute {
 public:
-  static const char * const TYPE;
   static const char * const INFO;
+
+  static const char * const TYPE;
   static const char * const SIGNATURE;
   static const char * const VALUES;
   static const char * const NAME;
   static const char * const MIN;
   static const char * const MAX;
+
+  static const char * const VIEW;
+  static const char * const WIDGET;
+  static const char * const HUE;
+  static const char * const POS_X;
+  static const char * const POS_Y;
+  static const char * const WIDTH;
+  static const char * const HEIGHT;
+
+  static const char * const CLASS;
 
   static Value &default_io() {
     static Value default_attrs(no_io("Container."));

@@ -66,6 +66,7 @@ public:
     CommandLogger cmd("osc", &logger);
     RootProxy *proxy = cmd.adopt_proxy(new RootProxy(Location("osc", "funky synth")));
     ObjectProxyLogger *obj = proxy->adopt(new ObjectProxyLogger("seven", Attribute::range_io(0.0, 2000.0, "the sky is blue"), &logger));
+    obj->reset_connection(); // since we do not have a remote, avoid proxy blocking for first answer
     logger.str("");
     obj->set_value(Value(45.0));
     assert_equal("[osc: send osc://\"funky synth\" /seven 45]", logger.str());
@@ -93,13 +94,22 @@ public:
     assert_equal("[osc: send osc://\"funky synth\" /.list_att \"/seven\"]", logger.str());
   }
 
-  void test_new_object_without_type_should_try_to_find_type_and_initial_value( void ) {
+  void test_new_object_without_type_should_try_to_find_attrs( void ) {
     Logger logger;
     CommandLogger cmd("osc", &logger);
     RootProxy *proxy = cmd.adopt_proxy(new RootProxy(Location("osc", "funky synth")));
     logger.str("");
     proxy->adopt(new ObjectProxy("seven", gNilValue));
-    assert_equal("[osc: send osc://\"funky synth\" /.type \"/seven\"][osc: send osc://\"funky synth\" /seven null]", logger.str());
+    assert_equal("[osc: send osc://\"funky synth\" /.attr \"/seven\"]", logger.str());
+  }
+
+  void test_new_object_with_type_should_try_to_find_initial_value( void ) {
+    Logger logger;
+    CommandLogger cmd("osc", &logger);
+    RootProxy *proxy = cmd.adopt_proxy(new RootProxy(Location("osc", "funky synth")));
+    logger.str("");
+    proxy->adopt(new ObjectProxy("seven", Attribute::real_io("Some info.")));
+    assert_equal("[osc: send osc://\"funky synth\" /seven null]", logger.str());
   }
 
   void test_until_type_is_set_object_proxy_should_respond_false_to_is_connected( void ) {

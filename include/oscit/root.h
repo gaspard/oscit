@@ -52,7 +52,7 @@ namespace oscit {
 #define LIST_WITH_ATTRIBUTES_PATH "/.list_att"
 #define REPLY_PATH "/.reply"
 #define REGISTER_PATH "/.register"
-#define ATTRS_PATH "/.attrs"
+#define ATTRS_PATH "/.attr"
 #define TREE_PATH "/.tree"
 #define VIEWS_PATH "/views"
 
