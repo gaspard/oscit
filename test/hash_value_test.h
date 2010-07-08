@@ -356,6 +356,30 @@ public:
     assert_equal(original["nested"].hash_, copy["nested"].hash_);
   }
 
+  void test_cow_remove( void ) {
+    JsonValue original("{one:1 two:2 nested:{a:1 b:2}}");
+    Value copy(original);
+
+    // this should force "original" to have a new version
+    original.remove("one");
+
+    assert_equal("{\"two\":2, \"nested\":{\"a\":1, \"b\":2}}", original.to_json());
+    assert_equal("{\"one\":1, \"two\":2, \"nested\":{\"a\":1, \"b\":2}}", copy.to_json());
+
+    assert_equal(original["nested"].hash_, copy["nested"].hash_);
+  }
+
+  void test_cow_deep_merge( void ) {
+    JsonValue original("{one:1 two:2 nested:{a:1 b:2}}");
+    Value copy(original);
+
+    // this should force "original" to have a new version
+    original.deep_merge(JsonValue("{nested:{c:4}}"));
+
+    assert_equal("{\"one\":1, \"two\":2, \"nested\":{\"a\":1, \"b\":2, \"c\":4}}", original.to_json());
+    assert_equal("{\"one\":1, \"two\":2, \"nested\":{\"a\":1, \"b\":2}}", copy.to_json());
+  }
+
   void test_copy_from_operator_equal( void ) {
     JsonValue original("{one:1 two:2 nested:{a:1 b:2}}");
     Hash *hash_ptr = original.hash_;

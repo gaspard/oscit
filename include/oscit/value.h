@@ -845,14 +845,17 @@ public:
   /** Remove entry with the given key.
    */
   void remove(const char *key) {
-    if (!is_hash()) return;
-    hash_->remove(std::string(key));
+    remove(std::string(key));
   }
 
   /** Remove entry with the given key.
    */
-  void remove(std::string &key) {
-    if (!is_hash()) return;
+  void remove(const std::string &key) {
+    if (!is_hash()) {
+      return;
+    } else {
+      hash_ = hash_->detach();
+    }
     hash_->remove(key);
   }
 

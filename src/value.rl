@@ -203,31 +203,36 @@ Value &Value::push_front(const Value& val) {
 }
 
 // ------------------------------------------------------------- s_deep_merge
-static void s_deep_merge(const Value a, const Value b) {
-  HashIterator it, end = b.end();
+static void s_deep_merge(Value *a, const Value *b) {
+  a->hash_ = a->hash_->detach();
+
+  HashIterator it, end = b->end();
   std::string key;
-  Hash *res_hash = a.hash_;
-  Value val_a, val_b;
+  Hash *a_hash = a->hash_;
+  const Hash *b_hash = b->hash_;
+  // we use pointers to avoid increasing refcount
+  Value *val_a;
+  const Value *val_b;
 
-  for (it = b.begin(); it != end; ++it) {
+  for (it = b->begin(); it != end; ++it) {
     key = *it;
-    if (!b.hash_->get(key, &val_b)) continue; // this should never happen, just in case ;-)
+    if (!b_hash->get(key, &val_b)) continue; // this should never happen, just in case ;-)
 
-    if (a.hash_->get(key, &val_a)) {
+    if (a_hash->get(key, &val_a)) {
       // existing key
-      if (val_a.is_hash() && val_b.is_hash()) {
+      if (val_a->is_hash() && val_b->is_hash()) {
         // deep merge
         s_deep_merge(val_a, val_b);
-      } else if (val_b.is_nil()) {
+      } else if (val_b->is_nil()) {
         // remove
-        res_hash->remove(key);
+        a->remove(key);
       } else {
         // update
-        res_hash->set(key, val_b);
+        a->set(key, *val_b);
       }
     } else {
       // new key
-      res_hash->set(key, val_b);
+      a->set(key, *val_b);
     }
   }
 }
@@ -235,7 +240,7 @@ static void s_deep_merge(const Value a, const Value b) {
 // ------------------------------------------------------------- deep_merge
 void Value::deep_merge(const Value &other) {
   if (!is_hash() || !other.is_hash()) return;
-  s_deep_merge(*this, other);
+  s_deep_merge(this, &other);
 }
 
 // ------------------------------------------------------------- split
