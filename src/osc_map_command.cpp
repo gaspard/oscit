@@ -118,7 +118,7 @@ void OscMapCommand::notify_observers(const char *url, const Value &val) {
       std::cout << "  " << *it << std::endl;
 #endif
         try {
-          send(*it, REPLY_PATH, reply);
+          send(*it, ext_url.c_str(), Value(ext_val));
         } catch (std::runtime_error e) {
           std::cerr << "Could not connect to observer '" << *it << "'.\n";
         }

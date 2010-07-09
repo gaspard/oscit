@@ -184,14 +184,6 @@ public:
     socket_->Run();
   }
 
-  void change_port(uint16_t port) {
-    try {
-      socket_->Bind(IpEndpointName( IpEndpointName::ANY_ADDRESS, port ));
-    } catch (std::runtime_error &e) {
-      printf("Could not create UdpListeningReceiveSocket on port %i\n", port);
-    }
-  }
-
   /** Callback to process incoming messages. */
   virtual void ProcessMessage(const osc::ReceivedMessage &message, const IpEndpointName &ip_end_point) {
     Value res;
@@ -418,12 +410,12 @@ public:
 
 OscCommand::OscCommand(uint16_t port) :
                     Command("osc", "", port) { // no service_type, we do not want automatic registration
-  impl_ = new OscCommand::Implementation(this);
+  impl_ = new Implementation(this);
 }
 
 OscCommand::OscCommand(const char *protocol, const char *service_type, uint16_t port) :
                     Command(protocol, service_type, port) {
-  impl_ = new OscCommand::Implementation(this);
+  impl_ = new Implementation(this);
 }
 
 OscCommand::~OscCommand() {
@@ -463,8 +455,16 @@ bool OscCommand::build_remote_object(const Url &url, Value *error, ObjectHandle 
 }
 
 void OscCommand::change_port(uint16_t port) {
-  impl_->change_port(port);
+  bool should_run = impl_->running_;
+  kill();
+  delete impl_;
+
   port_ = port;
+  impl_ = new Implementation(this);
+
+  if (should_run) {
+    start_command();
+  }
 }
 
 } // oscit

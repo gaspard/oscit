@@ -51,6 +51,8 @@ class OscMapCommandTest : public TestHelper
     map_cmd_ = app1_.adopt_command(new OscMapCommand(APP1_PORT, APP2_PORT));
 
     app2_sender_ = app2_.adopt_command(new OscCommandLogger(APP2_PORT, "sender", &logger_));
+    Object *slider = app2_.adopt(new Object("slider"));
+    slider_one_ = slider->adopt(new LogObject("1"));
     // we need to register in order to get return values
     send("/.register", gNilValue);
   }
@@ -66,7 +68,7 @@ class OscMapCommandTest : public TestHelper
     assert_false(res.is_error());
     send("/slider/1", 0.5);
     assert_equal(15.0, foo->real());
-    assert_equal("[\"/slider/1\", 0.5]\n", reply());
+    assert_equal("0.5\n", slider_one());
   }
 
   void test_notifications_should_reverse_map( void ) {
@@ -75,7 +77,7 @@ class OscMapCommandTest : public TestHelper
     assert_false(res.is_error());
     app1_.notify_observers(REPLY_PATH, Value("/foo").push_back(17.5));
     // notification should be sent to /slider/1 0.75
-    assert_equal("[\"/slider/1\", 0.75]\n", reply());
+    assert_equal("0.75\n", slider_one());
   }
 
  private:
@@ -88,9 +90,11 @@ class OscMapCommandTest : public TestHelper
     millisleep(50);
   }
 
-  std::string reply() {
+  std::string slider_one() {
     millisleep(50);
-    return app2_sender_->replies();
+    std::string content(slider_one_->str());
+    slider_one_->clear();
+    return content;
   }
 
   Mutex context_;
@@ -98,6 +102,7 @@ class OscMapCommandTest : public TestHelper
   Root app1_;
   Root app2_;
   OscCommandLogger *app2_sender_;
+  LogObject *slider_one_;
   OscMapCommand *map_cmd_;
   Logger logger_;
 };
