@@ -1204,6 +1204,7 @@ class JsonValue : public Value
 {
 public:
   JsonValue(const char *json) : Value(Json(json)) {}
+  JsonValue(const std::string &json) : Value(Json(json.c_str())) {}
 };
 
 std::ostream &operator<< (std::ostream &out_stream, const Value &val);
