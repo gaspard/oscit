@@ -47,8 +47,8 @@ Script::Script() : script_ok_(false), script_mod_time_(0), reload_every_(1), nex
 Script::~Script() {}
 
 const Value Script::script(const Value &val) {
-  if (!val.is_nil()) {
-    script_       = val.str();
+  if (val.is_string()) {
+    script_ = val.str();
     Value res = save_script();
     if (res.is_error()) {
       set_script_ok(false);
@@ -67,7 +67,7 @@ const Value Script::script(const Value &val) {
 }
 
 const Value Script::file(const Value &val) {
-  if (!val.is_nil()) {
+  if (val.is_string()) {
     script_file_  = val.str();
     return load_script_from_file(true);
   }
@@ -75,7 +75,7 @@ const Value Script::file(const Value &val) {
 }
 
 const Value Script::reload(const Value &val) {
-  if (!val.is_nil()) {
+  if (val.is_real()) {
     reload_every_ = val.r > 0 ? val.r : 0;
     set_next_reload();
   }
