@@ -37,6 +37,7 @@ public:
 
     assert_false(gNilValue.is_empty());
     assert_true (gNilValue.is_nil());
+    assert_true (gNilValue.is_nil_or_bang());
     assert_false(gNilValue.is_real());
     assert_false(gNilValue.is_string());
     assert_false(gNilValue.is_list());

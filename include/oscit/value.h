@@ -460,6 +460,7 @@ public:
   /** =========================================================    True     */
   bool is_true() const    { return type_ == TRUE_VALUE; }
   bool is_bang() const    { return type_ == TRUE_VALUE; }
+  bool is_nil_or_bang() const    { return type_ == NIL_VALUE || type_ == TRUE_VALUE; }
 
   /** Change the value to nil. */
   Value &set_true() {

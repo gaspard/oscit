@@ -39,6 +39,7 @@ public:
     assert_false(gTrueValue.is_nil());
     assert_true (gTrueValue.is_true());
     assert_true (gTrueValue.is_bang());
+    assert_true (gTrueValue.is_nil_or_bang());
     assert_false(gTrueValue.is_false());
     assert_false(gTrueValue.is_real());
     assert_false(gTrueValue.is_string());
