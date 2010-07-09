@@ -46,7 +46,7 @@ public:
   void test_create_from_bytes( void ) {
     // 3 bytes midi message (NoteOn, channel 5)
     MidiMessage midi(0x90 + 4, 63, 71, 300);
-    assert_equal("+5:Eb3(71), 0/300", midi.to_s());
+    assert_equal("MidiMessage +5:Eb3(71), 0/300", midi.to_s());
   }
 
   void test_create_note( void ) {
@@ -141,6 +141,6 @@ public:
 
   void test_to_s( void ) {
     MidiMessage m;
-    assert_equal("+1:C3(80), 0/500", m.to_s());
+    assert_equal("MidiMessage +1:C3(80), 0/500", m.to_s());
   }
 };

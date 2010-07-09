@@ -64,6 +64,7 @@ bool MidiMessage::unpack(const Value &message, time_t wait) {
 std::ostream &operator<<(std::ostream &out_stream, const MidiMessage &midi_message) {
   std::vector<unsigned char>::const_iterator it,begin,end;
   char buffer[10];
+  out_stream << "MidiMessage ";
   if (midi_message.type_ == NoteOn || midi_message.type_ == NoteOff) {
     // NoteOn or NoteOff
     if (midi_message.type_ == NoteOff)
