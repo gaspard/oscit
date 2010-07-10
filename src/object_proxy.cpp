@@ -108,7 +108,7 @@ void ObjectProxy::set_attrs(const Value &new_attrs) {
     attributes_ = new_attrs;
 
     sync_type_id();
-    type_changed();
+    attrs_changed();
 
     if (need_initial_value && root_proxy_) {
       // We check for root_proxy_ because our object might have attrs set before being adopted.

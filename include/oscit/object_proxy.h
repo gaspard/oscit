@@ -82,8 +82,8 @@ public:
   /** This method is called when the object proxy receives it's type information or the type
    * of the remote changed.
    */
-  void type_changed() {
-    on_type_change_.send(type());
+  void attrs_changed() {
+    on_attrs_change_.send(attributes_);
   }
 
   /** Find the list of children by querying the remote.
@@ -153,8 +153,8 @@ public:
   /** Connect here to receive information on type "change" (usually
    * type discovery).
    */
-  Signal &on_type_change() {
-    return on_type_change_;
+  Signal &on_attrs_change() {
+    return on_attrs_change_;
   }
 
   const Value &value() {
@@ -177,7 +177,7 @@ protected:
   /** Connect here to receive information on type "change" (usually
    * type discovery).
    */
-  Signal on_type_change_;
+  Signal on_attrs_change_;
 
   bool need_sync_;
 

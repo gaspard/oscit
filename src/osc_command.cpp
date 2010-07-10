@@ -43,7 +43,8 @@
 
 namespace oscit {
 
-#define OSC_OUT_BUFFER_SIZE 2048
+// How to set this properly ? Why do we need such a buffer ?
+#define OSC_OUT_BUFFER_SIZE 20480
 
 //#define DEBUG_OSC_COMMAND
 
