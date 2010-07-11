@@ -35,48 +35,47 @@
 
 namespace oscit {
 
-/** This is a dummy class to hold attribute globals.
+/** This namespace is used to hold attribute globals.
  */
-class Attribute {
-public:
+namespace Attribute {
   /** Root attribute key for a human readable string describing the object.
    */
-  static const char * const INFO;
+  extern const char * const INFO;
 
   /** Root attribute key for type information on the object.
    */
-  static const char * const TYPE;
-  static const char * const SIGNATURE;
-  static const char * const VALUES;
-  static const char * const NAME;
-  static const char * const MIN;
-  static const char * const MAX;
+  extern const char * const TYPE;
+  extern const char * const SIGNATURE;
+  extern const char * const VALUES;
+  extern const char * const NAME;
+  extern const char * const MIN;
+  extern const char * const MAX;
 
   /** Root attribute key for view attributes (representation of object in a view).
    */
-  static const char * const VIEW;
-  static const char * const WIDGET;
-  static const char * const HUE;
-  static const char * const POS_X;
-  static const char * const POS_Y;
-  static const char * const WIDTH;
-  static const char * const HEIGHT;
+  extern const char * const VIEW;
+  extern const char * const WIDGET;
+  extern const char * const HUE;
+  extern const char * const POS_X;
+  extern const char * const POS_Y;
+  extern const char * const WIDTH;
+  extern const char * const HEIGHT;
 
   /** Root attribute key for object's class url.
    */
-  static const char * const CLASS;
+  extern const char * const CLASS;
 
-  static Value default_io() {
-    return no_io("Container.");
-  }
-
-  static Value no_io(const char *info) {
+  inline Value no_io(const char *info) {
     return HashValue(
       INFO, info);
       // No name, no signature
   }
 
-  static Value io(const char *info, const char *name, const char *signature) {
+  inline Value default_io() {
+    return no_io("Container.");
+  }
+
+  inline Value io(const char *info, const char *name, const char *signature) {
     return HashValue(
       INFO, info).set(
       TYPE, HashValue(
@@ -85,19 +84,19 @@ public:
       );
   }
 
-  static Value bang_io(const char *info) {
+  inline Value bang_io(const char *info) {
     return io(info, "bang", "T");
   }
 
-  static Value real_io(const char *info) {
+  inline Value real_io(const char *info) {
     return io(info, "real", "f");
   }
 
-  static Value string_io(const char *info) {
+  inline Value string_io(const char *info) {
     return io(info, "string", "s");
   }
 
-  static Value range_io(const char *info, Real min, Real max) {
+  inline Value range_io(const char *info, Real min, Real max) {
     return HashValue(
       INFO, info).set(
       TYPE, HashValue(
@@ -108,7 +107,7 @@ public:
       );
   }
 
-  static Value select_io(const char *info, const char *values) {
+  inline Value select_io(const char *info, const char *values) {
     return HashValue(
       INFO, info).set(
       TYPE, HashValue(
@@ -118,22 +117,22 @@ public:
       );
   }
 
-  static Value hash_io(const char *info) {
+  inline Value hash_io(const char *info) {
     return io(info, "hash", "H");
   }
 
-  static Value matrix_io(const char *info) {
+  inline Value matrix_io(const char *info) {
     return io(info, "matrix", "M");
   }
 
-  static Value midi_io(const char *info) {
+  inline Value midi_io(const char *info) {
     return io(info, "midi", "m");
   }
 
-  static Value any_io(const char *info) {
+  inline Value any_io(const char *info) {
     return io(info, "any", "*");
   }
-};
+} // Attribute
 
 } // oscit
 #endif  // OSCIT_INCLUDE_OSCIT_CONSTANTS_H_
