@@ -29,29 +29,19 @@
 
 #include "oscit/constants.h"
 
-namespace oscit {
+const char * const Oscit::INFO      = "@info";
 
-namespace Attribute {
+const char * const Oscit::TYPE      = "@type";
+const char * const Oscit::SIGNATURE = "signature";
+const char * const Oscit::VALUES    = "values";
+const char * const Oscit::NAME      = "name";
+const char * const Oscit::MIN       = "min";
+const char * const Oscit::MAX       = "max";
 
-const char * const INFO      = "@info";
-
-const char * const TYPE      = "@type";
-const char * const SIGNATURE = "signature";
-const char * const VALUES    = "values";
-const char * const NAME      = "name";
-const char * const MIN       = "min";
-const char * const MAX       = "max";
-
-const char * const VIEW      = "@view";
-const char * const WIDGET    = "widget";
-const char * const HUE       = "hue";
-const char * const POS_X     = "x";
-const char * const POS_Y     = "y";
-const char * const WIDTH     = "width";
-const char * const HEIGHT    = "height";
-
-const char * const CLASS     = "@class";
-
-} // Attribute
-} // oscit
-
+const char * const Oscit::VIEW      = "@view";
+const char * const Oscit::WIDGET    = "widget";
+const char * const Oscit::HUE       = "hue";
+const char * const Oscit::POS_X     = "x";
+const char * const Oscit::POS_Y     = "y";
+const char * const Oscit::WIDTH     = "width";
+const char * const Oscit::HEIGHT    = "height";

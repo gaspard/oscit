@@ -39,8 +39,8 @@ public:
   /** Class signature. */
   TYPED("Object.ErrorMetaMethod")
 
-  ErrorMetaMethod(const char * name)       : Object(name, Attribute::any_io("Errors returned should end here.")) {}
-  ErrorMetaMethod(const std::string &name) : Object(name, Attribute::any_io("Errors returned should end here.")) {}
+  ErrorMetaMethod(const char * name)       : Object(name, Oscit::any_io("Errors returned should end here.")) {}
+  ErrorMetaMethod(const std::string &name) : Object(name, Oscit::any_io("Errors returned should end here.")) {}
 
   virtual const Value trigger(const Value &val) {
     std::cerr << "[" << url() << "] received " << val << std::endl;

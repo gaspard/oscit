@@ -143,7 +143,7 @@ public:
   }
 
   void test_can_receive( void ) {
-    Object object("foo", HashValue(Attribute::TYPE, Attribute::SIGNATURE, "E").set(Attribute::INFO, "Receives error values."));
+    Object object("foo", HashValue(Oscit::TYPE, Oscit::SIGNATURE, "E").set(Oscit::INFO, "Receives error values."));
     assert_false(object.can_receive(Value()));
     assert_true (object.can_receive(gNilValue));
     assert_true (object.can_receive(gBangValue));

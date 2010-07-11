@@ -37,7 +37,7 @@ namespace oscit {
 class LogObject : public Object
 {
 public:
-  LogObject(const char * name) : Object(name, Attribute::any_io("Log any information.")), logger_(std::ostringstream::out) {}
+  LogObject(const char * name) : Object(name, Oscit::any_io("Log any information.")), logger_(std::ostringstream::out) {}
 
   virtual const Value trigger(const Value &val) {
     logger_ << val << std::endl;

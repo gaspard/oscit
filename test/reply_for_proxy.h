@@ -36,7 +36,7 @@
 class ReplyForwarder : public Object
 {
 public:
-  ReplyForwarder(const char * name) : Object(name, Attribute::any_io("Forward replies to root proxies.")) {}
+  ReplyForwarder(const char * name) : Object(name, Oscit::any_io("Forward replies to root proxies.")) {}
 
   virtual const Value trigger(const Value &val) {
     if (!origin) return gNilValue;

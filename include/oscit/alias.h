@@ -67,7 +67,7 @@ private:
 
     original_ = object;
     original_->on_delete().connect(this, &Alias::original_deleted);
-    attributes_ = HashValue(Attribute::TYPE, object->type()).set(Attribute::INFO, object->info());
+    attributes_ = HashValue(Oscit::TYPE, object->type()).set(Oscit::INFO, object->info());
     sync_type_id();
   }
 

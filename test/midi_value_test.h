@@ -161,7 +161,7 @@ public:
   }
 
   void test_can_receive( void ) {
-    Object object("foo", Attribute::midi_io("notes and stuff"));
+    Object object("foo", Oscit::midi_io("notes and stuff"));
     assert_false(object.can_receive(Value()));
     assert_true (object.can_receive(gNilValue));
     assert_true (object.can_receive(gBangValue));

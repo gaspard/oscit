@@ -76,7 +76,7 @@ class OscCommandTest : public TestHelper
 
   // ================================================================= True
   void test_send_receive_true( void ) {
-    DummyObject * foo = remote_.adopt(new DummyObject("foo", "true", Attribute::io("Info", "true", "T")));
+    DummyObject * foo = remote_.adopt(new DummyObject("foo", "true", Oscit::io("Info", "true", "T")));
 
     send("/foo", JsonValue("true"));
     assert_equal("true", foo->value_.to_json());
@@ -85,7 +85,7 @@ class OscCommandTest : public TestHelper
 
   // ================================================================= False
   void test_send_receive_false( void ) {
-    DummyObject * foo = remote_.adopt(new DummyObject("foo", "false", Attribute::io("Info", "false", "F")));
+    DummyObject * foo = remote_.adopt(new DummyObject("foo", "false", Oscit::io("Info", "false", "F")));
 
     send("/foo", JsonValue("false"));
     assert_equal("false", foo->value_.to_json());
@@ -94,7 +94,7 @@ class OscCommandTest : public TestHelper
 
   // ================================================================= Real
   void test_send_receive_real( void ) {
-    DummyObject * foo = remote_.adopt(new DummyObject("foo", "1.0", Attribute::real_io("Info")));
+    DummyObject * foo = remote_.adopt(new DummyObject("foo", "1.0", Oscit::real_io("Info")));
 
     send("/foo", JsonValue("3.2"));
     assert_equal("3.2", foo->value_.to_json());
@@ -103,7 +103,7 @@ class OscCommandTest : public TestHelper
 
   // ================================================================= String
   void test_send_receive_string( void ) {
-    DummyObject * foo = remote_.adopt(new DummyObject("foo", "\"hello\"", Attribute::string_io("Info")));
+    DummyObject * foo = remote_.adopt(new DummyObject("foo", "\"hello\"", Oscit::string_io("Info")));
 
     send("/foo", JsonValue("\"goodbye\""));
     assert_equal("\"goodbye\"", foo->value_.to_json());
@@ -112,7 +112,7 @@ class OscCommandTest : public TestHelper
 
   // ================================================================= Error
   void test_send_receive_error( void ) {
-    DummyObject * foo = remote_.adopt(new DummyObject("foo", "[400, \"bad\"]", Attribute::io("Info", "error", "fs")));
+    DummyObject * foo = remote_.adopt(new DummyObject("foo", "[400, \"bad\"]", Oscit::io("Info", "error", "fs")));
     // Cannot receive errors with 'E' for the moment: need to set signature to 'fs'.
     send("/foo", ErrorValue(NOT_FOUND_ERROR, "not ok"));
     assert_equal("[404, \"not ok\"]", foo->value_.to_json());
@@ -121,7 +121,7 @@ class OscCommandTest : public TestHelper
 
   // ================================================================= Hash
   void test_send_receive_hash( void ) {
-    DummyObject * foo = remote_.adopt(new DummyObject("foo", "{one:1, two:2}", Attribute::hash_io("Info")));
+    DummyObject * foo = remote_.adopt(new DummyObject("foo", "{one:1, two:2}", Oscit::hash_io("Info")));
 
     send("/foo", JsonValue("{\"forty\":40, \"seven\":\"seven\", \"nested\":{\"inner\":[1, 2, 3]}}"));
     assert_equal("{\"forty\":40, \"seven\":\"seven\", \"nested\":{\"inner\":[1, 2, 3]}}", foo->value_.to_json());
@@ -131,7 +131,7 @@ class OscCommandTest : public TestHelper
   // ================================================================= Matrix
   //Not supported yet
   //void test_send_receive_matrix( void ) {
-  //  DummyObject * foo = remote_.adopt(new DummyObject("foo", " matrix ? ", Attribute::matrix_io("Info.")));
+  //  DummyObject * foo = remote_.adopt(new DummyObject("foo", " matrix ? ", Oscit::matrix_io("Info.")));
   //
   //  send("/foo", JsonValue("true"));
   //  assert_equal("", foo->value_.to_json());
@@ -140,7 +140,7 @@ class OscCommandTest : public TestHelper
 
   // ================================================================= Midi
   void test_send_receive_midi( void ) {
-    DummyObject * foo = remote_.adopt(new DummyObject("foo", "{\"=m\":[147, 60, 80, 400]}", Attribute::midi_io("Info")));
+    DummyObject * foo = remote_.adopt(new DummyObject("foo", "{\"=m\":[147, 60, 80, 400]}", Oscit::midi_io("Info")));
 
     send("/foo", JsonValue("{\"=m\":[147, 67, 100, 100]}"));
     assert_equal("{\"=m\":[147, 67, 100, 100]}", foo->value_.to_json());
@@ -149,7 +149,7 @@ class OscCommandTest : public TestHelper
 
   // ================================================================= Any
   void test_send_receive_any( void ) {
-    DummyObject * foo = remote_.adopt(new DummyObject("foo", "null", Attribute::any_io("Info")));
+    DummyObject * foo = remote_.adopt(new DummyObject("foo", "null", Oscit::any_io("Info")));
 
     send("/foo", JsonValue("[{hello:3}, 4, 5]"));
     assert_equal("[{\"hello\":3}, 4, 5]", foo->value_.to_json());
@@ -158,7 +158,7 @@ class OscCommandTest : public TestHelper
 
   // ================================================================= List
   void test_send_receive_list( void ) {
-    DummyObject * foo = remote_.adopt(new DummyObject("foo", "null", Attribute::io("Info", "list", "ffs[ss[ff]]")));
+    DummyObject * foo = remote_.adopt(new DummyObject("foo", "null", Oscit::io("Info", "list", "ffs[ss[ff]]")));
 
     send("/foo", JsonValue("[1.5, -3.2, 'bar', ['a', 'b', [1, 2]]]"));
     assert_equal("[1.5, -3.2, \"bar\", [\"a\", \"b\", [1, 2]]]", foo->value_.to_json());
@@ -171,8 +171,8 @@ class OscCommandTest : public TestHelper
     // remote_ objects are cleared before each run
     remote_.adopt(new ListMetaMethod(Url(LIST_PATH).name()));
     Object * tmp = remote_.adopt(new Object("monitor"));
-    tmp->adopt(new DummyObject("mode", "rgb", Attribute::select_io("This is a menu.", "rgb, yuv")));
-    tmp->adopt(new DummyObject("tint", 45.0, Attribute::range_io("This is a slider from 1 to 127.", 1, 127)));
+    tmp->adopt(new DummyObject("mode", "rgb", Oscit::select_io("This is a menu.", "rgb, yuv")));
+    tmp->adopt(new DummyObject("tint", 45.0, Oscit::range_io("This is a slider from 1 to 127.", 1, 127)));
 
     send(LIST_PATH, "/monitor");
     assert_equal("[\"/.list\", [\"/monitor\", [\"mode\", \"tint\"]]]\n", reply());
@@ -189,10 +189,10 @@ class OscCommandTest : public TestHelper
 
   void test_send_receive_list_with_attributes( void ) {
     // remote_ objects are cleared before each run
-    remote_.adopt(new ListWithAttributesMetaMethod(Url(LIST_WITH_ATTRIBUTES_PATH).name()));
+    remote_.adopt(new ListWithOscitsMetaMethod(Url(LIST_WITH_ATTRIBUTES_PATH).name()));
     Object * tmp = remote_.adopt(new Object("monitor"));
-    tmp->adopt(new DummyObject("mode", "rgb", Attribute::select_io("This is a menu.", "rgb, yuv")));
-    tmp->adopt(new DummyObject("tint", 45.0, Attribute::range_io("This is a slider from 1 to 127.", 1, 127)));
+    tmp->adopt(new DummyObject("mode", "rgb", Oscit::select_io("This is a menu.", "rgb, yuv")));
+    tmp->adopt(new DummyObject("tint", 45.0, Oscit::range_io("This is a slider from 1 to 127.", 1, 127)));
 
     send(LIST_WITH_ATTRIBUTES_PATH, "/monitor");
     assert_equal("[\"/.list_att\", [\"/monitor\", [\"mode\", {\"@info\":\"This is a menu.\", \"@type\":{\"name\":\"select\", \"signature\":\"s\", \"values\":\"rgb, yuv\"}}, \"tint\", {\"@info\":\"This is a slider from 1 to 127.\", \"@type\":{\"name\":\"range\", \"signature\":\"f\", \"min\":1, \"max\":127}}]]]\n", reply());

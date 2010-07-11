@@ -42,16 +42,16 @@ public:
     res = root.call(ATTRS_PATH, Value(""));
     assert_equal("", res[0].str());
     res = res[1];
-    assert_equal("Container.", res[Attribute::INFO].str());
+    assert_equal("Container.", res[Oscit::INFO].str());
 
     res = root.call(ATTRS_PATH, Value("/foo"));
     assert_equal("/foo", res[0].str());
     res = res[1];
     assert_equal("H", res.type_tag());
-    assert_equal("range", res[Attribute::TYPE][Attribute::NAME].str());
-    assert_equal(0.0,   res[Attribute::TYPE][Attribute::MIN].r);
-    assert_equal(127.0, res[Attribute::TYPE][Attribute::MAX].r);
-    assert_equal(DUMMY_OBJECT_INFO, res[Attribute::INFO].str());
+    assert_equal("range", res[Oscit::TYPE][Oscit::NAME].str());
+    assert_equal(0.0,   res[Oscit::TYPE][Oscit::MIN].r);
+    assert_equal(127.0, res[Oscit::TYPE][Oscit::MAX].r);
+    assert_equal(DUMMY_OBJECT_INFO, res[Oscit::INFO].str());
 
     res = root.call(ATTRS_PATH, Value("/blah"));
     assert_equal("/blah", res[0].str());
@@ -69,57 +69,57 @@ public:
     assert_equal("/foo", res[0].str());
     res = res[1];
     assert_equal("H", res.type_tag());
-    assert_equal("rgb,rgba,yuv",  res[Attribute::TYPE][Attribute::VALUES].str());
-    assert_equal("Set color mode.", res[Attribute::INFO].str());
+    assert_equal("rgb,rgba,yuv",  res[Oscit::TYPE][Oscit::VALUES].str());
+    assert_equal("Set color mode.", res[Oscit::INFO].str());
   }
 
   void test_any_type( void ) {
     Root root;
-    root.adopt(new DummyObject("foo", 1.23, Attribute::any_io("This is the info string.")));
+    root.adopt(new DummyObject("foo", 1.23, Oscit::any_io("This is the info string.")));
     Value res;
     res = root.call(ATTRS_PATH, Value("/foo"));
     assert_equal("/foo", res[0].str());
     res = res[1];
-    assert_equal("*", res[Attribute::TYPE][Attribute::SIGNATURE].str());
-    assert_equal("This is the info string.", res[Attribute::INFO].str()); // info
+    assert_equal("*", res[Oscit::TYPE][Oscit::SIGNATURE].str());
+    assert_equal("This is the info string.", res[Oscit::INFO].str()); // info
   }
 
   void test_list_type( void ) {
     Root root;
     // FIXME: replace JsonValue(...) by proper attributes
-    // Attribute::attribute(info, name, signature) ?
-    root.adopt(new DummyObject("Haddock", JsonValue("[\"\", 0.0]"), Attribute::io("Haddock", "some list", "sf")));
+    // Oscit::attribute(info, name, signature) ?
+    root.adopt(new DummyObject("Haddock", JsonValue("[\"\", 0.0]"), Oscit::io("Haddock", "some list", "sf")));
     Value res;
     res = root.call(ATTRS_PATH, Value("/Haddock"));
     assert_equal("/Haddock", res[0].str());
     res = res[1];
-    assert_equal("sf", res[Attribute::TYPE][Attribute::SIGNATURE].str());
-    assert_equal("some list", res[Attribute::TYPE][Attribute::NAME].str());
-    assert_equal("Haddock", res[Attribute::INFO].str());
+    assert_equal("sf", res[Oscit::TYPE][Oscit::SIGNATURE].str());
+    assert_equal("some list", res[Oscit::TYPE][Oscit::NAME].str());
+    assert_equal("Haddock", res[Oscit::INFO].str());
   }
 
   void test_hash_type( void ) {
     Root root;
-    root.adopt(new DummyObject("dog_food", JsonValue("{lazy:\"dog\", silly:\"cats and mices\"}"), Attribute::hash_io("Blah blah.")));
+    root.adopt(new DummyObject("dog_food", JsonValue("{lazy:\"dog\", silly:\"cats and mices\"}"), Oscit::hash_io("Blah blah.")));
     Value res;
     res = root.call(ATTRS_PATH, Value("/dog_food"));
     assert_equal("/dog_food", res[0].str());
     res = res[1];
-    assert_equal("H", res[Attribute::TYPE][Attribute::SIGNATURE].str());
-    assert_equal("hash", res[Attribute::TYPE][Attribute::NAME].str());
-    assert_equal("Blah blah.", res[Attribute::INFO].str());
+    assert_equal("H", res[Oscit::TYPE][Oscit::SIGNATURE].str());
+    assert_equal("hash", res[Oscit::TYPE][Oscit::NAME].str());
+    assert_equal("Blah blah.", res[Oscit::INFO].str());
   }
 
   void test_matrix_type( void ) {
     Root root;
-    root.adopt(new DummyObject("master_of_time", MatrixValue(1,5), Attribute::matrix_io("Stupid matrix.")));
+    root.adopt(new DummyObject("master_of_time", MatrixValue(1,5), Oscit::matrix_io("Stupid matrix.")));
     Value res;
     res = root.call(ATTRS_PATH, Value("/master_of_time"));
     assert_equal("/master_of_time", res[0].str());
     res = res[1];
-    assert_equal("M", res[Attribute::TYPE][Attribute::SIGNATURE].str());
-    assert_equal("matrix", res[Attribute::TYPE][Attribute::NAME].str());
-    assert_equal("Stupid matrix.", res[Attribute::INFO].str());
+    assert_equal("M", res[Oscit::TYPE][Oscit::SIGNATURE].str());
+    assert_equal("matrix", res[Oscit::TYPE][Oscit::NAME].str());
+    assert_equal("Stupid matrix.", res[Oscit::INFO].str());
   }
 
   void test_no_input( void ) {
@@ -130,11 +130,11 @@ public:
     res = root.call(ATTRS_PATH, Value("/foo"));
     assert_equal("/foo", res[0].str());
     res = res[1];
-    assert_equal("Container.", res[Attribute::INFO].str());
+    assert_equal("Container.", res[Oscit::INFO].str());
   }
 
   void test_type_with_nil( void ) {
-    Root root(Attribute::no_io("This is the root node."));
+    Root root(Oscit::no_io("This is the root node."));
     Value res;
 
     res = root.call(ATTRS_PATH, gNilValue);

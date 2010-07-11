@@ -35,7 +35,7 @@ class InfoMetaMethodTest : public TestHelper
 {
 public:
   void test_info( void ) {
-    Root root(Attribute::no_io("This is the root node."));
+    Root root(Oscit::no_io("This is the root node."));
     root.adopt(new Object("foo"));
     Value res;
 
@@ -47,7 +47,7 @@ public:
     res = root.call(INFO_PATH, Value("/foo"));
     assert_true(res.is_list());
     assert_equal("/foo", res[0].str());
-    assert_equal(Attribute::default_io()[Attribute::INFO].str(), res[1].str());
+    assert_equal(Oscit::default_io()[Oscit::INFO].str(), res[1].str());
 
     res = root.call(INFO_PATH, Value("/blah"));
     assert_equal("/blah", res[0].str());
@@ -56,7 +56,7 @@ public:
   }
 
   void test_info_with_nil( void ) {
-    Root root(Attribute::no_io("This is the root node."));
+    Root root(Oscit::no_io("This is the root node."));
     Value res;
 
     res = root.call(INFO_PATH, gNilValue);

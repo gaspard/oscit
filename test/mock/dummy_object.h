@@ -39,7 +39,7 @@ public:
   /** Class signature. */
   TYPED("Object.DummyObject")
 
-  DummyObject(const char *name, Real value) : Object(name, Attribute::range_io(DUMMY_OBJECT_INFO, 0, 127)), value_(value) {}
+  DummyObject(const char *name, Real value) : Object(name, Oscit::range_io(DUMMY_OBJECT_INFO, 0, 127)), value_(value) {}
   DummyObject(const char *name, Value value, const Value &attrs) : Object(name, attrs), value_(value) {}
   DummyObject(const char *name, Real value, const Value &attrs) : Object(name, attrs), value_(value) {}
   DummyObject(const char *name, const char *value, const Value &attrs) : Object(name, attrs), value_(value) {}
@@ -87,7 +87,7 @@ class DummyObject2 : public Object {
 public:
   TYPED("Object.DummyObject2")
 
-  DummyObject2(const char * name, const char *value) : Object(name, Attribute::select_io("Set color mode.", "rgb,rgba,yuv")), value_(value) {}
+  DummyObject2(const char * name, const char *value) : Object(name, Oscit::select_io("Set color mode.", "rgb,rgba,yuv")), value_(value) {}
 
   DummyObject2(const char * name, const char *value, const Value &attrs) : Object(name, attrs), value_(value) {}
 

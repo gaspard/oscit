@@ -64,7 +64,7 @@ class MethodTest : public TestHelper
 public:
   void test_trigger_class_method( void ) {
     Root root;
-    root.adopt(new ClassMethod("hello", &Person::class_method, Attribute::string_io("Send me strings only.")));
+    root.adopt(new ClassMethod("hello", &Person::class_method, Oscit::string_io("Send me strings only.")));
     Value res;
     
     res = root.call("/hello", MatrixValue(2,3));
@@ -80,7 +80,7 @@ public:
   void test_trigger_method( void ) {
     Root root;
     Person * eva = root.adopt(new Person("Eva"));
-    eva->adopt(new Method(eva, "name", &Method::cast_method<Person, &Person::name>, Attribute::string_io("Name of the person.")));
+    eva->adopt(new Method(eva, "name", &Method::cast_method<Person, &Person::name>, Oscit::string_io("Name of the person.")));
     Value res;
     
     res = root.call("/Eva/name");
@@ -100,7 +100,7 @@ public:
     Root root;
     Person * eva = root.adopt(new Person("Eva"));
     // template syntax is nicer and more readable
-    eva->adopt(new TMethod<Person, &Person::name>(eva, "name", Attribute::string_io("Name of the person.")));
+    eva->adopt(new TMethod<Person, &Person::name>(eva, "name", Oscit::string_io("Name of the person.")));
     Value res;
     
     res = root.call("/Eva/name");
@@ -119,7 +119,7 @@ public:
   void test_cast_super_method( void ) {
     Root root;
     Employee *joe = root.adopt(new Employee("Joe"));
-    joe->adopt(new Method(joe, "name", &Method::cast_method<Employee, Person, &Person::name>, Attribute::string_io("Name of the person.")));
+    joe->adopt(new Method(joe, "name", &Method::cast_method<Employee, Person, &Person::name>, Oscit::string_io("Name of the person.")));
     Value res;
     
     res = root.call("/Joe/name");

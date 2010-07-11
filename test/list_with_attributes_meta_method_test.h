@@ -31,7 +31,7 @@
 #include "oscit/root.h"
 #include "mock/dummy_object.h"
 
-class ListWithAttributesMetaMethodTest : public TestHelper
+class ListWithOscitsMetaMethodTest : public TestHelper
 {
 public:
   /* Bernoulli family
@@ -46,8 +46,8 @@ public:
 
   void test_list_with_attributes_on_root( void ) {
     Root root;
-    root.adopt(new DummyObject("mode", "rgb", Attribute::select_io("This is a menu.", "rgb, yuv")));
-    root.adopt(new DummyObject("tint", 45.0, Attribute::range_io("This is a slider from 1 to 127.", 1, 127)));
+    root.adopt(new DummyObject("mode", "rgb", Oscit::select_io("This is a menu.", "rgb, yuv")));
+    root.adopt(new DummyObject("tint", 45.0, Oscit::range_io("This is a slider from 1 to 127.", 1, 127)));
     Value res = root.list_with_attributes();
     // .error, .info, etc
     //
@@ -59,8 +59,8 @@ public:
   void test_list_with_attributes( void ) {
     Root root;
     Object * tmp = root.adopt(new Object("monitor"));
-    tmp->adopt(new DummyObject("mode", "rgb", Attribute::select_io("This is a menu.", "rgb, yuv")));
-    tmp->adopt(new DummyObject("tint", 45.0, Attribute::range_io("This is a slider from 1 to 127.", 1, 127)));
+    tmp->adopt(new DummyObject("mode", "rgb", Oscit::select_io("This is a menu.", "rgb, yuv")));
+    tmp->adopt(new DummyObject("tint", 45.0, Oscit::range_io("This is a slider from 1 to 127.", 1, 127)));
     Value reply, res;
 
     reply = root.call(LIST_WITH_ATTRIBUTES_PATH, Value(""));
@@ -99,7 +99,7 @@ public:
   }
 
   void test_list_with_attributes_with_nil( void ) {
-    Root root(Attribute::no_io("This is the root node."));
+    Root root(Oscit::no_io("This is the root node."));
     Value res;
 
     res = root.call(LIST_WITH_ATTRIBUTES_PATH, gNilValue);

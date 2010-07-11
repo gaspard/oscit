@@ -557,7 +557,7 @@ public:
   }
   
   void test_can_receive( void ) {
-    Object object("foo", HashValue(Attribute::TYPE, Attribute::SIGNATURE, "sfs").set(Attribute::INFO, "info")); // list
+    Object object("foo", HashValue(Oscit::TYPE, Oscit::SIGNATURE, "sfs").set(Oscit::INFO, "info")); // list
     assert_false(object.can_receive(Value()));
     assert_true (object.can_receive(gNilValue));
     assert_true (object.can_receive(gBangValue));

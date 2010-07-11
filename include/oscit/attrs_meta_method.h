@@ -39,8 +39,8 @@ public:
   /** Class signature. */
   TYPED("Object.AttrsMetaMethod")
 
-  AttrsMetaMethod(const char *name)        : Object(name, Attribute::string_io("Return the attributes of the given path.")) {}
-  AttrsMetaMethod(const std::string &name) : Object(name, Attribute::string_io("Return the attributes of the given path.")) {}
+  AttrsMetaMethod(const char *name)        : Object(name, Oscit::string_io("Return the attributes of the given path.")) {}
+  AttrsMetaMethod(const std::string &name) : Object(name, Oscit::string_io("Return the attributes of the given path.")) {}
 
   virtual const Value trigger(const Value &val) {
     if (!val.is_string()) return gNilValue;

@@ -35,7 +35,7 @@ namespace oscit {
 
 
 void HashFileMethod::create_methods() {
-  adopt(new TMethod<HashFileMethod, &HashFileMethod::update>(this, "update", Attribute::hash_io("Hash to deep merge in current content.")));
+  adopt(new TMethod<HashFileMethod, &HashFileMethod::update>(this, "update", Oscit::hash_io("Hash to deep merge in current content.")));
 }
 
 const Value HashFileMethod::trigger(const Value &val) {

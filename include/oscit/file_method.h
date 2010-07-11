@@ -41,19 +41,19 @@ public:
   TYPED("Object.FileMethod")
 
   FileMethod(const char *name, const char *path)
-      : Object(name, Attribute::string_io("Read/write file content.")),
+      : Object(name, Oscit::string_io("Read/write file content.")),
         file_(path) {}
 
   FileMethod(const std::string &name, const std::string &path)
-      : Object(name, Attribute::string_io("Read/write file content.")),
+      : Object(name, Oscit::string_io("Read/write file content.")),
         file_(path) {}
 
   FileMethod(const char *name, const char *path, const char *info)
-      : Object(name, Attribute::string_io(info)),
+      : Object(name, Oscit::string_io(info)),
         file_(path) {}
 
   FileMethod(const std::string &name, const std::string &path, const std::string &info)
-      : Object(name, Attribute::string_io(info.c_str())),
+      : Object(name, Oscit::string_io(info.c_str())),
         file_(path) {}
 
   /** Read/write to file. The file path was provided on the object's creation.

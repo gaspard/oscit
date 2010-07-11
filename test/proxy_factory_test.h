@@ -161,8 +161,8 @@ class ProxyFactoryTest : public TestHelper
     Root remote;
     remote.adopt_command(new OscCommand(REMOTE_PORT));
     Object *monitor = remote.adopt(new Object("monitor"));
-    monitor->adopt(new DummyObject("mode", "rgb", Attribute::select_io("This is a menu.", "rgb, yuv")));
-    monitor->adopt(new DummyObject("tint", 45.0, Attribute::range_io("This is a slider from 1 to 127.", 1, 127)));
+    monitor->adopt(new DummyObject("mode", "rgb", Oscit::select_io("This is a menu.", "rgb, yuv")));
+    monitor->adopt(new DummyObject("tint", 45.0, Oscit::range_io("This is a slider from 1 to 127.", 1, 127)));
 
     // prepare local root
     Root local;
@@ -273,7 +273,7 @@ class ProxyFactoryTest : public TestHelper
     ObjectHandle bar;
     assert_false(proxy_->get_object_at("/synth", &bar));
 
-    remote.adopt(new DummyObject("synth", gNilValue, Attribute::no_io("Super synth.")));
+    remote.adopt(new DummyObject("synth", gNilValue, Oscit::no_io("Super synth.")));
     millisleep(20);
 
     assert_true(proxy_->get_object_at("/synth", &bar));
@@ -293,7 +293,7 @@ class ProxyFactoryTest : public TestHelper
   //   Object *bar = proxy_->object_at("/synth");
   //   assert_equal((Object*)NULL, bar);
   //
-  //   remote.adopt(new DummyObject("synth", gNilValue, Attribute::no_io("Super synth.")));
+  //   remote.adopt(new DummyObject("synth", gNilValue, Oscit::no_io("Super synth.")));
   //   millisleep(20);
   //
   //   bar = proxy_->object_at("/synth");
@@ -316,10 +316,10 @@ private:
   void build_foobar_local_and_remote(Root &local, Root &remote, MyProxyFactory &factory,  PFTLogger &logger) {
 
     remote.adopt_command(new OscCommand(REMOTE_PORT));
-    foo_ = remote.adopt(new DummyObject("foo", "rgb", Attribute::select_io("This is a menu.", "rgb, yuv")));
-    bar_ = remote.adopt(new DummyObject("bar", 45.0, Attribute::range_io("This is a slider from 1 to 127.", 1, 127)));
-    dummy_view_ = remote.adopt(new DummyObject("dummy_view", "view content", Attribute::string_io("Some dummy view.")));
-    dummy_view_->adopt(new DummyObject("update", HashValue(), Attribute::hash_io("hash to update content")));
+    foo_ = remote.adopt(new DummyObject("foo", "rgb", Oscit::select_io("This is a menu.", "rgb, yuv")));
+    bar_ = remote.adopt(new DummyObject("bar", 45.0, Oscit::range_io("This is a slider from 1 to 127.", 1, 127)));
+    dummy_view_ = remote.adopt(new DummyObject("dummy_view", "view content", Oscit::string_io("Some dummy view.")));
+    dummy_view_->adopt(new DummyObject("update", HashValue(), Oscit::hash_io("hash to update content")));
 
     OscCommand *cmd = local.adopt_command(new OscCommand(LOCAL_PORT));
 

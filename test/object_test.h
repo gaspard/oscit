@@ -155,16 +155,16 @@ public:
   }
 
   void test_set_should_merge_at_keys_in_attributes( void ) {
-    Object base("", Attribute::range_io("Some info", -1, 1));
+    Object base("", Oscit::range_io("Some info", -1, 1));
     base.adopt(new DummyObject("one", 123.0));
     base.adopt(new DummyObject("two", 123.0));
     Value res = base.set(JsonValue("one:10.0 two:22.22 @type:{min:3, max:10}"));
     assert_true(res.is_hash());
     assert_equal("{\"one\":10, \"two\":22.22, \"@type\":{\"min\":3, \"max\":10}}", res.to_json());
-    assert_equal("3",  base.attributes()[Attribute::TYPE][Attribute::MIN].to_json());
-    assert_equal("10", base.attributes()[Attribute::TYPE][Attribute::MAX].to_json());
+    assert_equal("3",  base.attributes()[Oscit::TYPE][Oscit::MIN].to_json());
+    assert_equal("10", base.attributes()[Oscit::TYPE][Oscit::MAX].to_json());
     // make sure we execute a deep merge, not a replace on the type hash
-    assert_equal("\"f\"", base.attributes()[Attribute::TYPE][Attribute::SIGNATURE].to_json());
+    assert_equal("\"f\"", base.attributes()[Oscit::TYPE][Oscit::SIGNATURE].to_json());
   }
 
   void test_call_set_method_return_bool( void ) {
@@ -179,18 +179,18 @@ public:
   }
 
   void test_hash_type_id( void ) {
-    Object hash("foo", Attribute::hash_io("bar"));
-    Object matr("foo", Attribute::matrix_io("bar"));
+    Object hash("foo", Oscit::hash_io("bar"));
+    Object matr("foo", Oscit::matrix_io("bar"));
     assert_false(hash.type_id() == matr.type_id());
     assert_false(hash.type_id() == matr.type_id());
-    assert_equal("H", hash.type()[Attribute::SIGNATURE].str());
-    assert_equal("M", matr.type()[Attribute::SIGNATURE].str());
+    assert_equal("H", hash.type()[Oscit::SIGNATURE].str());
+    assert_equal("M", matr.type()[Oscit::SIGNATURE].str());
   }
 
   void test_list_with_attributes( void ) {
     Object base;
-    base.adopt(new DummyObject("mode", "rgb", Attribute::select_io("This is a menu.", "rgb, yuv")));
-    base.adopt(new DummyObject("tint", 45.0, Attribute::range_io("This is a slider from 1 to 127.", 1, 127)));
+    base.adopt(new DummyObject("mode", "rgb", Oscit::select_io("This is a menu.", "rgb, yuv")));
+    base.adopt(new DummyObject("tint", 45.0, Oscit::range_io("This is a slider from 1 to 127.", 1, 127)));
     Value res = base.list_with_attributes();
     assert_equal(res.type_tag(), "sHsH");
     assert_equal("mode", res[0].str());
@@ -239,7 +239,7 @@ public:
     assert_equal(3, base.children_count());
     assert_equal("[\"one\", \"two\", \"last\"]", base.list().to_json());
 
-    base.adopt(new Object("last2", Attribute::default_io(), true));
+    base.adopt(new Object("last2", Oscit::default_io(), true));
     assert_equal(4, base.children_count());
     assert_equal("[\"one\", \"two\", \"last\", \"last2\"]", base.list().to_json());
   }
@@ -256,7 +256,7 @@ public:
     base.adopt(new DummyObject("legs", 100));
     base.adopt(new DummyObject("arms", 60));
     Object *patch = base.adopt(new Object("group"));
-    patch->adopt(new DummyObject("Africa", Value("Unite!"), Attribute::string_io("Something")));
+    patch->adopt(new DummyObject("Africa", Value("Unite!"), Oscit::string_io("Something")));
     assert_equal("{\"@info\":\"Container.\", \"legs\":100, \"arms\":60, \"group\":{\"@info\":\"Container.\", \"Africa\":\"Unite!\"}}", base.to_hash().to_json());
   }
 

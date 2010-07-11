@@ -64,7 +64,7 @@ class Object : public Typed, public Observer, public CReferenceCounted {
   TYPED("Object")
 
   explicit Object() : root_(NULL), parent_(NULL), children_(20), context_(NULL), keep_last_(false),
-    attributes_(Attribute::default_io()) {
+    attributes_(Oscit::default_io()) {
     sync_type_id();
     name_ = "";
     url_  = name_;
@@ -72,13 +72,13 @@ class Object : public Typed, public Observer, public CReferenceCounted {
 
   explicit Object(const char *name) : root_(NULL), parent_(NULL),
     children_(20), name_(name), url_(name), context_(NULL), keep_last_(false),
-    attributes_(Attribute::default_io()) {
+    attributes_(Oscit::default_io()) {
     sync_type_id();
   }
 
   explicit Object(const std::string &name) : root_(NULL), parent_(NULL),
     children_(20), name_(name), url_(name), context_(NULL), keep_last_(false),
-    attributes_(Attribute::default_io()) {
+    attributes_(Oscit::default_io()) {
     sync_type_id();
   }
 
@@ -103,7 +103,7 @@ class Object : public Typed, public Observer, public CReferenceCounted {
 
   Object(Object *parent, const char *name) : root_(NULL), parent_(NULL),
     children_(20), name_(name), context_(NULL), keep_last_(false),
-    attributes_(Attribute::default_io()) {
+    attributes_(Oscit::default_io()) {
     sync_type_id();
     parent->adopt(this);
   }
@@ -257,14 +257,14 @@ class Object : public Typed, public Observer, public CReferenceCounted {
    *  Called as a response to "/.info '/this/url'".
    */
   const Value info() const {
-    Value info(attributes_[Attribute::INFO]);
+    Value info(attributes_[Oscit::INFO]);
     return info.is_string() ? info : Value("Container.");
   }
 
   /** Type information on node.
    */
   const Value type() const {
-    return attributes_[Attribute::TYPE];
+    return attributes_[Oscit::TYPE];
   }
 
   /** Object attributes hash.
@@ -427,7 +427,7 @@ class Object : public Typed, public Observer, public CReferenceCounted {
   /** Keep type_id_ in sync with type_.
    */
   void sync_type_id() {
-    Value signature = attributes_[Attribute::TYPE][Attribute::SIGNATURE];
+    Value signature = attributes_[Oscit::TYPE][Oscit::SIGNATURE];
     if (signature.is_string()) {
       type_id_ = hashId(signature.str());
     } else {

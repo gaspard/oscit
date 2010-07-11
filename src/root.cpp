@@ -51,7 +51,7 @@ void Root::init(bool should_build_meta) {
     adopt(new ErrorMetaMethod(Url(ERROR_PATH).name()));
     adopt(new InfoMetaMethod(Url(INFO_PATH).name()));
     adopt(new ListMetaMethod(Url(LIST_PATH).name()));
-    adopt(new ListWithAttributesMetaMethod(Url(LIST_WITH_ATTRIBUTES_PATH).name()));
+    adopt(new ListWithOscitsMetaMethod(Url(LIST_WITH_ATTRIBUTES_PATH).name()));
     adopt(new AttrsMetaMethod(Url(ATTRS_PATH).name()));
     adopt(new TreeMetaMethod(Url(TREE_PATH).name()));
   }
@@ -140,7 +140,7 @@ bool Root::expose_views(const std::string &path, Value *error) {
   bool all_ok = true;
   for(size_t i = 0; i < view_list.size(); ++i) {
     view = views->adopt(new HashFileMethod(view_list[i].str().substr(0, view_list[i].str().length() - 5), File::join(path, view_list[i].str()), "view"));
-    view->attributes().set(Attribute::VIEW, HashValue(Attribute::WIDGET, "View"));
+    view->attributes().set(Oscit::VIEW, HashValue(Oscit::WIDGET, "View"));
 
     test = view->trigger(gNilValue);
     if (test.is_error()) {

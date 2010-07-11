@@ -183,7 +183,7 @@ public:
   }
 
   void test_can_receive( void ) {
-    Object object("foo", Attribute::string_io("info"));
+    Object object("foo", Oscit::string_io("info"));
     assert_false(object.can_receive(Value()));
     assert_true (object.can_receive(gNilValue));
     assert_true (object.can_receive(gBangValue));

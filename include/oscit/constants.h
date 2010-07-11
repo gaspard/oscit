@@ -33,73 +33,68 @@
 
 #include "oscit/values.h"
 
-namespace oscit {
-
-/** This namespace is used to hold attribute globals.
+/** This is a dummy class to hold attribute globals.
  */
-namespace Attribute {
+class Oscit {
+public:
   /** Root attribute key for a human readable string describing the object.
    */
-  extern const char * const INFO;
+  static const char * const INFO;
 
   /** Root attribute key for type information on the object.
    */
-  extern const char * const TYPE;
-  extern const char * const SIGNATURE;
-  extern const char * const VALUES;
-  extern const char * const NAME;
-  extern const char * const MIN;
-  extern const char * const MAX;
+  static const char * const TYPE;
+  static const char * const SIGNATURE;
+  static const char * const VALUES;
+  static const char * const NAME;
+  static const char * const MIN;
+  static const char * const MAX;
 
   /** Root attribute key for view attributes (representation of object in a view).
    */
-  extern const char * const VIEW;
-  extern const char * const WIDGET;
-  extern const char * const HUE;
-  extern const char * const POS_X;
-  extern const char * const POS_Y;
-  extern const char * const WIDTH;
-  extern const char * const HEIGHT;
+  static const char * const VIEW;
+  static const char * const WIDGET;
+  static const char * const HUE;
+  static const char * const POS_X;
+  static const char * const POS_Y;
+  static const char * const WIDTH;
+  static const char * const HEIGHT;
 
-  /** Root attribute key for object's class url.
-   */
-  extern const char * const CLASS;
+  static oscit::Value default_io() {
+    return no_io("Container.");
+  }
 
-  inline Value no_io(const char *info) {
-    return HashValue(
+  static oscit::Value no_io(const char *info) {
+    return oscit::HashValue(
       INFO, info);
       // No name, no signature
   }
 
-  inline Value default_io() {
-    return no_io("Container.");
-  }
-
-  inline Value io(const char *info, const char *name, const char *signature) {
-    return HashValue(
+  static oscit::Value io(const char *info, const char *name, const char *signature) {
+    return oscit::HashValue(
       INFO, info).set(
-      TYPE, HashValue(
+      TYPE, oscit::HashValue(
         NAME,      name).set(
         SIGNATURE, signature)
       );
   }
 
-  inline Value bang_io(const char *info) {
+  static oscit::Value bang_io(const char *info) {
     return io(info, "bang", "T");
   }
 
-  inline Value real_io(const char *info) {
+  static oscit::Value real_io(const char *info) {
     return io(info, "real", "f");
   }
 
-  inline Value string_io(const char *info) {
+  static oscit::Value string_io(const char *info) {
     return io(info, "string", "s");
   }
 
-  inline Value range_io(const char *info, Real min, Real max) {
-    return HashValue(
+  static oscit::Value range_io(const char *info, oscit::Real min, oscit::Real max) {
+    return oscit::HashValue(
       INFO, info).set(
-      TYPE, HashValue(
+      TYPE, oscit::HashValue(
         NAME,      "range").set(
         SIGNATURE, "f"    ).set(
         MIN,       min    ).set(
@@ -107,32 +102,31 @@ namespace Attribute {
       );
   }
 
-  inline Value select_io(const char *info, const char *values) {
-    return HashValue(
+  static oscit::Value select_io(const char *info, const char *values) {
+    return oscit::HashValue(
       INFO, info).set(
-      TYPE, HashValue(
+      TYPE, oscit::HashValue(
         NAME,      "select").set(
         SIGNATURE, "s"     ).set(
         VALUES,    values)
       );
   }
 
-  inline Value hash_io(const char *info) {
+  static oscit::Value hash_io(const char *info) {
     return io(info, "hash", "H");
   }
 
-  inline Value matrix_io(const char *info) {
+  static oscit::Value matrix_io(const char *info) {
     return io(info, "matrix", "M");
   }
 
-  inline Value midi_io(const char *info) {
+  static oscit::Value midi_io(const char *info) {
     return io(info, "midi", "m");
   }
 
-  inline Value any_io(const char *info) {
+  static oscit::Value any_io(const char *info) {
     return io(info, "any", "*");
   }
-} // Attribute
+};
 
-} // oscit
 #endif  // OSCIT_INCLUDE_OSCIT_CONSTANTS_H_

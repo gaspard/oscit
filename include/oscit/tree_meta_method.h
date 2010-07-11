@@ -39,8 +39,8 @@ public:
   /** Class signature. */
   TYPED("Object.TreeMetaMethod")
 
-  TreeMetaMethod(const char *name)        : Object(name, Attribute::string_io("Returns all children and sub-children under the given path")) {}
-  TreeMetaMethod(const std::string &name) : Object(name, Attribute::string_io("Returns all children and sub-children under the given path")) {}
+  TreeMetaMethod(const char *name)        : Object(name, Oscit::string_io("Returns all children and sub-children under the given path")) {}
+  TreeMetaMethod(const std::string &name) : Object(name, Oscit::string_io("Returns all children and sub-children under the given path")) {}
 
   virtual const Value trigger(const Value &val) {
     if (!val.is_string()) return gNilValue;

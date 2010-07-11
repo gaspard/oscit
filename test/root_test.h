@@ -296,8 +296,8 @@ public:
 
   void test_list_with_attributes_on_root( void ) {
     Root root;
-    root.adopt(new DummyObject("mode", "rgb", Attribute::select_io("This is a menu.", "rgb, yuv")));
-    root.adopt(new DummyObject("tint", 45.0, Attribute::range_io("This is a slider from 1 to 127.", 1, 127)));
+    root.adopt(new DummyObject("mode", "rgb", Oscit::select_io("This is a menu.", "rgb, yuv")));
+    root.adopt(new DummyObject("tint", 45.0, Oscit::range_io("This is a slider from 1 to 127.", 1, 127)));
     Value res = root.list_with_attributes();
     // .error, .info, etc are ignored (current value -- type mismatch)
     assert_equal("sHsHsHsHsHsHsHsH", res.type_tag());
@@ -357,12 +357,12 @@ public:
     assert_true(root.get_object_at(VIEWS_PATH, &views));
     Value list = views->list_with_attributes();
     assert_equal("file_a/", list[0].str());
-    assert_equal("\"view\"", list[1][Attribute::INFO].to_json());
-    assert_equal("\"View\"", list[1][Attribute::VIEW][Attribute::WIDGET].to_json());
+    assert_equal("\"view\"", list[1][Oscit::INFO].to_json());
+    assert_equal("\"View\"", list[1][Oscit::VIEW][Oscit::WIDGET].to_json());
 
     assert_equal("file_b/", list[2].str());
-    assert_equal("\"view\"", list[3][Attribute::INFO].to_json());
-    assert_equal("\"View\"", list[3][Attribute::VIEW][Attribute::WIDGET].to_json());
+    assert_equal("\"view\"", list[3][Oscit::INFO].to_json());
+    assert_equal("\"View\"", list[3][Oscit::VIEW][Oscit::WIDGET].to_json());
   }
 
   // remote objects and 'send' testing is done in command_test.h

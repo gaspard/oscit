@@ -260,8 +260,8 @@ namespace CxxTest
 
         void getWindowSize()
         {
-            XWindowAttributes attributes;
-            XGetWindowAttributes( _display, _window, &attributes );
+            XWindowOscits attributes;
+            XGetWindowOscits( _display, _window, &attributes );
             _width = attributes.width;
             _height = attributes.height;
         }

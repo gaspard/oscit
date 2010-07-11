@@ -295,7 +295,7 @@ public:
   }
 
   void test_can_receive( void ) {
-    Object object("foo", Attribute::hash_io("bar"));
+    Object object("foo", Oscit::hash_io("bar"));
     assert_false(object.can_receive(Value()));
     assert_true (object.can_receive(gNilValue));
     assert_true (object.can_receive(gBangValue));

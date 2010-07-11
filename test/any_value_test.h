@@ -106,8 +106,8 @@ public:
   }
 
   void test_any_input( void ) {
-    Value any(Attribute::any_io("La la."));
-    assert_equal("*", any[Attribute::TYPE][Attribute::SIGNATURE].str());
+    Value any(Oscit::any_io("La la."));
+    assert_equal("*", any[Oscit::TYPE][Oscit::SIGNATURE].str());
   }
 
   void test_json_value( void ) {
