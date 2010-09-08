@@ -85,7 +85,7 @@ public:
     Value res = script.file(Value(new_file));
     assert_true(res.is_error());
     assert_equal(BAD_REQUEST_ERROR, res.error_code());
-    assert_equal(std::string("Could not stat '").append(new_file).append("'."), res.error_message());
+    assert_equal(std::string("Could not find '").append(new_file).append("'."), res.error_message());
     assert_false(script.script_ok());
     res = script.script(gNilValue);
     assert_true(res.is_string());
@@ -110,7 +110,7 @@ public:
     Value res = script.file(Value(not_found));
     assert_true(res.is_error());
     assert_equal(BAD_REQUEST_ERROR, res.error_code());
-    assert_equal(std::string("Could not stat '").append(not_found).append("'."), res.error_message());
+    assert_equal(std::string("Could not find '").append(not_found).append("'."), res.error_message());
     assert_false(script.script_ok());
     res = script.file(gNilValue);
     assert_true(res.is_string());

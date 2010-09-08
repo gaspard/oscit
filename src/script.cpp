@@ -108,7 +108,7 @@ const Value Script::load_script_from_file(bool is_new) {
     set_script_ok(false);
     script_mod_time_ = 0;
     set_next_reload();
-    last_error_ = Value(BAD_REQUEST_ERROR, std::string("Could not stat '").append(script_file_).append("'."));
+    last_error_ = Value(BAD_REQUEST_ERROR, std::string("Could not find '").append(script_file_).append("'."));
     return last_error_;
   }
 
@@ -154,7 +154,7 @@ const Value Script::save_script() {
 
   if (stat(script_file_.c_str(), &info)) {
     set_script_ok(false);
-    return Value(BAD_REQUEST_ERROR, std::string("Could not stat '").append(script_file_).append("'."));
+    return Value(BAD_REQUEST_ERROR, std::string("Could not find '").append(script_file_).append("'."));
   }
 
   script_mod_time_ = info.st_mtime;

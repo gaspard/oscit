@@ -46,13 +46,6 @@ typedef unsigned int uint;
 
 #define MIDI_NOTE_C0 24
 
-
-
-
-
-
-
-
 /** Midi messages types. */
 enum MidiMessageType {   /*   event name        data1               data2              */
   NoteOff        = 0x80, /**< Note Off        | note number       | velocity           */
@@ -173,6 +166,16 @@ class MidiMessage : public ReferenceCounted {
   inline void set_note(int note) {
     set_key(note);
   }
+
+  /** Set the time to wait in [ms] before the
+   * event is sent out.
+   * This is a hack until we either use timestamps or
+   * we create a good sequencer in Lua.
+   */
+  inline void set_wait(time_t s) {
+    wait_ = s;
+  }
+
 
   inline void set_ctrl(int ctrl) {
     set_key(ctrl);
@@ -390,11 +393,11 @@ class MidiMessage : public ReferenceCounted {
 
   /** Number of milliseconds (?) to wait before sending the midi event out.
    */
-  time_t          wait_;
+  time_t wait_;
 
   /** Duration of note in milliseconds.
    */
-  time_t        length_;
+  time_t length_;
 
   /** Raw midi message as a vector of unsigned char (compatible with RtMidi).
    */

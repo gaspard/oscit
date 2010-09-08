@@ -10,7 +10,7 @@ using namespace oscit;
 
 
 /** oscit::MidiMessage::MidiMessage()
- * include/oscit/midi_message.h:76
+ * include/oscit/midi_message.h:69
  */
 static int MidiMessage_MidiMessage1(lua_State *L) {
   try {
@@ -34,7 +34,7 @@ static int MidiMessage_MidiMessage1(lua_State *L) {
 
 
 /** oscit::MidiMessage::MidiMessage(unsigned int data_size)
- * include/oscit/midi_message.h:80
+ * include/oscit/midi_message.h:73
  */
 static int MidiMessage_MidiMessage2(lua_State *L) {
   try {
@@ -59,7 +59,7 @@ static int MidiMessage_MidiMessage2(lua_State *L) {
 
 
 /** oscit::MidiMessage::MidiMessage(const Value &message, time_t wait=0)
- * include/oscit/midi_message.h:82
+ * include/oscit/midi_message.h:75
  */
 static int MidiMessage_MidiMessage3(lua_State *L) {
   try {
@@ -91,7 +91,7 @@ static int MidiMessage_MidiMessage3(lua_State *L) {
 
 
 /** oscit::MidiMessage::MidiMessage(char data1, char data2, char data3, float length=0)
- * include/oscit/midi_message.h:84
+ * include/oscit/midi_message.h:77
  */
 static int MidiMessage_MidiMessage4(lua_State *L) {
   try {
@@ -129,23 +129,23 @@ static int MidiMessage_MidiMessage4(lua_State *L) {
 static int MidiMessage_MidiMessage(lua_State *L) {
   int type__ = lua_type(L, 1);
   int top__  = lua_gettop(L);
-  if (type__ == LUA_TUSERDATA && is_userdata(L, 1, "oscit.Value")) {
+  if (type__ == LUA_TNUMBER) {
+    type__ = lua_type(L, 2);
+    if (type__ == LUA_TNUMBER) {
+      return MidiMessage_MidiMessage4(L);
+    } else if (top__ < 2) {
+      return MidiMessage_MidiMessage2(L);
+    } else {
+      // use any to raise errors
+      return MidiMessage_MidiMessage2(L);
+    }
+  } else if (type__ == LUA_TUSERDATA && is_userdata(L, 1, "oscit.Value")) {
     return MidiMessage_MidiMessage3(L);
   } else if (top__ < 1) {
     return MidiMessage_MidiMessage1(L);
-  } else if (type__ == LUA_TNUMBER) {
-    type__ = lua_type(L, 2);
-    if (top__ < 2) {
-      return MidiMessage_MidiMessage2(L);
-    } else if (type__ == LUA_TNUMBER) {
-      return MidiMessage_MidiMessage4(L);
-    } else {
-      // use any to raise errors
-      return MidiMessage_MidiMessage4(L);
-    }
   } else {
     // use any to raise errors
-    return MidiMessage_MidiMessage4(L);
+    return MidiMessage_MidiMessage1(L);
   }
 }
 
@@ -172,7 +172,7 @@ static int MidiMessage__tostring(lua_State *L) {
 
 
 /** static MidiMessage* oscit::MidiMessage::Note(int note, int velocity=80, int length=500, int channel=1, time_t wait=0)
- * include/oscit/midi_message.h:120
+ * include/oscit/midi_message.h:113
  */
 static int MidiMessage_Note(lua_State *L) {
   try {
@@ -219,7 +219,7 @@ static int MidiMessage_Note(lua_State *L) {
 
 
 /** unsigned int oscit::MidiMessage::channel() const 
- * include/oscit/midi_message.h:234
+ * include/oscit/midi_message.h:237
  */
 static int MidiMessage_channel(lua_State *L) {
   try {
@@ -245,7 +245,7 @@ static int MidiMessage_channel(lua_State *L) {
 
 
 /** unsigned int oscit::MidiMessage::ctrl() const 
- * include/oscit/midi_message.h:230
+ * include/oscit/midi_message.h:233
  */
 static int MidiMessage_ctrl(lua_State *L) {
   try {
@@ -271,7 +271,7 @@ static int MidiMessage_ctrl(lua_State *L) {
 
 
 /** time_t oscit::MidiMessage::length() const 
- * include/oscit/midi_message.h:245
+ * include/oscit/midi_message.h:248
  */
 static int MidiMessage_length(lua_State *L) {
   try {
@@ -297,7 +297,7 @@ static int MidiMessage_length(lua_State *L) {
 
 
 /** unsigned int oscit::MidiMessage::note() const 
- * include/oscit/midi_message.h:228
+ * include/oscit/midi_message.h:231
  */
 static int MidiMessage_note(lua_State *L) {
   try {
@@ -323,7 +323,7 @@ static int MidiMessage_note(lua_State *L) {
 
 
 /** void oscit::MidiMessage::note_on_to_off()
- * include/oscit/midi_message.h:157
+ * include/oscit/midi_message.h:150
  */
 static int MidiMessage_note_on_to_off(lua_State *L) {
   try {
@@ -348,7 +348,7 @@ static int MidiMessage_note_on_to_off(lua_State *L) {
 
 
 /** void oscit::MidiMessage::set_as_ctrl(int ctrl, int ctrl_value, unsigned int channel=1, time_t wait=0)
- * include/oscit/midi_message.h:149
+ * include/oscit/midi_message.h:142
  */
 static int MidiMessage_set_as_ctrl(lua_State *L) {
   try {
@@ -386,7 +386,7 @@ static int MidiMessage_set_as_ctrl(lua_State *L) {
 
 
 /** void oscit::MidiMessage::set_as_note(int note, int velocity=80, int length=500, int channel=1, time_t wait=0)
- * include/oscit/midi_message.h:135
+ * include/oscit/midi_message.h:128
  */
 static int MidiMessage_set_as_note(lua_State *L) {
   try {
@@ -433,7 +433,7 @@ static int MidiMessage_set_as_note(lua_State *L) {
 
 
 /** void oscit::MidiMessage::set_channel(int channel)
- * include/oscit/midi_message.h:191
+ * include/oscit/midi_message.h:194
  */
 static int MidiMessage_set_channel(lua_State *L) {
   try {
@@ -459,7 +459,7 @@ static int MidiMessage_set_channel(lua_State *L) {
 
 
 /** void oscit::MidiMessage::set_ctrl(int ctrl)
- * include/oscit/midi_message.h:177
+ * include/oscit/midi_message.h:180
  */
 static int MidiMessage_set_ctrl(lua_State *L) {
   try {
@@ -485,7 +485,7 @@ static int MidiMessage_set_ctrl(lua_State *L) {
 
 
 /** void oscit::MidiMessage::set_key(int note)
- * include/oscit/midi_message.h:181
+ * include/oscit/midi_message.h:184
  */
 static int MidiMessage_set_key(lua_State *L) {
   try {
@@ -511,7 +511,7 @@ static int MidiMessage_set_key(lua_State *L) {
 
 
 /** void oscit::MidiMessage::set_length(int length)
- * include/oscit/midi_message.h:208
+ * include/oscit/midi_message.h:211
  */
 static int MidiMessage_set_length(lua_State *L) {
   try {
@@ -537,7 +537,7 @@ static int MidiMessage_set_length(lua_State *L) {
 
 
 /** void oscit::MidiMessage::set_note(int note)
- * include/oscit/midi_message.h:173
+ * include/oscit/midi_message.h:166
  */
 static int MidiMessage_set_note(lua_State *L) {
   try {
@@ -563,7 +563,7 @@ static int MidiMessage_set_note(lua_State *L) {
 
 
 /** void oscit::MidiMessage::set_type(MidiMessageType type)
- * include/oscit/midi_message.h:164
+ * include/oscit/midi_message.h:157
  */
 static int MidiMessage_set_type(lua_State *L) {
   try {
@@ -589,7 +589,7 @@ static int MidiMessage_set_type(lua_State *L) {
 
 
 /** void oscit::MidiMessage::set_value(int value)
- * include/oscit/midi_message.h:216
+ * include/oscit/midi_message.h:219
  */
 static int MidiMessage_set_value(lua_State *L) {
   try {
@@ -615,7 +615,7 @@ static int MidiMessage_set_value(lua_State *L) {
 
 
 /** void oscit::MidiMessage::set_velocity(int velocity)
- * include/oscit/midi_message.h:204
+ * include/oscit/midi_message.h:207
  */
 static int MidiMessage_set_velocity(lua_State *L) {
   try {
@@ -640,8 +640,34 @@ static int MidiMessage_set_velocity(lua_State *L) {
 }
 
 
+/** void oscit::MidiMessage::set_wait(time_t s)
+ * include/oscit/midi_message.h:175
+ */
+static int MidiMessage_set_wait(lua_State *L) {
+  try {
+    MidiMessage *self__ = *((MidiMessage**)luaL_checkudata(L, 1, "oscit.MidiMessage"));
+    lua_remove(L, 1);
+    time_t s = luaL_checknumber(L, 1);
+    self__->set_wait(s);
+    return 0;
+  } catch (std::exception &e) {
+    std::string *s = new std::string("oscit.MidiMessage.set_wait: ");
+    s->append(e.what());
+    lua_pushstring(L, s->c_str());
+    delete s;
+    lua_error(L);
+    // never reached
+    return 0;
+  } catch (...) {
+    lua_pushstring(L, "oscit.MidiMessage.set_wait: Unknown exception");
+    lua_error(L);
+    return 0;
+  }
+}
+
+
 /** std::string oscit::MidiMessage::to_json() const 
- * include/oscit/midi_message.h:356
+ * include/oscit/midi_message.h:359
  */
 static int MidiMessage_to_json(lua_State *L) {
   try {
@@ -667,7 +693,7 @@ static int MidiMessage_to_json(lua_State *L) {
 
 
 /** std::string oscit::MidiMessage::to_s() const 
- * include/oscit/midi_message.h:350
+ * include/oscit/midi_message.h:353
  */
 static int MidiMessage_to_s(lua_State *L) {
   try {
@@ -693,7 +719,7 @@ static int MidiMessage_to_s(lua_State *L) {
 
 
 /** int oscit::MidiMessage::type() const 
- * include/oscit/midi_message.h:226
+ * include/oscit/midi_message.h:229
  */
 static int MidiMessage_type(lua_State *L) {
   try {
@@ -719,7 +745,7 @@ static int MidiMessage_type(lua_State *L) {
 
 
 /** bool oscit::MidiMessage::unpack(const Value &message, time_t wait=0)
- * include/oscit/midi_message.h:98
+ * include/oscit/midi_message.h:91
  */
 static int MidiMessage_unpack(lua_State *L) {
   try {
@@ -753,7 +779,7 @@ static int MidiMessage_unpack(lua_State *L) {
 
 
 /** unsigned int oscit::MidiMessage::value() const 
- * include/oscit/midi_message.h:232
+ * include/oscit/midi_message.h:235
  */
 static int MidiMessage_value(lua_State *L) {
   try {
@@ -779,7 +805,7 @@ static int MidiMessage_value(lua_State *L) {
 
 
 /** unsigned int oscit::MidiMessage::velocity() const 
- * include/oscit/midi_message.h:243
+ * include/oscit/midi_message.h:246
  */
 static int MidiMessage_velocity(lua_State *L) {
   try {
@@ -805,7 +831,7 @@ static int MidiMessage_velocity(lua_State *L) {
 
 
 /** time_t oscit::MidiMessage::wait() const 
- * include/oscit/midi_message.h:247
+ * include/oscit/midi_message.h:250
  */
 static int MidiMessage_wait(lua_State *L) {
   try {
@@ -850,6 +876,7 @@ static const struct luaL_Reg MidiMessage_member_methods[] = {
   {"set_type"          , MidiMessage_set_type},
   {"set_value"         , MidiMessage_set_value},
   {"set_velocity"      , MidiMessage_set_velocity},
+  {"set_wait"          , MidiMessage_set_wait},
   {"to_json"           , MidiMessage_to_json},
   {"to_s"              , MidiMessage_to_s},
   {"type"              , MidiMessage_type},
@@ -888,5 +915,6 @@ extern "C" int luaopen_oscit_MidiMessage(lua_State *L) {
   // register class methods in a global namespace table
   luaL_register(L, "oscit", MidiMessage_namespace_methods);
 
-  return 1;
+
+	return 1;
 }

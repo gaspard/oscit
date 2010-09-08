@@ -47,6 +47,11 @@ TimeRef::~TimeRef() {
  */
 time_t TimeRef::elapsed() {
   TimeRefData t;
+  /* FIXME: Use clock_gettime instead of ftime.
+
+  int clock_gettime(clockid_t clock_id, struct timespec *tp);
+  int clock_getres(clockid_t clock_id, struct timespec *res);
+  */
   ftime(&t);
   return ((t.time - reference_->time) * 1000) + t.millitm - reference_->millitm;
 }

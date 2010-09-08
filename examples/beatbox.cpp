@@ -17,7 +17,7 @@ class ValueDisplay : public Object
 {
 public:
   ValueDisplay(const char *name, Real current_value, uint *sleepy)
-      : Object(name, RangeIO(0, 512, "Current value.")),
+      : Object(name, Oscit::range_io("Current value", 0, 512)),
         value_(current_value),
         sleepy_(sleepy) {}
 
