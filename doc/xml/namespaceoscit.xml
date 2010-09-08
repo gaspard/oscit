@@ -11,7 +11,6 @@
     <innerclass refid="classoscit_1_1_c_t_vector" prot="public">oscit::CTVector</innerclass>
     <innerclass refid="structoscit_1_1_call" prot="public">oscit::Call</innerclass>
     <innerclass refid="classoscit_1_1_command" prot="public">oscit::Command</innerclass>
-    <innerclass refid="classoscit_1_1_attribute" prot="public">oscit::Attribute</innerclass>
     <innerclass refid="classoscit_1_1_error" prot="public">oscit::Error</innerclass>
     <innerclass refid="classoscit_1_1_error_meta_method" prot="public">oscit::ErrorMetaMethod</innerclass>
     <innerclass refid="classoscit_1_1_error_value" prot="public">oscit::ErrorValue</innerclass>
@@ -24,7 +23,7 @@
     <innerclass refid="classoscit_1_1_list" prot="public">oscit::List</innerclass>
     <innerclass refid="classoscit_1_1_list_meta_method" prot="public">oscit::ListMetaMethod</innerclass>
     <innerclass refid="classoscit_1_1_list_value" prot="public">oscit::ListValue</innerclass>
-    <innerclass refid="classoscit_1_1_list_with_attributes_meta_method" prot="public">oscit::ListWithAttributesMetaMethod</innerclass>
+    <innerclass refid="classoscit_1_1_list_with_oscits_meta_method" prot="public">oscit::ListWithOscitsMetaMethod</innerclass>
     <innerclass refid="classoscit_1_1_location" prot="public">oscit::Location</innerclass>
     <innerclass refid="classoscit_1_1_log_object" prot="public">oscit::LogObject</innerclass>
     <innerclass refid="classoscit_1_1_mapper" prot="public">oscit::Mapper</innerclass>
@@ -225,7 +224,7 @@
 <para>Midi messages types. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="57" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="57" bodyend="71"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="50" bodyfile="/Users/gaspard/git/oscit/include/oscit/midi_message.h" bodystart="50" bodyend="64"/>
       </memberdef>
       <memberdef kind="enum" id="namespaceoscit_1a9f19df528648365fd3c442d588100386" prot="public" static="no">
         <name>ValueType</name>
@@ -776,7 +775,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="405"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/midi_message.h" line="408"/>
       </memberdef>
       <memberdef kind="function" id="namespaceoscit_1a828ad561caac5ac7683ee465b381c0a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -992,7 +991,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/value.h" line="1206"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/value.h" line="1211"/>
       </memberdef>
       <memberdef kind="function" id="namespaceoscit_1af231706a930d098723c3f18e8e1ac6be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::ostream &amp;</type>
@@ -1013,7 +1012,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/value.h" line="1207"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/value.h" line="1212"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

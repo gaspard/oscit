@@ -10,26 +10,26 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="459">
+      <node id="457">
         <label>list</label>
         <link refid="classstd_1_1list"/>
       </node>
-      <node id="462">
+      <node id="460">
         <label>CTList&lt; SignalCallback * &gt;</label>
         <link refid="classoscit_1_1_c_t_list"/>
-        <childnode refid="459" relation="public-inheritance">
+        <childnode refid="457" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="460">
+      <node id="458">
         <label>CTList&lt; Command * &gt;</label>
         <link refid="classoscit_1_1_c_t_list"/>
-        <childnode refid="459" relation="public-inheritance">
+        <childnode refid="457" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="461">
+      <node id="459">
         <label>CTList&lt; Signal * &gt;</label>
         <link refid="classoscit_1_1_c_t_list"/>
-        <childnode refid="459" relation="public-inheritance">
+        <childnode refid="457" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

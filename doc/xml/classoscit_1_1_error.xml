@@ -255,6 +255,18 @@
     <detaileddescription>
 <para>A <ref refid="classoscit_1_1_error" kindref="compound">Error</ref> stores an error description with an error code. </para>    </detaileddescription>
     <inheritancegraph>
+      <node id="216">
+        <label>oscit::Error</label>
+        <link refid="classoscit_1_1_error"/>
+        <childnode refid="217" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="217">
+        <label>oscit::ReferenceCounted</label>
+        <link refid="classoscit_1_1_reference_counted"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
       <node id="218">
         <label>oscit::Error</label>
         <link refid="classoscit_1_1_error"/>
@@ -262,18 +274,6 @@
         </childnode>
       </node>
       <node id="219">
-        <label>oscit::ReferenceCounted</label>
-        <link refid="classoscit_1_1_reference_counted"/>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="220">
-        <label>oscit::Error</label>
-        <link refid="classoscit_1_1_error"/>
-        <childnode refid="221" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="221">
         <label>oscit::ReferenceCounted</label>
         <link refid="classoscit_1_1_reference_counted"/>
       </node>

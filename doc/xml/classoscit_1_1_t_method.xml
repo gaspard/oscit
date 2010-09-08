@@ -377,6 +377,7 @@
       <member refid="classoscit_1_1_object_1ab78f03c55f5d44947e1d2797db397220" prot="protected" virt="non-virtual"><scope>oscit::TMethod</scope><name>attributes_</name></member>
       <member refid="classoscit_1_1_object_1ac6cd5597ebadb10f34edbeacd80e9fc0" prot="public" virt="virtual"><scope>oscit::TMethod</scope><name>build_child</name></member>
       <member refid="classoscit_1_1_object_1ad624d0994776be24718f18563ad02050" prot="public" virt="non-virtual"><scope>oscit::TMethod</scope><name>can_receive</name></member>
+      <member refid="classoscit_1_1_object_1a3bbf892a2c76d6c705d58ef2a026270e" prot="public" virt="non-virtual"><scope>oscit::TMethod</scope><name>can_receive</name></member>
       <member refid="classoscit_1_1_method_1a7c60e1391831b9442eb000cd97e04ce4" prot="public" virt="non-virtual"><scope>oscit::TMethod</scope><name>cast_method</name></member>
       <member refid="classoscit_1_1_method_1a7c60e1391831b9442eb000cd97e04ce4" prot="public" virt="non-virtual"><scope>oscit::TMethod</scope><name>cast_method</name></member>
       <member refid="classoscit_1_1_method_1a7c60e1391831b9442eb000cd97e04ce4" prot="public" virt="non-virtual"><scope>oscit::TMethod</scope><name>cast_method</name></member>

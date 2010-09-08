@@ -20,7 +20,24 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/gaspard/git/oscit/include/oscit/value.h" line="1203" bodyfile="/Users/gaspard/git/oscit/include/oscit/value.h" bodystart="1203" bodyend="1203"/>
+        <location file="/Users/gaspard/git/oscit/include/oscit/value.h" line="1207" bodyfile="/Users/gaspard/git/oscit/include/oscit/value.h" bodystart="1207" bodyend="1207"/>
+      </memberdef>
+      <memberdef kind="function" id="classoscit_1_1_json_value_1acf374b46ac68f37e21f25856d5392464" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>oscit::JsonValue::JsonValue</definition>
+        <argsstring>(const std::string &amp;json)</argsstring>
+        <name>JsonValue</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>json</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/gaspard/git/oscit/include/oscit/value.h" line="1208" bodyfile="/Users/gaspard/git/oscit/include/oscit/value.h" bodystart="1208" bodyend="1208"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -28,9 +45,90 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
+      <node id="441">
+        <label>oscit::Value</label>
+        <link refid="classoscit_1_1_value"/>
+      </node>
+      <node id="440">
+        <label>oscit::JsonValue</label>
+        <link refid="classoscit_1_1_json_value"/>
+        <childnode refid="441" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="446">
+        <label>oscit::Matrix</label>
+        <link refid="classoscit_1_1_matrix"/>
+      </node>
+      <node id="449">
+        <label>oscit::List</label>
+        <link refid="classoscit_1_1_list"/>
+        <childnode refid="445" relation="public-inheritance">
+        </childnode>
+      </node>
       <node id="443">
         <label>oscit::Value</label>
         <link refid="classoscit_1_1_value"/>
+        <childnode refid="444" relation="usage">
+          <edgelabel>midi_message_</edgelabel>
+        </childnode>
+        <childnode refid="446" relation="usage">
+          <edgelabel>matrix_</edgelabel>
+        </childnode>
+        <childnode refid="447" relation="usage">
+          <edgelabel>string_</edgelabel>
+        </childnode>
+        <childnode refid="448" relation="usage">
+          <edgelabel>error_</edgelabel>
+        </childnode>
+        <childnode refid="449" relation="usage">
+          <edgelabel>list_</edgelabel>
+        </childnode>
+        <childnode refid="450" relation="usage">
+          <edgelabel>hash_</edgelabel>
+        </childnode>
+      </node>
+      <node id="444">
+        <label>oscit::MidiMessage</label>
+        <link refid="classoscit_1_1_midi_message"/>
+        <childnode refid="445" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="452">
+        <label>oscit::THashElement&lt; std::string, Value &gt;</label>
+        <link refid="structoscit_1_1_t_hash_element"/>
+        <childnode refid="452" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="443" relation="usage">
+          <edgelabel>obj</edgelabel>
+        </childnode>
+      </node>
+      <node id="448">
+        <label>oscit::Error</label>
+        <link refid="classoscit_1_1_error"/>
+        <childnode refid="445" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="451">
+        <label>oscit::THash&lt; std::string, Value &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+        <childnode refid="452" relation="usage">
+          <edgelabel>thash_table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="450">
+        <label>oscit::Hash</label>
+        <link refid="classoscit_1_1_hash"/>
+        <childnode refid="445" relation="public-inheritance">
+        </childnode>
+        <childnode refid="451" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="445">
+        <label>oscit::ReferenceCounted</label>
+        <link refid="classoscit_1_1_reference_counted"/>
       </node>
       <node id="442">
         <label>oscit::JsonValue</label>
@@ -38,95 +136,14 @@
         <childnode refid="443" relation="public-inheritance">
         </childnode>
       </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="448">
-        <label>oscit::Matrix</label>
-        <link refid="classoscit_1_1_matrix"/>
-      </node>
-      <node id="451">
-        <label>oscit::List</label>
-        <link refid="classoscit_1_1_list"/>
-        <childnode refid="447" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="445">
-        <label>oscit::Value</label>
-        <link refid="classoscit_1_1_value"/>
-        <childnode refid="446" relation="usage">
-          <edgelabel>midi_message_</edgelabel>
-        </childnode>
-        <childnode refid="448" relation="usage">
-          <edgelabel>matrix_</edgelabel>
-        </childnode>
-        <childnode refid="449" relation="usage">
-          <edgelabel>string_</edgelabel>
-        </childnode>
-        <childnode refid="450" relation="usage">
-          <edgelabel>error_</edgelabel>
-        </childnode>
-        <childnode refid="451" relation="usage">
-          <edgelabel>list_</edgelabel>
-        </childnode>
-        <childnode refid="452" relation="usage">
-          <edgelabel>hash_</edgelabel>
-        </childnode>
-      </node>
-      <node id="446">
-        <label>oscit::MidiMessage</label>
-        <link refid="classoscit_1_1_midi_message"/>
-        <childnode refid="447" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="454">
-        <label>oscit::THashElement&lt; std::string, Value &gt;</label>
-        <link refid="structoscit_1_1_t_hash_element"/>
-        <childnode refid="454" relation="usage">
-          <edgelabel>next</edgelabel>
-        </childnode>
-        <childnode refid="445" relation="usage">
-          <edgelabel>obj</edgelabel>
-        </childnode>
-      </node>
-      <node id="450">
-        <label>oscit::Error</label>
-        <link refid="classoscit_1_1_error"/>
-        <childnode refid="447" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="453">
-        <label>oscit::THash&lt; std::string, Value &gt;</label>
-        <link refid="classoscit_1_1_t_hash"/>
-        <childnode refid="454" relation="usage">
-          <edgelabel>thash_table_</edgelabel>
-        </childnode>
-      </node>
-      <node id="452">
-        <label>oscit::Hash</label>
-        <link refid="classoscit_1_1_hash"/>
-        <childnode refid="447" relation="public-inheritance">
-        </childnode>
-        <childnode refid="453" relation="public-inheritance">
-        </childnode>
-      </node>
       <node id="447">
-        <label>oscit::ReferenceCounted</label>
-        <link refid="classoscit_1_1_reference_counted"/>
-      </node>
-      <node id="444">
-        <label>oscit::JsonValue</label>
-        <link refid="classoscit_1_1_json_value"/>
+        <label>oscit::StringData</label>
+        <link refid="classoscit_1_1_string_data"/>
         <childnode refid="445" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="449">
-        <label>oscit::StringData</label>
-        <link refid="classoscit_1_1_string_data"/>
-        <childnode refid="447" relation="public-inheritance">
-        </childnode>
-      </node>
     </collaborationgraph>
-    <location file="/Users/gaspard/git/oscit/include/oscit/value.h" line="1201" bodyfile="/Users/gaspard/git/oscit/include/oscit/value.h" bodystart="1200" bodyend="1204"/>
+    <location file="/Users/gaspard/git/oscit/include/oscit/value.h" line="1205" bodyfile="/Users/gaspard/git/oscit/include/oscit/value.h" bodystart="1204" bodyend="1209"/>
     <listofallmembers>
       <member refid="classoscit_1_1_value_1a94154ca6958af85d1993062f4002fbe4" prot="public" virt="non-virtual"><scope>oscit::JsonValue</scope><name>adopt</name></member>
       <member refid="classoscit_1_1_value_1a0e4a89cb5f8a0155f6a1fbd760a8346f" prot="public" virt="non-virtual"><scope>oscit::JsonValue</scope><name>append</name></member>
@@ -161,12 +178,14 @@
       <member refid="classoscit_1_1_value_1acfadbbde8817b8754b75ad7c3dab8350" prot="public" virt="non-virtual"><scope>oscit::JsonValue</scope><name>is_matrix</name></member>
       <member refid="classoscit_1_1_value_1af43dcc9c60d1cc7350a229a9ed7a2a1d" prot="public" virt="non-virtual"><scope>oscit::JsonValue</scope><name>is_midi</name></member>
       <member refid="classoscit_1_1_value_1a2910a16109968d5ec1e8554073d2e6ef" prot="public" virt="non-virtual"><scope>oscit::JsonValue</scope><name>is_nil</name></member>
+      <member refid="classoscit_1_1_value_1a05863d7d6ada9bd14416434efbba3cbd" prot="public" virt="non-virtual"><scope>oscit::JsonValue</scope><name>is_nil_or_bang</name></member>
       <member refid="classoscit_1_1_value_1a2ecb230a2c852cfbaa3be4578fd83768" prot="public" virt="non-virtual"><scope>oscit::JsonValue</scope><name>is_real</name></member>
       <member refid="classoscit_1_1_value_1a6e52b09be3be2ccb2114bd80f3d35b9a" prot="public" virt="non-virtual"><scope>oscit::JsonValue</scope><name>is_string</name></member>
       <member refid="classoscit_1_1_value_1af7bb9ff018a4814963a5bfc7ca632bf9" prot="public" virt="non-virtual"><scope>oscit::JsonValue</scope><name>is_true</name></member>
       <member refid="classoscit_1_1_value_1af8f456d979c8b7bf05ebc006c60872c8" prot="public" virt="non-virtual"><scope>oscit::JsonValue</scope><name>join</name></member>
       <member refid="classoscit_1_1_value_1a67da80b90745754fc579469d111e96e9" prot="public" virt="non-virtual"><scope>oscit::JsonValue</scope><name>join</name></member>
       <member refid="classoscit_1_1_json_value_1a6f12cc538529c66ffbdf3a8a47fb83dc" prot="public" virt="non-virtual"><scope>oscit::JsonValue</scope><name>JsonValue</name></member>
+      <member refid="classoscit_1_1_json_value_1acf374b46ac68f37e21f25856d5392464" prot="public" virt="non-virtual"><scope>oscit::JsonValue</scope><name>JsonValue</name></member>
       <member refid="classoscit_1_1_value_1aeec9663152b7d4f554cccf6871ede08a" prot="public" virt="non-virtual"><scope>oscit::JsonValue</scope><name>last</name></member>
       <member refid="classoscit_1_1_value_1a55e268056f33bc50174934446bee0f04" prot="public" virt="non-virtual"><scope>oscit::JsonValue</scope><name>lazy_json</name></member>
       <member refid="classoscit_1_1_value_1a88731fb79a70d2761809fc7daf110928" prot="public" virt="non-virtual"><scope>oscit::JsonValue</scope><name>list_</name></member>
@@ -194,7 +213,7 @@
       <member refid="classoscit_1_1_value_1a37f12fb892a43f1597e0e63f29a2a796" prot="public" virt="non-virtual"><scope>oscit::JsonValue</scope><name>push_front</name></member>
       <member refid="classoscit_1_1_value_1a32817b564b91700888d7b5975a195a53" prot="public" virt="non-virtual"><scope>oscit::JsonValue</scope><name>r</name></member>
       <member refid="classoscit_1_1_value_1a8675f9c023a72ce44d27c1ad52c65811" prot="public" virt="non-virtual"><scope>oscit::JsonValue</scope><name>remove</name></member>
-      <member refid="classoscit_1_1_value_1a19693ba439a3007a9508ff756b16b9f4" prot="public" virt="non-virtual"><scope>oscit::JsonValue</scope><name>remove</name></member>
+      <member refid="classoscit_1_1_value_1a4c2070e84eebaaa855985a064aaf195f" prot="public" virt="non-virtual"><scope>oscit::JsonValue</scope><name>remove</name></member>
       <member refid="classoscit_1_1_value_1a987981f06ba8310d0e646a91a3f75f95" prot="public" virt="non-virtual"><scope>oscit::JsonValue</scope><name>set</name></member>
       <member refid="classoscit_1_1_value_1a5adff5a7390282249c0082dacdaaf708" prot="public" virt="non-virtual"><scope>oscit::JsonValue</scope><name>set</name></member>
       <member refid="classoscit_1_1_value_1a9a5fdfa0c73b8b4e1b43556ab007b637" prot="public" virt="non-virtual"><scope>oscit::JsonValue</scope><name>set</name></member>

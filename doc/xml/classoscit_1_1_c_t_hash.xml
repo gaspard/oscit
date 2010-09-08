@@ -85,37 +85,37 @@
 <codeline><highlight class="normal"><sp/>target-&gt;release();</highlight></codeline>
 </programlisting> K is the key class, T is the object class </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="205">
+      <node id="203">
         <label>oscit::THash&lt; K, T &gt;</label>
         <link refid="classoscit_1_1_t_hash"/>
       </node>
-      <node id="204">
+      <node id="202">
         <label>oscit::CTHash&lt; K, T &gt;</label>
         <link refid="classoscit_1_1_c_t_hash"/>
-        <childnode refid="205" relation="public-inheritance">
+        <childnode refid="203" relation="public-inheritance">
         </childnode>
-        <childnode refid="206" relation="public-inheritance">
+        <childnode refid="204" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="206">
+      <node id="204">
         <label>oscit::RWMutex</label>
         <link refid="classoscit_1_1_r_w_mutex"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="208">
+      <node id="206">
         <label>oscit::THash&lt; K, T &gt;</label>
         <link refid="classoscit_1_1_t_hash"/>
       </node>
-      <node id="207">
+      <node id="205">
         <label>oscit::CTHash&lt; K, T &gt;</label>
         <link refid="classoscit_1_1_c_t_hash"/>
-        <childnode refid="208" relation="public-inheritance">
+        <childnode refid="206" relation="public-inheritance">
         </childnode>
-        <childnode refid="209" relation="public-inheritance">
+        <childnode refid="207" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="209">
+      <node id="207">
         <label>oscit::RWMutex</label>
         <link refid="classoscit_1_1_r_w_mutex"/>
       </node>

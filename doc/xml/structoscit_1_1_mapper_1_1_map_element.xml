@@ -71,6 +71,17 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
+      <node id="592">
+        <label>oscit::ScaleReal</label>
+        <link refid="classoscit_1_1_scale_real"/>
+      </node>
+      <node id="591">
+        <label>oscit::Mapper::MapElement</label>
+        <childnode refid="592" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
       <node id="594">
         <label>oscit::ScaleReal</label>
         <link refid="classoscit_1_1_scale_real"/>
@@ -78,17 +89,6 @@
       <node id="593">
         <label>oscit::Mapper::MapElement</label>
         <childnode refid="594" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="596">
-        <label>oscit::ScaleReal</label>
-        <link refid="classoscit_1_1_scale_real"/>
-      </node>
-      <node id="595">
-        <label>oscit::Mapper::MapElement</label>
-        <childnode refid="596" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

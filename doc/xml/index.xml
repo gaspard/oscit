@@ -9,35 +9,6 @@
     <member refid="classoscit_1_1_alias_1a7a31c7a76998bb0ffcdb266654b1e9d7" kind="function"><name>set_original</name></member>
     <member refid="classoscit_1_1_alias_1a0c723a39f7acc3b32f81fb0ecbbd5cef" kind="function"><name>original_deleted</name></member>
   </compound>
-  <compound refid="classoscit_1_1_attribute" kind="class"><name>oscit::Attribute</name>
-    <member refid="classoscit_1_1_attribute_1a902954a79de543deea411cfe48631a7a" kind="variable"><name>INFO</name></member>
-    <member refid="classoscit_1_1_attribute_1ae5dd4815ccbad178765c723b556ce5a5" kind="variable"><name>TYPE</name></member>
-    <member refid="classoscit_1_1_attribute_1a286d2edf812d699062728f7537366a80" kind="variable"><name>SIGNATURE</name></member>
-    <member refid="classoscit_1_1_attribute_1ac59d96f12c623359e6403ccc602c36fb" kind="variable"><name>VALUES</name></member>
-    <member refid="classoscit_1_1_attribute_1ab53cb799dd5a3211cb5695c9f7d2867b" kind="variable"><name>NAME</name></member>
-    <member refid="classoscit_1_1_attribute_1a96df2808c77b4e0a348fcafaaf0a753e" kind="variable"><name>MIN</name></member>
-    <member refid="classoscit_1_1_attribute_1aacbf2213b7b7da549470e3b5c1a06a5c" kind="variable"><name>MAX</name></member>
-    <member refid="classoscit_1_1_attribute_1a3e013a9cdeffc6a79df450a6eee4fe4d" kind="variable"><name>VIEW</name></member>
-    <member refid="classoscit_1_1_attribute_1a7da441628fb9c7fff80263f227db7f64" kind="variable"><name>WIDGET</name></member>
-    <member refid="classoscit_1_1_attribute_1a962272b5db1b71275ad21ce6f2c66392" kind="variable"><name>HUE</name></member>
-    <member refid="classoscit_1_1_attribute_1a788eefed477b0dbf957b8a68bcd4d069" kind="variable"><name>POS_X</name></member>
-    <member refid="classoscit_1_1_attribute_1a2d6016142ca681a0ae74120e7914499b" kind="variable"><name>POS_Y</name></member>
-    <member refid="classoscit_1_1_attribute_1ad56df1b561dc899b49c694d97a83854a" kind="variable"><name>WIDTH</name></member>
-    <member refid="classoscit_1_1_attribute_1ad1d82157b0f208a6c78a803388168bf9" kind="variable"><name>HEIGHT</name></member>
-    <member refid="classoscit_1_1_attribute_1ab5a90cc457ec29dce4aebfb1e7c334e3" kind="variable"><name>CLASS</name></member>
-    <member refid="classoscit_1_1_attribute_1aa934579462acc84b86f6a9eb5a90d5d3" kind="function"><name>default_io</name></member>
-    <member refid="classoscit_1_1_attribute_1a62b5336436710a71d8d830aebed058fe" kind="function"><name>no_io</name></member>
-    <member refid="classoscit_1_1_attribute_1a2fdbe7e45e6ad574b10697d18b193e02" kind="function"><name>io</name></member>
-    <member refid="classoscit_1_1_attribute_1a51101d9930a2d71dc07c26c368a868aa" kind="function"><name>bang_io</name></member>
-    <member refid="classoscit_1_1_attribute_1aa072b5ad62171af87b469d44c18b7921" kind="function"><name>real_io</name></member>
-    <member refid="classoscit_1_1_attribute_1abfb90b01b9c816fe4918b67943cf5d5e" kind="function"><name>string_io</name></member>
-    <member refid="classoscit_1_1_attribute_1a4e56b4506de726dd7da70659703abeee" kind="function"><name>range_io</name></member>
-    <member refid="classoscit_1_1_attribute_1aad313d01baccdb0d4b00bb49c2595ea0" kind="function"><name>select_io</name></member>
-    <member refid="classoscit_1_1_attribute_1a94afeb353a98216e942811c5cc258563" kind="function"><name>hash_io</name></member>
-    <member refid="classoscit_1_1_attribute_1a69ac982fc0ddf05bed8baeef549c61a1" kind="function"><name>matrix_io</name></member>
-    <member refid="classoscit_1_1_attribute_1a31cc773559fd0980df73e4022213ae66" kind="function"><name>midi_io</name></member>
-    <member refid="classoscit_1_1_attribute_1a5f196b58e7230a2cdcd82df912411b76" kind="function"><name>any_io</name></member>
-  </compound>
   <compound refid="classoscit_1_1_attrs_meta_method" kind="class"><name>oscit::AttrsMetaMethod</name>
     <member refid="classoscit_1_1_attrs_meta_method_1a3e0b0e3362e85ca2069349db8af28c04" kind="function"><name>AttrsMetaMethod</name></member>
     <member refid="classoscit_1_1_attrs_meta_method_1a49d52a9896db6c1bf168401e6f4409c9" kind="function"><name>AttrsMetaMethod</name></member>
@@ -237,6 +208,7 @@
   </compound>
   <compound refid="classoscit_1_1_json_value" kind="class"><name>oscit::JsonValue</name>
     <member refid="classoscit_1_1_json_value_1a6f12cc538529c66ffbdf3a8a47fb83dc" kind="function"><name>JsonValue</name></member>
+    <member refid="classoscit_1_1_json_value_1acf374b46ac68f37e21f25856d5392464" kind="function"><name>JsonValue</name></member>
   </compound>
   <compound refid="classoscit_1_1_list" kind="class"><name>oscit::List</name>
     <member refid="classoscit_1_1_list_1aaafc41acef67dfbf5735ed0e13d8356d" kind="variable"><name>type_tag_storage_</name></member>
@@ -277,10 +249,10 @@
     <member refid="classoscit_1_1_list_value_1a4a737dbe62482956ed9ba00da98c43a9" kind="function"><name>ListValue</name></member>
     <member refid="classoscit_1_1_list_value_1ad5a9aef2d44693bfe84cd441b7146b45" kind="function"><name>ListValue</name></member>
   </compound>
-  <compound refid="classoscit_1_1_list_with_attributes_meta_method" kind="class"><name>oscit::ListWithAttributesMetaMethod</name>
-    <member refid="classoscit_1_1_list_with_attributes_meta_method_1af450ab5ecbaee2d0bc6dd35be399501e" kind="function"><name>ListWithAttributesMetaMethod</name></member>
-    <member refid="classoscit_1_1_list_with_attributes_meta_method_1af2aa3995b38f3a82744c101bfbfb93b4" kind="function"><name>ListWithAttributesMetaMethod</name></member>
-    <member refid="classoscit_1_1_list_with_attributes_meta_method_1ac3980dc5dd435ba4b686d18f81095d83" kind="function"><name>trigger</name></member>
+  <compound refid="classoscit_1_1_list_with_oscits_meta_method" kind="class"><name>oscit::ListWithOscitsMetaMethod</name>
+    <member refid="classoscit_1_1_list_with_oscits_meta_method_1a34613daf815e90df629a7edbcdc2818d" kind="function"><name>ListWithOscitsMetaMethod</name></member>
+    <member refid="classoscit_1_1_list_with_oscits_meta_method_1afe8cd69a8650c69a99a39e4c4f0decc1" kind="function"><name>ListWithOscitsMetaMethod</name></member>
+    <member refid="classoscit_1_1_list_with_oscits_meta_method_1a5d62de65fd96d6b03234344b88c02430" kind="function"><name>trigger</name></member>
   </compound>
   <compound refid="classoscit_1_1_location" kind="class"><name>oscit::Location</name>
     <member refid="classoscit_1_1_location_1a47ca1c41680c3db52a45125412564fae" kind="variable"><name>NO_IP</name></member>
@@ -404,6 +376,7 @@
     <member refid="classoscit_1_1_midi_message_1ac35f1ad754d1307dbd8e66f1ba08ec7d" kind="function"><name>note_on_to_off</name></member>
     <member refid="classoscit_1_1_midi_message_1acabaf4e67bd9078e75b87c70de146d88" kind="function"><name>set_type</name></member>
     <member refid="classoscit_1_1_midi_message_1a6b32a4074e20e11fe877b600ab758545" kind="function"><name>set_note</name></member>
+    <member refid="classoscit_1_1_midi_message_1a3bda9668d8a9a6f0ac4c5a6bd88528bf" kind="function"><name>set_wait</name></member>
     <member refid="classoscit_1_1_midi_message_1ab1906dca58498223a568d6f80a1fc725" kind="function"><name>set_ctrl</name></member>
     <member refid="classoscit_1_1_midi_message_1a735632762ccf681342a3da0f1ceea094" kind="function"><name>set_key</name></member>
     <member refid="classoscit_1_1_midi_message_1a1069615bfaa1801216dbedb6331dd49a" kind="function"><name>set_channel</name></member>
@@ -502,6 +475,7 @@
     <member refid="classoscit_1_1_object_1a34c0a7e5786a1bddbe54529abafe522d" kind="function"><name>type_id</name></member>
     <member refid="classoscit_1_1_object_1a6962c57c4f1887a48ad702854425e8b7" kind="function"><name>accept_any_type</name></member>
     <member refid="classoscit_1_1_object_1ad624d0994776be24718f18563ad02050" kind="function"><name>can_receive</name></member>
+    <member refid="classoscit_1_1_object_1a3bbf892a2c76d6c705d58ef2a026270e" kind="function"><name>can_receive</name></member>
     <member refid="classoscit_1_1_object_1a5f971abf0919f436914b740831d069d8" kind="function"><name>on_delete</name></member>
     <member refid="classoscit_1_1_object_1a0a0d3496199e134d568c87f8122b4c4e" kind="function"><name>set_root</name></member>
     <member refid="classoscit_1_1_object_1a43f259903782a874ab9d210eb386b3d3" kind="function"><name>register_child</name></member>
@@ -528,7 +502,7 @@
   </compound>
   <compound refid="classoscit_1_1_object_proxy" kind="class"><name>oscit::ObjectProxy</name>
     <member refid="classoscit_1_1_object_proxy_1a88a04000b335cda55f8d54e527f5f5d9" kind="variable"><name>on_value_change_</name></member>
-    <member refid="classoscit_1_1_object_proxy_1a1f9bcf35c307cba772f5311ae7d0ac21" kind="variable"><name>on_type_change_</name></member>
+    <member refid="classoscit_1_1_object_proxy_1a8cb689bfde5f4806597f057e6f1d9e1d" kind="variable"><name>on_attrs_change_</name></member>
     <member refid="classoscit_1_1_object_proxy_1a489501ff4a78744b11e193d569b118a8" kind="variable"><name>need_sync_</name></member>
     <member refid="classoscit_1_1_object_proxy_1a5c718572b23e3df98ff8ae3617c29869" kind="variable"><name>root_proxy_</name></member>
     <member refid="classoscit_1_1_object_proxy_1a6ab13d616de9cc1e1383f08a884488d9" kind="variable"><name>value_</name></member>
@@ -542,7 +516,7 @@
     <member refid="classoscit_1_1_object_proxy_1a536c228a8c80bc0067f4c81d7feff743" kind="function"><name>set_value</name></member>
     <member refid="classoscit_1_1_object_proxy_1a1a45159680daae2b78d74b93d812eb82" kind="function"><name>trigger</name></member>
     <member refid="classoscit_1_1_object_proxy_1a7673a9d6bae17b8206532c4c07ecc7ed" kind="function"><name>value_changed</name></member>
-    <member refid="classoscit_1_1_object_proxy_1a30e99bdfa7a486434e5a881393298e64" kind="function"><name>type_changed</name></member>
+    <member refid="classoscit_1_1_object_proxy_1a6e6a6be5934435d4093fc4a6a3ba2d6b" kind="function"><name>attrs_changed</name></member>
     <member refid="classoscit_1_1_object_proxy_1a77be8f4155ba8b35a7d7ae76341973b5" kind="function"><name>sync_children</name></member>
     <member refid="classoscit_1_1_object_proxy_1a8f67bbbc8fc14f52d9a39b9293b82fcb" kind="function"><name>adopted</name></member>
     <member refid="classoscit_1_1_object_proxy_1a70f758c4e576be1b9ae624a770eee19a" kind="function"><name>is_connected</name></member>
@@ -553,7 +527,7 @@
     <member refid="classoscit_1_1_object_proxy_1a075253f978361759a86813f49c60f130" kind="function"><name>elapsed</name></member>
     <member refid="classoscit_1_1_object_proxy_1abb7ce951aa1b7c8b6bbf5fb7fc88d907" kind="function"><name>latency</name></member>
     <member refid="classoscit_1_1_object_proxy_1af484543c6de7269941026a2bccad9555" kind="function"><name>on_value_change</name></member>
-    <member refid="classoscit_1_1_object_proxy_1aab3fe559b6ce3450150bdd7c5f88f68c" kind="function"><name>on_type_change</name></member>
+    <member refid="classoscit_1_1_object_proxy_1a2eb534b9cea2948f2e115d7420e2b968" kind="function"><name>on_attrs_change</name></member>
     <member refid="classoscit_1_1_object_proxy_1a0463277b388bb9e82c2a6d824115f99d" kind="function"><name>value</name></member>
     <member refid="classoscit_1_1_object_proxy_1a5dc29545e9a75d49ec94e6f5e1bb0ad7" kind="function"><name>reset_connection</name></member>
   </compound>
@@ -586,6 +560,34 @@
     <member refid="classoscit_1_1_osc_command_1ad18b8c85a97ba892df54f387c7904f40" kind="function"><name>send_message</name></member>
     <member refid="classoscit_1_1_osc_command_1a03e06431c791d4fc67c045748874ccff" kind="function"><name>listen</name></member>
     <member refid="classoscit_1_1_osc_command_1a569d3cab5a1a18a1c6ce95748c04066e" kind="function"><name>change_port</name></member>
+  </compound>
+  <compound refid="class_oscit" kind="class"><name>Oscit</name>
+    <member refid="class_oscit_1a9d32e5fba1d39b2e771537fc376800e6" kind="variable"><name>INFO</name></member>
+    <member refid="class_oscit_1a3040a67664f20a888cc38ba1bd1bf4bf" kind="variable"><name>TYPE</name></member>
+    <member refid="class_oscit_1aa2e70d66076ecbab40fc4f81396cba48" kind="variable"><name>SIGNATURE</name></member>
+    <member refid="class_oscit_1a4a1e5f8d5162be19a8d3baafd761666a" kind="variable"><name>VALUES</name></member>
+    <member refid="class_oscit_1abe2e293af1c2c9e58aa72b77f4c4a2cf" kind="variable"><name>NAME</name></member>
+    <member refid="class_oscit_1acb4027abff64fb51cf411c7744800aee" kind="variable"><name>MIN</name></member>
+    <member refid="class_oscit_1a2dcf4cbe8b06f6cf5ea7f56ea981a684" kind="variable"><name>MAX</name></member>
+    <member refid="class_oscit_1a4943933c6c1f0164fc827d16ee8ac632" kind="variable"><name>VIEW</name></member>
+    <member refid="class_oscit_1a172ac49042a06bb0458ad936f0098127" kind="variable"><name>WIDGET</name></member>
+    <member refid="class_oscit_1a33a608f6a6e00d8c0a036f8df04d4e8f" kind="variable"><name>HUE</name></member>
+    <member refid="class_oscit_1a7e37f2c12ad4ccf7cefb13ab13e566b6" kind="variable"><name>POS_X</name></member>
+    <member refid="class_oscit_1a30456ca95a96a1f72f9436700447149b" kind="variable"><name>POS_Y</name></member>
+    <member refid="class_oscit_1afa6fba6da232e0c2e857ee260bc7c0ac" kind="variable"><name>WIDTH</name></member>
+    <member refid="class_oscit_1ab890c30b4e022e6489cb263a319111f9" kind="variable"><name>HEIGHT</name></member>
+    <member refid="class_oscit_1acea3f3f2fd268e63c7a390d28fcd78fb" kind="function"><name>default_io</name></member>
+    <member refid="class_oscit_1a394334d102e51d631760a7c7a609d847" kind="function"><name>no_io</name></member>
+    <member refid="class_oscit_1a6af89d6826042e2184fb865f7273c8c0" kind="function"><name>io</name></member>
+    <member refid="class_oscit_1a6a8fdaab81c15bb9b70a1c5a84b7bdd1" kind="function"><name>bang_io</name></member>
+    <member refid="class_oscit_1ab7e032cb95ee086105c3285e1afb17c3" kind="function"><name>real_io</name></member>
+    <member refid="class_oscit_1a61ee9ccf78fa8544f2a4c75ad60a8a60" kind="function"><name>string_io</name></member>
+    <member refid="class_oscit_1ab0596409ffbea31972494fde3704a1a5" kind="function"><name>range_io</name></member>
+    <member refid="class_oscit_1a2608640fb8f5b7e8c9a792714b28a333" kind="function"><name>select_io</name></member>
+    <member refid="class_oscit_1a6d93116969c764e1b5218f2231ae4d7a" kind="function"><name>hash_io</name></member>
+    <member refid="class_oscit_1a7dcffc9d5397b600949f8ac608e317c2" kind="function"><name>matrix_io</name></member>
+    <member refid="class_oscit_1a0f366c50a9ee2b5fe8fee20e880f8409" kind="function"><name>midi_io</name></member>
+    <member refid="class_oscit_1af66149f84446f439d759782b129696dc" kind="function"><name>any_io</name></member>
   </compound>
   <compound refid="classoscit_1_1_osc_map_command" kind="class"><name>oscit::OscMapCommand</name>
     <member refid="classoscit_1_1_osc_map_command_1ade8cd4f68409460529e8bf392fd5ec5e" kind="variable"><name>reply_port_</name></member>
@@ -1052,6 +1054,7 @@
     <member refid="classoscit_1_1_value_1ac88dcf2d5afb22f439eb43c858d967e9" kind="function"><name>set_nil</name></member>
     <member refid="classoscit_1_1_value_1af7bb9ff018a4814963a5bfc7ca632bf9" kind="function"><name>is_true</name></member>
     <member refid="classoscit_1_1_value_1a65a04bb9f97bb891afd13cb1b5570c23" kind="function"><name>is_bang</name></member>
+    <member refid="classoscit_1_1_value_1a05863d7d6ada9bd14416434efbba3cbd" kind="function"><name>is_nil_or_bang</name></member>
     <member refid="classoscit_1_1_value_1a638051707e3acddc085f0ae7dd918500" kind="function"><name>set_true</name></member>
     <member refid="classoscit_1_1_value_1a55fdbfbf3012a4be38d644678205ed8b" kind="function"><name>is_false</name></member>
     <member refid="classoscit_1_1_value_1a0e802c571897b74614b3266bd0aa9e4d" kind="function"><name>set_false</name></member>
@@ -1113,7 +1116,7 @@
     <member refid="classoscit_1_1_value_1a1a8f06d569afff3c40e478870f4309cd" kind="function"><name>has_key</name></member>
     <member refid="classoscit_1_1_value_1ae940e5ad977876da5837d23cfabe0b9c" kind="function"><name>has_key</name></member>
     <member refid="classoscit_1_1_value_1a8675f9c023a72ce44d27c1ad52c65811" kind="function"><name>remove</name></member>
-    <member refid="classoscit_1_1_value_1a19693ba439a3007a9508ff756b16b9f4" kind="function"><name>remove</name></member>
+    <member refid="classoscit_1_1_value_1a4c2070e84eebaaa855985a064aaf195f" kind="function"><name>remove</name></member>
     <member refid="classoscit_1_1_value_1acfadbbde8817b8754b75ad7c3dab8350" kind="function"><name>is_matrix</name></member>
     <member refid="classoscit_1_1_value_1ae4818f55155085cc290cb276857c7826" kind="function"><name>matrix</name></member>
     <member refid="classoscit_1_1_value_1ac1445baead9030269a03ae0cb43cc645" kind="function"><name>set</name></member>

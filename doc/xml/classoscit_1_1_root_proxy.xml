@@ -746,6 +746,7 @@
       <member refid="classoscit_1_1_root_1afa280d454bf1ce64f5991eb0f8e1c2b4" prot="public" virt="non-virtual"><scope>oscit::RootProxy</scope><name>call</name></member>
       <member refid="classoscit_1_1_root_1a3b707b7b332173b82bd001462f46b62e" prot="public" virt="non-virtual"><scope>oscit::RootProxy</scope><name>call</name></member>
       <member refid="classoscit_1_1_object_1ad624d0994776be24718f18563ad02050" prot="public" virt="non-virtual"><scope>oscit::RootProxy</scope><name>can_receive</name></member>
+      <member refid="classoscit_1_1_object_1a3bbf892a2c76d6c705d58ef2a026270e" prot="public" virt="non-virtual"><scope>oscit::RootProxy</scope><name>can_receive</name></member>
       <member refid="classoscit_1_1_object_1a43ec5d9a5fbd8de5b2355f8910a07e3f" prot="public" virt="non-virtual"><scope>oscit::RootProxy</scope><name>children</name></member>
       <member refid="classoscit_1_1_object_1acbd1ef524ef4ca1a7793a40e8ad3c9a6" prot="protected" virt="non-virtual"><scope>oscit::RootProxy</scope><name>children_</name></member>
       <member refid="classoscit_1_1_object_1a1c6bcda9390b68f93ed6287cf46a22ab" prot="public" virt="non-virtual"><scope>oscit::RootProxy</scope><name>children_count</name></member>

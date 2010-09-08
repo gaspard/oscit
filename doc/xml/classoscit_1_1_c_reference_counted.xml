@@ -138,140 +138,140 @@
     <detaileddescription>
 <para>Maintains a thread-safe reference count of an element. When the reference count reaches zero, the object is deleted. The reference count of an object starts at 1 and is incremented on <computeroutput>retain</computeroutput> and decremented on <computeroutput>release</computeroutput>. The &apos;C&apos; in the name stands for &apos;concurrent&apos;. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="197">
+      <node id="195">
         <label>oscit::OscRemoteObject</label>
         <link refid="classoscit_1_1_osc_remote_object"/>
-        <childnode refid="183" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="198">
-        <label>oscit::Root</label>
-        <link refid="classoscit_1_1_root"/>
-        <childnode refid="183" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="187">
-        <label>oscit::ErrorMetaMethod</label>
-        <link refid="classoscit_1_1_error_meta_method"/>
-        <childnode refid="183" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="189">
-        <label>oscit::HashFileMethod</label>
-        <link refid="classoscit_1_1_hash_file_method"/>
-        <childnode refid="183" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="184">
-        <label>oscit::Alias</label>
-        <link refid="classoscit_1_1_alias"/>
-        <childnode refid="183" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="195">
-        <label>oscit::TMethod&lt; T, Tmethod &gt;</label>
-        <link refid="classoscit_1_1_t_method"/>
-        <childnode refid="194" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="182">
-        <label>oscit::NonCopyable</label>
-        <link refid="classoscit_1_1_non_copyable"/>
-      </node>
-      <node id="194">
-        <label>oscit::Method</label>
-        <link refid="classoscit_1_1_method"/>
-        <childnode refid="183" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="191">
-        <label>oscit::ListMetaMethod</label>
-        <link refid="classoscit_1_1_list_meta_method"/>
-        <childnode refid="183" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="193">
-        <label>oscit::LogObject</label>
-        <link refid="classoscit_1_1_log_object"/>
-        <childnode refid="183" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="199">
-        <label>oscit::RootProxy</label>
-        <link refid="classoscit_1_1_root_proxy"/>
-        <childnode refid="198" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="190">
-        <label>oscit::InfoMetaMethod</label>
-        <link refid="classoscit_1_1_info_meta_method"/>
-        <childnode refid="183" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="201">
-        <label>oscit::TreeMetaMethod</label>
-        <link refid="classoscit_1_1_tree_meta_method"/>
-        <childnode refid="183" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="185">
-        <label>oscit::AttrsMetaMethod</label>
-        <link refid="classoscit_1_1_attrs_meta_method"/>
-        <childnode refid="183" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="188">
-        <label>oscit::FileMethod</label>
-        <link refid="classoscit_1_1_file_method"/>
-        <childnode refid="183" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="181">
-        <label>oscit::CReferenceCounted</label>
-        <link refid="classoscit_1_1_c_reference_counted"/>
-        <childnode refid="182" relation="private-inheritance">
-        </childnode>
-      </node>
-      <node id="183">
-        <label>oscit::Object</label>
-        <link refid="classoscit_1_1_object"/>
         <childnode refid="181" relation="public-inheritance">
         </childnode>
       </node>
       <node id="196">
-        <label>oscit::ObjectProxy</label>
-        <link refid="classoscit_1_1_object_proxy"/>
-        <childnode refid="183" relation="public-inheritance">
+        <label>oscit::Root</label>
+        <link refid="classoscit_1_1_root"/>
+        <childnode refid="181" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="185">
+        <label>oscit::ErrorMetaMethod</label>
+        <link refid="classoscit_1_1_error_meta_method"/>
+        <childnode refid="181" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="187">
+        <label>oscit::HashFileMethod</label>
+        <link refid="classoscit_1_1_hash_file_method"/>
+        <childnode refid="181" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="182">
+        <label>oscit::Alias</label>
+        <link refid="classoscit_1_1_alias"/>
+        <childnode refid="181" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="193">
+        <label>oscit::TMethod&lt; T, Tmethod &gt;</label>
+        <link refid="classoscit_1_1_t_method"/>
+        <childnode refid="192" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="180">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+      <node id="192">
+        <label>oscit::Method</label>
+        <link refid="classoscit_1_1_method"/>
+        <childnode refid="181" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="189">
+        <label>oscit::ListMetaMethod</label>
+        <link refid="classoscit_1_1_list_meta_method"/>
+        <childnode refid="181" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="191">
+        <label>oscit::LogObject</label>
+        <link refid="classoscit_1_1_log_object"/>
+        <childnode refid="181" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="197">
+        <label>oscit::RootProxy</label>
+        <link refid="classoscit_1_1_root_proxy"/>
+        <childnode refid="196" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="188">
+        <label>oscit::InfoMetaMethod</label>
+        <link refid="classoscit_1_1_info_meta_method"/>
+        <childnode refid="181" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="199">
+        <label>oscit::TreeMetaMethod</label>
+        <link refid="classoscit_1_1_tree_meta_method"/>
+        <childnode refid="181" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="183">
+        <label>oscit::AttrsMetaMethod</label>
+        <link refid="classoscit_1_1_attrs_meta_method"/>
+        <childnode refid="181" relation="public-inheritance">
         </childnode>
       </node>
       <node id="186">
+        <label>oscit::FileMethod</label>
+        <link refid="classoscit_1_1_file_method"/>
+        <childnode refid="181" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="179">
+        <label>oscit::CReferenceCounted</label>
+        <link refid="classoscit_1_1_c_reference_counted"/>
+        <childnode refid="180" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="181">
+        <label>oscit::Object</label>
+        <link refid="classoscit_1_1_object"/>
+        <childnode refid="179" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="194">
+        <label>oscit::ObjectProxy</label>
+        <link refid="classoscit_1_1_object_proxy"/>
+        <childnode refid="181" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="184">
         <label>oscit::ClassMethod</label>
         <link refid="classoscit_1_1_class_method"/>
-        <childnode refid="183" relation="public-inheritance">
+        <childnode refid="181" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="200">
+      <node id="198">
         <label>oscit::OscRootProxy</label>
         <link refid="classoscit_1_1_osc_root_proxy"/>
-        <childnode refid="199" relation="private-inheritance">
+        <childnode refid="197" relation="private-inheritance">
         </childnode>
       </node>
-      <node id="192">
-        <label>oscit::ListWithAttributesMetaMethod</label>
-        <link refid="classoscit_1_1_list_with_attributes_meta_method"/>
-        <childnode refid="183" relation="public-inheritance">
+      <node id="190">
+        <label>oscit::ListWithOscitsMetaMethod</label>
+        <link refid="classoscit_1_1_list_with_oscits_meta_method"/>
+        <childnode refid="181" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="203">
+      <node id="201">
         <label>oscit::NonCopyable</label>
         <link refid="classoscit_1_1_non_copyable"/>
       </node>
-      <node id="202">
+      <node id="200">
         <label>oscit::CReferenceCounted</label>
         <link refid="classoscit_1_1_c_reference_counted"/>
-        <childnode refid="203" relation="private-inheritance">
+        <childnode refid="201" relation="private-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

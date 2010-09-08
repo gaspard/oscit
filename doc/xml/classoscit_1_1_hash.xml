@@ -70,101 +70,101 @@
     <detaileddescription>
 <para>A <ref refid="classoscit_1_1_hash" kindref="compound">Hash</ref> is just a reference counted <ref refid="classoscit_1_1_t_hash" kindref="compound">THash&lt;std::string,Value&gt;</ref>. This class also has a copy-on-write method called &apos;detach&apos;. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="339">
+      <node id="337">
         <label>oscit::THash&lt; std::string, Value &gt;</label>
         <link refid="classoscit_1_1_t_hash"/>
       </node>
-      <node id="337">
+      <node id="335">
         <label>oscit::Hash</label>
         <link refid="classoscit_1_1_hash"/>
-        <childnode refid="338" relation="public-inheritance">
+        <childnode refid="336" relation="public-inheritance">
         </childnode>
-        <childnode refid="339" relation="public-inheritance">
+        <childnode refid="337" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="338">
+      <node id="336">
         <label>oscit::ReferenceCounted</label>
         <link refid="classoscit_1_1_reference_counted"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="346">
+      <node id="344">
         <label>oscit::Matrix</label>
         <link refid="classoscit_1_1_matrix"/>
       </node>
-      <node id="349">
+      <node id="347">
         <label>oscit::List</label>
         <link refid="classoscit_1_1_list"/>
-        <childnode refid="341" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="344">
-        <label>oscit::Value</label>
-        <link refid="classoscit_1_1_value"/>
-        <childnode refid="345" relation="usage">
-          <edgelabel>midi_message_</edgelabel>
-        </childnode>
-        <childnode refid="346" relation="usage">
-          <edgelabel>matrix_</edgelabel>
-        </childnode>
-        <childnode refid="347" relation="usage">
-          <edgelabel>string_</edgelabel>
-        </childnode>
-        <childnode refid="348" relation="usage">
-          <edgelabel>error_</edgelabel>
-        </childnode>
-        <childnode refid="349" relation="usage">
-          <edgelabel>list_</edgelabel>
-        </childnode>
-        <childnode refid="340" relation="usage">
-          <edgelabel>hash_</edgelabel>
-        </childnode>
-      </node>
-      <node id="345">
-        <label>oscit::MidiMessage</label>
-        <link refid="classoscit_1_1_midi_message"/>
-        <childnode refid="341" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="343">
-        <label>oscit::THashElement&lt; std::string, Value &gt;</label>
-        <link refid="structoscit_1_1_t_hash_element"/>
-        <childnode refid="343" relation="usage">
-          <edgelabel>next</edgelabel>
-        </childnode>
-        <childnode refid="344" relation="usage">
-          <edgelabel>obj</edgelabel>
-        </childnode>
-      </node>
-      <node id="348">
-        <label>oscit::Error</label>
-        <link refid="classoscit_1_1_error"/>
-        <childnode refid="341" relation="public-inheritance">
+        <childnode refid="339" relation="public-inheritance">
         </childnode>
       </node>
       <node id="342">
-        <label>oscit::THash&lt; std::string, Value &gt;</label>
-        <link refid="classoscit_1_1_t_hash"/>
+        <label>oscit::Value</label>
+        <link refid="classoscit_1_1_value"/>
         <childnode refid="343" relation="usage">
-          <edgelabel>thash_table_</edgelabel>
+          <edgelabel>midi_message_</edgelabel>
+        </childnode>
+        <childnode refid="344" relation="usage">
+          <edgelabel>matrix_</edgelabel>
+        </childnode>
+        <childnode refid="345" relation="usage">
+          <edgelabel>string_</edgelabel>
+        </childnode>
+        <childnode refid="346" relation="usage">
+          <edgelabel>error_</edgelabel>
+        </childnode>
+        <childnode refid="347" relation="usage">
+          <edgelabel>list_</edgelabel>
+        </childnode>
+        <childnode refid="338" relation="usage">
+          <edgelabel>hash_</edgelabel>
         </childnode>
       </node>
-      <node id="340">
-        <label>oscit::Hash</label>
-        <link refid="classoscit_1_1_hash"/>
-        <childnode refid="341" relation="public-inheritance">
-        </childnode>
-        <childnode refid="342" relation="public-inheritance">
+      <node id="343">
+        <label>oscit::MidiMessage</label>
+        <link refid="classoscit_1_1_midi_message"/>
+        <childnode refid="339" relation="public-inheritance">
         </childnode>
       </node>
       <node id="341">
+        <label>oscit::THashElement&lt; std::string, Value &gt;</label>
+        <link refid="structoscit_1_1_t_hash_element"/>
+        <childnode refid="341" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="342" relation="usage">
+          <edgelabel>obj</edgelabel>
+        </childnode>
+      </node>
+      <node id="346">
+        <label>oscit::Error</label>
+        <link refid="classoscit_1_1_error"/>
+        <childnode refid="339" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="340">
+        <label>oscit::THash&lt; std::string, Value &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+        <childnode refid="341" relation="usage">
+          <edgelabel>thash_table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="338">
+        <label>oscit::Hash</label>
+        <link refid="classoscit_1_1_hash"/>
+        <childnode refid="339" relation="public-inheritance">
+        </childnode>
+        <childnode refid="340" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="339">
         <label>oscit::ReferenceCounted</label>
         <link refid="classoscit_1_1_reference_counted"/>
       </node>
-      <node id="347">
+      <node id="345">
         <label>oscit::StringData</label>
         <link refid="classoscit_1_1_string_data"/>
-        <childnode refid="341" relation="public-inheritance">
+        <childnode refid="339" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

@@ -227,16 +227,16 @@
         <label>oscit::Typed</label>
         <link refid="classoscit_1_1_typed"/>
       </node>
+      <node id="1463">
+        <label>oscit::ListWithOscitsMetaMethod</label>
+        <link refid="classoscit_1_1_list_with_oscits_meta_method"/>
+        <childnode refid="1454" relation="public-inheritance">
+        </childnode>
+      </node>
       <node id="1449">
         <label>oscit::Command</label>
         <link refid="classoscit_1_1_command"/>
         <childnode refid="1448" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="1463">
-        <label>oscit::ListWithAttributesMetaMethod</label>
-        <link refid="classoscit_1_1_list_with_attributes_meta_method"/>
-        <childnode refid="1454" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

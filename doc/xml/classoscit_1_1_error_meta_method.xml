@@ -63,283 +63,283 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="222">
+      <node id="220">
         <label>oscit::ErrorMetaMethod</label>
         <link refid="classoscit_1_1_error_meta_method"/>
-        <childnode refid="223" relation="public-inheritance">
+        <childnode refid="221" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="227">
+      <node id="225">
         <label>oscit::NonCopyable</label>
         <link refid="classoscit_1_1_non_copyable"/>
       </node>
-      <node id="225">
+      <node id="223">
         <label>oscit::Observer</label>
         <link refid="classoscit_1_1_observer"/>
       </node>
-      <node id="226">
+      <node id="224">
         <label>oscit::CReferenceCounted</label>
         <link refid="classoscit_1_1_c_reference_counted"/>
-        <childnode refid="227" relation="private-inheritance">
+        <childnode refid="225" relation="private-inheritance">
         </childnode>
       </node>
-      <node id="223">
+      <node id="221">
         <label>oscit::Object</label>
         <link refid="classoscit_1_1_object"/>
+        <childnode refid="222" relation="public-inheritance">
+        </childnode>
+        <childnode refid="223" relation="public-inheritance">
+        </childnode>
         <childnode refid="224" relation="public-inheritance">
         </childnode>
-        <childnode refid="225" relation="public-inheritance">
-        </childnode>
-        <childnode refid="226" relation="public-inheritance">
-        </childnode>
       </node>
-      <node id="224">
+      <node id="222">
         <label>oscit::Typed</label>
         <link refid="classoscit_1_1_typed"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="245">
+      <node id="243">
         <label>oscit::CTList&lt; SignalCallback * &gt;</label>
         <link refid="classoscit_1_1_c_t_list"/>
-        <childnode refid="246" relation="public-inheritance">
+        <childnode refid="244" relation="public-inheritance">
         </childnode>
-        <childnode refid="234" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="239">
-        <label>oscit::Root</label>
-        <link refid="classoscit_1_1_root"/>
-        <childnode refid="229" relation="public-inheritance">
-        </childnode>
-        <childnode refid="237" relation="usage">
-          <edgelabel>objects_</edgelabel>
-        </childnode>
-        <childnode refid="240" relation="usage">
-          <edgelabel>commands_</edgelabel>
-        </childnode>
-        <childnode refid="242" relation="usage">
-          <edgelabel>on_register_</edgelabel>
-        </childnode>
-      </node>
-      <node id="228">
-        <label>oscit::ErrorMetaMethod</label>
-        <link refid="classoscit_1_1_error_meta_method"/>
-        <childnode refid="229" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="242">
-        <label>oscit::CTHash&lt; std::string, Signal * &gt;</label>
-        <link refid="classoscit_1_1_c_t_hash"/>
-        <childnode refid="243" relation="public-inheritance">
-        </childnode>
-        <childnode refid="234" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="250">
-        <label>oscit::Matrix</label>
-        <link refid="classoscit_1_1_matrix"/>
-      </node>
-      <node id="259">
-        <label>oscit::Mutex</label>
-        <link refid="classoscit_1_1_mutex"/>
-        <childnode refid="230" relation="public-inheritance">
-        </childnode>
-        <childnode refid="236" relation="private-inheritance">
-        </childnode>
-      </node>
-      <node id="253">
-        <label>oscit::List</label>
-        <link refid="classoscit_1_1_list"/>
-        <childnode refid="249" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="247">
-        <label>oscit::Value</label>
-        <link refid="classoscit_1_1_value"/>
-        <childnode refid="248" relation="usage">
-          <edgelabel>midi_message_</edgelabel>
-        </childnode>
-        <childnode refid="250" relation="usage">
-          <edgelabel>matrix_</edgelabel>
-        </childnode>
-        <childnode refid="251" relation="usage">
-          <edgelabel>string_</edgelabel>
-        </childnode>
-        <childnode refid="252" relation="usage">
-          <edgelabel>error_</edgelabel>
-        </childnode>
-        <childnode refid="253" relation="usage">
-          <edgelabel>list_</edgelabel>
-        </childnode>
-        <childnode refid="254" relation="usage">
-          <edgelabel>hash_</edgelabel>
-        </childnode>
-      </node>
-      <node id="238">
-        <label>oscit::THash&lt; std::string,Object * &gt;</label>
-        <link refid="classoscit_1_1_t_hash"/>
-      </node>
-      <node id="248">
-        <label>oscit::MidiMessage</label>
-        <link refid="classoscit_1_1_midi_message"/>
-        <childnode refid="249" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="256">
-        <label>oscit::THashElement&lt; std::string, Value &gt;</label>
-        <link refid="structoscit_1_1_t_hash_element"/>
-        <childnode refid="256" relation="usage">
-          <edgelabel>next</edgelabel>
-        </childnode>
-        <childnode refid="247" relation="usage">
-          <edgelabel>obj</edgelabel>
-        </childnode>
-      </node>
-      <node id="232">
-        <label>oscit::CTList&lt; Signal * &gt;</label>
-        <link refid="classoscit_1_1_c_t_list"/>
-        <childnode refid="233" relation="public-inheritance">
-        </childnode>
-        <childnode refid="234" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="236">
-        <label>oscit::NonCopyable</label>
-        <link refid="classoscit_1_1_non_copyable"/>
-      </node>
-      <node id="241">
-        <label>std::list&lt;Command * &gt;</label>
-        <link refid="classstd_1_1list"/>
-      </node>
-      <node id="258">
-        <label>std::vector&lt;Object * &gt;</label>
-        <link refid="classstd_1_1vector"/>
-      </node>
-      <node id="240">
-        <label>oscit::CTList&lt; Command * &gt;</label>
-        <link refid="classoscit_1_1_c_t_list"/>
-        <childnode refid="241" relation="public-inheritance">
-        </childnode>
-        <childnode refid="234" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="246">
-        <label>std::list&lt;SignalCallback * &gt;</label>
-        <link refid="classstd_1_1list"/>
-      </node>
-      <node id="233">
-        <label>std::list&lt;Signal * &gt;</label>
-        <link refid="classstd_1_1list"/>
-      </node>
-      <node id="243">
-        <label>oscit::THash&lt; std::string,Signal * &gt;</label>
-        <link refid="classoscit_1_1_t_hash"/>
-      </node>
-      <node id="231">
-        <label>oscit::Observer</label>
-        <link refid="classoscit_1_1_observer"/>
-        <childnode refid="232" relation="usage">
-          <edgelabel>observed_signals_</edgelabel>
-        </childnode>
-      </node>
-      <node id="235">
-        <label>oscit::CReferenceCounted</label>
-        <link refid="classoscit_1_1_c_reference_counted"/>
-        <childnode refid="236" relation="private-inheritance">
-        </childnode>
-      </node>
-      <node id="244">
-        <label>oscit::Signal</label>
-        <link refid="classoscit_1_1_signal"/>
-        <childnode refid="245" relation="usage">
-          <edgelabel>callbacks_</edgelabel>
-        </childnode>
-      </node>
-      <node id="229">
-        <label>oscit::Object</label>
-        <link refid="classoscit_1_1_object"/>
-        <childnode refid="230" relation="public-inheritance">
-        </childnode>
-        <childnode refid="231" relation="public-inheritance">
-        </childnode>
-        <childnode refid="235" relation="public-inheritance">
-        </childnode>
-        <childnode refid="237" relation="usage">
-          <edgelabel>children_</edgelabel>
-        </childnode>
-        <childnode refid="239" relation="usage">
-          <edgelabel>root_</edgelabel>
-        </childnode>
-        <childnode refid="244" relation="usage">
-          <edgelabel>on_delete_</edgelabel>
-        </childnode>
-        <childnode refid="247" relation="usage">
-          <edgelabel>attributes_</edgelabel>
-        </childnode>
-        <childnode refid="257" relation="usage">
-          <edgelabel>children_vector_</edgelabel>
-        </childnode>
-        <childnode refid="259" relation="usage">
-          <edgelabel>context_</edgelabel>
-        </childnode>
-        <childnode refid="229" relation="usage">
-          <edgelabel>parent_</edgelabel>
-        </childnode>
-      </node>
-      <node id="252">
-        <label>oscit::Error</label>
-        <link refid="classoscit_1_1_error"/>
-        <childnode refid="249" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="255">
-        <label>oscit::THash&lt; std::string, Value &gt;</label>
-        <link refid="classoscit_1_1_t_hash"/>
-        <childnode refid="256" relation="usage">
-          <edgelabel>thash_table_</edgelabel>
+        <childnode refid="232" relation="public-inheritance">
         </childnode>
       </node>
       <node id="237">
-        <label>oscit::CTHash&lt; std::string, Object * &gt;</label>
-        <link refid="classoscit_1_1_c_t_hash"/>
-        <childnode refid="238" relation="public-inheritance">
+        <label>oscit::Root</label>
+        <link refid="classoscit_1_1_root"/>
+        <childnode refid="227" relation="public-inheritance">
         </childnode>
-        <childnode refid="234" relation="public-inheritance">
+        <childnode refid="235" relation="usage">
+          <edgelabel>objects_</edgelabel>
+        </childnode>
+        <childnode refid="238" relation="usage">
+          <edgelabel>commands_</edgelabel>
+        </childnode>
+        <childnode refid="240" relation="usage">
+          <edgelabel>on_register_</edgelabel>
+        </childnode>
+      </node>
+      <node id="226">
+        <label>oscit::ErrorMetaMethod</label>
+        <link refid="classoscit_1_1_error_meta_method"/>
+        <childnode refid="227" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="240">
+        <label>oscit::CTHash&lt; std::string, Signal * &gt;</label>
+        <link refid="classoscit_1_1_c_t_hash"/>
+        <childnode refid="241" relation="public-inheritance">
+        </childnode>
+        <childnode refid="232" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="248">
+        <label>oscit::Matrix</label>
+        <link refid="classoscit_1_1_matrix"/>
+      </node>
+      <node id="257">
+        <label>oscit::Mutex</label>
+        <link refid="classoscit_1_1_mutex"/>
+        <childnode refid="228" relation="public-inheritance">
+        </childnode>
+        <childnode refid="234" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="251">
+        <label>oscit::List</label>
+        <link refid="classoscit_1_1_list"/>
+        <childnode refid="247" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="245">
+        <label>oscit::Value</label>
+        <link refid="classoscit_1_1_value"/>
+        <childnode refid="246" relation="usage">
+          <edgelabel>midi_message_</edgelabel>
+        </childnode>
+        <childnode refid="248" relation="usage">
+          <edgelabel>matrix_</edgelabel>
+        </childnode>
+        <childnode refid="249" relation="usage">
+          <edgelabel>string_</edgelabel>
+        </childnode>
+        <childnode refid="250" relation="usage">
+          <edgelabel>error_</edgelabel>
+        </childnode>
+        <childnode refid="251" relation="usage">
+          <edgelabel>list_</edgelabel>
+        </childnode>
+        <childnode refid="252" relation="usage">
+          <edgelabel>hash_</edgelabel>
+        </childnode>
+      </node>
+      <node id="236">
+        <label>oscit::THash&lt; std::string,Object * &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+      </node>
+      <node id="246">
+        <label>oscit::MidiMessage</label>
+        <link refid="classoscit_1_1_midi_message"/>
+        <childnode refid="247" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="254">
+        <label>oscit::THashElement&lt; std::string, Value &gt;</label>
+        <link refid="structoscit_1_1_t_hash_element"/>
+        <childnode refid="254" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="245" relation="usage">
+          <edgelabel>obj</edgelabel>
         </childnode>
       </node>
       <node id="230">
-        <label>oscit::Typed</label>
-        <link refid="classoscit_1_1_typed"/>
-      </node>
-      <node id="254">
-        <label>oscit::Hash</label>
-        <link refid="classoscit_1_1_hash"/>
-        <childnode refid="249" relation="public-inheritance">
+        <label>oscit::CTList&lt; Signal * &gt;</label>
+        <link refid="classoscit_1_1_c_t_list"/>
+        <childnode refid="231" relation="public-inheritance">
         </childnode>
-        <childnode refid="255" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="249">
-        <label>oscit::ReferenceCounted</label>
-        <link refid="classoscit_1_1_reference_counted"/>
-      </node>
-      <node id="257">
-        <label>oscit::CTVector&lt; Object * &gt;</label>
-        <link refid="classoscit_1_1_c_t_vector"/>
-        <childnode refid="258" relation="public-inheritance">
-        </childnode>
-        <childnode refid="234" relation="public-inheritance">
+        <childnode refid="232" relation="public-inheritance">
         </childnode>
       </node>
       <node id="234">
+        <label>oscit::NonCopyable</label>
+        <link refid="classoscit_1_1_non_copyable"/>
+      </node>
+      <node id="239">
+        <label>std::list&lt;Command * &gt;</label>
+        <link refid="classstd_1_1list"/>
+      </node>
+      <node id="256">
+        <label>std::vector&lt;Object * &gt;</label>
+        <link refid="classstd_1_1vector"/>
+      </node>
+      <node id="238">
+        <label>oscit::CTList&lt; Command * &gt;</label>
+        <link refid="classoscit_1_1_c_t_list"/>
+        <childnode refid="239" relation="public-inheritance">
+        </childnode>
+        <childnode refid="232" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="244">
+        <label>std::list&lt;SignalCallback * &gt;</label>
+        <link refid="classstd_1_1list"/>
+      </node>
+      <node id="231">
+        <label>std::list&lt;Signal * &gt;</label>
+        <link refid="classstd_1_1list"/>
+      </node>
+      <node id="241">
+        <label>oscit::THash&lt; std::string,Signal * &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+      </node>
+      <node id="229">
+        <label>oscit::Observer</label>
+        <link refid="classoscit_1_1_observer"/>
+        <childnode refid="230" relation="usage">
+          <edgelabel>observed_signals_</edgelabel>
+        </childnode>
+      </node>
+      <node id="233">
+        <label>oscit::CReferenceCounted</label>
+        <link refid="classoscit_1_1_c_reference_counted"/>
+        <childnode refid="234" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="242">
+        <label>oscit::Signal</label>
+        <link refid="classoscit_1_1_signal"/>
+        <childnode refid="243" relation="usage">
+          <edgelabel>callbacks_</edgelabel>
+        </childnode>
+      </node>
+      <node id="227">
+        <label>oscit::Object</label>
+        <link refid="classoscit_1_1_object"/>
+        <childnode refid="228" relation="public-inheritance">
+        </childnode>
+        <childnode refid="229" relation="public-inheritance">
+        </childnode>
+        <childnode refid="233" relation="public-inheritance">
+        </childnode>
+        <childnode refid="235" relation="usage">
+          <edgelabel>children_</edgelabel>
+        </childnode>
+        <childnode refid="237" relation="usage">
+          <edgelabel>root_</edgelabel>
+        </childnode>
+        <childnode refid="242" relation="usage">
+          <edgelabel>on_delete_</edgelabel>
+        </childnode>
+        <childnode refid="245" relation="usage">
+          <edgelabel>attributes_</edgelabel>
+        </childnode>
+        <childnode refid="255" relation="usage">
+          <edgelabel>children_vector_</edgelabel>
+        </childnode>
+        <childnode refid="257" relation="usage">
+          <edgelabel>context_</edgelabel>
+        </childnode>
+        <childnode refid="227" relation="usage">
+          <edgelabel>parent_</edgelabel>
+        </childnode>
+      </node>
+      <node id="250">
+        <label>oscit::Error</label>
+        <link refid="classoscit_1_1_error"/>
+        <childnode refid="247" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="253">
+        <label>oscit::THash&lt; std::string, Value &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+        <childnode refid="254" relation="usage">
+          <edgelabel>thash_table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="235">
+        <label>oscit::CTHash&lt; std::string, Object * &gt;</label>
+        <link refid="classoscit_1_1_c_t_hash"/>
+        <childnode refid="236" relation="public-inheritance">
+        </childnode>
+        <childnode refid="232" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="228">
+        <label>oscit::Typed</label>
+        <link refid="classoscit_1_1_typed"/>
+      </node>
+      <node id="252">
+        <label>oscit::Hash</label>
+        <link refid="classoscit_1_1_hash"/>
+        <childnode refid="247" relation="public-inheritance">
+        </childnode>
+        <childnode refid="253" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="247">
+        <label>oscit::ReferenceCounted</label>
+        <link refid="classoscit_1_1_reference_counted"/>
+      </node>
+      <node id="255">
+        <label>oscit::CTVector&lt; Object * &gt;</label>
+        <link refid="classoscit_1_1_c_t_vector"/>
+        <childnode refid="256" relation="public-inheritance">
+        </childnode>
+        <childnode refid="232" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="232">
         <label>oscit::RWMutex</label>
         <link refid="classoscit_1_1_r_w_mutex"/>
       </node>
-      <node id="251">
+      <node id="249">
         <label>oscit::StringData</label>
         <link refid="classoscit_1_1_string_data"/>
-        <childnode refid="249" relation="public-inheritance">
+        <childnode refid="247" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
@@ -354,6 +354,7 @@
       <member refid="classoscit_1_1_object_1ab78f03c55f5d44947e1d2797db397220" prot="protected" virt="non-virtual"><scope>oscit::ErrorMetaMethod</scope><name>attributes_</name></member>
       <member refid="classoscit_1_1_object_1ac6cd5597ebadb10f34edbeacd80e9fc0" prot="public" virt="virtual"><scope>oscit::ErrorMetaMethod</scope><name>build_child</name></member>
       <member refid="classoscit_1_1_object_1ad624d0994776be24718f18563ad02050" prot="public" virt="non-virtual"><scope>oscit::ErrorMetaMethod</scope><name>can_receive</name></member>
+      <member refid="classoscit_1_1_object_1a3bbf892a2c76d6c705d58ef2a026270e" prot="public" virt="non-virtual"><scope>oscit::ErrorMetaMethod</scope><name>can_receive</name></member>
       <member refid="classoscit_1_1_object_1a43ec5d9a5fbd8de5b2355f8910a07e3f" prot="public" virt="non-virtual"><scope>oscit::ErrorMetaMethod</scope><name>children</name></member>
       <member refid="classoscit_1_1_object_1acbd1ef524ef4ca1a7793a40e8ad3c9a6" prot="protected" virt="non-virtual"><scope>oscit::ErrorMetaMethod</scope><name>children_</name></member>
       <member refid="classoscit_1_1_object_1a1c6bcda9390b68f93ed6287cf46a22ab" prot="public" virt="non-virtual"><scope>oscit::ErrorMetaMethod</scope><name>children_count</name></member>

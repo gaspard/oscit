@@ -237,37 +237,37 @@
     <detaileddescription>
 <para>The <ref refid="classoscit_1_1_mapper" kindref="compound">Mapper</ref> class helps transform some input data into something else based on strings for mapping and on Real numbers for scaling. </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="598">
+      <node id="596">
         <label>oscit::Mapper</label>
         <link refid="classoscit_1_1_mapper"/>
-        <childnode refid="599" relation="usage">
+        <childnode refid="597" relation="usage">
           <edgelabel>map_</edgelabel>
           <edgelabel>reverse_map_</edgelabel>
         </childnode>
       </node>
-      <node id="602">
+      <node id="600">
         <label>oscit::ScaleReal</label>
         <link refid="classoscit_1_1_scale_real"/>
       </node>
-      <node id="601">
+      <node id="599">
         <label>oscit::Mapper::MapElement</label>
-        <childnode refid="602" relation="public-inheritance">
+        <childnode refid="600" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="600">
+      <node id="598">
         <label>oscit::THashElement&lt; std::string, MapElement &gt;</label>
         <link refid="structoscit_1_1_t_hash_element"/>
-        <childnode refid="601" relation="usage">
+        <childnode refid="599" relation="usage">
           <edgelabel>obj</edgelabel>
         </childnode>
-        <childnode refid="600" relation="usage">
+        <childnode refid="598" relation="usage">
           <edgelabel>next</edgelabel>
         </childnode>
       </node>
-      <node id="599">
+      <node id="597">
         <label>oscit::THash&lt; std::string, MapElement &gt;</label>
         <link refid="classoscit_1_1_t_hash"/>
-        <childnode refid="600" relation="usage">
+        <childnode refid="598" relation="usage">
           <edgelabel>thash_table_</edgelabel>
         </childnode>
       </node>

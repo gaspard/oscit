@@ -376,90 +376,90 @@
     <detaileddescription>
 <para>This class is responsible for managaging access to the filesystem. All operations are atomic and the <ref refid="classoscit_1_1_file" kindref="compound">File</ref> never holds a lock on the file representation. This means that you should prepare all the content in a string instead of calling <ref refid="classoscit_1_1_file_1ad8f1706c35a3462da75951b8123a6730" kindref="member">File::append</ref> again and again. </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="278">
+      <node id="276">
         <label>oscit::Matrix</label>
         <link refid="classoscit_1_1_matrix"/>
       </node>
-      <node id="281">
+      <node id="279">
         <label>oscit::List</label>
         <link refid="classoscit_1_1_list"/>
-        <childnode refid="277" relation="public-inheritance">
+        <childnode refid="275" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="275">
+      <node id="273">
         <label>oscit::Value</label>
         <link refid="classoscit_1_1_value"/>
-        <childnode refid="276" relation="usage">
+        <childnode refid="274" relation="usage">
           <edgelabel>midi_message_</edgelabel>
         </childnode>
-        <childnode refid="278" relation="usage">
+        <childnode refid="276" relation="usage">
           <edgelabel>matrix_</edgelabel>
         </childnode>
-        <childnode refid="279" relation="usage">
+        <childnode refid="277" relation="usage">
           <edgelabel>string_</edgelabel>
         </childnode>
-        <childnode refid="280" relation="usage">
+        <childnode refid="278" relation="usage">
           <edgelabel>error_</edgelabel>
         </childnode>
-        <childnode refid="281" relation="usage">
+        <childnode refid="279" relation="usage">
           <edgelabel>list_</edgelabel>
         </childnode>
-        <childnode refid="282" relation="usage">
+        <childnode refid="280" relation="usage">
           <edgelabel>hash_</edgelabel>
         </childnode>
       </node>
-      <node id="276">
+      <node id="274">
         <label>oscit::MidiMessage</label>
         <link refid="classoscit_1_1_midi_message"/>
-        <childnode refid="277" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="284">
-        <label>oscit::THashElement&lt; std::string, Value &gt;</label>
-        <link refid="structoscit_1_1_t_hash_element"/>
-        <childnode refid="284" relation="usage">
-          <edgelabel>next</edgelabel>
-        </childnode>
-        <childnode refid="275" relation="usage">
-          <edgelabel>obj</edgelabel>
-        </childnode>
-      </node>
-      <node id="274">
-        <label>oscit::File</label>
-        <link refid="classoscit_1_1_file"/>
-        <childnode refid="275" relation="usage">
-          <edgelabel>last_error_</edgelabel>
-        </childnode>
-      </node>
-      <node id="280">
-        <label>oscit::Error</label>
-        <link refid="classoscit_1_1_error"/>
-        <childnode refid="277" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="283">
-        <label>oscit::THash&lt; std::string, Value &gt;</label>
-        <link refid="classoscit_1_1_t_hash"/>
-        <childnode refid="284" relation="usage">
-          <edgelabel>thash_table_</edgelabel>
+        <childnode refid="275" relation="public-inheritance">
         </childnode>
       </node>
       <node id="282">
-        <label>oscit::Hash</label>
-        <link refid="classoscit_1_1_hash"/>
-        <childnode refid="277" relation="public-inheritance">
+        <label>oscit::THashElement&lt; std::string, Value &gt;</label>
+        <link refid="structoscit_1_1_t_hash_element"/>
+        <childnode refid="282" relation="usage">
+          <edgelabel>next</edgelabel>
         </childnode>
-        <childnode refid="283" relation="public-inheritance">
+        <childnode refid="273" relation="usage">
+          <edgelabel>obj</edgelabel>
         </childnode>
       </node>
-      <node id="277">
+      <node id="272">
+        <label>oscit::File</label>
+        <link refid="classoscit_1_1_file"/>
+        <childnode refid="273" relation="usage">
+          <edgelabel>last_error_</edgelabel>
+        </childnode>
+      </node>
+      <node id="278">
+        <label>oscit::Error</label>
+        <link refid="classoscit_1_1_error"/>
+        <childnode refid="275" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="281">
+        <label>oscit::THash&lt; std::string, Value &gt;</label>
+        <link refid="classoscit_1_1_t_hash"/>
+        <childnode refid="282" relation="usage">
+          <edgelabel>thash_table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="280">
+        <label>oscit::Hash</label>
+        <link refid="classoscit_1_1_hash"/>
+        <childnode refid="275" relation="public-inheritance">
+        </childnode>
+        <childnode refid="281" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="275">
         <label>oscit::ReferenceCounted</label>
         <link refid="classoscit_1_1_reference_counted"/>
       </node>
-      <node id="279">
+      <node id="277">
         <label>oscit::StringData</label>
         <link refid="classoscit_1_1_string_data"/>
-        <childnode refid="277" relation="public-inheritance">
+        <childnode refid="275" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

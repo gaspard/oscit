@@ -118,104 +118,104 @@
     <detaileddescription>
 <para>This is a simple struct to store a call (url and parameter). </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="83">
+      <node id="81">
         <label>oscit::Matrix</label>
         <link refid="classoscit_1_1_matrix"/>
       </node>
-      <node id="86">
+      <node id="84">
         <label>oscit::List</label>
         <link refid="classoscit_1_1_list"/>
-        <childnode refid="82" relation="public-inheritance">
+        <childnode refid="80" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="80">
+      <node id="78">
         <label>oscit::Value</label>
         <link refid="classoscit_1_1_value"/>
-        <childnode refid="81" relation="usage">
+        <childnode refid="79" relation="usage">
           <edgelabel>midi_message_</edgelabel>
         </childnode>
-        <childnode refid="83" relation="usage">
+        <childnode refid="81" relation="usage">
           <edgelabel>matrix_</edgelabel>
         </childnode>
-        <childnode refid="84" relation="usage">
+        <childnode refid="82" relation="usage">
           <edgelabel>string_</edgelabel>
         </childnode>
-        <childnode refid="85" relation="usage">
+        <childnode refid="83" relation="usage">
           <edgelabel>error_</edgelabel>
         </childnode>
-        <childnode refid="86" relation="usage">
+        <childnode refid="84" relation="usage">
           <edgelabel>list_</edgelabel>
         </childnode>
-        <childnode refid="87" relation="usage">
+        <childnode refid="85" relation="usage">
           <edgelabel>hash_</edgelabel>
         </childnode>
       </node>
-      <node id="81">
+      <node id="79">
         <label>oscit::MidiMessage</label>
         <link refid="classoscit_1_1_midi_message"/>
-        <childnode refid="82" relation="public-inheritance">
+        <childnode refid="80" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="89">
+      <node id="87">
         <label>oscit::THashElement&lt; std::string, Value &gt;</label>
         <link refid="structoscit_1_1_t_hash_element"/>
-        <childnode refid="89" relation="usage">
+        <childnode refid="87" relation="usage">
           <edgelabel>next</edgelabel>
         </childnode>
-        <childnode refid="80" relation="usage">
+        <childnode refid="78" relation="usage">
           <edgelabel>obj</edgelabel>
         </childnode>
       </node>
-      <node id="79">
+      <node id="77">
         <label>oscit::Call</label>
         <link refid="structoscit_1_1_call"/>
-        <childnode refid="80" relation="usage">
+        <childnode refid="78" relation="usage">
           <edgelabel>param_</edgelabel>
         </childnode>
-        <childnode refid="90" relation="usage">
+        <childnode refid="88" relation="usage">
           <edgelabel>url_</edgelabel>
         </childnode>
       </node>
-      <node id="85">
+      <node id="83">
         <label>oscit::Error</label>
         <link refid="classoscit_1_1_error"/>
-        <childnode refid="82" relation="public-inheritance">
+        <childnode refid="80" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="88">
+      <node id="86">
         <label>oscit::THash&lt; std::string, Value &gt;</label>
         <link refid="classoscit_1_1_t_hash"/>
-        <childnode refid="89" relation="usage">
+        <childnode refid="87" relation="usage">
           <edgelabel>thash_table_</edgelabel>
         </childnode>
       </node>
-      <node id="91">
+      <node id="89">
         <label>oscit::Location</label>
         <link refid="classoscit_1_1_location"/>
       </node>
-      <node id="87">
+      <node id="85">
         <label>oscit::Hash</label>
         <link refid="classoscit_1_1_hash"/>
-        <childnode refid="82" relation="public-inheritance">
+        <childnode refid="80" relation="public-inheritance">
         </childnode>
-        <childnode refid="88" relation="public-inheritance">
+        <childnode refid="86" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="82">
+      <node id="80">
         <label>oscit::ReferenceCounted</label>
         <link refid="classoscit_1_1_reference_counted"/>
       </node>
-      <node id="90">
+      <node id="88">
         <label>oscit::Url</label>
         <link refid="classoscit_1_1_url"/>
-        <childnode refid="91" relation="usage">
+        <childnode refid="89" relation="usage">
           <edgelabel>location_</edgelabel>
         </childnode>
       </node>
-      <node id="84">
+      <node id="82">
         <label>oscit::StringData</label>
         <link refid="classoscit_1_1_string_data"/>
-        <childnode refid="82" relation="public-inheritance">
+        <childnode refid="80" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

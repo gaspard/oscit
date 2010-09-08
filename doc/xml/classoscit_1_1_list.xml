@@ -388,6 +388,18 @@
     <detaileddescription>
 <para>A <ref refid="classoscit_1_1_list" kindref="compound">List</ref> stores an array of Values. </para>    </detaileddescription>
     <inheritancegraph>
+      <node id="453">
+        <label>oscit::List</label>
+        <link refid="classoscit_1_1_list"/>
+        <childnode refid="454" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="454">
+        <label>oscit::ReferenceCounted</label>
+        <link refid="classoscit_1_1_reference_counted"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
       <node id="455">
         <label>oscit::List</label>
         <link refid="classoscit_1_1_list"/>
@@ -395,18 +407,6 @@
         </childnode>
       </node>
       <node id="456">
-        <label>oscit::ReferenceCounted</label>
-        <link refid="classoscit_1_1_reference_counted"/>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="457">
-        <label>oscit::List</label>
-        <link refid="classoscit_1_1_list"/>
-        <childnode refid="458" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="458">
         <label>oscit::ReferenceCounted</label>
         <link refid="classoscit_1_1_reference_counted"/>
       </node>
